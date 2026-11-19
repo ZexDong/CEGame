@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Public health smoke result",
+  "type": "object",
+  "required": ["status", "checks", "engine", "gameplay_verified", "error"],
+  "properties": {
+    "status": {"enum": ["passed", "failed"]},
+    "checks": {"type": "object", "additionalProperties": {"type": "boolean"}},
+    "engine": {"const": "5.7.4-cl51494982"},
+    "gameplay_verified": {"const": false},
+    "error": {"type": ["string", "null"]}
+  }
+}

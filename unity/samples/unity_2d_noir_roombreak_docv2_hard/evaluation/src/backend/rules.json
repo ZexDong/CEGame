@@ -1,0 +1,764 @@
+{
+  "schema_version": 3,
+  "status": "targeted_regression_r9.12_runtime_log_isolation_in_progress",
+  "evaluator_protocol": "game-independent-d1-d6-v2-hybrid",
+  "evaluator_revision": "2026.09.24-noir-public-session-r9.12-runtime-log-isolation",
+  "evaluator_package_directory": "package-v2",
+  "benchmark_id": "unity.noir_roombreak_challenge.v1",
+  "coverage_manifest": "requirement-coverage.json",
+  "checkpoint_script": "checkpoint-script.json",
+  "baseline_applicability": "baseline-applicability.json",
+  "automatic_score_maximum": 90.0,
+  "scored_leaf_count": 69,
+  "hybrid_execution": {
+    "legacy_specialist_sidecar": {
+      "preserved": false,
+      "binding": "audit/legacy-v1-binding.json",
+      "trajectories": [
+        "TRAJ01",
+        "TRAJ02",
+        "TRAJ03",
+        "TRAJ04",
+        "TRAJ05",
+        "TRAJ06"
+      ],
+      "policy": "Handwritten game-specific C# trajectories remain the scoring authority for high-frequency combat, visual/audio feedback, and lifecycle evidence."
+    },
+    "dashboard_v2_specialist_sidecar": {
+      "implementation": "handwritten_csharp",
+      "dashboard_contract": "game-state-dashboard/v2",
+      "trajectories": [
+        "TRAJ07",
+        "TRAJ08",
+        "TRAJ09"
+      ],
+      "policy": "Dashboard v2 is the primary state interface, but these trajectories are still explicit C# sidecars rather than a generic checkpoint-script interpreter."
+    },
+    "checkpoint_script_shadow": {
+      "path": "checkpoint-script.json",
+      "role": "migration_shadow",
+      "execution_mode": "manifest_only",
+      "executed_by_runner": false,
+      "scored_leaf_count": 0
+    }
+  },
+  "dimensions": {
+    "D1": {
+      "maximum_score": 10.0,
+      "checks": [
+        {
+          "id": "D1_IMPORT_COMPILE",
+          "weight": 2.0,
+          "requirements": [
+            "COMMON-BASELINE"
+          ]
+        },
+        {
+          "id": "D1_FINAL_SCENE",
+          "weight": 2.0,
+          "requirements": [
+            "COMMON-BASELINE",
+            "FLOW-01",
+            "CAMERA-01"
+          ]
+        },
+        {
+          "id": "D1_DASHBOARD_CONTRACT",
+          "weight": 2.0,
+          "requirements": [
+            "COMMON-BASELINE",
+            "SESSION-01",
+            "SESSION-02",
+            "SESSION-03"
+          ]
+        },
+        {
+          "id": "D1_DASHBOARD_PROBE_CROSSCHECK",
+          "weight": 2.0,
+          "requirements": [
+            "COMMON-BASELINE"
+          ]
+        },
+        {
+          "id": "D1_REAL_FRAME",
+          "weight": 2.0,
+          "requirements": [
+            "COMMON-BASELINE",
+            "FLOW-01",
+            "AV-01"
+          ]
+        }
+      ]
+    },
+    "D2": {
+      "maximum_score": 30.0,
+      "checks": [
+        {
+          "id": "D2_MENU",
+          "weight": 1.5,
+          "requirements": [
+            "FLOW-01"
+          ]
+        },
+        {
+          "id": "D2_FIVE_ROOMS",
+          "weight": 2.0,
+          "requirements": [
+            "WORLD-01",
+            "SESSION-01"
+          ]
+        },
+        {
+          "id": "D2_MOVE_JUMP",
+          "weight": 1.5,
+          "requirements": [
+            "MOVE-01"
+          ]
+        },
+        {
+          "id": "D2_BACKSTAB",
+          "weight": 1.75,
+          "requirements": [
+            "COMBAT-01"
+          ]
+        },
+        {
+          "id": "D2_DASH",
+          "weight": 1.75,
+          "requirements": [
+            "DASH-01"
+          ]
+        },
+        {
+          "id": "D2_ANDA",
+          "weight": 1.75,
+          "requirements": [
+            "ANDA-01"
+          ]
+        },
+        {
+          "id": "D2_OBSER",
+          "weight": 1.75,
+          "requirements": [
+            "OBSER-01"
+          ]
+        },
+        {
+          "id": "D2_LETHAL_DAMAGE",
+          "weight": 1.5,
+          "requirements": [
+            "DAMAGE-01"
+          ]
+        },
+        {
+          "id": "D2_SOFT_RESPAWN",
+          "weight": 1.5,
+          "requirements": [
+            "RESPAWN-01"
+          ]
+        },
+        {
+          "id": "D2_GLOBAL_RESPAWN",
+          "weight": 1.5,
+          "requirements": [
+            "RESPAWN-01"
+          ]
+        },
+        {
+          "id": "D2_ROOM_CAMERA",
+          "weight": 1.5,
+          "requirements": [
+            "CAMERA-01"
+          ]
+        },
+        {
+          "id": "D2_PAUSE",
+          "weight": 1.5,
+          "requirements": [
+            "PAUSE-01"
+          ]
+        },
+        {
+          "id": "D2_SUCCESS",
+          "weight": 1.75,
+          "requirements": [
+            "SUCCESS-01"
+          ]
+        },
+        {
+          "id": "D2_UI_STATES",
+          "weight": 1.5,
+          "requirements": [
+            "UI-01"
+          ]
+        },
+        {
+          "id": "D2_AV_ASSEMBLY",
+          "weight": 1.75,
+          "requirements": [
+            "AV-01"
+          ]
+        },
+        {
+          "id": "D2_MIXED_ENCOUNTER",
+          "weight": 2.0,
+          "requirements": [
+            "MIXED-01"
+          ]
+        },
+        {
+          "id": "D2_TIMED_PAUSE",
+          "weight": 1.5,
+          "requirements": [
+            "PAUSE-TIME-01"
+          ]
+        },
+        {
+          "id": "D2_INPUT_EDGE_MODEL",
+          "weight": 2.0,
+          "requirements": [
+            "INPUT-EDGE-01"
+          ]
+        }
+      ]
+    },
+    "D3": {
+      "maximum_score": 20.0,
+      "checks": [
+        {
+          "id": "D3_INITIAL_STATE",
+          "weight": 0.75,
+          "requirements": [
+            "FLOW-01"
+          ]
+        },
+        {
+          "id": "D3_MOVE_COLLISION",
+          "weight": 0.75,
+          "requirements": [
+            "MOVE-01"
+          ]
+        },
+        {
+          "id": "D3_BACKSTAB_BOUNDARY",
+          "weight": 0.75,
+          "requirements": [
+            "COMBAT-01"
+          ]
+        },
+        {
+          "id": "D3_BACKSTAB_CHARGE",
+          "weight": 0.75,
+          "requirements": [
+            "COMBAT-01",
+            "DASH-01"
+          ]
+        },
+        {
+          "id": "D3_DASH_COST",
+          "weight": 0.75,
+          "requirements": [
+            "DASH-01"
+          ]
+        },
+        {
+          "id": "D3_ZERO_DASH_REJECT",
+          "weight": 0.75,
+          "requirements": [
+            "DASH-01"
+          ]
+        },
+        {
+          "id": "D3_DASH_INVULNERABILITY",
+          "weight": 0.75,
+          "requirements": [
+            "DASH-01",
+            "DAMAGE-01"
+          ]
+        },
+        {
+          "id": "D3_ANDA_TRANSITIONS",
+          "weight": 0.75,
+          "requirements": [
+            "ANDA-01"
+          ]
+        },
+        {
+          "id": "D3_OBSER_WARNING_ORDER",
+          "weight": 0.75,
+          "requirements": [
+            "OBSER-01"
+          ]
+        },
+        {
+          "id": "D3_ONE_HIT_DEATH",
+          "weight": 0.75,
+          "requirements": [
+            "DAMAGE-01"
+          ]
+        },
+        {
+          "id": "D3_SOFT_RESPAWN_RULES",
+          "weight": 0.75,
+          "requirements": [
+            "RESPAWN-01"
+          ]
+        },
+        {
+          "id": "D3_GLOBAL_RESPAWN_RULES",
+          "weight": 0.75,
+          "requirements": [
+            "RESPAWN-01"
+          ]
+        },
+        {
+          "id": "D3_CAMERA_BOUNDARY",
+          "weight": 0.75,
+          "requirements": [
+            "CAMERA-01"
+          ]
+        },
+        {
+          "id": "D3_PAUSE_FREEZE",
+          "weight": 0.75,
+          "requirements": [
+            "PAUSE-01"
+          ]
+        },
+        {
+          "id": "D3_SUCCESS_CONDITION",
+          "weight": 0.75,
+          "requirements": [
+            "SUCCESS-01"
+          ]
+        },
+        {
+          "id": "D3_RESTART_CLEAN",
+          "weight": 0.75,
+          "requirements": [
+            "RESTART-01"
+          ]
+        },
+        {
+          "id": "D3_MIXED_CONCURRENT_THREATS",
+          "weight": 1.0,
+          "requirements": [
+            "MIXED-01"
+          ]
+        },
+        {
+          "id": "D3_MIXED_EXIT_LOCK",
+          "weight": 1.0,
+          "requirements": [
+            "MIXED-01",
+            "SUCCESS-01"
+          ]
+        },
+        {
+          "id": "D3_MIXED_CROSS_THREAT_WINDOW",
+          "weight": 1.0,
+          "requirements": [
+            "MIXED-01",
+            "ANDA-01",
+            "OBSER-01"
+          ]
+        },
+        {
+          "id": "D3_PAUSE_UNSCALED_FREEZE",
+          "weight": 1.0,
+          "requirements": [
+            "PAUSE-TIME-01"
+          ]
+        },
+        {
+          "id": "D3_PAUSE_NO_BUFFER",
+          "weight": 1.0,
+          "requirements": [
+            "PAUSE-TIME-01",
+            "INPUT-EDGE-01"
+          ]
+        },
+        {
+          "id": "D3_ONE_PRESS_ONE_INTENT",
+          "weight": 1.0,
+          "requirements": [
+            "INPUT-EDGE-01"
+          ]
+        },
+        {
+          "id": "D3_REJECTED_ACTION_SIDE_EFFECT_FREE",
+          "weight": 1.0,
+          "requirements": [
+            "INPUT-EDGE-01"
+          ]
+        },
+        {
+          "id": "D3_INPUT_REUSABLE_AFTER_RESTARTS",
+          "weight": 1.0,
+          "requirements": [
+            "INPUT-EDGE-01",
+            "DASH-01",
+            "MOVE-01"
+          ]
+        }
+      ]
+    },
+    "D4": {
+      "maximum_score": 20.0,
+      "checks": [
+        {
+          "id": "D4_START",
+          "weight": 1.5,
+          "requirements": [
+            "FLOW-01"
+          ]
+        },
+        {
+          "id": "D4_ROOM_PROGRESSION",
+          "weight": 2.5,
+          "requirements": [
+            "WORLD-01",
+            "CAMERA-01"
+          ]
+        },
+        {
+          "id": "D4_COMPLETE_JOURNEY",
+          "weight": 3.0,
+          "requirements": [
+            "FLOW-01",
+            "WORLD-01",
+            "COMBAT-01",
+            "DASH-01",
+            "SUCCESS-01"
+          ]
+        },
+        {
+          "id": "D4_DEATH_RECOVERY",
+          "weight": 2.0,
+          "requirements": [
+            "DAMAGE-01",
+            "RESPAWN-01"
+          ]
+        },
+        {
+          "id": "D4_PAUSE_RESUME",
+          "weight": 1.0,
+          "requirements": [
+            "PAUSE-01"
+          ]
+        },
+        {
+          "id": "D4_RESTART_ACTIVE",
+          "weight": 1.0,
+          "requirements": [
+            "RESTART-01"
+          ]
+        },
+        {
+          "id": "D4_RESTART_PAUSED_SUCCESS",
+          "weight": 1.0,
+          "requirements": [
+            "RESTART-01",
+            "PAUSE-01",
+            "SUCCESS-01"
+          ]
+        },
+        {
+          "id": "D4_REOPEN",
+          "weight": 3.0,
+          "requirements": [
+            "REOPEN-01"
+          ]
+        },
+        {
+          "id": "D4_MIXED_SUCCESS_FLOW",
+          "weight": 2.5,
+          "requirements": [
+            "MIXED-01",
+            "SUCCESS-01"
+          ]
+        },
+        {
+          "id": "D4_TIMED_THREAT_PAUSE_RESUME",
+          "weight": 1.0,
+          "requirements": [
+            "PAUSE-TIME-01",
+            "PAUSE-01"
+          ]
+        },
+        {
+          "id": "D4_INPUT_LIFECYCLE_STABILITY",
+          "weight": 1.5,
+          "requirements": [
+            "INPUT-EDGE-01",
+            "FLOW-01",
+            "PAUSE-01",
+            "SUCCESS-01"
+          ]
+        }
+      ]
+    },
+    "D5": {
+      "maximum_score": 10.0,
+      "checks": [
+        {
+          "id": "D5_MENU_CONTROLS",
+          "weight": 0.75,
+          "requirements": [
+            "FLOW-01",
+            "UI-01"
+          ]
+        },
+        {
+          "id": "D5_HUD",
+          "weight": 1.25,
+          "requirements": [
+            "UI-01",
+            "DASH-01",
+            "RESPAWN-01"
+          ]
+        },
+        {
+          "id": "D5_MOVEMENT_COMBAT",
+          "weight": 0.75,
+          "requirements": [
+            "MOVE-01",
+            "COMBAT-01"
+          ]
+        },
+        {
+          "id": "D5_DASH_FEEDBACK",
+          "weight": 0.75,
+          "requirements": [
+            "DASH-01"
+          ]
+        },
+        {
+          "id": "D5_ENEMY_WARNINGS",
+          "weight": 1.0,
+          "requirements": [
+            "ANDA-01",
+            "OBSER-01"
+          ]
+        },
+        {
+          "id": "D5_DEATH_RESPAWN",
+          "weight": 1.0,
+          "requirements": [
+            "DAMAGE-01",
+            "RESPAWN-01"
+          ]
+        },
+        {
+          "id": "D5_PAUSE_SUCCESS",
+          "weight": 0.75,
+          "requirements": [
+            "PAUSE-01",
+            "SUCCESS-01",
+            "RESTART-01"
+          ]
+        },
+        {
+          "id": "D5_AUDIO_VISUAL_FEEDBACK",
+          "weight": 1.25,
+          "requirements": [
+            "AV-01",
+            "UI-01"
+          ]
+        },
+        {
+          "id": "D5_MIXED_THREAT_FEEDBACK",
+          "weight": 1.0,
+          "requirements": [
+            "MIXED-01",
+            "UI-01"
+          ]
+        },
+        {
+          "id": "D5_INPUT_REJECTION_FEEDBACK",
+          "weight": 0.75,
+          "requirements": [
+            "INPUT-EDGE-01",
+            "UI-01"
+          ]
+        },
+        {
+          "id": "D5_DASHBOARD_VISIBLE_AGREEMENT",
+          "weight": 0.75,
+          "requirements": [
+            "UI-01"
+          ]
+        }
+      ]
+    },
+    "D6": {
+      "maximum_score": 10.0,
+      "status": "required_headful_standalone_composite_v3_pending_calibration",
+      "requirements": [
+        "AV-01"
+      ],
+      "capture_route": "headful-standalone-two-layer-internal-composite",
+      "batch_camera_render_formal": false,
+      "formal_state": "initial_gameplay",
+      "required_rounds": 1,
+      "protocol": "public-requirements-visual-quality-20260908",
+      "prompt_sha256": "6ac0e9665ad0f46bf33312ceede92bea5bc543ba6f0d37752a8493110ac3e77d"
+    }
+  },
+  "phase_contract": {
+    "static": {
+      "assembly": "GameCreate.NoirRoombreak.Evaluator.Static",
+      "expected_tests": 1,
+      "expected_test_names": [
+        "STATIC01_LoadCompileCameraAndRuntimeEntry"
+      ],
+      "expected_trajectory_ids": [
+        "STATIC01"
+      ],
+      "expected_check_ids": [
+        "D1_IMPORT_COMPILE",
+        "D1_FINAL_SCENE",
+        "D1_DASHBOARD_CONTRACT",
+        "D1_DASHBOARD_PROBE_CROSSCHECK",
+        "D1_REAL_FRAME"
+      ]
+    },
+    "dynamic": {
+      "assembly": "GameCreate.NoirRoombreak.Evaluator.Dynamic",
+      "expected_tests": 10,
+      "expected_test_names": [
+        "TRAJ01_MenuStartMovementAndHud",
+        "TRAJ02_AndaAndBackstab",
+        "TRAJ03_DashDamageAndBoundaries",
+        "TRAJ04_ObserCameraAndPause",
+        "TRAJ05_SoftAndGlobalRespawn",
+        "TRAJ06_CompleteJourneyResultRestartAndDirtyClose",
+        "TRAJ07_DashboardAndInputEdges",
+        "TRAJ08_TimedPauseDuringLiveThreat",
+        "TRAJ09_FinalMixedEncounterGate",
+        "TRAJ10_IndependentDirtyShutdown"
+      ],
+      "expected_trajectory_ids": [
+        "TRAJ01",
+        "TRAJ02",
+        "TRAJ03",
+        "TRAJ04",
+        "TRAJ05",
+        "TRAJ06",
+        "TRAJ07",
+        "TRAJ08",
+        "TRAJ09",
+        "TRAJ10"
+      ],
+      "expected_check_ids": [
+        "D2_MENU",
+        "D2_FIVE_ROOMS",
+        "D2_MOVE_JUMP",
+        "D2_BACKSTAB",
+        "D2_DASH",
+        "D2_ANDA",
+        "D2_OBSER",
+        "D2_LETHAL_DAMAGE",
+        "D2_SOFT_RESPAWN",
+        "D2_GLOBAL_RESPAWN",
+        "D2_ROOM_CAMERA",
+        "D2_PAUSE",
+        "D2_SUCCESS",
+        "D2_UI_STATES",
+        "D2_AV_ASSEMBLY",
+        "D2_MIXED_ENCOUNTER",
+        "D2_TIMED_PAUSE",
+        "D2_INPUT_EDGE_MODEL",
+        "D3_INITIAL_STATE",
+        "D3_MOVE_COLLISION",
+        "D3_BACKSTAB_BOUNDARY",
+        "D3_BACKSTAB_CHARGE",
+        "D3_DASH_COST",
+        "D3_ZERO_DASH_REJECT",
+        "D3_DASH_INVULNERABILITY",
+        "D3_ANDA_TRANSITIONS",
+        "D3_OBSER_WARNING_ORDER",
+        "D3_ONE_HIT_DEATH",
+        "D3_SOFT_RESPAWN_RULES",
+        "D3_GLOBAL_RESPAWN_RULES",
+        "D3_CAMERA_BOUNDARY",
+        "D3_PAUSE_FREEZE",
+        "D3_SUCCESS_CONDITION",
+        "D3_RESTART_CLEAN",
+        "D3_MIXED_CONCURRENT_THREATS",
+        "D3_MIXED_EXIT_LOCK",
+        "D3_MIXED_CROSS_THREAT_WINDOW",
+        "D3_PAUSE_UNSCALED_FREEZE",
+        "D3_PAUSE_NO_BUFFER",
+        "D3_ONE_PRESS_ONE_INTENT",
+        "D3_REJECTED_ACTION_SIDE_EFFECT_FREE",
+        "D3_INPUT_REUSABLE_AFTER_RESTARTS",
+        "D4_START",
+        "D4_ROOM_PROGRESSION",
+        "D4_COMPLETE_JOURNEY",
+        "D4_DEATH_RECOVERY",
+        "D4_PAUSE_RESUME",
+        "D4_RESTART_ACTIVE",
+        "D4_RESTART_PAUSED_SUCCESS",
+        "D4_MIXED_SUCCESS_FLOW",
+        "D4_TIMED_THREAT_PAUSE_RESUME",
+        "D4_INPUT_LIFECYCLE_STABILITY",
+        "D5_MENU_CONTROLS",
+        "D5_HUD",
+        "D5_MOVEMENT_COMBAT",
+        "D5_DASH_FEEDBACK",
+        "D5_ENEMY_WARNINGS",
+        "D5_DEATH_RESPAWN",
+        "D5_PAUSE_SUCCESS",
+        "D5_AUDIO_VISUAL_FEEDBACK",
+        "D5_MIXED_THREAT_FEEDBACK",
+        "D5_INPUT_REJECTION_FEEDBACK",
+        "D5_DASHBOARD_VISIBLE_AGREEMENT"
+      ]
+    },
+    "fresh": {
+      "assembly": "GameCreate.NoirRoombreak.Evaluator.Fresh",
+      "expected_tests": 1,
+      "expected_test_names": [
+        "FRESH01_NewProcessStartsAtCleanMenu"
+      ],
+      "expected_trajectory_ids": [
+        "FRESH01"
+      ],
+      "expected_check_ids": [
+        "D4_REOPEN"
+      ]
+    }
+  },
+  "common_baseline": {
+    "id": "COMMON-BASELINE",
+    "definition": "Game-independent deliverability plus Dashboard v2 format/truthfulness: compile, declared entry, public Probe, Dashboard contract, real frames, and observation agreement.",
+    "scope": [
+      "compile",
+      "declared entry",
+      "public Probe",
+      "Dashboard v2 contract and schema",
+      "Dashboard/Probe/render cross-check",
+      "real frame"
+    ]
+  },
+  "non_behavior_policy": {
+    "candidate_validity_and_scoring_exclusions": [
+      "license or licence metadata",
+      "credit or attribution text",
+      "SHA-256 equality"
+    ],
+    "asset_evidence": "Use public ASSET_CATALOG paths and observable assembly/playback.",
+    "evaluator_integrity_note": "Hashes bind evaluator/input audit only and never score gameplay."
+  },
+  "evaluator_routing": "evaluator-routing.json",
+  "checkpoint_script_status": {
+    "role": "migration_shadow",
+    "execution_mode": "manifest_only",
+    "executed_by_runner": false,
+    "scored_leaf_count": 0,
+    "purpose": "Coverage/check-ID manifest and future generic-player migration input; current scoring is produced by explicit C# specialist sidecars."
+  },
+  "input_revision": "v2.2-docv2-session-20260908",
+  "setup_protocol": "game-session/v1"
+}

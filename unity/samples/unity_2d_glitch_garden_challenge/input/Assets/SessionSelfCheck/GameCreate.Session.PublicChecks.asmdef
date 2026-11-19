@@ -1,0 +1,8 @@
+{
+  "name": "GameCreate.Session.PublicChecks",
+  "rootNamespace": "GameCreate.Session.PublicChecks",
+  "references": ["GameCreate.Session"],
+  "includePlatforms": [],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": true
+}

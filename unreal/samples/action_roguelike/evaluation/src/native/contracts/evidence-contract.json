@@ -1,0 +1,77 @@
+{
+  "schema_version": "4.0.0",
+  "required_run_files": [
+    "candidate-manifest.json",
+    "verdicts.json",
+    "receipts/start.json",
+    "receipts/stop.json",
+    "receipts/transport-binding.json"
+  ],
+  "dynamic_pass_requires": [
+    "normal_input_receipt",
+    "schema_valid_state_pair",
+    "state_identity_binding_receipt",
+    "distinct_condition_samples",
+    "contemporaneous_capture_for_visible_claims",
+    "case_cleanup_receipt"
+  ],
+  "atomic_case_requires": [
+    "setup_before_identity",
+    "setup_receipt",
+    "setup_after_identity",
+    "input_receipt",
+    "sample_stream",
+    "synchronized_capture",
+    "cleanup_receipt"
+  ],
+  "d6_requires": [
+    "reference_manifest_hash",
+    "prompt_hash",
+    "candidate_capture_health",
+    "vlm_identity_version_config",
+    "three_round_raw_responses",
+    "component_parser_receipts",
+    "aggregate_receipt"
+  ],
+  "failure_record_requires": [
+    "reason_code",
+    "attribution",
+    "first_failure",
+    "affected_checkpoints",
+    "score_impact",
+    "evidence"
+  ],
+  "privacy": {
+    "relative_paths_only": true,
+    "credentials_prohibited": true,
+    "host_identity_prohibited": true
+  },
+  "capture_health": {
+    "decode_required": true,
+    "canonical_width": 1280,
+    "canonical_height": 720,
+    "black_or_blank_rejected": true
+  },
+  "fixture_trace_requires": [
+    "source_hash_bound_stage_receipt",
+    "native_request_and_readback",
+    "observed_precondition_confirmation",
+    "real_input_dispatch_and_release",
+    "publisher_host_clock_mapping",
+    "unmodified_candidate_samples",
+    "client_capture",
+    "owned_process_cleanup"
+  ],
+  "fixture_result_writes_forbidden": true,
+  "natural_tick_trigger": "A receipted countdown expiry or enemy-hit precondition replaces an unrelated long journey; it does not manufacture a player input receipt.",
+  "history_pair_requires": [
+    "launcher_owned_path",
+    "global_sequence",
+    "round_id",
+    "linked_event_cursor",
+    "relative_path",
+    "sha256"
+  ],
+  "d6_live_collector": "scripts/Invoke-ActionRoguelikeD6Collection.ps1",
+  "d6_raw_authentication_headers_saved": false
+}

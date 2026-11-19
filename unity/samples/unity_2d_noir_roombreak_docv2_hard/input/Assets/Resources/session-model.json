@@ -1,0 +1,182 @@
+{
+  "contract": "game-session/v1",
+  "contentVersion": "noir-session-pilot-1",
+  "entries": [
+    "room-1",
+    "room-2",
+    "room-3",
+    "room-4",
+    "room-5"
+  ],
+  "phases": [
+    "menu",
+    "playing",
+    "paused",
+    "won"
+  ],
+  "requiredLandmarks": [
+    "entry",
+    "exit",
+    "arena_center"
+  ],
+  "operationTimeoutSeconds": 10,
+  "values": [
+    {
+      "name": "room_index",
+      "minimum": -1,
+      "maximum": 4,
+      "integer": true,
+      "editable": false
+    },
+    {
+      "name": "bonds",
+      "minimum": 0,
+      "maximum": 3,
+      "integer": true,
+      "editable": true
+    },
+    {
+      "name": "dash_charges",
+      "minimum": 0,
+      "maximum": 3,
+      "integer": true,
+      "editable": true
+    },
+    {
+      "name": "defeated_enemy_count",
+      "minimum": 0,
+      "maximum": 100,
+      "integer": true,
+      "editable": true
+    },
+    {
+      "name": "soft_respawn_count",
+      "minimum": 0,
+      "maximum": 100000,
+      "integer": true,
+      "editable": true
+    },
+    {
+      "name": "global_respawn_count",
+      "minimum": 0,
+      "maximum": 100000,
+      "integer": true,
+      "editable": true
+    },
+    {
+      "name": "last_respawn_kind",
+      "minimum": 0,
+      "maximum": 2,
+      "integer": true,
+      "editable": true
+    },
+    {
+      "name": "bench_activated",
+      "minimum": 0,
+      "maximum": 1,
+      "integer": true,
+      "editable": true
+    },
+    {
+      "name": "player_alive",
+      "minimum": 0,
+      "maximum": 1,
+      "integer": true,
+      "editable": true
+    },
+    {
+      "name": "player_grounded",
+      "minimum": 0,
+      "maximum": 1,
+      "integer": true,
+      "editable": true
+    },
+    {
+      "name": "player_dashing",
+      "minimum": 0,
+      "maximum": 1,
+      "integer": true,
+      "editable": false
+    },
+    {
+      "name": "player_invulnerable",
+      "minimum": 0,
+      "maximum": 1,
+      "integer": true,
+      "editable": false
+    },
+    {
+      "name": "backstab_reach",
+      "minimum": 1e-05,
+      "maximum": 10000,
+      "integer": false,
+      "editable": false
+    },
+    {
+      "name": "anda_contact_reach",
+      "minimum": 1e-05,
+      "maximum": 10000,
+      "integer": false,
+      "editable": false
+    },
+    {
+      "name": "anda_detection_reach",
+      "minimum": 1e-05,
+      "maximum": 10000,
+      "integer": false,
+      "editable": false
+    },
+    {
+      "name": "obser_detection_reach",
+      "minimum": 1e-05,
+      "maximum": 10000,
+      "integer": false,
+      "editable": false
+    }
+  ],
+  "actorKinds": [
+    {
+      "kind": "player",
+      "states": [
+        "grounded",
+        "airborne",
+        "dashing",
+        "dead"
+      ],
+      "poseEditable": true,
+      "stateEditable": true
+    },
+    {
+      "kind": "anda",
+      "states": [
+        "idle",
+        "patrol",
+        "alert",
+        "chase",
+        "defeated"
+      ],
+      "poseEditable": true,
+      "stateEditable": true
+    },
+    {
+      "kind": "obser",
+      "states": [
+        "idle",
+        "patrol",
+        "locking",
+        "firing",
+        "defeated"
+      ],
+      "poseEditable": true,
+      "stateEditable": true
+    },
+    {
+      "kind": "bench",
+      "states": [
+        "normal"
+      ],
+      "poseEditable": false,
+      "stateEditable": false
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "checks": [
+    {
+      "id": "D1_SCENE",
+      "weight": 2
+    },
+    {
+      "id": "D1_CAMERA",
+      "weight": 2
+    },
+    {
+      "id": "D1_ACTORS",
+      "weight": 2
+    },
+    {
+      "id": "D1_SESSION_ENTRY",
+      "weight": 2
+    },
+    {
+      "id": "D1_SESSION_STATE",
+      "weight": 2
+    },
+    {
+      "id": "D2_START",
+      "weight": 2
+    },
+    {
+      "id": "D2_PRODUCTION",
+      "weight": 2
+    },
+    {
+      "id": "D3_LOCALITY",
+      "weight": 2
+    },
+    {
+      "id": "D2_FATIGUE",
+      "weight": 2
+    },
+    {
+      "id": "D2_NIGHT",
+      "weight": 2
+    },
+    {
+      "id": "D2_MEDIC",
+      "weight": 2
+    },
+    {
+      "id": "D2_WEATHER",
+      "weight": 2
+    },
+    {
+      "id": "D2_BUILD",
+      "weight": 2
+    },
+    {
+      "id": "D3_BUILD_GUARDS",
+      "weight": 2
+    },
+    {
+      "id": "D3_BUILD_CANCEL",
+      "weight": 2
+    },
+    {
+      "id": "D2_FERRY",
+      "weight": 2
+    },
+    {
+      "id": "D3_TRANSPORT_ATOMIC",
+      "weight": 2
+    },
+    {
+      "id": "D3_UNIQUENESS",
+      "weight": 2
+    },
+    {
+      "id": "D2_ARRIVAL",
+      "weight": 2
+    },
+    {
+      "id": "D2_EVENT",
+      "weight": 2
+    },
+    {
+      "id": "D3_EVENT_ONCE",
+      "weight": 2
+    },
+    {
+      "id": "D2_ESCAPE",
+      "weight": 2
+    },
+    {
+      "id": "D3_STAGE_PAYMENT",
+      "weight": 2
+    },
+    {
+      "id": "D3_NO_DOUBLE_WORK",
+      "weight": 2
+    },
+    {
+      "id": "D3_STAGE_CANCEL",
+      "weight": 2
+    },
+    {
+      "id": "D2_PAUSE",
+      "weight": 2
+    },
+    {
+      "id": "D2_SPEED",
+      "weight": 2
+    },
+    {
+      "id": "D2_SAVE_LOAD",
+      "weight": 2
+    },
+    {
+      "id": "D3_DETERMINISM",
+      "weight": 2
+    },
+    {
+      "id": "D2_ENDINGS",
+      "weight": 2
+    },
+    {
+      "id": "D4_TERMINAL_LIFECYCLE",
+      "weight": 4
+    },
+    {
+      "id": "D4_ADJACENT",
+      "weight": 4
+    },
+    {
+      "id": "D4_MODAL_CONTINUITY",
+      "weight": 4
+    },
+    {
+      "id": "D4_RESTART",
+      "weight": 4
+    },
+    {
+      "id": "D4_REOPEN",
+      "weight": 4
+    },
+    {
+      "id": "D5_HUD",
+      "weight": 2
+    },
+    {
+      "id": "D5_FEEDBACK",
+      "weight": 2
+    },
+    {
+      "id": "D5_CONTROLS",
+      "weight": 2
+    },
+    {
+      "id": "D5_CHRONICLE",
+      "weight": 2
+    },
+    {
+      "id": "D5_AUDIO",
+      "weight": 2
+    }
+  ]
+}

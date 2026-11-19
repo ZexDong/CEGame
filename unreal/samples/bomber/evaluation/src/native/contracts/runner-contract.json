@@ -1,0 +1,71 @@
+{
+  "schema_version": "3.0.0",
+  "game_id": "Bomber",
+  "task_name": "Bomber Local Duel",
+  "task_revision": "2.0.1",
+  "evaluator_revision": "bomber-evaluator-5.0.0",
+  "entry": "scripts/Invoke-BomberCanonicalEvaluation.ps1",
+  "required_parameters": [
+    "CandidateProject",
+    "EngineRoot",
+    "OutputDirectory"
+  ],
+  "optional_parameters": [
+    "RunId",
+    "CandidateId",
+    "D6RunPath",
+    "VlmModel",
+    "VlmBaseUrl",
+    "VlmTimeoutSeconds",
+    "DiagnosticsOnly",
+    "SkipBuild",
+    "StableSamples",
+    "SessionTimeoutMs"
+  ],
+  "engine": "Unreal Engine 5.7.4",
+  "platform": "Windows x64",
+  "runtime_mode": "editor_game",
+  "viewport": {
+    "width": 1280,
+    "height": 720,
+    "coordinate_space": "native_render_pixels",
+    "display_scaling_independent": true
+  },
+  "normal_input_only": true,
+  "observer_read_only": true,
+  "output_directory_policy": "absent_or_empty",
+  "outputs": [
+    "candidate-manifest.json",
+    "verdicts.json",
+    "evaluation-result.json (after automatic D6 completion or a matching supplied D6 record)",
+    "evaluation-not-completed.json (infrastructure faults or explicit diagnostics-only execution)",
+    "completion.json",
+    "vlm/ (bounded pair requests, raw responses, resumable checkpoints and faults)",
+    "d6/d6-run.json",
+    "receipts/",
+    "states/",
+    "captures/",
+    "logs/",
+    "captures/*.native.json",
+    "captures/*.semantic.json",
+    "states/*-samples.json"
+  ],
+  "verdicts": [
+    "pass",
+    "fail",
+    "unreachable"
+  ],
+  "candidate_failure_policy": "Every returned candidate has numeric D1-D6 scores. Candidate build/start/crash/timeout/provider/state/capture failures become fail or unreachable with checkpoint zero. Evaluator or host faults produce evaluation_not_completed and no score row.",
+  "timeouts": {
+    "start_seconds": 60,
+    "reopen_seconds": 60,
+    "state_freshness_seconds": 2,
+    "declared_serial_worst_case_seconds": 240,
+    "session_watchdog_seconds": 360,
+    "headroom_seconds": 120
+  },
+  "exit_codes": {
+    "0": "diagnostic result written; candidate failures may be present",
+    "nonzero": "evaluator packaging, contract, or scorer failure"
+  }
+}

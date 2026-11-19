@@ -1,0 +1,43 @@
+{
+  "schema_version": 4,
+  "protocol": "GAME_INDEPENDENT_SCORING_GUIDE.md section 6",
+  "required_rounds": 3,
+  "prompt": "visual_prompt.txt",
+  "states_manifest": "states.json",
+  "states_manifest_sha256": "270ded24de964f492ec6b65f572542ca1fb5ffc4a5efad65456092917d69aec9",
+  "model_id": "gpt-5.6-terra",
+  "prompt_sha256": "558b4ccffad7d13d3ae3e5c6fc5a9b36a7bba37d9be47da895c2e50bc9c5a6ee",
+  "candidate_failure_policy": {
+    "missing_image": "score_state_zero",
+    "black_or_fully_transparent_image": "score_state_zero",
+    "broken_or_undecodable_image": "score_state_zero",
+    "capture_tool_or_reference_failure": "invalid_visual"
+  },
+  "prompt_input_preflight": {
+    "required": true,
+    "require_exact_user_prompt": true,
+    "require_reference_then_candidate_image_order": true,
+    "require_no_task_developer_context": true,
+    "require_no_environment_context": true
+  },
+  "states": [
+    {
+      "id": "01_menu",
+      "label": "main menu / challenge entry",
+      "reference_file": "reference/01_menu.png",
+      "candidate_file": "visual-01-menu.png"
+    },
+    {
+      "id": "02_initial_gameplay",
+      "label": "initial gameplay / corridor start",
+      "reference_file": "reference/02_initial_gameplay.png",
+      "candidate_file": "visual-02-initial-gameplay.png"
+    },
+    {
+      "id": "03_core_interaction",
+      "label": "core interaction / sign and checkpoint",
+      "reference_file": "reference/03_core_interaction.png",
+      "candidate_file": "visual-03-core-interaction.png"
+    }
+  ]
+}

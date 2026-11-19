@@ -1,0 +1,23 @@
+{
+  "supplied": [
+    "Worker",
+    "Tank",
+    "Helicopter",
+    "Drone",
+    "CommandCenter",
+    "VehicleFactory",
+    "AircraftFactory",
+    "AntiGroundTurret",
+    "AntiAirTurret",
+    "ResourceA",
+    "ResourceB"
+  ],
+  "procedural": [
+    "terrain",
+    "fog",
+    "selection",
+    "projectiles",
+    "ui"
+  ],
+  "missing": []
+}

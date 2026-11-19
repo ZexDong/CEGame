@@ -1,0 +1,8 @@
+{
+  "family": "dashboard",
+  "native_subdir": "evaluation",
+  "place": "ReactorRelayCandidate.rbxlx",
+  "checkpoint_script": true,
+  "sample_id": "roblox_reactor_relay_protocol",
+  "requirement_prefix": "RR"
+}

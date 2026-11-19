@@ -1,0 +1,221 @@
+{
+  "schema_version": "2.0",
+  "sample_id": "unity_2d_fungus_cave_challenge",
+  "sample_version": "1.0.0-open-release",
+  "title": "Fungus Cave",
+  "game_family": "unity_2d_fungus_cave_challenge",
+  "release_status": "packaged",
+  "engine": {
+    "name": "Unity",
+    "version": "6000.0.80f1",
+    "cli_version": "1.0.0-beta.3"
+  },
+  "input_revision": "unity_2d_fungus_cave_challenge-v1-20261029",
+  "input_source_directory": "input",
+  "input_layout": "frozen-project-root",
+  "input_locations": {
+    "prompt": "input/INITIAL_AGENT_PROMPT.md",
+    "design": "input/GDD.md",
+    "tools": "input/UNITY_BENCHMARK_TOOL_GUIDE.md",
+    "assets": "input/Assets",
+    "starter_project": "input",
+    "contracts": "input/Packages",
+    "self_check": "input/Assets"
+  },
+  "evaluator_version": "1.2.1+portable.2.release1",
+  "native_evaluator_version": "1.2.1",
+  "backend_directory": "evaluation/src/backend",
+  "native_subdirectory": "",
+  "native_entry": "evaluate.py",
+  "native_project_argument": "--project",
+  "native_output_argument": "--output",
+  "accepts_engine_arguments": true,
+  "coverage_status": "not_reviewed",
+  "dimension_requirements": {
+    "D1": [
+      "FC-01",
+      "FC-02",
+      "FC-03",
+      "FC-04",
+      "FC-05",
+      "FC-06",
+      "FC-07",
+      "FC-08",
+      "FC-09",
+      "FC-10",
+      "FC-11",
+      "FC-12",
+      "FC-13"
+    ],
+    "D2": [
+      "FC-01",
+      "FC-02",
+      "FC-03",
+      "FC-04",
+      "FC-05",
+      "FC-06",
+      "FC-07",
+      "FC-08",
+      "FC-09",
+      "FC-10",
+      "FC-11",
+      "FC-12",
+      "FC-13"
+    ],
+    "D3": [
+      "FC-01",
+      "FC-02",
+      "FC-03",
+      "FC-04",
+      "FC-05",
+      "FC-06",
+      "FC-07",
+      "FC-08",
+      "FC-09",
+      "FC-10",
+      "FC-11",
+      "FC-12",
+      "FC-13"
+    ],
+    "D4": [
+      "FC-01",
+      "FC-02",
+      "FC-03",
+      "FC-04",
+      "FC-05",
+      "FC-06",
+      "FC-07",
+      "FC-08",
+      "FC-09",
+      "FC-10",
+      "FC-11",
+      "FC-12",
+      "FC-13"
+    ],
+    "D5": [
+      "FC-01",
+      "FC-02",
+      "FC-03",
+      "FC-04",
+      "FC-05",
+      "FC-06",
+      "FC-07",
+      "FC-08",
+      "FC-09",
+      "FC-10",
+      "FC-11",
+      "FC-12",
+      "FC-13"
+    ],
+    "D6": [
+      "FC-01",
+      "FC-02",
+      "FC-03",
+      "FC-04",
+      "FC-05",
+      "FC-06",
+      "FC-07",
+      "FC-08",
+      "FC-09",
+      "FC-10",
+      "FC-11",
+      "FC-12",
+      "FC-13"
+    ]
+  },
+  "required_files": [
+    "input/GDD.md",
+    "input/INITIAL_AGENT_PROMPT.md",
+    "input/UNITY_BENCHMARK_TOOL_GUIDE.md",
+    "input/Packages/manifest.json",
+    "input/ProjectSettings/ProjectVersion.txt",
+    "evaluation/evaluate.py",
+    "evaluation/rules.json",
+    "evaluation/coverage.json",
+    "evaluation/score.schema.json",
+    "evaluation/validate_score.py",
+    "evaluation/src/backend/evaluate.py"
+  ],
+  "generation_boundary": "Only an independent copy of input is supplied to the construction model. Never supply evaluation.",
+  "excluded": [
+    "original",
+    "gold",
+    "model projects",
+    "generation traces",
+    "API keys",
+    "previous scores",
+    "engine caches"
+  ],
+  "format_status": "dependency_packaged",
+  "complete_score_requires": [
+    "native execution valid",
+    "coverage qualification for this evaluator",
+    "all six dimensions with valid visual evidence"
+  ],
+  "environment": {
+    "os": "Windows 10/11 x64",
+    "runtime": "Python 3.9+; PowerShell 7; Unity 6000.0.80f1; Unity CLI 1.0.0-beta.3",
+    "setup_commands": [
+      [
+        "python",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "evaluation/requirements.txt"
+      ]
+    ],
+    "credential_environment_variables": [
+      "GAMECREATE_REVIEW_BASE_URL",
+      "GAMECREATE_REVIEW_API_KEY",
+      "GAMECREATE_REVIEW_ACTOR"
+    ],
+    "output_path_note": "Use a short result path on Windows when long-path support is disabled. Setup failures are infrastructure failures, not zero candidate scores."
+  },
+  "input": {
+    "path": "input/",
+    "prompt": "input/INITIAL_AGENT_PROMPT.md",
+    "design": "input/GDD.md",
+    "tools": "input/UNITY_BENCHMARK_TOOL_GUIDE.md",
+    "assets": "input/Assets",
+    "starter_project": "input",
+    "contracts": "input/Packages",
+    "self_check": "input/Assets"
+  },
+  "submission": {
+    "type": "complete_project"
+  },
+  "evaluation": {
+    "version": "1.2.1+portable.2.release1",
+    "command": [
+      "python",
+      "-B",
+      "evaluation/evaluate.py",
+      "--project",
+      "{project}",
+      "--output",
+      "{output}",
+      "--editor",
+      "{editor}",
+      "--unity-cli",
+      "{unity_cli}"
+    ],
+    "rules": "evaluation/rules.json",
+    "coverage": "evaluation/coverage.json",
+    "result_schema": "evaluation/score.schema.json",
+    "result_file": "score.json",
+    "max_score": 100,
+    "visual_review": "--review-d6 with environment-only credentials; one frozen state/round",
+    "entry": "evaluation/evaluate.py",
+    "result_format_version": "2.1"
+  },
+  "sources": [
+    {
+      "url": "https://github.com/Bozar/FungusCave",
+      "revision": "dbdd9f6f322a63c2a3e8362620757324c03e052a",
+      "license": "MIT",
+      "adaptation_scope": "Complete three-floor turn-based survival roguelike; preserve coupled original systems, not a single-room bump-combat toy.",
+      "notice": "THIRD_PARTY_NOTICES.md"
+    }
+  ]
+}

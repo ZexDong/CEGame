@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "version",
+    "status",
+    "scores"
+  ],
+  "properties": {
+    "version": {
+      "const": "4.0.0"
+    },
+    "status": {
+      "enum": [
+        "completed",
+        "evaluation_incomplete"
+      ]
+    },
+    "scores": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  }
+}

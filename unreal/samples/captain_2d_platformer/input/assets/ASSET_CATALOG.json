@@ -1,0 +1,1287 @@
+{
+  "schema_version": "2.0.0",
+  "assets": [
+    {
+      "id": "ART-ENEMY-ATTACK",
+      "display_name": "Enemy Attack",
+      "path": "assets/files/treasure-hunters/enemy/enemy_attack_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "enemy_attack",
+      "requirement_ids": [
+        "ASSET-04",
+        "ENEMY-02"
+      ],
+      "frame_count": 5,
+      "frame_width_px": 34,
+      "frame_height_px": 28,
+      "sheet_width_px": 170,
+      "sheet_height_px": 28,
+      "frame_order": "left_to_right",
+      "byte_length": 1624,
+      "sha256": "06afc7e49df021b3c285a322d886030a67044652a9ab234224648b17846c300c",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-ENEMY-DEATH",
+      "display_name": "Enemy Death",
+      "path": "assets/files/treasure-hunters/enemy/enemy_death_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "enemy_death",
+      "requirement_ids": [
+        "ASSET-04"
+      ],
+      "frame_count": 4,
+      "frame_width_px": 34,
+      "frame_height_px": 28,
+      "sheet_width_px": 136,
+      "sheet_height_px": 28,
+      "frame_order": "left_to_right",
+      "byte_length": 1236,
+      "sha256": "3bdfc6fe511c1e16d0ce992cfae1ff5bc589eb7d7b88be7534d404fc777a809d",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-ENEMY-FALL",
+      "display_name": "Enemy Fall",
+      "path": "assets/files/treasure-hunters/enemy/enemy_fall_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "enemy_fall",
+      "requirement_ids": [
+        "ASSET-04"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 34,
+      "frame_height_px": 28,
+      "sheet_width_px": 34,
+      "sheet_height_px": 28,
+      "frame_order": "left_to_right",
+      "byte_length": 576,
+      "sha256": "0834ad3e32905ef28de94b78f2fc6ab319fa72c13faa88db77ca214b880569d4",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-ENEMY-HIT",
+      "display_name": "Enemy Hit",
+      "path": "assets/files/treasure-hunters/enemy/enemy_hit_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "enemy_hit",
+      "requirement_ids": [
+        "ASSET-04"
+      ],
+      "frame_count": 2,
+      "frame_width_px": 34,
+      "frame_height_px": 28,
+      "sheet_width_px": 68,
+      "sheet_height_px": 28,
+      "frame_order": "left_to_right",
+      "byte_length": 692,
+      "sha256": "b3280f625c52c1434fed89bb05e1be80b4bb1e34250da399831c117374b5daa4",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-ENEMY-IDLE",
+      "display_name": "Enemy Idle",
+      "path": "assets/files/treasure-hunters/enemy/enemy_idle_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "enemy_idle",
+      "requirement_ids": [
+        "ASSET-04"
+      ],
+      "frame_count": 11,
+      "frame_width_px": 34,
+      "frame_height_px": 28,
+      "sheet_width_px": 374,
+      "sheet_height_px": 28,
+      "frame_order": "left_to_right",
+      "byte_length": 1309,
+      "sha256": "4e93e3c3051152c3d4b8d28ebd24d2205304ac159cee0ff011177345e6588ee7",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-ENEMY-RUN",
+      "display_name": "Enemy Run",
+      "path": "assets/files/treasure-hunters/enemy/enemy_run_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "enemy_run",
+      "requirement_ids": [
+        "ASSET-04",
+        "ENEMY-01"
+      ],
+      "frame_count": 6,
+      "frame_width_px": 34,
+      "frame_height_px": 28,
+      "sheet_width_px": 204,
+      "sheet_height_px": 28,
+      "frame_order": "left_to_right",
+      "byte_length": 1360,
+      "sha256": "f43c7a566ed8ab6a14581edc63f7e87e2b08426529a370d049251d5abe87407c",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-KEY-PICKUP",
+      "display_name": "Key Pickup",
+      "path": "assets/files/treasure-hunters/objectives/key_pickup_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "key_pickup",
+      "requirement_ids": [
+        "ASSET-02"
+      ],
+      "frame_count": 4,
+      "frame_width_px": 24,
+      "frame_height_px": 24,
+      "sheet_width_px": 96,
+      "sheet_height_px": 24,
+      "frame_order": "left_to_right",
+      "byte_length": 218,
+      "sha256": "f9ff68aba736cc22ab7cd3c9e71ec3dd90f0f08e2f04df1cf215ee3763a4462f",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-KEY-IDLE",
+      "display_name": "Key Idle",
+      "path": "assets/files/treasure-hunters/objectives/key_idle_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "key_idle",
+      "requirement_ids": [
+        "ASSET-02"
+      ],
+      "frame_count": 8,
+      "frame_width_px": 24,
+      "frame_height_px": 24,
+      "sheet_width_px": 192,
+      "sheet_height_px": 24,
+      "frame_order": "left_to_right",
+      "byte_length": 530,
+      "sha256": "2fff5d0f9a6148fed4c5fd95dfd11fcf95ab080204da753c1faa51766acc40af",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-CANDLE",
+      "display_name": "Candle",
+      "path": "assets/files/treasure-hunters/world/candle_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "candle",
+      "requirement_ids": [
+        "ASSET-03"
+      ],
+      "frame_count": 6,
+      "frame_width_px": 32,
+      "frame_height_px": 32,
+      "sheet_width_px": 192,
+      "sheet_height_px": 32,
+      "frame_order": "left_to_right",
+      "byte_length": 700,
+      "sha256": "24dc962270b981382e78e9107129f5b63671b9a5eeeddc6e5492cdc8376da660",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 8.0
+    },
+    {
+      "id": "ART-CHAIN-BIG",
+      "display_name": "Chain Big",
+      "path": "assets/files/treasure-hunters/world/chain_big_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "chain_big",
+      "requirement_ids": [
+        "ASSET-03"
+      ],
+      "frame_count": 9,
+      "frame_width_px": 32,
+      "frame_height_px": 64,
+      "sheet_width_px": 288,
+      "sheet_height_px": 64,
+      "frame_order": "left_to_right",
+      "byte_length": 1148,
+      "sha256": "2174d93eb0c08b840308ae7cc8914ce9ecbd597b0db165e70f484a11d80611c6",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-CHAIN-SMALL",
+      "display_name": "Chain Small",
+      "path": "assets/files/treasure-hunters/world/chain_small_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "chain_small",
+      "requirement_ids": [
+        "ASSET-03"
+      ],
+      "frame_count": 8,
+      "frame_width_px": 32,
+      "frame_height_px": 32,
+      "sheet_width_px": 256,
+      "sheet_height_px": 32,
+      "frame_order": "left_to_right",
+      "byte_length": 725,
+      "sha256": "078ba486c57e67f998cf1b44eb3008ed2c1067d88e4365c6bedb0f327dcf458c",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-DOOR-CLOSED",
+      "display_name": "Door Closed",
+      "path": "assets/files/treasure-hunters/objectives/door_closed.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "door_closed",
+      "requirement_ids": [
+        "ASSET-02"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 64,
+      "frame_height_px": 64,
+      "sheet_width_px": 64,
+      "sheet_height_px": 64,
+      "frame_order": "left_to_right",
+      "byte_length": 798,
+      "sha256": "2e791ea4c25b0042e21ac6c6f0a61f3da651b371be0d811204e3139a6b5e04e6",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-DOOR-OPEN",
+      "display_name": "Door Open",
+      "path": "assets/files/treasure-hunters/objectives/door_open_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "door_open",
+      "requirement_ids": [
+        "ASSET-02"
+      ],
+      "frame_count": 5,
+      "frame_width_px": 64,
+      "frame_height_px": 64,
+      "sheet_width_px": 320,
+      "sheet_height_px": 64,
+      "frame_order": "left_to_right",
+      "byte_length": 2072,
+      "sha256": "672eb56c2e7f6c66005bbe2d84bbbcf4fb86273a1d1051bb351a8185a26012de",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-PLAYER-ATTACK-A",
+      "display_name": "Player Attack A",
+      "path": "assets/files/treasure-hunters/player/player_attack_a_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "player_attack_a",
+      "requirement_ids": [
+        "ASSET-01",
+        "COMBAT-01"
+      ],
+      "frame_count": 3,
+      "frame_width_px": 64,
+      "frame_height_px": 40,
+      "sheet_width_px": 192,
+      "sheet_height_px": 40,
+      "frame_order": "left_to_right",
+      "byte_length": 1444,
+      "sha256": "e744fe1cd6bbc35cedba345a9b695bd7a512d2d85c281594f2e43aa87f58a55f",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-PLAYER-ATTACK-B",
+      "display_name": "Player Attack B",
+      "path": "assets/files/treasure-hunters/player/player_attack_b_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "player_attack_b",
+      "requirement_ids": [
+        "ASSET-01",
+        "COMBAT-01"
+      ],
+      "frame_count": 3,
+      "frame_width_px": 64,
+      "frame_height_px": 40,
+      "sheet_width_px": 192,
+      "sheet_height_px": 40,
+      "frame_order": "left_to_right",
+      "byte_length": 1843,
+      "sha256": "4c100b05104be80b53e743c9567f418718addedcca4f9993624dcab09e8d18b0",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-PLAYER-ATTACK-C",
+      "display_name": "Player Attack C",
+      "path": "assets/files/treasure-hunters/player/player_attack_c_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "player_attack_c",
+      "requirement_ids": [
+        "ASSET-01",
+        "COMBAT-01"
+      ],
+      "frame_count": 3,
+      "frame_width_px": 64,
+      "frame_height_px": 40,
+      "sheet_width_px": 192,
+      "sheet_height_px": 40,
+      "frame_order": "left_to_right",
+      "byte_length": 1662,
+      "sha256": "08fc572dfe88ecca13c5bc560bea1412cdb740dd128079074c5bb53fe7b6c36b",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-PLAYER-DEATH",
+      "display_name": "Player Death",
+      "path": "assets/files/treasure-hunters/player/player_death_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "player_death",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "frame_count": 4,
+      "frame_width_px": 64,
+      "frame_height_px": 40,
+      "sheet_width_px": 256,
+      "sheet_height_px": 40,
+      "frame_order": "left_to_right",
+      "byte_length": 1213,
+      "sha256": "9bb5c351cf1fe9d9b00da95624bca7fbba97edd16a679a525db763a4a60e49be",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-PLAYER-FALL",
+      "display_name": "Player Fall",
+      "path": "assets/files/treasure-hunters/player/player_fall_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "player_fall",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 64,
+      "frame_height_px": 40,
+      "sheet_width_px": 64,
+      "sheet_height_px": 40,
+      "frame_order": "left_to_right",
+      "byte_length": 783,
+      "sha256": "64c76e57721a54f3488d94dab1618a6efc646447d493c8a4b019abeaf4f7d026",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-PLAYER-HIT",
+      "display_name": "Player Hit",
+      "path": "assets/files/treasure-hunters/player/player_hit_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "player_hit",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "frame_count": 4,
+      "frame_width_px": 64,
+      "frame_height_px": 40,
+      "sheet_width_px": 256,
+      "sheet_height_px": 40,
+      "frame_order": "left_to_right",
+      "byte_length": 1435,
+      "sha256": "53346b17b68682725459a654fedec4b878aff7f04008597fc2f6ac1f93dda1f7",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-PLAYER-IDLE",
+      "display_name": "Player Idle",
+      "path": "assets/files/treasure-hunters/player/player_idle_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "player_idle",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "frame_count": 5,
+      "frame_width_px": 64,
+      "frame_height_px": 40,
+      "sheet_width_px": 320,
+      "sheet_height_px": 40,
+      "frame_order": "left_to_right",
+      "byte_length": 1536,
+      "sha256": "999096893b46864dda246bf330e2fbd9c15e0dd370f8cbb97edd472404021732",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 10.0
+    },
+    {
+      "id": "ART-PLAYER-JUMP",
+      "display_name": "Player Jump",
+      "path": "assets/files/treasure-hunters/player/player_jump_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "player_jump",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "frame_count": 3,
+      "frame_width_px": 64,
+      "frame_height_px": 40,
+      "sheet_width_px": 192,
+      "sheet_height_px": 40,
+      "frame_order": "left_to_right",
+      "byte_length": 1376,
+      "sha256": "40e7f5d512b7f3f3e5b4546cc724089a99e0865834f386fa76928de713a6546b",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-PLAYER-LAND",
+      "display_name": "Player Land",
+      "path": "assets/files/treasure-hunters/player/player_land_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "player_land",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "frame_count": 2,
+      "frame_width_px": 64,
+      "frame_height_px": 40,
+      "sheet_width_px": 128,
+      "sheet_height_px": 40,
+      "frame_order": "left_to_right",
+      "byte_length": 1072,
+      "sha256": "79732ec8431e4f73ceae02127be414b8dfe94650b273600aac2a907782350f22",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 13.0
+    },
+    {
+      "id": "ART-PLAYER-RUN",
+      "display_name": "Player Run",
+      "path": "assets/files/treasure-hunters/player/player_run_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "player_run",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "frame_count": 6,
+      "frame_width_px": 64,
+      "frame_height_px": 40,
+      "sheet_width_px": 384,
+      "sheet_height_px": 40,
+      "frame_order": "left_to_right",
+      "byte_length": 1815,
+      "sha256": "2a6c2bb0f5b3af0dec113cd1a7b36b2ae3b17f59ba32c01a05569f8ac27b34f2",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 12.0
+    },
+    {
+      "id": "ART-SPRING",
+      "display_name": "Spring",
+      "path": "assets/files/treasure-hunters/world/spring_strip.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "spring",
+      "requirement_ids": [
+        "ASSET-03",
+        "TRAVERSAL-01"
+      ],
+      "frame_count": 8,
+      "frame_width_px": 22,
+      "frame_height_px": 16,
+      "sheet_width_px": 176,
+      "sheet_height_px": 16,
+      "frame_order": "left_to_right",
+      "byte_length": 644,
+      "sha256": "f654a87be4f9acfa708cf945f34e095e87682ef15a1fb008fbea5db8f7604b23",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0",
+      "source_frames_per_second": 15.0
+    },
+    {
+      "id": "ART-TERRAIN-BACK-WALL",
+      "display_name": "Terrain Back Wall",
+      "path": "assets/files/treasure-hunters/world/terrain_back_wall_tiles.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "terrain_back_wall",
+      "requirement_ids": [
+        "ASSET-03",
+        "CONTENT-01"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 608,
+      "frame_height_px": 416,
+      "sheet_width_px": 608,
+      "sheet_height_px": 416,
+      "frame_order": "left_to_right",
+      "byte_length": 18448,
+      "sha256": "835c4c8b89a0c76afca9caf4cef7b08b6e0098af017f6455a6ecb214ce66e059",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0"
+    },
+    {
+      "id": "ART-PLATFORM-TILES",
+      "display_name": "Platform Tiles",
+      "path": "assets/files/treasure-hunters/world/platform_tiles.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "platform_tiles",
+      "requirement_ids": [
+        "ASSET-03"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 192,
+      "frame_height_px": 128,
+      "sheet_width_px": 192,
+      "sheet_height_px": 128,
+      "frame_order": "left_to_right",
+      "byte_length": 795,
+      "sha256": "95b23bddcb2da97089d45babf75d33e8cd43e0d300ec3e5c0955df27c14db289",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0"
+    },
+    {
+      "id": "ART-SPIKE",
+      "display_name": "Spike",
+      "path": "assets/files/treasure-hunters/world/spike.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "spike",
+      "requirement_ids": [
+        "ASSET-03"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 32,
+      "frame_height_px": 32,
+      "sheet_width_px": 32,
+      "sheet_height_px": 32,
+      "frame_order": "left_to_right",
+      "byte_length": 379,
+      "sha256": "1002e16e482ed30ad151ce5bcc8079121caf61e220c3d1f7ff58efc1b105812b",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0"
+    },
+    {
+      "id": "ART-HEALTH-FRAME",
+      "display_name": "Health Frame",
+      "path": "assets/files/treasure-hunters/ui/health_frame.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "health_frame",
+      "requirement_ids": [
+        "ASSET-05"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 32,
+      "frame_height_px": 32,
+      "sheet_width_px": 32,
+      "sheet_height_px": 32,
+      "frame_order": "left_to_right",
+      "byte_length": 430,
+      "sha256": "0d1ddcd721ae9d98c4b8ae485e313d6d379a6ab1a828d9d1893fbef2a9752970",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0"
+    },
+    {
+      "id": "ART-HEALTH-TRACK",
+      "display_name": "Health Track",
+      "path": "assets/files/treasure-hunters/ui/health_track.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "health_track",
+      "requirement_ids": [
+        "ASSET-05"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 32,
+      "frame_height_px": 32,
+      "sheet_width_px": 32,
+      "sheet_height_px": 32,
+      "frame_order": "left_to_right",
+      "byte_length": 178,
+      "sha256": "017f1e097a6ae043723c4411b41b7f554450e78934a8c1059f08ae979220a827",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0"
+    },
+    {
+      "id": "ART-HEALTH-FILL",
+      "display_name": "Health Fill",
+      "path": "assets/files/treasure-hunters/ui/health_fill.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "health_fill",
+      "requirement_ids": [
+        "ASSET-05"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 32,
+      "frame_height_px": 2,
+      "sheet_width_px": 32,
+      "sheet_height_px": 2,
+      "frame_order": "left_to_right",
+      "byte_length": 77,
+      "sha256": "c960af505b186906cd64b7b6c57845cb93fa119e9ad95382f17fcda26cd15e6b",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0"
+    },
+    {
+      "id": "ART-DEATH-ICON",
+      "display_name": "Death Icon",
+      "path": "assets/files/treasure-hunters/ui/death_icon.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "death_icon",
+      "requirement_ids": [
+        "ASSET-05"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 24,
+      "frame_height_px": 28,
+      "sheet_width_px": 24,
+      "sheet_height_px": 28,
+      "frame_order": "left_to_right",
+      "byte_length": 339,
+      "sha256": "0312c00715f7cff49880697e8334db078e261706c418267d32354d5415431990",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0"
+    },
+    {
+      "id": "ART-BARREL-BOTTLE-DECORATION-01",
+      "display_name": "Barrel Bottle Decoration 01",
+      "path": "assets/files/treasure-hunters/world/barrel_bottle_decoration_01.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "barrel_bottle_decoration_01",
+      "requirement_ids": [
+        "ASSET-03"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 32,
+      "frame_height_px": 32,
+      "sheet_width_px": 32,
+      "sheet_height_px": 32,
+      "frame_order": "left_to_right",
+      "byte_length": 407,
+      "sha256": "e88bb578acb73c35b3c84b8d81b4f41727f5d45025d9f47e5a886d5a1c5d2709",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0"
+    },
+    {
+      "id": "ART-BARREL-BOTTLE-DECORATION-02",
+      "display_name": "Barrel Bottle Decoration 02",
+      "path": "assets/files/treasure-hunters/world/barrel_bottle_decoration_02.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "barrel_bottle_decoration_02",
+      "requirement_ids": [
+        "ASSET-03"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 32,
+      "frame_height_px": 32,
+      "sheet_width_px": 32,
+      "sheet_height_px": 32,
+      "frame_order": "left_to_right",
+      "byte_length": 269,
+      "sha256": "06f5115d43821b05c4f5a6f9d606bf846aaf60d4cb943eb8896cab1eaff386a0",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0"
+    },
+    {
+      "id": "ART-BARREL-BOTTLE-DECORATION-03",
+      "display_name": "Barrel Bottle Decoration 03",
+      "path": "assets/files/treasure-hunters/world/barrel_bottle_decoration_03.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "barrel_bottle_decoration_03",
+      "requirement_ids": [
+        "ASSET-03"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 32,
+      "frame_height_px": 32,
+      "sheet_width_px": 32,
+      "sheet_height_px": 32,
+      "frame_order": "left_to_right",
+      "byte_length": 251,
+      "sha256": "d8134302e7604c8dfad83e306cb2b27523359c60907ff7b88bf1895601302190",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0"
+    },
+    {
+      "id": "ART-DOOR-DECORATION-04",
+      "display_name": "Door Decoration 04",
+      "path": "assets/files/treasure-hunters/world/door_decoration_04.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "door_decoration_04",
+      "requirement_ids": [
+        "ASSET-03"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 32,
+      "frame_height_px": 32,
+      "sheet_width_px": 32,
+      "sheet_height_px": 32,
+      "frame_order": "left_to_right",
+      "byte_length": 386,
+      "sha256": "9216e2dbdf5e5902eb3328ef5df3abb77ab7521f71aaf177ca69946e09f9cd27",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0"
+    },
+    {
+      "id": "ART-CHAIN-DECORATION-05",
+      "display_name": "Chain Decoration 05",
+      "path": "assets/files/treasure-hunters/world/chain_decoration_05.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "chain_decoration_05",
+      "requirement_ids": [
+        "ASSET-03"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 32,
+      "frame_height_px": 32,
+      "sheet_width_px": 32,
+      "sheet_height_px": 32,
+      "frame_order": "left_to_right",
+      "byte_length": 354,
+      "sha256": "05786208d1ed112330764a2f6197d8749bbb33234ab195199851204717e53ca9",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0"
+    },
+    {
+      "id": "ART-BARREL-BOTTLE-DECORATION-06",
+      "display_name": "Barrel Bottle Decoration 06",
+      "path": "assets/files/treasure-hunters/world/barrel_bottle_decoration_06.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "barrel_bottle_decoration_06",
+      "requirement_ids": [
+        "ASSET-03"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 32,
+      "frame_height_px": 32,
+      "sheet_width_px": 32,
+      "sheet_height_px": 32,
+      "frame_order": "left_to_right",
+      "byte_length": 436,
+      "sha256": "ce84fbec1be3895f13b983cbd87c0e827253677a68b4746949070c38a498926f",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0"
+    },
+    {
+      "id": "ART-CHAIN-DECORATION-07",
+      "display_name": "Chain Decoration 07",
+      "path": "assets/files/treasure-hunters/world/chain_decoration_07.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "chain_decoration_07",
+      "requirement_ids": [
+        "ASSET-03"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 32,
+      "frame_height_px": 64,
+      "sheet_width_px": 32,
+      "sheet_height_px": 64,
+      "frame_order": "left_to_right",
+      "byte_length": 445,
+      "sha256": "b6bfe08feb3a180ccc394deb135962eea320c8b67ad49a3df1c6b7a6b93e9095",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0"
+    },
+    {
+      "id": "ART-BARREL-BOTTLE-DECORATION-08",
+      "display_name": "Barrel Bottle Decoration 08",
+      "path": "assets/files/treasure-hunters/world/barrel_bottle_decoration_08.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "barrel_bottle_decoration_08",
+      "requirement_ids": [
+        "ASSET-03"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 32,
+      "frame_height_px": 32,
+      "sheet_width_px": 32,
+      "sheet_height_px": 32,
+      "frame_order": "left_to_right",
+      "byte_length": 256,
+      "sha256": "a355d200cfd5a77062df22d7056237e248b37c5908407e2a88d59414880bc96c",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0"
+    },
+    {
+      "id": "ART-DOOR-DECORATION-09",
+      "display_name": "Door Decoration 09",
+      "path": "assets/files/treasure-hunters/world/door_decoration_09.png",
+      "media_type": "image/png",
+      "classification": "raw_sprite_sheet",
+      "semantic_role": "door_decoration_09",
+      "requirement_ids": [
+        "ASSET-03"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 64,
+      "frame_height_px": 64,
+      "sheet_width_px": 64,
+      "sheet_height_px": 64,
+      "frame_order": "left_to_right",
+      "byte_length": 771,
+      "sha256": "ef01a328f4ab69532c17b6334c91287b1f2fa0ce87fc39d3b12c8a42d0a3b5e6",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "CC0-1.0"
+    },
+    {
+      "id": "ART-ROOM-ART-PREVIEW",
+      "display_name": "Room Art Preview",
+      "path": "assets/files/map/room-art-preview.png",
+      "media_type": "image/png",
+      "classification": "static_art_preview",
+      "semantic_role": "room_art_preview",
+      "requirement_ids": [
+        "CONTENT-01"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 864,
+      "frame_height_px": 640,
+      "sheet_width_px": 864,
+      "sheet_height_px": 640,
+      "frame_order": "left_to_right",
+      "byte_length": 27877,
+      "sha256": "2ee7cc8017a7e8ca13bb96367ee3833a89cd9422498d883793c76405147b4239",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "User-authorized-reference"
+    },
+    {
+      "id": "ART-ROOM-REFERENCE",
+      "display_name": "Room Reference",
+      "path": "references/room-reference.png",
+      "media_type": "image/png",
+      "classification": "visual_requirement_reference",
+      "semantic_role": "room_reference",
+      "requirement_ids": [
+        "CONTENT-01",
+        "ENEMY-01"
+      ],
+      "frame_count": 1,
+      "frame_width_px": 1728,
+      "frame_height_px": 1120,
+      "sheet_width_px": 1728,
+      "sheet_height_px": 1120,
+      "frame_order": "left_to_right",
+      "byte_length": 58023,
+      "sha256": "9c3d279f733dce61ddab3c614f453810a25c7da9aae596853162c3e929fbaaea",
+      "png_chunks": [
+        "IHDR",
+        "IDAT",
+        "IEND"
+      ],
+      "hard_dependencies": [],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "User-authorized-reference"
+    },
+    {
+      "id": "MAP-ROOM-LAYOUT",
+      "display_name": "Room Static Art Layout",
+      "path": "assets/files/map/room-layout.json",
+      "media_type": "application/json",
+      "classification": "static_art_layout",
+      "semantic_role": "room_layout",
+      "requirement_ids": [
+        "CONTENT-01",
+        "ASSET-03"
+      ],
+      "byte_length": 124357,
+      "sha256": "c58fd553a7dfdd1a0473ee974e86cd79f4819221a31e0d1338f5d04437e760b3",
+      "hard_dependencies": [
+        "assets/files/treasure-hunters/world/terrain_back_wall_tiles.png",
+        "assets/files/treasure-hunters/world/barrel_bottle_decoration_01.png",
+        "assets/files/treasure-hunters/world/barrel_bottle_decoration_02.png",
+        "assets/files/treasure-hunters/world/barrel_bottle_decoration_03.png",
+        "assets/files/treasure-hunters/world/barrel_bottle_decoration_06.png",
+        "assets/files/treasure-hunters/world/barrel_bottle_decoration_08.png",
+        "assets/files/treasure-hunters/world/chain_decoration_05.png",
+        "assets/files/treasure-hunters/world/chain_decoration_07.png",
+        "assets/files/treasure-hunters/world/door_decoration_04.png",
+        "assets/files/treasure-hunters/world/door_decoration_09.png"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "editable": false,
+      "license_id": "User-authorized-reference"
+    }
+  ],
+  "source_metadata_included": false,
+  "source_pixel_policy": "Presentation sheets preserve source frame pixels; metadata and original engine packages are excluded."
+}

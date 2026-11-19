@@ -1,0 +1,118 @@
+{
+  "schema_version": "2.0.0",
+  "authority": "GDD.md Section 6",
+  "coverage": [
+    {
+      "requirement_id": "ASSET-01",
+      "asset_ids": [
+        "ART-PLAYER-ATTACK-A",
+        "ART-PLAYER-ATTACK-B",
+        "ART-PLAYER-ATTACK-C",
+        "ART-PLAYER-DEATH",
+        "ART-PLAYER-FALL",
+        "ART-PLAYER-HIT",
+        "ART-PLAYER-IDLE",
+        "ART-PLAYER-JUMP",
+        "ART-PLAYER-LAND",
+        "ART-PLAYER-RUN"
+      ],
+      "status": "supplied"
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "asset_ids": [
+        "ART-KEY-PICKUP",
+        "ART-KEY-IDLE",
+        "ART-DOOR-CLOSED",
+        "ART-DOOR-OPEN"
+      ],
+      "status": "supplied"
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "asset_ids": [
+        "ART-CANDLE",
+        "ART-CHAIN-BIG",
+        "ART-CHAIN-SMALL",
+        "ART-SPRING",
+        "ART-TERRAIN-BACK-WALL",
+        "ART-PLATFORM-TILES",
+        "ART-SPIKE",
+        "ART-BARREL-BOTTLE-DECORATION-01",
+        "ART-BARREL-BOTTLE-DECORATION-02",
+        "ART-BARREL-BOTTLE-DECORATION-03",
+        "ART-DOOR-DECORATION-04",
+        "ART-CHAIN-DECORATION-05",
+        "ART-BARREL-BOTTLE-DECORATION-06",
+        "ART-CHAIN-DECORATION-07",
+        "ART-BARREL-BOTTLE-DECORATION-08",
+        "ART-DOOR-DECORATION-09",
+        "MAP-ROOM-LAYOUT"
+      ],
+      "status": "supplied"
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "asset_ids": [
+        "ART-ENEMY-ATTACK",
+        "ART-ENEMY-DEATH",
+        "ART-ENEMY-FALL",
+        "ART-ENEMY-HIT",
+        "ART-ENEMY-IDLE",
+        "ART-ENEMY-RUN"
+      ],
+      "status": "supplied"
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "asset_ids": [
+        "ART-HEALTH-FRAME",
+        "ART-HEALTH-TRACK",
+        "ART-HEALTH-FILL",
+        "ART-DEATH-ICON"
+      ],
+      "status": "supplied"
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "asset_ids": [
+        "ART-PLAYER-ATTACK-A",
+        "ART-PLAYER-ATTACK-B",
+        "ART-PLAYER-ATTACK-C"
+      ],
+      "status": "supplied"
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "asset_ids": [
+        "ART-TERRAIN-BACK-WALL",
+        "ART-ROOM-ART-PREVIEW",
+        "ART-ROOM-REFERENCE",
+        "MAP-ROOM-LAYOUT"
+      ],
+      "status": "supplied"
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "asset_ids": [
+        "ART-ENEMY-RUN",
+        "ART-ROOM-REFERENCE"
+      ],
+      "status": "supplied"
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "asset_ids": [
+        "ART-ENEMY-ATTACK"
+      ],
+      "status": "supplied"
+    },
+    {
+      "requirement_id": "TRAVERSAL-01",
+      "asset_ids": [
+        "ART-SPRING"
+      ],
+      "status": "supplied"
+    }
+  ]
+}

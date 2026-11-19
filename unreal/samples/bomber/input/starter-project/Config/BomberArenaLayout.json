@@ -1,0 +1,49 @@
+{
+  "schema_version": "2.0.0",
+  "coordinate_space": {
+    "origin": "top_left",
+    "x_direction": "right",
+    "y_direction": "down",
+    "width_cells": 11,
+    "height_cells": 9
+  },
+  "symbols": {
+    "#": "indestructible_wall",
+    ".": "floor",
+    "C": "destructible_crate",
+    "1": "player_1_start_floor",
+    "2": "player_2_start_floor"
+  },
+  "rows": [
+    "###########",
+    "#1.C.C.C.2#",
+    "#.#.#.#.#.#",
+    "#..C.C.C..#",
+    "#.#.#.#.#.#",
+    "#C.C.C.C.C#",
+    "#.#.#.#.#.#",
+    "#..C.C.C.C#",
+    "###########"
+  ],
+  "players": [
+    { "object_id": "player_1", "slot": 1, "x": 1, "y": 1 },
+    { "object_id": "player_2", "slot": 2, "x": 9, "y": 1 }
+  ],
+  "crates": [
+    { "x": 3, "y": 1, "contains": "bomb_powerup" },
+    { "x": 5, "y": 1, "contains": "fire_powerup" },
+    { "x": 7, "y": 1, "contains": "none" },
+    { "x": 3, "y": 3, "contains": "skate_powerup" },
+    { "x": 5, "y": 3, "contains": "none" },
+    { "x": 7, "y": 3, "contains": "none" },
+    { "x": 1, "y": 5, "contains": "none" },
+    { "x": 3, "y": 5, "contains": "none" },
+    { "x": 5, "y": 5, "contains": "none" },
+    { "x": 7, "y": 5, "contains": "none" },
+    { "x": 9, "y": 5, "contains": "none" },
+    { "x": 3, "y": 7, "contains": "none" },
+    { "x": 5, "y": 7, "contains": "none" },
+    { "x": 7, "y": 7, "contains": "none" },
+    { "x": 9, "y": 7, "contains": "none" }
+  ]
+}

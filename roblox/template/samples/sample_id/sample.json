@@ -1,0 +1,56 @@
+{
+  "schema_version": "2.0",
+  "release_status": "template",
+  "sample_id": "sample_id",
+  "sample_version": "1.0.0",
+  "title": "TODO: sample title",
+  "engine": {
+    "name": "TODO",
+    "version": "TODO: exact version"
+  },
+  "environment": {
+    "os": "TODO",
+    "runtime": "TODO: language and exact version",
+    "setup_commands": [],
+    "credential_environment_variables": []
+  },
+  "sources": [
+    {
+      "url": "TODO: upstream source URL",
+      "revision": "TODO: immutable commit or release",
+      "license": "TODO",
+      "adaptation_scope": "TODO: retained systems and deliberate exclusions"
+    }
+  ],
+  "input": {
+    "path": "input/",
+    "prompt": "input/INITIAL_AGENT_PROMPT.md",
+    "design": "input/GDD.md",
+    "tools": "input/tools/",
+    "assets": "input/assets/",
+    "starter_project": "input/starter-project/",
+    "contracts": "input/contracts/",
+    "self_check": "input/self-check/"
+  },
+  "submission": {
+    "type": "complete_project"
+  },
+  "evaluation": {
+    "version": "1.0.0",
+    "command": [
+      "python",
+      "evaluation/evaluate.py",
+      "--project",
+      "{project}",
+      "--output",
+      "{output}"
+    ],
+    "rules": "evaluation/rules.json",
+    "coverage": "evaluation/coverage.json",
+    "result_schema": "evaluation/score.schema.json",
+    "result_file": "score.json",
+    "qualification_status": "not_reviewed",
+    "max_score": 100,
+    "result_format_version": "2.1"
+  }
+}

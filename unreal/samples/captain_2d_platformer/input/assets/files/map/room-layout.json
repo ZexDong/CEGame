@@ -1,0 +1,5632 @@
+{
+  "schema_version": "1.0.0",
+  "classification": "static_art_layout",
+  "width_cells": 27,
+  "height_cells": 20,
+  "tile_size_px": [
+    32,
+    32
+  ],
+  "coordinate_space": "Pixel coordinates; origin at upper left; x right, y down. Tile images are indexed row-major from zero.",
+  "tileset_image": "assets/files/treasure-hunters/world/terrain_back_wall_tiles.png",
+  "layers": [
+    {
+      "id": "art_layer_1",
+      "draw_order": 3,
+      "rows": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 26,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 59,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 59,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 59,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 59,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 59,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 59,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 59,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 59,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 59,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 59,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 59,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 59,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 59,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 59,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 27,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 41,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 58,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 27,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 41,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 39,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 41,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 20,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 21,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 22,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          {
+            "tile": 39,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 30,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 97,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 97,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 97,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 97,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 97,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 97,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 98,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          {
+            "tile": 39,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 41,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          {
+            "tile": 39,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 41,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 39,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 41,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          {
+            "tile": 39,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 41,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 39,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 41,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          {
+            "tile": 39,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 41,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 58,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 59,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 60,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          {
+            "tile": 39,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 41,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 24,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 39,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 45,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 21,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 21,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 21,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 21,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 21,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 29,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 21,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 21,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 21,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 21,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 21,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 21,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 21,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 21,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 21,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 46,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "id": "art_layer_2",
+      "draw_order": 2,
+      "rows": [
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 134,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 153,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 140,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 173,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 173,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 173,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 141,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 136,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 172,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 173,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 173,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 173,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 173,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 173,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 173,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 141,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 155,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 153,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 155,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 134,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 153,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 155,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 153,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 155,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 134,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 135,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 160,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 155,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 153,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 155,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 153,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 155,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 153,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 155,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 153,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 140,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 173,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 141,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 155,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 153,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 154,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 155,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          {
+            "tile": 172,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 173,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 173,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 173,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 174,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          {
+            "tile": 172,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 173,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 219,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 211,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 211,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 211,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 220,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 173,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 174,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ],
+        [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      ]
+    },
+    {
+      "id": "art_layer_3",
+      "draw_order": 1,
+      "rows": [
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ],
+        [
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          },
+          {
+            "tile": 40,
+            "flip_x": false,
+            "flip_y": false,
+            "flip_diagonal": false
+          }
+        ]
+      ]
+    }
+  ],
+  "decorations": [
+    {
+      "image": "assets/files/treasure-hunters/world/barrel_bottle_decoration_01.png",
+      "center_px": [
+        403.078911,
+        431.132068
+      ],
+      "scale_xy": [
+        1.0,
+        1.0
+      ],
+      "rotation_degrees": 0.0,
+      "depth": -1.0000000000005116
+    },
+    {
+      "image": "assets/files/treasure-hunters/world/barrel_bottle_decoration_02.png",
+      "center_px": [
+        390.078911,
+        433.132068
+      ],
+      "scale_xy": [
+        1.0,
+        1.0
+      ],
+      "rotation_degrees": 0.0,
+      "depth": -1.0000000000005116
+    },
+    {
+      "image": "assets/files/treasure-hunters/world/barrel_bottle_decoration_03.png",
+      "center_px": [
+        403.078911,
+        409.132068
+      ],
+      "scale_xy": [
+        1.0,
+        1.0
+      ],
+      "rotation_degrees": 0.0,
+      "depth": -1.0000000000005116
+    },
+    {
+      "image": "assets/files/treasure-hunters/world/door_decoration_04.png",
+      "center_px": [
+        365.064413,
+        376.405377
+      ],
+      "scale_xy": [
+        1.0,
+        1.0
+      ],
+      "rotation_degrees": 0.0,
+      "depth": -1.6495378521721366e-07
+    },
+    {
+      "image": "assets/files/treasure-hunters/world/chain_decoration_05.png",
+      "center_px": [
+        203.929962,
+        334.57603
+      ],
+      "scale_xy": [
+        1.0,
+        1.0
+      ],
+      "rotation_degrees": 0.0,
+      "depth": -0.9999999999996021
+    },
+    {
+      "image": "assets/files/treasure-hunters/world/barrel_bottle_decoration_06.png",
+      "center_px": [
+        292.212208,
+        432.61603
+      ],
+      "scale_xy": [
+        1.0,
+        1.0
+      ],
+      "rotation_degrees": 0.0,
+      "depth": -1.0
+    },
+    {
+      "image": "assets/files/treasure-hunters/world/barrel_bottle_decoration_06.png",
+      "center_px": [
+        312.212208,
+        432.61603
+      ],
+      "scale_xy": [
+        1.0,
+        1.0
+      ],
+      "rotation_degrees": 0.0,
+      "depth": -1.0
+    },
+    {
+      "image": "assets/files/treasure-hunters/world/barrel_bottle_decoration_06.png",
+      "center_px": [
+        303.212208,
+        414.61603
+      ],
+      "scale_xy": [
+        1.0,
+        1.0
+      ],
+      "rotation_degrees": 0.0,
+      "depth": -1.0
+    },
+    {
+      "image": "assets/files/treasure-hunters/world/chain_decoration_07.png",
+      "center_px": [
+        631.379158,
+        219.138856
+      ],
+      "scale_xy": [
+        1.0,
+        1.0
+      ],
+      "rotation_degrees": 0.0,
+      "depth": -1.9999999999999147
+    },
+    {
+      "image": "assets/files/treasure-hunters/world/barrel_bottle_decoration_01.png",
+      "center_px": [
+        332.820465,
+        273.0
+      ],
+      "scale_xy": [
+        1.0,
+        1.0
+      ],
+      "rotation_degrees": 0.0,
+      "depth": -0.9999999999973284
+    },
+    {
+      "image": "assets/files/treasure-hunters/world/barrel_bottle_decoration_01.png",
+      "center_px": [
+        354.820465,
+        273.0
+      ],
+      "scale_xy": [
+        1.0,
+        1.0
+      ],
+      "rotation_degrees": 0.0,
+      "depth": -0.9999999999973284
+    },
+    {
+      "image": "assets/files/treasure-hunters/world/barrel_bottle_decoration_01.png",
+      "center_px": [
+        343.820465,
+        252.0
+      ],
+      "scale_xy": [
+        1.0,
+        1.0
+      ],
+      "rotation_degrees": 0.0,
+      "depth": -0.9999999999973284
+    },
+    {
+      "image": "assets/files/treasure-hunters/world/barrel_bottle_decoration_03.png",
+      "center_px": [
+        343.820465,
+        229.0
+      ],
+      "scale_xy": [
+        1.0,
+        1.0
+      ],
+      "rotation_degrees": 0.0,
+      "depth": -0.9999999999973284
+    },
+    {
+      "image": "assets/files/treasure-hunters/world/barrel_bottle_decoration_02.png",
+      "center_px": [
+        214.462226,
+        273.729239
+      ],
+      "scale_xy": [
+        1.0,
+        1.0
+      ],
+      "rotation_degrees": 0.0,
+      "depth": -0.9999999999969589
+    },
+    {
+      "image": "assets/files/treasure-hunters/world/barrel_bottle_decoration_08.png",
+      "center_px": [
+        314.820465,
+        272.0
+      ],
+      "scale_xy": [
+        1.0,
+        1.0
+      ],
+      "rotation_degrees": 0.0,
+      "depth": -0.9999999999973284
+    },
+    {
+      "image": "assets/files/treasure-hunters/world/barrel_bottle_decoration_03.png",
+      "center_px": [
+        529.50777,
+        240.821732
+      ],
+      "scale_xy": [
+        1.0,
+        1.0
+      ],
+      "rotation_degrees": 0.0,
+      "depth": -0.9999999999998863
+    },
+    {
+      "image": "assets/files/treasure-hunters/world/door_decoration_09.png",
+      "center_px": [
+        239.527647,
+        418.188932
+      ],
+      "scale_xy": [
+        1.0,
+        1.0
+      ],
+      "rotation_degrees": 0.0,
+      "depth": -1.9999999999994884
+    }
+  ],
+  "contains_gameplay": false,
+  "contains_collision": false
+}

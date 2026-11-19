@@ -1,0 +1,28 @@
+Dockline Dispatch Candidate Delivery Checklist
+
+Required files:
+[ ] Complete project/ Rojo source
+[ ] DocklineDispatchCandidate.rbxlx
+[ ] BUILD_REPORT.txt
+[ ] DEVELOPMENT_TRACE.txt
+[ ] Complete project ZIP
+[ ] Development task name or link
+
+Quick static checks:
+[ ] Frozen DocklineDispatchSchema.luau strings are unchanged
+[ ] Rojo paths are relative and portable
+[ ] No reference solutions, private rules, old candidates, evaluators, or results
+[ ] No caches, temporary screenshots, debug saves, or unnecessary build artifacts
+[ ] Server logic, client HUD/input, and shared protocol source are in project/
+[ ] If Rojo is available, one build was attempted and its actual result recorded
+[ ] If Studio Play was not run, BUILD_REPORT.txt says Runtime verification: NOT RUN
+
+Reporting:
+1. Full success, death recovery, wrong-order, R, and Reopen tests are not required
+   during development.
+2. Mark unperformed dynamic checks NOT RUN; source existence does not prove PASS.
+3. Deliver source even on build failure and retain full error information.
+4. DEVELOPMENT_TRACE.txt records actual major create/edit/build/repair actions;
+   internal tool polling need not be expanded.
+
+[ ] DD_NavLink uses Configuration and DD_Enabled, without nonexistent properties

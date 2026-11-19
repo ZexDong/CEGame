@@ -1,0 +1,722 @@
+{
+  "contract": "game-session/v1",
+  "contentVersion": "driftfolk-stormbound-v2-20260918",
+  "entries": [
+    "archipelago"
+  ],
+  "phases": [
+    "menu",
+    "playing",
+    "event",
+    "escaped",
+    "extinct"
+  ],
+  "operationTimeoutSeconds": 10,
+  "requiredLandmarks": [
+    "island-a",
+    "island-b",
+    "harbor-a",
+    "harbor-b"
+  ],
+  "values": [
+    {
+      "name": "day",
+      "minimum": 1,
+      "maximum": 9999,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "period",
+      "minimum": 0,
+      "maximum": 2,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "speed",
+      "minimum": 1,
+      "maximum": 16,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "paused",
+      "minimum": 0,
+      "maximum": 1,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "weather",
+      "minimum": 0,
+      "maximum": 2,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "pressure",
+      "minimum": 0,
+      "maximum": 100,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "selected_island",
+      "minimum": 1,
+      "maximum": 2,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "selected_resident",
+      "minimum": 1,
+      "maximum": 6,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "selected_building",
+      "minimum": 0,
+      "maximum": 2,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "selected_cargo",
+      "minimum": 0,
+      "maximum": 2,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "manifest_food",
+      "minimum": 0,
+      "maximum": 12,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "manifest_timber",
+      "minimum": 0,
+      "maximum": 12,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "manifest_ore",
+      "minimum": 0,
+      "maximum": 12,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "manifest_passengers",
+      "minimum": 0,
+      "maximum": 63,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "event_pending",
+      "minimum": 0,
+      "maximum": 2,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "events_resolved",
+      "minimum": 0,
+      "maximum": 3,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "escape_stage",
+      "minimum": 0,
+      "maximum": 3,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "escape_work",
+      "minimum": 0,
+      "maximum": 4,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "escape_paid",
+      "minimum": 0,
+      "maximum": 1,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "escape_active",
+      "minimum": 0,
+      "maximum": 1,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "saved_notice",
+      "minimum": 0,
+      "maximum": 1,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "tick_remainder",
+      "minimum": 0,
+      "maximum": 4,
+      "integer": false,
+      "editable": true,
+      "meaning": "Accumulated 1x simulation seconds since the last complete period; strictly less than period_seconds."
+    },
+    {
+      "name": "period_seconds",
+      "minimum": 4,
+      "maximum": 4,
+      "integer": false,
+      "editable": false,
+      "meaning": "The configured duration at 1x, not remaining time."
+    },
+    {
+      "name": "chronicle_count",
+      "minimum": 1,
+      "maximum": 1000000,
+      "integer": true,
+      "editable": false,
+      "meaning": "Opaque chronicle metadata; round-trip only, never independently edited."
+    },
+    {
+      "name": "next_chronicle_id",
+      "minimum": 1,
+      "maximum": 1000000,
+      "integer": true,
+      "editable": false,
+      "meaning": "Opaque chronicle metadata; round-trip only, never independently edited."
+    }
+  ],
+  "actorKinds": [
+    {
+      "kind": "island",
+      "states": [
+        "settled"
+      ],
+      "poseEditable": true,
+      "stateEditable": true
+    },
+    {
+      "kind": "resident",
+      "states": [
+        "alive",
+        "aboard",
+        "dead"
+      ],
+      "poseEditable": true,
+      "stateEditable": true
+    },
+    {
+      "kind": "building",
+      "states": [
+        "unbuilt",
+        "building",
+        "built"
+      ],
+      "poseEditable": true,
+      "stateEditable": true
+    },
+    {
+      "kind": "boat",
+      "states": [
+        "idle_a",
+        "idle_b",
+        "to_a",
+        "to_b"
+      ],
+      "poseEditable": true,
+      "stateEditable": true
+    },
+    {
+      "kind": "escape",
+      "states": [
+        "hull",
+        "rigging",
+        "departure",
+        "complete"
+      ],
+      "poseEditable": true,
+      "stateEditable": true
+    }
+  ],
+  "actorValues": {
+    "island": [
+      {
+        "name": "food",
+        "minimum": 0,
+        "maximum": 10000,
+        "integer": true,
+        "editable": true
+      },
+      {
+        "name": "timber",
+        "minimum": 0,
+        "maximum": 10000,
+        "integer": true,
+        "editable": true
+      },
+      {
+        "name": "ore",
+        "minimum": 0,
+        "maximum": 10000,
+        "integer": true,
+        "editable": true
+      }
+    ],
+    "resident": [
+      {
+        "name": "island",
+        "minimum": 0,
+        "maximum": 2,
+        "integer": true,
+        "editable": true
+      },
+      {
+        "name": "job",
+        "minimum": 0,
+        "maximum": 5,
+        "integer": true,
+        "editable": true
+      },
+      {
+        "name": "health",
+        "minimum": 0,
+        "maximum": 100,
+        "integer": true,
+        "editable": true
+      },
+      {
+        "name": "fatigue",
+        "minimum": 0,
+        "maximum": 100,
+        "integer": true,
+        "editable": true
+      },
+      {
+        "name": "morale",
+        "minimum": 0,
+        "maximum": 100,
+        "integer": true,
+        "editable": true
+      }
+    ],
+    "building": [
+      {
+        "name": "island",
+        "minimum": 1,
+        "maximum": 2,
+        "integer": true,
+        "editable": true
+      },
+      {
+        "name": "type",
+        "minimum": 0,
+        "maximum": 2,
+        "integer": true,
+        "editable": true
+      },
+      {
+        "name": "work",
+        "minimum": 0,
+        "maximum": 5,
+        "integer": true,
+        "editable": true
+      }
+    ],
+    "boat": [
+      {
+        "name": "remaining",
+        "minimum": 0,
+        "maximum": 2,
+        "integer": true,
+        "editable": true
+      },
+      {
+        "name": "food",
+        "minimum": 0,
+        "maximum": 12,
+        "integer": true,
+        "editable": true
+      },
+      {
+        "name": "timber",
+        "minimum": 0,
+        "maximum": 12,
+        "integer": true,
+        "editable": true
+      },
+      {
+        "name": "ore",
+        "minimum": 0,
+        "maximum": 12,
+        "integer": true,
+        "editable": true
+      },
+      {
+        "name": "passengers",
+        "minimum": 0,
+        "maximum": 63,
+        "integer": true,
+        "editable": true
+      }
+    ],
+    "escape": []
+  },
+  "requiredActors": [
+    {
+      "id": "island-a",
+      "kind": "island"
+    },
+    {
+      "id": "island-b",
+      "kind": "island"
+    },
+    {
+      "id": "resident-1",
+      "kind": "resident"
+    },
+    {
+      "id": "resident-2",
+      "kind": "resident"
+    },
+    {
+      "id": "resident-3",
+      "kind": "resident"
+    },
+    {
+      "id": "resident-4",
+      "kind": "resident"
+    },
+    {
+      "id": "resident-5",
+      "kind": "resident"
+    },
+    {
+      "id": "resident-6",
+      "kind": "resident"
+    },
+    {
+      "id": "a-workshop",
+      "kind": "building"
+    },
+    {
+      "id": "a-clinic",
+      "kind": "building"
+    },
+    {
+      "id": "a-beacon",
+      "kind": "building"
+    },
+    {
+      "id": "b-workshop",
+      "kind": "building"
+    },
+    {
+      "id": "b-clinic",
+      "kind": "building"
+    },
+    {
+      "id": "b-beacon",
+      "kind": "building"
+    },
+    {
+      "id": "ferry",
+      "kind": "boat"
+    },
+    {
+      "id": "escape-project",
+      "kind": "escape"
+    }
+  ],
+  "rules": {
+    "seed": 20260823,
+    "period_names": [
+      "morning",
+      "day",
+      "night"
+    ],
+    "speed_values": [
+      1,
+      4,
+      16
+    ],
+    "period_seconds": 4,
+    "initial": {
+      "day": 1,
+      "period": 0,
+      "speed": 1,
+      "paused": 0,
+      "weather": 0,
+      "pressure": 0,
+      "selected_island": 1,
+      "selected_resident": 1,
+      "selected_building": 0,
+      "selected_cargo": 0,
+      "island_a": {
+        "food": 30,
+        "timber": 20,
+        "ore": 8
+      },
+      "island_b": {
+        "food": 24,
+        "timber": 16,
+        "ore": 6
+      },
+      "resident_names": [
+        "Ada",
+        "Bram",
+        "Cleo",
+        "Dara",
+        "Eli",
+        "Finn"
+      ],
+      "resident_islands": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "resident_jobs": [
+        1,
+        2,
+        4,
+        1,
+        3,
+        4
+      ],
+      "health": 100,
+      "fatigue": 0,
+      "morale": 70,
+      "boat": "idle_a"
+    },
+    "jobs": [
+      "rest",
+      "forage",
+      "cut_timber",
+      "mine_ore",
+      "build",
+      "medic"
+    ],
+    "production": {
+      "forage_food": 3,
+      "cut_timber": 2,
+      "mine_ore": 1,
+      "workshop_bonus_timber_and_ore": 1,
+      "low_morale_threshold": 25,
+      "low_morale_divisor": 2,
+      "fatigue_work_cutoff": 80,
+      "working_fatigue_gain": 10,
+      "rest_fatigue_recovery": 20,
+      "builder_work": 1,
+      "medic_heal_with_clinic": 6
+    },
+    "weather": {
+      "codes": [
+        "calm",
+        "rain",
+        "storm"
+      ],
+      "day_cycle": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "storm_freezes_boat": true,
+      "storm_forage_divisor": 2
+    },
+    "night": {
+      "food_per_land_resident": 2,
+      "food_per_passenger": 1,
+      "heat_timber_per_resident_by_weather": [
+        0,
+        1,
+        2
+      ],
+      "food_shortage_health_loss": 15,
+      "heat_shortage_health_loss": 10,
+      "food_shortage_morale_loss": 10,
+      "adequate_food_morale_gain": 2,
+      "beacon_heat_damage_divisor": 2,
+      "pressure_per_island_shortage": 10,
+      "pressure_per_fully_supplied_night": -5,
+      "storm_pressure": 5
+    },
+    "buildings": [
+      {
+        "name": "Workshop",
+        "type": 0,
+        "timber": 8,
+        "ore": 2,
+        "work": 4,
+        "prerequisite": null,
+        "effect": "Local timber and ore worker output receives the production bonus."
+      },
+      {
+        "name": "Clinic",
+        "type": 1,
+        "timber": 6,
+        "ore": 4,
+        "work": 3,
+        "prerequisite": "workshop",
+        "effect": "Each local eligible medic heals the lowest-health living land resident, ties by resident ID."
+      },
+      {
+        "name": "Beacon",
+        "type": 2,
+        "timber": 10,
+        "ore": 6,
+        "work": 5,
+        "prerequisite": "workshop",
+        "effect": "Local heating-shortage health damage is halved, rounded down; both beacons are required to begin escape stages."
+      }
+    ],
+    "boat": {
+      "cargo_capacity": 12,
+      "passenger_capacity": 2,
+      "travel_periods": 2,
+      "departure_food_cost": 2,
+      "initial_dock": 1
+    },
+    "events": [
+      {
+        "id": 1,
+        "due_after_ticks": 4,
+        "title": "Salvage bargain",
+        "choices": [
+          {
+            "label": "Buy supplies",
+            "precondition": "Island A has at least 4 timber.",
+            "effects": "Spend 4 timber at A; gain 8 food at A."
+          },
+          {
+            "label": "Refuse the offer",
+            "precondition": "Always legal.",
+            "effects": "Increase pressure by 5, capped at 100."
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "due_after_ticks": 10,
+        "title": "Fever watch",
+        "choices": [
+          {
+            "label": "Distribute rations",
+            "precondition": "Island A has at least 6 food.",
+            "effects": "Spend 6 food at A; heal each living resident by 10 up to 100."
+          },
+          {
+            "label": "Keep working",
+            "precondition": "Always legal.",
+            "effects": "Each living resident loses 10 health; resolve deaths and extinction immediately."
+          }
+        ]
+      }
+    ],
+    "escape": {
+      "home_island": 1,
+      "requires_both_beacons": true,
+      "stages": [
+        {
+          "name": "Hull",
+          "food": 0,
+          "timber": 12,
+          "ore": 4,
+          "work": 4
+        },
+        {
+          "name": "Rigging",
+          "food": 0,
+          "timber": 8,
+          "ore": 6,
+          "work": 4
+        },
+        {
+          "name": "Departure",
+          "food": 8,
+          "timber": 4,
+          "ore": 0,
+          "work": 3
+        }
+      ],
+      "departure_requires_all_living_home_and_boat_idle_home": true
+    },
+    "controls": {
+      "Enter": "Start from lobby",
+      "Escape": "Toggle pause intent",
+      "N": "Advance exactly one period only while paused, playing, and without a pending event",
+      "1/2/3": "Set 1x/4x/16x outside event; while an event is pending, 1/2 choose the shown option and 3 is invalid",
+      "Tab": "Select the other island",
+      "Q": "Cycle resident selection in stable ID order",
+      "J": "Cycle the selected living land resident job in the published job order",
+      "B": "Cycle selected island building type",
+      "C": "Order selected building",
+      "X": "Cancel selected unfinished building",
+      "G": "Cycle manifest resource food/timber/ore",
+      "Equals": "Increase selected manifest cargo by one if capacity permits",
+      "Minus": "Decrease selected manifest cargo by one to a minimum of zero",
+      "M": "Toggle selected resident on the departure manifest if living, at the selected dock, and passenger capacity permits",
+      "T": "Dispatch the ferry from the selected island using the shown manifest",
+      "E": "Begin current escape stage or toggle suspension of an already paid stage",
+      "V": "Cancel current unpaid/part-built escape stage without undoing completed stages",
+      "F5": "Save to the single local slot",
+      "F9": "Explicit Load from the local slot",
+      "R": "Restart to a clean playing archipelago; leave disk slot unchanged"
+    }
+  },
+  "stateSemantics": [
+    "This document is the sole authority for serialized state identities, numeric balance and initial values. GDD.md is the authority for gameplay behavior and ordering.",
+    "All required actor identities are captured in every phase. They must be present outside the menu; in the menu their present flags may be false when hidden or not instantiated. Residents resolve to actual visible map residents or their visible aboard/deceased representation, not reporting proxies. Portrait-only roster entries do not replace the required map residents.",
+    "The menu captures initial semantic values with phase menu (poses and present flags may reflect hidden or not-yet-instantiated presentation); no autonomous simulation occurs there. Actor poses are actual world coordinates chosen by the delivered layout; every required landmark describes the corresponding actual island/harbor area.",
+    "Actor values must match exactly the set for their kind. Every actor entryId is archipelago. Stable identities survive restore, restart, save and load. facing is -1 or 1, not an angle.",
+    "Building IDs fix island and type: a/b is 1/2; workshop/clinic/beacon is 0/1/2. Unbuilt work=0; building work is at least 0 and less than its required work; built work equals required work. At most one under-construction building per island. A building or built clinic/beacon requires its local workshop built.",
+    "Resident state dead iff health=0, with job=rest, morale=0 and no passenger bit. Living resident state aboard iff island=0 and its bit belongs to the ferry; otherwise alive with island 1 or 2. Dead land residents keep their last island; a death aboard uses island=0 without a passenger bit.",
+    "Ferry passenger bits are exactly the living aboard residents; at most two. Docked ferry has remaining=0, no cargo and no passenger bits. In transit remaining is 1 or 2; total cargo is at most capacity. Any partial transit progress, fatigue, weather and pending choice is restorable.",
+    "Departure manifest is only a selection, not a second inventory. It may exceed current local stock, so dispatch can be safely rejected; it never exceeds vessel capacity. Selected passengers must currently be living at selected island. Changing selected island clears the manifest. Dispatch clears it after atomic payment/loading.",
+    "speed is one of rules.speed_values; tick_remainder is nonnegative and strictly below period_seconds. weather follows the public cycle for current day. pressure and health/fatigue/morale are clamped to their declared ranges.",
+    "event_pending=0 iff phase is not event. Pending event ID is not yet in events_resolved; resolved bit for event n is 1<<(n-1). An edited event may be pending earlier than its normal schedule, provided it is unresolved. Completed ticks are exactly (day-1)*3+period, including after legal date edits; opaque implementation counters cannot override the edited date. Decisions do not advance the period or tick remainder.",
+    "escape_stage indexes the current unfinished stage (3 means complete). escape actor state agrees. escape_work is less than current stage work, or 0 for stage 3. escape_paid=0 requires escape_work=0 and escape_active=0; escape_active=1 requires paid=1. Started escape requires both beacons built. Stage 2 may stay paid/suspended while travel prevents work; the home-and-docked conditions gate its start, each work tick and completion, not save legality.",
+    "phase extinct iff no resident is alive; phase escaped requires stage=3 and at least one living resident, all living on A, ferry idle_a. Both terminal phases have event_pending=0 and escape_active=0. A playing/event phase has living residents and stage<3. Endings are normally reached through actions; accepting a legal terminal save does not substitute for implementing their causes.",
+    "chronicle_count and next_chronicle_id reflect opaqueData and are not independently editable. The opaque payload preserves the full ordered chronicle and any additional implementation details; it cannot override editable public fields. An edited legal initial situation may have an unchanged historical chronicle: restoring must not invent actions or new history.",
+    "saved_notice is UI feedback and may be edited as an initial situation; Save/Load storage bytes themselves are not part of the in-memory session contract. The local disk slot persists across Restart and process close but is loaded only by explicit normal Load.",
+    "Actor poses are independently editable actual layout coordinates, not encoded island membership. The island field and passenger bits own semantic location. Restore preserves the requested poses rather than snapping them to any fixed reference layout. Ordinary subsequent transfer/arrival updates actual poses through the game rules. A legal pose edit alone must not change inventory, ownership, jobs or health."
+  ]
+}

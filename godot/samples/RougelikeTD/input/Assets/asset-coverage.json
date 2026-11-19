@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "task_id": "roguelike_td_twelve_wave",
+  "status": "complete",
+  "supplied": [
+    "archer_hero",
+    "mage_hero",
+    "warrior_hero",
+    "basic_enemy",
+    "runner_enemy",
+    "tank_enemy",
+    "boss_enemy",
+    "projectile",
+    "ground_tileset",
+    "portal"
+  ],
+  "procedural": [
+    "hud",
+    "placement_preview",
+    "health_bars",
+    "range_preview",
+    "reward_cards",
+    "result_overlay"
+  ],
+  "missing": []
+}

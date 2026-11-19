@@ -1,0 +1,212 @@
+{
+  "contract": "game-session/v1",
+  "contentVersion": "unity_3d_polyrace_challenge-v1-20261029",
+  "entries": [
+    "track_1_time",
+    "track_1_distance",
+    "track_2_time",
+    "track_2_distance",
+    "track_3_time",
+    "track_3_distance"
+  ],
+  "phases": [
+    "menu",
+    "playing",
+    "paused",
+    "won",
+    "lost"
+  ],
+  "operationTimeoutSeconds": 10,
+  "requiredLandmarks": [
+    "spawn",
+    "board-center",
+    "finish",
+    "ramp-peak"
+  ],
+  "values": [
+    {
+      "name": "track",
+      "minimum": 1,
+      "maximum": 3,
+      "integer": true,
+      "editable": false,
+      "meaning": ""
+    },
+    {
+      "name": "mode",
+      "minimum": 0,
+      "maximum": 1,
+      "integer": true,
+      "editable": false,
+      "meaning": ""
+    },
+    {
+      "name": "vehicle",
+      "minimum": 0,
+      "maximum": 3,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "shield",
+      "minimum": 0,
+      "maximum": 100,
+      "integer": false,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "speed",
+      "minimum": 0,
+      "maximum": 80,
+      "integer": false,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "elapsed",
+      "minimum": 0,
+      "maximum": 600,
+      "integer": false,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "countdown",
+      "minimum": 0,
+      "maximum": 3,
+      "integer": false,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "next_gate",
+      "minimum": 0,
+      "maximum": 3,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "score",
+      "minimum": 0,
+      "maximum": 1000000,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "best_time",
+      "minimum": 0,
+      "maximum": 100000,
+      "integer": false,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "completed_mask",
+      "minimum": 0,
+      "maximum": 63,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "boost",
+      "minimum": 0,
+      "maximum": 1,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "steer",
+      "minimum": -1,
+      "maximum": 1,
+      "integer": false,
+      "editable": true,
+      "meaning": ""
+    }
+  ],
+  "actorKinds": [
+    {
+      "kind": "racer",
+      "states": [
+        "racing",
+        "destroyed"
+      ],
+      "poseEditable": true,
+      "stateEditable": true
+    },
+    {
+      "kind": "obstacle",
+      "states": [
+        "normal"
+      ],
+      "poseEditable": false,
+      "stateEditable": false
+    },
+    {
+      "kind": "ring",
+      "states": [
+        "active",
+        "collected"
+      ],
+      "poseEditable": false,
+      "stateEditable": true
+    },
+    {
+      "kind": "gate",
+      "states": [
+        "pending",
+        "passed"
+      ],
+      "poseEditable": false,
+      "stateEditable": true
+    },
+    {
+      "kind": "road",
+      "states": [
+        "normal"
+      ],
+      "poseEditable": false,
+      "stateEditable": false
+    },
+    {
+      "kind": "control",
+      "states": [
+        "normal"
+      ],
+      "poseEditable": false,
+      "stateEditable": false
+    }
+  ],
+  "controls": [
+    "start",
+    "pause",
+    "resume",
+    "restart",
+    "menu",
+    "next",
+    "craft_0",
+    "craft_1",
+    "craft_2",
+    "craft_3",
+    "track_1",
+    "track_2",
+    "track_3",
+    "mode_time",
+    "mode_distance"
+  ],
+  "semanticRules": [
+    "Non-menu actors: racer (values exactly vx,vy,vz, finite within+-100; editable; actual motion), obstacle_0..5, ring_0..4, gate_0..2, road. racer actual pose is editable x within+-5.5,z2..track.length+2,y=road height at z + craft.hover_height within0.15. Road height is triangular ramp from ramp_start height0 through ramp_peak ramp_height to ramp_end height0. This is the actual visible terrain. Live racer has racing/present=true; destroyed when shield0/lost (may remain visible). Obstacles/road no values, fixed visible content geometry. Ring and gate values empty, states as named.",
+    "track and mode agree with entry; vehicle identifies content tuning. Shield<=that vehicle capacity. speed mirrors nonnegative forward velocity; normal velocity vz=speed, vx=steer*vehicle.steering; y follows ramp. countdown>0 requires elapsed=0,speed=0,boost=0,next_gate=0 and spawn pose. next_gate is count of correctly crossed gates (0..3); gate states passed iff index<next_gate. Already passed gates must be at or behind racer z. A later z with missing gates is legal but cannot retroactively pass them. Ring states may be edited as legal collection history, ring absent iff collected.",
+    "Editable fields are vehicle/shield/speed/elapsed/countdown/next_gate/score/best_time/completed_mask/boost/steer and racer pose/velocity/ring states, with real cross-field consistency. Playing/paused requires shield>0,next_gate<3; won requires next_gate=3 and z>=finish; lost requires shield0 or distance mode elapsed>=time_limit. Do not set a new outcome through preparation. Preserve collision grace and other timing in opaqueData; fixture positions may be on an unobstructed legal approach to an obstacle/ring/gate. Each prepared case starts outside the thing it will collide with/collect/cross.",
+    "OpenEntry resets the selected track/mode to craft0 normal countdown; normal menus can choose all four crafts. best_time is current track/craft successful record (0=none). completed_mask bit=(track-1)*2+mode. DescribeCurrentEntry returns actual spawn,board-center,finish,ramp-peak. State IDs do not prescribe internal object names.",
+    "One active IGameSession. Capture has exactly the declared top-level numbers. Each present actor resolves uniquely to its actual visible/interactable gameplay root, not a reporting proxy, and reports its actual transform.position. Facing is +1 except a visibly left-facing actor may use -1. Actor entryId equals the current entry. Unknown/duplicate identities, wrong version, nonfinite or out-of-range values and illegal cross-field combinations are atomically rejected. Preserve opaqueData from this candidate's own capture; explicitly editable public fields take precedence over opaqueData.",
+    "OpenEntry and Restore complete with gameplay suspended until ResumeSimulation; UI, rendering and reads continue. Release of this suspension does not unpause phase=paused. Capture is detached and side-effect-free. Restore establishes a legal initial situation, never performs the next attack, placement, collision, kill or victory on behalf of the player. Input latches and transient visuals must be restored consistently.",
+    "Control actors use the exact listed IDs, kind=control, state=normal, no numeric values. Include only controls that are currently present, or report present=false. ResolveActor returns the real visible uGUI button root. These identities locate ordinary input targets, not action methods. No Dashboard or additional probe is required.",
+    "Menu snapshots still have a valid entryId and complete numeric set. World actors may be omitted in menu. Non-menu snapshots include all fixed content identities; absent/dead/unused actors have present=false and ResolveActor may return null. Dynamic projectiles, when present, have stable IDs projectile_<monotonic integer> and preserve their own timing/pose through opaqueData."
+  ]
+}

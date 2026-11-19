@@ -1,0 +1,11 @@
+{
+  "studio_version": "0.742.0.7421053",
+  "rojo_version": "7.7.0",
+  "luau_release": "0.734",
+  "tools": {
+    "rojo": "rojo",
+    "luau_compile": "luau-compile",
+    "luau": "luau"
+  },
+  "implementation_time_limit_seconds": 3600
+}

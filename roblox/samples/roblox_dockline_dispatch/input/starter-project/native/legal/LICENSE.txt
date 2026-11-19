@@ -1,0 +1,9 @@
+Dockline Dispatch Public Input Documentation License
+
+Copyright (c) 2026.
+
+Permission is granted to use, copy, modify, and build upon the files in this public input package solely for creating and evaluating the Dockline Dispatch Roblox candidate described by ASSIGNMENT.txt.
+
+The package contains original task documentation and code constants. No external game source code, third-party models, textures, audio, logos, or repository assets are included. Roblox and Roblox Studio are trademarks of Roblox Corporation; no endorsement is implied.
+
+THE FILES ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.

@@ -1,0 +1,169 @@
+{
+  "schema_version": 2,
+  "benchmark_id": "unity.there_are_signs.sign_circuit.v2",
+  "input_revision": "v2.5-tool-guide-v5-20260825",
+  "gdd_revision": "v2.4-player-goals-only-20260825",
+  "common_tool_guide_id": "unity-common-tool-guide-v5-20260825",
+  "title": "Sign Circuit",
+  "task_type": "existing_project_extension",
+  "engine": {
+    "name": "Unity",
+    "version": "6000.0.80f1",
+    "revision": "2dfd32957da2",
+    "editor_path": "D:/game/engine/unity/6000.0.80f1/Editor/Unity.exe"
+  },
+  "local_tools": {
+    "unity_cli": {
+      "version": "1.0.0-beta.3",
+      "path": "D:/game/engine/shared-tools/unity/cli/1.0.0-beta.3/unity.exe",
+      "required": true,
+      "primary_commands": [
+        "test"
+      ]
+    },
+    "input_system": "1.19.0",
+    "test_framework": "1.6.0",
+    "render_pipeline": "com.unity.render-pipelines.universal@17.0.4"
+  },
+  "public_validation": {
+    "output_directory": "Logs/PublicSmoke",
+    "editmode_filter": "OmniGame.Benchmark.SignCircuit.PublicTests.SignCircuitPublicEditModeTests",
+    "editmode_expected": "2/2 Passed",
+    "playmode_filter": "OmniGame.Benchmark.SignCircuit.PublicTests.SignCircuitPublicPlayModeTests",
+    "playmode_expected": "1/1 Passed",
+    "playmode_scope": "saved SignCircuit scene real-frame startup, active camera, and blocking runtime-log health",
+    "gameplay_completion_proven": false
+  },
+  "public_task_files": [
+    "README.md",
+    "INITIAL_AGENT_PROMPT.md",
+    "GDD.md",
+    "UNITY_BENCHMARK_TOOL_GUIDE.md",
+    "TOOLCHAIN.md",
+    "UNITY_OFFLINE_AGENT_MANUAL.md",
+    "BENCHMARK_MANIFEST.json",
+    "ASSET_MANIFEST.json",
+    "legal/LICENSE",
+    "legal/THIRD_PARTY_NOTICES.md"
+  ],
+  "starter": {
+    "scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+    "menu_scene": "Assets/Scenes/Menu.unity",
+    "regression_scene": "Assets/Scenes/Levels/Level1+2.unity",
+    "runtime_root": "Assets/Benchmark/Runtime",
+    "optional_editor_root": "Assets/Benchmark/Editor",
+    "build_target": "StandaloneWindows64"
+  },
+  "stable_starter_anchors": [
+    "Benchmark_Player",
+    "Benchmark_InputManager",
+    "Benchmark_StopSign",
+    "Benchmark_UpSign",
+    "Benchmark_RightSign",
+    "Benchmark_Floor",
+    "Checkpoint_Stop_Marker",
+    "Checkpoint_Up_Marker",
+    "Checkpoint_Right_Marker",
+    "Gate_Marker",
+    "Finish_Marker"
+  ],
+  "public_observation_contract": {
+    "assembly": "OmniGame.SignCircuit.Contract",
+    "path": "Assets/BenchmarkContract/**",
+    "reader": "OmniGame.Benchmark.SignCircuit.Contract.SignCircuitProbeReader",
+    "publisher": "OmniGame.Benchmark.SignCircuit.Contract.SignCircuitProbePublisher",
+    "schema_version": 2,
+    "purpose": "Read-only current-state and visible-screen-target publication; it exposes no gameplay action.",
+    "required_action_ids": [
+      "menu.sign_circuit",
+      "menu.levels",
+      "menu.original_level",
+      "menu.continue",
+      "ui.restart"
+    ],
+    "required_observation_ids": [
+      "ui.progress",
+      "ui.timer",
+      "ui.best",
+      "ui.status",
+      "panel.pause",
+      "panel.success",
+      "panel.failure"
+    ]
+  },
+  "runtime_interface": {
+    "project_active_input_handler": "Both",
+    "player_actions_require_input_system": true,
+    "legacy_unityengine_input_allowed_for_required_actions": false,
+    "supported_input_routes": [
+      "Keyboard.current / Mouse.current",
+      "enabled InputAction",
+      "PlayerInput"
+    ],
+    "public_contract_is_read_only": true,
+    "public_contract_must_not_replace_player_actions": true,
+    "supported_visible_ui": [
+      "runtime uGUI Canvas with Graphic and Text/TMP_Text",
+      "runtime uGUI Button through EventSystem and InputSystemUIInputModule"
+    ],
+    "unsupported_as_only_required_ui": [
+      "OnGUI",
+      "GUI",
+      "GUILayout",
+      "UI Toolkit",
+      "Editor-only UI",
+      "opaque custom drawing"
+    ]
+  },
+  "write_policy": {
+    "allowed": [
+      "Assets/Benchmark/**",
+      "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "Assets/Scenes/Menu.unity",
+      "ProjectSettings/EditorBuildSettings.asset"
+    ],
+    "protected": [
+      "INITIAL_AGENT_PROMPT.md",
+      "GDD.md",
+      "UNITY_BENCHMARK_TOOL_GUIDE.md",
+      "UNITY_OFFLINE_AGENT_MANUAL.md",
+      "BENCHMARK_MANIFEST.json",
+      "ASSET_MANIFEST.json",
+      "README.md",
+      "legal/**",
+      "TOOLCHAIN.md",
+      "Packages/**",
+      "ProjectSettings/** except ProjectSettings/EditorBuildSettings.asset",
+      "Assets/Scenes/Levels/**",
+      "Assets/Prefabs/**",
+      "Assets/Sprites/**",
+      "Assets/Scripts/**",
+      "Assets/InputSystem_Actions.inputactions",
+      "Assets/BenchmarkContract.meta",
+      "Assets/BenchmarkContract/**"
+    ]
+  },
+  "isolation": {
+    "network_allowed": false,
+    "package_install_allowed": false,
+    "git_remote_allowed": false,
+    "local_git_checkpoints_allowed": true,
+    "read_outside_workspace": false
+  },
+  "submission_policy": {
+    "saved_unity_project_required": true,
+    "runtime_network_dependency_allowed": false
+  },
+  "public_documents": {
+    "canonical_gdd": "GDD.md",
+    "common_tool_guide": "UNITY_BENCHMARK_TOOL_GUIDE.md",
+    "toolchain_contract": "TOOLCHAIN.md",
+    "offline_manual": "UNITY_OFFLINE_AGENT_MANUAL.md",
+    "agent_entry_prompt": "INITIAL_AGENT_PROMPT.md",
+    "asset_manifest": "ASSET_MANIFEST.json",
+    "language": "en",
+    "language_policy": "english_only"
+  },
+  "freeze_date": "2026-08-25",
+  "canonical_language": "en"
+}

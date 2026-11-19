@@ -1,0 +1,169 @@
+{
+  "schema_version": "1.0.0",
+  "authority": "assets/ASSET_CATALOG.json",
+  "gdd_authority": "GDD.md#6-numbered-requirements-sole-acceptance-authority",
+  "delivery_root": "starter-project/Content/Provided/Manny",
+  "delivery_format": "preimported_unreal_assets_with_fbx_references",
+  "asset_count": 9,
+  "policy": {
+    "all_assets_required": true,
+    "hard_asset_requirement_ids": [
+      "ASSET-01",
+      "ASSET-02"
+    ],
+    "equivalent_replacement_allowed": false,
+    "reference_files_protected": true,
+    "candidate_import_destination": "starter-project/Content/Provided/Manny",
+    "candidate_may_create_assets": true,
+    "marketplace_plugins_included": false,
+    "preimported_packages_included": true,
+    "reference_fbx_files_included": true
+  },
+  "implementation_notes": [
+    "All nine delivered art assets are required by ASSET-01 and ASSET-02; merely leaving them unused does not satisfy those requirements.",
+    "The skeletal mesh, Skeleton, and eight animation sequences are preimported under starter-project/Content/Provided/Manny/.",
+    "The protected FBX reference files under assets/files/Manny/ retain the stable asset IDs and are available for identity and validation checks.",
+    "No gameplay Blueprints, control graphs, maps, code, saves, input handling, combat data, or assembled gameplay scene is included.",
+    "Create arena, HUD, colors, and effects freely within GDD.md Section 6; these do not replace the mandatory model or clips."
+  ],
+  "assets": [
+    {
+      "id": "SKM_Manny",
+      "path": "assets/files/Manny/SKM_Manny.fbx",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-01",
+        "CONTENT-01"
+      ],
+      "dependencies": [],
+      "preimported_package": "/Game/Provided/Manny/SKM_Manny",
+      "preimported_object_path": "/Game/Provided/Manny/SKM_Manny.SKM_Manny"
+    },
+    {
+      "id": "AS_manny_stand",
+      "path": "assets/files/Manny/AS_manny_stand.fbx",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-02",
+        "INPUT-01"
+      ],
+      "dependencies": [
+        "SKM_Manny"
+      ],
+      "preimported_package": "/Game/Provided/Manny/Animations/AS_manny_stand",
+      "preimported_object_path": "/Game/Provided/Manny/Animations/AS_manny_stand.AS_manny_stand"
+    },
+    {
+      "id": "AS_manny_fwalk",
+      "path": "assets/files/Manny/AS_manny_fwalk.fbx",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-02",
+        "INPUT-01"
+      ],
+      "dependencies": [
+        "SKM_Manny"
+      ],
+      "preimported_package": "/Game/Provided/Manny/Animations/AS_manny_fwalk",
+      "preimported_object_path": "/Game/Provided/Manny/Animations/AS_manny_fwalk.AS_manny_fwalk"
+    },
+    {
+      "id": "AS_manny_bwalk",
+      "path": "assets/files/Manny/AS_manny_bwalk.fbx",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-02",
+        "INPUT-01"
+      ],
+      "dependencies": [
+        "SKM_Manny"
+      ],
+      "preimported_package": "/Game/Provided/Manny/Animations/AS_manny_bwalk",
+      "preimported_object_path": "/Game/Provided/Manny/Animations/AS_manny_bwalk.AS_manny_bwalk"
+    },
+    {
+      "id": "AS_manny_jump",
+      "path": "assets/files/Manny/AS_manny_jump.fbx",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-02",
+        "INPUT-02"
+      ],
+      "dependencies": [
+        "SKM_Manny"
+      ],
+      "preimported_package": "/Game/Provided/Manny/Animations/AS_manny_jump",
+      "preimported_object_path": "/Game/Provided/Manny/Animations/AS_manny_jump.AS_manny_jump"
+    },
+    {
+      "id": "AS_manny_5a",
+      "path": "assets/files/Manny/AS_manny_5a.fbx",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-02",
+        "COMBAT-01"
+      ],
+      "dependencies": [
+        "SKM_Manny"
+      ],
+      "preimported_package": "/Game/Provided/Manny/Animations/AS_manny_5a",
+      "preimported_object_path": "/Game/Provided/Manny/Animations/AS_manny_5a.AS_manny_5a"
+    },
+    {
+      "id": "AS_manny_fireball",
+      "path": "assets/files/Manny/AS_manny_fireball.fbx",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-02",
+        "COMBAT-02"
+      ],
+      "dependencies": [
+        "SKM_Manny"
+      ],
+      "preimported_package": "/Game/Provided/Manny/Animations/AS_manny_fireball",
+      "preimported_object_path": "/Game/Provided/Manny/Animations/AS_manny_fireball.AS_manny_fireball"
+    },
+    {
+      "id": "AS_manny_standblock",
+      "path": "assets/files/Manny/AS_manny_standblock.fbx",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-02",
+        "DEFENSE-02"
+      ],
+      "dependencies": [
+        "SKM_Manny"
+      ],
+      "preimported_package": "/Game/Provided/Manny/Animations/AS_manny_standblock",
+      "preimported_object_path": "/Game/Provided/Manny/Animations/AS_manny_standblock.AS_manny_standblock"
+    },
+    {
+      "id": "AS_manny_hitstun",
+      "path": "assets/files/Manny/AS_manny_hitstun.fbx",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-02",
+        "COMBAT-01",
+        "COMBAT-02",
+        "DEFENSE-01"
+      ],
+      "dependencies": [
+        "SKM_Manny"
+      ],
+      "preimported_package": "/Game/Provided/Manny/Animations/AS_manny_hitstun",
+      "preimported_object_path": "/Game/Provided/Manny/Animations/AS_manny_hitstun.AS_manny_hitstun"
+    }
+  ],
+  "reference_root": "assets/files/Manny",
+  "preimported_package_root": "starter-project/Content/Provided/Manny",
+  "reference_format": "fbx_7_3_ascii"
+}

@@ -1,0 +1,19 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "5.7",
+  "Category": "Evaluation Starter",
+  "Description": "Source-only Night Sky Duel clean-room starter with a read-only health publisher.",
+  "Modules": [
+    {
+      "Name": "NightSkyDuelScaffold",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ],
+  "Plugins": [
+    {
+      "Name": "Paper2D",
+      "Enabled": true
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "RollBall",
+  "authority": "This file defines delivered content and replacement policy. Gameplay acceptance remains in GDD.md Section 6.",
+  "delivery_roots": [
+    "starter-project/Content/StarterContent",
+    "starter-project/Config"
+  ],
+  "asset_count": 7,
+  "items": [
+    {
+      "asset_id": "fixed-layout-data",
+      "path": "starter-project/Config/FixedRollBallLayout.json",
+      "kind": "immutable_layout_fixture",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "LAYOUT-01",
+        "LAYOUT-02"
+      ],
+      "purpose": "Provide the exact fixed maze, wall connectivity, start, exit, and trap positions used by the benchmark task.",
+      "license_id": "MIT-RollBall",
+      "dependencies": []
+    },
+    {
+      "asset_id": "board-floor-mesh",
+      "path": "starter-project/Content/StarterContent/Architecture/Floor_400x400.uasset",
+      "kind": "raw_visual_static_mesh",
+      "unreal_object_path": "/Game/StarterContent/Architecture/Floor_400x400",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "LAYOUT-01"
+      ],
+      "purpose": "Supply the required solid 3D board tile used for safe floor cells.",
+      "license_id": "epic-content-terms",
+      "dependencies": [
+        "/Game/StarterContent/Materials/M_Basic_Floor"
+      ],
+      "dependency_policy": "The mesh identity is mandatory. A candidate may assign a project-authored material when the referenced material is not available in the candidate project."
+    },
+    {
+      "asset_id": "board-hole-mesh",
+      "path": "starter-project/Content/StarterContent/Architecture/Floor_400x400_Hole.uasset",
+      "kind": "raw_visual_static_mesh",
+      "unreal_object_path": "/Game/StarterContent/Architecture/Floor_400x400_Hole",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "LAYOUT-01",
+        "LAYOUT-02",
+        "HAZARD-01"
+      ],
+      "purpose": "Supply the required 3D trap tile whose visible center opening is dangerous while its surrounding rim remains safe.",
+      "license_id": "epic-content-terms",
+      "dependencies": [
+        "/Game/StarterContent/Materials/M_Basic_Floor"
+      ],
+      "dependency_policy": "The mesh identity and visible opening are mandatory. A candidate may assign a project-authored material when the referenced material is not available in the candidate project."
+    },
+    {
+      "asset_id": "board-wall-mesh",
+      "path": "starter-project/Content/StarterContent/Architecture/Wall_400x200.uasset",
+      "kind": "raw_visual_static_mesh",
+      "unreal_object_path": "/Game/StarterContent/Architecture/Wall_400x200",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "LAYOUT-01",
+        "COLLISION-01"
+      ],
+      "purpose": "Supply the required 3D wall geometry used by the fixed board boundaries and internal walls.",
+      "license_id": "epic-content-terms",
+      "dependencies": [
+        "/Game/StarterContent/Materials/M_Basic_Wall"
+      ],
+      "dependency_policy": "The mesh identity is mandatory. A candidate may assign a project-authored material when the referenced material is not available in the candidate project."
+    },
+    {
+      "asset_id": "ball-sphere-mesh",
+      "path": "starter-project/Content/StarterContent/Shapes/Shape_Sphere.uasset",
+      "kind": "raw_visual_static_mesh",
+      "unreal_object_path": "/Game/StarterContent/Shapes/Shape_Sphere",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "MOVEMENT-02"
+      ],
+      "purpose": "Supply the required 3D sphere mesh used for the player-controlled ball.",
+      "license_id": "epic-content-terms",
+      "dependencies": [
+        "/Game/StarterContent/Materials/M_Basic_Floor"
+      ],
+      "dependency_policy": "The mesh identity is mandatory. A candidate may assign a project-authored material when the referenced material is not available in the candidate project."
+    },
+    {
+      "asset_id": "material-basic-floor",
+      "path": "starter-project/Content/StarterContent/Materials/M_Basic_Floor.uasset",
+      "kind": "support_visual_asset",
+      "unreal_object_path": "/Game/StarterContent/Materials/M_Basic_Floor",
+      "required": false,
+      "equivalent_replacement_allowed": true,
+      "requirement_ids": [],
+      "purpose": "default lit board floor material",
+      "license_id": "epic-content-terms",
+      "dependencies": [],
+      "dependency_policy": "Supplied visual dependency; candidates may author equivalent lit materials while preserving required mesh identity."
+    },
+    {
+      "asset_id": "material-basic-wall",
+      "path": "starter-project/Content/StarterContent/Materials/M_Basic_Wall.uasset",
+      "kind": "support_visual_asset",
+      "unreal_object_path": "/Game/StarterContent/Materials/M_Basic_Wall",
+      "required": false,
+      "equivalent_replacement_allowed": true,
+      "requirement_ids": [],
+      "purpose": "default lit board wall material",
+      "license_id": "epic-content-terms",
+      "dependencies": [],
+      "dependency_policy": "Supplied visual dependency; candidates may author equivalent lit materials while preserving required mesh identity."
+    }
+  ],
+  "external_assets_required": false,
+  "marketplace_assets_required": false,
+  "generated_or_private_content_included": false,
+  "raw_visual_assets_only": true,
+  "assembled_gameplay_assets_present": false
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "protocol": "public-requirements-visual-quality-20260908",
+  "required_rounds": 1,
+  "model": "gpt-5.6-sol",
+  "prompt": "tools/experiments/d6-session-visual-prompt.en-US.txt",
+  "prompt_sha256": "6ac0e9665ad0f46bf33312ceede92bea5bc543ba6f0d37752a8493110ac3e77d",
+  "benchmarks": [
+    {
+      "benchmark_id": "unity.undercooked_kitchen_shift.v2",
+      "primary_state_id": "initial_kitchen"
+    }
+  ]
+}

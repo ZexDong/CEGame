@@ -1,0 +1,762 @@
+{
+  "schema_version": "2.1",
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "method": "engine_collection_and_requirement_level_review",
+  "checks": [
+    {
+      "id": "D1-01",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-01"
+      ],
+      "description": "Project imports without an engine failure",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-02",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-02"
+      ],
+      "description": "Configured main scene runs",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-03",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-03"
+      ],
+      "description": "No candidate parse, script or resource loading errors",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-04",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-04"
+      ],
+      "description": "Live dashboard snapshots are available",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-05",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-05"
+      ],
+      "description": "Public dashboard shape and required numeric slots",
+      "max_score": 2.0
+    },
+    {
+      "id": "entry_001",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:START-01"
+      ],
+      "description": "New game | Advance opening dialogue | Show the five supplied opening lines in their original order, one per Enter, Space, or left-click press. The fifth confirmation closes the dialogue. | Auto-advance or advance several lines from one held key. | Current line and a continuation hint. | A fresh new game starts at line one.",
+      "max_score": 3.333333
+    },
+    {
+      "id": "entry_002",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:START-02"
+      ],
+      "description": "Opening dialogue active | Attempt movement | Keep Gobot stationary until the last line closes, then enable movement. | Movement beneath the opening. | The dialogue remains the active interaction. | Closing the final line does not also move or interact with the world.",
+      "max_score": 3.333333
+    },
+    {
+      "id": "entry_003",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:START-03"
+      ],
+      "description": "Exploring | Hold WASD or arrow keys | Move Gobot continuously; diagonal movement has the same total speed as cardinal movement. | Movement continuing after release. | Gobot visibly moves. | Movement keys work in each exploration region.",
+      "max_score": 3.333333
+    },
+    {
+      "id": "entry_004",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:START-04"
+      ],
+      "description": "Exploring | Walk toward solid terrain or region boundaries | Trees, solid obstacles, and outer boundaries stop Gobot; designated entrances permit travel. | Walking through solids or becoming trapped on a transition. | Gobot stops at the obstacle. | Extend the map and its reachable paths as needed.",
+      "max_score": 3.333333
+    },
+    {
+      "id": "entry_005",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:START-05"
+      ],
+      "description": "Any exploration region | Explore | Preserve the supplied Gobot and the starting forest's tile arrangement, paths, and clearings; keep a camera view useful for navigation while connecting new areas. | Replace the starter with an unrelated scene or genre. | Forest, robot, and navigable surroundings. | Additional regions may use a different layout.",
+      "max_score": 3.333333
+    },
+    {
+      "id": "entry_006",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:WORLD-01"
+      ],
+      "description": "Forest accessible | Explore | Provide a recognizable house exterior, its interior, and a deeper grove with player-accessible connecting entrances. | Require launching another scene from the editor. | Recognizable areas and entrance hints. | The house and grove entry prerequisites are QUEST-05 and PUZZLE-06.",
+      "max_score": 3.333333
+    },
+    {
+      "id": "entry_007",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:WORLD-02"
+      ],
+      "description": "At an unlocked entrance | Cross into another region or return | Place Gobot safely at the corresponding destination entrance; returning exits beside the corresponding exterior door. | Teleport into solids or immediately bounce indefinitely between entrances. | Visible arrival at the matching entrance. | The same route remains usable on later visits.",
+      "max_score": 3.333333
+    },
+    {
+      "id": "entry_008",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:WORLD-03"
+      ],
+      "description": "Near townsfolk or a world interactable | Press E or Space | Interact with the nearby object. At least four named townsfolk offer readable speaker-labelled dialogue; dialogue holds movement and can be continued with Enter, Space, or left click. | Trigger a distant object or move underneath dialogue. | Speaker, text, and interaction hint. | Escape closes optional conversations without awarding unfinished objectives; the opening is completed normally.",
+      "max_score": 3.333333
+    },
+    {
+      "id": "entry_009",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:WORLD-04"
+      ],
+      "description": "Explore the connected world | Travel between regions | Use the region and object landmarks in section 6.3.1; equivalent connected reachable locations are allowed. Every entrance to the deeper grove stays blocked until PUZZLE-06. | Bypass the three-pedestal gate through the forest entrance. | Consistent entrances and destination hints. | WORLD-02 controls safe return.",
+      "max_score": 3.333336
+    },
+    {
+      "id": "entry_010",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-01"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-01",
+      "max_score": 1.052632
+    },
+    {
+      "id": "entry_011",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-07"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-07",
+      "max_score": 1.111111
+    },
+    {
+      "id": "entry_012",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-08"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-08",
+      "max_score": 1.111111
+    },
+    {
+      "id": "entry_013",
+      "dimension": "D3",
+      "requirement_ids": [
+        "common-baseline:CB-15"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-15",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_001",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:QUEST-01"
+      ],
+      "description": "Before obtaining the Key | Speak to each of Warrior, Thief, Monk, and Wizard | Use the fixed names, positions, and dialogue in section 6.3. Each first conversation completes that townsfolk's objective and awards one Coin; later conversations do not award another. | Require house entry, grove entry, combat victory, or an unavailable consumable to earn the four Coins. | Objective instructions and completion feedback. | Any optional quest-specific object uses the corresponding quest-object observation kind.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_002",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:QUEST-02"
+      ],
+      "description": "One NPC objective completed, reward unclaimed | Claim that NPC reward | Award exactly one Coin. Four different completed objectives yield four Coins in total. | Award before that objective is completed. | Coin count and completed-objective progress toward four. | New game begins with zero Coins and zero completed/rewarded objectives.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_003",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:QUEST-03"
+      ],
+      "description": "NPC reward already claimed | Repeat conversation or revisit | Keep that reward claimed and leave Coin count unchanged. | Duplicate any Coin reward. | Completed dialogue or indication. | The claimed state survives reopening.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_004",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:QUEST-04"
+      ],
+      "description": "Fan the gatekeeper available | Request the exchange | Exchange exactly four Coins for one Key as one transaction; fewer than four Coins produce rejection with no deductions. | Partial payment or more than one Key from the exchange. | Trade result and updated inventory. | The exchange is one-time; repeat requests change nothing. New game has no Key.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_005",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:QUEST-05"
+      ],
+      "description": "At the locked house door | Interact with the door | With a Key, consume exactly one Key and unlock the house permanently; without it, keep the door locked without changing inventory. | Enter while locked or charge another Key after unlocking. | Locked rejection or visibly open door. | Unlock state survives returning and reopening.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_006",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:QUEST-06"
+      ],
+      "description": "Inside the unlocked house, chest unopened | Open the chest | Award exactly two Bombs and leave the chest visibly opened. | Duplicate Bombs on repeat interaction. | Chest-open feedback and Bomb count. | New game has zero Bombs; chest-open state survives reopening.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_007",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PUZZLE-01"
+      ],
+      "description": "Inside house | Find the puzzle | Provide one Red, one Blue, and one Green wand and three matching, distinguishable pedestals. | Require inaccessible items beyond the blocked route. | Visible wand colors and matching pedestal colors. | New game has no held wands and no filled pedestals.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_008",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PUZZLE-02"
+      ],
+      "description": "An uncollected wand is reachable | Pick up the wand | Add that color once to inventory and remove its world pickup. | Duplicate ownership on repeat interaction. | Pickup feedback and held color. | A placed wand does not respawn.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_009",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PUZZLE-03"
+      ],
+      "description": "At a pedestal with a held wand | Choose a held color and confirm placement | A matching color leaves inventory and fills/lights that pedestal. Let the player choose a color explicitly so a mismatch can be attempted. | Fill other pedestals or consume another color. | Selected color, inventory update, and lit pedestal. | Cancelling color choice changes nothing.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_010",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PUZZLE-04"
+      ],
+      "description": "At an empty pedestal | Confirm a wrong color or an unowned wand | Reject the placement without changing inventory or any pedestal; explain the mismatch or missing wand. | Auto-substitute a matching wand or consume the wrong color. | Visible rejection. | The player may choose again.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_011",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PUZZLE-05"
+      ],
+      "description": "A pedestal is filled | Interact again | Keep its filled state without consuming another wand or issuing a reward. | Duplicate placement effects. | Already-filled indication. | Filled state persists after reopening.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_012",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PUZZLE-06"
+      ],
+      "description": "Fewer than three pedestals filled, then all filled | Try the route; complete the remaining placements | Block entry to the deeper grove until all three are filled, then visibly open the route. The player travels through the open entrance. | Early passage or automatic teleport to the ending. | Blocked/open route feedback. | The open route remains open.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_013",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-01"
+      ],
+      "description": "Ghost encounter accepted | Enter the offered battle | Use Baloo and Nutsy as the player party; the first encounter contains Bugcat enemies and the second Wolf enemies. The first contains three Bugcats and the second two Wolves, so group targeting is meaningful. | Require an editor launch or start Wolf before Bugcat victory. | Recognizable battlers and encounter identity. | Both party members start each attempt at full health. HP values are design choices.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_014",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-02"
+      ],
+      "description": "Battle active | Choose actions as turns arrive | Show the current actor and take one committed action at a time, alternating through an understandable turn order including enemy turns. | Accept extra queued effects from repeated confirmation. | Actor/turn indication and action menu. | Once a player confirms an action, its animation and resulting enemy turns may complete without further input; waiting at a player menu does not advance the battle.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_015",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-03"
+      ],
+      "description": "Living player actor has a turn | Choose an action, target, confirm, or cancel | Provide readable action descriptions, target selection/preview, and a separate confirmation; Escape cancels pending selection without spending the turn or changing HP. | Apply an effect on mere focus or selection. | Selected action and selected valid target(s). | Each action can be selected through visible clickable controls; target selection also has visible clickable targets.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_016",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-04"
+      ],
+      "description": "Battle active | Damage or heal a combatant | Show current/max HP and a visible effect for the affected combatants. HP stays in [0,max]; HP zero is visibly downed. | Negative HP, over-healing, or unchanged display after an effect. | HP display and damage/heal/downed feedback. | Reported health matches the real battle state.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_017",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-05"
+      ],
+      "description": "A combatant is downed | Choose a living target or advance turns | Exclude downed actors from acting and downed combatants from living-target selection. | Attack or heal a downed combatant as though living. | Downed/unavailable indication. | Victory/defeat follows the remaining living sides.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_018",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-06"
+      ],
+      "description": "Baloo alive and acting | Confirm Bear Arms on a living enemy | Damage the selected living enemy. | Damage an ally or an unselected enemy. | Bear Arms label, description, and damage. | Damage amount is a design choice; no Bomb is required.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_019",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-07"
+      ],
+      "description": "Nutsy alive and acting | Confirm First Aid on a living ally | Heal the selected living ally up to its maximum HP. | Heal an enemy, revive a downed ally, or exceed max HP. | First Aid label, description, and healing. | Healing a full-health living ally may have zero effect; it does not consume a Bomb.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_020",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-08"
+      ],
+      "description": "Nutsy alive and acting | Confirm Nutsy's Arrow Storm action | Damage a selected living enemy without using a Bomb. | Leave Nutsy unable to attack when Bombs run out. | Action description and damage. | Damage and animation are design choices.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_021",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:BOMB-01"
+      ],
+      "description": "Baloo action menu | Inspect Bomb action | Show exactly one Bomb action with the supplied Bomb icon and label `Bomb xN`; at zero it remains visible and disabled. With Bombs and living targets it is enabled on Baloo's turn. | Duplicate or hide the action at zero. | Correct label/icon and enabled state. | It cannot be used by a downed/non-acting Baloo or with no living enemy.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_022",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:BOMB-02"
+      ],
+      "description": "Valid Bomb selected | Preview targets before confirmation | Highlight all and only living enemies as the pending targets. | Include allies or downed enemies; change HP/inventory during preview. | Visible group preview. | Cancellation removes the preview without an effect.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_023",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:BOMB-03"
+      ],
+      "description": "Valid Bomb confirmed | Resolve the effect | Apply exactly 35 damage once to every living enemy and to no ally/downed enemy; HP clamps at zero. | Repeat damage from repeated input or an animation callback. | Per-target damage/HP changes. | A target with less than 35 HP reaches zero; its displayed damage may still read 35.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_024",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:BOMB-04"
+      ],
+      "description": "Bomb effect successfully resolved | Finish the action | Consume exactly one Bomb after the successful effect; update all counts and save the new count. | Consume on selection/queueing or more than once per effect. | Bomb xN decreases once. | A Bomb ending the encounter still consumes once before victory is committed.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_025",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:BOMB-05"
+      ],
+      "description": "Cancellation, zero Bombs, invalid actor, rejected pending action, or no living target | Attempt/cancel Bomb use | Leave all HP and inventory unchanged. | Damage or consumption for an invalid/rejected action. | Cancellation or rejection feedback. | Remaining ordinary actions stay usable.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_026",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-09"
+      ],
+      "description": "Enemy turn | Let the committed turn sequence resolve | Living enemies perform visible damaging actions against living party members. | Skip every enemy turn or use a downed enemy. | Enemy action and party HP change. | Enemy behavior and damage are design choices; a loss can be reached through normal poor choices.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_027",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-10"
+      ],
+      "description": "All enemies downed | Finish the battle | Show victory, record this encounter once, and provide a visible continuation back to exploration near the ghost. | Leave combat inputs active under victory or immediately win the next encounter. | Victory and return control. | The next stage requires another player interaction.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_028",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-11"
+      ],
+      "description": "Both party members downed | Finish the battle | Show defeat and a visible Retry control; leave this encounter unwon. | Record a victory or advance ghost progression. | Defeat, retry, and full-restart choices. | Gameplay inputs stop beneath the defeat screen.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_029",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-12"
+      ],
+      "description": "Defeat screen | Choose Retry | Restart only that encounter with full party HP, reset enemy HP and transient turn/selection state, and retain committed inventory/progression including spent Bombs. | Refund used Bombs, clear earlier victories, or duplicate actors. | A clean attempt of the same encounter. | Full reset uses New Game/Restart instead.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_030",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-13"
+      ],
+      "description": "Either encounter, even with zero Bombs | Use ordinary actions | Keep both encounters winnable with Bear Arms, First Aid, and Nutsy's attack. | Require a Bomb or another finite unavailable item to win. | Usable ordinary actions. | No timing challenge or real-time aiming is required to confirm turn-based actions.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_031",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:DIALOGUE-01"
+      ],
+      "description": "Speak to townsfolk or ghost | Continue conversation | Use the required names and ordered dialogue in section 6.3.2/4. Warrior, Thief, Monk and Wizard each award only when the full first conversation completes. Fan moves to the second listed location after trading. | Award when Escape cancels an unfinished conversation. | Speaker-labelled lines and reward/trade feedback. | Runner, Smith and Sign remain optional.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_032",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PUZZLE-07"
+      ],
+      "description": "Enter the house | Inspect pickups and pedestals | Provide the color/object arrangement in section 6.3.3, or equivalent reachable positions; any matching-color placement order is valid. | Enforce an unpublished placement order. | Distinct colors and lit pedestal feedback. | PUZZLE-01–06 define pickup and placement effects.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_033",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-14"
+      ],
+      "description": "Baloo is alive and acting | Select and confirm Focus | Spend the current action to increase Baloo's next Bear Arms damage; show the pending boost and consume it on that next attack. | Damage an enemy immediately or consume a Bomb. | Focus label, description and boosted attack feedback. | Boost magnitude is a design choice; cancellation has no effect; retry clears it.",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_034",
+      "dimension": "D3",
+      "requirement_ids": [
+        "common-baseline:CB-04"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-04",
+      "max_score": 0.555556
+    },
+    {
+      "id": "core_035",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-05"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-05",
+      "max_score": 1.111111
+    },
+    {
+      "id": "core_036",
+      "dimension": "D3",
+      "requirement_ids": [
+        "common-baseline:CB-06"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-06",
+      "max_score": 0.55554
+    },
+    {
+      "id": "core_037",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-09"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-09",
+      "max_score": 1.111111
+    },
+    {
+      "id": "success_001",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:GHOST-01"
+      ],
+      "description": "Grove reached normally | Meet the visible ghost | Provide dialogue connecting the ghost to the opening plea and offering the next required encounter. | Start an encounter before the player accepts. | Ghost dialogue and an encounter confirmation choice. | Cancelling leaves the current encounter unwon and allows another conversation.",
+      "max_score": 1.052632
+    },
+    {
+      "id": "success_002",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:GHOST-02"
+      ],
+      "description": "Ghost progression revisited | Accept or cancel an encounter | Offer Bugcat first, Wolf only after Bugcat victory, and the final resolution only after both victories. | Duplicate an already won encounter or bypass an unfinished one. | Current stage in ghost dialogue. | Revisiting and cancellation preserve stage order.",
+      "max_score": 1.052632
+    },
+    {
+      "id": "success_003",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:END-01"
+      ],
+      "description": "Ghost reachable | Request final resolution | Only after all pedestals and both victories, resolve the opening plea and clearly announce that the grove is safe. | Announce success on an early visit, on defeat, or just on entering the grove. | Distinct ending message connected to the plea. | After the last victory the final ghost interaction is still required.",
+      "max_score": 1.052632
+    },
+    {
+      "id": "success_004",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:END-02"
+      ],
+      "description": "Exploration or non-outcome battle state | Press Escape when no cancellable selection/dialogue is active | Open pause with Resume, New Game/Restart, and Quit; resume returns to the same state. | Advance exploration or turns while paused. | Pause menu and labeled controls. | Pending selection/dialogue consumes Escape as cancellation first.",
+      "max_score": 1.052632
+    },
+    {
+      "id": "success_005",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:END-03"
+      ],
+      "description": "Ending or pause | Use lifecycle controls | Offer New Game/Restart and Quit. The ending blocks further gameplay while leaving these controls usable. | Continue movement or attacks underneath the ending. | Readable ending/pause options. | Quit closes normally after committed progress is saved.",
+      "max_score": 1.052632
+    },
+    {
+      "id": "success_006",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:ART-01"
+      ],
+      "description": "Use the supplied principal artwork.",
+      "max_score": 1.111111
+    },
+    {
+      "id": "success_007",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-02"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-02",
+      "max_score": 1.052632
+    },
+    {
+      "id": "success_008",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-10"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-10",
+      "max_score": 1.111111
+    },
+    {
+      "id": "success_009",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-11"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-11",
+      "max_score": 1.052632
+    },
+    {
+      "id": "success_010",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-16"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-16",
+      "max_score": 1.111111
+    },
+    {
+      "id": "success_011",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-17"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-17",
+      "max_score": 1.111111
+    },
+    {
+      "id": "success_012",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-18"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-18",
+      "max_score": 1.111112
+    },
+    {
+      "id": "failure_001",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-12"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-12",
+      "max_score": 1.052632
+    },
+    {
+      "id": "failure_002",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-14"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-14",
+      "max_score": 1.052632
+    },
+    {
+      "id": "lifecycle_001",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:SAVE-01"
+      ],
+      "description": "Exploration or combat | Obtain, spend, or place an inventory item | Coins, Key, Bombs, and held wands have consistent counts in the inventory HUD and relevant combat displays; counts never become negative. | Divergent exploration/combat inventory. | Counts update with the completed effect. | Opening inventory is all zero; internal storage architecture is unrestricted.",
+      "max_score": 1.052632
+    },
+    {
+      "id": "lifecycle_002",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:SAVE-02"
+      ],
+      "description": "Inventory changed | Close normally and reopen in a fresh process | Restore committed Coin, Key, Bomb, and held-wand counts. | Refill a consumed Bomb or lose a collected item. | Restored inventory. | A completed effect is saved before normal closing can lose it.",
+      "max_score": 1.052632
+    },
+    {
+      "id": "lifecycle_003",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:SAVE-03"
+      ],
+      "description": "Exploration progress changed | Close normally and reopen | Restore completed/claimed NPC objectives, trade, door, chest, pedestals, and grove-route states. | Respawn a claimed reward or undo a completed placement. | Restored world/objective state. | Counts and world flags stay consistent.",
+      "max_score": 1.052632
+    },
+    {
+      "id": "lifecycle_004",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:SAVE-04"
+      ],
+      "description": "A region was entered | Close normally and reopen | Resume in that region at a safe corresponding entrance; exact walking position need not persist. The opening dialogue does not replay after it has been completed. | Spawn in a solid or require unlocking the same entrance again. | Recognizable restored region. | Closing during unfinished opening may restart the opening from line one.",
+      "max_score": 1.052632
+    },
+    {
+      "id": "lifecycle_005",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:SAVE-05"
+      ],
+      "description": "Encounter active or completed; ending possibly reached | Close normally and reopen | Preserve won encounters and the ending. An unfinished battle resumes as a fresh attempt of that same encounter with full party HP, retaining already committed Bomb consumption. | Record an unfinished/lost encounter as won or refund used Bombs. | Restored encounter stage or ending. | Turn queues, transient selection, and animation positions need not persist.",
+      "max_score": 1.052632
+    },
+    {
+      "id": "lifecycle_006",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:SAVE-06"
+      ],
+      "description": "Save absent or corrupt | Launch | Start a new game safely from the opening with zero inventory and no progression. | Use partial inconsistent progress or crash. | Opening dialogue; corrupt-save recovery may also display a notice. | Save-file location is the public TOOLCHAIN location.",
+      "max_score": 1.052632
+    },
+    {
+      "id": "lifecycle_007",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:SAVE-07"
+      ],
+      "description": "Exploration, pause, defeat, or ending | Choose New Game/Restart | Return to opening line one; reset inventory, objectives/rewards, trade, door/chest, wands/pedestals, route, victories, ending, and pending battle state; replace old saved progress. | Restore old progress after restarting then reopening. | Fresh opening and reset state. | Ordinary retry is COMBAT-12, distinct from full restart.",
+      "max_score": 1.052632
+    },
+    {
+      "id": "lifecycle_008",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-03"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-03",
+      "max_score": 1.052632
+    },
+    {
+      "id": "lifecycle_009",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-13"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-13",
+      "max_score": 1.052624
+    },
+    {
+      "id": "D6-01",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:composition"
+      ],
+      "description": "Overall composition and task visual identity",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-02",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:objects"
+      ],
+      "description": "Required objects, character and asset identity",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-03",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:ui"
+      ],
+      "description": "UI readability and information hierarchy",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-04",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:feedback"
+      ],
+      "description": "State transitions and visual feedback",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-05",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:consistency"
+      ],
+      "description": "Visual consistency across gameplay and result states",
+      "max_score": 2.0
+    }
+  ],
+  "d6_protocol": "d6/protocol.json"
+}

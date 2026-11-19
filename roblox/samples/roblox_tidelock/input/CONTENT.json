@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "contract_version": "tide-lock-v1",
+  "routing_ids": [
+    "Delta",
+    "Nova",
+    "Echo"
+  ],
+  "pump_ids": [
+    "Port",
+    "Starboard"
+  ],
+  "hazard_ids": [
+    "ArcA",
+    "ArcB",
+    "ArcC"
+  ],
+  "timing": {
+    "ready_timeout_seconds": 12,
+    "minimum_feedback_visible_seconds": 1.5,
+    "pump_cycle_seconds": 8,
+    "pump_cycle_tolerance_seconds": 0.8,
+    "pump_safe_min": 40,
+    "pump_safe_max": 60,
+    "pump_reject_reset_seconds": 1,
+    "minimum_hazard_phase_seconds": 2.5,
+    "hazard_death_timeout_seconds": 0.75,
+    "core_return_timeout_seconds": 2,
+    "left_to_right_window_seconds": 10,
+    "right_to_console_window_seconds": 8,
+    "window_input_replication_tolerance_seconds": 0.25,
+    "restart_timeout_seconds": 2
+  },
+  "geometry": {
+    "max_horizontal_distance_from_central": 180,
+    "minimum_walk_width": 10,
+    "minimum_headroom": 8,
+    "maximum_approach_height_delta": 2,
+    "approach_arrival_radius": 3,
+    "central_restart_radius": 24,
+    "transfer_respawn_radius": 18,
+    "final_minimum_time_margin_seconds": 3
+  },
+  "suggested_palette_rgb": {
+    "structure": [
+      28,
+      42,
+      56
+    ],
+    "secondary": [
+      54,
+      73,
+      87
+    ],
+    "energy": [
+      35,
+      210,
+      190
+    ],
+    "interaction": [
+      255,
+      178,
+      62
+    ],
+    "active_hazard": [
+      235,
+      65,
+      70
+    ],
+    "inactive_hazard": [
+      76,
+      92,
+      105
+    ],
+    "complete": [
+      85,
+      225,
+      130
+    ],
+    "hud": [
+      12,
+      20,
+      30
+    ]
+  },
+  "external_assets": []
+}

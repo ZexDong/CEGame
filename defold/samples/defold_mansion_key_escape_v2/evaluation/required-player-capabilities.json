@@ -1,0 +1,83 @@
+{
+  "schema_version": 2,
+  "game": "defold_mansion_key_escape_v2",
+  "runtime": {
+    "path": "framework/defold_player_runtime",
+    "min_version": "0.12"
+  },
+  "implementation_status": "included",
+  "normal_input_only": true,
+  "capabilities": [
+    {
+      "id": "process_lifecycle",
+      "status": "available",
+      "operations": [
+        "start",
+        "reopen"
+      ]
+    },
+    {
+      "id": "candidate_runtime_log_monitoring",
+      "status": "available",
+      "operations": [
+        "incremental_action_boundary_scan",
+        "candidate_fatal_attribution",
+        "infrastructure_scan_error_reporting"
+      ]
+    },
+    {
+      "id": "normal_keyboard",
+      "status": "available",
+      "operations": [
+        "press",
+        "hold",
+        "restart"
+      ]
+    },
+    {
+      "id": "public_continuous_2d_navigation",
+      "status": "available",
+      "operations": [
+        "nearby_state_approach",
+        "open_portal_exploration",
+        "hazard_avoidance",
+        "deliberate_hazard_contact",
+        "bounded_detour"
+      ]
+    },
+    {
+      "id": "dashboard_observation_and_assertions",
+      "status": "available",
+      "operations": [
+        "wait_until",
+        "snapshot",
+        "generic_state_time_and_geometry_assertions"
+      ]
+    },
+    {
+      "id": "window_capture_and_narrow_ocr",
+      "status": "available",
+      "operations": [
+        "capture",
+        "local_ocr"
+      ]
+    },
+    {
+      "id": "randomized_dashboard_honesty",
+      "status": "available",
+      "operations": [
+        "phase_image_cross_check",
+        "no_input_phase_stability"
+      ],
+      "per_trajectory": 2
+    }
+  ],
+  "forbidden": [
+    "UDP or socket gameplay control",
+    "legacy log-state query",
+    "fixed room route or private coordinates",
+    "candidate internal names",
+    "state mutation or result forcing",
+    "VLM in D1-D5"
+  ]
+}

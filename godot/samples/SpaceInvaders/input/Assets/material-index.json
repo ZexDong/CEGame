@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "input_revision": "g07-g08-public-20261011-r1",
+  "path_base": "package root",
+  "runtime_root": "sp",
+  "material_mapping": "MaterialMapping-en.md",
+  
+"contact_sheet": "Assets/asset-contact-sheet.png",
+  "source_of_previews": "Supplied image files only; no gameplay screenshot is used.",
+  "roles": [
+    {
+      "role": "player",
+      "status": "supplied",
+      "path": "sp/assets/tank/Lazer Tank.png",
+      "requirement": "VISUAL-01"
+    },
+    {
+      "role": "life_icon",
+      "status": "supplied",
+      "path": "sp/assets/tank/minime.png",
+      "requirement": "VISUAL-01"
+    },
+    {
+      "role": "invader_high_value",
+      "status": "supplied",
+      "path": "sp/assets/Enemies/enemy1/invader_type1f0.png",
+      "requirement": "SCORE-01"
+    },
+    {
+      "role": "invader_middle_value",
+      "status": "supplied",
+      "path": "sp/assets/Enemies/enemy2/invader_type2f1.png",
+      "requirement": "SCORE-01"
+    },
+    {
+      "role": "invader_low_value",
+      "status": "supplied",
+      "path": "sp/assets/Enemies/enemy3/invader_type3f1.png",
+      "requirement": "SCORE-01"
+    },
+    {
+      "role": "player_projectile",
+      "status": "supplied",
+      "path": "sp/assets/missile/hero_missile.png",
+      "requirement": "PLAYER-02"
+    },
+    {
+      "role": "enemy_projectile",
+      "status": "supplied",
+      "path": "sp/assets/missile/enemy_missile/spear/enemy_missile1.png",
+      "requirement": "ENEMY-01"
+    },
+    {
+      "role": "barrier",
+      "status": "supplied",
+      "path": "sp/assets/baracade.png",
+      "requirement": "ATTACK-02"
+    },
+    {
+      "role": "arcade_frame",
+      "status": "supplied",
+      "path": "sp/assets/Cabnet border.png",
+      "requirement": "VISUAL-01"
+    },
+    {
+      "role": "hud",
+      "status": "procedural",
+      "requirement": "HUD-01"
+    },
+    {
+      "role": "pause_overlay",
+      "status": "procedural",
+      "requirement": "PAUSE-01"
+    },
+    {
+      "role": "result_overlay",
+      "status": "procedural",
+      "requirement": "LEVEL-02"
+    },
+    {
+      "role": "countdown",
+      "status": "procedural",
+      "requirement": "ENTRY-02"
+    }
+  ],
+  "files": [
+    {
+      "path": "sp/assets/tank/Lazer Tank.png",
+      "type": "Image",
+      "size": [
+        25,
+        25
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/tank/minime.png",
+      "type": "Image",
+      "size": [
+        9,
+        9
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/Enemies/enemy1/invader_type1f0.png",
+      "type": "Image",
+      "size": [
+        24,
+        24
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/Enemies/enemy1/invader_type1f1.png",
+      "type": "Image",
+      "size": [
+        24,
+        24
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/Enemies/enemy2/invader_type2f1.png",
+      "type": "Image",
+      "size": [
+        24,
+        24
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/Enemies/enemy2/invader_type2f2.png",
+      "type": "Image",
+      "size": [
+        24,
+        24
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/Enemies/enemy3/invader_type3f1.png",
+      "type": "Image",
+      "size": [
+        24,
+        24
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/Enemies/enemy3/invader_type3f2.png",
+      "type": "Image",
+      "size": [
+        24,
+        24
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/missile/hero_missile.png",
+      "type": "Image",
+      "size": [
+        5,
+        8
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/missile/enemy_missile/spear/enemy_missile1.png",
+      "type": "Image",
+      "size": [
+        5,
+        8
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/missile/enemy_missile/spear/enemy_missile2.png",
+      "type": "Image",
+      "size": [
+        5,
+        8
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/missile/enemy_missile/spear/enemy_missile3.png",
+      "type": "Image",
+      "size": [
+        5,
+        8
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/missile/enemy_missile/spear/enemy_missile4.png",
+      "type": "Image",
+      "size": [
+        5,
+        8
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/missile/enemy_missile/spear/enemy_missile5.png",
+      "type": "Image",
+      "size": [
+        5,
+        8
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/missile/enemy_missile/spear/enemy_missile6.png",
+      "type": "Image",
+      "size": [
+        5,
+        8
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/missile/enemy_missile/spear/enemy_missile7.png",
+      "type": "Image",
+      "size": [
+        5,
+        8
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/baracade.png",
+      "type": "Image",
+      "size": [
+        48,
+        14
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/Cabnet border.png",
+      "type": "Image",
+      "size": [
+        3840,
+        2160
+      ],
+      "filter": "linear; preserve aspect ratio"
+    },
+    {
+      "path": "sp/assets/Audio/shoot.wav",
+      "type": "AudioStreamWAV",
+      "role": "player shot"
+    },
+    {
+      "path": "sp/assets/Audio/explode.wav",
+      "type": "AudioStreamWAV",
+      "role": "player hit"
+    },
+    {
+      "path": "sp/assets/Audio/doot1.wav",
+      "type": "AudioStreamWAV",
+      "role": "formation cadence"
+    },
+    {
+      "path": "sp/assets/Audio/doot2.wav",
+      "type": "AudioStreamWAV",
+      "role": "formation cadence"
+    },
+    {
+      "path": "sp/assets/Audio/doot3.wav",
+      "type": "AudioStreamWAV",
+      "role": "formation cadence"
+    },
+    {
+      "path": "sp/assets/Audio/doot4.wav",
+      "type": "AudioStreamWAV",
+      "role": "formation cadence"
+    },
+    {
+      "path": "sp/assets/Audio/saucer.wav",
+      "type": "AudioStreamWAV",
+      "role": "optional bonus identity"
+    }
+  ],
+  "missing_roles": []
+}

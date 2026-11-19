@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "benchmark_id": "unity.arrow_escape_reconstruction.v2",
+  "game": "Arrow Escape",
+  "reference_source": "original/README_ASSETS/gameplay.gif",
+  "reference_policy": "Frozen upstream visual anchor; reasonable equivalent composition is accepted and pixel-perfect matching is not required.",
+  "protocol": "user-simplified-single-state-single-round-20260824",
+  "formal_reference_ready": true,
+  "required_rounds": 1,
+  "primary_state_id": "initial_gameplay",
+  "states": [
+    {
+      "id": "initial_gameplay",
+      "label": "initial gameplay",
+      "reference": "reference/initial_gameplay.png",
+      "source_frame": 0,
+      "bytes": 90474,
+      "sha256": "7f73e96333ca1791eb070f48b357d83afeb854d553267652fd3d0dbaefbcd71e",
+      "role": "formal_primary"
+    }
+  ],
+  "diagnostic_inventory": [
+    {
+      "id": "core_interaction",
+      "label": "core interaction diagnostic",
+      "reference": "reference/core_interaction.png",
+      "source_frame": 15,
+      "bytes": 97214,
+      "sha256": "1ae6ecaa30dcc2433771352c47236d73c882cc8de117e894b2fe9d307e0365b0",
+      "role": "diagnostic_inventory_only",
+      "excluded_from_formal_d6": true
+    },
+    {
+      "id": "late_gameplay",
+      "label": "late gameplay diagnostic",
+      "reference": "reference/late_gameplay.png",
+      "source_frame": 35,
+      "bytes": 91426,
+      "sha256": "c4ca8d22af343d2710193de99a651d9717781ae13881183faac5d7eb89fb8a3a",
+      "role": "diagnostic_inventory_only",
+      "excluded_from_formal_d6": true
+    },
+    {
+      "id": "near_complete",
+      "label": "near complete diagnostic",
+      "reference": "reference/near_complete.png",
+      "source_frame": 50,
+      "bytes": 88807,
+      "sha256": "1db50337d0666b1ecec352f7a383ebebf750320217eec7d93ec82e5226155282",
+      "role": "diagnostic_inventory_only",
+      "excluded_from_formal_d6": true
+    }
+  ],
+  "candidate_capture_relative_path": "<evaluation-run>/dynamic/*-dynamic-evidence/visual/initial_gameplay.png",
+  "run_local_source_manifest": "<formal-run>/evaluation/visual/d6-input.json",
+  "capture_validation": "<formal-run>/evaluation/visual/capture-validation.json",
+  "visual_evaluator": {
+    "model": "gpt-5.6-sol",
+    "rounds": 1,
+    "prompt": "../../../../tools/experiments/d6-visual-prompt.en-US.txt",
+    "prompt_sha256": "558b4ccffad7d13d3ae3e5c6fc5a9b36a7bba37d9be47da895c2e50bc9c5a6ee"
+  }
+}

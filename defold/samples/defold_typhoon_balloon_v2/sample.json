@@ -1,0 +1,65 @@
+{
+  "schema_version": "2.0",
+  "release_status": "packaged",
+  "sample_id": "defold_typhoon_balloon_v2",
+  "sample_version": "2.0.0",
+  "title": "Typhoon Balloon: Wind Station Campaign",
+  "engine": {
+    "name": "Defold",
+    "version": "1.13.0",
+    "revision": "f735c12192bf95684e6ae1ae27c400b8170fc6d8"
+  },
+  "environment": {
+    "os": "macOS arm64",
+    "runtime": "Python 3.11+; Defold 1.13.0 with bundled JDK 25+36; Xcode Command Line Tools",
+    "setup_instructions": "../../README.md",
+    "credential_environment_variables": []
+  },
+  "sources": [
+    {
+      "url": "https://github.com/benjames-171/defold-games",
+      "revision": "8a7d7b759b4448db472c0ae2cad69218cba0fe1f",
+      "license": "MIT",
+      "adaptation_scope": "The bounded three-chapter campaign in input/GDD.md.",
+      "notice": "THIRD_PARTY_NOTICES.md"
+    }
+  ],
+  "input": {
+    "path": "input/",
+    "prompt": "input/INITIAL_AGENT_PROMPT.md",
+    "design": "input/GDD.md",
+    "content": "input/campaign.json",
+    "tools": "input/DEFOLD_ENGINE_INTERFACE_GUIDE.md",
+    "assets": "input/assets/",
+    "starter_project": "input/starter_project/",
+    "contracts": "input/DASHBOARD_SPEC.md",
+    "self_check": "input/tools/dashboard_self_check.py"
+  },
+  "submission": {
+    "type": "complete_project"
+  },
+  "evaluation": {
+    "version": "1.0.0+format.2.1",
+    "entry": "evaluation/evaluate.py",
+    "native_entry": "session_driver",
+    "command": [
+      "python3",
+      "-B",
+      "evaluation/evaluate.py",
+      "--project",
+      "{project}",
+      "--output",
+      "{output}"
+    ],
+    "rules": "evaluation/rules.json",
+    "coverage": "evaluation/coverage.json",
+    "dependencies": "evaluation/requirements.txt",
+    "source": "evaluation/src/",
+    "result_schema": "evaluation/score.schema.json",
+    "result_format_version": "2.1",
+    "result_file": "score.json",
+    "max_score": 100,
+    "visual_protocol": "evaluation/d6/protocol.json"
+  },
+  "coverage_status": "not_reviewed"
+}

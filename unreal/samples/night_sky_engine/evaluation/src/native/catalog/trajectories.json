@@ -1,0 +1,447 @@
+{
+  "schema_version": "3.0.0",
+  "trajectories": [
+    {
+      "id": "movement",
+      "method": "motion",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 2,
+      "max_wait_seconds": 20,
+      "max_serial_seconds": 305,
+      "checkpoint_ids": [
+        "D2-02",
+        "D3-01",
+        "D5-02"
+      ],
+      "budget_reason": "Two directional holds cover reversal, both boundaries and release."
+    },
+    {
+      "id": "jump-control",
+      "method": "jump_control",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 1,
+      "max_wait_seconds": 6,
+      "max_serial_seconds": 271,
+      "checkpoint_ids": [
+        "D2-03",
+        "D3-02"
+      ],
+      "budget_reason": "One grounded jump establishes a control arc."
+    },
+    {
+      "id": "jump-rejection",
+      "method": "jump_rejection",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 2,
+      "max_wait_seconds": 7,
+      "max_serial_seconds": 292,
+      "checkpoint_ids": [
+        "D3-02",
+        "D5-02"
+      ],
+      "budget_reason": "One jump and one airborne challenge."
+    },
+    {
+      "id": "strike-whiff",
+      "method": "whiff",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 1,
+      "max_wait_seconds": 3,
+      "max_serial_seconds": 268,
+      "checkpoint_ids": [
+        "D2-04",
+        "D3-03",
+        "D3-05",
+        "D5-03"
+      ],
+      "budget_reason": "One out-of-range strike."
+    },
+    {
+      "id": "bolt",
+      "method": "bolt",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 3,
+      "max_wait_seconds": 12,
+      "max_serial_seconds": 317,
+      "checkpoint_ids": [
+        "D2-05",
+        "D3-04",
+        "D3-05",
+        "D5-03"
+      ],
+      "budget_reason": "Cast plus two rejection challenges; repeated rejection is an explicit public requirement."
+    },
+    {
+      "id": "strike-hit",
+      "method": "strike",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 2,
+      "max_wait_seconds": 11,
+      "max_serial_seconds": 296,
+      "checkpoint_ids": [
+        "D2-04",
+        "D3-03",
+        "D5-03"
+      ],
+      "budget_reason": "Observed approach plus one strike."
+    },
+    {
+      "id": "pulse",
+      "method": "pulse",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 0,
+      "max_wait_seconds": 13,
+      "max_serial_seconds": 258,
+      "checkpoint_ids": [
+        "D2-06",
+        "D3-06",
+        "D5-04"
+      ],
+      "budget_reason": "Natural cadence across two pulses."
+    },
+    {
+      "id": "guard",
+      "method": "guard",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 2,
+      "max_wait_seconds": 19,
+      "max_serial_seconds": 304,
+      "checkpoint_ids": [
+        "D2-07",
+        "D3-07",
+        "D5-04"
+      ],
+      "budget_reason": "Hold through two pulses, release, then one late guard."
+    },
+    {
+      "id": "player-win",
+      "method": "player_win",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 23,
+      "max_wait_seconds": 115,
+      "max_serial_seconds": 915,
+      "checkpoint_ids": [
+        "D2-08",
+        "D3-09",
+        "D3-10",
+        "D4-02",
+        "D4-04",
+        "D5-05"
+      ],
+      "budget_reason": "Bounded D4 smoke; adaptive strikes, terminal challenges, terminal Restart. Every terminal key is observed during hold and release."
+    },
+    {
+      "id": "rival-win",
+      "method": "rival_win",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 7,
+      "max_wait_seconds": 30,
+      "max_serial_seconds": 510,
+      "checkpoint_ids": [
+        "D2-08",
+        "D3-09",
+        "D3-10",
+        "D4-03",
+        "D4-04",
+        "D5-05"
+      ],
+      "budget_reason": "Natural loss, terminal challenges and Restart. Every terminal key is observed during hold and release."
+    },
+    {
+      "id": "restart",
+      "method": "restart_case",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 6,
+      "max_wait_seconds": 15,
+      "max_serial_seconds": 380,
+      "checkpoint_ids": [
+        "D2-09",
+        "D4-04",
+        "D5-05"
+      ],
+      "budget_reason": "Dirty-state setup, held-input reset, repeat reset, telegraph reset."
+    },
+    {
+      "id": "reopen",
+      "method": "reopen_case",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 1,
+      "max_wait_seconds": 6,
+      "max_serial_seconds": 271,
+      "checkpoint_ids": [
+        "D2-09",
+        "D4-05",
+        "D5-05"
+      ],
+      "budget_reason": "One progress action followed by actual process Reopen."
+    },
+    {
+      "id": "guard-conflict",
+      "method": "guard_movement",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 3,
+      "max_wait_seconds": 5,
+      "max_serial_seconds": 600,
+      "checkpoint_ids": [
+        "D3-07"
+      ],
+      "budget_reason": "GDD 3.1 boundary coverage using ordinary held/pressed controls and continuous read-only samples."
+    },
+    {
+      "id": "repeated-jump",
+      "method": "repeated_jump",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 2,
+      "max_wait_seconds": 12,
+      "max_serial_seconds": 600,
+      "checkpoint_ids": [
+        "D3-02"
+      ],
+      "budget_reason": "GDD 3.1 boundary coverage using ordinary held/pressed controls and continuous read-only samples."
+    },
+    {
+      "id": "feedback-whiff",
+      "method": "feedback_whiff",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 1,
+      "max_wait_seconds": 3,
+      "max_serial_seconds": 600,
+      "checkpoint_ids": [
+        "D5-03"
+      ],
+      "budget_reason": "GDD 3.1 boundary coverage using ordinary held/pressed controls and continuous read-only samples."
+    },
+    {
+      "id": "mixed-damage",
+      "method": "mixed_damage",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 8,
+      "max_wait_seconds": 41,
+      "max_serial_seconds": 600,
+      "checkpoint_ids": [
+        "D3-03",
+        "D3-04"
+      ],
+      "budget_reason": "GDD 3.1 boundary coverage using ordinary held/pressed controls and continuous read-only samples."
+    },
+    {
+      "id": "restart-movement",
+      "method": "restart_movement",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 4,
+      "max_wait_seconds": 8,
+      "max_serial_seconds": 600,
+      "checkpoint_ids": [
+        "D4-04"
+      ],
+      "budget_reason": "GDD 3.1 boundary coverage using ordinary held/pressed controls and continuous read-only samples."
+    },
+    {
+      "id": "draw-probe",
+      "method": "draw_probe",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 5,
+      "max_wait_seconds": 46,
+      "max_serial_seconds": 600,
+      "checkpoint_ids": [
+        "D3-09"
+      ],
+      "budget_reason": "GDD 3.1 boundary coverage using ordinary held/pressed controls and continuous read-only samples."
+    },
+    {
+      "id": "restart-strike",
+      "method": "restart_strike",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 3,
+      "max_wait_seconds": 8,
+      "max_serial_seconds": 600,
+      "checkpoint_ids": [
+        "D4-04"
+      ],
+      "budget_reason": "GDD boundary, no candidate state writes; bounded continuous observations."
+    },
+    {
+      "id": "reopen-terminal",
+      "method": "reopen_terminal",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 0,
+      "max_wait_seconds": 22,
+      "max_serial_seconds": 600,
+      "checkpoint_ids": [
+        "D4-05"
+      ],
+      "budget_reason": "GDD boundary, no candidate state writes; bounded continuous observations."
+    },
+    {
+      "id": "bolt-overkill",
+      "method": "bolt_overkill",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 6,
+      "max_wait_seconds": 32,
+      "max_serial_seconds": 600,
+      "checkpoint_ids": [
+        "D3-04"
+      ],
+      "budget_reason": "GDD boundary, no candidate state writes; bounded continuous observations."
+    },
+    {
+      "id": "feedback-guard",
+      "method": "feedback_guard",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 1,
+      "max_wait_seconds": 7,
+      "max_serial_seconds": 600,
+      "checkpoint_ids": [
+        "D5-04"
+      ],
+      "budget_reason": "GDD boundary, no candidate state writes; bounded continuous observations."
+    },
+    {
+      "id": "bolt-rejection-trace",
+      "method": "bolt_rejection_trace",
+      "stage": "dynamic",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 3,
+      "max_wait_seconds": 4,
+      "max_serial_seconds": 600,
+      "checkpoint_ids": [
+        "D3-05",
+        "D5-03"
+      ],
+      "budget_reason": "GDD boundary, no candidate state writes; bounded continuous observations."
+    },
+    {
+      "id": "visual-initial",
+      "method": "visual_initial",
+      "stage": "visual",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 0,
+      "max_wait_seconds": 0,
+      "max_serial_seconds": 245,
+      "checkpoint_ids": [],
+      "budget_reason": "Independent initial-state visual acquisition."
+    },
+    {
+      "id": "visual-close",
+      "method": "visual_close",
+      "stage": "visual",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 1,
+      "max_wait_seconds": 5,
+      "max_serial_seconds": 270,
+      "checkpoint_ids": [],
+      "budget_reason": "Independent observed approach for visual acquisition."
+    },
+    {
+      "id": "visual-jump",
+      "method": "visual_jump",
+      "stage": "visual",
+      "clean_start": "fresh_process",
+      "setup_method": "normal_input",
+      "fixture_adapter": null,
+      "allowed_writes": [],
+      "max_actions": 1,
+      "max_wait_seconds": 2,
+      "max_serial_seconds": 267,
+      "checkpoint_ids": [],
+      "budget_reason": "Independent jump for visual acquisition."
+    }
+  ]
+}

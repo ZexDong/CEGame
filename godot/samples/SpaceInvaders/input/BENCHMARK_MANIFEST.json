@@ -1,0 +1,62 @@
+{
+  "schema_version": 2,
+  "input_revision": "dashboard-contract-20261022-r2",
+  "public_contract_status": "authoritative",
+  "benchmark_id": "godot.space_invaders_first_level.v1",
+  "engine": "Godot",
+  "engine_version": "4.7.1.stable.official.a13da4feb",
+  "project_root": "sp",
+  "entry_scene": "res://main.tscn",
+  "required_final_scene": "res://main.tscn",
+  "viewport": [
+    1280,
+    720
+  ],
+  "renderer": "gl_compatibility",
+  "language": "English",
+  "public_spec": "GDD-en.md",
+  "public_toolchain": "TOOLCHAIN-en.md",
+  "initial_prompt": "INITIAL_AGENT_PROMPT-en.md",
+  "tool_guide": "GODOT_BENCHMARK_TOOL_GUIDE.md",
+  "dashboard_spec": "DASHBOARD_SPEC.md",
+  "common_baseline": "COMMON_BASELINE.md",
+  "material_root": "sp/assets",
+  "material_catalog": "Assets/material-index.json",
+  "material_coverage": "Assets/asset-coverage.json",
+  
+"contact_sheet": "Assets/asset-contact-sheet.png",
+  "legal_root": "legal",
+  "dashboard": "sp/benchmark/dashboard.gd",
+  "dashboard_self_check": "sp/benchmark/dashboard_self_check.gd",
+  "naming_tables": "sp/benchmark/naming-tables.json",
+  "public_smoke": "sp/benchmark/public_smoke.gd",
+  "dashboard_snapshot": "user://benchmark_dashboard.json",
+  "dashboard_contract": "game-state-dashboard/v2-godot",
+  "baseline": {
+    "kind": "minimal_initialization",
+    "playable": false,
+    "target_feature_present": false
+  },
+  "network_allowed": false,
+  "external_path_access_allowed": false,
+  
+"writable_paths": [
+    "sp/**"
+  ],
+  "protected_paths": [
+    "*.md",
+    "*.json",
+    
+"legal/**",
+    "Assets/**",
+    "sp/assets/**",
+    "sp/benchmark/naming-tables.json",
+    "sp/benchmark/public_smoke.gd",
+    "sp/benchmark/dashboard_self_check.gd"
+  ]
+
+
+
+
+
+}

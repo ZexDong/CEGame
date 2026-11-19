@@ -1,0 +1,550 @@
+{
+  "schema_version": "3.0.0",
+  "game_id": "NightSkyEngine",
+  "task_name": "Night Sky Duel Lab",
+  "scoring_guide": "gamecreate/GAME_INDEPENDENT_SCORING_GUIDE.md",
+  "diagnostic_only": true,
+  "formal_freeze_performed": false,
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "aggregation": "dimension_max * passed / complete_fixed_catalog_count; unreachable=0; infrastructure invalid is not scored",
+  "checkpoints": [
+    {
+      "id": "D1-01",
+      "dimension": "D1",
+      "stage": "static",
+      "source_ids": [
+        "QUALITY-01"
+      ],
+      "summary": "Project descriptor is valid and recognized by the specified Unreal toolchain.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D1-02",
+      "dimension": "D1",
+      "stage": "static",
+      "source_ids": [
+        "QUALITY-01",
+        "QUALITY-05"
+      ],
+      "summary": "The Unreal Engine 5.7.4 editor target builds without a blocking error.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D1-03",
+      "dimension": "D1",
+      "stage": "static",
+      "source_ids": [
+        "QUALITY-01",
+        "QUALITY-05",
+        "CONTENT-01"
+      ],
+      "summary": "The candidate starts from the documented entry and produces a healthy rendered client frame.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D1-04",
+      "dimension": "D1",
+      "stage": "static",
+      "source_ids": [
+        "QUALITY-01"
+      ],
+      "summary": "No-input startup publishes a current, schema-valid public bridge bound to this process.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D2-01",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "source_ids": [
+        "CONTENT-01",
+        "RULE-02"
+      ],
+      "summary": "The direct-entry arena, exactly two fighters, floor, bounds, HUD, and controls are present at runtime.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D2-02",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "source_ids": [
+        "INPUT-01"
+      ],
+      "summary": "Horizontal movement is present and usable.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D2-03",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "source_ids": [
+        "INPUT-02"
+      ],
+      "summary": "A grounded jump is present and usable.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D2-04",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "source_ids": [
+        "COMBAT-01"
+      ],
+      "summary": "The close strike is present and produces a basic hit or miss result.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D2-05",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "source_ids": [
+        "COMBAT-02",
+        "COMBAT-03"
+      ],
+      "summary": "The energy bolt, readiness state, and cooldown rejection are present.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D2-06",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "source_ids": [
+        "DEFENSE-01"
+      ],
+      "summary": "The rival telegraph and pulse cadence are present.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D2-07",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "source_ids": [
+        "DEFENSE-02"
+      ],
+      "summary": "The held block and guard resolution are present.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D2-08",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "source_ids": [
+        "TERMINAL-01",
+        "TERMINAL-02"
+      ],
+      "summary": "Runtime win and loss outcomes plus terminal lock are present.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D2-09",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "source_ids": [
+        "LIFECYCLE-01",
+        "LIFECYCLE-02"
+      ],
+      "summary": "In-process restart and fresh-process reopen are present.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D2-10",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "source_ids": [
+        "INTERFACE-01",
+        "INTERFACE-02"
+      ],
+      "summary": "Health, bolt, telegraph, hit, guard, rejection, and result feedback are present.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D3-01",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "source_ids": [
+        "INPUT-01"
+      ],
+      "summary": "Movement remains bounded, stops after release, reverses correctly, and keeps the player facing the rival.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D3-02",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "source_ids": [
+        "INPUT-02"
+      ],
+      "summary": "Jump becomes airborne once, rejects an airborne second jump, and lands grounded.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D3-03",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "source_ids": [
+        "COMBAT-01"
+      ],
+      "summary": "A close strike deals exactly 25 once in range, deals zero out of range, and never underflows health.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D3-04",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "source_ids": [
+        "COMBAT-02"
+      ],
+      "summary": "A bolt deals exactly 15 once, enforces one active projectile, and honors the 1.0-second cooldown.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D3-05",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "source_ids": [
+        "COMBAT-03"
+      ],
+      "summary": "Whiffs and cooldown rejections preserve health and object counts and do not extend cooldown.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D3-06",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "source_ids": [
+        "DEFENSE-01",
+        "RULE-02"
+      ],
+      "summary": "The stationary rival starts each telegraph after 3.0 seconds, resolves after 0.75 seconds, and deals exactly 20 once.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D3-07",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "source_ids": [
+        "DEFENSE-02"
+      ],
+      "summary": "Block held through impact deals zero damage, resolves one guard, ends on release, and has no forbidden side effects.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D3-08",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "source_ids": [
+        "RULE-01",
+        "RULE-02",
+        "QUALITY-06"
+      ],
+      "summary": "Health, fighter counts, projectile counts, positions, synchronized HUD truth, and repeated-run stability remain deterministic.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D3-09",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "source_ids": [
+        "TERMINAL-01"
+      ],
+      "summary": "KO resolves exactly one health-consistent PLAYER WINS, RIVAL WINS, or DRAW result.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D3-10",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "source_ids": [
+        "TERMINAL-02"
+      ],
+      "summary": "Terminal state ignores gameplay input, cancels pulses/projectiles, and remains stable beyond 3.5 seconds.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D4-01",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "source_ids": [
+        "CONTENT-01",
+        "QUALITY-02"
+      ],
+      "summary": "A normal-input player journey begins directly in a playable active round.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D4-02",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "source_ids": [
+        "COMBAT-01",
+        "COMBAT-02",
+        "TERMINAL-01"
+      ],
+      "summary": "A normal-input journey can reach a player win.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D4-03",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "source_ids": [
+        "DEFENSE-01",
+        "TERMINAL-01"
+      ],
+      "summary": "Natural unblocked pulses can reach a rival win.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D4-04",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "source_ids": [
+        "LIFECYCLE-01"
+      ],
+      "summary": "Restart creates a new round identity and restores every specified fresh-round field.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D4-05",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "source_ids": [
+        "LIFECYCLE-02"
+      ],
+      "summary": "Reopen creates a new process identity with no retained duel progress.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D5-01",
+      "dimension": "D5",
+      "stage": "dynamic",
+      "source_ids": [
+        "CONTENT-01",
+        "INTERFACE-01",
+        "QUALITY-03"
+      ],
+      "summary": "The controls, fighter labels, health values, bars, and bolt state are visible and readable in a 1280 x 720 client capture.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D5-02",
+      "dimension": "D5",
+      "stage": "dynamic",
+      "source_ids": [
+        "INPUT-01",
+        "INPUT-02",
+        "QUALITY-04"
+      ],
+      "summary": "Movement, airborne displacement, landing, and idle recovery produce perceptible synchronized changes.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D5-03",
+      "dimension": "D5",
+      "stage": "dynamic",
+      "source_ids": [
+        "COMBAT-01",
+        "COMBAT-02",
+        "COMBAT-03",
+        "INTERFACE-02"
+      ],
+      "summary": "Strike, bolt, hit, WHIFF, and COOLDOWN feedback are visible and truthful.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D5-04",
+      "dimension": "D5",
+      "stage": "dynamic",
+      "source_ids": [
+        "DEFENSE-01",
+        "DEFENSE-02",
+        "INTERFACE-02"
+      ],
+      "summary": "Telegraph, block pose, guard flash, and BLOCKED feedback are visible and truthful.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D5-05",
+      "dimension": "D5",
+      "stage": "dynamic",
+      "source_ids": [
+        "TERMINAL-01",
+        "TERMINAL-02",
+        "LIFECYCLE-01"
+      ],
+      "summary": "Result banners persist and restart visibly restores the fresh arena and HUD.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D2-11",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "source_ids": [
+        "ASSET-01"
+      ],
+      "summary": "Both visible fighters use the supplied Manny body with distinct color treatment.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    },
+    {
+      "id": "D2-12",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "source_ids": [
+        "ASSET-02"
+      ],
+      "summary": "All eight supplied clips visibly play for their required roles during normal gameplay.",
+      "verdict_values": [
+        "pass",
+        "fail",
+        "unreachable"
+      ]
+    }
+  ],
+  "revision": "nightsky-duel-3.0.0"
+}

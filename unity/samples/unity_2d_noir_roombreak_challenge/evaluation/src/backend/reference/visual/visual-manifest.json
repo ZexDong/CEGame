@@ -1,0 +1,67 @@
+{
+  "schema_version": 2,
+  "status": "formal_reference_ready",
+  "benchmark_id": "unity.noir_roombreak_challenge.v1",
+  "protocol": "user-simplified-single-state-single-round-20260824",
+  "formal_reference_ready": true,
+  "required_rounds": 1,
+  "manifest_role": "native formal single-state D6 reference manifest; initial_gameplay is the only scored state",
+  "source": {
+    "repository": "Ruan-h/Noir-Platformer-Unity6",
+    "commit": "dfd7250955fc259b4925f5fef0c4836278b15df9",
+    "native_unity_version": "6000.0.39f1",
+    "capture_runtime": "mechanically migrated source copy in Unity 6000.0.80f1",
+    "resolution": "1280x720"
+  },
+  "states": [
+    {
+      "id": "initial_gameplay",
+      "label": "initial gameplay",
+      "reference": "reference/01_initial_gameplay.png",
+      "reference_sha256": "5b4a11c17dc7aa28e78fed2fc00cef4ff0b482512fcb28fa32e6c807011faaf8",
+      "candidate": "visual-candidates/01_initial_gameplay.png",
+      "candidate_name": "01_initial_gameplay.png"
+    }
+  ],
+  "d6": {
+    "model": "gpt-5.6-sol",
+    "rounds_per_state": 1,
+    "prompt": "../../../../../tools/experiments/d6-visual-prompt.en-US.txt",
+    "prompt_sha256": "558b4ccffad7d13d3ae3e5c6fc5a9b36a7bba37d9be47da895c2e50bc9c5a6ee",
+    "score_status": "not_run_single_state_single_round"
+  },
+  "artifacts": [
+    {
+      "path": "evaluation/reference/visual/reference/01_initial_gameplay.png",
+      "bytes": 79700,
+      "sha256": "5b4a11c17dc7aa28e78fed2fc00cef4ff0b482512fcb28fa32e6c807011faaf8"
+    },
+    {
+      "path": "evaluation/reference/visual/reference/02_room_transition.png",
+      "bytes": 48524,
+      "sha256": "e87db69c8a1ed9751c343d79f87c72074bef3d09211327c1078a6141d0de41b1"
+    },
+    {
+      "path": "evaluation/reference/visual/reference/03_dash_action.png",
+      "bytes": 80534,
+      "sha256": "b64ae68cbc1aa3c41000fcbaa755f9b489faf83082b174b7fcc145f738d61363"
+    }
+  ],
+  "primary_state_id": "initial_gameplay",
+  "diagnostic_inventory": [
+    {
+      "id": "room_transition",
+      "label": "mid-game room transition",
+      "reference": "reference/02_room_transition.png",
+      "reference_sha256": "e87db69c8a1ed9751c343d79f87c72074bef3d09211327c1078a6141d0de41b1",
+      "role": "diagnostic_inventory_only"
+    },
+    {
+      "id": "dash_action",
+      "label": "active dash action",
+      "reference": "reference/03_dash_action.png",
+      "reference_sha256": "b64ae68cbc1aa3c41000fcbaa755f9b489faf83082b174b7fcc145f738d61363",
+      "role": "diagnostic_inventory_only"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "task_id": "tower_defense",
+  "coordinate_space": "1152x648 logical viewport pixels; origin top-left",
+  "slots": ["gold", "base_hp", "base_max_hp", "wave", "wave_total", "remaining_enemies", "tower_count"],
+  "entities": [
+    {"kind":"tower","states":["selected","living","destroyed"]},
+    {"kind":"red_dino","states":["moving","moving_and_attacking","dead"]},
+    {"kind":"blue_dino","states":["moving","dead"]},
+    {"kind":"yellow_dino","states":["moving","dead"]},
+    {"kind":"green_boss","states":["moving","moving_and_attacking","dead"]}
+  ],
+  "targets": [
+    {"kind":"start_button"}, {"kind":"grassland_button"}, {"kind":"tower_card", "states":["gatling_gun","flamethrower","raygun","explosive"]}, {"kind":"build_surface", "states":["open_grass_1","open_grass_2","open_grass_3","open_grass_4","open_grass_5","open_grass_6","open_grass_7","open_grass_8"]}, {"kind":"tower", "states":["selected","living"]},
+    {"kind":"upgrade_button"}, {"kind":"sell_button"}, {"kind":"repair_button"},
+    {"kind":"restart_button"}, {"kind":"main_menu_button"}
+  ],
+  "controls": {"movement_template":"drag_and_drop", "keys":{"cancel":"Escape"}}
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "3.0.0",
+  "game_id": "Bomber",
+  "task_revision": "2.0.1",
+  "required_for_dynamic_checkpoint": [
+    "normal_input_receipt",
+    "same_process_and_round_read_only_state",
+    "bounded_condition_samples",
+    "contemporaneous_1280x720_ue_native_render_capture_when_visible_feedback_is_claimed",
+    "healthy_cleanup",
+    "native_render_timestamp_bracketed_by_semantic_state_for_D6"
+  ],
+  "attribution_rule": "Candidate gameplay failures score zero. Measurement precision, native plugin/render transport, original-reference, semantic-capture and VLM/parser faults invalidate the run and prohibit scoring.",
+  "candidate_verdicts": [
+    "pass",
+    "fail",
+    "unreachable"
+  ],
+  "invalid_measurement_state": "run_invalid_without_score_row",
+  "required_candidate_failure_fields": [
+    "reason_code",
+    "attribution",
+    "first_failure",
+    "affected_checkpoints",
+    "evidence"
+  ],
+  "observer_mutation_allowed": false,
+  "gameplay_result_calls_allowed": false
+}

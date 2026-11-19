@@ -1,0 +1,14 @@
+{
+  "version": "4.0.0",
+  "build_seconds": 900,
+  "launch_seconds": 180,
+  "snapshot_seconds": 5,
+  "move_seconds": 40,
+  "trajectory_seconds": 1200,
+  "trajectories": 21,
+  "cleanup_seconds": 30,
+  "session_watchdog_seconds": 2400,
+  "declared_serial_worst_case_seconds": 2200,
+  "headroom_seconds": 200,
+  "attribution": "Only a proven candidate outcome is scored zero; controller uncertainty, host resource exhaustion, transport faults, and evidence corruption make the evaluation incomplete."
+}

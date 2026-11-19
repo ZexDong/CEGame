@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "task_id": "defold_mansion_key_escape_v2",
+  "coordinate_space": {
+    "name": "room_local_bottom_left",
+    "dimensions": 2,
+    "origin": "bottom-left corner of the current 960 x 540 room view; slots.room_index identifies the room",
+    "axes": ["x increases to the right", "y increases upward"],
+    "units": "game-view pixels"
+  },
+  "target_rect_space": {
+    "width": 960,
+    "height": 540,
+    "origin": "bottom-left",
+    "units": "game-view pixels"
+  },
+  "seed_entry": "not applicable; the required rooms, puzzle order, and threat setup may be deterministic",
+  "slots": [
+    "room_index",
+    "menu_selection_index",
+    "menu_view_index",
+    "modal_code",
+    "journal_read",
+    "cabinet_checked",
+    "key_found",
+    "key_taken",
+    "has_key",
+    "door_open",
+    "shadow_awake",
+    "danger"
+  ],
+  "entities": [
+    { "kind": "player", "geometry": "position", "states": ["idle", "moving", "escaped", "caught"] },
+    { "kind": "portal", "geometry": "position", "states": ["open", "locked", "entry_only"] },
+    { "kind": "painting", "geometry": "position", "states": ["available", "nearby"] },
+    { "kind": "clock", "geometry": "position", "states": ["available", "nearby"] },
+    { "kind": "journal", "geometry": "position", "states": ["unread", "unread_nearby", "read", "read_nearby"] },
+    { "kind": "cabinet", "geometry": "position", "states": ["locked", "locked_nearby", "opened", "opened_nearby"] },
+    { "kind": "key", "geometry": "position", "states": ["available", "nearby", "taken"] },
+    { "kind": "garden_door", "geometry": "position", "states": ["locked", "locked_nearby", "open", "open_nearby"] },
+    { "kind": "shadow", "geometry": "position", "states": ["dormant", "hunting", "danger", "caught"] },
+    { "kind": "exit", "geometry": "position", "states": ["active", "reached"] },
+    { "kind": "obstacle", "geometry": "position", "states": ["solid"] }
+  ],
+  "targets": [],
+  "honesty": {
+    "phase_ocr_any": {
+      "menu": ["FOG MANSION", "NEW GAME", "CONTROLS", "New Game", "Control"],
+      "playing": ["FOYER", "STUDY", "GARDEN", "KEY", "Front Hall", "Study", "Garden", "Key"],
+      "paused": ["JOURNAL", "GARDENER", "CABINET", "CLOSE", "CONTROLS", "PAUSED", "Diary", "Control", "Pause"],
+      "won": ["ESCAPED", "ESCAPE COMPLETE", "SUCCESS", "Escape", "Success"],
+      "lost": ["GAME OVER", "CAUGHT", "FAILED", "Failure", "Caught"]
+    }
+  },
+  "controls": {
+    "movement_template": "continuous_2d_keyboard",
+    "keys": {
+      "up": ["W", "UpArrow"],
+      "down": ["S", "DownArrow"],
+      "left": ["A", "LeftArrow"],
+      "right": ["D", "RightArrow"],
+      "confirm_or_interact": ["Enter", "Space"],
+      "back": "Escape"
+    },
+    "navigation": {
+      "blocking_kinds": ["obstacle"],
+      "contact_kinds": ["portal", "exit", "shadow"],
+      "approach_kinds": ["painting", "clock", "journal", "cabinet", "key", "garden_door"],
+      "hazard_kinds": ["shadow"],
+      "explore_via_kind": "portal"
+    }
+  }
+}

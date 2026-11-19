@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "task_id": "four_shot_five_stage",
+  "coordinate_space": "continuous room-local pixels; origin top-left",
+  "slots": ["level", "room", "player_hp", "player_max_hp", "hk_ammo", "glock_ammo", "bombs", "objective_progress", "boss_progress", "stage", "stage_kills", "selected_weapon", "reload_progress", "hk_damage", "glock_damage", "movement_speed", "player_level", "xp", "xp_threshold", "enemy_count", "rng_seed"],
+  "entities": [
+    {"kind":"enemy","states":["living","dead","elite","boss"]},
+    {"kind":"player","states":["alive","dead","dashing","immune"]},
+    {"kind":"training_target","states":["active","complete"]},
+    {"kind":"special_rifle","states":["available","held"]},
+    {"kind":"upgrade_choice","states":["available","selected"]}
+  ],
+  "targets": [
+    {"kind":"start_button"}, {"kind":"controls_button"}, {"kind":"level_1_button"},
+    {"kind":"level_2_button"}, {"kind":"level_3_button"}, {"kind":"level_4_button"},
+    {"kind":"level_5_button"}, {"kind":"level_6_button"}, {"kind":"enemy"},
+    {"kind":"training_target"}, {"kind":"special_rifle"}, {"kind":"upgrade_choice"}, {"kind":"retry_button"},
+    {"kind":"next_level_button"}, {"kind":"back_button"}, {"kind":"main_menu_button"}
+  ],
+  "controls": {
+    "movement_template": "continuous_keys",
+    "movement": "WASD",
+    "shooting_direction": "last_nonzero_wasd_movement_direction",
+    "fire": "left_mouse_button_along_shooting_direction",
+    "combat_targeting": "shoot_toward_last_nonzero_wasd_movement_direction",
+    "mouse_attack": true,
+    "mouse_aim": false,
+    "keys": {"move":"WASD","shoot_direction":"WASD movement direction, retained after movement stops","fire":"Left Mouse Button","dash":"Shift","bomb":"Space","reload":"R","weapon_1":"1","weapon_2":"2","map":"Tab","cancel":"Escape"}
+  }
+}

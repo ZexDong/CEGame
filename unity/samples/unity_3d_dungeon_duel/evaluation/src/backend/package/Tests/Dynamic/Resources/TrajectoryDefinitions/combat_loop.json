@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "id": "combat_loop",
+  "title": "Real player attacks change native Health and kill an Imp; live AI approaches and damages the player",
+  "steps": [
+    {
+      "step_id": "setup",
+      "operation": "load_clean_canonical_scene",
+      "target": "PlayerCombat",
+      "check_ids": [
+        "setup.scene",
+        "setup.submission_probe",
+        "setup.submission_probe.version",
+        "setup.semantic_discovery",
+        "setup.clean_start",
+        "setup.world_target.MoveTargetA",
+        "setup.world_target.MoveTargetB",
+        "setup.world_target.DashTarget",
+        "setup.world_target.separation"
+      ]
+    },
+    {
+      "step_id": "attack_one",
+      "operation": "virtual_mouse_right",
+      "target": "ImpA",
+      "check_ids": [
+        "combat.initial.tuning",
+        "combat.audio.battle_loop",
+        "combat.attack.input.route",
+        "combat.attack.damage_input.route",
+        "combat.attack.damage",
+        "combat.damage.feedback_surface",
+        "combat.damage.hud_semantics"
+      ]
+    },
+    {
+      "step_id": "attack_finish",
+      "operation": "selected_target_continues_until_death",
+      "target": "ImpA",
+      "check_ids": [
+        "combat.followup.resolution",
+        "combat.imp.dead",
+        "combat.imp.stable_dead"
+      ]
+    },
+    {
+      "step_id": "threat_setup",
+      "operation": "reload_clean_canonical_scene",
+      "target": "EnemyThreat",
+      "check_ids": [
+        "threat_setup.scene",
+        "threat_setup.submission_probe",
+        "threat_setup.submission_probe.version",
+        "threat_setup.semantic_discovery",
+        "threat_setup.clean_start",
+        "threat_setup.world_target.MoveTargetA",
+        "threat_setup.world_target.MoveTargetB",
+        "threat_setup.world_target.DashTarget",
+        "threat_setup.world_target.separation"
+      ]
+    },
+    {
+      "step_id": "threat",
+      "operation": "wait_for_enemy_ai",
+      "target": "ImpA -> Player",
+      "check_ids": [
+        "combat.threat.engage.input.route",
+        "combat.threat.approach",
+        "combat.threat.damage",
+        "combat.threat.player_alive"
+      ]
+    }
+  ]
+}

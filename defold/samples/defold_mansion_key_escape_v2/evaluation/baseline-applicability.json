@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "game": "defold_mansion_key_escape_v2",
+  "checklist_revision": "v2-draft",
+  "items": [
+    { "id": "CB-01", "applies": true, "check_ids": ["D1_RUNTIME_DASHBOARD_SMOKE"] },
+    { "id": "CB-02", "applies": true, "check_ids": ["D1_BOB_BUILD", "MKE_D4_SUCCESS_TERMINAL_LOCK", "MKE_D4_FAILURE_TERMINAL_LOCK"] },
+    { "id": "CB-03", "applies": true, "check_ids": ["MKE_D4_REOPEN_CLEAN_MENU"] },
+    { "id": "CB-04", "applies": true, "check_ids": ["MKE_D3_MENU_NAVIGATION", "MKE_D3_CONTINUOUS_MOVE_RELEASE", "MKE_D3_ORDERED_REVEAL"] },
+    { "id": "CB-05", "applies": true, "check_ids": ["MKE_D5_MENU_READABLE", "MKE_D5_CONTROLS_READABLE", "MKE_D5_FOYER_HUD_READABLE", "MKE_D5_STUDY_FEEDBACK_READABLE", "MKE_D5_JOURNAL_READABLE", "MKE_D5_KEY_REVEAL_READABLE", "MKE_D5_DOOR_OPEN_READABLE", "MKE_D5_SUCCESS_READABLE", "MKE_D5_FAILURE_READABLE"] },
+    { "id": "CB-06", "applies": true, "check_ids": ["MKE_D3_WRONG_ORDER_REJECTED", "MKE_D3_LOCKED_DOOR_BOUNDARY"] },
+    { "id": "CB-07", "applies": true, "check_ids": ["MKE_D2_MENU_ENTRY", "MKE_D2_CONTROLS_PAGE", "MKE_D5_MENU_READABLE", "MKE_D5_CONTROLS_READABLE"] },
+    { "id": "CB-08", "applies": true, "check_ids": ["MKE_D5_MENU_READABLE", "MKE_D5_CONTROLS_READABLE", "MKE_D5_JOURNAL_READABLE", "MKE_D5_SUCCESS_READABLE", "MKE_D5_FAILURE_READABLE"] },
+    { "id": "CB-09", "applies": true, "check_ids": ["MKE_D3_ORDERED_REVEAL", "MKE_D3_UNIQUE_KEY_PICKUP", "MKE_D3_UNLOCK_CONSUMES_KEY", "MKE_D5_DOOR_OPEN_READABLE"] },
+    { "id": "CB-10", "applies": true, "check_ids": ["MKE_D3_MODAL_FREEZE", "MKE_D4_REPEATED_NEW_GAME_CLEAN"] },
+    { "id": "CB-11", "applies": true, "check_ids": ["MKE_D2_EXIT_SUCCESS_CONTENT", "MKE_D3_EXIT_WIN_BOUNDARY", "MKE_D4_SUCCESS_TERMINAL_LOCK", "MKE_D5_SUCCESS_READABLE"] },
+    { "id": "CB-12", "applies": true, "check_ids": ["MKE_D3_SHADOW_CONTACT_LOSS", "MKE_D4_FAILURE_RESTART_CLEAN", "MKE_D5_FAILURE_READABLE"] },
+    { "id": "CB-13", "applies": true, "check_ids": ["MKE_D4_REPEATED_NEW_GAME_CLEAN", "MKE_D4_FAILURE_RESTART_CLEAN"] },
+    { "id": "CB-14", "applies": true, "check_ids": ["MKE_D4_SUCCESS_TERMINAL_LOCK", "MKE_D4_FAILURE_TERMINAL_LOCK"] },
+    { "id": "CB-15", "applies": true, "check_ids": ["MKE_D2_MENU_ENTRY", "HONESTY_NO_INPUT_STABILITY"] },
+    { "id": "CB-16", "applies": true, "check_ids": ["D6_VISUAL_REVIEW"], "reason": "Visible debug leftovers are checked by the separate D6 visual protocol." },
+    { "id": "CB-17", "applies": true, "check_ids": ["D6_VISUAL_REVIEW"], "reason": "Checked only by the separate D6 visual protocol." },
+    { "id": "CB-18", "applies": true, "check_ids": ["D1_RUNTIME_DASHBOARD_SMOKE", "HONESTY_SPOT_CHECKS"] }
+  ]
+}

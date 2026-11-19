@@ -1,0 +1,529 @@
+{
+  "policy": "All supplied UE art has mandatory visible roles under GDD ASSET-01..05. Unrelated replacements are prohibited; specified transformations and derived resources are allowed. Source copies need no separate runtime import.",
+  "catalog": "assets/ASSET_CATALOG.json",
+  "legal_map": "assets/legal/ASSET_LICENSE_MAP.json",
+  "copy_strategy": "Ready-to-use UE art in starter-project/Content/Art; editable sources in starter-project/SourceArt; matching protected references in assets/files/.",
+  "no_gameplay_assets": true,
+  "resources": [
+    {
+      "id": "SM_Eye-reference-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_Eye.obj",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ]
+    },
+    {
+      "id": "SM_FruitBody-reference-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_FruitBody.obj",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-03",
+        "FRUIT-01"
+      ]
+    },
+    {
+      "id": "SM_FruitCrown-reference-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_FruitCrown.obj",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-03",
+        "FRUIT-01"
+      ]
+    },
+    {
+      "id": "SM_GhostBody-reference-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_GhostBody.obj",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ]
+    },
+    {
+      "id": "SM_GhostHead-reference-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_GhostHead.obj",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ]
+    },
+    {
+      "id": "SM_Jaw-reference-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_Jaw.obj",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ]
+    },
+    {
+      "id": "SM_Tooth-reference-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_Tooth.obj",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ]
+    },
+    {
+      "id": "T_WallEdge-reference-png",
+      "path": "starter-project/SourceArt/Textures/T_WallEdge.png",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-04",
+        "VISUAL-01"
+      ]
+    },
+    {
+      "id": "life-icon-reference-svg",
+      "path": "starter-project/SourceArt/UI/life-icon.svg",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-05",
+        "HUD-01"
+      ]
+    },
+    {
+      "id": "T_LifeIcon-reference-png",
+      "path": "starter-project/SourceArt/UI/T_LifeIcon.png",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-05",
+        "HUD-01"
+      ]
+    },
+    {
+      "id": "M_Neon",
+      "path": "starter-project/Content/Art/Materials/M_Neon.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-01",
+        "ASSET-02",
+        "ASSET-03",
+        "ASSET-04"
+      ]
+    },
+    {
+      "id": "M_Wall",
+      "path": "starter-project/Content/Art/Materials/M_Wall.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-04",
+        "VISUAL-01"
+      ]
+    },
+    {
+      "id": "MI_Crown",
+      "path": "starter-project/Content/Art/Materials/MI_Crown.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-03",
+        "FRUIT-01"
+      ]
+    },
+    {
+      "id": "MI_Cyan",
+      "path": "starter-project/Content/Art/Materials/MI_Cyan.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ]
+    },
+    {
+      "id": "MI_Dot",
+      "path": "starter-project/Content/Art/Materials/MI_Dot.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-01",
+        "ASSET-04",
+        "VISUAL-01",
+        "VISUAL-02"
+      ]
+    },
+    {
+      "id": "MI_Eye",
+      "path": "starter-project/Content/Art/Materials/MI_Eye.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ]
+    },
+    {
+      "id": "MI_Floor",
+      "path": "starter-project/Content/Art/Materials/MI_Floor.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-04",
+        "VISUAL-01"
+      ]
+    },
+    {
+      "id": "MI_Frightened",
+      "path": "starter-project/Content/Art/Materials/MI_Frightened.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ]
+    },
+    {
+      "id": "MI_Fruit",
+      "path": "starter-project/Content/Art/Materials/MI_Fruit.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-03",
+        "FRUIT-01"
+      ]
+    },
+    {
+      "id": "MI_Gate",
+      "path": "starter-project/Content/Art/Materials/MI_Gate.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-04",
+        "VISUAL-01"
+      ]
+    },
+    {
+      "id": "MI_Orange",
+      "path": "starter-project/Content/Art/Materials/MI_Orange.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ]
+    },
+    {
+      "id": "MI_Pink",
+      "path": "starter-project/Content/Art/Materials/MI_Pink.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ]
+    },
+    {
+      "id": "MI_Player",
+      "path": "starter-project/Content/Art/Materials/MI_Player.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ]
+    },
+    {
+      "id": "MI_Red",
+      "path": "starter-project/Content/Art/Materials/MI_Red.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ]
+    },
+    {
+      "id": "SM_Eye",
+      "path": "starter-project/Content/Art/Meshes/SM_Eye.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ]
+    },
+    {
+      "id": "SM_FruitBody",
+      "path": "starter-project/Content/Art/Meshes/SM_FruitBody.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-03",
+        "FRUIT-01"
+      ]
+    },
+    {
+      "id": "SM_FruitCrown",
+      "path": "starter-project/Content/Art/Meshes/SM_FruitCrown.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-03",
+        "FRUIT-01"
+      ]
+    },
+    {
+      "id": "SM_GhostBody",
+      "path": "starter-project/Content/Art/Meshes/SM_GhostBody.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ]
+    },
+    {
+      "id": "SM_GhostHead",
+      "path": "starter-project/Content/Art/Meshes/SM_GhostHead.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ]
+    },
+    {
+      "id": "SM_Jaw",
+      "path": "starter-project/Content/Art/Meshes/SM_Jaw.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ]
+    },
+    {
+      "id": "SM_Tooth",
+      "path": "starter-project/Content/Art/Meshes/SM_Tooth.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ]
+    },
+    {
+      "id": "T_WallEdge",
+      "path": "starter-project/Content/Art/Textures/T_WallEdge.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-04",
+        "VISUAL-01"
+      ]
+    },
+    {
+      "id": "T_LifeIcon",
+      "path": "starter-project/Content/Art/UI/T_LifeIcon.uasset",
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "requirements": [
+        "ASSET-05",
+        "HUD-01"
+      ]
+    },
+    {
+      "id": "SM_Eye-source-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_Eye.obj",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ]
+    },
+    {
+      "id": "SM_FruitBody-source-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_FruitBody.obj",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-03",
+        "FRUIT-01"
+      ]
+    },
+    {
+      "id": "SM_FruitCrown-source-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_FruitCrown.obj",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-03",
+        "FRUIT-01"
+      ]
+    },
+    {
+      "id": "SM_GhostBody-source-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_GhostBody.obj",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ]
+    },
+    {
+      "id": "SM_GhostHead-source-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_GhostHead.obj",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ]
+    },
+    {
+      "id": "SM_Jaw-source-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_Jaw.obj",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ]
+    },
+    {
+      "id": "SM_Tooth-source-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_Tooth.obj",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ]
+    },
+    {
+      "id": "T_WallEdge-source-png",
+      "path": "starter-project/SourceArt/Textures/T_WallEdge.png",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-04",
+        "VISUAL-01"
+      ]
+    },
+    {
+      "id": "life-icon-source-svg",
+      "path": "starter-project/SourceArt/UI/life-icon.svg",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-05",
+        "HUD-01"
+      ]
+    },
+    {
+      "id": "T_LifeIcon-source-png",
+      "path": "starter-project/SourceArt/UI/T_LifeIcon.png",
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "requirements": [
+        "ASSET-05",
+        "HUD-01"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+NATIVE FRAME ACQUISITION REVIEW — NOT VISUAL QUALITY SCORING
+
+Use the exact raw PNG(s), immutable native player receipt and review-request
+bindings. Do not edit, crop, replace, or improve an image. This review has the
+same rules for every implementation and for service_commit and normal_input.
+
+Check whether any host-injected temporary company identity is actually visible
+in the captured pixels, including a clipped or wrapped GameCreateBenchmarkTemp
+prefix. The request gives the exact temporary company. If visible, choose
+host_identity_pollution. If uncertain, choose unresolved. Such a frame is an
+observer failure requiring repair/review, not a candidate visual deduction and
+never an automatic zero. Runtime text candidates are diagnostics, not proof
+that the text is visible; use the actual full frame.
+
+Reject an obvious foreign desktop, Editor chrome, host dialog or stale/other
+process image as unresolved. Do not require a particular game layout, specific
+decorative numbers, reference likeness, or successful/full gameplay. Poor game
+art, missing features and ordinary candidate UI defects remain for evaluation;
+this purity review must not silently become another quality score.
+
+For normal_input only, also apply the unchanged normal-entry rule: accept the
+entry state only if the after image is recognizably initial gameplay rather than
+the lobby/loading/error screen. Set normal_entry_decision to
+initial_gameplay_visible, menu_visible, or unresolved. For service_commit set it
+to not_applicable; the public committed-state proof is independently checked.
+
+Write a new JSON review, never overwrite a prior decision. Copy every immutable
+binding from the request: schema, candidate_source_sha256,
+player_receipt_sha256, after_png_sha256, before_png_sha256, process_id, hwnd,
+request_id, temporary_company, profile_sha256, acquisition_index_sha256 and
+review_prompt_sha256. Set schema=stormbound-native-frame-review/v1,
+decision=clean_game_frame only when the purity checks pass; identify reviewer
+and explain the visible evidence in reason. No decision grants generation
+admission or changes a score by itself.

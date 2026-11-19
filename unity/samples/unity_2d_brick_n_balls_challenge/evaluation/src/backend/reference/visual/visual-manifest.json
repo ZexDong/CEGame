@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "formal_reference_ready": true,
+  "source_kind": "real_player_runtime_from_fixed_original",
+  "source_repository": "BeesQ/brick-n-balls",
+  "source_commit": "94c9eac56c6ae15303ce4005512a2553c7eecd2e",
+  "source_native_unity_version": "6000.0.63f1",
+  "capture_unity_version": "6000.0.80f1",
+  "capture_resolution": [
+    1280,
+    720
+  ],
+  "capture_method": "A repository-local isolated copy of original/ was built as a Windows Mono player with the locked Editor. The real player rendered the original UIScene plus additive GameScene through the original GameScene camera into a 1280x720 RenderTexture. A temporary capture-only helper in the isolated copy recorded the directly visible states; it was never copied to original, input, or gold.",
+  "states": [
+    {
+      "id": "menu",
+      "label": "menu",
+      "reference": "original-menu.png",
+      "sha256": "9f67d03012e19e89056ce475b31d7b8cc19f72a73e89e6bfb9a2632f1b9e49fd",
+      "bytes": 87774
+    },
+    {
+      "id": "initial_gameplay",
+      "label": "initial gameplay",
+      "reference": "original-initial-gameplay.png",
+      "sha256": "fc013e15d22e012cd7ce2ae160e48e78ac979ee2a8de9eb415944b923020edc2",
+      "bytes": 128386
+    },
+    {
+      "id": "brick_hit",
+      "label": "gameplay after a brick hit",
+      "reference": "original-brick-hit.png",
+      "sha256": "4c24556ce3df0f14ed9f10fbc560e5282a13c8a2056fa6d002714dc127d9bb0b",
+      "bytes": 128610
+    }
+  ],
+  "d6_protocol": {
+    "state_weights": "equal",
+    "rounds": 3,
+    "model": "gpt-5.6-sol",
+    "per_state_score": "mean of three 0-10 calls",
+    "final_d6": "arithmetic mean of the three state scores",
+    "missing_or_unreadable_candidate_state": 0,
+    "canonical_prompt_repository_path": "tools/experiments/d6-visual-prompt.en-US.txt",
+    "frozen_prompt_copy": "D6_PROMPT.en-US.txt",
+    "prompt_sha256": "558b4ccffad7d13d3ae3e5c6fc5a9b36a7bba37d9be47da895c2e50bc9c5a6ee",
+    "prompt_bytes": 2571,
+    "candidate_screenshot_files": [
+      "menu.png",
+      "initial_gameplay.png",
+      "brick_hit.png"
+    ]
+  }
+}

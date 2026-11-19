@@ -1,0 +1,112 @@
+{
+  "schema_version": 2,
+  "benchmark_id": "unity.there_are_signs.sign_circuit.v2",
+  "network_download_required": false,
+  "asset_policy": {
+    "additional_downloads_allowed": false,
+    "pixel_perfect_match_required": false,
+    "bundled_assets_may_be_instantiated": true,
+    "protected_asset_sources_may_be_modified": false,
+    "runtime_absolute_file_loading_allowed": false
+  },
+  "provided_assets": [
+    {
+      "path": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "purpose": "Editable corridor starter Scene"
+    },
+    {
+      "path": "Assets/BenchmarkContract",
+      "purpose": "Protected implementation-neutral read-only observation contract; not artwork or player-facing content"
+    },
+    {
+      "path": "Assets/Scenes/Menu.unity",
+      "purpose": "Existing menu Scene; add one visible Sign Circuit entry without removing current behavior"
+    },
+    {
+      "path": "Assets/Scenes/Levels/Level1+2.unity",
+      "purpose": "Read-only regression Scene for movement and jump"
+    },
+    {
+      "path": "Assets/Prefabs/Player.prefab",
+      "purpose": "Existing player and locomotion"
+    },
+    {
+      "path": "Assets/Prefabs/InputManager.prefab",
+      "purpose": "PlayerInput and existing action maps"
+    },
+    {
+      "path": "Assets/Prefabs/MainCamera.prefab",
+      "purpose": "2D Game view camera"
+    },
+    {
+      "path": "Assets/Prefabs/StopSign Variant.prefab",
+      "purpose": "STOP sign visual and interaction object"
+    },
+    {
+      "path": "Assets/Prefabs/VerticalDirectionSign Variant.prefab",
+      "purpose": "UP sign visual and interaction object"
+    },
+    {
+      "path": "Assets/Prefabs/HorizontalDirectionSign Variant.prefab",
+      "purpose": "RIGHT sign visual and interaction object"
+    },
+    {
+      "path": "Assets/InputSystem_Actions.inputactions",
+      "purpose": "Existing Player, UI and Dialog input actions"
+    },
+    {
+      "path": "Assets/Sprites/Signs",
+      "purpose": "Bundled sign sprites"
+    },
+    {
+      "path": "Assets/Audio",
+      "purpose": "Optional bundled audio"
+    },
+    {
+      "path": "Assets/Sprites/backgound_BASIC.png",
+      "purpose": "Primary hand-drawn street environment strip for Sign Circuit visual assembly"
+    },
+    {
+      "path": "Assets/Sprites/background_SCHOOL.png",
+      "purpose": "Hand-drawn school environment strip for coherent route variation"
+    },
+    {
+      "path": "Assets/Sprites/door_STREET.png",
+      "purpose": "Street doorway/environment detail"
+    },
+    {
+      "path": "Assets/Sprites/door_SCHOOL.png",
+      "purpose": "School doorway/environment detail"
+    },
+    {
+      "path": "Assets/Sprites/end_level_STREET.png",
+      "purpose": "Street end-of-route environment art"
+    },
+    {
+      "path": "Assets/Sprites/end_level_SCHOOL.png",
+      "purpose": "School end-of-route environment art"
+    },
+    {
+      "path": "Assets/Sprites/stairs_STREET.png",
+      "purpose": "Street transition/environment detail"
+    },
+    {
+      "path": "Assets/Sprites/stairs_SCHOOL.png",
+      "purpose": "School transition/environment detail"
+    },
+    {
+      "path": "Assets/Sprites/HUD",
+      "purpose": "Bundled hand-drawn HUD sprites available for compatible interface presentation"
+    },
+    {
+      "path": "Assets/Fonts/PermanentMarker-Regular.ttf",
+      "purpose": "Bundled hand-drawn display font and existing derived TMP assets"
+    },
+    {
+      "path": "Assets/Scenes/Levels",
+      "purpose": "Read-only original level compositions for understanding the supplied visual language and regression behavior"
+    }
+  ],
+  "visual_requirement_id": "VISUAL-01",
+  "license_directory": "legal"
+}

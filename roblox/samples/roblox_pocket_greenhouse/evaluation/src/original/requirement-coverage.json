@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "game": "pocket_greenhouse",
+  "script": "checkpoint-script.json",
+  "rows": [
+    {"source":"gdd:UI-01","check_ids":["UI-ENTRY"],"dim":"D5","trajectory":"entry_and_initial_state","disposition":"scored"},
+    {"source":"gdd:FLOW-01","check_ids":["FLOW-START"],"dim":"D4","trajectory":"entry_and_initial_state","disposition":"scored"},
+    {"source":"gdd:STATE-01","check_ids":["INIT"],"dim":"D3","trajectory":"entry_and_initial_state","disposition":"scored"},
+    {"source":"gdd:CONTENT-01","check_ids":["CONTENT-CONTROLS","SELECT-PLOT","SELECT-PLOT-1"],"dim":"D2","trajectory":"entry_and_initial_state/invalid_actions/success_path","disposition":"scored"},
+    {"source":"gdd:CROP-01","check_ids":["PLANT-SUN","PLANT-SUN-SECOND"],"dim":"D2","trajectory":"success_path","disposition":"scored"},
+    {"source":"gdd:CROP-02","check_ids":["PLANT-MOON"],"dim":"D2","trajectory":"success_path","disposition":"scored"},
+    {"source":"gdd:DAY-01","check_ids":["DAY-ADVANCE"],"dim":"D2","trajectory":"success_path","disposition":"scored"},
+    {"source":"gdd:HARVEST-01","check_ids":["HARVEST-MOON","HARVEST-SUN"],"dim":"D2","trajectory":"success_path","disposition":"scored"},
+    {"source":"gdd:RULE-01","check_ids":["COST-SUN","COST-SUN-SECOND","COST-MOON","PLANT-ISOLATION"],"dim":"D3","trajectory":"success_path","disposition":"scored"},
+    {"source":"gdd:RULE-02","check_ids":["WATER-SUN","WATER-SUN-SECOND","WATER-MOON"],"dim":"D2/D3","trajectory":"success_path","disposition":"scored"},
+    {"source":"gdd:RULE-03","check_ids":["GROWTH-1","GROWTH-2"],"dim":"D3","trajectory":"success_path","disposition":"scored"},
+    {"source":"gdd:RULE-NEG-01","check_ids":["NEG-NO-PLOT"],"dim":"D3","trajectory":"invalid_actions","disposition":"scored"},
+    {"source":"gdd:RULE-NEG-02","check_ids":["NEG-HARVEST"],"dim":"D3","trajectory":"invalid_actions","disposition":"scored"},
+    {"source":"gdd:RULE-NEG-03","check_ids":["NEG-DELIVER"],"dim":"D3","trajectory":"invalid_actions","disposition":"scored"},
+    {"source":"gdd:END-01","check_ids":["WIN","VICTORY-FEEDBACK"],"dim":"D4/D5","trajectory":"success_path","disposition":"scored"},
+    {"source":"gdd:END-02","check_ids":["DEADLINE-NOT-EARLY","LOSE","FAILURE-FEEDBACK"],"dim":"D3/D4/D5","trajectory":"failure_and_restart","disposition":"scored"},
+    {"source":"common-baseline:CB-05","check_ids":["PLANT-FEEDBACK","GROWTH-FEEDBACK-1","GROWTH-FEEDBACK-2"],"dim":"D5","trajectory":"success_path","disposition":"scored"},
+    {"source":"common-baseline:CB-13","check_ids":["RESTART-MIDRUN","RESTART-FEEDBACK"],"dim":"D4/D5","trajectory":"midrun_restart","disposition":"scored"},
+    {"source":"common-baseline:CB-14","check_ids":["TERMINAL-LOCK","LOSS-TERMINAL-LOCK"],"dim":"D4","trajectory":"success_path/failure_and_restart","disposition":"scored"},
+    {"source":"gdd:ART-01","check_ids":[],"dim":"D6","trajectory":"-","disposition":"visual_d6"}
+  ],
+  "unmapped_gdd_requirements": [],
+  "note": "Requirement IDs map to the supplied README and observable behavior; a separate original GDD was not included."
+}

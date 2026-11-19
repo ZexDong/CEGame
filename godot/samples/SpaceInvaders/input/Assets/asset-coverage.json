@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "task_id": "space_invaders_first_level",
+  "status": "complete",
+  "supplied": [
+    "player",
+    "invader_high_value",
+    "invader_middle_value",
+    "invader_low_value",
+    "player_projectile",
+    "enemy_projectile",
+    "barrier",
+    "arcade_background",
+    "impact_audio",
+    "shot_audio"
+  ],
+  "procedural": [
+    "hud",
+    "pause_overlay",
+    "result_overlay",
+    "life_icons",
+    "countdown"
+  ],
+  "missing": []
+}

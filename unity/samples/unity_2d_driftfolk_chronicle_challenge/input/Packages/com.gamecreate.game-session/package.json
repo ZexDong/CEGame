@@ -1,0 +1,7 @@
+{
+  "name": "com.gamecreate.game-session",
+  "version": "1.0.0",
+  "displayName": "Game Session Contract",
+  "unity": "6000.0",
+  "description": "Public chapter, save/restore and scene-identity interface types. No gameplay implementation."
+}

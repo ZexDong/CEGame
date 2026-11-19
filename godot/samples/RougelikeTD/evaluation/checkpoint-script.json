@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "game": "roguelike_td_twelve_wave",
+  "naming_tables": "../input/sp/benchmark/naming-tables.json",
+  "controls_from_naming_tables": true,
+  "honesty_spot_checks": {
+    "mode": "review_against_captured_render_and_input_trace"
+  },
+  "trajectories": [
+    {
+      "id": "public_controls",
+      "title": "Public controls and dashboard collection",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "play_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "hero_card_archer"
+          }
+        },
+        {
+          "do": "snapshot"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "hero_card_mage"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    }
+  ]
+}

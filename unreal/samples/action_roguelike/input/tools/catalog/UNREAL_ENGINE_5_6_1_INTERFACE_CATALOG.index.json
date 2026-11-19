@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_id": "unreal-engine-5.6.1-cl44394996-windows-x64-editor-game-all-interface-catalog-v1",
+  "engine": {
+    "name": "Unreal Engine",
+    "version": "5.6.1",
+    "changelist": 44394996,
+    "platform": "Windows x64",
+    "mode": "editor_game"
+  },
+  "scope": "Engine source/public headers, reflection macros, console registrations, config defaults, UBT/UAT commands, and every installed engine plugin descriptor/module. Third-party source bodies are excluded.",
+  "entry_contract": [
+    "Name / purpose",
+    "Owner / version",
+    "Source",
+    "Exact entry",
+    "Parameters",
+    "Preconditions",
+    "Return/result",
+    "Faults",
+    "Side effects",
+    "Minimal example",
+    "Validation status",
+    "Validation",
+    "Limitations"
+  ],
+  "validation_status_values": [
+    "validated",
+    "documented_not_validated",
+    "unsupported_in_target_environment"
+  ],
+  "value_dictionary": {
+    "P1": "Use the owning module or tool in a compatible UE 5.6.1 process, target, and thread/context.",
+    "R1": "The exact declaration, command, setting, or schema defines the result; no successful runtime result is claimed by this catalog entry.",
+    "F1": "Unsupported platform/target, unavailable owner module, invalid parameter, or engine/tool failure. Preserve diagnostics and restore changed state before retrying.",
+    "S1": "Unknown until the interface is validated in isolation; treat it as potentially state-changing.",
+    "D1": "See the exact UE 5.6.1 declaration and owning implementation for type-specific defaults, units, ranges, and restrictions.",
+    "V1": "Documented from UE 5.6.1 source metadata; no isolated observable-effect validation is recorded for this entry.",
+    "V2": "Documented from UE 5.6.1 source metadata; the source path identifies a non-Windows target surface.",
+    "L1": "Symbol metadata is authoritative for this patch, but behavior remains unvalidated in the target environment."
+  },
+  "source_files_scanned": 71118,
+  "entry_count": 523937,
+  "counts_by_kind": {
+    "automation_tool_command": 88,
+    "blueprint_callable": 21432,
+    "blueprint_property": 71226,
+    "config_setting": 9188,
+    "console_command": 1016,
+    "console_variable": 9228,
+    "delegate_event": 918,
+    "plugin_descriptor": 709,
+    "plugin_module": 1457,
+    "public_cpp_callable": 380220,
+    "reflected_class": 12967,
+    "reflected_enum": 4182,
+    "reflected_interface": 454,
+    "reflected_struct": 10822,
+    "unreal_build_tool_mode": 30
+  },
+  "counts_by_validation_status": {
+    "documented_not_validated": 520120,
+    "unsupported_in_target_environment": 3817
+  },
+  "uncompressed_byte_length": 500901437,
+  "uncompressed_sha256": "dbbb48cbfd80bb687c406744fb6799fbd217f9cdc8045a6b1b5282ed993a4720",
+  "catalog_file": "tools/catalog/UNREAL_ENGINE_5_6_1_INTERFACE_CATALOG.jsonl.gz",
+  "catalog_byte_length": 34831137,
+  "catalog_sha256": "c900747e7a964d3a04f12ecad752ed47fbd7070666a895fc66e9245c357ce058",
+  "records_are_sorted": true,
+  "host_paths_recorded": false
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": 1,
+  "game": "reactor_relay_protocol",
+  "naming_tables": "naming-tables.json",
+  "trajectories": [
+    {
+      "id": "entry_initial", "clean_start": "fresh_process", "steps": [
+        {"do":"wait_until","cond":"phase == 'menu'","timeout_s":30,"check":{"id":"MENU","source":"CORE-01","dim":"D4","assert":"phase == 'menu' and slots.run_id == 0"}},
+        {"check":{"id":"START-VISIBLE","source":"CORE-01","dim":"D5","assert":"target('start_button').visible and target('start_button').interactable"}},
+        {"do":"click","target":{"kind":"start_button"}},
+        {"do":"wait_until","cond":"phase == 'cycle'","timeout_s":5,"check":{"id":"START","source":"CORE-01","dim":"D4","assert":"phase == 'cycle' and slots.cycle == 1"}},
+        {"check":{"id":"INITIAL","source":"CORE-02","dim":"D3","assert":"slots.integrity == 100 and slots.faults == 0 and slots.power_pool == 7 and slots.coolant_pool == 6 and slots.scan_charges == 1 and slots.purge_available == 1 and slots.selected_bay == 0"}},
+        {"check":{"id":"THREE-BAYS","source":"UI-02","dim":"D2","assert":"entity('bay_a').state == 'UnlockedUnstable' and entity('bay_b').state == 'UnlockedUnstable' and entity('bay_c').state == 'UnlockedUnstable'"}},
+        {"check":{"id":"CONTROLS","source":"UI-06","dim":"D2","assert":"all_targets_visible('bay_a','bay_b','bay_c','power_minus','power_plus','coolant_minus','coolant_plus','phase_left','phase_right','lock_button','arm_button','commit_button','scan_button','purge_button','restart_button')"}}
+      ]
+    },
+    {
+      "id":"rules_restart", "clean_start":"restart", "steps":[
+        {"do":"click","target":{"kind":"bay_a"}},
+        {"check":{"id":"SELECT-A","source":"CORE-03","dim":"D2","assert":"slots.selected_bay == 1 and slots.power_pool == 7 and slots.coolant_pool == 6"}},
+        {"do":"snapshot","save_as":"B0"},
+        {"do":"click_fast","target":{"kind":"power_minus"}},
+        {"check":{"id":"POWER-BOUNDARY","source":"CORE-04","dim":"D3","assert":"entity('bay_a').power == 0 and slots.power_pool == B0.slots.power_pool and entity('game').reject_code == 'ResourceLimit'"}},
+        {"do":"snapshot","save_as":"L0"},
+        {"do":"click","target":{"kind":"lock_button"}},
+        {"check":{"id":"WRONG-LOCK","source":"RULE-04","dim":"D3","assert":"slots.integrity == L0.slots.integrity - 8 and entity('bay_a').locked == False and entity('bay_a').overloads == 1"}},
+        {"do":"snapshot","save_as":"SC0"},
+        {"do":"click","target":{"kind":"scan_button"}},
+        {"check":{"id":"SCAN","source":"RULE-07","dim":"D2","assert":"slots.scan_charges == SC0.slots.scan_charges - 1 and slots.cycle == 1"}},
+        {"do":"click","target":{"kind":"power_plus"}},
+        {"do":"snapshot","save_as":"P0"},
+        {"do":"click","target":{"kind":"purge_button"}},
+        {"check":{"id":"PURGE","source":"RULE-08","dim":"D2","assert":"entity('bay_a').power == 0 and slots.power_pool == 7 and slots.integrity == P0.slots.integrity - 20 and slots.purge_available == 0"}},
+        {"do":"snapshot","save_as":"R0"},
+        {"do":"press_r"},
+        {"check":{"id":"R-RESTART","source":"RESET-01","dim":"D4","assert":"phase == 'cycle' and slots.cycle == 1 and slots.integrity == 100 and slots.faults == 0 and slots.scan_charges == 1 and slots.purge_available == 1 and slots.run_id > R0.slots.run_id"}},
+        {"check":{"id":"RESTART-FEEDBACK","source":"UI-03","dim":"D5","assert":"entity('game').last_event == 'Restarted'"}}
+      ]
+    },
+    {
+      "id":"complete_flow", "clean_start":"restart", "steps":[
+        {"do":"solve_cycle"},
+        {"check":{"id":"CYCLE-2","source":"RULE-05","dim":"D3","assert":"slots.cycle == 2 and slots.incident == 1 and slots.power_pool == 7 and slots.coolant_pool == 6"}},
+        {"do":"solve_cycle"},
+        {"check":{"id":"CYCLE-3","source":"RULE-05","dim":"D3","assert":"slots.cycle == 3 and slots.incident == 2"}},
+        {"do":"solve_cycle"},
+        {"check":{"id":"CYCLE-4","source":"RULE-05","dim":"D3","assert":"slots.cycle == 4 and slots.incident == 3"}},
+        {"do":"solve_cycle"},
+        {"check":{"id":"CYCLE-5","source":"RULE-05","dim":"D3","assert":"slots.cycle == 5 and slots.incident == 4"}},
+        {"do":"solve_cycle"},
+        {"check":{"id":"CYCLE-6","source":"RULE-05","dim":"D3","assert":"slots.cycle == 6 and slots.incident == 5"}},
+        {"do":"solve_cycle"},
+        {"do":"wait_until","cond":"phase == 'sequence'","timeout_s":12,"check":{"id":"PREVIEW-SEQUENCE","source":"FINAL-01","dim":"D4","assert":"phase == 'sequence' and slots.sequence_index == 0"}},
+        {"do":"click_fast","target":{"kind":"sequence_a"}},
+        {"do":"click_fast","target":{"kind":"sequence_c"}},
+        {"do":"click_fast","target":{"kind":"sequence_b"}},
+        {"do":"click_fast","target":{"kind":"sequence_a"}},
+        {"do":"click_fast","target":{"kind":"sequence_c"}},
+        {"do":"click_fast","target":{"kind":"sequence_b"}},
+        {"do":"click_fast","target":{"kind":"sequence_c"}},
+        {"do":"click_fast","target":{"kind":"sequence_a"}},
+        {"do":"wait_until","cond":"phase == 'won'","timeout_s":3,"check":{"id":"WIN","source":"FINAL-03","dim":"D4","assert":"phase == 'won' and slots.sequence_index == 8"}},
+        {"check":{"id":"WIN-FEEDBACK","source":"UI-03","dim":"D5","assert":"entity('game').last_event == 'Won' and entity('game').feedback != ''"}},
+        {"do":"snapshot","save_as":"W0"},
+        {"do":"press_bay_key"},
+        {"check":{"id":"WIN-LOCK","source":"FINAL-03","dim":"D4","assert":"phase == 'won' and revision == W0.revision"}}
+      ]
+    },
+    {
+      "id":"failure_terminal", "clean_start":"restart", "steps":[
+        {"do":"wrong_lock_until_lost"},
+        {"check":{"id":"LOSS-INTEGRITY","source":"RULE-09","dim":"D4","assert":"phase == 'lost' and slots.integrity <= 0"}},
+        {"check":{"id":"LOSS-FEEDBACK","source":"UI-03","dim":"D5","assert":"entity('game').last_event == 'Lost.Integrity' and entity('game').feedback != ''"}},
+        {"do":"snapshot","save_as":"X0"},
+        {"do":"press_bay_key"},
+        {"check":{"id":"LOSS-LOCK","source":"RULE-09","dim":"D4","assert":"phase == 'lost' and revision == X0.revision"}}
+      ]
+    },
+    {
+      "id":"reopen", "clean_start":"none", "steps":[
+        {"do":"reopen"},
+        {"do":"wait_until","cond":"phase == 'menu'","timeout_s":30,"check":{"id":"REOPEN","source":"RESET-02","dim":"D4","assert":"phase == 'menu' and slots.run_id == 0 and slots.cycle == 0"}}
+      ]
+    }
+  ]
+}

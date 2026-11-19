@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "required_asset_categories": {
+    "blank_project": {"covered": true, "paths": ["project/default.project.json", "DocklineDispatchStart.rbxlx"]},
+    "public_schema": {"covered": true, "paths": ["project/src/shared/DocklineDispatchSchema.luau"]},
+    "visual_direction": {"covered": true, "paths": ["VISUAL_DIRECTION.md", "TaskAssets/style_palette.json", "ASSET_CONTACT_SHEET.png"]},
+    "external_assets": {"required": false, "paths": []}
+  },
+  "gold_or_solution_visuals_in_input": false
+}

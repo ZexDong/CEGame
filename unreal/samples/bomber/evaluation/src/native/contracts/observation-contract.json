@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "evaluator_revision": "bomber-evaluator-5.0.0",
+  "setup_method": "normal_input",
+  "state_fixture": "unavailable_in_current_public_transport",
+  "candidate_internal_names_allowed": false,
+  "observer_gameplay_writes_allowed": false,
+  "chain": {
+    "timeout_seconds": 3,
+    "retained_exploding_records_required": false,
+    "required_facts": ["connected_bomb_centers_visible", "no_connected_bomb_still_armed", "observed_before_later_original_fuse"],
+    "d3_additional_facts": ["exact_public_cross_union", "single_owner_refunds"],
+    "pickup_checks_depend_on_chain_verdict": false
+  },
+  "movement": {
+    "clock": "same_process_snapshot_monotonic_ms",
+    "exclude_initial_immediate_step": true,
+    "exclude_tool_and_io_overhead": true,
+    "base_ms": [160, 200],
+    "skate_ms": [100, 130],
+    "acceptance": "bounded_interval_overlaps_gdd_range_and_skate_is_faster",
+    "maximum_interval_uncertainty_ms": 60,
+    "insufficient_precision_attribution": "evaluator_measurement_fault",
+    "bounded_precision_refinement": {
+      "trigger": "initial repeated-movement bracket exceeds 60 ms uncertainty",
+      "method": "intersect all same-tier timing brackets from normal-input return trips along the already traversed clear corridor",
+      "maximum_return_trips": 3,
+      "maximum_additional_hold_actions": 6,
+      "maximum_additional_hold_seconds": 12,
+      "required_identity": "same process, round and Skate tier",
+      "restore_endpoint": true,
+      "inconsistent_brackets": "evaluator measurement fault; no score",
+      "remaining_insufficient_precision": "evaluator measurement fault; no score"
+    }
+  },
+  "capture": {
+    "producer": "ue-native-viewport",
+    "api": "FScreenshotRequest::RequestScreenshot with UI and UGameViewportClient::OnScreenshotCaptured",
+    "width": 1280,
+    "height": 720,
+    "desktop_pixels_used": false,
+    "screen_coordinates_used": false,
+    "timeout_seconds": 2.5,
+    "semantic_timestamp_bracketing_required": true,
+    "fallback_capture_after_timeout": false
+  },
+  "evidence": ["input_receipts", "all_accepted_wait_samples", "movement_time_brackets", "chain_expectation_and_verification", "native_render_receipt", "semantic_capture_sidecar"]
+}

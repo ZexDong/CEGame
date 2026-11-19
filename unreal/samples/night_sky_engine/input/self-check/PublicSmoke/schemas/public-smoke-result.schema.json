@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "self-check/PublicSmoke/schemas/public-smoke-result.schema.json",
+  "title": "NightSkyDuel Public Smoke Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "smoke_id",
+    "started_utc",
+    "ended_utc",
+    "status",
+    "exit_code",
+    "gameplay_requirements_evaluated",
+    "starter-project",
+    "engine",
+    "input_identity",
+    "checks",
+    "faults",
+    "cleanup"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "smoke_id": {
+      "type": "string",
+      "pattern": "^public-smoke-[0-9]{8}T[0-9]{9}Z-[a-f0-9]{8}$"
+    },
+    "started_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "ended_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "enum": [
+        "passed",
+        "failed",
+        "blocked"
+      ]
+    },
+    "exit_code": {
+      "enum": [
+        0,
+        1,
+        2
+      ]
+    },
+    "gameplay_requirements_evaluated": {
+      "const": false
+    },
+    "starter-project": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "project_file",
+        "target"
+      ],
+      "properties": {
+        "project_file": {
+          "const": "starter-project/NightSkyDuelScaffold.uproject"
+        },
+        "target": {
+          "const": "NightSkyDuelScaffoldEditor Win64 Development"
+        }
+      }
+    },
+    "engine": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "version",
+        "platform",
+        "mode"
+      ],
+      "properties": {
+        "name": {
+          "const": "Unreal Engine"
+        },
+        "version": {
+          "const": "5.7.4"
+        },
+        "platform": {
+          "const": "Windows x64"
+        },
+        "mode": {
+          "const": "editor_game"
+        }
+      }
+    },
+    "input_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "benchmark_manifest_sha256"
+
+      ],
+      "properties": {
+        "benchmark_manifest_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+
+
+
+
+      }
+    },
+    "checks": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "status",
+          "detail",
+          "evidence"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          },
+          "status": {
+            "enum": [
+              "passed",
+              "failed",
+              "blocked"
+            ]
+          },
+          "detail": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[A-Za-z0-9._/-]+$"
+            }
+          }
+        }
+      }
+    },
+    "faults": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "domain",
+          "code"
+        ],
+        "properties": {
+          "domain": {
+            "enum": [
+              "release",
+              "starter-project",
+              "executor",
+              "environment",
+              "cleanup"
+            ]
+          },
+          "code": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]*$"
+          }
+        }
+      }
+    },
+    "cleanup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "attempted",
+        "status",
+        "process_tree_clean",
+        "controlled_input_released"
+      ],
+      "properties": {
+        "attempted": {
+          "type": "boolean"
+        },
+        "status": {
+          "enum": [
+            "verified",
+            "failed",
+            "not_acquired"
+          ]
+        },
+        "process_tree_clean": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "controlled_input_released": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    }
+  }
+}

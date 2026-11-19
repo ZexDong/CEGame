@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "language": "en",
+  "benchmark_id": "unity.dungeon_duel_3d.v2",
+  "input_revision": "v2.6-existing-arena-feedback-3600s-20260827",
+  "scope": "Static facts about supplied source assets. This catalog does not prescribe the final encounter layout, implementation classes, combat solution, or camera path.",
+  "contact_sheet": "ASSET_CONTACT_SHEET.png",
+  "contact_sheet_sha256": "4cb994631e3989d75429809be13ce43480098e438fe6bd00e5f3d69dd603eb34",
+  "protected_sources": [
+    "Assets/DungeonDuelDemo/**",
+    "Assets/InputSystem/**",
+    "Assets/Material/**",
+    "Assets/Models/**",
+    "Assets/Prefabs/**",
+    "Assets/Scenes/BossRoom/**",
+    "Assets/Settings/**",
+    "Assets/Shaders/**",
+    "Assets/Sounds/**",
+    "Assets/Textures/**",
+    "Assets/VFX/**",
+    "TaskAssets/**"
+  ],
+  "writable_derivative_root": "Assets/DungeonDuelBenchmark/**",
+  "critical_asset_notes": [
+    "ASSET_CONTACT_SHEET.png is a labeled inventory preview rendered from the supplied starter Scene and source Prefabs; it is not a final encounter layout.",
+    "The saved canonical Scene at Assets/DungeonDuelBenchmark/Scenes/DungeonDuel.unity already contains the supplied art-only arena, camera, lighting, geometry and markers. Extend that scene; an empty Scene or primary primitive-only graybox discards required supplied presentation.",
+    "PlayerVisual, ImpVisual and BossVisual are presentation-only source Prefabs. The completed player, enemy AI, damage, Dash, gate, terminal, HUD and Restart behavior must be authored under the writable root.",
+    "DungeonDuelStarterAssetIndex.asset is the compact serialized lookup for approved visuals, animation, gate, navigation, input, VFX and audio.",
+    "Preserve protected sources and importer metadata. Put candidate scripts, colliders, materials, derived assets, Prefabs and the final saved Scene under Assets/DungeonDuelBenchmark/**.",
+    "No final playable encounter or target composition is supplied by this catalog."
+  ],
+  "role_to_path_map": {
+    "arena": [
+      "Assets/DungeonDuelDemo/Starter/DungeonDuelStarter.unity"
+    ],
+    "player": [
+      "Assets/DungeonDuelDemo/Visuals/PlayerVisual.prefab",
+      "Assets/DungeonDuelDemo/Controllers/Player.controller"
+    ],
+    "imps": [
+      "Assets/DungeonDuelDemo/Visuals/ImpVisual.prefab",
+      "Assets/DungeonDuelDemo/Controllers/Imp.controller"
+    ],
+    "boss": [
+      "Assets/DungeonDuelDemo/Visuals/BossVisual.prefab",
+      "Assets/DungeonDuelDemo/Controllers/Boss.controller"
+    ],
+    "gate": [
+      "Assets/Prefabs/Dungeon/Dungeon Pieces/animated/env_door_boss_ani.prefab"
+    ],
+    "navigation": [
+      "Assets/Scenes/BossRoom/NavMesh-DungeonNavMesh.asset"
+    ],
+    "input": [
+      "Assets/InputSystem/PlayerActions.inputactions"
+    ],
+    "battle_audio": [
+      "Assets/Sounds/Music/Boss_Room_Battle_Loop.ogg"
+    ],
+    "victory_audio": [
+      "Assets/Sounds/Music/Boss_Room_Victory.ogg"
+    ],
+    "vfx": [
+      "Assets/VFX/Prefabs/Imp/FX_ImpDefeat.prefab",
+      "Assets/VFX/Prefabs/Tank/fx_TankAttack1.prefab",
+      "Assets/VFX/Prefabs/Tank/FX_TankSkill2_hit.prefab"
+    ]
+  },
+  "assets": [
+    {
+      "path": "Assets/DungeonDuelDemo/Starter/DungeonDuelStarter.unity",
+      "semantic_role": "art_only_starter_arena",
+      "asset_kind": "Unity Scene",
+      "bytes": 3863561,
+      "sha256": "eb3350cff2d676bf5cf2f037eec0bbcd6b232056cb3f52052d2dc40594cebb4d",
+      "guid": "9b3ec33d28a41b841b1b6d96c9d8c6b7",
+      "group": "arena",
+      "handling_note": "Saved environment, camera, lighting, arena geometry and markers. It intentionally contains no completed combat implementation; preserve and extend this presentation in the canonical main Scene."
+    },
+    {
+      "path": "Assets/DungeonDuelDemo/Starter/DungeonDuelStarterAssetIndex.asset",
+      "semantic_role": "starter_asset_index",
+      "asset_kind": "ScriptableObject asset",
+      "bytes": 1410,
+      "sha256": "5e1370c3431141ad37990bca571a553efff25ddd88da0602845dc4a809ea325a",
+      "guid": "9f2e6801c2c1b6942be1a8cf376f2d25",
+      "group": "index",
+      "handling_note": "Serialized references to approved visuals, animation controllers, gate, navigation, Input Actions, VFX and music. It is an index, not gameplay code."
+    },
+    {
+      "path": "Assets/DungeonDuelDemo/Visuals/PlayerVisual.prefab",
+      "semantic_role": "player_tank_visual",
+      "asset_kind": "Prefab",
+      "bytes": 175503,
+      "sha256": "941b80bd6aef1ef8ba13e49a99bccb98afa71e0aaf3d7fa63306eb393f9451fc",
+      "guid": "85cd6bf97ccdd3e479313e597e168667",
+      "group": "actors",
+      "handling_note": "Presentation-only Tank/player hierarchy with renderers and Animator. Add candidate-owned gameplay, collider and input behavior under the writable root."
+    },
+    {
+      "path": "Assets/DungeonDuelDemo/Visuals/ImpVisual.prefab",
+      "semantic_role": "imp_visual",
+      "asset_kind": "Prefab",
+      "bytes": 176370,
+      "sha256": "e65104c9d659e9bbb2b2ccb9cd4328c8d409307ae6a1cd118500aa929a6ed803",
+      "guid": "7d4dbea91f7fd0447bf6fdc87f6456bd",
+      "group": "actors",
+      "handling_note": "Presentation-only small Imp hierarchy. Instantiate exactly two gameplay Imps and attach candidate-owned combat behavior."
+    },
+    {
+      "path": "Assets/DungeonDuelDemo/Visuals/BossVisual.prefab",
+      "semantic_role": "boss_visual",
+      "asset_kind": "Prefab",
+      "bytes": 211670,
+      "sha256": "4ba6424f0005bf70ef0ccea4c1ed6298237b4010e5158d436c9b5735efc94687",
+      "guid": "592792f790e5f2e4cb6cf51c61f301de",
+      "group": "actors",
+      "handling_note": "Presentation-only larger Boss hierarchy. Keep it dormant and unattackable until the two-Imp gate prerequisite is complete."
+    },
+    {
+      "path": "Assets/DungeonDuelDemo/Controllers/Player.controller",
+      "semantic_role": "player_animation_controller",
+      "asset_kind": "Animator Controller",
+      "bytes": 12343,
+      "sha256": "e43e459dcfc857ef25f911a2f5a080ff23e2d168fd33c8499376896eae24e656",
+      "guid": "ef2b5abfbb9f34146864f6f696526c2c",
+      "group": "animation",
+      "handling_note": "Presentation controller for the Tank/player visual."
+    },
+    {
+      "path": "Assets/DungeonDuelDemo/Controllers/Imp.controller",
+      "semantic_role": "imp_animation_controller",
+      "asset_kind": "Animator Controller",
+      "bytes": 12332,
+      "sha256": "4be586049ce8c9f6d399df4d0611d2995bcebd170814f19c427d41185e89662d",
+      "guid": "946d3653e3ab56c49869c64591ece78e",
+      "group": "animation",
+      "handling_note": "Presentation controller for Imp visuals."
+    },
+    {
+      "path": "Assets/DungeonDuelDemo/Controllers/Boss.controller",
+      "semantic_role": "boss_animation_controller",
+      "asset_kind": "Animator Controller",
+      "bytes": 12332,
+      "sha256": "a87b0569ca8dfa0e1ef56f9d24e18944ca65e14e0cff5552f18df675b7324c1d",
+      "guid": "e8aff10d6a9f21d49bf6586237b8ea1d",
+      "group": "animation",
+      "handling_note": "Presentation controller for the Boss visual."
+    },
+    {
+      "path": "Assets/Prefabs/Dungeon/Dungeon Pieces/animated/env_door_boss_ani.prefab",
+      "semantic_role": "boss_gate_visual",
+      "asset_kind": "Prefab",
+      "bytes": 3260,
+      "sha256": "a56f853b734b6892f03900dd002b361147173c281e4ac635a6ad6a252d15f7bc",
+      "guid": "89cc929d293c08549aad4cd70359b76e",
+      "group": "gate",
+      "handling_note": "Boss-gate presentation. Candidate gameplay must provide the real closed/open blocking state and one-time transition."
+    },
+    {
+      "path": "Assets/Scenes/BossRoom/NavMesh-DungeonNavMesh.asset",
+      "semantic_role": "baked_navigation_data",
+      "asset_kind": "NavMesh data",
+      "bytes": 62272,
+      "sha256": "4c1581efdf2082311ae5299b817350234731a158ff2981596eec2b356bee042a",
+      "guid": "370564daf57dc744495c4853cdfcf4dd",
+      "group": "navigation",
+      "handling_note": "Optional supplied baked navigation data. NavMeshAgent use is valid only on reachable compatible data; equivalent custom movement is allowed."
+    },
+    {
+      "path": "Assets/InputSystem/PlayerActions.inputactions",
+      "semantic_role": "input_action_reference",
+      "asset_kind": "InputActionAsset",
+      "bytes": 39615,
+      "sha256": "f166ccaaa80617d056b3f409a822670e365f90c83df51efb52976ba0f0b3b25d",
+      "guid": "add476edce0d24d26bcdaf1681449ecf",
+      "group": "input",
+      "handling_note": "Supplied New Input System action source and binding reference. Candidate controls may use it or equivalent enabled InputAction/PlayerInput/direct polling routes."
+    },
+    {
+      "path": "Assets/Sounds/Music/Boss_Room_Battle_Loop.ogg",
+      "semantic_role": "battle_music",
+      "asset_kind": "AudioClip",
+      "bytes": 1839386,
+      "sha256": "150a38a32709989cff9fa1ba7b87498d9f1e6a82f79c438e3df030ac228001a3",
+      "guid": "f770930a596a5a145a53f25b2ef34131",
+      "group": "audio",
+      "handling_note": "Battle-state music source; avoid duplicate stacked playback."
+    },
+    {
+      "path": "Assets/Sounds/Music/Boss_Room_Victory.ogg",
+      "semantic_role": "victory_music",
+      "asset_kind": "AudioClip",
+      "bytes": 405321,
+      "sha256": "08206e447180d7a3f80237a85a6afb48a5c8b587c0244bb7c9c6303c29225132",
+      "guid": "197a19cfbce09394d9afa55cc2c5ca22",
+      "group": "audio",
+      "handling_note": "Victory/result music source; Restart must restore the battle state."
+    },
+    {
+      "path": "Assets/VFX/Prefabs/Imp/FX_ImpDefeat.prefab",
+      "semantic_role": "imp_defeat_vfx",
+      "asset_kind": "Prefab",
+      "bytes": 358262,
+      "sha256": "7629ce13ca2b3b7844f2f652a1d345ef0b38b8fc34a7d0f52c659b839aa2f6e8",
+      "guid": "9537f4739c7bc2f4e8d6b2d49bfcc97e",
+      "group": "vfx",
+      "handling_note": "Optional supplied defeat feedback for an Imp."
+    },
+    {
+      "path": "Assets/VFX/Prefabs/Tank/fx_TankAttack1.prefab",
+      "semantic_role": "tank_attack_vfx",
+      "asset_kind": "Prefab",
+      "bytes": 118304,
+      "sha256": "a1629d395dfc1022f57cf9381359671a881ac91e3d1e53a4818b391d1428c175",
+      "guid": "e1a27cb18e3a1d649aa3fc6420f3731b",
+      "group": "vfx",
+      "handling_note": "Optional supplied player attack feedback."
+    },
+    {
+      "path": "Assets/VFX/Prefabs/Tank/FX_TankSkill2_hit.prefab",
+      "semantic_role": "tank_dash_or_hit_vfx",
+      "asset_kind": "Prefab",
+      "bytes": 589970,
+      "sha256": "d94b79e8a33d606627020e3c2af4a2c012eb985fae5b3a7eadbf0d945d03010c",
+      "guid": "210c34a446a65e94599c469444c03ad6",
+      "group": "vfx",
+      "handling_note": "Optional supplied Dash or impact feedback."
+    }
+  ],
+  "preview_generation": {
+    "method": "author-side cold-copy Unity render of supplied public Scene/Prefabs only",
+    "source_assets": [
+      "Assets/DungeonDuelDemo/Starter/DungeonDuelStarter.unity",
+      "Assets/DungeonDuelDemo/Visuals/PlayerVisual.prefab",
+      "Assets/DungeonDuelDemo/Visuals/ImpVisual.prefab",
+      "Assets/DungeonDuelDemo/Visuals/BossVisual.prefab",
+      "Assets/Prefabs/Dungeon/Dungeon Pieces/animated/env_door_boss_ani.prefab"
+    ],
+    "contains_final_gameplay": false,
+    "contains_nonpublic_author_material": false
+  }
+}

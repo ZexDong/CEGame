@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "unity.dungeon_duel_3d.v2",
+  "input_revision": "v2.6-existing-arena-feedback-3600s-20260827",
+  "catalog": "ASSET_CATALOG.json",
+  "contact_sheet": "ASSET_CONTACT_SHEET.png",
+  "coverage_status": "complete_for_declared_supplied_roles_not_composed",
+  "final_gameplay_supplied": false,
+  "final_composition_supplied": false,
+  "roles": [
+    {
+      "role": "staged fantasy Boss Room arena",
+      "requirement_refs": [
+        "VISUAL-01",
+        "ASSET-01"
+      ],
+      "status": "covered",
+      "paths": [
+        "Assets/DungeonDuelDemo/Starter/DungeonDuelStarter.unity"
+      ]
+    },
+    {
+      "role": "Tank player visual",
+      "requirement_refs": [
+        "FLOW-01",
+        "VISUAL-01",
+        "ASSET-01"
+      ],
+      "status": "covered",
+      "paths": [
+        "Assets/DungeonDuelDemo/Visuals/PlayerVisual.prefab",
+        "Assets/DungeonDuelDemo/Controllers/Player.controller"
+      ]
+    },
+    {
+      "role": "two smaller Imp visuals",
+      "requirement_refs": [
+        "FLOW-01",
+        "GATE-01",
+        "GATE-02",
+        "VISUAL-01",
+        "ASSET-01"
+      ],
+      "status": "covered",
+      "paths": [
+        "Assets/DungeonDuelDemo/Visuals/ImpVisual.prefab",
+        "Assets/DungeonDuelDemo/Controllers/Imp.controller"
+      ]
+    },
+    {
+      "role": "larger gated Boss visual",
+      "requirement_refs": [
+        "FLOW-01",
+        "GATE-01",
+        "GATE-02",
+        "FLOW-02",
+        "VISUAL-01",
+        "ASSET-01"
+      ],
+      "status": "covered",
+      "paths": [
+        "Assets/DungeonDuelDemo/Visuals/BossVisual.prefab",
+        "Assets/DungeonDuelDemo/Controllers/Boss.controller"
+      ]
+    },
+    {
+      "role": "visible Boss gate",
+      "requirement_refs": [
+        "GATE-01",
+        "GATE-02",
+        "VISUAL-01",
+        "ASSET-01"
+      ],
+      "status": "covered",
+      "paths": [
+        "Assets/Prefabs/Dungeon/Dungeon Pieces/animated/env_door_boss_ani.prefab"
+      ]
+    },
+    {
+      "role": "navigation/input sources",
+      "requirement_refs": [
+        "INPUT-01",
+        "NAV-01",
+        "DASH-01"
+      ],
+      "status": "covered",
+      "paths": [
+        "Assets/InputSystem/PlayerActions.inputactions",
+        "Assets/Scenes/BossRoom/NavMesh-DungeonNavMesh.asset"
+      ]
+    },
+    {
+      "role": "combat/Dash/death feedback media",
+      "requirement_refs": [
+        "COMBAT-01",
+        "COMBAT-03",
+        "DASH-01",
+        "VISUAL-01",
+        "ASSET-01"
+      ],
+      "status": "covered_optional_set",
+      "paths": [
+        "Assets/VFX/Prefabs/Imp/FX_ImpDefeat.prefab",
+        "Assets/VFX/Prefabs/Tank/fx_TankAttack1.prefab",
+        "Assets/VFX/Prefabs/Tank/FX_TankSkill2_hit.prefab"
+      ]
+    },
+    {
+      "role": "battle and Victory audio",
+      "requirement_refs": [
+        "AUDIO-01",
+        "ASSET-01"
+      ],
+      "status": "covered",
+      "paths": [
+        "Assets/Sounds/Music/Boss_Room_Battle_Loop.ogg",
+        "Assets/Sounds/Music/Boss_Room_Victory.ogg"
+      ]
+    }
+  ],
+  "not_supplied": [
+    "player movement, combat, enemy AI, health and tuning implementation",
+    "Dash cooldown implementation",
+    "gate prerequisite and Boss activation logic",
+    "HUD, terminal panels and Restart implementation",
+    "the final composed and playable encounter"
+  ]
+}

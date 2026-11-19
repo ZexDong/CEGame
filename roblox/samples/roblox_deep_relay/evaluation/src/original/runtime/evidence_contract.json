@@ -1,0 +1,21 @@
+{
+  "schema_version": "deep-relay-evidence-contract-v1",
+  "verdicts": {
+    "pass": "Required precondition was established and the required behavior was observed.",
+    "fail": "Required precondition was established and an incorrect candidate behavior was observed.",
+    "inconclusive": "The controller did not establish the required precondition, so candidate correctness is not adjudicated.",
+    "not_run": "The unique formal evaluation did not execute this checkpoint."
+  },
+  "formal_validity": {
+    "requires_play_client": true,
+    "requires_engine_done": true,
+    "requires_complete_evidence": true,
+    "host_or_controller_fault_invalidates_score": true,
+    "debug_runs_scoreable": false,
+    "official_score_requires_d6": true
+  },
+  "prohibited_actuation": [
+    "teleport player", "write candidate attributes", "invoke candidate business Remote",
+    "call candidate gameplay functions", "forge touch", "use screenshots or LLM for D1-D5"
+  ]
+}

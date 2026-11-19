@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "unity.noir_roombreak_challenge.v1",
+  "input_version": "v1.11-tool-guide-v5-20260825",
+  "gdd_revision": "v1.7-player-goals-only-20260825",
+  "common_tool_guide_id": "unity-common-tool-guide-v5-20260825",
+  "unity_editor": "6000.0.80f1",
+  "upstream_unity_editor": "6000.0.39f1",
+  "migration_class": "same-series mechanical host gate",
+  "unity_cli": "1.0.0-beta.3",
+  "starter_scene": "Assets/NoirStarter/Scenes/NoirStarter.unity",
+  "required_final_scene": "Assets/NoirChallenge/Scenes/NoirRoombreak.unity",
+  "target_resolution": [
+    1280,
+    720
+  ],
+  "public_contract": "GameCreate.Benchmark.NoirRoombreak.INoirRoombreakProbe",
+  "contract_version": "2026.08.24-v1",
+  "asset_manifest": "ASSET_MANIFEST.json",
+  "public_editmode_filter": "GameCreate.Benchmark.NoirRoombreak.PublicSmoke.EditMode",
+  "public_playmode_filter": "GameCreate.Benchmark.NoirRoombreak.PublicSmoke.PlayMode",
+  "writable_paths": [
+    "Assets/NoirChallenge/**",
+    "Logs/**",
+    "ProjectSettings/EditorBuildSettings.asset",
+    "ProjectSettings/ProjectSettings.asset"
+  ],
+  "protected_paths": [
+    "Assets/NoirStarter/**",
+    "Assets/TaskAssets/**",
+    "Assets/PublicSmoke/**",
+    "Packages/com.gamecreate.benchmark.noir-roombreak.contracts/**",
+    "Packages/manifest.json",
+    "Packages/packages-lock.json",
+    "GDD.md",
+    "README.md",
+    "INITIAL_AGENT_PROMPT.md",
+    "TOOLCHAIN.md",
+    "UNITY_BENCHMARK_TOOL_GUIDE.md",
+    "BENCHMARK_MANIFEST.json",
+    "ASSET_MANIFEST.json",
+    "legal/**",
+    "ASSET_CATALOG.json",
+    "ASSET_CATALOG.md",
+    "ASSET_CONTACT_SHEET.png"
+  ],
+  "network_required": false,
+  "submission_profile": "repository-local Unity 6 URP 2D project using saved Scene, New Input System, uGUI, and a read-only Probe",
+  "asset_catalog": "ASSET_CATALOG.json",
+  "asset_contact_sheet": "ASSET_CONTACT_SHEET.png"
+}
+

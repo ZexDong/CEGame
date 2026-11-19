@@ -1,0 +1,436 @@
+{
+  "schema_version": 2,
+  "evaluator_protocol": "game-independent-d1-d6-v2-hybrid",
+  "evaluator_revision": "2026.09.19-undercooked-public-session-v2.3.1-oracle-isolation",
+  "benchmark_id": "unity.undercooked_kitchen_shift.v2",
+  "coverage_manifest": "requirement-coverage.json",
+  "checkpoint_script": "checkpoint-script.json",
+  "baseline_applicability": "baseline-applicability.json",
+  "automatic_score_maximum": 90.0,
+  "dimensions": {
+    "D1": {
+      "maximum_score": 10.0,
+      "checks": [
+        {
+          "id": "D1_SCENE",
+          "weight": 2.0,
+          "requirements": [
+            "FLOW-01"
+          ]
+        },
+        {
+          "id": "D1_CAMERA",
+          "weight": 2.0,
+          "requirements": [
+            "CAMERA-01"
+          ]
+        },
+        {
+          "id": "D1_RUNTIME",
+          "weight": 2.0,
+          "requirements": [
+            "FLOW-01"
+          ]
+        },
+        {
+          "id": "D1_SESSION_ENTRY",
+          "weight": 2.0,
+          "requirements": [
+            "SESSION-01"
+          ]
+        },
+        {
+          "id": "D1_SESSION_STATE",
+          "weight": 2.0,
+          "requirements": [
+            "SESSION-02"
+          ]
+        }
+      ]
+    },
+    "D2": {
+      "maximum_score": 30.0,
+      "checks": [
+        {
+          "id": "D2_KITCHEN",
+          "weight": 2.5,
+          "requirements": [
+            "FLOW-01"
+          ]
+        },
+        {
+          "id": "D2_MOVE_SWITCH",
+          "weight": 2.5,
+          "requirements": [
+            "MOVE-01",
+            "SWITCH-01"
+          ]
+        },
+        {
+          "id": "D2_PICKUP",
+          "weight": 2.5,
+          "requirements": [
+            "PICKUP-01"
+          ]
+        },
+        {
+          "id": "D2_CHOP",
+          "weight": 2.5,
+          "requirements": [
+            "CHOP-01"
+          ]
+        },
+        {
+          "id": "D2_COOK",
+          "weight": 2.5,
+          "requirements": [
+            "COOK-01"
+          ]
+        },
+        {
+          "id": "D2_BURN",
+          "weight": 2.5,
+          "requirements": [
+            "BURN-01"
+          ]
+        },
+        {
+          "id": "D2_PLATE",
+          "weight": 2.5,
+          "requirements": [
+            "PLATE-01"
+          ]
+        },
+        {
+          "id": "D2_DELIVERY_ORDERS",
+          "weight": 2.5,
+          "requirements": [
+            "DELIVERY-01",
+            "ORDER-01"
+          ]
+        },
+        {
+          "id": "D2_EXPIRY",
+          "weight": 2.5,
+          "requirements": [
+            "ORDER-02"
+          ]
+        },
+        {
+          "id": "D2_PAUSE",
+          "weight": 2.5,
+          "requirements": [
+            "PAUSE-01"
+          ]
+        },
+        {
+          "id": "D2_RESULT",
+          "weight": 2.5,
+          "requirements": [
+            "FLOW-02"
+          ]
+        },
+        {
+          "id": "D2_ASSETS",
+          "weight": 2.5,
+          "requirements": [
+            "VISUAL-01",
+            "AUDIO-01"
+          ]
+        }
+      ]
+    },
+    "D3": {
+      "maximum_score": 20.0,
+      "checks": [
+        {
+          "id": "D3_SWITCH_OWNERSHIP",
+          "weight": 2.0,
+          "requirements": [
+            "SWITCH-01"
+          ]
+        },
+        {
+          "id": "D3_ITEM_UNIQUENESS",
+          "weight": 2.0,
+          "requirements": [
+            "SESSION-02"
+          ]
+        },
+        {
+          "id": "D3_RAW_REJECTION",
+          "weight": 2.0,
+          "requirements": [
+            "DELIVERY-01"
+          ]
+        },
+        {
+          "id": "D3_CHOP_TIMING",
+          "weight": 2.0,
+          "requirements": [
+            "CHOP-01"
+          ]
+        },
+        {
+          "id": "D3_COOK_RULES",
+          "weight": 2.0,
+          "requirements": [
+            "COOK-01"
+          ]
+        },
+        {
+          "id": "D3_BURN_REJECTION",
+          "weight": 2.0,
+          "requirements": [
+            "BURN-01"
+          ]
+        },
+        {
+          "id": "D3_DELIVERY_ONCE",
+          "weight": 2.0,
+          "requirements": [
+            "DELIVERY-01"
+          ]
+        },
+        {
+          "id": "D3_ORDER_RULES",
+          "weight": 2.0,
+          "requirements": [
+            "ORDER-01",
+            "ORDER-02"
+          ]
+        },
+        {
+          "id": "D3_PAUSE_FREEZE",
+          "weight": 2.0,
+          "requirements": [
+            "PAUSE-01"
+          ]
+        },
+        {
+          "id": "D3_RESET_CLEAN",
+          "weight": 2.0,
+          "requirements": [
+            "RESTART-01"
+          ]
+        }
+      ]
+    },
+    "D4": {
+      "maximum_score": 20.0,
+      "checks": [
+        {
+          "id": "D4_MENU_START",
+          "weight": 4.0,
+          "requirements": [
+            "FLOW-01"
+          ]
+        },
+        {
+          "id": "D4_ADJACENT_WORKFLOW",
+          "weight": 4.0,
+          "requirements": [
+            "PICKUP-01",
+            "CHOP-01",
+            "COOK-01",
+            "PLATE-01",
+            "DELIVERY-01"
+          ]
+        },
+        {
+          "id": "D4_RESULT",
+          "weight": 4.0,
+          "requirements": [
+            "FLOW-02"
+          ]
+        },
+        {
+          "id": "D4_RESTART",
+          "weight": 4.0,
+          "requirements": [
+            "RESTART-01"
+          ]
+        },
+        {
+          "id": "D4_REOPEN",
+          "weight": 4.0,
+          "requirements": [
+            "REOPEN-01"
+          ]
+        }
+      ]
+    },
+    "D5": {
+      "maximum_score": 10.0,
+      "checks": [
+        {
+          "id": "D5_MENU",
+          "weight": 2.0,
+          "requirements": [
+            "UI-01"
+          ]
+        },
+        {
+          "id": "D5_HUD_STATION",
+          "weight": 2.0,
+          "requirements": [
+            "UI-01"
+          ]
+        },
+        {
+          "id": "D5_ACTION",
+          "weight": 2.0,
+          "requirements": [
+            "UI-01"
+          ]
+        },
+        {
+          "id": "D5_PAUSE_RESULT",
+          "weight": 2.0,
+          "requirements": [
+            "UI-01"
+          ]
+        },
+        {
+          "id": "D5_AUDIO",
+          "weight": 2.0,
+          "requirements": [
+            "AUDIO-01"
+          ]
+        }
+      ]
+    },
+    "D6": {
+      "maximum_score": 10.0,
+      "status": "frozen_single_state_single_round_visual",
+      "requirements": [
+        "VISUAL-01"
+      ]
+    }
+  },
+  "phase_contract": {
+    "static": {
+      "assembly": "GameCreate.Undercooked.Evaluator.Static",
+      "expected_tests": 1,
+      "expected_test_names": [
+        "STATIC01_LoadCompileCameraAndRuntimeEntry"
+      ],
+      "expected_check_ids": [
+        "D1_SCENE",
+        "D1_CAMERA",
+        "D1_RUNTIME"
+      ]
+    },
+    "dynamic": {
+      "assembly": "GameCreate.Undercooked.Evaluator.Dynamic",
+      "expected_tests": 21,
+      "expected_test_names": [
+        "T01_SessionEntry",
+        "T02_RestoreIntegrity",
+        "T03_KitchenPresentation",
+        "T04_MoveSwitch",
+        "T05_PickCounter",
+        "T06_Chop",
+        "T07_Cook",
+        "T08_Burn",
+        "T09_Plate",
+        "T10_Delivery",
+        "T11_RawRejection",
+        "T12_BurntRejection",
+        "T13_Expiry",
+        "T14_Pause",
+        "T15_Result",
+        "T16_Restart",
+        "T17_Menu",
+        "T18_Hud",
+        "T19_Audio",
+        "T20_AdjacentWorkflow",
+        "T99_DirtyClose"
+      ],
+      "expected_check_ids": [
+        "D1_SESSION_ENTRY",
+        "D1_SESSION_STATE",
+        "D2_KITCHEN",
+        "D2_MOVE_SWITCH",
+        "D2_PICKUP",
+        "D2_CHOP",
+        "D2_COOK",
+        "D2_BURN",
+        "D2_PLATE",
+        "D2_DELIVERY_ORDERS",
+        "D2_EXPIRY",
+        "D2_PAUSE",
+        "D2_RESULT",
+        "D2_ASSETS",
+        "D3_SWITCH_OWNERSHIP",
+        "D3_ITEM_UNIQUENESS",
+        "D3_RAW_REJECTION",
+        "D3_CHOP_TIMING",
+        "D3_COOK_RULES",
+        "D3_BURN_REJECTION",
+        "D3_DELIVERY_ONCE",
+        "D3_ORDER_RULES",
+        "D3_PAUSE_FREEZE",
+        "D3_RESET_CLEAN",
+        "D4_MENU_START",
+        "D4_ADJACENT_WORKFLOW",
+        "D4_RESULT",
+        "D4_RESTART",
+        "D5_MENU",
+        "D5_HUD_STATION",
+        "D5_ACTION",
+        "D5_PAUSE_RESULT",
+        "D5_AUDIO"
+      ],
+      "check_test_bindings": {
+        "D1_SESSION_ENTRY": "T01_SessionEntry",
+        "D1_SESSION_STATE": "T02_RestoreIntegrity",
+        "D3_ITEM_UNIQUENESS": "T02_RestoreIntegrity",
+        "D2_KITCHEN": "T03_KitchenPresentation",
+        "D2_ASSETS": "T03_KitchenPresentation",
+        "D2_MOVE_SWITCH": "T04_MoveSwitch",
+        "D3_SWITCH_OWNERSHIP": "T04_MoveSwitch",
+        "D2_PICKUP": "T05_PickCounter",
+        "D2_CHOP": "T06_Chop",
+        "D3_CHOP_TIMING": "T06_Chop",
+        "D2_COOK": "T07_Cook",
+        "D3_COOK_RULES": "T07_Cook",
+        "D2_BURN": "T08_Burn",
+        "D2_PLATE": "T09_Plate",
+        "D2_DELIVERY_ORDERS": "T10_Delivery",
+        "D3_DELIVERY_ONCE": "T10_Delivery",
+        "D5_ACTION": "T10_Delivery",
+        "D3_RAW_REJECTION": "T11_RawRejection",
+        "D3_BURN_REJECTION": "T12_BurntRejection",
+        "D2_EXPIRY": "T13_Expiry",
+        "D3_ORDER_RULES": "T13_Expiry",
+        "D2_PAUSE": "T14_Pause",
+        "D3_PAUSE_FREEZE": "T14_Pause",
+        "D2_RESULT": "T15_Result",
+        "D4_RESULT": "T15_Result",
+        "D5_PAUSE_RESULT": "T15_Result",
+        "D3_RESET_CLEAN": "T16_Restart",
+        "D4_RESTART": "T16_Restart",
+        "D4_MENU_START": "T17_Menu",
+        "D5_MENU": "T17_Menu",
+        "D5_HUD_STATION": "T18_Hud",
+        "D5_AUDIO": "T19_Audio",
+        "D4_ADJACENT_WORKFLOW": "T20_AdjacentWorkflow",
+        "D1_SCENE": "STATIC01_LoadCompileCameraAndRuntimeEntry",
+        "D1_CAMERA": "STATIC01_LoadCompileCameraAndRuntimeEntry",
+        "D1_RUNTIME": "STATIC01_LoadCompileCameraAndRuntimeEntry",
+        "D4_REOPEN": "FRESH01_NewProcessStartsAtCleanMenu"
+      }
+    },
+    "fresh": {
+      "assembly": "GameCreate.Undercooked.Evaluator.Fresh",
+      "expected_tests": 1,
+      "expected_test_names": [
+        "FRESH01_NewProcessStartsAtCleanMenu"
+      ],
+      "expected_check_ids": [
+        "D4_REOPEN"
+      ]
+    }
+  }
+}

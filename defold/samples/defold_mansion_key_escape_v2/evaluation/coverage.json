@@ -1,0 +1,646 @@
+{
+  "schema_version": 1,
+  "game": "defold_mansion_key_escape_v2",
+  "script": "rules.json",
+  "dimension_maxima": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "checkpoint_counts": {
+    "D1": 4,
+    "D2": 7,
+    "D3": 11,
+    "D4": 6,
+    "D5": 9
+  },
+  "rows": [
+    {
+      "source": "gdd:Menu-01",
+      "check_ids": [
+        "MKE_D2_MENU_ENTRY",
+        "MKE_D3_MENU_NAVIGATION",
+        "MKE_D5_MENU_READABLE"
+      ],
+      "dim": "D2,D3,D5",
+      "trajectory": "menu_movement_locked_door_and_roundtrip",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Menu-02",
+      "check_ids": [
+        "MKE_D2_CONTROLS_PAGE",
+        "MKE_D5_CONTROLS_READABLE"
+      ],
+      "dim": "D2,D5",
+      "trajectory": "menu_movement_locked_door_and_roundtrip",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Menu-03",
+      "check_ids": [
+        "MKE_D4_REPEATED_NEW_GAME_CLEAN"
+      ],
+      "dim": "D4",
+      "trajectory": "ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Move-01",
+      "check_ids": [
+        "MKE_D3_CONTINUOUS_MOVE_RELEASE",
+        "MKE_D4_ROOM_ROUNDTRIP_STABLE"
+      ],
+      "dim": "D3,D4",
+      "trajectory": "menu_movement_locked_door_and_roundtrip",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Move-02",
+      "check_ids": [
+        "MKE_D3_CONTINUOUS_MOVE_RELEASE"
+      ],
+      "dim": "D3",
+      "trajectory": "menu_movement_locked_door_and_roundtrip",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Collision-01",
+      "check_ids": [
+        "MKE_D3_LOCKED_DOOR_BOUNDARY",
+        "MKE_D4_ROOM_ROUNDTRIP_STABLE"
+      ],
+      "dim": "D3,D4",
+      "trajectory": "menu_movement_locked_door_and_roundtrip",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Scenario-01",
+      "check_ids": [
+        "MKE_D2_FOYER_CONTENT",
+        "MKE_D2_STUDY_CONTENT",
+        "MKE_D2_EXIT_SUCCESS_CONTENT"
+      ],
+      "dim": "D2",
+      "trajectory": "menu_movement_locked_door_and_roundtrip,ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Scenario-02",
+      "check_ids": [
+        "MKE_D4_ROOM_ROUNDTRIP_STABLE",
+        "MKE_D3_EXIT_WIN_BOUNDARY"
+      ],
+      "dim": "D3,D4",
+      "trajectory": "menu_movement_locked_door_and_roundtrip,ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Layout-01",
+      "check_ids": [
+        "MKE_D2_FOYER_CONTENT",
+        "MKE_D2_STUDY_CONTENT",
+        "MKE_D2_EXIT_SUCCESS_CONTENT",
+        "MKE_D4_ROOM_ROUNDTRIP_STABLE"
+      ],
+      "dim": "D2,D4,D6",
+      "trajectory": "menu_movement_locked_door_and_roundtrip,ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored_and_visual_d6"
+    },
+    {
+      "source": "gdd:Layout-02",
+      "check_ids": [
+        "MKE_D2_FOYER_CONTENT",
+        "MKE_D2_STUDY_CONTENT",
+        "MKE_D2_PUZZLE_REVEAL_CONTENT",
+        "MKE_D2_EXIT_SUCCESS_CONTENT"
+      ],
+      "dim": "D2,D6",
+      "trajectory": "menu_movement_locked_door_and_roundtrip,ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored_and_visual_d6"
+    },
+    {
+      "source": "gdd:Layout-03",
+      "check_ids": [
+        "MKE_D4_ROOM_ROUNDTRIP_STABLE",
+        "MKE_D3_LOCKED_DOOR_BOUNDARY",
+        "MKE_D3_EXIT_WIN_BOUNDARY"
+      ],
+      "dim": "D3,D4,D6",
+      "trajectory": "menu_movement_locked_door_and_roundtrip,ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored_and_visual_d6"
+    },
+    {
+      "source": "gdd:Interaction-01",
+      "check_ids": [
+        "MKE_D5_STUDY_FEEDBACK_READABLE",
+        "MKE_D3_JOURNAL_MODAL",
+        "MKE_D3_ORDERED_REVEAL"
+      ],
+      "dim": "D3,D5",
+      "trajectory": "menu_movement_locked_door_and_roundtrip,ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Interaction-02",
+      "check_ids": [
+        "MKE_D3_WRONG_ORDER_REJECTED",
+        "MKE_D3_LOCKED_DOOR_BOUNDARY"
+      ],
+      "dim": "D3",
+      "trajectory": "menu_movement_locked_door_and_roundtrip,ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Clue-01",
+      "check_ids": [
+        "MKE_D3_JOURNAL_MODAL",
+        "MKE_D3_MODAL_FREEZE",
+        "MKE_D5_JOURNAL_READABLE"
+      ],
+      "dim": "D3,D5",
+      "trajectory": "ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Puzzle-01",
+      "check_ids": [
+        "MKE_D3_WRONG_ORDER_REJECTED"
+      ],
+      "dim": "D3",
+      "trajectory": "ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Puzzle-02",
+      "check_ids": [
+        "MKE_D2_PUZZLE_REVEAL_CONTENT",
+        "MKE_D3_ORDERED_REVEAL",
+        "MKE_D5_KEY_REVEAL_READABLE"
+      ],
+      "dim": "D2,D3,D5",
+      "trajectory": "ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Key-01",
+      "check_ids": [
+        "MKE_D3_UNIQUE_KEY_PICKUP",
+        "MKE_D5_KEY_REVEAL_READABLE"
+      ],
+      "dim": "D3,D5",
+      "trajectory": "ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Door Lock-01",
+      "check_ids": [
+        "MKE_D3_LOCKED_DOOR_BOUNDARY",
+        "MKE_D5_STUDY_FEEDBACK_READABLE"
+      ],
+      "dim": "D3,D5",
+      "trajectory": "menu_movement_locked_door_and_roundtrip",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Door-Lock-02",
+      "check_ids": [
+        "MKE_D3_LOCKED_DOOR_BOUNDARY"
+      ],
+      "dim": "D3",
+      "trajectory": "menu_movement_locked_door_and_roundtrip",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Door-Lock-03",
+      "check_ids": [
+        "MKE_D3_UNLOCK_CONSUMES_KEY",
+        "MKE_D3_EXIT_WIN_BOUNDARY"
+      ],
+      "dim": "D3",
+      "trajectory": "ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Door-Lock-04",
+      "check_ids": [
+        "MKE_D3_LOCKED_DOOR_BOUNDARY",
+        "MKE_D3_UNLOCK_CONSUMES_KEY",
+        "MKE_D5_DOOR_OPEN_READABLE"
+      ],
+      "dim": "D3,D5,D6",
+      "trajectory": "menu_movement_locked_door_and_roundtrip,ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored_and_visual_d6"
+    },
+    {
+      "source": "gdd:Exit-01",
+      "check_ids": [
+        "MKE_D2_EXIT_SUCCESS_CONTENT",
+        "MKE_D3_EXIT_WIN_BOUNDARY",
+        "MKE_D4_SUCCESS_TERMINAL_LOCK",
+        "MKE_D5_SUCCESS_READABLE"
+      ],
+      "dim": "D2,D3,D4,D5",
+      "trajectory": "ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Threat-01",
+      "check_ids": [
+        "MKE_D2_SHADOW_SYSTEM",
+        "MKE_D3_SHADOW_CONTACT_LOSS"
+      ],
+      "dim": "D2,D3",
+      "trajectory": "shadow_failure_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Threat-02",
+      "check_ids": [
+        "MKE_D3_SHADOW_CONTACT_LOSS",
+        "MKE_D4_FAILURE_TERMINAL_LOCK",
+        "MKE_D5_FAILURE_READABLE"
+      ],
+      "dim": "D3,D4,D5",
+      "trajectory": "shadow_failure_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Restart-01",
+      "check_ids": [
+        "MKE_D4_FAILURE_RESTART_CLEAN"
+      ],
+      "dim": "D4",
+      "trajectory": "shadow_failure_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Lifecycle-01",
+      "check_ids": [
+        "MKE_D4_REPEATED_NEW_GAME_CLEAN",
+        "MKE_D4_REOPEN_CLEAN_MENU"
+      ],
+      "dim": "D4",
+      "trajectory": "ordered_puzzle_success_and_clean_new_games,partial_progress_then_reopen",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Visual-01",
+      "check_ids": [
+        "D6_VISUAL_REVIEW"
+      ],
+      "dim": "D6",
+      "trajectory": "visual",
+      "disposition": "visual_d6"
+    },
+    {
+      "source": "gdd:Visual-02",
+      "check_ids": [
+        "MKE_D5_FOYER_HUD_READABLE",
+        "MKE_D5_STUDY_FEEDBACK_READABLE"
+      ],
+      "dim": "D5,D6",
+      "trajectory": "menu_movement_locked_door_and_roundtrip",
+      "disposition": "scored_and_visual_d6"
+    },
+    {
+      "source": "gdd:Visual-03",
+      "check_ids": [
+        "D6_VISUAL_REVIEW"
+      ],
+      "dim": "D6",
+      "trajectory": "visual",
+      "disposition": "visual_d6"
+    },
+    {
+      "source": "gdd:Visual-04",
+      "check_ids": [
+        "MKE_D2_FOYER_CONTENT",
+        "MKE_D2_STUDY_CONTENT",
+        "MKE_D2_EXIT_SUCCESS_CONTENT"
+      ],
+      "dim": "D2,D6",
+      "trajectory": "menu_movement_locked_door_and_roundtrip,ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored_and_visual_d6"
+    },
+    {
+      "source": "gdd:Interface-01",
+      "check_ids": [
+        "MKE_D5_FOYER_HUD_READABLE",
+        "MKE_D5_STUDY_FEEDBACK_READABLE",
+        "MKE_D5_JOURNAL_READABLE",
+        "MKE_D5_SUCCESS_READABLE",
+        "MKE_D5_FAILURE_READABLE"
+      ],
+      "dim": "D5",
+      "trajectory": "all",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Interface-02",
+      "check_ids": [
+        "MKE_D5_MENU_READABLE",
+        "MKE_D5_CONTROLS_READABLE",
+        "MKE_D5_JOURNAL_READABLE",
+        "MKE_D5_SUCCESS_READABLE",
+        "MKE_D5_FAILURE_READABLE"
+      ],
+      "dim": "D5,D6",
+      "trajectory": "all",
+      "disposition": "scored_and_visual_d6"
+    },
+    {
+      "source": "gdd:Reference Screen-01",
+      "check_ids": [
+        "D6_VISUAL_REVIEW"
+      ],
+      "dim": "D6",
+      "trajectory": "visual",
+      "disposition": "visual_d6"
+    },
+    {
+      "source": "gdd:Reference Screen-02",
+      "check_ids": [
+        "MKE_D5_MENU_READABLE",
+        "MKE_D5_CONTROLS_READABLE",
+        "MKE_D5_JOURNAL_READABLE",
+        "MKE_D5_SUCCESS_READABLE",
+        "MKE_D5_FAILURE_READABLE"
+      ],
+      "dim": "D5,D6",
+      "trajectory": "all",
+      "disposition": "scored_and_visual_d6"
+    },
+    {
+      "source": "gdd:Quality-01",
+      "check_ids": [
+        "D1_BOB_BUILD",
+        "D1_BUNDLE_ENTRY",
+        "D1_RUNTIME_DASHBOARD_SMOKE",
+        "MKE_D4_REOPEN_CLEAN_MENU"
+      ],
+      "dim": "D1,D4",
+      "trajectory": "static,partial_progress_then_reopen",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Quality-02",
+      "check_ids": [
+        "MKE_D3_CONTINUOUS_MOVE_RELEASE",
+        "MKE_D3_ORDERED_REVEAL",
+        "MKE_D3_UNLOCK_CONSUMES_KEY",
+        "MKE_D3_SHADOW_CONTACT_LOSS",
+        "MKE_D3_EXIT_WIN_BOUNDARY"
+      ],
+      "dim": "D3",
+      "trajectory": "all",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Quality-03",
+      "check_ids": [
+        "MKE_D5_MENU_READABLE",
+        "MKE_D5_CONTROLS_READABLE",
+        "MKE_D5_STUDY_FEEDBACK_READABLE"
+      ],
+      "dim": "D5",
+      "trajectory": "menu_movement_locked_door_and_roundtrip",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Quality-04",
+      "check_ids": [
+        "MKE_D5_FOYER_HUD_READABLE",
+        "MKE_D5_KEY_REVEAL_READABLE",
+        "MKE_D5_DOOR_OPEN_READABLE",
+        "MKE_D5_SUCCESS_READABLE",
+        "MKE_D5_FAILURE_READABLE",
+        "HONESTY_SPOT_CHECKS"
+      ],
+      "dim": "D5",
+      "trajectory": "all,honesty",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Quality-05",
+      "check_ids": [
+        "MKE_D4_ROOM_ROUNDTRIP_STABLE",
+        "MKE_D4_SUCCESS_TERMINAL_LOCK",
+        "MKE_D4_FAILURE_RESTART_CLEAN"
+      ],
+      "dim": "D4",
+      "trajectory": "all",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Quality-06",
+      "check_ids": [
+        "MKE_D4_REPEATED_NEW_GAME_CLEAN",
+        "MKE_D4_REOPEN_CLEAN_MENU"
+      ],
+      "dim": "D4",
+      "trajectory": "ordered_puzzle_success_and_clean_new_games,partial_progress_then_reopen",
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-01",
+      "check_ids": [
+        "D1_RUNTIME_DASHBOARD_SMOKE"
+      ],
+      "dim": "D1",
+      "trajectory": "static",
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-02",
+      "check_ids": [
+        "D1_BOB_BUILD",
+        "MKE_D4_SUCCESS_TERMINAL_LOCK",
+        "MKE_D4_FAILURE_TERMINAL_LOCK"
+      ],
+      "dim": "D1,D4",
+      "trajectory": "static,ordered_puzzle_success_and_clean_new_games,shadow_failure_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-03",
+      "check_ids": [
+        "MKE_D4_REOPEN_CLEAN_MENU"
+      ],
+      "dim": "D4",
+      "trajectory": "partial_progress_then_reopen",
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-04",
+      "check_ids": [
+        "MKE_D3_MENU_NAVIGATION",
+        "MKE_D3_CONTINUOUS_MOVE_RELEASE",
+        "MKE_D3_ORDERED_REVEAL"
+      ],
+      "dim": "D3",
+      "trajectory": "menu_movement_locked_door_and_roundtrip,ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-05",
+      "check_ids": [
+        "MKE_D5_MENU_READABLE",
+        "MKE_D5_CONTROLS_READABLE",
+        "MKE_D5_FOYER_HUD_READABLE",
+        "MKE_D5_STUDY_FEEDBACK_READABLE",
+        "MKE_D5_JOURNAL_READABLE",
+        "MKE_D5_KEY_REVEAL_READABLE",
+        "MKE_D5_DOOR_OPEN_READABLE",
+        "MKE_D5_SUCCESS_READABLE",
+        "MKE_D5_FAILURE_READABLE"
+      ],
+      "dim": "D5",
+      "trajectory": "all",
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-06",
+      "check_ids": [
+        "MKE_D3_WRONG_ORDER_REJECTED",
+        "MKE_D3_LOCKED_DOOR_BOUNDARY"
+      ],
+      "dim": "D3",
+      "trajectory": "menu_movement_locked_door_and_roundtrip,ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-07",
+      "check_ids": [
+        "MKE_D2_MENU_ENTRY",
+        "MKE_D2_CONTROLS_PAGE",
+        "MKE_D5_MENU_READABLE",
+        "MKE_D5_CONTROLS_READABLE"
+      ],
+      "dim": "D2,D5",
+      "trajectory": "menu_movement_locked_door_and_roundtrip",
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-08",
+      "check_ids": [
+        "MKE_D5_MENU_READABLE",
+        "MKE_D5_CONTROLS_READABLE",
+        "MKE_D5_JOURNAL_READABLE",
+        "MKE_D5_SUCCESS_READABLE",
+        "MKE_D5_FAILURE_READABLE"
+      ],
+      "dim": "D5",
+      "trajectory": "all",
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-09",
+      "check_ids": [
+        "MKE_D3_ORDERED_REVEAL",
+        "MKE_D3_UNIQUE_KEY_PICKUP",
+        "MKE_D3_UNLOCK_CONSUMES_KEY",
+        "MKE_D5_DOOR_OPEN_READABLE"
+      ],
+      "dim": "D3,D5",
+      "trajectory": "ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-10",
+      "check_ids": [
+        "MKE_D3_MODAL_FREEZE",
+        "MKE_D4_REPEATED_NEW_GAME_CLEAN"
+      ],
+      "dim": "D3,D4",
+      "trajectory": "ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-11",
+      "check_ids": [
+        "MKE_D2_EXIT_SUCCESS_CONTENT",
+        "MKE_D3_EXIT_WIN_BOUNDARY",
+        "MKE_D4_SUCCESS_TERMINAL_LOCK",
+        "MKE_D5_SUCCESS_READABLE"
+      ],
+      "dim": "D2,D3,D4,D5",
+      "trajectory": "ordered_puzzle_success_and_clean_new_games",
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-12",
+      "check_ids": [
+        "MKE_D3_SHADOW_CONTACT_LOSS",
+        "MKE_D4_FAILURE_RESTART_CLEAN",
+        "MKE_D5_FAILURE_READABLE"
+      ],
+      "dim": "D3,D4,D5",
+      "trajectory": "shadow_failure_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-13",
+      "check_ids": [
+        "MKE_D4_REPEATED_NEW_GAME_CLEAN",
+        "MKE_D4_FAILURE_RESTART_CLEAN"
+      ],
+      "dim": "D4",
+      "trajectory": "ordered_puzzle_success_and_clean_new_games,shadow_failure_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-14",
+      "check_ids": [
+        "MKE_D4_SUCCESS_TERMINAL_LOCK",
+        "MKE_D4_FAILURE_TERMINAL_LOCK"
+      ],
+      "dim": "D4",
+      "trajectory": "ordered_puzzle_success_and_clean_new_games,shadow_failure_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-15",
+      "check_ids": [
+        "MKE_D2_MENU_ENTRY",
+        "HONESTY_NO_INPUT_STABILITY"
+      ],
+      "dim": "D2",
+      "trajectory": "menu_movement_locked_door_and_roundtrip,honesty",
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-16",
+      "check_ids": [
+        "D6_VISUAL_REVIEW"
+      ],
+      "dim": "D6",
+      "trajectory": "visual",
+      "disposition": "visual_d6_delivery_hygiene"
+    },
+    {
+      "source": "common-baseline:CB-17",
+      "check_ids": [
+        "D6_VISUAL_REVIEW"
+      ],
+      "dim": "D6",
+      "trajectory": "visual",
+      "disposition": "visual_d6"
+    },
+    {
+      "source": "common-baseline:CB-18",
+      "check_ids": [
+        "D1_RUNTIME_DASHBOARD_SMOKE",
+        "HONESTY_SPOT_CHECKS"
+      ],
+      "dim": "D1",
+      "trajectory": "static,honesty",
+      "disposition": "scored"
+    }
+  ],
+  "unmapped_gdd_requirements": [],
+  "unmapped_common_baseline_items": []
+}

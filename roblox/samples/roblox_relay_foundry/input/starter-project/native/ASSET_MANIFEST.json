@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "roblox.relay_foundry.v1",
+  "input_revision": "v1.1-roblox-tool-catalog-3600s-20260826",
+  "network_download_required": false,
+  "asset_catalog": "ASSET_CATALOG.json",
+  "asset_coverage": "ASSET_COVERAGE.json",
+  "provided_assets": [
+    {
+      "path": "Assets/README.md",
+      "purpose": "Declares the Roblox built-in asset surface used by this task; no external binary media is required.",
+      "editable": false
+    },
+    {
+      "path": "project/default.project.json",
+      "purpose": "Clean Rojo starter DataModel with Lighting, ReplicatedStorage, ServerScriptService, StarterGui, StarterPlayer, and Workspace mappings.",
+      "editable": true
+    },
+    {
+      "path": "project/src/shared/RelayFoundrySchema.luau",
+      "purpose": "Protected public interoperability constants; not a gameplay implementation.",
+      "editable": false
+    }
+  ],
+  "restrictions": {
+    "additional_downloads_required": false,
+    "runtime_absolute_file_loading": false,
+    "modify_public_protocol_strings": false,
+    "private_evaluator_in_candidate": false,
+    "pixel_perfect_matching": false
+  }
+}
+

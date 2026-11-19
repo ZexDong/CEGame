@@ -1,0 +1,744 @@
+{
+  "schema_version": "2.1",
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "method": "engine_collection_and_requirement_level_review",
+  "checks": [
+    {
+      "id": "D1-01",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-01"
+      ],
+      "description": "Project imports without an engine failure",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-02",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-02"
+      ],
+      "description": "Configured main scene runs",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-03",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-03"
+      ],
+      "description": "No candidate parse, script or resource loading errors",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-04",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-04"
+      ],
+      "description": "Live dashboard snapshots are available",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-05",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-05"
+      ],
+      "description": "Public dashboard shape and required numeric slots",
+      "max_score": 2.0
+    },
+    {
+      "id": "entry_001",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:ENTRY-01"
+      ],
+      "description": "Launch a new process | Show a usable main menu with a visible Play control | Resume an old run, open the editor, or remain on an unresponsive placeholder | Play is readable and clickable",
+      "max_score": 10.0
+    },
+    {
+      "id": "entry_002",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:ENTRY-02"
+      ],
+      "description": "Activate Play | Enter the fixed 18-by-10 map with exactly `100` gold, `20/20` base health, no heroes, no relics, and Wave 0/12 | Carry over gold, health, heroes, relics, or map state | The HUD and an empty buildable battlefield appear immediately",
+      "max_score": 10.0
+    },
+    {
+      "id": "entry_003",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:MAP-01"
+      ],
+      "description": "Start any run | Use an 18-by-10 grid with 32-unit cells. Path 1 runs through (0,4), (4,4), (4,1), (10,1), (10,7), (14,7), (14,4), (17,4). Path 2 runs through (0,8), (4,8), (4,4), then follows Path 1. Consecutive corners join through every intervening cell. Both end at the base (17,4). All path cells, including the locked second route, are unbuildable; remaining cells are grass | Change routes between runs or let visuals and buildability disagree | Both paths are readable; the second portal is locked until WAVE-04",
+      "max_score": 10.0
+    },
+    {
+      "id": "entry_004",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-01"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-01",
+      "max_score": 1.333333
+    },
+    {
+      "id": "entry_005",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-07"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-07",
+      "max_score": 0.5
+    },
+    {
+      "id": "entry_006",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-08"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-08",
+      "max_score": 0.5
+    },
+    {
+      "id": "entry_007",
+      "dimension": "D3",
+      "requirement_ids": [
+        "common-baseline:CB-15"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-15",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_001",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PLACE-01"
+      ],
+      "description": "Left-click a hero card | Preparation or active wave | Select that hero for placement",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_002",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PLACE-02"
+      ],
+      "description": "Move the pointer and left-click a grass cell | Hero selected | Place the hero and deduct its cost, or reject without cost",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_003",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PLACE-03"
+      ],
+      "description": "Target an occupied cell, path cell, outside battlefield, or cell with insufficient gold | Reject the placement without changing gold or battlefield objects | Deduct gold, replace an existing hero, or leave a stuck preview | A clearly invalid preview/feedback remains until a valid action",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_004",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PLACE-04"
+      ],
+      "description": "Place any hero | Deduct exactly Archer `75`, Mage `100`, or Warrior `80` gold | Deduct another type's price or allow negative gold | The HUD shows the resulting gold",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_005",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:HERO-01"
+      ],
+      "description": "Archer is placed and an enemy enters its range | Attack the first valid in-range target with `8` damage and `1.5` attacks per second at range `90` | Attack outside range, use area damage, or change the fixed role | Archer shows a ranged attack and target HP changes",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_006",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:HERO-02"
+      ],
+      "description": "Mage is placed and an enemy enters its range | Attack with `22` damage and `0.7` attacks per second at range `55`; on impact, deal the same damage in a `40`-radius splash to other enemies | Behave as a long-range single-target Archer or omit the splash role | A slower projectile and a visible area impact affect multiple nearby enemies",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_007",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:HERO-03"
+      ],
+      "description": "Warrior is placed and an enemy enters its range | Attack with `12` damage and `1.2` attacks per second at range `35`; damage every enemy within `35` of the Warrior | Attack at long range or only one target | A close-range area strike is visible",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_008",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:HERO-04"
+      ],
+      "description": "A hero acquires targets | Keep one current target and switch when it dies, leaks, or leaves range | Keep attacking a removed enemy or permanently lock an unreachable target | Shots visibly track a living in-range enemy",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_009",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:HERO-05"
+      ],
+      "description": "Multiple enemies are in range | Allow every placed hero to attack independently on its own cooldown | Share or duplicate cooldowns across heroes | Damage cadence remains consistent per hero",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_010",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:HERO-06"
+      ],
+      "description": "A hero is placed | It remains at its cell for the rest of the run | Wander, follow enemies, or move off the build cell | The hero stays anchored while its attacks visibly target enemies",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_011",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:WAVE-01"
+      ],
+      "description": "Enter the battlefield or clear a previous nonfinal wave | Start Wave 1 after a short preparation state; for later waves, start the next wave after the reward choice | Skip Wave 1, overlap two waves, or wait forever | Wave HUD changes from preparation to the current wave",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_012",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:WAVE-02"
+      ],
+      "description": "A wave is active | Spawn the exact composition from the table below in a shuffled order | Add hidden enemy types, vary the published counts, or spawn the boss before Wave 5 | Remaining-enemy count includes spawned and unspawned enemies",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_013",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:WAVE-03"
+      ],
+      "description": "Wave number `w` is active | Use spawn interval `max(0.3, 1.0 - w * 0.05)` seconds between enemies | Use one fixed interval for all waves or spawn all enemies at once | Later waves appear faster",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_014",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:WAVE-04"
+      ],
+      "description": "Wave 10 begins | Open the second published path; from Waves 10–12 alternate spawns between the two paths, starting with the first path each wave | Keep all enemies on one route after unlocking or open the second route before Wave 10 | The second spawn portal becomes visibly active",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_015",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:WAVE-05"
+      ],
+      "description": "A wave is active | Prevent the next wave's enemies from spawning until every current enemy is dead or has leaked | Overlap waves or leave a completed wave stuck | Wave completion is followed by reward selection",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_016",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:WAVE-06"
+      ],
+      "description": "Wave 12 is cleared | Enter Victory and do not start Wave 13 | Continue spawning, leave Reward open, or enter Defeat | A clear Victory state appears",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_017",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ENEMY-01"
+      ],
+      "description": "A Basic enemy exists | Use `10` HP, speed `50`, and `5` gold reward | Use another type's speed/HP/reward | Its identity is distinct and a kill awards `+5`",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_018",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ENEMY-02"
+      ],
+      "description": "A Runner exists | Use `5` HP, speed `125`, and `8` gold reward | Be slower than Basic or award the wrong amount | It visibly moves fastest and is fragile",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_019",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ENEMY-03"
+      ],
+      "description": "A Tank exists | Use `40` HP, speed `25`, and `20` gold reward | Be fast or award Basic gold | It visibly endures longer and moves slowly",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_020",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ENEMY-04"
+      ],
+      "description": "A Boss exists | Use `80` HP, speed `30`, and `50` gold reward; at or below half HP, spawn exactly three Basic minions once | Spawn repeatedly, omit minions, or award the wrong amount | The Boss and its minion event are recognizable",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_021",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ENEMY-05"
+      ],
+      "description": "An enemy reaches the base | Remove it, reduce base health by exactly `1`, and award no gold | Award a kill reward, deduct repeatedly, or leave the enemy on the path | Base health updates and the enemy disappears",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_022",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ENEMY-06"
+      ],
+      "description": "An enemy reaches zero HP | Remove it exactly once and award the listed gold exactly once | Continue moving it, award twice, or damage the base | The kill and gold change are visible",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_023",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ENEMY-07"
+      ],
+      "description": "Multiple enemies follow a route | Keep each enemy's route progress independent | Teleport, overlap permanently, or cause one leak to remove unrelated enemies | Enemies advance as individual visible objects",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_024",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:REWARD-01"
+      ],
+      "description": "Left-click one reward card | Reward state | Apply exactly one relic and continue",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_025",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:REWARD-02"
+      ],
+      "description": "Click one reward card | Add that relic exactly once to the run and resume after a short confirmation | Apply multiple choices, apply none, or charge gold | The chosen card is identifiable and the next wave starts",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_026",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:REWARD-03"
+      ],
+      "description": "Socketing or moving gems after a reward is chosen is not required; each chosen relic applies globally to all heroes",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_027",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:REWARD-04"
+      ],
+      "description": "Two matching Cracked or Polished relics of one type are held | Automatically combine the pair into one next-tier relic, repeating for new pairs; Flawless relics do not combine further. Replace the pair's bonuses with the new tier value | Lose both without a result or apply both old and new values | The combined relic and its tier/value are visible",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_028",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:REWARD-06"
+      ],
+      "description": "Generate the three choices | Offer three different types from the nine listed relics, all at Cracked tier; selection is reproducible with the public seed | Offer an unpublished type or tier | Choice names, tiers and values match the table",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_029",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:REWARD-07"
+      ],
+      "description": "Bonus combat effects apply | Cap critical chance at 100% and slow at 90%. Onyx burns for its listed duration at one tick per second, each tick dealing the greater of 1 and 20% of that hit's damage rounded down; later burning hits refresh duration without parallel burns. Bounces and chains each hit additional distinct living nearby targets once per shot; extra shots target distinct enemies when available. These bonuses affect all heroes, including Warrior strikes | Repeatedly hit one enemy with the same bounce/chain or keep removed targets active | Bonus hits, slow and burn have distinguishable feedback; exact secondary-target range is an implementation choice",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_030",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:REWARD-05"
+      ],
+      "description": "Exactly one reward is chosen | Keep the reward state from reopening until the next wave is cleared | Re-open after the next wave starts or accept a second click from the same reward | Reward overlay disappears through the next wave",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_031",
+      "dimension": "D3",
+      "requirement_ids": [
+        "common-baseline:CB-04"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-04",
+      "max_score": 0.606061
+    },
+    {
+      "id": "core_032",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-05"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-05",
+      "max_score": 0.5
+    },
+    {
+      "id": "core_033",
+      "dimension": "D3",
+      "requirement_ids": [
+        "common-baseline:CB-06"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-06",
+      "max_score": 0.606048
+    },
+    {
+      "id": "core_034",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-09"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-09",
+      "max_score": 0.5
+    },
+    {
+      "id": "success_001",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:SUCCESS-01"
+      ],
+      "description": "Wave 12 is fully resolved with base health above zero | Enter Victory exactly once and stop combat | Enter Defeat or continue Wave 13 | Victory state, reached wave, Restart, and Main Menu appear",
+      "max_score": 1.333333
+    },
+    {
+      "id": "success_002",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:SUCCESS-02"
+      ],
+      "description": "Left-click Restart | Victory or Defeat | Start a clean run",
+      "max_score": 1.333333
+    },
+    {
+      "id": "success_003",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:HUD-01"
+      ],
+      "description": "A run is active | Show gold, base health, current wave/12, and total living/unspawned enemies | Confuse health with gold or omit remaining enemies | All values update immediately",
+      "max_score": 0.5
+    },
+    {
+      "id": "success_004",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:HUD-02"
+      ],
+      "description": "A hero card is affordable/unaffordable | Distinguish usable and insufficient-gold states | Permit a negative-gold purchase | Card state matches gold",
+      "max_score": 0.5
+    },
+    {
+      "id": "success_005",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:HUD-03"
+      ],
+      "description": "Reward state is active | Show the three relic names, tiers, effects, and values | Show blank or implementation-only labels | The player can compare choices",
+      "max_score": 0.5
+    },
+    {
+      "id": "success_006",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:HUD-04"
+      ],
+      "description": "Victory or Defeat appears | Show the reached wave and not more than one terminal result | Continue changing the run HUD | Result remains stable until exit/restart",
+      "max_score": 0.5
+    },
+    {
+      "id": "success_007",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:VISUAL-01"
+      ],
+      "description": "Map is visible | Show a readable continuous grass area and a distinct path from spawn to base | Let visual path differ from actual movement/build blocking | Enemies and valid placement agree with the path",
+      "max_score": 0.5
+    },
+    {
+      "id": "success_008",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:VISUAL-02"
+      ],
+      "description": "Hero placement is active | Show green valid and red invalid preview states | Place without feedback or cover the target cell | The target cell remains visible",
+      "max_score": 0.5
+    },
+    {
+      "id": "success_009",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:VISUAL-03"
+      ],
+      "description": "Three hero roles are on screen | Use distinct supplied hero/tower sprites and recognizable attack feedback | Collapse all roles into indistinguishable visuals | The player can tell Archer, Mage, and Warrior",
+      "max_score": 0.5
+    },
+    {
+      "id": "success_010",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:VISUAL-04"
+      ],
+      "description": "Four enemy roles are on screen | Use distinct supplied enemy sprites and readable health/damage feedback | Hide the Boss among normal enemies or use missing textures | Enemy type and remaining health are understandable",
+      "max_score": 0.5
+    },
+    {
+      "id": "success_011",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:VISUAL-05"
+      ],
+      "description": "Ranged hero attacks are visible | Use the supplied projectile identity, with tint/scale allowed for distinct effects | Omit visible ranged attack feedback | Projectile travel and impact remain readable",
+      "max_score": 0.5
+    },
+    {
+      "id": "success_012",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:QUALITY-01"
+      ],
+      "description": "Play a complete run | Remain stable through twelve waves, rewards, death, victory, restart, menu, and Reopen | Crash, freeze, dead-end, or lose required input | Complete flow is reachable",
+      "max_score": 0.5
+    },
+    {
+      "id": "success_013",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:QUALITY-02"
+      ],
+      "description": "Use normal mouse input | Reach all required interactions through visible controls | Require hidden keys, internal calls, or debug menus | Clicks produce immediate feedback",
+      "max_score": 0.5
+    },
+    {
+      "id": "success_014",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:QUALITY-03"
+      ],
+      "description": "Victory or Defeat is visible | Stop gameplay actions except Restart/Main Menu/close | Let wave simulation continue behind the result | Result is final and stable",
+      "max_score": 0.5
+    },
+    {
+      "id": "success_015",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-02"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-02",
+      "max_score": 1.333333
+    },
+    {
+      "id": "success_016",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-10"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-10",
+      "max_score": 0.5
+    },
+    {
+      "id": "success_017",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-11"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-11",
+      "max_score": 1.333333
+    },
+    {
+      "id": "success_018",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-16"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-16",
+      "max_score": 0.5
+    },
+    {
+      "id": "success_019",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-17"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-17",
+      "max_score": 0.5
+    },
+    {
+      "id": "success_020",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-18"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-18",
+      "max_score": 0.5
+    },
+    {
+      "id": "failure_001",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:BASE-01"
+      ],
+      "description": "Base health changes | Display the exact current value and never below zero | Show stale health or negative HP | HUD updates with each leak",
+      "max_score": 1.333333
+    },
+    {
+      "id": "failure_002",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:BASE-02"
+      ],
+      "description": "Base health reaches zero | Enter Defeat, stop spawning/movement/attacks/rewards, and clear in-flight projectiles | Continue combat behind the result or enter Victory | Defeat state, reached wave, Restart, and Main Menu appear",
+      "max_score": 1.333333
+    },
+    {
+      "id": "failure_003",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:BASE-03"
+      ],
+      "description": "A run is in Defeat | Do not allow placement, reward selection, or further gold/health changes | Let old buttons remain active | Only result/lifecycle controls respond",
+      "max_score": 1.333333
+    },
+    {
+      "id": "failure_004",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-12"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-12",
+      "max_score": 1.333333
+    },
+    {
+      "id": "failure_005",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-14"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-14",
+      "max_score": 1.333333
+    },
+    {
+      "id": "lifecycle_001",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:SESSION-01"
+      ],
+      "description": "Left-click Main Menu | Victory or Defeat | Return to the initial menu",
+      "max_score": 1.333333
+    },
+    {
+      "id": "lifecycle_002",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:SESSION-02"
+      ],
+      "description": "Close the process and launch it again | Start at the menu with no restored run | Resume or write a battle save | Menu appears and Play creates a clean run",
+      "max_score": 1.333333
+    },
+    {
+      "id": "lifecycle_003",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:SESSION-03"
+      ],
+      "description": "Restart or reopen repeatedly | Keep exactly one map, spawner, reward state, and HUD active | Duplicate listeners or waves | Repeated clean starts behave the same",
+      "max_score": 1.333333
+    },
+    {
+      "id": "lifecycle_004",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-03"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-03",
+      "max_score": 1.333333
+    },
+    {
+      "id": "lifecycle_005",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-13"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-13",
+      "max_score": 1.333338
+    },
+    {
+      "id": "D6-01",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:composition"
+      ],
+      "description": "Overall composition and task visual identity",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-02",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:objects"
+      ],
+      "description": "Required objects, character and asset identity",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-03",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:ui"
+      ],
+      "description": "UI readability and information hierarchy",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-04",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:feedback"
+      ],
+      "description": "State transitions and visual feedback",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-05",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:consistency"
+      ],
+      "description": "Visual consistency across gameplay and result states",
+      "max_score": 2.0
+    }
+  ],
+  "d6_protocol": "d6/protocol.json"
+}

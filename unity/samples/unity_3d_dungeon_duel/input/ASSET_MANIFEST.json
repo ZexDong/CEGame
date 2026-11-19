@@ -1,0 +1,88 @@
+{
+  "schema_version": 3,
+  "benchmark_id": "unity.dungeon_duel_3d.v2",
+  "network_download_required": false,
+  "supplemental_task_assets": {
+    "path": "TaskAssets/",
+    "purpose": "Reserved public root for non-Unity supplemental content; no additional loose asset is required"
+  },
+  "provided_assets": [
+    {
+      "path": "Assets/DungeonDuelDemo/Starter/DungeonDuelStarter.unity",
+      "purpose": "Saved art-only canonical arena with camera, lighting, supplied geometry and named markers; extend this scene rather than replacing it with a primitive-only graybox"
+    },
+    {
+      "path": "Assets/DungeonDuelDemo/Starter/DungeonDuelStarterAssetIndex.asset",
+      "purpose": "Unity object references for approved visuals, VFX, NavMesh, Input Actions and music"
+    },
+    {
+      "path": "Assets/DungeonDuelDemo/Visuals/PlayerVisual.prefab",
+      "purpose": "Visual-only player prefab"
+    },
+    {
+      "path": "Assets/DungeonDuelDemo/Visuals/ImpVisual.prefab",
+      "purpose": "Visual-only Imp prefab"
+    },
+    {
+      "path": "Assets/DungeonDuelDemo/Visuals/BossVisual.prefab",
+      "purpose": "Visual-only Boss prefab"
+    },
+    {
+      "path": "Assets/DungeonDuelDemo/Controllers",
+      "purpose": "Presentation-only Animator Controllers"
+    },
+    {
+      "path": "Assets/Prefabs/Dungeon/Dungeon Pieces/animated/env_door_boss_ani.prefab",
+      "purpose": "Boss-gate visual; authored gameplay must control its blocking state"
+    },
+    {
+      "path": "Assets/VFX/Prefabs",
+      "purpose": "Optional attack, Dash and defeat feedback"
+    },
+    {
+      "path": "Assets/Scenes/BossRoom/NavMesh-DungeonNavMesh.asset",
+      "purpose": "Baked navigation data"
+    },
+    {
+      "path": "Assets/InputSystem/PlayerActions.inputactions",
+      "purpose": "Input System action source and binding reference"
+    },
+    {
+      "path": "Assets/Sounds/Music/Boss_Room_Battle_Loop.ogg",
+      "purpose": "Battle-state music"
+    },
+    {
+      "path": "Assets/Sounds/Music/Boss_Room_Victory.ogg",
+      "purpose": "Victory-state music"
+    }
+  ],
+  "protected_asset_roots": [
+    "Assets/DungeonDuelDemo/**",
+    "Assets/InputSystem/**",
+    "Assets/Material/**",
+    "Assets/Models/**",
+    "Assets/Prefabs/**",
+    "Assets/Scenes/BossRoom/**",
+    "Assets/Settings/**",
+    "Assets/Shaders/**",
+    "Assets/Sounds/**",
+    "Assets/Textures/**",
+    "Assets/VFX/**"
+  ],
+  "restrictions": {
+    "additional_downloads": false,
+    "network_or_cloud_dependencies": false,
+    "modify_protected_assets": false,
+    "import_prebuilt_gameplay": false,
+    "pixel_perfect_match_required": false,
+    "contact_sheet_is_final_composition": false,
+    "catalog_prescribes_gameplay_solution": false
+  },
+  "input_revision": "v2.6-existing-arena-feedback-3600s-20260827",
+  "asset_catalog": "ASSET_CATALOG.json",
+  "asset_coverage": "ASSET_COVERAGE.json",
+  "asset_contact_sheet": "ASSET_CONTACT_SHEET.png",
+  "asset_usage_guide": "ASSET_CATALOG.md",
+  "catalog_asset_count": 16,
+  "contact_sheet_sha256": "4cb994631e3989d75429809be13ce43480098e438fe6bd00e5f3d69dd603eb34"
+}

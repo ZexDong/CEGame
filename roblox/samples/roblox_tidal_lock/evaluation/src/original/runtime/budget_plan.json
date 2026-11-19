@@ -1,0 +1,7 @@
+{
+  "schema_version":"tidal-lock-v2-budget-v1",
+  "sessions":[
+    {"id":"formal","declared_dynamic_trajectory_steps":58,"watchdog_seconds":900},
+    {"id":"reopen","declared_dynamic_trajectory_steps":3,"watchdog_seconds":150}
+  ]
+}

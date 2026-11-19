@@ -1,0 +1,20 @@
+Deep Relay BUILD_REPORT
+
+Candidate task:
+Model/framework:
+Build time:
+Source package hash:
+
+Rojo build command:
+Rojo build result: PASS / FAIL / NOT RUN
+Output rbxlx:
+
+Static checks performed:
+
+Runtime verification: NOT RUN
+
+Known build errors:
+
+Known implementation limitations:
+
+Notes:

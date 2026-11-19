@@ -1,0 +1,50 @@
+{
+  "profile_version": "docv2-session-dataset/v1",
+  "benchmark_id": "unity.driftfolk_stormbound.v2",
+  "evaluator_root": "demos/unity_2d_driftfolk_chronicle_challenge/evaluation/session-v21-imgui-20260919",
+  "runner": "run.ps1",
+  "rules": "rules.json",
+  "evaluator_package": "package-v2",
+  "evaluator_contract_files": [
+    "rules.json",
+    "checkpoint-script.json",
+    "baseline-applicability.json",
+    "requirement-coverage.json",
+    "session-profile.json",
+    "session-dependencies.json",
+    "run.ps1",
+    "scripts/score.ps1",
+    "scripts/score.py"
+  ],
+  "player_name": "DriftfolkStormbound",
+  "d6": {
+    "protocol_id": "public-requirements-visual-quality-20260908",
+    "protocol_path": "demos/unity_2d_driftfolk_chronicle_challenge/evaluation/session-v21-imgui-20260919/d6/protocol.json",
+    "prompt_path": "demos/unity_2d_driftfolk_chronicle_challenge/evaluation/session-v21-imgui-20260919/d6/visual-prompt.en-US.txt",
+    "state_id": "initial_archipelago",
+    "candidate_image": "visual-candidates/01_initial_archipelago.png",
+    "capture_receipt": "visual/standalone-capture-receipt.json",
+    "capture_validation": "visual/capture-validation.json",
+    "input_path": "visual/d6-input.json",
+    "result_path": "visual/d6/d6-result.json",
+    "required_scene": "Assets/DriftfolkChallenge/Scenes/DriftfolkChronicle.unity",
+    "reference_image": "demos/unity_2d_driftfolk_chronicle_challenge/evaluation/session-v21-imgui-20260919/d6/reference-initial-archipelago.png",
+    "capture_method": "standalone-owned-window-native-frame-v2",
+    "capture_player_name": "StormboundCapture",
+    "build_method": "GameCreate.Stormbound.Evaluator.Capture.CaptureBuild.Build",
+    "acquisition_routes": [
+      "service_commit",
+      "normal_input"
+    ],
+    "normal_input_review_policy": "Inspect the actual before/after images and recorded normal Enter/R frames. Accept only a recognizable initial gameplay view rather than lobby/loading/error. Do not require reference layout or game completeness: visual quality defects remain for D6. Every natural route requires a source/image/PID-bound author review. Menu/ambiguous or unsupported observations remain unresolved, never automatic product zero.",
+    "reference_sha256": "ce1b3f013280d890db975918d6a9df252322c5f0bea21990f683b1f75969fd64",
+    "host_identity_policy": "Preserve original productName; use only a unique GameCreateBenchmarkTemp-<run-id> company leaf. Actual company/product/persistence must match. Active UI containing this host company identity is observer contamination, never a candidate visual penalty. No forced filesystem/read isolation is claimed.",
+    "frame_review_required": true,
+    "frame_review_schema": "stormbound-native-frame-review/v1",
+    "frame_review_prompt_path": "demos/unity_2d_driftfolk_chronicle_challenge/evaluation/session-v21-imgui-20260919/d6/frame-purity-review.txt",
+    "frame_review_prompt_sha256": "19102be41bd1ddee76cf4f829e27155e0af24af6b843f004da3d0f8e1a39885b",
+    "reference_capture_method": "standalone-offscreen-viewport-composite-v1",
+    "reference_role": "Fixed design and asset-quality visual context; not a pixel-identity target."
+  },
+  "dependency_graph": "session-dependencies.json"
+}

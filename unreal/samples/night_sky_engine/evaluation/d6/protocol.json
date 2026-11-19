@@ -1,0 +1,36 @@
+{
+  "schema_version": "3.0.0",
+  "revision": "nightsky-visual-3.2.0",
+  "scoring_guide": "gamecreate/GAME_INDEPENDENT_SCORING_GUIDE.md",
+  "scoring_guide_sha256": "3e3e6cf19cbd5cda5667c44710f483fbba2ac30af7d098921acc811cf08dfdae",
+  "prompt_sha256": "24ab4493f270e838a83a7b0af3c91497090d0702d0669b3ac3fa00d5a8be0992",
+  "state_count_min": 3,
+  "state_count_max": 5,
+  "state_weighting": "equal",
+  "rounds": 3,
+  "image_order": [
+    "reference",
+    "candidate"
+  ],
+  "aggregation": "Mean of all state totals in each round; arithmetic mean of three round means; round only final outputs to one decimal.",
+  "model_policy": "Any configured vision-capable provider/model; bind provider, requested model, model version, returned identity, parameters, endpoint hash and capability receipt.",
+  "candidate_zero_states": [
+    "candidate_missing",
+    "candidate_black",
+    "candidate_broken",
+    "candidate_incomparable"
+  ],
+  "infrastructure_policy": "Missing or altered collected evidence, capture transport failure, API failure and invalid VLM output invalidate the run; never substitute zero.",
+  "capture_stage": "After dynamic cases; independent clean process for each state.",
+  "scope": "NightSkyEngine",
+  "rubric": "VISUAL_RUBRIC_3_2.md",
+  "rubric_sha256": "478518531c2b98cf733fe4d96ed55d54875c9300c7aeb7d87028538c8fd16674",
+  "criteria": [
+    "scene_composition",
+    "model_refinement",
+    "model_spatial_plausibility",
+    "hud_visual_quality",
+    "style_finish"
+  ],
+  "criterion_maximum": 2
+}

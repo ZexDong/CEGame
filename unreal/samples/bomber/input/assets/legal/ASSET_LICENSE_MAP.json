@@ -1,0 +1,157 @@
+{
+  "schema_version": "2.0.0",
+  "license": "MIT",
+  "notice": "assets/legal/MIT-Bomber-assets.txt",
+  "files": [
+    {
+      "path": "starter-project/Content/Bomber/Materials/M_Emissive_Master.uasset",
+      "license": "MIT",
+      "source_path": "Content/Bomber/Materials/M_Emissive_Master.uasset"
+    },
+    {
+      "path": "starter-project/Content/Bomber/Materials/MI_Bombs/M_Bomb.uasset",
+      "license": "MIT",
+      "source_path": "Content/Bomber/Materials/MI_Bombs/M_Bomb.uasset"
+    },
+    {
+      "path": "starter-project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Blue.uasset",
+      "license": "MIT",
+      "source_path": "Content/Bomber/Materials/MI_Bombs/MI_Bomb_Blue.uasset"
+    },
+    {
+      "path": "starter-project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Pink.uasset",
+      "license": "MIT",
+      "source_path": "Content/Bomber/Materials/MI_Bombs/MI_Bomb_Pink.uasset"
+    },
+    {
+      "path": "starter-project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Silver.uasset",
+      "license": "MIT",
+      "source_path": "Content/Bomber/Materials/MI_Bombs/MI_Bomb_Silver.uasset"
+    },
+    {
+      "path": "starter-project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Yellow.uasset",
+      "license": "MIT",
+      "source_path": "Content/Bomber/Materials/MI_Bombs/MI_Bomb_Yellow.uasset"
+    },
+    {
+      "path": "starter-project/Content/Bomber/Materials/MI_PlayerArrowStart.uasset",
+      "license": "MIT",
+      "source_path": "Content/Bomber/Materials/MI_PlayerArrowStart.uasset"
+    },
+    {
+      "path": "starter-project/Content/Bomber/Meshes/SM_Bomb.uasset",
+      "license": "MIT",
+      "source_path": "Content/Bomber/Meshes/SM_Bomb.uasset"
+    },
+    {
+      "path": "starter-project/Content/Bomber/Meshes/SM_PlayerArrowStart.uasset",
+      "license": "MIT",
+      "source_path": "Content/Bomber/Meshes/SM_PlayerArrowStart.uasset"
+    },
+    {
+      "path": "starter-project/Content/Bomber/SkeletalMeshes/SKEL_Bomber.uasset",
+      "license": "MIT",
+      "source_path": "Content/Bomber/SkeletalMeshes/SKEL_Bomber.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Animations/MM_Manny_Idle.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Animations/MM_Manny_Idle.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/M_Mannequin.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/M_Mannequin.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_01.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_01.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_02.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_02.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Meshes/SKM_Quinn_Simple.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Meshes/SKM_Quinn_Simple.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_BN.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_BN.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_D.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_D.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_D.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_D.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_MRA.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_MRA.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_N.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_N.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_D.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_D.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_MRA.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_MRA.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_N.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_N.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Shared/T_UE_Logo_M.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Shared/T_UE_Logo_M.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Box.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Box.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Bomb.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Bomb.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Fire.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Fire.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Skate.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Skate.uasset"
+    },
+    {
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Wall.uasset",
+      "license": "MIT",
+      "source_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Wall.uasset"
+    }
+  ]
+}

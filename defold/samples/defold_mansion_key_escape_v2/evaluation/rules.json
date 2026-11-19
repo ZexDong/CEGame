@@ -1,0 +1,494 @@
+{
+  "schema_version": 1,
+  "game": "defold_mansion_key_escape_v2",
+  "naming_tables": "../input/naming-tables.json",
+  "player_runtime_min_version": "0.12",
+  "controls_from_naming_tables": true,
+  "honesty_spot_checks": {
+    "per_trajectory": 2,
+    "mode": "random"
+  },
+  "score_caps": [
+    {
+      "id": "garden_door_progress",
+      "requires_all": ["MKE_D3_UNLOCK_CONSUMES_KEY"],
+      "max_nonvisual_score": 45.0
+    },
+    {
+      "id": "successful_escape",
+      "requires_all": [
+        "MKE_D2_EXIT_SUCCESS_CONTENT",
+        "MKE_D3_EXIT_WIN_BOUNDARY",
+        "MKE_D4_SUCCESS_TERMINAL_LOCK"
+      ],
+      "max_nonvisual_score": 50.0
+    }
+  ],
+  "trajectories": [
+    {
+      "id": "menu_movement_locked_door_and_roundtrip",
+      "title": "Menu and Controls, held movement, locked-door rejection, and foyer-study round trip",
+      "clean_start": "fresh_process",
+      "steps": [
+        { "do": "start" },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15,
+          "honesty_safe": true,
+          "check": {
+            "id": "MKE_D2_MENU_ENTRY",
+            "source": "gdd:Menu-01",
+            "dim": "D2",
+            "assert": "phase == menu && slots.menu_selection_index == 0 && slots.menu_view_index == 0 && slots.room_index < 0"
+          }
+        },
+        { "do": "snapshot", "save_as": "HonestyMenuStable", "honesty_safe": true },
+        {
+          "do": "capture",
+          "save_as": "MenuFrame",
+          "check": {
+            "id": "MKE_D5_MENU_READABLE",
+            "source": "gdd:Interface-02",
+            "dim": "D5",
+            "assert": "capture_nonblank(MenuFrame) && ocr_contains_any(MenuFrame,[\"NEW GAME\",\"START\",\"New Game\",\"Start\"]) && ocr_contains_any(MenuFrame,[\"CONTROLS\",\"CONTROL\",\"Operation\",\"Control\"])"
+          }
+        },
+        { "do": "press", "key": "down", "cond": "slots.menu_selection_index == 1", "timeout_s": 3 },
+        {
+          "do": "wait_until",
+          "cond": "slots.menu_selection_index == 1",
+          "timeout_s": 3,
+          "check": {
+            "id": "MKE_D3_MENU_NAVIGATION",
+            "source": "gdd:Menu-01",
+            "dim": "D3",
+            "assert": "phase == menu && slots.menu_selection_index == 1 && slots.menu_view_index == 0"
+          }
+        },
+        { "do": "press", "key": "confirm_or_interact", "cond": "phase == menu && slots.menu_view_index == 1", "timeout_s": 5 },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu && slots.menu_view_index == 1",
+          "timeout_s": 3,
+          "check": {
+            "id": "MKE_D2_CONTROLS_PAGE",
+            "source": "gdd:Menu-02",
+            "dim": "D2",
+            "assert": "phase == menu && slots.menu_view_index == 1 && slots.room_index < 0"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "ControlsFrame",
+          "check": {
+            "id": "MKE_D5_CONTROLS_READABLE",
+            "source": "gdd:Menu-02",
+            "dim": "D5",
+            "assert": "capture_nonblank(ControlsFrame) && ocr_contains_any(ControlsFrame,[\"MOVE\",\"WASD\",\"ARROW\",\"Move\"]) && ocr_contains_any(ControlsFrame,[\"INTERACT\",\"ENTER\",\"SPACE\",\"Interaction\"]) && ocr_contains_any(ControlsFrame,[\"RETURN\",\"ESCAPE\",\"BACK\",\"Return\"])"
+          }
+        },
+        { "do": "press", "key": "back", "cond": "phase == menu && slots.menu_view_index == 0", "timeout_s": 5 },
+        { "do": "wait_until", "cond": "phase == menu && slots.menu_view_index == 0", "timeout_s": 3 },
+        { "do": "press", "key": "up", "cond": "slots.menu_selection_index == 0", "timeout_s": 3 },
+        { "do": "wait_until", "cond": "slots.menu_selection_index == 0", "timeout_s": 3 },
+        { "do": "press", "key": "confirm_or_interact", "cond": "phase == playing && slots.room_index == 0", "timeout_s": 8 },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing && slots.room_index == 0",
+          "timeout_s": 10,
+          "check": {
+            "id": "MKE_D2_FOYER_CONTENT",
+            "source": "gdd:Scenario-01",
+            "dim": "D2",
+            "assert": "phase == playing && slots.room_index == 0 && count(kind=player) == 1 && count(kind=portal,state=open) == 1 && count(kind=painting) == 1 && count(kind=clock) == 1 && slots.journal_read == 0 && slots.cabinet_checked == 0 && slots.key_found == 0 && slots.has_key == 0 && slots.door_open == 0"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "FoyerFrame",
+          "check": {
+            "id": "MKE_D5_FOYER_HUD_READABLE",
+            "source": "gdd:Interface-01",
+            "dim": "D5",
+            "assert": "capture_nonblank(FoyerFrame) && ocr_contains_any(FoyerFrame,[\"FOYER\",\"HALL\",\"Front Hall\"]) && ocr_contains_any(FoyerFrame,[\"KEY\",\"Key\"]) && ocr_contains_any(FoyerFrame,[\"DOOR\",\"Door\"]) && entity(player).visible == true"
+          }
+        },
+        { "do": "snapshot", "save_as": "MoveStart" },
+        { "do": "hold", "key": "right", "seconds": 0.65 },
+        { "do": "snapshot", "save_as": "MoveReleased" },
+        {
+          "do": "wait_until",
+          "cond": "wall_clock_since(MoveReleased) >= 0.35",
+          "timeout_s": 1,
+          "check": {
+            "id": "MKE_D3_CONTINUOUS_MOVE_RELEASE",
+            "source": "gdd:Move-02",
+            "dim": "D3",
+            "assert": "phase == playing && MoveReleased.entity(kind=player).position.x > MoveStart.entity(kind=player).position.x && entity(player).position == MoveReleased.entity(kind=player).position && entity(player).state == idle"
+          }
+        },
+        { "do": "move_toward", "target": { "kind": "portal", "state": "open" }, "timeout_s": 20 },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing && slots.room_index == 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "MKE_D2_STUDY_CONTENT",
+            "source": "gdd:Scenario-01",
+            "dim": "D2",
+            "assert": "slots.room_index == 1 && count(kind=player) == 1 && count(kind=portal,state=open) == 1 && count(kind=portal,state=locked) == 1 && count(kind=journal) == 1 && count(kind=cabinet) == 1 && count(kind=garden_door) == 1 && count(kind=shadow) == 1 && (exists(kind=shadow,state=dormant) || exists(kind=shadow,state=hunting) || exists(kind=shadow,state=danger)) && !exists(kind=key)"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "StudyFrame",
+          "check": {
+            "id": "MKE_D5_STUDY_FEEDBACK_READABLE",
+            "source": "gdd:Interaction-01",
+            "dim": "D5",
+            "assert": "capture_nonblank(StudyFrame) && ocr_contains_any(StudyFrame,[\"STUDY\",\"Study\"]) && ocr_contains_any(StudyFrame,[\"JOURNAL\",\"CABINET\",\"Diary\",\"Cabinet\"]) && entity(journal).visible == true && entity(cabinet).visible == true"
+          }
+        },
+        { "do": "hold", "key": "down", "seconds": 0.1, "cond": "entity(player).position.y <= 220", "timeout_s": 12 },
+        { "do": "hold", "key": "right", "seconds": 0.1, "cond": "entity(player).position.x >= 780", "timeout_s": 20 },
+        { "do": "hold", "key": "up", "seconds": 0.1, "cond": "exists(kind=garden_door,state=locked_nearby) || exists(kind=garden_door,state=open_nearby)", "timeout_s": 12 },
+        { "do": "press", "key": "confirm_or_interact" },
+        { "do": "hold", "key": "right", "seconds": 0.8 },
+        {
+          "check": {
+            "id": "MKE_D3_LOCKED_DOOR_BOUNDARY",
+            "source": "gdd:Door-Lock-02",
+            "dim": "D3",
+            "assert": "phase == playing && slots.room_index == 1 && slots.has_key == 0 && slots.door_open == 0 && exists(kind=portal,state=locked) && (exists(kind=garden_door,state=locked) || exists(kind=garden_door,state=locked_nearby))"
+          }
+        },
+        { "do": "hold", "key": "down", "seconds": 0.1, "cond": "entity(player).position.y <= 220", "timeout_s": 12 },
+        { "do": "hold", "key": "left", "seconds": 0.1, "cond": "entity(player).position.x <= 140", "timeout_s": 20 },
+        { "do": "hold", "key": "up", "seconds": 0.1, "cond": "entity(player).position.y >= 272", "timeout_s": 12 },
+        { "do": "move_toward", "target": { "kind": "portal", "state": "open" }, "timeout_s": 20 },
+        { "do": "wait_until", "cond": "slots.room_index == 0", "timeout_s": 5 },
+        { "do": "snapshot", "save_as": "ReturnedFoyer" },
+        { "do": "move_toward", "target": { "kind": "portal", "state": "open" }, "timeout_s": 20 },
+        {
+          "do": "wait_until",
+          "cond": "slots.room_index == 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "MKE_D4_ROOM_ROUNDTRIP_STABLE",
+            "source": "gdd:Scenario-02",
+            "dim": "D4",
+            "assert": "ReturnedFoyer.slots.room_index == 0 && slots.room_index == 1 && phase == playing && slots.journal_read == 0 && slots.cabinet_checked == 0 && slots.key_found == 0 && slots.has_key == 0 && slots.door_open == 0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ordered_puzzle_success_and_clean_new_games",
+      "title": "Wrong-order rejection, ordered puzzle, hazard-aware exit, success lock, and repeated New Game",
+      "clean_start": "fresh_process",
+      "steps": [
+        { "do": "start" },
+        { "do": "wait_until", "cond": "phase == menu && slots.menu_selection_index == 0", "timeout_s": 15, "honesty_safe": true },
+        { "do": "snapshot", "save_as": "HonestyMenuStable" },
+        { "do": "press", "key": "confirm_or_interact", "cond": "phase == playing && slots.room_index == 0", "timeout_s": 8 },
+        { "do": "wait_until", "cond": "phase == playing && slots.room_index == 0", "timeout_s": 10 },
+        { "do": "move_toward", "target": { "kind": "portal", "state": "open" }, "timeout_s": 20 },
+        { "do": "wait_until", "cond": "slots.room_index == 1", "timeout_s": 5 },
+        { "do": "move_toward", "target": { "kind": "cabinet" }, "timeout_s": 20 },
+        { "do": "press", "key": "confirm_or_interact" },
+        {
+          "check": {
+            "id": "MKE_D3_WRONG_ORDER_REJECTED",
+            "source": "gdd:Puzzle-01",
+            "dim": "D3",
+            "assert": "phase == playing && slots.journal_read == 0 && slots.cabinet_checked == 0 && slots.key_found == 0 && slots.key_taken == 0 && slots.has_key == 0 && !exists(kind=key) && (exists(kind=cabinet,state=locked) || exists(kind=cabinet,state=locked_nearby))"
+          }
+        },
+        { "do": "move_toward", "target": { "kind": "journal" }, "timeout_s": 20 },
+        { "do": "press", "key": "confirm_or_interact", "cond": "phase == paused && slots.modal_code == 1", "timeout_s": 5 },
+        {
+          "do": "wait_until",
+          "cond": "phase == paused && slots.modal_code == 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "MKE_D3_JOURNAL_MODAL",
+            "source": "gdd:Clue-01",
+            "dim": "D3",
+            "assert": "phase == paused && slots.modal_code == 1 && slots.journal_read == 1 && slots.cabinet_checked == 0 && slots.key_found == 0 && slots.has_key == 0 && !exists(kind=key)"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "JournalFrame",
+          "check": {
+            "id": "MKE_D5_JOURNAL_READABLE",
+            "source": "gdd:Clue-01",
+            "dim": "D5",
+            "assert": "capture_nonblank(JournalFrame) && ocr_contains_any(JournalFrame,[\"JOURNAL\",\"DIARY\",\"GARDENER WROTE\",\"Diary\"]) && ocr_contains_any(JournalFrame,[\"CABINET\",\"PANEL\",\"Secret grid\",\"Cabinet\"]) && ocr_contains_any(JournalFrame,[\"CLOSE\",\"RETURN\",\"ESCAPE\",\"Close\",\"Return\"])"
+          }
+        },
+        { "do": "snapshot", "save_as": "JournalModal" },
+        { "do": "hold", "key": "right", "seconds": 0.65 },
+        {
+          "do": "wait_until",
+          "cond": "wall_clock_since(JournalModal) >= 0.35",
+          "timeout_s": 1,
+          "check": {
+            "id": "MKE_D3_MODAL_FREEZE",
+            "source": "gdd:Clue-01",
+            "dim": "D3",
+            "assert": "phase == paused && slots.modal_code == 1 && entity(player).position == JournalModal.entity(kind=player).position && slots.journal_read == JournalModal.slots.journal_read"
+          }
+        },
+        { "do": "press", "key": "back", "cond": "phase == playing && slots.modal_code == 0", "timeout_s": 5 },
+        { "do": "wait_until", "cond": "phase == playing && slots.modal_code == 0", "timeout_s": 5 },
+        { "do": "move_toward", "target": { "kind": "cabinet" }, "timeout_s": 20 },
+        { "do": "press", "key": "confirm_or_interact", "cond": "phase == paused && slots.modal_code == 2", "timeout_s": 5 },
+        { "do": "wait_until", "cond": "phase == paused && slots.modal_code == 2", "timeout_s": 5 },
+        {
+          "check": {
+            "id": "MKE_D2_PUZZLE_REVEAL_CONTENT",
+            "source": "gdd:Puzzle-02",
+            "dim": "D2",
+            "assert": "phase == paused && slots.cabinet_checked == 1 && slots.key_found == 1 && count(kind=key) == 1 && (exists(kind=key,state=available) || exists(kind=key,state=nearby)) && entity(key).visible == true"
+          }
+        },
+        {
+          "check": {
+            "id": "MKE_D3_ORDERED_REVEAL",
+            "source": "gdd:Puzzle-02",
+            "dim": "D3",
+            "assert": "slots.journal_read == 1 && slots.cabinet_checked == 1 && slots.key_found == 1 && slots.key_taken == 0 && slots.has_key == 0 && slots.door_open == 0"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "KeyRevealFrame",
+          "check": {
+            "id": "MKE_D5_KEY_REVEAL_READABLE",
+            "source": "gdd:Puzzle-02",
+            "dim": "D5",
+            "assert": "capture_nonblank(KeyRevealFrame) && ocr_contains_any(KeyRevealFrame,[\"KEY\",\"Key\"]) && ocr_contains_any(KeyRevealFrame,[\"CABINET\",\"PANEL\",\"COMPARTMENT\",\"SECRET\",\"Secret grid\",\"Cabinet\"]) && entity(key).visible == true"
+          }
+        },
+        { "do": "press", "key": "confirm_or_interact", "cond": "phase == playing && slots.modal_code == 0", "timeout_s": 5 },
+        { "do": "wait_until", "cond": "phase == playing && slots.modal_code == 0", "timeout_s": 5 },
+        { "do": "move_toward", "target": { "kind": "key" }, "timeout_s": 20 },
+        { "do": "press", "key": "confirm_or_interact", "cond": "slots.key_taken == 1 && slots.has_key == 1", "timeout_s": 5 },
+        {
+          "do": "wait_until",
+          "cond": "slots.key_taken == 1 && slots.has_key == 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "MKE_D3_UNIQUE_KEY_PICKUP",
+            "source": "gdd:Key-01",
+            "dim": "D3",
+            "assert": "phase == playing && slots.key_found == 1 && slots.key_taken == 1 && slots.has_key == 1 && slots.shadow_awake == 1 && count(kind=key,state=taken) == 1 && entity(key).visible == false"
+          }
+        },
+        { "do": "hold", "key": "down", "seconds": 0.1, "cond": "entity(player).position.y <= 220", "timeout_s": 12 },
+        { "do": "hold", "key": "right", "seconds": 0.1, "cond": "entity(player).position.x >= 780", "timeout_s": 20 },
+        { "do": "hold", "key": "up", "seconds": 0.1, "cond": "exists(kind=garden_door,state=locked_nearby) || exists(kind=garden_door,state=open_nearby)", "timeout_s": 12 },
+        { "do": "press", "key": "confirm_or_interact", "cond": "slots.door_open == 1 && slots.room_index == 1", "timeout_s": 5 },
+        {
+          "do": "wait_until",
+          "cond": "slots.door_open == 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "MKE_D3_UNLOCK_CONSUMES_KEY",
+            "source": "gdd:Door-Lock-03",
+            "dim": "D3",
+            "assert": "phase == playing && slots.room_index == 1 && slots.door_open == 1 && slots.has_key == 0 && (exists(kind=garden_door,state=open) || exists(kind=garden_door,state=open_nearby)) && count(kind=portal,state=locked) == 0"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "DoorOpenFrame",
+          "check": {
+            "id": "MKE_D5_DOOR_OPEN_READABLE",
+            "source": "gdd:Door-Lock-04",
+            "dim": "D5",
+            "assert": "capture_nonblank(DoorOpenFrame) && ocr_contains_any(DoorOpenFrame,[\"OPEN\",\"UNLOCKED\",\"Open\",\"Opened\"]) && ocr_contains_any(DoorOpenFrame,[\"KEY\",\"Key\"]) && slots.door_open == 1 && slots.has_key == 0"
+          }
+        },
+        { "do": "move_toward", "target": { "kind": "exit" }, "timeout_s": 35 },
+        {
+          "do": "wait_until",
+          "cond": "phase == won",
+          "timeout_s": 8,
+          "check": {
+            "id": "MKE_D2_EXIT_SUCCESS_CONTENT",
+            "source": "gdd:Exit-01",
+            "dim": "D2",
+            "assert": "phase == won && slots.room_index == 2 && entity(player).state == escaped && entity(exit).state == reached && entity(exit).visible == true"
+          }
+        },
+        {
+          "check": {
+            "id": "MKE_D3_EXIT_WIN_BOUNDARY",
+            "source": "gdd:Exit-01",
+            "dim": "D3",
+            "assert": "phase == won && slots.journal_read == 1 && slots.cabinet_checked == 1 && slots.key_taken == 1 && slots.has_key == 0 && slots.door_open == 1"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "SuccessFrame",
+          "check": {
+            "id": "MKE_D5_SUCCESS_READABLE",
+            "source": "gdd:Exit-01",
+            "dim": "D5",
+            "assert": "capture_nonblank(SuccessFrame) && ocr_contains_any(SuccessFrame,[\"ESCAPED\",\"ESCAPE COMPLETE\",\"SUCCESS\",\"Escape\",\"Success\"]) && ocr_contains_any(SuccessFrame,[\"ENTER\",\"MENU\",\"NEW GAME\",\"DAWN\",\"MANSION\",\"Return\",\"New Game\"])"
+          }
+        },
+        { "do": "snapshot", "save_as": "Won", "honesty_safe": true },
+        { "do": "hold", "key": "left", "seconds": 0.65 },
+        {
+          "do": "wait_until",
+          "cond": "wall_clock_since(Won) >= 0.35",
+          "timeout_s": 1,
+          "check": {
+            "id": "MKE_D4_SUCCESS_TERMINAL_LOCK",
+            "source": "gdd:Exit-01",
+            "dim": "D4",
+            "assert": "phase == won && entity(player).position == Won.entity(kind=player).position && slots.room_index == Won.slots.room_index && slots.door_open == Won.slots.door_open"
+          }
+        },
+        { "do": "press", "key": "back", "cond": "phase == menu && slots.menu_selection_index == 0", "timeout_s": 5 },
+        { "do": "wait_until", "cond": "phase == menu && slots.menu_selection_index == 0", "timeout_s": 5 },
+        { "do": "press", "key": "confirm_or_interact", "cond": "phase == playing && slots.room_index == 0", "timeout_s": 8 },
+        { "do": "wait_until", "cond": "phase == playing && slots.room_index == 0", "timeout_s": 8 },
+        { "do": "snapshot", "save_as": "FirstNewGame" },
+        { "do": "press", "key": "back", "cond": "phase == menu && slots.menu_selection_index == 0", "timeout_s": 5 },
+        { "do": "wait_until", "cond": "phase == menu && slots.menu_selection_index == 0", "timeout_s": 5 },
+        { "do": "press", "key": "confirm_or_interact", "cond": "phase == playing && slots.room_index == 0", "timeout_s": 8 },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing && slots.room_index == 0",
+          "timeout_s": 8,
+          "check": {
+            "id": "MKE_D4_REPEATED_NEW_GAME_CLEAN",
+            "source": "gdd:Menu-03",
+            "dim": "D4",
+            "assert": "FirstNewGame.phase == playing && FirstNewGame.slots.room_index == 0 && FirstNewGame.slots.journal_read == 0 && FirstNewGame.slots.cabinet_checked == 0 && FirstNewGame.slots.key_found == 0 && FirstNewGame.slots.key_taken == 0 && FirstNewGame.slots.has_key == 0 && FirstNewGame.slots.door_open == 0 && phase == playing && slots.room_index == 0 && slots.journal_read == 0 && slots.cabinet_checked == 0 && slots.key_found == 0 && slots.key_taken == 0 && slots.has_key == 0 && slots.door_open == 0 && slots.shadow_awake == 0 && slots.danger == 0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shadow_failure_and_restart",
+      "title": "Activate the shadow, deliberately contact it, verify terminal failure, and restart cleanly",
+      "clean_start": "fresh_process",
+      "steps": [
+        { "do": "start" },
+        { "do": "wait_until", "cond": "phase == menu && slots.menu_selection_index == 0", "timeout_s": 15, "honesty_safe": true },
+        { "do": "snapshot", "save_as": "HonestyMenuStable" },
+        { "do": "press", "key": "confirm_or_interact", "cond": "phase == playing && slots.room_index == 0", "timeout_s": 8 },
+        { "do": "wait_until", "cond": "phase == playing && slots.room_index == 0", "timeout_s": 10 },
+        { "do": "move_toward", "target": { "kind": "portal", "state": "open" }, "timeout_s": 20 },
+        { "do": "wait_until", "cond": "slots.room_index == 1", "timeout_s": 5 },
+        { "do": "move_toward", "target": { "kind": "journal" }, "timeout_s": 20 },
+        { "do": "press", "key": "confirm_or_interact", "cond": "phase == paused && slots.modal_code == 1", "timeout_s": 5 },
+        { "do": "wait_until", "cond": "phase == paused && slots.modal_code == 1", "timeout_s": 5 },
+        { "do": "press", "key": "back", "cond": "phase == playing", "timeout_s": 5 },
+        { "do": "wait_until", "cond": "phase == playing", "timeout_s": 5 },
+        { "do": "move_toward", "target": { "kind": "cabinet" }, "timeout_s": 20 },
+        { "do": "press", "key": "confirm_or_interact", "cond": "phase == paused && slots.modal_code == 2 && slots.key_found == 1", "timeout_s": 5 },
+        { "do": "wait_until", "cond": "phase == paused && slots.modal_code == 2 && slots.key_found == 1", "timeout_s": 5 },
+        { "do": "press", "key": "confirm_or_interact", "cond": "phase == playing", "timeout_s": 5 },
+        { "do": "wait_until", "cond": "phase == playing", "timeout_s": 5 },
+        { "do": "move_toward", "target": { "kind": "key" }, "timeout_s": 20 },
+        { "do": "press", "key": "confirm_or_interact", "cond": "slots.key_taken == 1 && slots.has_key == 1", "timeout_s": 5 },
+        {
+          "do": "wait_until",
+          "cond": "slots.shadow_awake == 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "MKE_D2_SHADOW_SYSTEM",
+            "source": "gdd:Threat-01",
+            "dim": "D2",
+            "assert": "phase == playing && slots.room_index == 1 && slots.shadow_awake == 1 && (exists(kind=shadow,state=hunting) || exists(kind=shadow,state=danger)) && entity(shadow).visible == true"
+          }
+        },
+        { "do": "move_toward", "target": { "kind": "shadow" }, "timeout_s": 20 },
+        {
+          "do": "wait_until",
+          "cond": "phase == lost",
+          "timeout_s": 12,
+          "check": {
+            "id": "MKE_D3_SHADOW_CONTACT_LOSS",
+            "source": "gdd:Threat-02",
+            "dim": "D3",
+            "assert": "phase == lost && slots.room_index == 1 && entity(player).state == caught && entity(shadow).state == caught && slots.shadow_awake == 1"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "FailureFrame",
+          "check": {
+            "id": "MKE_D5_FAILURE_READABLE",
+            "source": "gdd:Threat-02",
+            "dim": "D5",
+            "assert": "capture_nonblank(FailureFrame) && ocr_contains_any(FailureFrame,[\"GAME OVER\",\"CAUGHT\",\"FAILED\",\"Failure\",\"Caught\"]) && ocr_contains_any(FailureFrame,[\"RESTART\",\"RETRY\",\"ENTER\",\"SHADOW\",\"HOUSE\",\"FOG\",\"Restart\",\"Retry\"])"
+          }
+        },
+        { "do": "snapshot", "save_as": "Lost", "honesty_safe": true },
+        { "do": "hold", "key": "right", "seconds": 0.65 },
+        {
+          "do": "wait_until",
+          "cond": "wall_clock_since(Lost) >= 0.35",
+          "timeout_s": 1,
+          "check": {
+            "id": "MKE_D4_FAILURE_TERMINAL_LOCK",
+            "source": "gdd:Threat-02",
+            "dim": "D4",
+            "assert": "phase == lost && entity(player).position == Lost.entity(kind=player).position && slots.room_index == Lost.slots.room_index && slots.key_taken == Lost.slots.key_taken"
+          }
+        },
+        { "do": "press", "key": "confirm_or_interact", "cond": "phase == playing && slots.room_index == 0 && slots.key_taken == 0", "timeout_s": 8 },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing && slots.room_index == 0",
+          "timeout_s": 8,
+          "check": {
+            "id": "MKE_D4_FAILURE_RESTART_CLEAN",
+            "source": "gdd:Restart-01",
+            "dim": "D4",
+            "assert": "phase == playing && slots.room_index == 0 && slots.modal_code == 0 && slots.journal_read == 0 && slots.cabinet_checked == 0 && slots.key_found == 0 && slots.key_taken == 0 && slots.has_key == 0 && slots.door_open == 0 && slots.shadow_awake == 0 && slots.danger == 0 && !exists(kind=key)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "partial_progress_then_reopen",
+      "title": "Close and reopen after real puzzle progress, returning to a clean menu",
+      "clean_start": "fresh_process",
+      "steps": [
+        { "do": "start" },
+        { "do": "wait_until", "cond": "phase == menu && slots.menu_selection_index == 0", "timeout_s": 15, "honesty_safe": true },
+        { "do": "snapshot", "save_as": "HonestyMenuStable" },
+        { "do": "press", "key": "confirm_or_interact", "cond": "phase == playing && slots.room_index == 0", "timeout_s": 8 },
+        { "do": "wait_until", "cond": "phase == playing && slots.room_index == 0", "timeout_s": 10 },
+        { "do": "move_toward", "target": { "kind": "portal", "state": "open" }, "timeout_s": 20 },
+        { "do": "wait_until", "cond": "slots.room_index == 1", "timeout_s": 5 },
+        { "do": "move_toward", "target": { "kind": "journal" }, "timeout_s": 20 },
+        { "do": "press", "key": "confirm_or_interact", "cond": "phase == paused && slots.journal_read == 1", "timeout_s": 5 },
+        { "do": "wait_until", "cond": "phase == paused && slots.journal_read == 1", "timeout_s": 5 },
+        { "do": "snapshot", "save_as": "Progress", "honesty_safe": true },
+        { "do": "reopen" },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15,
+          "check": {
+            "id": "MKE_D4_REOPEN_CLEAN_MENU",
+            "source": "gdd:Lifecycle-01",
+            "dim": "D4",
+            "assert": "Progress.phase == paused && Progress.slots.journal_read == 1 && phase == menu && slots.room_index < 0 && slots.menu_selection_index == 0 && slots.menu_view_index == 0 && slots.modal_code == 0 && slots.journal_read == 0 && slots.cabinet_checked == 0 && slots.key_found == 0 && slots.key_taken == 0 && slots.has_key == 0 && slots.door_open == 0 && slots.shadow_awake == 0 && slots.danger == 0"
+          }
+        }
+      ]
+    }
+  ]
+}

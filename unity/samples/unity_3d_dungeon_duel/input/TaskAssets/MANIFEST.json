@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "unity.dungeon_duel_3d.v2",
+  "purpose": "Reserved public root for non-Unity supplemental task content",
+  "additional_loose_assets_required": false,
+  "network_download_required": false,
+  "engine_native_asset_index": "../ASSET_MANIFEST.json",
+  "note": "Scenes, Prefabs, models, animation, VFX, audio, navigation, and Input Actions remain under Unity's Assets tree so their .meta GUID relationships stay intact."
+}

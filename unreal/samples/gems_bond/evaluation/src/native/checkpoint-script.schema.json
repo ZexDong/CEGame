@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "generation",
+    "naming_tables",
+    "runtime",
+    "trajectories"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "gemsbond-legacy-atomic-1.0"
+    },
+    "trajectories": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "setup_method",
+          "clean_start",
+          "max_actions",
+          "max_serial_seconds",
+          "check_ids",
+          "evidence",
+          "cleanup"
+        ],
+        "properties": {
+          "setup_method": {
+            "enum": [
+              "normal_input",
+              "state_fixture",
+              "hybrid"
+            ]
+          },
+          "max_actions": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "max_serial_seconds": {
+            "type": "number",
+            "minimum": 1
+          }
+        }
+      }
+    }
+  }
+}

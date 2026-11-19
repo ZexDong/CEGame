@@ -1,0 +1,2 @@
+# The evaluator uses the Python 3.11+ standard library.
+# Engine and native desktop prerequisites are listed in the engine README.

@@ -1,0 +1,845 @@
+{
+  "schema_version": 1,
+  "game": "four_shot",
+  "naming_tables": "../input/sp/benchmark/naming-tables.json",
+  "controls_from_naming_tables": true,
+  "honesty_spot_checks": {
+    "mode": "review_against_captured_render_and_input_trace"
+  },
+  "trajectories": [
+    {
+      "id": "entry_and_training",
+      "title": "entry and training",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture",
+          "save_as": "entry_and_training_transition_0"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 20
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "controls_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "entry_and_training_transition_2"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind_any": [
+              "back_button",
+              "main_menu_button"
+            ]
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "entry_and_training_transition_3"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "entry_and_training_transition_4"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "level_1_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "entry_and_training_transition_5"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "entry_and_training_transition_6"
+        },
+        {
+          "do": "hold",
+          "key": "D",
+          "seconds": 0.35
+        },
+        {
+          "do": "press",
+          "key": "Shift"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "training_target",
+            "state": "active"
+          }
+        },
+        {
+          "do": "hold",
+          "key": "W",
+          "seconds": 0.35
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "training_target",
+            "state": "active"
+          }
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "training_target",
+            "state": "active"
+          },
+          "timeout_s": 60
+        },
+        {
+          "do": "press",
+          "key": "R"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.objective_progress >= 4",
+          "timeout_s": 10.0
+        },
+        {
+          "do": "press",
+          "key": "2"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "training_target",
+            "state": "active"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.objective_progress >= 5",
+          "timeout_s": 10.0
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "training_target",
+            "state": "active"
+          },
+          "timeout_s": 30
+        },
+        {
+          "do": "press",
+          "key": "Space"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.objective_progress >= 6",
+          "timeout_s": 12.0
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == won",
+          "timeout_s": 60.0
+        },
+        {
+          "do": "capture",
+          "save_as": "training_result"
+        },
+        {
+          "check": {
+            "id": "D2-01",
+            "source": "gdd:ENTRY-01a",
+            "dim": "D2",
+            "assert": "The main menu, Controls, fully unlocked six-level selection, and briefings are reachable through public targets"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-02",
+            "source": "gdd:LEVEL-01a",
+            "dim": "D2",
+            "assert": "The training room, four targets, and six ordered training objectives appear during normal play"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-08",
+            "source": "gdd:RULE-01a",
+            "dim": "D2",
+            "assert": "Movement, dash, dual guns, reload, projectiles, and three bombs are usable normally"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-02",
+            "source": "gdd:RULE-04a",
+            "dim": "D3",
+            "assert": "Axial/diagonal movement and dash direction, speed, duration, cooldown, and invulnerability match public tolerances"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-03",
+            "source": "gdd:RULE-02a",
+            "dim": "D3",
+            "assert": "Dual-gun damage, firing rate, range, independent ammunition, reload, and hit resolution follow the rules"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-04",
+            "source": "gdd:BOMB-01a",
+            "dim": "D3",
+            "assert": "Bomb inventory, placement, fuse, explosion, occlusion, damage, and reset boundaries follow the rules"
+          }
+        },
+        {
+          "check": {
+            "id": "D5-01",
+            "source": "common-baseline:CB-07",
+            "dim": "D5",
+            "assert": "Menu, Controls, level selection, briefings, and entry controls are visible, readable, and clickable"
+          }
+        },
+        {
+          "check": {
+            "id": "D5-02",
+            "source": "common-baseline:CB-09",
+            "dim": "D5",
+            "assert": "HUD, objectives, ammunition, and training progress agree with snapshots and rendered output"
+          }
+        }
+      ]
+    },
+    {
+      "id": "core_levels",
+      "title": "core levels",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture",
+          "save_as": "core_levels_transition_0"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "core_levels_transition_1"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "level_2_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "core_levels_transition_2"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "core_levels_transition_3"
+        },
+        {
+          "check": {
+            "id": "D2-03",
+            "source": "gdd:LEVEL-02a",
+            "dim": "D2",
+            "assert": "Level 2 contains the fixed pair of slimes, locked doors, room-clear feedback, and completion screen"
+          }
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "enemy"
+          },
+          "timeout_s": 180
+        },
+        {
+          "check": {
+            "id": "D3-05",
+            "source": "gdd:RULE-05a",
+            "dim": "D3",
+            "assert": "Both slime types have correct health, distance behavior, projectile count/damage, experience, and spawn legality"
+          }
+        },
+        {
+          "do": "press",
+          "key": "Tab"
+        },
+        {
+          "check": {
+            "id": "D5-03",
+            "source": "common-baseline:CB-05",
+            "dim": "D5",
+            "assert": "Shooting, hits, damage, door locks, room clearing, and healing provide clear and truthful feedback"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "next_level_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "core_levels_transition_9"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "core_levels_transition_10"
+        },
+        {
+          "do": "press",
+          "key": "Tab"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == paused",
+          "timeout_s": 5
+        },
+        {
+          "do": "capture",
+          "save_as": "level3_world_map_open"
+        },
+        {
+          "do": "press",
+          "key": "Tab"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 5
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "enemy"
+          },
+          "timeout_s": 240
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "upgrade_choice"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "core_levels_transition_17"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "enemy"
+          },
+          "timeout_s": 600.0
+        },
+        {
+          "check": {
+            "id": "D2-04",
+            "source": "gdd:LEVEL-03a",
+            "dim": "D2",
+            "assert": "Level 3 includes the fixed three rooms, map, upgrade selection, and exit completion content"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-06",
+            "source": "gdd:RULE-08a",
+            "dim": "D3",
+            "assert": "Door locks, room-clear healing, obstacles, three-room topology, transitions, and map boundaries follow the rules"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-07",
+            "source": "gdd:RULE-10a",
+            "dim": "D3",
+            "assert": "Experience thresholds, one-of-three upgrades, single application, and preset growth in levels 5/6 are correct"
+          }
+        },
+        {
+          "check": {
+            "id": "D4-01",
+            "source": "common-baseline:CB-01",
+            "dim": "D4",
+            "assert": "Levels 1-3 can each be completed independently from their normal entry points"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "boss_and_level6_success",
+      "title": "boss and level6 success",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture",
+          "save_as": "boss_and_level6_success_transition_0"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "boss_and_level6_success_transition_1"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "level_4_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "boss_and_level6_success_transition_2"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "boss_and_level6_success_transition_3"
+        },
+        {
+          "check": {
+            "id": "D2-05",
+            "source": "gdd:LEVEL-04a",
+            "dim": "D2",
+            "assert": "Level 4 independently covers boss phases 4/4 and 3/4 and completes at 2/4"
+          }
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "enemy"
+          },
+          "timeout_s": 900
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "next_level_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "boss_and_level6_success_transition_6"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "boss_and_level6_success_transition_7"
+        },
+        {
+          "check": {
+            "id": "D2-06",
+            "source": "gdd:LEVEL-04d",
+            "dim": "D2",
+            "assert": "Level 5 independently covers boss phases 2/4 and 1/4 and wins at 0/4"
+          }
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "enemy"
+          },
+          "timeout_s": 900
+        },
+        {
+          "check": {
+            "id": "D3-08",
+            "source": "gdd:RULE-11b",
+            "dim": "D3",
+            "assert": "Boss movement, attacks, summon timing, phase counts, and normal-weapon immunity are correct"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-09",
+            "source": "gdd:RULE-12a",
+            "dim": "D3",
+            "assert": "Golem kill remainder, elites, and the special sniper pickup/hit/miss lifecycle are correct"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "main_menu_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "boss_and_level6_success_transition_12"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "boss_and_level6_success_transition_13"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "level_6_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "boss_and_level6_success_transition_14"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "boss_and_level6_success_transition_15"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "enemy"
+          },
+          "timeout_s": 900.0
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == won",
+          "timeout_s": 300.0
+        },
+        {
+          "check": {
+            "id": "D2-07",
+            "source": "gdd:LEVEL-06a",
+            "dim": "D2",
+            "assert": "Level 6 supports completion of the fixed four-room route, two room clears, and final boss"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-09",
+            "source": "gdd:RULE-11a",
+            "dim": "D2",
+            "assert": "The boss, both golem types, special sniper, and four phases appear through normal gameplay"
+          }
+        },
+        {
+          "check": {
+            "id": "D4-02",
+            "source": "common-baseline:CB-11",
+            "dim": "D4",
+            "assert": "Successful level 4, 5, and 6 journeys reach their respective single correct terminal states"
+          }
+        },
+        {
+          "check": {
+            "id": "D5-05",
+            "source": "common-baseline:CB-12",
+            "dim": "D5",
+            "assert": "Completion, victory, defeat, and continuation entries are clear and respond once"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "failure_and_retry",
+      "title": "failure and retry",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture",
+          "save_as": "failure_and_retry_transition_0"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "failure_and_retry_transition_1"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "level_2_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "failure_and_retry_transition_2"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "failure_and_retry_transition_3"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "enemy",
+            "state": "living"
+          },
+          "timeout_s": 30
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == lost",
+          "timeout_s": 900
+        },
+        {
+          "check": {
+            "id": "D3-10",
+            "source": "gdd:RULE-14a",
+            "dim": "D3",
+            "assert": "Damage priority, health lower bound, completion/outcome timing, modal freeze, and terminal guards are correct"
+          }
+        },
+        {
+          "do": "restart"
+        },
+        {
+          "do": "capture",
+          "save_as": "failure_and_retry_transition_6"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "AfterRetry"
+        },
+        {
+          "check": {
+            "id": "D4-03",
+            "source": "common-baseline:CB-13",
+            "dim": "D4",
+            "assert": "Natural damage to zero causes defeat and terminal freeze; Retry restores the clean initial state of the same level"
+          }
+        },
+        {
+          "do": "press",
+          "key": "Escape"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Paused"
+        },
+        {
+          "do": "press",
+          "key": "Space"
+        },
+        {
+          "do": "press",
+          "key": "R"
+        },
+        {
+          "do": "hold",
+          "key": "D",
+          "seconds": 0.25
+        },
+        {
+          "do": "capture",
+          "save_as": "paused_illegal_inputs"
+        },
+        {
+          "do": "press",
+          "key": "Escape"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 5
+        },
+        {
+          "check": {
+            "id": "D4-04",
+            "source": "common-baseline:CB-14",
+            "dim": "D4",
+            "assert": "Pause/resume, return to level selection, and repeated level changes leave no stale state or duplicate responses"
+          }
+        },
+        {
+          "check": {
+            "id": "D5-04",
+            "source": "common-baseline:CB-06",
+            "dim": "D5",
+            "assert": "Feedback clearly distinguishes invalid input and mutually exclusive pause, map, upgrade, and result modals"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "lifecycle",
+      "title": "lifecycle",
+      "clean_start": "none",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture",
+          "save_as": "lifecycle_transition_0"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "lifecycle_transition_1"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "level_2_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "lifecycle_transition_2"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "lifecycle_transition_3"
+        },
+        {
+          "do": "hold",
+          "key": "D",
+          "seconds": 0.25
+        },
+        {
+          "do": "snapshot",
+          "save_as": "BeforeClose"
+        },
+        {
+          "do": "reopen"
+        },
+        {
+          "do": "capture",
+          "save_as": "lifecycle_transition_6"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 30
+        },
+        {
+          "check": {
+            "id": "D3-01",
+            "source": "gdd:ENTRY-05a",
+            "dim": "D3",
+            "assert": "Public initial states, level exceptions, object uniqueness, and cross-level isolation match the public values"
+          }
+        },
+        {
+          "check": {
+            "id": "D4-05",
+            "source": "common-baseline:CB-03",
+            "dim": "D4",
+            "assert": "The exact old PID ends; the new PID returns to the menu without restoring gameplay state"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-10",
+            "source": "gdd:ASSET-01a",
+            "dim": "D2",
+            "assert": "HUD, feedback, results, and declared images, fonts, and audio are used in the corresponding runtime states"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 10
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    }
+  ]
+}

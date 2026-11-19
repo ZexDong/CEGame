@@ -1,0 +1,25 @@
+Reactor Relay Protocol candidate return checklist
+
+Required files
+[ ] Complete project/ Rojo source
+[ ] ReactorRelayCandidate.rbxlx
+[ ] BUILD_REPORT.txt
+[ ] DEVELOPMENT_TRACE.txt
+[ ] Complete candidate source ZIP
+[ ] Submission title or identifier
+
+Public contract
+[ ] Frozen strings in ReactorRelaySchema.luau were not changed
+[ ] Exactly 19 actual GuiButtons use RR_Control with unique required RR_TargetId values
+[ ] Exactly 16 actual HUD objects use RR_HUDField with unique required RR_FieldId values
+[ ] Exactly 1 RR_GameState and 3 RR_BayState Configurations exist
+[ ] Workspace ready Attributes are set only after public state and UI replicate
+[ ] GuiButton live positions and sizes are readable from the engine
+[ ] All buttons can be clicked with a real pointer; no screenshot/fixed-coordinate assumption
+[ ] Six fixed target sets, six lock orders, 0.75-second stability, and 3-second commit arm behavior match the public schema
+[ ] R performs Clean Restart; reopen returns to menu without saved progress
+
+Reporting discipline
+[ ] Static build success is not reported as runtime PASS
+[ ] Every claimed Play result was actually observed
+[ ] Failures and unverified behavior remain in the reports

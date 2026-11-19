@@ -1,0 +1,815 @@
+{
+  "schema_version": "2.1",
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "method": "engine_collection_and_requirement_level_review",
+  "checks": [
+    {
+      "id": "D1-01",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-01"
+      ],
+      "description": "Project imports without an engine failure",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-02",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-02"
+      ],
+      "description": "Configured main scene runs",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-03",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-03"
+      ],
+      "description": "No candidate parse, script or resource loading errors",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-04",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-04"
+      ],
+      "description": "Live dashboard snapshots are available",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-05",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-05"
+      ],
+      "description": "Public dashboard shape and required numeric slots",
+      "max_score": 2.0
+    },
+    {
+      "id": "D2-01",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:ENTRY-01a",
+        "gdd:ENTRY-01b",
+        "gdd:ENTRY-01c",
+        "gdd:ENTRY-01d",
+        "gdd:ENTRY-01e",
+        "gdd:ENTRY-01f",
+        "gdd:ENTRY-02a",
+        "gdd:ENTRY-02b",
+        "gdd:ENTRY-02c",
+        "gdd:ENTRY-02d",
+        "gdd:ENTRY-03a",
+        "gdd:ENTRY-03b",
+        "gdd:ENTRY-03c",
+        "gdd:ENTRY-03d",
+        "gdd:ENTRY-03e",
+        "gdd:ENTRY-03f",
+        "gdd:ENTRY-03g",
+        "gdd:ENTRY-04a",
+        "gdd:ENTRY-04b",
+        "gdd:ENTRY-04c",
+        "gdd:ENTRY-04d",
+        "gdd:ENTRY-04e",
+        "gdd:ENTRY-04f",
+        "gdd:ENTRY-04g",
+        "gdd:ENTRY-04h",
+        "gdd:ENTRY-04i",
+        "gdd:ENTRY-04j",
+        "gdd:ENTRY-04k",
+        "gdd:ENTRY-04l",
+        "gdd:ENTRY-04m",
+        "gdd:ENTRY-04n"
+      ],
+      "description": "The main menu, Controls, fully unlocked six-level selection, and briefings are reachable through public targets",
+      "trajectory": "entry_and_training",
+      "max_score": 3.0
+    },
+    {
+      "id": "D2-02",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:LEVEL-01a",
+        "gdd:LEVEL-01b",
+        "gdd:LEVEL-01c",
+        "gdd:LEVEL-01d",
+        "gdd:LEVEL-01e",
+        "gdd:LEVEL-01f",
+        "gdd:LEVEL-01g",
+        "gdd:LEVEL-01h",
+        "gdd:LEVEL-01i",
+        "gdd:LEVEL-01j",
+        "gdd:LEVEL-01k"
+      ],
+      "description": "The training room, four targets, and six ordered training objectives appear during normal play",
+      "trajectory": "entry_and_training",
+      "max_score": 3.0
+    },
+    {
+      "id": "D2-08",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:RULE-01a",
+        "gdd:RULE-01b",
+        "gdd:RULE-01c",
+        "gdd:RULE-01d",
+        "gdd:RULE-01e",
+        "gdd:RULE-01f",
+        "gdd:RULE-01g"
+      ],
+      "description": "Movement, dash, dual guns, reload, projectiles, and three bombs are usable normally",
+      "trajectory": "entry_and_training",
+      "max_score": 3.0
+    },
+    {
+      "id": "D3-02",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:RULE-04a",
+        "gdd:RULE-04b",
+        "gdd:RULE-04c",
+        "gdd:RULE-04d",
+        "gdd:RULE-04e",
+        "gdd:RULE-04f",
+        "gdd:RULE-04g",
+        "gdd:RULE-04h",
+        "gdd:RULE-04i"
+      ],
+      "description": "Axial/diagonal movement and dash direction, speed, duration, cooldown, and invulnerability match public tolerances",
+      "trajectory": "entry_and_training",
+      "max_score": 2.0
+    },
+    {
+      "id": "D3-03",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:RULE-02a",
+        "gdd:RULE-02b",
+        "gdd:RULE-02c",
+        "gdd:RULE-02d",
+        "gdd:RULE-02e",
+        "gdd:RULE-02f",
+        "gdd:RULE-02g",
+        "gdd:RULE-03a",
+        "gdd:RULE-03b",
+        "gdd:RULE-03c",
+        "gdd:RULE-03d",
+        "gdd:RULE-03e",
+        "gdd:RULE-03f",
+        "gdd:RULE-03g",
+        "gdd:RULE-03h",
+        "gdd:RULE-03i",
+        "gdd:RULE-03j",
+        "gdd:RULE-03k",
+        "gdd:RULE-03l",
+        "gdd:RULE-03m"
+      ],
+      "description": "Dual-gun damage, firing rate, range, independent ammunition, reload, and hit resolution follow the rules",
+      "trajectory": "entry_and_training",
+      "max_score": 2.0
+    },
+    {
+      "id": "D3-04",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:BOMB-01a",
+        "gdd:BOMB-01b",
+        "gdd:BOMB-01c",
+        "gdd:BOMB-01d",
+        "gdd:BOMB-01e",
+        "gdd:BOMB-01f",
+        "gdd:BOMB-01g",
+        "gdd:BOMB-01h",
+        "gdd:BOMB-01i",
+        "gdd:BOMB-01j",
+        "gdd:BOMB-01k",
+        "gdd:BOMB-01l",
+        "gdd:BOMB-01m",
+        "gdd:BOMB-01n",
+        "gdd:BOMB-01o"
+      ],
+      "description": "Bomb inventory, placement, fuse, explosion, occlusion, damage, and reset boundaries follow the rules",
+      "trajectory": "entry_and_training",
+      "max_score": 2.0
+    },
+    {
+      "id": "D5-01",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-07",
+        "common-baseline:CB-10"
+      ],
+      "description": "Menu, Controls, level selection, briefings, and entry controls are visible, readable, and clickable",
+      "trajectory": "entry_and_training",
+      "max_score": 2.0
+    },
+    {
+      "id": "D5-02",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-08",
+        "common-baseline:CB-09"
+      ],
+      "description": "HUD, objectives, ammunition, and training progress agree with snapshots and rendered output",
+      "trajectory": "entry_and_training",
+      "max_score": 2.0
+    },
+    {
+      "id": "D2-03",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:LEVEL-02a",
+        "gdd:LEVEL-02b",
+        "gdd:LEVEL-02c",
+        "gdd:LEVEL-02d",
+        "gdd:LEVEL-02e",
+        "gdd:LEVEL-02f",
+        "gdd:LEVEL-02g",
+        "gdd:LEVEL-02h",
+        "gdd:LEVEL-02i",
+        "gdd:LEVEL-02j",
+        "gdd:LEVEL-02k",
+        "gdd:LEVEL-02l",
+        "gdd:LEVEL-02m",
+        "gdd:LEVEL-02n"
+      ],
+      "description": "Level 2 contains the fixed pair of slimes, locked doors, room-clear feedback, and completion screen",
+      "trajectory": "core_levels",
+      "max_score": 3.0
+    },
+    {
+      "id": "D3-05",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:RULE-05a",
+        "gdd:RULE-05b",
+        "gdd:RULE-05c",
+        "gdd:RULE-05d",
+        "gdd:RULE-05e",
+        "gdd:RULE-05f",
+        "gdd:RULE-05g",
+        "gdd:RULE-05h",
+        "gdd:RULE-05i",
+        "gdd:RULE-05j",
+        "gdd:RULE-05k",
+        "gdd:RULE-05l",
+        "gdd:RULE-05m",
+        "gdd:RULE-06a",
+        "gdd:RULE-06b",
+        "gdd:RULE-06c",
+        "gdd:RULE-06d",
+        "gdd:RULE-06e",
+        "gdd:RULE-06f",
+        "gdd:RULE-06g",
+        "gdd:RULE-06h",
+        "gdd:RULE-06i",
+        "gdd:RULE-06j",
+        "gdd:RULE-06k",
+        "gdd:RULE-06l",
+        "gdd:RULE-07a",
+        "gdd:RULE-07b",
+        "gdd:RULE-07c",
+        "gdd:RULE-07d",
+        "gdd:RULE-07e"
+      ],
+      "description": "Both slime types have correct health, distance behavior, projectile count/damage, experience, and spawn legality",
+      "trajectory": "core_levels",
+      "max_score": 2.0
+    },
+    {
+      "id": "D5-03",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-05"
+      ],
+      "description": "Shooting, hits, damage, door locks, room clearing, and healing provide clear and truthful feedback",
+      "trajectory": "core_levels",
+      "max_score": 2.0
+    },
+    {
+      "id": "D2-04",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:LEVEL-03a",
+        "gdd:LEVEL-03b",
+        "gdd:LEVEL-03c",
+        "gdd:LEVEL-03d",
+        "gdd:LEVEL-03e",
+        "gdd:LEVEL-03f",
+        "gdd:LEVEL-03g",
+        "gdd:LEVEL-03h",
+        "gdd:LEVEL-03i",
+        "gdd:LEVEL-03j",
+        "gdd:LEVEL-03k",
+        "gdd:LEVEL-03l",
+        "gdd:LEVEL-03m",
+        "gdd:LEVEL-03n",
+        "gdd:LEVEL-03o",
+        "gdd:LEVEL-03p",
+        "gdd:LEVEL-03q",
+        "gdd:LEVEL-03r",
+        "gdd:LEVEL-03s"
+      ],
+      "description": "Level 3 includes the fixed three rooms, map, upgrade selection, and exit completion content",
+      "trajectory": "core_levels",
+      "max_score": 3.0
+    },
+    {
+      "id": "D3-06",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:RULE-08a",
+        "gdd:RULE-08b",
+        "gdd:RULE-08c",
+        "gdd:RULE-08d",
+        "gdd:RULE-08e",
+        "gdd:RULE-08f",
+        "gdd:RULE-08g",
+        "gdd:RULE-09a",
+        "gdd:RULE-09b",
+        "gdd:RULE-09c",
+        "gdd:RULE-09d",
+        "gdd:RULE-09e",
+        "gdd:RULE-09f",
+        "gdd:RULE-09g",
+        "gdd:RULE-09h",
+        "gdd:RULE-09i",
+        "gdd:RULE-09j",
+        "gdd:RULE-09k"
+      ],
+      "description": "Door locks, room-clear healing, obstacles, three-room topology, transitions, and map boundaries follow the rules",
+      "trajectory": "core_levels",
+      "max_score": 2.0
+    },
+    {
+      "id": "D3-07",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:RULE-10a",
+        "gdd:RULE-10b",
+        "gdd:RULE-10c",
+        "gdd:RULE-10d",
+        "gdd:RULE-10e",
+        "gdd:RULE-10f",
+        "gdd:RULE-10g",
+        "gdd:RULE-10h",
+        "gdd:RULE-10i",
+        "gdd:RULE-10j",
+        "gdd:RULE-10k",
+        "gdd:RULE-10l",
+        "gdd:RULE-10m",
+        "gdd:RULE-10n",
+        "gdd:RULE-10o",
+        "gdd:RULE-10p"
+      ],
+      "description": "Experience thresholds, one-of-three upgrades, single application, and preset growth in levels 5/6 are correct",
+      "trajectory": "core_levels",
+      "max_score": 2.0
+    },
+    {
+      "id": "D4-01",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-01",
+        "common-baseline:CB-02"
+      ],
+      "description": "Levels 1-3 can each be completed independently from their normal entry points",
+      "trajectory": "core_levels",
+      "max_score": 4.0
+    },
+    {
+      "id": "D2-05",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:LEVEL-04a",
+        "gdd:LEVEL-04b",
+        "gdd:LEVEL-04c"
+      ],
+      "description": "Level 4 independently covers boss phases 4/4 and 3/4 and completes at 2/4",
+      "trajectory": "boss_and_level6_success",
+      "max_score": 3.0
+    },
+    {
+      "id": "D2-06",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:LEVEL-04d",
+        "gdd:LEVEL-04e",
+        "gdd:LEVEL-04f",
+        "gdd:LEVEL-04g",
+        "gdd:LEVEL-04h",
+        "gdd:LEVEL-04i",
+        "gdd:LEVEL-04j",
+        "gdd:LEVEL-04k",
+        "gdd:LEVEL-04l",
+        "gdd:LEVEL-04m",
+        "gdd:LEVEL-04n",
+        "gdd:LEVEL-04o",
+        "gdd:LEVEL-04p",
+        "gdd:LEVEL-04q",
+        "gdd:LEVEL-04r",
+        "gdd:LEVEL-04s"
+      ],
+      "description": "Level 5 independently covers boss phases 2/4 and 1/4 and wins at 0/4",
+      "trajectory": "boss_and_level6_success",
+      "max_score": 3.0
+    },
+    {
+      "id": "D3-08",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:RULE-11b",
+        "gdd:RULE-11c",
+        "gdd:RULE-11d",
+        "gdd:RULE-11e",
+        "gdd:RULE-11f",
+        "gdd:RULE-11g",
+        "gdd:RULE-11h",
+        "gdd:RULE-11i",
+        "gdd:RULE-11j",
+        "gdd:RULE-11k",
+        "gdd:RULE-11l",
+        "gdd:RULE-11m",
+        "gdd:RULE-11n",
+        "gdd:RULE-11o",
+        "gdd:RULE-11p",
+        "gdd:RULE-11q",
+        "gdd:RULE-11r",
+        "gdd:RULE-11s",
+        "gdd:RULE-11t",
+        "gdd:RULE-11u",
+        "gdd:RULE-11v",
+        "gdd:RULE-11w",
+        "gdd:RULE-11x",
+        "gdd:RULE-11y",
+        "gdd:RULE-11z",
+        "gdd:RULE-11aa",
+        "gdd:RULE-11ab",
+        "gdd:RULE-11ac",
+        "gdd:RULE-11ad",
+        "gdd:RULE-11ae"
+      ],
+      "description": "Boss movement, attacks, summon timing, phase counts, and normal-weapon immunity are correct",
+      "trajectory": "boss_and_level6_success",
+      "max_score": 2.0
+    },
+    {
+      "id": "D3-09",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:RULE-12a",
+        "gdd:RULE-12b",
+        "gdd:RULE-12c",
+        "gdd:RULE-12d",
+        "gdd:RULE-12e",
+        "gdd:RULE-12f",
+        "gdd:RULE-12g",
+        "gdd:RULE-12h",
+        "gdd:RULE-12i",
+        "gdd:RULE-12j",
+        "gdd:RULE-12k",
+        "gdd:RULE-12l",
+        "gdd:RULE-12m",
+        "gdd:RULE-12n",
+        "gdd:RULE-12o",
+        "gdd:RULE-12p",
+        "gdd:RULE-13a",
+        "gdd:RULE-13b",
+        "gdd:RULE-13c",
+        "gdd:RULE-13d",
+        "gdd:RULE-13e",
+        "gdd:RULE-13f",
+        "gdd:RULE-13g",
+        "gdd:RULE-13h",
+        "gdd:RULE-13i",
+        "gdd:RULE-13j",
+        "gdd:RULE-13k",
+        "gdd:RULE-13l",
+        "gdd:RULE-13m",
+        "gdd:RULE-13n",
+        "gdd:RULE-13o",
+        "gdd:RULE-13p",
+        "gdd:RULE-13q",
+        "gdd:RULE-13r",
+        "gdd:RULE-13s"
+      ],
+      "description": "Golem kill remainder, elites, and the special sniper pickup/hit/miss lifecycle are correct",
+      "trajectory": "boss_and_level6_success",
+      "max_score": 2.0
+    },
+    {
+      "id": "D2-07",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:LEVEL-06a",
+        "gdd:LEVEL-06b",
+        "gdd:LEVEL-06c",
+        "gdd:LEVEL-06d",
+        "gdd:LEVEL-06e",
+        "gdd:LEVEL-06f",
+        "gdd:LEVEL-06g",
+        "gdd:LEVEL-06h",
+        "gdd:LEVEL-06i",
+        "gdd:LEVEL-06j",
+        "gdd:LEVEL-06k",
+        "gdd:LEVEL-06l",
+        "gdd:LEVEL-06m",
+        "gdd:LEVEL-06n",
+        "gdd:LEVEL-06o",
+        "gdd:LEVEL-06p"
+      ],
+      "description": "Level 6 supports completion of the fixed four-room route, two room clears, and final boss",
+      "trajectory": "boss_and_level6_success",
+      "max_score": 3.0
+    },
+    {
+      "id": "D2-09",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:RULE-11a"
+      ],
+      "description": "The boss, both golem types, special sniper, and four phases appear through normal gameplay",
+      "trajectory": "boss_and_level6_success",
+      "max_score": 3.0
+    },
+    {
+      "id": "D4-02",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-11"
+      ],
+      "description": "Successful level 4, 5, and 6 journeys reach their respective single correct terminal states",
+      "trajectory": "boss_and_level6_success",
+      "max_score": 4.0
+    },
+    {
+      "id": "D5-05",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-12"
+      ],
+      "description": "Completion, victory, defeat, and continuation entries are clear and respond once",
+      "trajectory": "boss_and_level6_success",
+      "max_score": 2.0
+    },
+    {
+      "id": "D3-10",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:RULE-14a",
+        "gdd:RULE-14b",
+        "gdd:RULE-14c",
+        "gdd:RULE-14d",
+        "gdd:RULE-14e",
+        "gdd:RULE-14f",
+        "gdd:RULE-14g",
+        "gdd:RULE-14h",
+        "gdd:RULE-14i",
+        "gdd:RULE-14j",
+        "gdd:RULE-14k",
+        "gdd:RULE-14l",
+        "gdd:RULE-14m",
+        "gdd:RULE-14n",
+        "gdd:RULE-14o"
+      ],
+      "description": "Damage priority, health lower bound, completion/outcome timing, modal freeze, and terminal guards are correct",
+      "trajectory": "failure_and_retry",
+      "max_score": 2.0
+    },
+    {
+      "id": "D4-03",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-13"
+      ],
+      "description": "Natural damage to zero causes defeat and terminal freeze; Retry restores the clean initial state of the same level",
+      "trajectory": "failure_and_retry",
+      "max_score": 4.0
+    },
+    {
+      "id": "D4-04",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-14"
+      ],
+      "description": "Pause/resume, return to level selection, and repeated level changes leave no stale state or duplicate responses",
+      "trajectory": "failure_and_retry",
+      "max_score": 4.0
+    },
+    {
+      "id": "D5-04",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-06"
+      ],
+      "description": "Feedback clearly distinguishes invalid input and mutually exclusive pause, map, upgrade, and result modals",
+      "trajectory": "failure_and_retry",
+      "max_score": 2.0
+    },
+    {
+      "id": "D3-01",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ENTRY-05a",
+        "gdd:ENTRY-05b",
+        "gdd:ENTRY-05c",
+        "gdd:ENTRY-05d",
+        "gdd:ENTRY-05e",
+        "gdd:ENTRY-05f",
+        "gdd:ENTRY-05g",
+        "gdd:ENTRY-05h",
+        "gdd:ENTRY-05i",
+        "gdd:ENTRY-05j",
+        "gdd:ENTRY-05k",
+        "gdd:ENTRY-05l",
+        "gdd:ENTRY-05m",
+        "gdd:ENTRY-05n",
+        "gdd:ENTRY-05o",
+        "gdd:ENTRY-05p",
+        "gdd:SESSION-01a",
+        "gdd:SESSION-01b",
+        "gdd:SESSION-01c",
+        "gdd:SESSION-02a",
+        "gdd:SESSION-02b",
+        "gdd:SESSION-03a",
+        "gdd:SESSION-03b",
+        "gdd:SESSION-04a",
+        "gdd:SESSION-05a",
+        "gdd:SESSION-05b",
+        "gdd:SESSION-05c",
+        "gdd:SESSION-05d",
+        "gdd:SESSION-05e",
+        "common-baseline:CB-04"
+      ],
+      "description": "Public initial states, level exceptions, object uniqueness, and cross-level isolation match the public values",
+      "trajectory": "lifecycle",
+      "max_score": 2.0
+    },
+    {
+      "id": "D4-05",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-03",
+        "common-baseline:CB-15"
+      ],
+      "description": "The exact old PID ends; the new PID returns to the menu without restoring gameplay state",
+      "trajectory": "lifecycle",
+      "max_score": 4.0
+    },
+    {
+      "id": "D2-10",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:UI-01a",
+        "gdd:UI-01b",
+        "gdd:UI-02a",
+        "gdd:UI-02b",
+        "gdd:UI-03a",
+        "gdd:UI-03b",
+        "gdd:UI-03c",
+        "gdd:UI-03d",
+        "gdd:UI-03e",
+        "gdd:UI-03f",
+        "gdd:UI-03g",
+        "gdd:UI-03h",
+        "gdd:UI-03i",
+        "gdd:UI-05a",
+        "gdd:UI-05b",
+        "gdd:UI-05c",
+        "gdd:UI-05d",
+        "gdd:UI-05e",
+        "gdd:UI-05f",
+        "gdd:UI-05g",
+        "gdd:UI-04a",
+        "gdd:UI-04b",
+        "gdd:UI-04c",
+        "gdd:UI-04d",
+        "gdd:UI-04e",
+        "gdd:UI-04f",
+        "gdd:UI-04g",
+        "gdd:UI-04h",
+        "gdd:UI-04i",
+        "gdd:UI-04j",
+        "gdd:UI-04k",
+        "gdd:UI-04l",
+        "gdd:UI-04m",
+        "gdd:UI-04n",
+        "gdd:UI-04o",
+        "gdd:UI-04p",
+        "gdd:UI-04q",
+        "gdd:UI-04r",
+        "gdd:UI-04s",
+        "gdd:UI-04t",
+        "gdd:UI-04u",
+        "gdd:UI-04v",
+        "gdd:UI-04w",
+        "gdd:UI-04x",
+        "gdd:UI-06a",
+        "gdd:UI-06b",
+        "gdd:UI-06c",
+        "gdd:UI-06d",
+        "gdd:UI-06e",
+        "gdd:UI-06f",
+        "gdd:UI-06g",
+        "gdd:UI-07a",
+        "gdd:UI-07b",
+        "gdd:UI-07c",
+        "gdd:UI-07d",
+        "gdd:UI-08a",
+        "gdd:UI-08b",
+        "gdd:UI-08c",
+        "gdd:ASSET-01a",
+        "gdd:ASSET-01b",
+        "gdd:ASSET-02a",
+        "gdd:ASSET-02b",
+        "gdd:ASSET-02c",
+        "gdd:ASSET-02d",
+        "gdd:ASSET-03a",
+        "gdd:ASSET-03b",
+        "gdd:ASSET-03c",
+        "gdd:ASSET-04a",
+        "gdd:ASSET-04b",
+        "gdd:ASSET-04c",
+        "gdd:ASSET-05a",
+        "gdd:ASSET-05b",
+        "gdd:ASSET-05c",
+        "gdd:ASSET-06a",
+        "gdd:ASSET-06b",
+        "gdd:ASSET-07a",
+        "gdd:ASSET-07b",
+        "gdd:ASSET-08a",
+        "gdd:ASSET-08b",
+        "gdd:ASSET-08c",
+        "gdd:ASSET-08d",
+        "gdd:ASSET-08e",
+        "gdd:ASSET-08f",
+        "gdd:ASSET-08g",
+        "gdd:ASSET-08h",
+        "gdd:ASSET-08i",
+        "gdd:ASSET-08j",
+        "gdd:ASSET-08k",
+        "gdd:ASSET-09a",
+        "gdd:ASSET-09b"
+      ],
+      "description": "HUD, feedback, results, and declared images, fonts, and audio are used in the corresponding runtime states",
+      "trajectory": "lifecycle",
+      "max_score": 3.0
+    },
+    {
+      "id": "D6-01",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:composition"
+      ],
+      "description": "Overall composition and task visual identity",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-02",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:objects"
+      ],
+      "description": "Required objects, character and asset identity",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-03",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:ui"
+      ],
+      "description": "UI readability and information hierarchy",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-04",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:feedback"
+      ],
+      "description": "State transitions and visual feedback",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-05",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:consistency"
+      ],
+      "description": "Visual consistency across gameplay and result states",
+      "max_score": 2.0
+    }
+  ],
+  "d6_protocol": "d6/protocol.json"
+}

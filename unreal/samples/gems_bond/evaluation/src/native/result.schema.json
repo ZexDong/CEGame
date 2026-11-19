@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["schema_version", "status", "candidate_identity", "canonical_scorer_sha256", "scores", "checks", "d6_rounds"],
+  "properties": {
+    "schema_version": {"const": "gemsbond-score-1.0"},
+    "status": {"const": "diagnostic_complete"},
+    "scores": {
+      "type": "object",
+      "required": ["D1", "D2", "D3", "D4", "D5", "D6", "functional_total", "Overall"],
+      "additionalProperties": {"type": "number", "minimum": 0, "maximum": 100}
+    },
+    "d6_rounds": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number", "minimum": 0, "maximum": 10}},
+    "checks": {"type": "array", "items": {"type": "object", "required": ["id", "dimension", "stage", "verdict", "passed", "attribution", "reasons", "evidence"], "properties": {"verdict": {"enum": ["pass", "fail", "unreachable"]}, "passed": {"type": "boolean"}}}}
+  }
+}

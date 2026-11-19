@@ -1,0 +1,23 @@
+Candidate: Reactor Relay Protocol
+Task / conversation title:
+Start time:
+End time:
+
+REAL ACTION LOG
+[timestamp] Action:
+Result:
+
+BUILD
+Command:
+Result:
+
+RUNTIME VERIFICATION
+Status: NOT RUN / PARTIAL / COMPLETED
+Actually observed:
+Not verified:
+
+KNOWN ISSUES
+-
+
+FINAL ARTIFACTS
+-

@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "task_id": "defold_typhoon_balloon_v2",
+  "input_revision": "frozen-2026-11-10",
+  "status": "frozen",
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "checks": [
+    {
+      "id": "D1.PROJECT",
+      "dimension": "D1",
+      "weight": 2,
+      "requirements": [
+        "CB-01"
+      ],
+      "evidence_method": "static",
+      "description": "There is an independent game.project entrance"
+    },
+    {
+      "id": "D1.BUILD",
+      "dimension": "D1",
+      "weight": 3,
+      "requirements": [
+        "CB-01"
+      ],
+      "evidence_method": "static",
+      "description": "isolated copy is fixed Bob the tool chain is built successfully"
+    },
+    {
+      "id": "D1.START",
+      "dimension": "D1",
+      "weight": 3,
+      "requirements": [
+        "CB-02"
+      ],
+      "evidence_method": "static",
+      "description": "native process is started and a read-only snapshot is released"
+    },
+    {
+      "id": "D1.CONTRACT",
+      "dimension": "D1",
+      "weight": 2,
+      "requirements": [
+        "TB-OBSERVE-01"
+      ],
+      "evidence_method": "static",
+      "description": "the complete observed trajectory is consistent Dashboard v3"
+    },
+    {
+      "id": "D2.MENU",
+      "dimension": "D2",
+      "weight": 1,
+      "requirements": [
+        "TB-CAMPAIGN-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "Menu and new campaign entrance operate normally"
+    },
+    {
+      "id": "D2.WORLD",
+      "dimension": "D2",
+      "weight": 2,
+      "requirements": [
+        "TB-WORLD-01",
+        "TB-ZONE-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "Full map made public\u3001Wind Zone\u3001Hazards and targets are actually established"
+    },
+    {
+      "id": "D2.FLIGHT",
+      "dimension": "D2",
+      "weight": 2,
+      "requirements": [
+        "TB-FLIGHT-01",
+        "TB-SOLID-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "Normal combination input drives continuous flight and collision"
+    },
+    {
+      "id": "D2.CHECKPOINTS",
+      "dimension": "D2",
+      "weight": 1,
+      "requirements": [
+        "TB-CHECKPOINT-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "Actual checkpoints activated and become resurrection locations"
+    },
+    {
+      "id": "D2.STATIONS",
+      "dimension": "D2",
+      "weight": 1,
+      "requirements": [
+        "TB-STATION-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "Wind Stations can be switched by normal interaction from close range"
+    },
+    {
+      "id": "D2.CHAPTERS",
+      "dimension": "D2",
+      "weight": 2,
+      "requirements": [
+        "TB-CHAPTER-01",
+        "TB-CAMPAIGN-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "Three Chapter Targets\u3001Start point and required wind station differences are actually entered"
+    },
+    {
+      "id": "D3.FLIGHT",
+      "dimension": "D3",
+      "weight": 2,
+      "requirements": [
+        "TB-FLIGHT-01",
+        "TB-ZONE-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "Thrust\u3001Gravity\u3001Damping\u3001Speed upper limit and synthetic wind support real navigation"
+    },
+    {
+      "id": "D3.SOLID",
+      "dimension": "D3",
+      "weight": 1,
+      "requirements": [
+        "TB-SOLID-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "Combined collider blocks ordinary walls and allows stable takeoff"
+    },
+    {
+      "id": "D3.PAUSE",
+      "dimension": "D3",
+      "weight": 1,
+      "requirements": [
+        "TB-PAUSE-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "Pause frozen flight\u3001Wind\u3001Mechanism and resurrection clock"
+    },
+    {
+      "id": "D3.HAZARD",
+      "dimension": "D3",
+      "weight": 2,
+      "requirements": [
+        "TB-HAZARD-01",
+        "TB-CHECKPOINT-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "The spike danger is only recorded once and resurrected at the nearest checkpoint"
+    },
+    {
+      "id": "D3.STARS",
+      "dimension": "D3",
+      "weight": 2,
+      "requirements": [
+        "TB-STAR-01",
+        "TB-CARRY-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "99 Global stars are only collected once and submitted by chapter"
+    },
+    {
+      "id": "D3.STATIONS",
+      "dimension": "D3",
+      "weight": 2,
+      "requirements": [
+        "TB-STATION-01",
+        "TB-ZONE-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "Wind station usage record\u3001Power supply and Chapter 3 are mutually exclusive and correct"
+    },
+    {
+      "id": "D3.CHAPTERS",
+      "dimension": "D3",
+      "weight": 1,
+      "requirements": [
+        "TB-CHAPTER-01",
+        "TB-COMMIT-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "Each chapter is only submitted when the goals of this chapter and the conditions of the wind station are met at the same time"
+    },
+    {
+      "id": "D3.RANK",
+      "dimension": "D3",
+      "weight": 1,
+      "requirements": [
+        "TB-RANK-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "The final rating is determined by the total time submitted\u3001Re Calculate the number of trial and star numbers"
+    },
+    {
+      "id": "D4.RESPAWN",
+      "dimension": "D4",
+      "weight": 1,
+      "requirements": [
+        "TB-HAZARD-01"
+      ],
+      "evidence_method": "lifecycle",
+      "description": "Dangerous resurrection, retain the trial status of this chapter's stars and wind stations"
+    },
+    {
+      "id": "D4.RETRY",
+      "dimension": "D4",
+      "weight": 1,
+      "requirements": [
+        "TB-RESET-01"
+      ],
+      "evidence_method": "lifecycle",
+      "description": "Retry Restore the entry baseline and submitted star collection for this chapter"
+    },
+    {
+      "id": "D4.CHAPTERS",
+      "dimension": "D4",
+      "weight": 3,
+      "requirements": [
+        "TB-CAMPAIGN-01",
+        "TB-COMMIT-01",
+        "TB-CARRY-01"
+      ],
+      "evidence_method": "lifecycle",
+      "description": "Complete the three chapters in sequence and submit them once each"
+    },
+    {
+      "id": "D4.SUCCESS",
+      "dimension": "D4",
+      "weight": 2,
+      "requirements": [
+        "TB-CHAPTER-01"
+      ],
+      "evidence_method": "lifecycle",
+      "description": "Complete the entire flight campaign with normal input"
+    },
+    {
+      "id": "D4.ORDER",
+      "dimension": "D4",
+      "weight": 1,
+      "requirements": [
+        "TB-CLEAN-01"
+      ],
+      "evidence_method": "lifecycle",
+      "description": "Repeat Next Do not skip unfinished chapters"
+    },
+    {
+      "id": "D4.REOPEN",
+      "dimension": "D4",
+      "weight": 1,
+      "requirements": [
+        "TB-PERSIST-01",
+        "TB-CARRY-01"
+      ],
+      "evidence_method": "lifecycle",
+      "description": "After closing and reopening Continue Restore clean Chapter 3 and submitted stars"
+    },
+    {
+      "id": "D4.RESET",
+      "dimension": "D4",
+      "weight": 1,
+      "requirements": [
+        "TB-RESET-01",
+        "TB-PERSIST-01"
+      ],
+      "evidence_method": "lifecycle",
+      "description": "Complete status\u3001New campaign and Retry Clean up the correct range"
+    },
+    {
+      "id": "D5.MENU",
+      "dimension": "D5",
+      "weight": 1,
+      "requirements": [
+        "TB-UI-01"
+      ],
+      "evidence_method": "visual",
+      "description": "Menu screenshots are not empty and the entrance is visible"
+    },
+    {
+      "id": "D5.HUD",
+      "dimension": "D5",
+      "weight": 2,
+      "requirements": [
+        "TB-UI-01"
+      ],
+      "evidence_method": "visual",
+      "description": "Time\u3001Stars\u3001Retry\u3001Checkpoint\u3001Wind and Wind Station status are actually readable on the real screen"
+    },
+    {
+      "id": "D5.PAUSE",
+      "dimension": "D5",
+      "weight": 1,
+      "requirements": [
+        "TB-PAUSE-01",
+        "TB-UI-01"
+      ],
+      "evidence_method": "visual",
+      "description": "Pause layer and controls are actually visible"
+    },
+    {
+      "id": "D5.FEEDBACK",
+      "dimension": "D5",
+      "weight": 2,
+      "requirements": [
+        "TB-UI-01",
+        "TB-HAZARD-01",
+        "TB-STATION-01"
+      ],
+      "evidence_method": "visual",
+      "description": "Danger Resurrection\u3001Checkpoint\u3001Stars and Wind Station feedback are visible"
+    },
+    {
+      "id": "D5.RESULT",
+      "dimension": "D5",
+      "weight": 1,
+      "requirements": [
+        "TB-UI-01",
+        "TB-RANK-01"
+      ],
+      "evidence_method": "visual",
+      "description": "Chapter results and final rating screen are actually visible"
+    }
+  ]
+}

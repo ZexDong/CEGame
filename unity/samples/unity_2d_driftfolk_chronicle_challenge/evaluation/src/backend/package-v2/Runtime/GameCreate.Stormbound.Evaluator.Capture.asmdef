@@ -1,0 +1,11 @@
+{
+  "name": "GameCreate.Stormbound.Evaluator.Capture",
+  "references": [
+    "GameCreate.Session",
+    "GameCreate.Stormbound.SessionContract",
+    "GameCreate.Evaluation.Session",
+    "UnityEngine.ScreenCaptureModule",
+    "Unity.InputSystem"
+  ],
+  "autoReferenced": true
+}

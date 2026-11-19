@@ -1,0 +1,5 @@
+{
+  "name":"Tidal Lock Dispatch public palette",
+  "colors":{"background":"#101923","structure":"#344554","water":"#1FAFC3","active":"#33D6C2","industrial":"#F0B84A","hazard":"#E6534B","complete":"#55D66B","text":"#F2F6F8"},
+  "note":"Recommended visual palette; semantic protocol and readability requirements remain authoritative."
+}

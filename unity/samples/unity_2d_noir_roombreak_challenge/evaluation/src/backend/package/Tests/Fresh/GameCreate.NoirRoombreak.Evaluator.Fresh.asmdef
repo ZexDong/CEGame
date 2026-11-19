@@ -1,0 +1,21 @@
+{
+  "name": "GameCreate.NoirRoombreak.Evaluator.Fresh",
+  "rootNamespace": "GameCreate.NoirRoombreak.Evaluator",
+  "references": [
+    "GameCreate.Benchmark.NoirRoombreak.Contracts",
+    "Unity.InputSystem",
+    "Unity.ugui"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

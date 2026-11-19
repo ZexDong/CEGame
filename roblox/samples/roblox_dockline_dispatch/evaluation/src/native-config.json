@@ -1,0 +1,8 @@
+{
+  "family": "nested",
+  "native_subdir": "evaluation",
+  "place": "DocklineDispatchCandidate.rbxlx",
+  "native_zip": "DocklineDispatchCandidate_project.zip",
+  "sample_id": "roblox_dockline_dispatch",
+  "requirement_prefix": "DD"
+}

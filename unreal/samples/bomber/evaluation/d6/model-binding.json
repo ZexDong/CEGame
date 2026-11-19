@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "selection": "Evaluator configuration chooses one compatible vision model before the run; the same returned model identity is required for all three rounds.",
+  "model_argument": "-Model",
+  "environment_override": "BOMBER_VLM_MODEL",
+  "default_model": "gpt-6-astra",
+  "transport": "chat_completions",
+  "max_tokens": 3000,
+  "sampling": "service_default",
+  "timeout_seconds": 240,
+  "credential_source": "D6_API_KEY, NEWAPI_API_KEY, or OPENAI_API_KEY process environment only",
+  "credential_persisted": false,
+  "base_url_argument": "-BaseUrl",
+  "base_url_environment": "BOMBER_VLM_BASE_URL or OPENAI_BASE_URL",
+  "same_model_all_rounds": true,
+  "capability_receipt": "vlm/binding.json"
+}

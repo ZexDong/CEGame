@@ -1,0 +1,16 @@
+Tidal Lock Dispatch RUN REPORT
+
+Candidate:
+Studio version:
+Rojo version:
+Play verification date/time:
+
+Copy items 1–36 from CANDIDATE_SELF_CHECK.txt below and record for each:
+- Status: PASSED / FAILED / NOT RUN
+- Actual input and prerequisite:
+- Actual observation:
+- Evidence/log reference:
+- Fix and retest:
+- Remaining issue:
+
+Do not mark a dynamic item passed using source inspection or compilation alone.

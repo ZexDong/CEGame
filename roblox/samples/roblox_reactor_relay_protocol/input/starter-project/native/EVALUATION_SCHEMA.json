@@ -1,0 +1,462 @@
+{
+  "contract_version": "reactor-relay-v2-hard",
+  "ready_timeout_seconds": 12,
+  "workspace_attributes": {
+    "RR_ContractVersion": {
+      "type": "string",
+      "required_value": "reactor-relay-v2-hard"
+    },
+    "RR_Ready": {
+      "type": "boolean",
+      "required_value": true
+    }
+  },
+  "tags": {
+    "RR_GameState": {
+      "count": 1,
+      "classes": [
+        "Configuration"
+      ]
+    },
+    "RR_BayState": {
+      "count": 3,
+      "classes": [
+        "Configuration"
+      ],
+      "id_attribute": "RR_BayId"
+    },
+    "RR_Control": {
+      "count": 19,
+      "classes": [
+        "GuiButton"
+      ],
+      "id_attribute": "RR_TargetId"
+    },
+    "RR_HUDField": {
+      "count": 16,
+      "classes": [
+        "GuiObject"
+      ],
+      "id_attribute": "RR_FieldId"
+    }
+  },
+  "control_ids": [
+    "start_button",
+    "bay_a",
+    "bay_b",
+    "bay_c",
+    "power_minus",
+    "power_plus",
+    "coolant_minus",
+    "coolant_plus",
+    "phase_left",
+    "phase_right",
+    "lock_button",
+    "arm_button",
+    "commit_button",
+    "scan_button",
+    "purge_button",
+    "sequence_a",
+    "sequence_b",
+    "sequence_c",
+    "restart_button"
+  ],
+  "hud_field_ids": [
+    "Cycle",
+    "Timer",
+    "Integrity",
+    "Faults",
+    "PowerPool",
+    "CoolantPool",
+    "ScanCharges",
+    "Purge",
+    "SelectedBay",
+    "Incident",
+    "LockProgress",
+    "ExpectedLockBay",
+    "CommitArmed",
+    "ArmTimer",
+    "SequenceProgress",
+    "Feedback"
+  ],
+  "bay_ids": [
+    "A",
+    "B",
+    "C"
+  ],
+  "phase_values": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+  ],
+  "run_phases": [
+    "Menu",
+    "Cycle",
+    "Preview",
+    "Sequence",
+    "Won",
+    "Lost"
+  ],
+  "bay_statuses": [
+    "UnlockedUnstable",
+    "UnlockedStable",
+    "LockedStable",
+    "Faulted"
+  ],
+  "incident_order": [
+    "None",
+    "CoolantLeak.B",
+    "PhaseDrift.C",
+    "PowerSurge.A",
+    "DualLeak.AC",
+    "Crossfeed.BC"
+  ],
+  "lock_orders": [
+    [
+      "A",
+      "B",
+      "C"
+    ],
+    [
+      "B",
+      "C",
+      "A"
+    ],
+    [
+      "C",
+      "A",
+      "B"
+    ],
+    [
+      "B",
+      "A",
+      "C"
+    ],
+    [
+      "A",
+      "C",
+      "B"
+    ],
+    [
+      "C",
+      "B",
+      "A"
+    ]
+  ],
+  "final_sequence": [
+    "A",
+    "C",
+    "B",
+    "A",
+    "C",
+    "B",
+    "C",
+    "A"
+  ],
+  "cycle_targets": [
+    {
+      "cycle": 1,
+      "base": {
+        "A": "2/1/0",
+        "B": "3/2/1",
+        "C": "2/3/-1"
+      },
+      "incident": "None",
+      "effective": {
+        "A": "2/1/0",
+        "B": "3/2/1",
+        "C": "2/3/-1"
+      }
+    },
+    {
+      "cycle": 2,
+      "base": {
+        "A": "1/2/-1",
+        "B": "3/1/2",
+        "C": "2/2/0"
+      },
+      "incident": "CoolantLeak.B",
+      "effective": {
+        "A": "1/2/-1",
+        "B": "3/2/2",
+        "C": "2/2/0"
+      }
+    },
+    {
+      "cycle": 3,
+      "base": {
+        "A": "4/1/1",
+        "B": "1/2/-2",
+        "C": "2/3/0"
+      },
+      "incident": "PhaseDrift.C",
+      "effective": {
+        "A": "4/1/1",
+        "B": "1/2/-2",
+        "C": "2/3/1"
+      }
+    },
+    {
+      "cycle": 4,
+      "base": {
+        "A": "2/2/-2",
+        "B": "2/1/1",
+        "C": "2/3/2"
+      },
+      "incident": "PowerSurge.A",
+      "effective": {
+        "A": "3/2/-2",
+        "B": "2/1/1",
+        "C": "2/3/2"
+      }
+    },
+    {
+      "cycle": 5,
+      "base": {
+        "A": "3/1/2",
+        "B": "2/2/0",
+        "C": "2/1/-1"
+      },
+      "incident": "DualLeak.AC",
+      "effective": {
+        "A": "3/2/2",
+        "B": "2/2/0",
+        "C": "2/2/-1"
+      }
+    },
+    {
+      "cycle": 6,
+      "base": {
+        "A": "1/2/0",
+        "B": "4/1/-2",
+        "C": "2/3/2"
+      },
+      "incident": "Crossfeed.BC",
+      "effective": {
+        "A": "1/2/0",
+        "B": "2/1/-2",
+        "C": "4/3/2"
+      }
+    }
+  ],
+  "logical_layout": {
+    "canvas": [
+      1600,
+      900
+    ],
+    "bay_panels": {
+      "A": [
+        60,
+        120,
+        480,
+        400
+      ],
+      "B": [
+        560,
+        120,
+        480,
+        400
+      ],
+      "C": [
+        1060,
+        120,
+        480,
+        400
+      ]
+    },
+    "controls": {
+      "start_button": [
+        600,
+        390,
+        400,
+        120
+      ],
+      "restart_button": [
+        1340,
+        28,
+        180,
+        52
+      ],
+      "lock_button": [
+        980,
+        560,
+        180,
+        56
+      ],
+      "bay_a": [
+        80,
+        145,
+        440,
+        56
+      ],
+      "bay_b": [
+        580,
+        145,
+        440,
+        56
+      ],
+      "bay_c": [
+        1080,
+        145,
+        440,
+        56
+      ],
+      "power_minus": [
+        80,
+        560,
+        120,
+        56
+      ],
+      "power_plus": [
+        220,
+        560,
+        120,
+        56
+      ],
+      "arm_button": [
+        1180,
+        560,
+        160,
+        56
+      ],
+      "coolant_minus": [
+        380,
+        560,
+        120,
+        56
+      ],
+      "coolant_plus": [
+        520,
+        560,
+        120,
+        56
+      ],
+      "scan_button": [
+        80,
+        650,
+        260,
+        56
+      ],
+      "phase_left": [
+        680,
+        560,
+        120,
+        56
+      ],
+      "phase_right": [
+        820,
+        560,
+        120,
+        56
+      ],
+      "commit_button": [
+        1360,
+        560,
+        160,
+        56
+      ],
+      "purge_button": [
+        360,
+        650,
+        260,
+        56
+      ],
+      "sequence_a": [
+        440,
+        480,
+        200,
+        110
+      ],
+      "sequence_b": [
+        700,
+        480,
+        200,
+        110
+      ],
+      "sequence_c": [
+        960,
+        480,
+        200,
+        110
+      ]
+    }
+  },
+  "initial": {
+    "cycle": 1,
+    "time_remaining": 18,
+    "integrity": 100,
+    "faults": 0,
+    "unallocated_power": 7,
+    "unallocated_coolant": 6,
+    "scan_charges": 1,
+    "purge_available": true,
+    "selected_bay": "None",
+    "lock_progress": 0,
+    "expected_lock_bay": "A",
+    "commit_armed": false,
+    "commit_arm_deadline": 0,
+    "sequence_index": 0
+  },
+  "limits": {
+    "bay_power": [
+      0,
+      4
+    ],
+    "bay_coolant": [
+      0,
+      3
+    ],
+    "phase": [
+      -2,
+      2
+    ],
+    "target_power_total_max": 7,
+    "target_coolant_total_max": 6,
+    "loss_integrity_at_or_below": 0,
+    "loss_faults_at_or_above": 4,
+    "unstable_lock_integrity_cost": 8,
+    "wrong_order_integrity_cost": 10,
+    "arm_expiry_integrity_cost": 10,
+    "purge_integrity_cost": 20
+  },
+  "timing": {
+    "state_reflection_seconds": 0.25,
+    "feedback_visible_seconds": 1.0,
+    "cycle_seconds": 18,
+    "stable_match_seconds": 0.75,
+    "commit_arm_seconds": 3,
+    "scan_preview_seconds": 4,
+    "sequence_preview_symbol_seconds": 0.6,
+    "sequence_preview_gap_seconds": 0.25,
+    "sequence_input_seconds": 6,
+    "restart_reflection_seconds": 2
+  },
+  "input": {
+    "primary": "complete_left_button_press_release_inside_live_control",
+    "restart_key": "R",
+    "minimum_hit_size": [
+      44,
+      32
+    ],
+    "optional_bay_keys": {
+      "1": "A",
+      "2": "B",
+      "3": "C"
+    }
+  },
+  "rejection_codes": [
+    "None",
+    "WrongPhase",
+    "NoBaySelected",
+    "Locked",
+    "Unstable",
+    "WrongOrder",
+    "Unarmed",
+    "Expired",
+    "ResourceLimit",
+    "Unavailable",
+    "AlreadyUsed"
+  ]
+}

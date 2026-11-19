@@ -1,0 +1,72 @@
+{
+  "schema_version": "2.0",
+  "engine": "unreal",
+  "scope": "native_task_input_and_evaluator",
+  "samples": [
+    {
+      "sample_id": "action_roguelike",
+      "title": "Rift Hunting",
+      "path": "samples/action_roguelike",
+      "engine_version": "5.6.1",
+      "release_status": "packaged",
+      "scope": "public_distribution_only"
+    },
+    {
+      "sample_id": "bomber",
+      "title": "Bomber Local Duel",
+      "path": "samples/bomber",
+      "engine_version": "5.7.4",
+      "release_status": "packaged",
+      "scope": "public_distribution_only"
+    },
+    {
+      "sample_id": "bonekest",
+      "title": "BoneMaze",
+      "path": "samples/bonekest",
+      "engine_version": "5.7.4",
+      "release_status": "packaged",
+      "scope": "public_distribution_only"
+    },
+    {
+      "sample_id": "captain_2d_platformer",
+      "title": "Captain's Key Run",
+      "path": "samples/captain_2d_platformer",
+      "engine_version": "5.7.4",
+      "release_status": "packaged",
+      "scope": "public_distribution_only"
+    },
+    {
+      "sample_id": "chomp",
+      "title": "Chomp: Neon Maze Chase",
+      "path": "samples/chomp",
+      "engine_version": "5.7.4",
+      "release_status": "packaged",
+      "scope": "public_distribution_only"
+    },
+    {
+      "sample_id": "gems_bond",
+      "title": "Gem's Bond",
+      "path": "samples/gems_bond",
+      "engine_version": "5.7.4",
+      "release_status": "packaged",
+      "scope": "public_distribution_only"
+    },
+    {
+      "sample_id": "night_sky_engine",
+      "title": "Night Sky Duel Lab",
+      "path": "samples/night_sky_engine",
+      "engine_version": "5.7.4",
+      "release_status": "packaged",
+      "scope": "public_distribution_only"
+    },
+    {
+      "sample_id": "roll_ball",
+      "title": "RollBall Fixed Maze",
+      "path": "samples/roll_ball",
+      "engine_version": "5.7.4",
+      "release_status": "packaged",
+      "scope": "public_distribution_only"
+    }
+  ],
+  "task_count": 8
+}

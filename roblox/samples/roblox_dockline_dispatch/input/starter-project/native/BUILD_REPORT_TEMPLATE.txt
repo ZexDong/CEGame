@@ -1,0 +1,22 @@
+Dockline Dispatch BUILD_REPORT
+
+Candidate task:
+Model/framework:
+Build time:
+Source package hash:
+
+Rojo build command:
+Rojo build result: PASS / FAIL / NOT RUN
+Output rbxlx:
+
+Static checks performed:
+
+DD_NavLink implementation: Configuration + DD_Enabled Attribute / NOT CHECKED
+
+Runtime verification: NOT RUN
+
+Known build errors:
+
+Known implementation limitations:
+
+Notes:

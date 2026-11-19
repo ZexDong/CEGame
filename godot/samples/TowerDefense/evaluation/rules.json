@@ -1,0 +1,443 @@
+{
+  "schema_version": "2.1",
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "method": "engine_collection_and_requirement_level_review",
+  "checks": [
+    {
+      "id": "D1-01",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-01"
+      ],
+      "description": "Project imports without an engine failure",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-02",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-02"
+      ],
+      "description": "Configured main scene runs",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-03",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-03"
+      ],
+      "description": "No candidate parse, script or resource loading errors",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-04",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-04"
+      ],
+      "description": "Live dashboard snapshots are available",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-05",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-05"
+      ],
+      "description": "Public dashboard shape and required numeric slots",
+      "max_score": 2.0
+    },
+    {
+      "id": "D2-01",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:ENTRY-01",
+        "gdd:ENTRY-02",
+        "common-baseline:CB-01",
+        "common-baseline:CB-02"
+      ],
+      "description": "The initial menu, START, Grassland selection, and battlefield entry are complete and operable",
+      "trajectory": "entry_and_initial",
+      "max_score": 3.0
+    },
+    {
+      "id": "D3-01",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:STATE-01",
+        "gdd:STATE-02"
+      ],
+      "description": "Initial 200 Gold, 30/30 base HP, Wave 0/10, countdown, and zero entities are correct",
+      "trajectory": "entry_and_initial",
+      "max_score": 2.0
+    },
+    {
+      "id": "D2-02",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:MAP-01",
+        "gdd:MAP-02"
+      ],
+      "description": "The Grassland map, continuous grass, stone road, and route relationships are clearly visible",
+      "trajectory": "entry_and_initial",
+      "max_score": 3.0
+    },
+    {
+      "id": "D2-10",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:HUD-02",
+        "gdd:HUD-03",
+        "gdd:ASSET-01",
+        "gdd:ASSET-02",
+        "gdd:ASSET-03",
+        "gdd:ASSET-04"
+      ],
+      "description": "Menu, map, four towers, four Dino types, and procedural projectiles/durability UI use the correct asset identities",
+      "trajectory": "entry_and_initial",
+      "max_score": 3.0
+    },
+    {
+      "id": "D5-ENTRY",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-07",
+        "common-baseline:CB-08",
+        "common-baseline:CB-10"
+      ],
+      "description": "START, Grassland, tower cards, and the main HUD are visible, readable, and inside the window",
+      "trajectory": "entry_and_initial",
+      "max_score": 2.0
+    },
+    {
+      "id": "D5-HUD",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:HUD-01",
+        "common-baseline:CB-09"
+      ],
+      "description": "Gold, base HP, Wave, countdown, and Remaining are synchronized with the dashboard",
+      "trajectory": "entry_and_initial",
+      "max_score": 2.0
+    },
+    {
+      "id": "D2-03",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:BUILD-01",
+        "common-baseline:CB-04"
+      ],
+      "description": "All four tower cards support free dragging, legal preview/building, and complete invalid-drop feedback",
+      "trajectory": "building_and_management",
+      "max_score": 3.0
+    },
+    {
+      "id": "D3-03",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:BUILD-02",
+        "gdd:BUILD-03",
+        "gdd:BUILD-04",
+        "gdd:BUILD-05",
+        "gdd:BUILD-06"
+      ],
+      "description": "Building on continuous grass works; road/obstacle/overlap/bounds/funds rejections never deduct resources incorrectly",
+      "trajectory": "building_and_management",
+      "max_score": 2.0
+    },
+    {
+      "id": "D2-04",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:TOWER-01",
+        "gdd:TOWER-02",
+        "gdd:TOWER-03",
+        "gdd:TOWER-04"
+      ],
+      "description": "Gatling, Flamethrower, Raygun, and Explosive roles, assets, and attack presentations are distinguishable",
+      "trajectory": "building_and_management",
+      "max_score": 3.0
+    },
+    {
+      "id": "D3-04",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:TOWER_HP-01",
+        "gdd:TOWER_HP-02",
+        "gdd:TOWER_HP-03"
+      ],
+      "description": "Maximum tower HP at each level, damage, upgrade ratios, repair, and destruction/refund rules are correct",
+      "trajectory": "building_and_management",
+      "max_score": 2.0
+    },
+    {
+      "id": "D2-07",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:MANAGE-01",
+        "gdd:UPGRADE-01",
+        "gdd:SELL-01"
+      ],
+      "description": "Tower details, upgrades, sale, level cap, and economy feedback are complete",
+      "trajectory": "building_and_management",
+      "max_score": 3.0
+    },
+    {
+      "id": "D2-08",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:REPAIR-01",
+        "gdd:REPAIR-02"
+      ],
+      "description": "Tower health bars, HP text, Repair - 20 Gold, and repair feedback are complete",
+      "trajectory": "building_and_management",
+      "max_score": 3.0
+    },
+    {
+      "id": "D3-05",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ECON-01",
+        "gdd:ECON-02"
+      ],
+      "description": "Gold accounting for purchases, kills, upgrades, sales, and repairs is correct",
+      "trajectory": "building_and_management",
+      "max_score": 2.0
+    },
+    {
+      "id": "D5-BUILD",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:FEEDBACK-01",
+        "common-baseline:CB-05"
+      ],
+      "description": "Drag preview, rejection, building, selection, upgrade, sale, and repair feedback are clear and consistent",
+      "trajectory": "building_and_management",
+      "max_score": 2.0
+    },
+    {
+      "id": "D2-05",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:WAVE-01",
+        "gdd:WAVE-02"
+      ],
+      "description": "Ten-wave countdowns, fixed spawn order, inter-wave progression, and remaining-enemy counts are complete",
+      "trajectory": "waves_attacks_and_success",
+      "max_score": 3.0
+    },
+    {
+      "id": "D3-02",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ROUTE-01",
+        "gdd:ROUTE-02"
+      ],
+      "description": "Enemies follow the public main road to the base; leaks resolve only after fully arriving",
+      "trajectory": "waves_attacks_and_success",
+      "max_score": 2.0
+    },
+    {
+      "id": "D3-06",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:WAVE-03",
+        "gdd:WAVE-04",
+        "gdd:WAVE-05"
+      ],
+      "description": "Wave counts, composition, 0.35-second spawn intervals, and progression after a full clear are correct",
+      "trajectory": "waves_attacks_and_success",
+      "max_score": 2.0
+    },
+    {
+      "id": "D2-06",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:ENEMY_ATTACK-01",
+        "gdd:ENEMY_ATTACK-02"
+      ],
+      "description": "Red/Green attack while moving; both red projectile types, tower-hit damage, and projectile cancellation are complete",
+      "trajectory": "waves_attacks_and_success",
+      "max_score": 3.0
+    },
+    {
+      "id": "D3-08",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ENEMY_ATTACK-03",
+        "gdd:ENEMY_ATTACK-04"
+      ],
+      "description": "Red/Green both have 102 px range and correct intervals, diameters, speeds, and 1/5 hit damage; Blue/Yellow do not attack towers",
+      "trajectory": "waves_attacks_and_success",
+      "max_score": 2.0
+    },
+    {
+      "id": "D3-07",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ENEMY-01",
+        "gdd:BOSS-01"
+      ],
+      "description": "Wave 10 spawns 20 Red/6 Blue/6 Yellow followed by one 1.6x Green boss with correct attributes",
+      "trajectory": "waves_attacks_and_success",
+      "max_score": 2.0
+    },
+    {
+      "id": "D3-09",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:BALANCE-01",
+        "gdd:BALANCE-02"
+      ],
+      "description": "A normal public strategy can win; any single level-1 tower loses before Wave 10",
+      "trajectory": "waves_attacks_and_success",
+      "max_score": 2.0
+    },
+    {
+      "id": "D2-09",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:RESTART-01",
+        "gdd:RESTART-02",
+        "gdd:MENU-01"
+      ],
+      "description": "Mutually exclusive Map Complete/Game Over outcomes and Restart/Main Menu flows are complete",
+      "trajectory": "waves_attacks_and_success",
+      "max_score": 3.0
+    },
+    {
+      "id": "D4-SUCCESS",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:SUCCESS-01",
+        "common-baseline:CB-11"
+      ],
+      "description": "A normal public strategy reaches one Map Complete after Wave 10 and the boss are fully resolved",
+      "trajectory": "waves_attacks_and_success",
+      "max_score": 5.0
+    },
+    {
+      "id": "D5-COMBAT",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:ASSET-05"
+      ],
+      "description": "Tower attacks, Dino projectiles, tower health bars, HP text, and Repair feedback are visible and synchronized",
+      "trajectory": "waves_attacks_and_success",
+      "max_score": 2.0
+    },
+    {
+      "id": "D4-LOSS",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:FAIL-01"
+      ],
+      "description": "Undefended leaks reduce base HP to zero and show a single Game Over with Retry",
+      "trajectory": "failure_and_restart",
+      "max_score": 5.0
+    },
+    {
+      "id": "D3-10",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-01",
+        "gdd:COMBAT-02",
+        "gdd:COMBAT-03",
+        "gdd:COMBAT-04",
+        "gdd:COMBAT-05",
+        "gdd:TERMINAL-01",
+        "gdd:REOPEN-01",
+        "common-baseline:CB-06",
+        "common-baseline:CB-14"
+      ],
+      "description": "Outcomes trigger once under the correct conditions; terminal freeze and Restart/Reopen cleanup are correct",
+      "trajectory": "failure_and_restart",
+      "max_score": 2.0
+    },
+    {
+      "id": "D4-RESTART",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-13"
+      ],
+      "description": "Repeated Restart restores the current map to a clean initial state",
+      "trajectory": "failure_and_restart",
+      "max_score": 5.0
+    },
+    {
+      "id": "D4-REOPEN",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-03",
+        "common-baseline:CB-15"
+      ],
+      "description": "The old PID ends; the new PID returns to the initial menu without preserving the previous battle",
+      "trajectory": "lifecycle_reopen",
+      "max_score": 5.0
+    },
+    {
+      "id": "D5-END",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-12"
+      ],
+      "description": "Map Complete/Game Over reasons and subsequent Restart/Main Menu entries are clear and usable",
+      "trajectory": "lifecycle_reopen",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-01",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:composition"
+      ],
+      "description": "Overall composition and task visual identity",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-02",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:objects"
+      ],
+      "description": "Required objects, character and asset identity",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-03",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:ui"
+      ],
+      "description": "UI readability and information hierarchy",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-04",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:feedback"
+      ],
+      "description": "State transitions and visual feedback",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-05",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:consistency"
+      ],
+      "description": "Visual consistency across gameplay and result states",
+      "max_score": 2.0
+    }
+  ],
+  "d6_protocol": "d6/protocol.json"
+}

@@ -1,0 +1,475 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "unity.undercooked_kitchen_shift.v2",
+  "public_session_required": true,
+  "session_contract_version": "game-session/v1",
+  "public_capabilities": [
+    "saved-scene",
+    "chapter_entry",
+    "state_capture",
+    "state_restore",
+    "object_query",
+    "player_input",
+    "process_reopen"
+  ],
+  "leaves": [
+    {
+      "check_id": "D1_SCENE",
+      "alternative_routes": [
+        [
+          "saved-scene"
+        ]
+      ]
+    },
+    {
+      "check_id": "D1_CAMERA",
+      "alternative_routes": [
+        [
+          "saved-scene"
+        ]
+      ]
+    },
+    {
+      "check_id": "D1_RUNTIME",
+      "alternative_routes": [
+        [
+          "saved-scene"
+        ]
+      ]
+    },
+    {
+      "check_id": "D1_SESSION_ENTRY",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D1_SESSION_STATE",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D2_KITCHEN",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D2_MOVE_SWITCH",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D2_PICKUP",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D2_CHOP",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D2_COOK",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D2_BURN",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D2_PLATE",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D2_DELIVERY_ORDERS",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D2_EXPIRY",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D2_PAUSE",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D2_RESULT",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D2_ASSETS",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D3_SWITCH_OWNERSHIP",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D3_ITEM_UNIQUENESS",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D3_RAW_REJECTION",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D3_CHOP_TIMING",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D3_COOK_RULES",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D3_BURN_REJECTION",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D3_DELIVERY_ONCE",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D3_ORDER_RULES",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D3_PAUSE_FREEZE",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D3_RESET_CLEAN",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D4_MENU_START",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "object_query",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D4_ADJACENT_WORKFLOW",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D4_RESULT",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D4_RESTART",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D5_MENU",
+      "alternative_routes": [
+        [
+          "saved-scene"
+        ]
+      ]
+    },
+    {
+      "check_id": "D5_HUD_STATION",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D5_ACTION",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D5_PAUSE_RESULT",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D5_AUDIO",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "state_capture",
+          "object_query",
+          "state_restore",
+          "player_input"
+        ]
+      ]
+    },
+    {
+      "check_id": "D4_REOPEN",
+      "alternative_routes": [
+        [
+          "saved-scene",
+          "chapter_entry",
+          "object_query",
+          "player_input",
+          "state_restore"
+        ]
+      ]
+    }
+  ]
+}

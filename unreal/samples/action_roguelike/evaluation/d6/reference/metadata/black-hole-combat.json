@@ -1,0 +1,12 @@
+{
+  "state_id": "black-hole-combat",
+  "label": "Black Hole combat",
+  "reference_image": "reference/black-hole-combat.png",
+  "sha256": "de4d68d8f32bc84df9704d5f6087bd42fe89b6ab32ebe0760e60dc3e9ab3ded0",
+  "width": 1280,
+  "height": 720,
+  "source": "original_baseline",
+  "schema_version": "1.0",
+  "role": "fixed_reference_metadata",
+  "source_identity_sha256": "f58c977ad6b5fd15555748b0c017803e22dba03a5b67cc5b176dd1846b878cf4"
+}

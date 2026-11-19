@@ -1,0 +1,93 @@
+{
+  "gold": {
+    "source_hash_encoding": "UTF-8 without BOM with LF; exact complete Source/Config/uproject path set",
+    "source_files": {
+      "BoneMaze.uproject": "ef210830a9ed1f79be81214d9d6f6761fcb47cdbc6fbf98c74e221d8ada474bd",
+      "Config/DefaultEngine.ini": "0f42b0bf5a1696f92763d870f4719a3ee56b79179d456138e370c0801890abd3",
+      "Config/DefaultGame.ini": "5ee3e5ba5ca549a3090f96decd858d25ae1978e946fe1c0a2aaf9d8ac8d6fe22",
+      "Config/DefaultInput.ini": "2de0496354fa4b068c3200ba8e0be7e4f71af031db9380b1961c43ade09ddf7a",
+      "Source/BoneMaze/BoneGame.cpp": "74b749509101073e99dfbd51130df3e15859168d4dd38425a6beeeb5f9e35a38",
+      "Source/BoneMaze/BoneGame.h": "46b491431ee63954af2418978340d8a085cbb8df2f74cc2471094f94f78b8e66",
+      "Source/BoneMaze/BoneHUD.cpp": "2c163d102ad90514f5316751dcc82066c4878b36ca0946bf099163bfc3c7e6ed",
+      "Source/BoneMaze/BoneMaze.Build.cs": "3ca7db8ad90ad3e0cb87a1a92c635f496551818c01ce5f4f91f082b10c5cc2c6",
+      "Source/BoneMaze/BoneMaze.cpp": "3a0fd2f542e7b2f6bec05b6f71257d4c5a59ddaa15b829c078c52fd3306e7773",
+      "Source/BoneMaze/BoneObservation.cpp": "0113b8302f2b67ed096884a4a2c028d994cbbf796dc5bc19d16ccc55a5f5f0c2",
+      "Source/BoneMaze/BoneScene.cpp": "ff9d11183a7829327784567f8b6f1c442512f4bdd2316a12b1317f5701088ace",
+      "Source/BoneMaze/StarterGameMode.cpp": "3ff6ac66526e025a5b0de35f0fb6c959585fdd627f0a5c627bff52802d013bcd",
+      "Source/BoneMaze/StarterGameMode.h": "c3bbe1b5e6ddda7d0bb3343cb8dc806e533621777212b3c99656da4e0ea6dc63",
+      "Source/BoneMaze.Target.cs": "95a08fca488209a5cc5403a96e232fe8575d3f327d41874011fb33f83e11d9d3",
+      "Source/BoneMazeEditor.Target.cs": "f3228c90f4efa30bf3d19f95d42d96106deb1cd7e47ee10b2208f7d0d64ab384"
+    },
+    "module_directory": "Source/BoneMaze",
+    "module_build_file": "Source/BoneMaze/BoneMaze.Build.cs",
+    "renderer": {
+      "file": "Source/BoneMaze/BoneHUD.cpp",
+      "replacements": [
+        [
+          "if(!G||!Canvas)return;",
+          "if(!G||!Canvas)return;PrivateRender::Begin(Canvas);"
+        ],
+        [
+          "Canvas->DrawItem(Item);",
+          "PrivateRender::Item(Canvas,Item);"
+        ]
+      ]
+    },
+    "adapter": "GoldAdapter.cpp"
+  },
+  "untouched-input": {
+    "source_hash_encoding": "UTF-8 without BOM with LF; exact complete Source/Config/uproject path set",
+    "source_files": {
+      "BoneMaze.uproject": "ef210830a9ed1f79be81214d9d6f6761fcb47cdbc6fbf98c74e221d8ada474bd",
+      "Config/DefaultEngine.ini": "2fdce66dbe3bfc48953eb70da047a58c596d930242f71df4194791bb3dae60f1",
+      "Config/DefaultGame.ini": "5ee3e5ba5ca549a3090f96decd858d25ae1978e946fe1c0a2aaf9d8ac8d6fe22",
+      "Config/DefaultInput.ini": "2de0496354fa4b068c3200ba8e0be7e4f71af031db9380b1961c43ade09ddf7a",
+      "Source/BoneMaze/BoneMaze.Build.cs": "58a468d1ef3e8ecd2e9b2f7876f0861b3f38b0d2cf4522b031676cd5eb1da157",
+      "Source/BoneMaze/BoneMaze.cpp": "3a0fd2f542e7b2f6bec05b6f71257d4c5a59ddaa15b829c078c52fd3306e7773",
+      "Source/BoneMaze/StarterGameMode.cpp": "3ff6ac66526e025a5b0de35f0fb6c959585fdd627f0a5c627bff52802d013bcd",
+      "Source/BoneMaze/StarterGameMode.h": "c3bbe1b5e6ddda7d0bb3343cb8dc806e533621777212b3c99656da4e0ea6dc63",
+      "Source/BoneMaze.Target.cs": "95a08fca488209a5cc5403a96e232fe8575d3f327d41874011fb33f83e11d9d3",
+      "Source/BoneMazeEditor.Target.cs": "f3228c90f4efa30bf3d19f95d42d96106deb1cd7e47ee10b2208f7d0d64ab384"
+    },
+    "module_directory": "Source/BoneMaze",
+    "module_build_file": "Source/BoneMaze/BoneMaze.Build.cs",
+    "renderer": null,
+    "adapter": "StarterAdapter.cpp"
+  },
+  "ds-harness": {
+    "source_hash_encoding": "UTF-8 without BOM with LF; exact complete Source/Config/uproject path set",
+    "source_files": {
+      "BoneMaze.uproject": "ef210830a9ed1f79be81214d9d6f6761fcb47cdbc6fbf98c74e221d8ada474bd",
+      "Config/DefaultEngine.ini": "16c69a4dd7c97386d39fac1d20c8d2ab802332367f05ef788e469368a34441e0",
+      "Config/DefaultGame.ini": "5ee3e5ba5ca549a3090f96decd858d25ae1978e946fe1c0a2aaf9d8ac8d6fe22",
+      "Config/DefaultInput.ini": "2de0496354fa4b068c3200ba8e0be7e4f71af031db9380b1961c43ade09ddf7a",
+      "Source/BoneMaze/BoneMaze.Build.cs": "3ca7db8ad90ad3e0cb87a1a92c635f496551818c01ce5f4f91f082b10c5cc2c6",
+      "Source/BoneMaze/BoneMaze.cpp": "3a0fd2f542e7b2f6bec05b6f71257d4c5a59ddaa15b829c078c52fd3306e7773",
+      "Source/BoneMaze/BoneMazeGameMode.cpp": "03b754318d6ec1d5c2a8feb7cedca3d2df8dc53d15c2f69a92821f82247a75a4",
+      "Source/BoneMaze/BoneMazeGameMode.h": "340915d8a79bedcd7346c24d24ae9ea99301b6f24b700140eaccd5b9675d24ba",
+      "Source/BoneMaze/BoneMazeHUD.cpp": "6f7b608c09711d6cdd2616ee9c1a51b1ff8bf3154abf118d63f6aa375fc85b6e",
+      "Source/BoneMaze/BoneMazeHUD.h": "c332403ef3686699a8e8d72c7d4be257262d655da2bda1bc0b10f0749c600a34",
+      "Source/BoneMaze/BoneMazePawn.cpp": "a3f9021aad4cd92d21f2a6d426974a05562b085221dc535c1ed3aa97c97afb5c",
+      "Source/BoneMaze/BoneMazePawn.h": "17061ed29decfa2ef931304b9f16dc3961b0a1944de1be6fab3b9d3323c63125",
+      "Source/BoneMaze/BoneMazePlayerController.cpp": "867bcce85449c8b277cc29ef7e19eb6d063d9bfcd4777aae5b0d183483f51983",
+      "Source/BoneMaze/BoneMazePlayerController.h": "3433fc8584a50d6f92d562dbb6c8f37ddc4e4396df144dcb71fb6501c7dddfaf",
+      "Source/BoneMaze/BoneMazeTypes.h": "e25fe1cc3b7db5baa9ac2cbd5538d07e26002f26cea63db7a79f52c29805dc86",
+      "Source/BoneMaze/BoneMazeUi.h": "54da34c73a88dd0cfc24140f15330f5157e43cc077c568e59f2b821196671816",
+      "Source/BoneMaze.Target.cs": "95a08fca488209a5cc5403a96e232fe8575d3f327d41874011fb33f83e11d9d3",
+      "Source/BoneMazeEditor.Target.cs": "f3228c90f4efa30bf3d19f95d42d96106deb1cd7e47ee10b2208f7d0d64ab384"
+    },
+    "module_directory": "Source/BoneMaze",
+    "module_build_file": "Source/BoneMaze/BoneMaze.Build.cs",
+    "renderer": {
+      "file": "Source/BoneMaze/BoneMazeHUD.cpp",
+      "replacements": [
+        [
+          "if (!Canvas) return;",
+          "if (!Canvas) return;PrivateRender::Begin(Canvas);"
+        ]
+      ],
+      "include_after": "#include \"BoneMazeHUD.h\""
+    },
+    "adapter": "DsHarnessAdapter.cpp"
+  }
+}

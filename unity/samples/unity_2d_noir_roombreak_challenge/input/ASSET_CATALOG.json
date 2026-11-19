@@ -1,0 +1,1214 @@
+{
+  "schema_version": 1,
+  "language": "en",
+  "benchmark_id": "unity.noir_roombreak_challenge.v1",
+  "scope": "Static facts about the public supplied source media only. This catalog does not prescribe the final room layout, encounter placement, camera composition, or implementation structure.",
+  "protected_root": "Assets/TaskAssets/NoirSource",
+  "contact_sheet": "ASSET_CONTACT_SHEET.png",
+  "critical_asset_notes": [
+    "ASSET_CONTACT_SHEET.png is supplied with the initial request as the visual inventory; use this catalog for exact path, import, and visible-bounds facts.",
+    "Do not edit protected importers. Create any derived crop, Sprite, material, animation, or prefab under Assets/NoirChallenge.",
+    "Do not use Vulto JPG frames as room backgrounds; they are opaque character reference frames on black.",
+    "Source prefabs with omitted upstream script dependencies are not runnable answers. Reuse their media/components selectively and author gameplay behavior in the writable root.",
+    "Use the supplied Player, Anda, Obser, room geometry, VFX/lighting, and audio sources in recognizable player-facing roles."
+  ],
+  "role_to_path_map": {
+    "player": {
+      "primary": [
+        "Assets/TaskAssets/NoirSource/Sprites/Player/Idle.png",
+        "Assets/TaskAssets/NoirSource/Sprites/Player/BackAttack.png",
+        "Assets/TaskAssets/NoirSource/Prefabs/GameManager/Player.prefab"
+      ],
+      "supplementary": [
+        "Assets/TaskAssets/NoirSource/Animation/Player.controller",
+        "Assets/TaskAssets/NoirSource/materials/WhiteGlowMaterial.mat",
+        "Assets/TaskAssets/NoirSource/materials/BackstabSparks.mat"
+      ],
+      "audio": [
+        "Assets/TaskAssets/NoirSource/Audio/Player/Attack.wav",
+        "Assets/TaskAssets/NoirSource/Audio/Player/Dash.wav",
+        "Assets/TaskAssets/NoirSource/Audio/Player/Jump.wav",
+        "Assets/TaskAssets/NoirSource/Audio/Player/Kill.wav",
+        "Assets/TaskAssets/NoirSource/Audio/Player/PlayerDeath.wav"
+      ]
+    },
+    "anda": {
+      "primary": [
+        "Assets/TaskAssets/NoirSource/Sprites/Anda/AndaIdle.png",
+        "Assets/TaskAssets/NoirSource/Sprites/Anda/AndaDead.png",
+        "Assets/TaskAssets/NoirSource/Prefabs/Enemies/Anda.prefab"
+      ],
+      "supplementary": [
+        "Assets/TaskAssets/NoirSource/materials/RenderConeMaterial.mat"
+      ],
+      "audio": [
+        "Assets/TaskAssets/NoirSource/Audio/Enemy/AlertSound.wav",
+        "Assets/TaskAssets/NoirSource/Audio/Enemy/Dash.wav"
+      ]
+    },
+    "obser": {
+      "primary": [
+        "Assets/TaskAssets/NoirSource/Sprites/Vig/Vigia.png",
+        "Assets/TaskAssets/NoirSource/Prefabs/Enemies/Obser.prefab"
+      ],
+      "supplementary": [
+        "Assets/TaskAssets/NoirSource/materials/LaserMaterial.mat",
+        "Assets/TaskAssets/NoirSource/materials/LaserAura.mat",
+        "Assets/TaskAssets/NoirSource/materials/RenderConeMaterial.mat"
+      ],
+      "audio": [
+        "Assets/TaskAssets/NoirSource/Audio/Enemy/AlertSound.wav",
+        "Assets/TaskAssets/NoirSource/Audio/Enemy/laserShoot.wav"
+      ]
+    },
+    "room_geometry": {
+      "primary": [
+        "Assets/TaskAssets/NoirSource/Sprites/Tile/Ground.png",
+        "Assets/TaskAssets/NoirSource/Sprites/Tile/Obstacle.png",
+        "Assets/TaskAssets/NoirSource/Prefabs/LevelDesing/Grid.prefab"
+      ],
+      "supplementary": [
+        "Assets/TaskAssets/NoirSource/Sprites/Tile/TilePalette/Ground.asset",
+        "Assets/TaskAssets/NoirSource/Sprites/Tile/TilePalette/Obstacle.asset"
+      ]
+    },
+    "vfx_and_lighting": {
+      "primary": [
+        "Assets/TaskAssets/NoirSource/Prefabs/VFX/VFX.prefab",
+        "Assets/TaskAssets/NoirSource/Prefabs/GameManager/Global Light 2D.prefab",
+        "Assets/TaskAssets/NoirSource/Prefabs/GameManager/Global Volume.prefab"
+      ],
+      "supplementary": [
+        "Assets/TaskAssets/NoirSource/materials/BackstabSparks.mat",
+        "Assets/TaskAssets/NoirSource/materials/LaserAura.mat",
+        "Assets/TaskAssets/NoirSource/materials/LaserAuraMaterial.mat",
+        "Assets/TaskAssets/NoirSource/materials/LaserMaterial.mat",
+        "Assets/TaskAssets/NoirSource/materials/RenderConeMaterial.mat",
+        "Assets/TaskAssets/NoirSource/materials/WhiteGlowMaterial.mat"
+      ]
+    },
+    "supplementary_vulto_frames": {
+      "primary": [
+        "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle1.jpg",
+        "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle2.jpg",
+        "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle3.jpg",
+        "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle4.jpg",
+        "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle5.jpg",
+        "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle6.jpg",
+        "Assets/TaskAssets/NoirSource/Sprites/Vulto/VultoDownAttack.jpg",
+        "Assets/TaskAssets/NoirSource/Sprites/Vulto/VultoLaunchSword.jpg",
+        "Assets/TaskAssets/NoirSource/Sprites/Vulto/VultoStun.jpg",
+        "Assets/TaskAssets/NoirSource/Sprites/Vulto/VultoSword.jpg"
+      ],
+      "warning": "Opaque black character reference frames. They are not scenery or a full-screen background."
+    }
+  },
+  "sprite_and_texture_facts": [
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Anda/AndaDead.png",
+      "semantic_role": "anda_defeated",
+      "role_description": "Anda defeated silhouette",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGBA",
+      "has_alpha_channel": true,
+      "content_bounds": {
+        "x": 54,
+        "y": 68,
+        "width": 7,
+        "height": 2,
+        "coordinate_origin": "top-left",
+        "method": "alpha_nonzero"
+      },
+      "padding_pixels": {
+        "left": 54,
+        "top": 68,
+        "right": 67,
+        "bottom": 58
+      },
+      "importer": {
+        "texture_type": 8,
+        "sprite_mode": "multiple",
+        "pixels_per_unit": 100,
+        "alpha_is_transparency": true,
+        "declared_slices": [],
+        "effective_region_note": "importer-defined"
+      },
+      "handling_notes": [
+        "The visible silhouette occupies only a small part of the source texture. Inspect the declared slice and rendered bounds; use a project-owned derived crop or a Sprite created from the supplied texture instead of scaling the padded texture blindly.",
+        "The declared slice covers the full texture while the nontransparent defeated mark is tiny; a derived crop may be needed for a recognizable rendered result."
+      ]
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Anda/AndaIdle.png",
+      "semantic_role": "anda_idle",
+      "role_description": "Anda patrol/alert/chase silhouette",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGBA",
+      "has_alpha_channel": true,
+      "content_bounds": {
+        "x": 55,
+        "y": 60,
+        "width": 6,
+        "height": 8,
+        "coordinate_origin": "top-left",
+        "method": "alpha_nonzero"
+      },
+      "padding_pixels": {
+        "left": 55,
+        "top": 60,
+        "right": 67,
+        "bottom": 60
+      },
+      "importer": {
+        "texture_type": 8,
+        "sprite_mode": "multiple",
+        "pixels_per_unit": 100,
+        "alpha_is_transparency": true,
+        "declared_slices": [],
+        "effective_region_note": "importer-defined"
+      },
+      "handling_notes": [
+        "The visible silhouette occupies only a small part of the source texture. Inspect the declared slice and rendered bounds; use a project-owned derived crop or a Sprite created from the supplied texture instead of scaling the padded texture blindly."
+      ]
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Player/BackAttack.png",
+      "semantic_role": "player_backstab",
+      "role_description": "Player backstab/attack silhouette",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGBA",
+      "has_alpha_channel": true,
+      "content_bounds": {
+        "x": 61,
+        "y": 72,
+        "width": 7,
+        "height": 7,
+        "coordinate_origin": "top-left",
+        "method": "alpha_nonzero"
+      },
+      "padding_pixels": {
+        "left": 61,
+        "top": 72,
+        "right": 60,
+        "bottom": 49
+      },
+      "importer": {
+        "texture_type": 8,
+        "sprite_mode": "multiple",
+        "pixels_per_unit": 100,
+        "alpha_is_transparency": true,
+        "declared_slices": [],
+        "effective_region_note": "importer-defined"
+      },
+      "handling_notes": [
+        "The visible silhouette occupies only a small part of the source texture. Inspect the declared slice and rendered bounds; use a project-owned derived crop or a Sprite created from the supplied texture instead of scaling the padded texture blindly."
+      ]
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Player/Idle.png",
+      "semantic_role": "player_idle",
+      "role_description": "Player primary idle silhouette",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGBA",
+      "has_alpha_channel": true,
+      "content_bounds": {
+        "x": 61,
+        "y": 72,
+        "width": 6,
+        "height": 7,
+        "coordinate_origin": "top-left",
+        "method": "alpha_nonzero"
+      },
+      "padding_pixels": {
+        "left": 61,
+        "top": 72,
+        "right": 61,
+        "bottom": 49
+      },
+      "importer": {
+        "texture_type": 8,
+        "sprite_mode": "single",
+        "pixels_per_unit": 100,
+        "alpha_is_transparency": true,
+        "declared_slices": [],
+        "effective_region_note": "full texture"
+      },
+      "handling_notes": [
+        "The visible silhouette occupies only a small part of the source texture. Inspect the declared slice and rendered bounds; use a project-owned derived crop or a Sprite created from the supplied texture instead of scaling the padded texture blindly.",
+        "Single-sprite import uses the full 128x128 texture even though the nontransparent silhouette is only a few pixels wide. A scale near 1 will look almost empty."
+      ]
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Tile/Ground.png",
+      "semantic_role": "room_ground",
+      "role_description": "Room floor and platform surface",
+      "source_pixels": {
+        "width": 256,
+        "height": 256
+      },
+      "source_color_mode": "RGB",
+      "has_alpha_channel": false,
+      "content_bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256,
+        "coordinate_origin": "top-left",
+        "method": "non_dark_luma_gt_24"
+      },
+      "padding_pixels": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "importer": {
+        "texture_type": 8,
+        "sprite_mode": "multiple",
+        "pixels_per_unit": 256,
+        "alpha_is_transparency": true,
+        "declared_slices": [],
+        "effective_region_note": "importer-defined"
+      },
+      "handling_notes": [
+        "Opaque white square intended for tinted/tiled room geometry. Ground.png and Obstacle.png have identical bytes but distinct Unity GUIDs and semantic tile roles."
+      ]
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Tile/Obstacle.png",
+      "semantic_role": "room_obstacle",
+      "role_description": "Room wall and obstacle surface",
+      "source_pixels": {
+        "width": 256,
+        "height": 256
+      },
+      "source_color_mode": "RGB",
+      "has_alpha_channel": false,
+      "content_bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 256,
+        "height": 256,
+        "coordinate_origin": "top-left",
+        "method": "non_dark_luma_gt_24"
+      },
+      "padding_pixels": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "importer": {
+        "texture_type": 8,
+        "sprite_mode": "multiple",
+        "pixels_per_unit": 256,
+        "alpha_is_transparency": true,
+        "declared_slices": [],
+        "effective_region_note": "importer-defined"
+      },
+      "handling_notes": [
+        "Opaque white square intended for tinted/tiled room geometry. Ground.png and Obstacle.png have identical bytes but distinct Unity GUIDs and semantic tile roles."
+      ]
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vig/Vigia.png",
+      "semantic_role": "obser",
+      "role_description": "Obser sentry silhouette",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGBA",
+      "has_alpha_channel": true,
+      "content_bounds": {
+        "x": 62,
+        "y": 57,
+        "width": 4,
+        "height": 13,
+        "coordinate_origin": "top-left",
+        "method": "alpha_nonzero"
+      },
+      "padding_pixels": {
+        "left": 62,
+        "top": 57,
+        "right": 62,
+        "bottom": 58
+      },
+      "importer": {
+        "texture_type": 8,
+        "sprite_mode": "multiple",
+        "pixels_per_unit": 100,
+        "alpha_is_transparency": true,
+        "declared_slices": [],
+        "effective_region_note": "importer-defined"
+      },
+      "handling_notes": [
+        "The visible silhouette occupies only a small part of the source texture. Inspect the declared slice and rendered bounds; use a project-owned derived crop or a Sprite created from the supplied texture instead of scaling the padded texture blindly."
+      ]
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle1.jpg",
+      "semantic_role": "vulto_idle_1",
+      "role_description": "Supplementary opaque humanoid idle reference frame 1",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGB",
+      "has_alpha_channel": false,
+      "content_bounds": {
+        "x": 52,
+        "y": 46,
+        "width": 29,
+        "height": 34,
+        "coordinate_origin": "top-left",
+        "method": "non_dark_luma_gt_24"
+      },
+      "padding_pixels": {
+        "left": 52,
+        "top": 46,
+        "right": 47,
+        "bottom": 48
+      },
+      "importer": {
+        "texture_type": 8,
+        "sprite_mode": "multiple",
+        "pixels_per_unit": 100,
+        "alpha_is_transparency": true,
+        "declared_slices": [],
+        "effective_region_note": "importer-defined"
+      },
+      "handling_notes": [
+        "This is an opaque black 128x128 reference frame, not a room backdrop. Use only as intentionally keyed/masked/cropped supplementary character media."
+      ]
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle2.jpg",
+      "semantic_role": "vulto_idle_2",
+      "role_description": "Supplementary opaque humanoid idle reference frame 2",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGB",
+      "has_alpha_channel": false,
+      "content_bounds": {
+        "x": 52,
+        "y": 46,
+        "width": 28,
+        "height": 34,
+        "coordinate_origin": "top-left",
+        "method": "non_dark_luma_gt_24"
+      },
+      "padding_pixels": {
+        "left": 52,
+        "top": 46,
+        "right": 48,
+        "bottom": 48
+      },
+      "importer": {
+        "texture_type": 8,
+        "sprite_mode": "multiple",
+        "pixels_per_unit": 100,
+        "alpha_is_transparency": true,
+        "declared_slices": [],
+        "effective_region_note": "importer-defined"
+      },
+      "handling_notes": [
+        "This is an opaque black 128x128 reference frame, not a room backdrop. Use only as intentionally keyed/masked/cropped supplementary character media."
+      ]
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle3.jpg",
+      "semantic_role": "vulto_idle_3",
+      "role_description": "Supplementary opaque humanoid idle reference frame 3",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGB",
+      "has_alpha_channel": false,
+      "content_bounds": {
+        "x": 52,
+        "y": 45,
+        "width": 28,
+        "height": 35,
+        "coordinate_origin": "top-left",
+        "method": "non_dark_luma_gt_24"
+      },
+      "padding_pixels": {
+        "left": 52,
+        "top": 45,
+        "right": 48,
+        "bottom": 48
+      },
+      "importer": {
+        "texture_type": 8,
+        "sprite_mode": "multiple",
+        "pixels_per_unit": 100,
+        "alpha_is_transparency": true,
+        "declared_slices": [],
+        "effective_region_note": "importer-defined"
+      },
+      "handling_notes": [
+        "This is an opaque black 128x128 reference frame, not a room backdrop. Use only as intentionally keyed/masked/cropped supplementary character media."
+      ]
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle4.jpg",
+      "semantic_role": "vulto_idle_4",
+      "role_description": "Supplementary opaque humanoid idle reference frame 4",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGB",
+      "has_alpha_channel": false,
+      "content_bounds": {
+        "x": 52,
+        "y": 44,
+        "width": 27,
+        "height": 36,
+        "coordinate_origin": "top-left",
+        "method": "non_dark_luma_gt_24"
+      },
+      "padding_pixels": {
+        "left": 52,
+        "top": 44,
+        "right": 49,
+        "bottom": 48
+      },
+      "importer": {
+        "texture_type": 8,
+        "sprite_mode": "multiple",
+        "pixels_per_unit": 100,
+        "alpha_is_transparency": true,
+        "declared_slices": [],
+        "effective_region_note": "importer-defined"
+      },
+      "handling_notes": [
+        "This is an opaque black 128x128 reference frame, not a room backdrop. Use only as intentionally keyed/masked/cropped supplementary character media."
+      ]
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle5.jpg",
+      "semantic_role": "vulto_idle_5",
+      "role_description": "Supplementary opaque humanoid idle reference frame 5",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGB",
+      "has_alpha_channel": false,
+      "content_bounds": {
+        "x": 52,
+        "y": 45,
+        "width": 27,
+        "height": 35,
+        "coordinate_origin": "top-left",
+        "method": "non_dark_luma_gt_24"
+      },
+      "padding_pixels": {
+        "left": 52,
+        "top": 45,
+        "right": 49,
+        "bottom": 48
+      },
+      "importer": {
+        "texture_type": 8,
+        "sprite_mode": "multiple",
+        "pixels_per_unit": 100,
+        "alpha_is_transparency": true,
+        "declared_slices": [],
+        "effective_region_note": "importer-defined"
+      },
+      "handling_notes": [
+        "This is an opaque black 128x128 reference frame, not a room backdrop. Use only as intentionally keyed/masked/cropped supplementary character media."
+      ]
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle6.jpg",
+      "semantic_role": "vulto_idle_6",
+      "role_description": "Supplementary opaque humanoid idle reference frame 6",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGB",
+      "has_alpha_channel": false,
+      "content_bounds": {
+        "x": 52,
+        "y": 45,
+        "width": 28,
+        "height": 35,
+        "coordinate_origin": "top-left",
+        "method": "non_dark_luma_gt_24"
+      },
+      "padding_pixels": {
+        "left": 52,
+        "top": 45,
+        "right": 48,
+        "bottom": 48
+      },
+      "importer": {
+        "texture_type": 8,
+        "sprite_mode": "multiple",
+        "pixels_per_unit": 100,
+        "alpha_is_transparency": true,
+        "declared_slices": [],
+        "effective_region_note": "importer-defined"
+      },
+      "handling_notes": [
+        "This is an opaque black 128x128 reference frame, not a room backdrop. Use only as intentionally keyed/masked/cropped supplementary character media."
+      ]
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/VultoDownAttack.jpg",
+      "semantic_role": "vulto_down_attack",
+      "role_description": "Supplementary opaque humanoid down-attack reference frame",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGB",
+      "has_alpha_channel": false,
+      "content_bounds": {
+        "x": 52,
+        "y": 47,
+        "width": 28,
+        "height": 41,
+        "coordinate_origin": "top-left",
+        "method": "non_dark_luma_gt_24"
+      },
+      "padding_pixels": {
+        "left": 52,
+        "top": 47,
+        "right": 48,
+        "bottom": 40
+      },
+      "importer": {
+        "texture_type": 8,
+        "sprite_mode": "multiple",
+        "pixels_per_unit": 100,
+        "alpha_is_transparency": true,
+        "declared_slices": [],
+        "effective_region_note": "importer-defined"
+      },
+      "handling_notes": [
+        "This is an opaque black 128x128 reference frame, not a room backdrop. Use only as intentionally keyed/masked/cropped supplementary character media."
+      ]
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/VultoLaunchSword.jpg",
+      "semantic_role": "vulto_sword_launch",
+      "role_description": "Supplementary opaque humanoid sword-launch reference frame",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGB",
+      "has_alpha_channel": false,
+      "content_bounds": {
+        "x": 52,
+        "y": 46,
+        "width": 26,
+        "height": 34,
+        "coordinate_origin": "top-left",
+        "method": "non_dark_luma_gt_24"
+      },
+      "padding_pixels": {
+        "left": 52,
+        "top": 46,
+        "right": 50,
+        "bottom": 48
+      },
+      "importer": {
+        "texture_type": 8,
+        "sprite_mode": "multiple",
+        "pixels_per_unit": 100,
+        "alpha_is_transparency": true,
+        "declared_slices": [],
+        "effective_region_note": "importer-defined"
+      },
+      "handling_notes": [
+        "This is an opaque black 128x128 reference frame, not a room backdrop. Use only as intentionally keyed/masked/cropped supplementary character media."
+      ]
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/VultoStun.jpg",
+      "semantic_role": "vulto_stun",
+      "role_description": "Supplementary opaque humanoid stun reference frame",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGB",
+      "has_alpha_channel": false,
+      "content_bounds": {
+        "x": 58,
+        "y": 58,
+        "width": 19,
+        "height": 30,
+        "coordinate_origin": "top-left",
+        "method": "non_dark_luma_gt_24"
+      },
+      "padding_pixels": {
+        "left": 58,
+        "top": 58,
+        "right": 51,
+        "bottom": 40
+      },
+      "importer": {
+        "texture_type": 8,
+        "sprite_mode": "multiple",
+        "pixels_per_unit": 100,
+        "alpha_is_transparency": true,
+        "declared_slices": [],
+        "effective_region_note": "importer-defined"
+      },
+      "handling_notes": [
+        "This is an opaque black 128x128 reference frame, not a room backdrop. Use only as intentionally keyed/masked/cropped supplementary character media."
+      ]
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/VultoSword.jpg",
+      "semantic_role": "vulto_sword",
+      "role_description": "Supplementary opaque humanoid sword reference frame",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGB",
+      "has_alpha_channel": false,
+      "content_bounds": {
+        "x": 74,
+        "y": 58,
+        "width": 6,
+        "height": 22,
+        "coordinate_origin": "top-left",
+        "method": "non_dark_luma_gt_24"
+      },
+      "padding_pixels": {
+        "left": 74,
+        "top": 58,
+        "right": 48,
+        "bottom": 48
+      },
+      "importer": {
+        "texture_type": 8,
+        "sprite_mode": "multiple",
+        "pixels_per_unit": 100,
+        "alpha_is_transparency": true,
+        "declared_slices": [],
+        "effective_region_note": "importer-defined"
+      },
+      "handling_notes": [
+        "This is an opaque black 128x128 reference frame, not a room backdrop. Use only as intentionally keyed/masked/cropped supplementary character media."
+      ]
+    }
+  ],
+  "audio_facts": [
+    {
+      "path": "Assets/TaskAssets/NoirSource/Audio/Enemy/AlertSound.wav",
+      "semantic_role": "enemy_alert",
+      "bytes": 13149,
+      "channels": 1,
+      "sample_rate_hz": 22050,
+      "sample_width_bits": 8,
+      "frame_count": 13105,
+      "duration_seconds": 0.594331
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Audio/Enemy/Dash.wav",
+      "semantic_role": "enemy_dash_or_motion",
+      "bytes": 95162,
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 8,
+      "frame_count": 95118,
+      "duration_seconds": 2.156871
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Audio/Enemy/laserShoot.wav",
+      "semantic_role": "obser_laser",
+      "bytes": 10103,
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 8,
+      "frame_count": 10059,
+      "duration_seconds": 0.228095
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Audio/Player/Attack.wav",
+      "semantic_role": "attack",
+      "bytes": 161092,
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "frame_count": 80524,
+      "duration_seconds": 1.825941
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Audio/Player/Dash.wav",
+      "semantic_role": "player_dash",
+      "bytes": 34808,
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "frame_count": 17382,
+      "duration_seconds": 0.39415
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Audio/Player/Jump.wav",
+      "semantic_role": "jump",
+      "bytes": 19402,
+      "channels": 1,
+      "sample_rate_hz": 8000,
+      "sample_width_bits": 16,
+      "frame_count": 9679,
+      "duration_seconds": 1.209875
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Audio/Player/Kill.wav",
+      "semantic_role": "enemy_defeat",
+      "bytes": 16920,
+      "channels": 1,
+      "sample_rate_hz": 44100,
+      "sample_width_bits": 16,
+      "frame_count": 8438,
+      "duration_seconds": 0.191338
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Audio/Player/PlayerDeath.wav",
+      "semantic_role": "player_death",
+      "bytes": 49328,
+      "channels": 1,
+      "sample_rate_hz": 22050,
+      "sample_width_bits": 8,
+      "frame_count": 49284,
+      "duration_seconds": 2.235102
+    }
+  ],
+  "material_facts": [
+    {
+      "path": "Assets/TaskAssets/NoirSource/materials/BackstabSparks.mat",
+      "semantic_role": "backstab_sparks"
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/materials/LaserAura.mat",
+      "semantic_role": "obser_laser_or_aura"
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/materials/LaserAuraMaterial.mat",
+      "semantic_role": "obser_laser_or_aura"
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/materials/LaserMaterial.mat",
+      "semantic_role": "obser_laser_or_aura"
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/materials/RenderConeMaterial.mat",
+      "semantic_role": "enemy_vision_cone"
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/materials/WhiteGlowMaterial.mat",
+      "semantic_role": "player_dash_glow"
+    }
+  ],
+  "prefab_facts": [
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/Enemies/Anda.prefab",
+      "root_and_child_names": [
+        "Anda",
+        "ConeVisual",
+        "HitBox",
+        "Eye"
+      ],
+      "component_counts": {
+        "AudioSource": 1,
+        "BoxCollider2D": 3,
+        "GameObject": 4,
+        "MeshFilter": 1,
+        "MeshRenderer": 1,
+        "MonoBehaviour": 3,
+        "Rigidbody2D": 1,
+        "SpriteRenderer": 1,
+        "Transform": 4,
+        "UnityClassID_210": 2
+      },
+      "omitted_upstream_script_count": 3,
+      "omitted_upstream_scripts": [
+        {
+          "guid": "6a160e678419a38479cf4edef2b73b4e",
+          "upstream_class": "Anda",
+          "source_path_omitted_from_input": "Assets/Scripts/Enemies/Anda.cs"
+        },
+        {
+          "guid": "2609738a73d5ef96b8c0677d09017194",
+          "upstream_class": "EnemyPatrol",
+          "source_path_omitted_from_input": "Assets/Scripts/Enemies/Modules/EnemyPatrol.cs"
+        },
+        {
+          "guid": "144c0c85f5c0c2cd6bc3746772d625c2",
+          "upstream_class": "VisionConeMesh",
+          "source_path_omitted_from_input": "Assets/Scripts/Enemies/Modules/VisionConeMesh.cs"
+        }
+      ],
+      "package_or_engine_script_references": [],
+      "resolved_supplied_dependencies": [
+        "Assets/TaskAssets/NoirSource/Audio/Enemy/AlertSound.wav",
+        "Assets/TaskAssets/NoirSource/Sprites/Anda/AndaIdle.png",
+        "Assets/TaskAssets/NoirSource/materials/RenderConeMaterial.mat"
+      ],
+      "direct_use_classification": "visual/reference source; reconstruct project-owned gameplay components",
+      "safe_use_note": "Do not treat this prefab as a runnable gameplay answer. Prefabs with omitted upstream scripts can contribute renderers, colliders, VFX, transforms, and references only; rebuild behavior under Assets/NoirChallenge."
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/Enemies/Obser.prefab",
+      "root_and_child_names": [
+        "Eye",
+        "Obser",
+        "FirePoint",
+        "LaserAura",
+        "ConeVisual"
+      ],
+      "component_counts": {
+        "AudioSource": 1,
+        "BoxCollider2D": 1,
+        "GameObject": 5,
+        "LineRenderer": 2,
+        "MeshFilter": 1,
+        "MeshRenderer": 1,
+        "MonoBehaviour": 3,
+        "Rigidbody2D": 1,
+        "SpriteRenderer": 1,
+        "Transform": 5,
+        "UnityClassID_210": 1
+      },
+      "omitted_upstream_script_count": 3,
+      "omitted_upstream_scripts": [
+        {
+          "guid": "8bdec46bee9521732999a569595f42ea",
+          "upstream_class": "Obser",
+          "source_path_omitted_from_input": "Assets/Scripts/Enemies/Obser.cs"
+        },
+        {
+          "guid": "08cf8cc2b4b04645b8adce0ee12b0266",
+          "upstream_class": "TargetedPatrol",
+          "source_path_omitted_from_input": "Assets/Scripts/Enemies/Modules/TargetedPatrol.cs"
+        },
+        {
+          "guid": "144c0c85f5c0c2cd6bc3746772d625c2",
+          "upstream_class": "VisionConeMesh",
+          "source_path_omitted_from_input": "Assets/Scripts/Enemies/Modules/VisionConeMesh.cs"
+        }
+      ],
+      "package_or_engine_script_references": [],
+      "resolved_supplied_dependencies": [
+        "Assets/TaskAssets/NoirSource/Audio/Enemy/AlertSound.wav",
+        "Assets/TaskAssets/NoirSource/Audio/Enemy/laserShoot.wav",
+        "Assets/TaskAssets/NoirSource/Sprites/Vig/Vigia.png",
+        "Assets/TaskAssets/NoirSource/materials/LaserAura.mat",
+        "Assets/TaskAssets/NoirSource/materials/LaserMaterial.mat",
+        "Assets/TaskAssets/NoirSource/materials/RenderConeMaterial.mat"
+      ],
+      "direct_use_classification": "visual/reference source; reconstruct project-owned gameplay components",
+      "safe_use_note": "Do not treat this prefab as a runnable gameplay answer. Prefabs with omitted upstream scripts can contribute renderers, colliders, VFX, transforms, and references only; rebuild behavior under Assets/NoirChallenge."
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/GameManager/GameManager.prefab",
+      "root_and_child_names": [
+        "GameManager"
+      ],
+      "component_counts": {
+        "GameObject": 1,
+        "MonoBehaviour": 1,
+        "Transform": 1
+      },
+      "omitted_upstream_script_count": 1,
+      "omitted_upstream_scripts": [
+        {
+          "guid": "c69696fb51196411f829fd3b8630fdac",
+          "upstream_class": "GameManager",
+          "source_path_omitted_from_input": "Assets/Scripts/Manager/GameManager.cs"
+        }
+      ],
+      "package_or_engine_script_references": [],
+      "resolved_supplied_dependencies": [],
+      "direct_use_classification": "visual/reference source; reconstruct project-owned gameplay components",
+      "safe_use_note": "Do not treat this prefab as a runnable gameplay answer. Prefabs with omitted upstream scripts can contribute renderers, colliders, VFX, transforms, and references only; rebuild behavior under Assets/NoirChallenge."
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/GameManager/Global Light 2D.prefab",
+      "root_and_child_names": [
+        "Global Light 2D"
+      ],
+      "component_counts": {
+        "GameObject": 1,
+        "MonoBehaviour": 1,
+        "Transform": 1
+      },
+      "omitted_upstream_script_count": 0,
+      "omitted_upstream_scripts": [],
+      "package_or_engine_script_references": [
+        {
+          "guid": "073797afb82c5a1438f328866b10b3f0",
+          "classification": "package-or-engine component; expected to resolve from pinned packages"
+        }
+      ],
+      "resolved_supplied_dependencies": [],
+      "direct_use_classification": "reusable supplied composition; still inspect before use",
+      "safe_use_note": "Do not treat this prefab as a runnable gameplay answer. Prefabs with omitted upstream scripts can contribute renderers, colliders, VFX, transforms, and references only; rebuild behavior under Assets/NoirChallenge."
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/GameManager/Global Volume.prefab",
+      "root_and_child_names": [
+        "Global Volume"
+      ],
+      "component_counts": {
+        "GameObject": 1,
+        "MonoBehaviour": 1,
+        "Transform": 1
+      },
+      "omitted_upstream_script_count": 0,
+      "omitted_upstream_scripts": [],
+      "package_or_engine_script_references": [
+        {
+          "guid": "172515602e62fb746b5d573b38a5fe58",
+          "classification": "package-or-engine component; expected to resolve from pinned packages"
+        }
+      ],
+      "resolved_supplied_dependencies": [],
+      "direct_use_classification": "reusable supplied composition; still inspect before use",
+      "safe_use_note": "Do not treat this prefab as a runnable gameplay answer. Prefabs with omitted upstream scripts can contribute renderers, colliders, VFX, transforms, and references only; rebuild behavior under Assets/NoirChallenge."
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/GameManager/Main Camera.prefab",
+      "root_and_child_names": [
+        "Main Camera"
+      ],
+      "component_counts": {
+        "AudioListener": 1,
+        "Camera": 1,
+        "GameObject": 1,
+        "MonoBehaviour": 1,
+        "Transform": 1
+      },
+      "omitted_upstream_script_count": 0,
+      "omitted_upstream_scripts": [],
+      "package_or_engine_script_references": [
+        {
+          "guid": "a79441f348de89743a2939f4d699eac1",
+          "classification": "package-or-engine component; expected to resolve from pinned packages"
+        }
+      ],
+      "resolved_supplied_dependencies": [],
+      "direct_use_classification": "reusable supplied composition; still inspect before use",
+      "safe_use_note": "Do not treat this prefab as a runnable gameplay answer. Prefabs with omitted upstream scripts can contribute renderers, colliders, VFX, transforms, and references only; rebuild behavior under Assets/NoirChallenge."
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/GameManager/Player.prefab",
+      "root_and_child_names": [
+        "DashVFX",
+        "AttackPoint",
+        "DashTrailVFX",
+        "Target",
+        "DashBurstEffect",
+        "GroundCheck",
+        "BackstabSparks",
+        "Player",
+        "DashParticlesEffect"
+      ],
+      "component_counts": {
+        "Animator": 1,
+        "BoxCollider2D": 1,
+        "GameObject": 9,
+        "MonoBehaviour": 1,
+        "ParticleSystem": 3,
+        "ParticleSystemRenderer": 3,
+        "Rigidbody2D": 1,
+        "SpriteRenderer": 1,
+        "TrailRenderer": 1,
+        "Transform": 9
+      },
+      "omitted_upstream_script_count": 1,
+      "omitted_upstream_scripts": [
+        {
+          "guid": "0e21a0911ee1c0f8387b38f04fe58597",
+          "upstream_class": "Controller",
+          "source_path_omitted_from_input": "Assets/Scripts/Player/Controller.cs"
+        }
+      ],
+      "package_or_engine_script_references": [],
+      "resolved_supplied_dependencies": [
+        "Assets/TaskAssets/NoirSource/Animation/Player.controller",
+        "Assets/TaskAssets/NoirSource/Sprites/Player/Idle.png",
+        "Assets/TaskAssets/NoirSource/materials/BackstabSparks.mat",
+        "Assets/TaskAssets/NoirSource/materials/PlayerMaterial.physicsMaterial2D",
+        "Assets/TaskAssets/NoirSource/materials/WhiteGlowMaterial.mat"
+      ],
+      "direct_use_classification": "visual/reference source; reconstruct project-owned gameplay components",
+      "safe_use_note": "Do not treat this prefab as a runnable gameplay answer. Prefabs with omitted upstream scripts can contribute renderers, colliders, VFX, transforms, and references only; rebuild behavior under Assets/NoirChallenge."
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/LevelDesing/Checkpoint.prefab",
+      "root_and_child_names": [
+        "Checkpoint"
+      ],
+      "component_counts": {
+        "CircleCollider2D": 1,
+        "GameObject": 1,
+        "MonoBehaviour": 1,
+        "SpriteRenderer": 1,
+        "Transform": 1
+      },
+      "omitted_upstream_script_count": 1,
+      "omitted_upstream_scripts": [
+        {
+          "guid": "3ec061534ae9bd217a26a5dae63512c4",
+          "upstream_class": "Checkpoint",
+          "source_path_omitted_from_input": "Assets/Scripts/Manager/Checkpoint.cs"
+        }
+      ],
+      "package_or_engine_script_references": [],
+      "resolved_supplied_dependencies": [],
+      "direct_use_classification": "visual/reference source; reconstruct project-owned gameplay components",
+      "safe_use_note": "Do not treat this prefab as a runnable gameplay answer. Prefabs with omitted upstream scripts can contribute renderers, colliders, VFX, transforms, and references only; rebuild behavior under Assets/NoirChallenge."
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/LevelDesing/Grid.prefab",
+      "root_and_child_names": [
+        "Ground_Tilemap",
+        "Grid",
+        "Obstacle_Tilemap"
+      ],
+      "component_counts": {
+        "GameObject": 3,
+        "Rigidbody2D": 2,
+        "Transform": 3,
+        "UnityClassID_156049354": 1,
+        "UnityClassID_1839735485": 2,
+        "UnityClassID_19719996": 2,
+        "UnityClassID_483693784": 2,
+        "UnityClassID_66": 2
+      },
+      "omitted_upstream_script_count": 0,
+      "omitted_upstream_scripts": [],
+      "package_or_engine_script_references": [],
+      "resolved_supplied_dependencies": [
+        "Assets/TaskAssets/NoirSource/Sprites/Tile/Ground.png",
+        "Assets/TaskAssets/NoirSource/Sprites/Tile/Obstacle.png",
+        "Assets/TaskAssets/NoirSource/Sprites/Tile/TilePalette/Ground.asset",
+        "Assets/TaskAssets/NoirSource/Sprites/Tile/TilePalette/Obstacle.asset"
+      ],
+      "direct_use_classification": "reusable supplied composition; still inspect before use",
+      "safe_use_note": "Do not treat this prefab as a runnable gameplay answer. Prefabs with omitted upstream scripts can contribute renderers, colliders, VFX, transforms, and references only; rebuild behavior under Assets/NoirChallenge."
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/VFX/VFX.prefab",
+      "root_and_child_names": [
+        "LaserSparks",
+        "VFX",
+        "OrbeSparks"
+      ],
+      "component_counts": {
+        "GameObject": 3,
+        "ParticleSystem": 2,
+        "ParticleSystemRenderer": 2,
+        "Transform": 3
+      },
+      "omitted_upstream_script_count": 0,
+      "omitted_upstream_scripts": [],
+      "package_or_engine_script_references": [],
+      "resolved_supplied_dependencies": [
+        "Assets/TaskAssets/NoirSource/materials/LaserAura.mat"
+      ],
+      "direct_use_classification": "reusable supplied composition; still inspect before use",
+      "safe_use_note": "Do not treat this prefab as a runnable gameplay answer. Prefabs with omitted upstream scripts can contribute renderers, colliders, VFX, transforms, and references only; rebuild behavior under Assets/NoirChallenge."
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Tile/TilePalette/GroundPalette.prefab",
+      "root_and_child_names": [
+        "GroundPalette",
+        "Layer1",
+        "Palette Settings"
+      ],
+      "component_counts": {
+        "GameObject": 2,
+        "MonoBehaviour": 1,
+        "Transform": 2,
+        "UnityClassID_156049354": 1,
+        "UnityClassID_1839735485": 1,
+        "UnityClassID_483693784": 1
+      },
+      "omitted_upstream_script_count": 0,
+      "omitted_upstream_scripts": [],
+      "package_or_engine_script_references": [],
+      "resolved_supplied_dependencies": [
+        "Assets/TaskAssets/NoirSource/Sprites/Tile/Ground.png",
+        "Assets/TaskAssets/NoirSource/Sprites/Tile/TilePalette/Ground.asset"
+      ],
+      "direct_use_classification": "reusable supplied composition; still inspect before use",
+      "safe_use_note": "Do not treat this prefab as a runnable gameplay answer. Prefabs with omitted upstream scripts can contribute renderers, colliders, VFX, transforms, and references only; rebuild behavior under Assets/NoirChallenge."
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Tile/TilePalette/ObstaclePallete/ObstaclePalette.prefab",
+      "root_and_child_names": [
+        "ObstaclePalette",
+        "Layer1",
+        "Palette Settings"
+      ],
+      "component_counts": {
+        "GameObject": 2,
+        "MonoBehaviour": 1,
+        "Transform": 2,
+        "UnityClassID_156049354": 1,
+        "UnityClassID_1839735485": 1,
+        "UnityClassID_483693784": 1
+      },
+      "omitted_upstream_script_count": 0,
+      "omitted_upstream_scripts": [],
+      "package_or_engine_script_references": [],
+      "resolved_supplied_dependencies": [
+        "Assets/TaskAssets/NoirSource/Sprites/Tile/Obstacle.png",
+        "Assets/TaskAssets/NoirSource/Sprites/Tile/TilePalette/Obstacle.asset"
+      ],
+      "direct_use_classification": "reusable supplied composition; still inspect before use",
+      "safe_use_note": "Do not treat this prefab as a runnable gameplay answer. Prefabs with omitted upstream scripts can contribute renderers, colliders, VFX, transforms, and references only; rebuild behavior under Assets/NoirChallenge."
+    }
+  ],
+  "animation_facts": [
+    {
+      "path": "Assets/TaskAssets/NoirSource/Animation/Player.controller",
+      "fact": "Two-state source controller referencing Idle.anim and Walking.anim."
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Animation/Player/Idle.anim",
+      "fact": "Looping clip with no sprite curve in the serialized source."
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Animation/Player/Walking.anim",
+      "fact": "One-frame looping sprite curve referencing Player/Idle.png; it is a source placeholder, not a complete locomotion animation."
+    }
+  ],
+  "composition_facts": [
+    "Ground.png and Obstacle.png are byte-identical opaque white squares imported at 256 PPU; their separate GUIDs and tile assets provide distinct floor/obstacle semantics.",
+    "The primary Player, Anda, and Obser PNG silhouettes use extreme transparent padding. Treat source texture size and visible content size as different facts.",
+    "The Vulto JPG set is opaque. Transparent-margin data is not applicable; the catalog instead reports the non-dark foreground bounds.",
+    "Player, Anda, Obser, GameManager, and Checkpoint source prefabs retain references to intentionally omitted upstream gameplay scripts. Package-backed URP/Volume components are a different category and should resolve from the pinned package lock.",
+    "A coherent final project should combine recognizable supplied character silhouettes, authored room geometry, danger and warning VFX, readable uGUI, and action-triggered supplied audio. Merely placing protected files in the project is not assembly."
+  ]
+}
+

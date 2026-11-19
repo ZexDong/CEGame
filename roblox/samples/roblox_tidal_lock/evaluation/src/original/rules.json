@@ -1,0 +1,13 @@
+{
+  "schema_version": "tidal-lock-v2-frozen-rules-v1",
+  "source_scoring_guide_sha256": "FC52D97A72DA8447A049597FF0B4DC8D2A11EAFF80A0FF58069BDC36F01802E3",
+  "scoring_formula": "dimension points * passed checkpoints / total checkpoints",
+  "dimensions": [
+    {"id":"D1","name":"Engineering Validity & Engine Integration","points":10,"method":"static only","checkpoints":["d1.package_integrity","d1.source_compile","d1.rojo_clean_build","d1.delivered_place_integrity","d1.studio_open_smoke"]},
+    {"id":"D2","name":"Specification Fulfillment & Content Completeness","points":30,"method":"live Play with OS input and engine state","checkpoints":["d2.world_and_protocol","d2.pump_system","d2.lock1_water","d2.lock2_water","d2.gate_system","d2.barge_system","d2.dock_system","d2.hazard_checkpoint","d2.hud_content","d2.completion_content"]},
+    {"id":"D3","name":"Gameplay Correctness & System Behavior","points":20,"method":"live positive and negative rules","checkpoints":["d3.initial_state","d3.pump_rules","d3.water_rules","d3.gate_interlock","d3.barge_rules","d3.docking_rules","d3.completion_condition","d3.hazard_recovery","d3.state_consistency","d3.async_restart_isolation"]},
+    {"id":"D4","name":"End-to-End Flow & Lifecycle Integrity","points":20,"method":"live success/recovery plus clean Reopen","checkpoints":["d4.start_to_play","d4.errors_to_restart","d4.lock1_flow","d4.lock2_flow","d4.end_to_end","d4.death_during_async","d4.restart_after_complete","d4.reopen_clean"]},
+    {"id":"D5","name":"Interface Functionality & Player Feedback","points":10,"method":"live HUD and feedback","checkpoints":["d5.input_and_hud","d5.hud_state_sync","d5.rejection_feedback","d5.stage_feedback","d5.completion_feedback"]},
+    {"id":"D6","name":"Visual Assembly & Presentation Fidelity","points":10,"method":"independent Reference/Candidate image pairs, fixed VLM prompt, three rounds","checkpoints":["d6.visual_three_round_mean"]}
+  ]
+}

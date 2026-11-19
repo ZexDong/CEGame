@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "task_id": "open_rts_economy_production",
+  "level_width_cells": 51,
+  "level_height_cells": 51,
+  "coordinate_space": "map ground x/z; target rectangles in viewport pixels",
+  "slots": [
+    "resource_a",
+    "resource_b",
+    "elapsed_seconds",
+    "unit_count",
+    "idle_workers",
+    "selected_hp",
+    "selected_max_hp",
+    "queue_length",
+    "queue_progress",
+    "output_blocked",
+    "friendly_command_centers",
+    "enemy_command_centers"
+  ],
+  "entities": [
+    {
+      "kind": "command_center",
+      "states": [
+        "under_construction",
+        "complete"
+      ]
+    },
+    {
+      "kind": "worker",
+      "states": [
+        "idle",
+        "moving",
+        "gathering",
+        "constructing"
+      ]
+    },
+    {
+      "kind": "tank",
+      "states": [
+        "idle",
+        "moving",
+        "attacking"
+      ]
+    },
+    {
+      "kind": "helicopter",
+      "states": [
+        "idle",
+        "moving",
+        "attacking"
+      ]
+    },
+    {
+      "kind": "drone",
+      "states": [
+        "idle",
+        "moving"
+      ]
+    },
+    {
+      "kind": "vehicle_factory",
+      "states": [
+        "under_construction",
+        "complete",
+        "blocked"
+      ]
+    },
+    {
+      "kind": "aircraft_factory",
+      "states": [
+        "under_construction",
+        "complete",
+        "blocked"
+      ]
+    },
+    {
+      "kind": "anti_ground_turret",
+      "states": [
+        "under_construction",
+        "complete",
+        "attacking"
+      ]
+    },
+    {
+      "kind": "anti_air_turret",
+      "states": [
+        "under_construction",
+        "complete",
+        "attacking"
+      ]
+    },
+    {
+      "kind": "resource_a_pile",
+      "states": [
+        "available",
+        "depleted"
+      ]
+    },
+    {
+      "kind": "resource_b_pile",
+      "states": [
+        "available",
+        "depleted"
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "kind": "quick_play"
+    },
+    {
+      "kind": "restart"
+    },
+    {
+      "kind": "main_menu"
+    },
+    {
+      "kind": "resume"
+    },
+    {
+      "kind": "build_command_center"
+    },
+    {
+      "kind": "build_vehicle_factory"
+    },
+    {
+      "kind": "build_aircraft_factory"
+    },
+    {
+      "kind": "build_ground_turret"
+    },
+    {
+      "kind": "build_air_turret"
+    },
+    {
+      "kind": "produce_worker"
+    },
+    {
+      "kind": "produce_tank"
+    },
+    {
+      "kind": "produce_helicopter"
+    },
+    {
+      "kind": "produce_drone"
+    },
+    {
+      "kind": "queue_entry"
+    },
+    {
+      "kind": "unit_target"
+    },
+    {
+      "kind": "resource_target"
+    },
+    {
+      "kind": "battlefield"
+    }
+  ]
+}

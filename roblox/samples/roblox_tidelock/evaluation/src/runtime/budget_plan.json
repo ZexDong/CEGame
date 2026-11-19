@@ -1,0 +1,30 @@
+{
+  "schema_version": "tide-lock-budget-v1",
+  "sessions": [
+    {
+      "id": "dynamic_formal",
+      "dynamic_trace_count": 4,
+      "declared_dynamic_trace_steps": 86,
+      "fixed_declared_seconds": 180,
+      "adaptive_timeout_seconds": 510,
+      "declared_serial_worst_case_seconds": 690,
+      "evaluator_render_log_evidence_margin_seconds": 210,
+      "hard_watchdog_seconds": 900,
+      "watchdog_headroom_seconds": 210,
+      "includes_reopen_boundary": false
+    },
+    {
+      "id": "reopen_validation",
+      "dynamic_trace_count": 1,
+      "declared_dynamic_trace_steps": 8,
+      "fixed_declared_seconds": 25,
+      "adaptive_timeout_seconds": 35,
+      "declared_serial_worst_case_seconds": 60,
+      "evaluator_render_log_evidence_margin_seconds": 30,
+      "hard_watchdog_seconds": 90,
+      "watchdog_headroom_seconds": 30,
+      "includes_reopen_boundary": true
+    }
+  ],
+  "invariant": "hard_watchdog_seconds >= declared_serial_worst_case_seconds + evaluator_render_log_evidence_margin_seconds"
+}

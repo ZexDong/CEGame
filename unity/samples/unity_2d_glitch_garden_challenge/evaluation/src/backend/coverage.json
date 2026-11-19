@@ -1,0 +1,2388 @@
+{
+  "sample_id": "unity_2d_glitch_garden_challenge",
+  "evaluator_version": "1.2.1",
+  "status": "Frozen requirement and checkpoint mapping.",
+  "semantic_review": "GDD requirements plus identified v1.1 gaps, not inferred coverage from repeated numeric scores.",
+  "obligations": [
+    {
+      "id": "GG.001",
+      "requirement_ids": [
+        "GG-01",
+        "GG-02",
+        "GG-07",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.placement",
+        "d3.placement",
+        "d5.controls",
+        "d5.hud"
+      ],
+      "scenario": "GG/content-and-natural-selection",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.placement', n(s, 'level') == level and len(cells) == 40 and all((xyz(actor(s, f'cell_{row}_{col}')) == (col + 1, row + 1, 0) for row in range(5) for col in range(8))) and all((a['state'] == 'empty' and n(a, 'hp') == 0 for a in cells)) and (n(s, 'stars') == 300) and (n(s, 'lives') == 5), f'Normal level{level} selection enters exact fresh5x8 content, stars300/lives5')",
+      "source": "coverage_glitch.py",
+      "line": 41,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.002",
+      "requirement_ids": [
+        "GG-01",
+        "GG-02",
+        "GG-07",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.placement",
+        "d3.placement",
+        "d5.controls",
+        "d5.hud"
+      ],
+      "scenario": "GG/content-and-natural-selection",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.controls', s['phase'] == 'playing', 'Visible normal level selection receives genuine click')",
+      "source": "coverage_glitch.py",
+      "line": 47,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.003",
+      "requirement_ids": [
+        "GG-01",
+        "GG-02",
+        "GG-07",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.placement",
+        "d3.placement",
+        "d5.controls",
+        "d5.hud"
+      ],
+      "scenario": "GG/content-and-natural-selection",
+      "status": "declared_assertion",
+      "obligation": "self.assert_hud(r, {'level': level, 'stars': 300, 'lives': 5})",
+      "source": "coverage_glitch.py",
+      "line": 48,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.004",
+      "requirement_ids": [
+        "GG-01",
+        "GG-02",
+        "GG-07",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.placement",
+        "d3.placement",
+        "d5.controls",
+        "d5.hud"
+      ],
+      "scenario": "GG/content-and-natural-selection",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.placement', n(self.validate(selected), 'stars') == old, 'Selecting a card does not debit currency')",
+      "source": "coverage_glitch.py",
+      "line": 55,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.005",
+      "requirement_ids": [
+        "GG-01",
+        "GG-02",
+        "GG-07",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.placement",
+        "d3.placement",
+        "d5.controls",
+        "d5.hud"
+      ],
+      "scenario": "GG/content-and-natural-selection",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.placement', len(occupied) == 1 and occupied[0]['id'] == 'cell_2_3' and (n(occupied[0], 'hp') == definition['hp']) and (n(s, 'stars') == 0), 'Exactly affordable normal click creates exactly one correct-HP defender and charges once')",
+      "source": "coverage_glitch.py",
+      "line": 61,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.006",
+      "requirement_ids": [
+        "GG-01",
+        "GG-02",
+        "GG-07",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.placement",
+        "d3.placement",
+        "d5.controls",
+        "d5.hud"
+      ],
+      "scenario": "GG/content-and-natural-selection",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.controls', feedback_changed(before, r), 'Selection/placement has actual visual/UI feedback')",
+      "source": "coverage_glitch.py",
+      "line": 64,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.007",
+      "requirement_ids": [
+        "GG-01",
+        "GG-06",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.waves",
+        "d3.waves",
+        "d5.hud"
+      ],
+      "scenario": "GG/full-natural-wave-schedules",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.waves', after['phase'] == 'playing' and n(after, 'spawn_index') == len(level['waves']) and (sum((a['present'] for a in after['actors'] if a['kind'] == 'enemy')) == 1), 'Duration ends spawning, not live-enemy cleanup')",
+      "source": "coverage_glitch.py",
+      "line": 104,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.008",
+      "requirement_ids": [
+        "GG-01",
+        "GG-06",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.waves",
+        "d3.waves",
+        "d5.hud"
+      ],
+      "scenario": "GG/full-natural-wave-schedules",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.waves', n(s, 'spawn_index') == sum((w['time'] <= n(s, 'elapsed') for w in waves)), 'Unedited continuous first-level prefix accumulates every due wave without duplication')",
+      "source": "coverage_glitch.py",
+      "line": 115,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.009",
+      "requirement_ids": [
+        "GG-01",
+        "GG-06",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.waves",
+        "d3.waves",
+        "d5.hud"
+      ],
+      "scenario": "GG/full-natural-wave-schedules",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.waves', n(start, 'spawn_index') == index and (not actor(start, wave['id'])['present']), f\"{entry}/{wave['id']} not spawned before scheduled time\")",
+      "source": "coverage_glitch.py",
+      "line": 82,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.010",
+      "requirement_ids": [
+        "GG-01",
+        "GG-06",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.waves",
+        "d3.waves",
+        "d5.hud"
+      ],
+      "scenario": "GG/full-natural-wave-schedules",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.waves', a['present'] and a['state'] == wave['type'] and visible(r, a['id']), f\"{entry}/{wave['id']} naturally spawns real visible correct type\")",
+      "source": "coverage_glitch.py",
+      "line": 89,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.011",
+      "requirement_ids": [
+        "GG-01",
+        "GG-06",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.waves",
+        "d3.waves",
+        "d5.hud"
+      ],
+      "scenario": "GG/full-natural-wave-schedules",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.waves', n(s, 'spawn_index') == due and a['position']['y'] == wave['lane'] + 1 and (abs(a['position']['x'] - (10 - (0.65 if wave['type'] == 'fox' else 0.45) * (elapsed - wave['time']))) < 0.13), f\"{entry}/{wave['id']} exact count/lane/time and genuine entrance movement\")",
+      "source": "coverage_glitch.py",
+      "line": 91,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.012",
+      "requirement_ids": [
+        "GG-01",
+        "GG-06",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.waves",
+        "d3.waves",
+        "d5.hud"
+      ],
+      "scenario": "GG/full-natural-wave-schedules",
+      "status": "declared_assertion",
+      "obligation": "self.assert_hud(r, {'level': n(s, 'level'), 'stars': n(s, 'stars'), 'lives': n(s, 'lives'), 'time': n(s, 'elapsed')})",
+      "source": "coverage_glitch.py",
+      "line": 94,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.013",
+      "requirement_ids": [
+        "GG-01",
+        "GG-06",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.waves",
+        "d3.waves",
+        "d5.hud"
+      ],
+      "scenario": "GG/full-natural-wave-schedules",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.hud', garden_progress_visible(r, n(s, 'spawn_index'), len(level['waves']), sum((a['kind'] == 'enemy' and a['present'] for a in s['actors']))), 'Actual HUD truthfully reports spawned/pending waves, live enemies, or pending+live remaining invaders')",
+      "source": "coverage_glitch.py",
+      "line": 96,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.014",
+      "requirement_ids": [
+        "GG-03",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.economy",
+        "d3.economy",
+        "d5.feedback"
+      ],
+      "scenario": "GG/full-production-cycles",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.economy', n(self.validate(r), 'stars') == 0, 'Two producers do not award stars before full5s')",
+      "source": "coverage_glitch.py",
+      "line": 129,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.015",
+      "requirement_ids": [
+        "GG-03",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.economy",
+        "d3.economy",
+        "d5.feedback"
+      ],
+      "scenario": "GG/full-production-cycles",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.economy', n(self.validate(r), 'stars') == 100, 'Two lanes each produce50 on their first full interval')",
+      "source": "coverage_glitch.py",
+      "line": 131,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.016",
+      "requirement_ids": [
+        "GG-03",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.economy",
+        "d3.economy",
+        "d5.feedback"
+      ],
+      "scenario": "GG/full-production-cycles",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.economy', n(self.validate(r), 'stars') == 200, 'Two natural complete production cycles retain exact cadence')",
+      "source": "coverage_glitch.py",
+      "line": 133,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.017",
+      "requirement_ids": [
+        "GG-03",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.economy",
+        "d3.economy",
+        "d5.feedback"
+      ],
+      "scenario": "GG/full-production-cycles",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.feedback', feedback_changed(before, r), 'Natural production has visible state/UI feedback')",
+      "source": "coverage_glitch.py",
+      "line": 134,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.018",
+      "requirement_ids": [
+        "GG-03",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.economy",
+        "d3.economy",
+        "d5.feedback"
+      ],
+      "scenario": "GG/full-production-cycles",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.economy', actor(self.validate(r), 'cell_2_1')['state'] == 'cactus' and n(self.validate(r), 'stars') == 100, 'Actually produced stars can buy a normal defender')",
+      "source": "coverage_glitch.py",
+      "line": 137,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.019",
+      "requirement_ids": [
+        "GG-03",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.economy",
+        "d3.economy",
+        "d5.feedback"
+      ],
+      "scenario": "GG/full-production-cycles",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.economy', n(s, 'stars') == 73, 'Destroyed producer cannot award at its old5s deadline')",
+      "source": "coverage_glitch.py",
+      "line": 147,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.020",
+      "requirement_ids": [
+        "GG-03",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.economy",
+        "d3.economy",
+        "d5.feedback"
+      ],
+      "scenario": "GG/full-production-cycles",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.economy', n(self.validate(self.idle(0.35)), 'stars') == 300, role + ' never produces stars over a full production interval')",
+      "source": "coverage_glitch.py",
+      "line": 151,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.021",
+      "requirement_ids": [
+        "GG-02",
+        "GG-04"
+      ],
+      "check_ids": [
+        "d2.projectiles",
+        "d3.projectiles"
+      ],
+      "scenario": "GG/projectile-cadence-speed-and-order",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.projectiles', n(actor(s, a), 'hp') == 80 and n(actor(s, b), 'hp') == hp, 'One real shot hits the nearest of two same-lane enemies, not the farther target')",
+      "source": "coverage_glitch.py",
+      "line": 198,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.022",
+      "requirement_ids": [
+        "GG-02",
+        "GG-04"
+      ],
+      "check_ids": [
+        "d2.projectiles",
+        "d3.projectiles"
+      ],
+      "scenario": "GG/projectile-cadence-speed-and-order",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.projectiles', n(actor(self.validate(r), a), 'hp') == 80 and (not first_ids), 'Hit projectile was removed and does not repeatedly damage')",
+      "source": "coverage_glitch.py",
+      "line": 202,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.023",
+      "requirement_ids": [
+        "GG-02",
+        "GG-04"
+      ],
+      "check_ids": [
+        "d2.projectiles",
+        "d3.projectiles"
+      ],
+      "scenario": "GG/projectile-cadence-speed-and-order",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.projectiles', not any((a['kind'] == 'projectile' and a['present'] for a in self.validate(r)['actors'])), role + ' waits complete natural first firing period')",
+      "source": "coverage_glitch.py",
+      "line": 162,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.024",
+      "requirement_ids": [
+        "GG-02",
+        "GG-04"
+      ],
+      "check_ids": [
+        "d2.projectiles",
+        "d3.projectiles"
+      ],
+      "scenario": "GG/projectile-cadence-speed-and-order",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.projectiles', later is not None and abs((later['position']['x'] - shot['position']['x']) / dt - 6) < 0.35, role + ' projectile actual transform moves at speed6')",
+      "source": "coverage_glitch.py",
+      "line": 175,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.025",
+      "requirement_ids": [
+        "GG-02",
+        "GG-04"
+      ],
+      "check_ids": [
+        "d2.projectiles",
+        "d3.projectiles"
+      ],
+      "scenario": "GG/projectile-cadence-speed-and-order",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.projectiles', any((i != shot['id'] for i in ids)), role + ' naturally emits another projectile after its second complete interval')",
+      "source": "coverage_glitch.py",
+      "line": 179,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.026",
+      "requirement_ids": [
+        "GG-02",
+        "GG-04"
+      ],
+      "check_ids": [
+        "d2.projectiles",
+        "d3.projectiles"
+      ],
+      "scenario": "GG/projectile-cadence-speed-and-order",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.projectiles', not any((a['kind'] == 'projectile' and a['present'] for a in s['actors'])), 'No firing into an empty/behind-only lane')",
+      "source": "coverage_glitch.py",
+      "line": 217,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.027",
+      "requirement_ids": [
+        "GG-02",
+        "GG-04"
+      ],
+      "check_ids": [
+        "d2.projectiles",
+        "d3.projectiles"
+      ],
+      "scenario": "GG/projectile-cadence-speed-and-order",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.projectiles', False, role + ' never emits a projectile')",
+      "source": "coverage_glitch.py",
+      "line": 167,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.028",
+      "requirement_ids": [
+        "GG-05",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.enemies",
+        "d3.enemies",
+        "d5.feedback"
+      ],
+      "scenario": "GG/enemy-speed-full-attacks-vault",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.enemies', animated and actor(self.validate(r), self.vault_id)['position']['x'] < 2, 'Fox vault has independently sampled real lift/rotation/scale/renderer animation and left-side landing')",
+      "source": "coverage_glitch.py",
+      "line": 257,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.029",
+      "requirement_ids": [
+        "GG-05",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.enemies",
+        "d3.enemies",
+        "d5.feedback"
+      ],
+      "scenario": "GG/enemy-speed-full-attacks-vault",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.feedback', animated, 'Fox jump is player-observable, not just a state flag')",
+      "source": "coverage_glitch.py",
+      "line": 259,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.030",
+      "requirement_ids": [
+        "GG-05",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.enemies",
+        "d3.enemies",
+        "d5.feedback"
+      ],
+      "scenario": "GG/enemy-speed-full-attacks-vault",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.enemies', abs((a0['position']['x'] - actor(s, a0['id'])['position']['x']) / (n(s, 'elapsed') - t0) - speed) < 0.06, typ + ' exact unobstructed movement speed')",
+      "source": "coverage_glitch.py",
+      "line": 227,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.031",
+      "requirement_ids": [
+        "GG-05",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.enemies",
+        "d3.enemies",
+        "d5.feedback"
+      ],
+      "scenario": "GG/enemy-speed-full-attacks-vault",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.enemies', n(actor(s, cid), 'hp') == 80 and abs(enemy['position']['x'] - 2.55) < 0.03, typ + ' stops at actual same-lane defender and does not hit before1s')",
+      "source": "coverage_glitch.py",
+      "line": 238,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.032",
+      "requirement_ids": [
+        "GG-05",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.enemies",
+        "d3.enemies",
+        "d5.feedback"
+      ],
+      "scenario": "GG/enemy-speed-full-attacks-vault",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.enemies', n(actor(self.validate(r), cid), 'hp') == 40, typ + ' deals20 on each of two full1s attacks')",
+      "source": "coverage_glitch.py",
+      "line": 241,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.033",
+      "requirement_ids": [
+        "GG-03",
+        "GG-08"
+      ],
+      "check_ids": [
+        "d4.pause",
+        "d4.restart"
+      ],
+      "scenario": "GG/active-systems-pause-and-restart",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.pause', equivalent(frozen_state(before), frozen_state(after)), 'Active projectile, producer, enemy and time all freeze under Pause')",
+      "source": "coverage_glitch.py",
+      "line": 272,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.034",
+      "requirement_ids": [
+        "GG-03",
+        "GG-08"
+      ],
+      "check_ids": [
+        "d4.pause",
+        "d4.restart"
+      ],
+      "scenario": "GG/active-systems-pause-and-restart",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.pause', n(after, 'elapsed') > n(before, 'elapsed') and n(after, 'stars') == n(before, 'stars') + 50, 'Resume retains production progress and continues active systems')",
+      "source": "coverage_glitch.py",
+      "line": 276,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.035",
+      "requirement_ids": [
+        "GG-03",
+        "GG-08"
+      ],
+      "check_ids": [
+        "d4.pause",
+        "d4.restart"
+      ],
+      "scenario": "GG/active-systems-pause-and-restart",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.restart', n(s, 'stars') == 300 and n(s, 'lives') == 5 and (n(s, 'completed_mask') == oldmask) and all((a['state'] == 'empty' for a in s['actors'] if a['kind'] == 'cell')) and (not any((a['kind'] == 'projectile' and a['present'] for a in s['actors']))), 'Play Retry clears active projectiles/production without erasing earned campaign bits')",
+      "source": "coverage_glitch.py",
+      "line": 281,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.036",
+      "requirement_ids": [
+        "GG-09"
+      ],
+      "check_ids": [
+        "d5.feedback"
+      ],
+      "scenario": "GG/real-event-audio-and-mute",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.feedback', audible != muted, 'Mixed engine output proves firing/hit/result audio is audible with volume1 and silent with volume0')",
+      "source": "coverage_glitch.py",
+      "line": 299,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.037",
+      "requirement_ids": [
+        "GG-09"
+      ],
+      "check_ids": [
+        "d5.feedback"
+      ],
+      "scenario": "GG/real-event-audio-and-mute",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.feedback', (r.get('audioPeak', 0) > 0.0001) != muted, 'Real normal placement event audio obeys mute on mixed output')",
+      "source": "coverage_glitch.py",
+      "line": 308,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.038",
+      "requirement_ids": [
+        "GG-09"
+      ],
+      "check_ids": [
+        "d5.feedback"
+      ],
+      "scenario": "GG/real-event-audio-and-mute",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.feedback', (r.get('audioPeak', 0) > 0.0001) != muted, f\"Isolated real {event} event obeys {('muted' if muted else 'audible')} output; no unrelated placement sounds\")",
+      "source": "coverage_glitch.py",
+      "line": 325,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.039",
+      "requirement_ids": [
+        "GG-06",
+        "GG-07",
+        "GG-08",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.campaign",
+        "d3.campaign",
+        "d4.journey",
+        "d5.overlays"
+      ],
+      "scenario": "GG/result-freeze-and-final-campaign",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.campaign', s['phase'] == 'won', 'Real final shot earns level result')",
+      "source": "coverage_glitch.py",
+      "line": 337,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.040",
+      "requirement_ids": [
+        "GG-06",
+        "GG-07",
+        "GG-08",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.campaign",
+        "d3.campaign",
+        "d4.journey",
+        "d5.overlays"
+      ],
+      "scenario": "GG/result-freeze-and-final-campaign",
+      "status": "declared_assertion",
+      "obligation": "self.assert_stable(before, after)",
+      "source": "coverage_glitch.py",
+      "line": 340,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.041",
+      "requirement_ids": [
+        "GG-06",
+        "GG-07",
+        "GG-08",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.campaign",
+        "d3.campaign",
+        "d4.journey",
+        "d5.overlays"
+      ],
+      "scenario": "GG/result-freeze-and-final-campaign",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.campaign', n(after, 'stars') == n(before, 'stars'), 'Result stops pending production, projectiles and level clock')",
+      "source": "coverage_glitch.py",
+      "line": 341,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.042",
+      "requirement_ids": [
+        "GG-06",
+        "GG-07",
+        "GG-08",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.campaign",
+        "d3.campaign",
+        "d4.journey",
+        "d5.overlays"
+      ],
+      "scenario": "GG/result-freeze-and-final-campaign",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.overlays', bool(re.search('complete|safe|campaign|victor|cleared|win', text(r), re.I)), 'Final campaign/result overlay has actual readable completion presentation')",
+      "source": "coverage_glitch.py",
+      "line": 343,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.043",
+      "requirement_ids": [
+        "GG-06",
+        "GG-07",
+        "GG-08",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.campaign",
+        "d3.campaign",
+        "d4.journey",
+        "d5.overlays"
+      ],
+      "scenario": "GG/result-freeze-and-final-campaign",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.campaign', n(s, 'level') == 2 and (not any((a['kind'] == 'projectile' and a['present'] for a in s['actors']))), 'Next cleans all old projectiles while entering actual next level')",
+      "source": "coverage_glitch.py",
+      "line": 348,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.044",
+      "requirement_ids": [
+        "GG-08"
+      ],
+      "check_ids": [
+        "d4.entry"
+      ],
+      "scenario": "COMMON/repeated-natural-menu",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.entry', all((q == footprints[0] for q in footprints)) and footprints[0]['event_systems'] == 1, 'Three normal Menu/Start cycles have stable actual actor/control/EventSystem cardinality')",
+      "source": "coverage_common.py",
+      "line": 150,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.045",
+      "requirement_ids": [
+        "GG-01",
+        "GG-08",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d5.overlays"
+      ],
+      "scenario": "COMMON/required-readable-instructions-and-pause",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.overlays', bool(re.search('move|wasd|arrow|select|acceler|shift|click|instructions|controls|help', text(self.p.last), re.I)), 'Actual readable title includes instructions or a discoverable Help control')",
+      "source": "coverage_common.py",
+      "line": 157,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.046",
+      "requirement_ids": [
+        "GG-01",
+        "GG-08",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d5.overlays"
+      ],
+      "scenario": "COMMON/required-readable-instructions-and-pause",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.overlays', bool(re.search('paus', text(r), re.I)), 'Actual readable pause overlay is available after ordinary Start/Escape')",
+      "source": "coverage_common.py",
+      "line": 163,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.047",
+      "requirement_ids": [
+        "DELIVERY"
+      ],
+      "check_ids": [
+        "d1.service"
+      ],
+      "scenario": "COMMON/session-detached-atomic-own-restore",
+      "status": "declared_assertion",
+      "obligation": "self.check('d1.service', equivalent(frozen_state(before), frozen_state(after)), 'Every chapter restores its own unedited detached public state before any authored fixture')",
+      "source": "coverage_common.py",
+      "line": 175,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.048",
+      "requirement_ids": [
+        "GG-01",
+        "GG-02",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.placement",
+        "d3.placement",
+        "d5.feedback"
+      ],
+      "scenario": "campaign content and four placements",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.placement', n(s, 'stars') == 0 and actor(s, 'cell_0_0')['state'] == 'empty', 'Unaffordable placement rejected')",
+      "source": "session_core.py",
+      "line": 255,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.049",
+      "requirement_ids": [
+        "GG-01",
+        "GG-02",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.placement",
+        "d3.placement",
+        "d5.feedback"
+      ],
+      "scenario": "campaign content and four placements",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.placement', n(s, 'stars') == before and actor(s, 'cell_0_0')['state'] == 'cactus', 'Occupied placement rejected')",
+      "source": "session_core.py",
+      "line": 252,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.050",
+      "requirement_ids": [
+        "GG-01",
+        "GG-02",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.placement",
+        "d3.placement",
+        "d5.feedback"
+      ],
+      "scenario": "campaign content and four placements",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.feedback', bool(re.search('reject|occup|enough|insufficient', text(r), re.I)), 'Occupied placement feedback')",
+      "source": "session_core.py",
+      "line": 253,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.051",
+      "requirement_ids": [
+        "GG-01",
+        "GG-02",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.placement",
+        "d3.placement",
+        "d5.feedback"
+      ],
+      "scenario": "campaign content and four placements",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.placement', actor(s, 'cell_0_' + str(card))['state'] == d['type'] and visible(r, 'cell_0_' + str(card)), 'All five levels and four placed rendered roles')",
+      "source": "session_core.py",
+      "line": 249,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.052",
+      "requirement_ids": [
+        "GG-01",
+        "GG-02",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.placement",
+        "d3.placement",
+        "d5.feedback"
+      ],
+      "scenario": "campaign content and four placements",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.placement', n(s, 'stars') == 500 - cost, 'Placement debits selected role exactly once')",
+      "source": "session_core.py",
+      "line": 250,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.053",
+      "requirement_ids": [
+        "GG-03",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.economy",
+        "d3.economy",
+        "d5.hud"
+      ],
+      "scenario": "resource production",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.economy', n(s, 'stars') > 73 and visible(r, 'cell_0_0'), 'Live trophy actually produces spendable stars')",
+      "source": "session_core.py",
+      "line": 260,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.054",
+      "requirement_ids": [
+        "GG-03",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.economy",
+        "d3.economy",
+        "d5.hud"
+      ],
+      "scenario": "resource production",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.economy', n(s, 'stars') == 123, 'Exactly50 after full5-second production interval')",
+      "source": "session_core.py",
+      "line": 261,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.055",
+      "requirement_ids": [
+        "GG-03",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.economy",
+        "d3.economy",
+        "d5.hud"
+      ],
+      "scenario": "resource production",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.hud', hud_number(r, 'stars', n(s, 'stars')), 'Actual produced balance shown in HUD')",
+      "source": "session_core.py",
+      "line": 262,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.056",
+      "requirement_ids": [
+        "GG-03",
+        "GG-10"
+      ],
+      "check_ids": [
+        "d2.economy",
+        "d3.economy",
+        "d5.hud"
+      ],
+      "scenario": "resource production",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.economy', n(s, 'stars') == 300, 'Nonproducer has no star income')",
+      "source": "session_core.py",
+      "line": 263,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.057",
+      "requirement_ids": [
+        "GG-04"
+      ],
+      "check_ids": [
+        "d2.projectiles",
+        "d3.projectiles"
+      ],
+      "scenario": "lane projectiles and damage",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.projectiles', not any((a['kind'] == 'projectile' and a['present'] for a in s['actors'])), 'Off-lane enemy cannot trigger fire')",
+      "source": "session_core.py",
+      "line": 276,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.058",
+      "requirement_ids": [
+        "GG-04"
+      ],
+      "check_ids": [
+        "d2.projectiles",
+        "d3.projectiles"
+      ],
+      "scenario": "lane projectiles and damage",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.projectiles', bool(shots) and any((visible(r, a['id']) for a in shots)), 'Actual visible projectile, not instant damage')",
+      "source": "session_core.py",
+      "line": 271,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.059",
+      "requirement_ids": [
+        "GG-04"
+      ],
+      "check_ids": [
+        "d2.projectiles",
+        "d3.projectiles"
+      ],
+      "scenario": "lane projectiles and damage",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.projectiles', n(e, 'hp') == 100 - damage, 'First same-lane projectile deals exact damage once')",
+      "source": "session_core.py",
+      "line": 273,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.060",
+      "requirement_ids": [
+        "GG-05"
+      ],
+      "check_ids": [
+        "d2.enemies",
+        "d3.enemies"
+      ],
+      "scenario": "enemy contact attack and fox vault",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.enemies', cell['state'] == 'empty' and n(cell, 'hp') == 0, 'Lizard destroys actual blocker')",
+      "source": "session_core.py",
+      "line": 282,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.061",
+      "requirement_ids": [
+        "GG-05"
+      ],
+      "check_ids": [
+        "d2.enemies",
+        "d3.enemies"
+      ],
+      "scenario": "enemy contact attack and fox vault",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.enemies', e['position']['x'] < 2.55, 'Enemy resumes leftward motion after blocker death')",
+      "source": "session_core.py",
+      "line": 283,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.062",
+      "requirement_ids": [
+        "GG-05"
+      ],
+      "check_ids": [
+        "d2.enemies",
+        "d3.enemies"
+      ],
+      "scenario": "enemy contact attack and fox vault",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.enemies', e['position']['x'] < 2 and n(e, 'jumped') == 1 and visible(r, e['id']), 'Fox visibly moves past gravestone')",
+      "source": "session_core.py",
+      "line": 293,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.063",
+      "requirement_ids": [
+        "GG-05"
+      ],
+      "check_ids": [
+        "d2.enemies",
+        "d3.enemies"
+      ],
+      "scenario": "enemy contact attack and fox vault",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.enemies', n(cell, 'hp') == 300, 'Vault does not attack gravestone')",
+      "source": "session_core.py",
+      "line": 294,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.064",
+      "requirement_ids": [
+        "GG-06",
+        "GG-08"
+      ],
+      "check_ids": [
+        "d2.waves",
+        "d3.waves",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "wave schedule cleanup and loss",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.waves', n(s, 'spawn_index') >= 1 and any((a['kind'] == 'enemy' and a['present'] and visible(r, a['id']) for a in s['actors'])), 'First scheduled wave enters actual lane')",
+      "source": "session_core.py",
+      "line": 298,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.065",
+      "requirement_ids": [
+        "GG-06",
+        "GG-08"
+      ],
+      "check_ids": [
+        "d2.waves",
+        "d3.waves",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "wave schedule cleanup and loss",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.waves', n(s, 'lives') == 1 and (not any((a['kind'] == 'enemy' and a['present'] for a in s['actors']))), 'One enemy leak debits one life and removes enemy')",
+      "source": "session_core.py",
+      "line": 300,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.066",
+      "requirement_ids": [
+        "GG-06",
+        "GG-08"
+      ],
+      "check_ids": [
+        "d2.waves",
+        "d3.waves",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "wave schedule cleanup and loss",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.waves', s['phase'] == 'playing' and n(s, 'elapsed') > self.content['levels'][0]['duration'], 'Timer expiry does not win while enemies survive')",
+      "source": "session_core.py",
+      "line": 301,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.067",
+      "requirement_ids": [
+        "GG-06",
+        "GG-08"
+      ],
+      "check_ids": [
+        "d2.waves",
+        "d3.waves",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "wave schedule cleanup and loss",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.journey', s['phase'] == 'lost' and n(s, 'lives') == 0, 'Natural final leak reaches defeat')",
+      "source": "session_core.py",
+      "line": 304,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.068",
+      "requirement_ids": [
+        "GG-06",
+        "GG-08"
+      ],
+      "check_ids": [
+        "d2.waves",
+        "d3.waves",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "wave schedule cleanup and loss",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.restart', n(self.validate(r), 'lives') == 5 and n(self.validate(r), 'elapsed') < 0.3, 'Loss Retry resets current level')",
+      "source": "session_core.py",
+      "line": 305,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.069",
+      "requirement_ids": [
+        "GG-07",
+        "GG-08"
+      ],
+      "check_ids": [
+        "d2.campaign",
+        "d3.campaign",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "five-level adjacent campaign",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.restart', n(self.validate(r), 'level') == 5 and n(self.validate(r), 'stars') == 300, 'Victory Retry preserves current selected level')",
+      "source": "session_core.py",
+      "line": 319,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.070",
+      "requirement_ids": [
+        "GG-07",
+        "GG-08"
+      ],
+      "check_ids": [
+        "d2.campaign",
+        "d3.campaign",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "five-level adjacent campaign",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.campaign', s['phase'] == 'won' and (not any((a['kind'] == 'enemy' and a['present'] for a in s['actors']))), 'Every level has real last-enemy cleanup success')",
+      "source": "session_core.py",
+      "line": 312,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.071",
+      "requirement_ids": [
+        "GG-07",
+        "GG-08"
+      ],
+      "check_ids": [
+        "d2.campaign",
+        "d3.campaign",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "five-level adjacent campaign",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.campaign', int(n(s, 'completed_mask')) & 1 << lev - 1 != 0, 'Completion earned by actual projectile kill')",
+      "source": "session_core.py",
+      "line": 313,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.072",
+      "requirement_ids": [
+        "GG-07",
+        "GG-08"
+      ],
+      "check_ids": [
+        "d2.campaign",
+        "d3.campaign",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "five-level adjacent campaign",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.journey', s['phase'] == 'won', 'Stable real win reached after legitimate near-clear preparation')",
+      "source": "session_core.py",
+      "line": 314,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.073",
+      "requirement_ids": [
+        "GG-07",
+        "GG-08"
+      ],
+      "check_ids": [
+        "d2.campaign",
+        "d3.campaign",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "five-level adjacent campaign",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.journey', n(s, 'level') == lev + 1 and s['phase'] == 'playing', 'Ordinary Next links adjacent real levels')",
+      "source": "session_core.py",
+      "line": 317,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.074",
+      "requirement_ids": [
+        "GG-07",
+        "GG-08"
+      ],
+      "check_ids": [
+        "d2.campaign",
+        "d3.campaign",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "five-level adjacent campaign",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.campaign', n(s, 'stars') == 300 and n(s, 'lives') == 5 and (n(s, 'elapsed') < 0.3) and all((a['state'] == 'empty' for a in s['actors'] if a['kind'] == 'cell')), 'Next clears local content/economy/timers')",
+      "source": "session_core.py",
+      "line": 318,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.075",
+      "requirement_ids": [
+        "GG-01"
+      ],
+      "check_ids": [
+        "d4.entry",
+        "d5.controls"
+      ],
+      "scenario": "natural menu and start",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.entry', s['phase'] == 'playing', 'Natural button enters actual game')",
+      "source": "session_core.py",
+      "line": 331,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.076",
+      "requirement_ids": [
+        "GG-01"
+      ],
+      "check_ids": [
+        "d4.entry",
+        "d5.controls"
+      ],
+      "scenario": "natural menu and start",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.controls', s['phase'] == 'playing', 'Normal mouse hit real visible Start button and caused its advertised transition')",
+      "source": "session_core.py",
+      "line": 332,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.077",
+      "requirement_ids": [
+        "GG-01"
+      ],
+      "check_ids": [
+        "d4.entry",
+        "d5.controls"
+      ],
+      "scenario": "natural menu and start",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.overlays', bool(re.search('move|wasd|arrow|select|acceler|shift|click|instructions|controls|help', text(r), re.I)), 'Menu presents control instructions or a discoverable instructions control; no fixed wording/layout')",
+      "source": "session_core.py",
+      "line": 329,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.078",
+      "requirement_ids": [
+        "GG-08"
+      ],
+      "check_ids": [
+        "d4.pause",
+        "d5.overlays"
+      ],
+      "scenario": "independent pause resume escape",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.pause', before['phase'] == 'paused' and state(before) == state(after), 'Pause freezes real state despite delivered input/time')",
+      "source": "session_core.py",
+      "line": 347,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.079",
+      "requirement_ids": [
+        "GG-08"
+      ],
+      "check_ids": [
+        "d4.pause",
+        "d5.overlays"
+      ],
+      "scenario": "independent pause resume escape",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.overlays', bool(re.search('paus', text(self.p.last), re.I)), 'Pause overlay visible')",
+      "source": "session_core.py",
+      "line": 348,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.080",
+      "requirement_ids": [
+        "GG-08"
+      ],
+      "check_ids": [
+        "d4.pause",
+        "d5.overlays"
+      ],
+      "scenario": "independent pause resume escape",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.pause', self.validate(r)['phase'] == 'playing', 'Ordinary Resume releases pause')",
+      "source": "session_core.py",
+      "line": 349,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.081",
+      "requirement_ids": [
+        "GG-08"
+      ],
+      "check_ids": [
+        "d4.pause",
+        "d5.overlays"
+      ],
+      "scenario": "independent pause resume escape",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.pause', self.validate(r)['phase'] == 'paused', 'Escape also pauses normally')",
+      "source": "session_core.py",
+      "line": 350,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.082",
+      "requirement_ids": [
+        "GG-08"
+      ],
+      "check_ids": [
+        "d4.restart"
+      ],
+      "scenario": "independent paused restart",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.restart', s['phase'] == 'playing' and (n(s, 'turn') == 0 if self.game == 'fungus' else n(s, 'stars') == 300 if self.game == 'glitch' else n(s, 'countdown') > 2), 'Paused Retry clears local state')",
+      "source": "session_core.py",
+      "line": 356,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.083",
+      "requirement_ids": [
+        "GG-08"
+      ],
+      "check_ids": [
+        "d4.entry"
+      ],
+      "scenario": "independent ordinary menu return",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.entry', self.validate(r)['phase'] == 'playing', 'Ordinary play/pause to Menu to Start without duplicate roots')",
+      "source": "session_core.py",
+      "line": 360,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.084",
+      "requirement_ids": [
+        "DELIVERY"
+      ],
+      "check_ids": [
+        "d1.service"
+      ],
+      "scenario": "service deep-copy and rejection",
+      "status": "declared_assertion",
+      "obligation": "self.check('d1.service', True, 'Detached capture and atomically rejected invalid service requests')",
+      "source": "session_core.py",
+      "line": 366,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "GG.085",
+      "requirement_ids": [
+        "GG-09"
+      ],
+      "check_ids": [
+        "d4.reopen"
+      ],
+      "scenario": "real close new PID persistence",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.reopen', okay, 'Old PID exited; new player opens title with actual earned/manual persistent state')",
+      "source": "session_core.py",
+      "line": 393,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "GG/content-and-natural-selection",
+      "leaves": [
+        "d2.placement",
+        "d3.placement",
+        "d5.controls",
+        "d5.hud"
+      ],
+      "requirement_ids": [
+        "GG-01",
+        "GG-02",
+        "GG-07",
+        "GG-10"
+      ],
+      "function": "gg_content",
+      "source": "coverage_glitch.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d2.placement', n(s, 'level') == level and len(cells) == 40 and all((xyz(actor(s, f'cell_{row}_{col}')) == (col + 1, row + 1, 0) for row in range(5) for col in range(8))) and all((a['state'] == 'empty' and n(a, 'hp') == 0 for a in cells)) and (n(s, 'stars') == 300) and (n(s, 'lives') == 5), f'Normal level{level} selection enters exact fresh5x8 content, stars300/lives5')",
+          "line": 41,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d5.controls', s['phase'] == 'playing', 'Visible normal level selection receives genuine click')",
+          "line": 47,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.assert_hud(r, {'level': level, 'stars': 300, 'lives': 5})",
+          "line": 48,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.placement', n(self.validate(selected), 'stars') == old, 'Selecting a card does not debit currency')",
+          "line": 55,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.placement', len(occupied) == 1 and occupied[0]['id'] == 'cell_2_3' and (n(occupied[0], 'hp') == definition['hp']) and (n(s, 'stars') == 0), 'Exactly affordable normal click creates exactly one correct-HP defender and charges once')",
+          "line": 61,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d5.controls', feedback_changed(before, r), 'Selection/placement has actual visual/UI feedback')",
+          "line": 64,
+          "source": "coverage_glitch.py"
+        }
+      ],
+      "parameterization": [
+        "level in range(1, 6)",
+        "(index, definition) in enumerate(self.content['defenders'])"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "GG/full-natural-wave-schedules",
+      "leaves": [
+        "d2.waves",
+        "d3.waves",
+        "d5.hud"
+      ],
+      "requirement_ids": [
+        "GG-01",
+        "GG-06",
+        "GG-10"
+      ],
+      "function": "gg_schedules",
+      "source": "coverage_glitch.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.waves', after['phase'] == 'playing' and n(after, 'spawn_index') == len(level['waves']) and (sum((a['present'] for a in after['actors'] if a['kind'] == 'enemy')) == 1), 'Duration ends spawning, not live-enemy cleanup')",
+          "line": 104,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.waves', n(s, 'spawn_index') == sum((w['time'] <= n(s, 'elapsed') for w in waves)), 'Unedited continuous first-level prefix accumulates every due wave without duplication')",
+          "line": 115,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.waves', n(start, 'spawn_index') == index and (not actor(start, wave['id'])['present']), f\"{entry}/{wave['id']} not spawned before scheduled time\")",
+          "line": 82,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d2.waves', a['present'] and a['state'] == wave['type'] and visible(r, a['id']), f\"{entry}/{wave['id']} naturally spawns real visible correct type\")",
+          "line": 89,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.waves', n(s, 'spawn_index') == due and a['position']['y'] == wave['lane'] + 1 and (abs(a['position']['x'] - (10 - (0.65 if wave['type'] == 'fox' else 0.45) * (elapsed - wave['time']))) < 0.13), f\"{entry}/{wave['id']} exact count/lane/time and genuine entrance movement\")",
+          "line": 91,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.assert_hud(r, {'level': n(s, 'level'), 'stars': n(s, 'stars'), 'lives': n(s, 'lives'), 'time': n(s, 'elapsed')})",
+          "line": 94,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d5.hud', garden_progress_visible(r, n(s, 'spawn_index'), len(level['waves']), sum((a['kind'] == 'enemy' and a['present'] for a in s['actors']))), 'Actual HUD truthfully reports spawned/pending waves, live enemies, or pending+live remaining invaders')",
+          "line": 96,
+          "source": "coverage_glitch.py"
+        }
+      ],
+      "parameterization": [
+        "(entry, level) in zip(self.model['entries'], self.content['levels'])",
+        "target in [1.2, 4.5, 9.0, 15.2]",
+        "(index, wave) in enumerate(level['waves'])",
+        "(i, w) in enumerate(level['waves'])"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "GG/full-production-cycles",
+      "leaves": [
+        "d2.economy",
+        "d3.economy",
+        "d5.feedback"
+      ],
+      "requirement_ids": [
+        "GG-03",
+        "GG-10"
+      ],
+      "function": "gg_production",
+      "source": "coverage_glitch.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.economy', n(self.validate(r), 'stars') == 0, 'Two producers do not award stars before full5s')",
+          "line": 129,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.economy', n(self.validate(r), 'stars') == 100, 'Two lanes each produce50 on their first full interval')",
+          "line": 131,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.economy', n(self.validate(r), 'stars') == 200, 'Two natural complete production cycles retain exact cadence')",
+          "line": 133,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d5.feedback', feedback_changed(before, r), 'Natural production has visible state/UI feedback')",
+          "line": 134,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d2.economy', actor(self.validate(r), 'cell_2_1')['state'] == 'cactus' and n(self.validate(r), 'stars') == 100, 'Actually produced stars can buy a normal defender')",
+          "line": 137,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.economy', n(s, 'stars') == 73, 'Destroyed producer cannot award at its old5s deadline')",
+          "line": 147,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.economy', n(self.validate(self.idle(0.35)), 'stars') == 300, role + ' never produces stars over a full production interval')",
+          "line": 151,
+          "source": "coverage_glitch.py"
+        }
+      ],
+      "parameterization": [
+        "role in ['cactus', 'gnome', 'gravestone']"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "GG/projectile-cadence-speed-and-order",
+      "leaves": [
+        "d2.projectiles",
+        "d3.projectiles"
+      ],
+      "requirement_ids": [
+        "GG-02",
+        "GG-04"
+      ],
+      "function": "gg_shooting",
+      "source": "coverage_glitch.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.projectiles', n(actor(s, a), 'hp') == 80 and n(actor(s, b), 'hp') == hp, 'One real shot hits the nearest of two same-lane enemies, not the farther target')",
+          "line": 198,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.projectiles', n(actor(self.validate(r), a), 'hp') == 80 and (not first_ids), 'Hit projectile was removed and does not repeatedly damage')",
+          "line": 202,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.projectiles', not any((a['kind'] == 'projectile' and a['present'] for a in self.validate(r)['actors'])), role + ' waits complete natural first firing period')",
+          "line": 162,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.projectiles', later is not None and abs((later['position']['x'] - shot['position']['x']) / dt - 6) < 0.35, role + ' projectile actual transform moves at speed6')",
+          "line": 175,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.projectiles', any((i != shot['id'] for i in ids)), role + ' naturally emits another projectile after its second complete interval')",
+          "line": 179,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.projectiles', not any((a['kind'] == 'projectile' and a['present'] for a in s['actors'])), 'No firing into an empty/behind-only lane')",
+          "line": 217,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d2.projectiles', False, role + ' never emits a projectile')",
+          "line": 167,
+          "source": "coverage_glitch.py"
+        }
+      ],
+      "parameterization": [
+        "(role, period, damage) in [('cactus', 1, 20), ('gnome', 2, 35)]",
+        "behind in [False, True]"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "GG/enemy-speed-full-attacks-vault",
+      "leaves": [
+        "d2.enemies",
+        "d3.enemies",
+        "d5.feedback"
+      ],
+      "requirement_ids": [
+        "GG-05",
+        "GG-10"
+      ],
+      "function": "gg_enemies",
+      "source": "coverage_glitch.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d2.enemies', animated and actor(self.validate(r), self.vault_id)['position']['x'] < 2, 'Fox vault has independently sampled real lift/rotation/scale/renderer animation and left-side landing')",
+          "line": 257,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d5.feedback', animated, 'Fox jump is player-observable, not just a state flag')",
+          "line": 259,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.enemies', abs((a0['position']['x'] - actor(s, a0['id'])['position']['x']) / (n(s, 'elapsed') - t0) - speed) < 0.06, typ + ' exact unobstructed movement speed')",
+          "line": 227,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.enemies', n(actor(s, cid), 'hp') == 80 and abs(enemy['position']['x'] - 2.55) < 0.03, typ + ' stops at actual same-lane defender and does not hit before1s')",
+          "line": 238,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.enemies', n(actor(self.validate(r), cid), 'hp') == 40, typ + ' deals20 on each of two full1s attacks')",
+          "line": 241,
+          "source": "coverage_glitch.py"
+        }
+      ],
+      "parameterization": [
+        "(typ, speed) in [('lizard', 0.45), ('fox', 0.65)]"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "GG/active-systems-pause-and-restart",
+      "leaves": [
+        "d4.pause",
+        "d4.restart"
+      ],
+      "requirement_ids": [
+        "GG-03",
+        "GG-08"
+      ],
+      "function": "gg_active_pause",
+      "source": "coverage_glitch.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.pause', equivalent(frozen_state(before), frozen_state(after)), 'Active projectile, producer, enemy and time all freeze under Pause')",
+          "line": 272,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d4.pause', n(after, 'elapsed') > n(before, 'elapsed') and n(after, 'stars') == n(before, 'stars') + 50, 'Resume retains production progress and continues active systems')",
+          "line": 276,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d4.restart', n(s, 'stars') == 300 and n(s, 'lives') == 5 and (n(s, 'completed_mask') == oldmask) and all((a['state'] == 'empty' for a in s['actors'] if a['kind'] == 'cell')) and (not any((a['kind'] == 'projectile' and a['present'] for a in s['actors']))), 'Play Retry clears active projectiles/production without erasing earned campaign bits')",
+          "line": 281,
+          "source": "coverage_glitch.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "GG/real-event-audio-and-mute",
+      "leaves": [
+        "d5.feedback"
+      ],
+      "requirement_ids": [
+        "GG-09"
+      ],
+      "function": "gg_audio",
+      "source": "coverage_glitch.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d5.feedback', audible != muted, 'Mixed engine output proves firing/hit/result audio is audible with volume1 and silent with volume0')",
+          "line": 299,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d5.feedback', (r.get('audioPeak', 0) > 0.0001) != muted, 'Real normal placement event audio obeys mute on mixed output')",
+          "line": 308,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d5.feedback', (r.get('audioPeak', 0) > 0.0001) != muted, f\"Isolated real {event} event obeys {('muted' if muted else 'audible')} output; no unrelated placement sounds\")",
+          "line": 325,
+          "source": "coverage_glitch.py"
+        }
+      ],
+      "parameterization": [
+        "muted in [False, True]",
+        "event in ['firing', 'damage', 'loss']"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "GG/result-freeze-and-final-campaign",
+      "leaves": [
+        "d2.campaign",
+        "d3.campaign",
+        "d4.journey",
+        "d5.overlays"
+      ],
+      "requirement_ids": [
+        "GG-06",
+        "GG-07",
+        "GG-08",
+        "GG-10"
+      ],
+      "function": "gg_results",
+      "source": "coverage_glitch.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d2.campaign', s['phase'] == 'won', 'Real final shot earns level result')",
+          "line": 337,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.assert_stable(before, after)",
+          "line": 340,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.campaign', n(after, 'stars') == n(before, 'stars'), 'Result stops pending production, projectiles and level clock')",
+          "line": 341,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d5.overlays', bool(re.search('complete|safe|campaign|victor|cleared|win', text(r), re.I)), 'Final campaign/result overlay has actual readable completion presentation')",
+          "line": 343,
+          "source": "coverage_glitch.py"
+        },
+        {
+          "assertion": "self.check('d3.campaign', n(s, 'level') == 2 and (not any((a['kind'] == 'projectile' and a['present'] for a in s['actors']))), 'Next cleans all old projectiles while entering actual next level')",
+          "line": 348,
+          "source": "coverage_glitch.py"
+        }
+      ],
+      "parameterization": [
+        "level in [1, 5]"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "COMMON/repeated-natural-menu",
+      "leaves": [
+        "d4.entry"
+      ],
+      "requirement_ids": [
+        "GG-08"
+      ],
+      "function": "repeat_navigation",
+      "source": "coverage_common.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.entry', all((q == footprints[0] for q in footprints)) and footprints[0]['event_systems'] == 1, 'Three normal Menu/Start cycles have stable actual actor/control/EventSystem cardinality')",
+          "line": 150,
+          "source": "coverage_common.py"
+        }
+      ],
+      "parameterization": [
+        "_ in range(3)"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "COMMON/required-readable-instructions-and-pause",
+      "leaves": [
+        "d5.overlays"
+      ],
+      "requirement_ids": [
+        "GG-01",
+        "GG-08",
+        "GG-10"
+      ],
+      "function": "readable_overlays",
+      "source": "coverage_common.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d5.overlays', bool(re.search('move|wasd|arrow|select|acceler|shift|click|instructions|controls|help', text(self.p.last), re.I)), 'Actual readable title includes instructions or a discoverable Help control')",
+          "line": 157,
+          "source": "coverage_common.py"
+        },
+        {
+          "assertion": "self.check('d5.overlays', bool(re.search('paus', text(r), re.I)), 'Actual readable pause overlay is available after ordinary Start/Escape')",
+          "line": 163,
+          "source": "coverage_common.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "COMMON/session-detached-atomic-own-restore",
+      "leaves": [
+        "d1.service"
+      ],
+      "requirement_ids": [
+        "DELIVERY"
+      ],
+      "function": "own_restore",
+      "source": "coverage_common.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d1.service', equivalent(frozen_state(before), frozen_state(after)), 'Every chapter restores its own unedited detached public state before any authored fixture')",
+          "line": 175,
+          "source": "coverage_common.py"
+        }
+      ],
+      "parameterization": [
+        "entry in self.model['entries']"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "campaign content and four placements",
+      "leaves": [
+        "d2.placement",
+        "d3.placement",
+        "d5.feedback"
+      ],
+      "requirement_ids": [
+        "GG-01",
+        "GG-02",
+        "GG-10"
+      ],
+      "function": "placement",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.placement', n(s, 'stars') == 0 and actor(s, 'cell_0_0')['state'] == 'empty', 'Unaffordable placement rejected')",
+          "line": 255,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.placement', n(s, 'stars') == before and actor(s, 'cell_0_0')['state'] == 'cactus', 'Occupied placement rejected')",
+          "line": 252,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d5.feedback', bool(re.search('reject|occup|enough|insufficient', text(r), re.I)), 'Occupied placement feedback')",
+          "line": 253,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d2.placement', actor(s, 'cell_0_' + str(card))['state'] == d['type'] and visible(r, 'cell_0_' + str(card)), 'All five levels and four placed rendered roles')",
+          "line": 249,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.placement', n(s, 'stars') == 500 - cost, 'Placement debits selected role exactly once')",
+          "line": 250,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [
+        "entry in self.model['entries']",
+        "(card, d) in enumerate(self.content['defenders'])"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "resource production",
+      "leaves": [
+        "d2.economy",
+        "d3.economy",
+        "d5.hud"
+      ],
+      "requirement_ids": [
+        "GG-03",
+        "GG-10"
+      ],
+      "function": "economy",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d2.economy', n(s, 'stars') > 73 and visible(r, 'cell_0_0'), 'Live trophy actually produces spendable stars')",
+          "line": 260,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.economy', n(s, 'stars') == 123, 'Exactly50 after full5-second production interval')",
+          "line": 261,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d5.hud', hud_number(r, 'stars', n(s, 'stars')), 'Actual produced balance shown in HUD')",
+          "line": 262,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.economy', n(s, 'stars') == 300, 'Nonproducer has no star income')",
+          "line": 263,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "lane projectiles and damage",
+      "leaves": [
+        "d2.projectiles",
+        "d3.projectiles"
+      ],
+      "requirement_ids": [
+        "GG-04"
+      ],
+      "function": "projectiles",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.projectiles', not any((a['kind'] == 'projectile' and a['present'] for a in s['actors'])), 'Off-lane enemy cannot trigger fire')",
+          "line": 276,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d2.projectiles', bool(shots) and any((visible(r, a['id']) for a in shots)), 'Actual visible projectile, not instant damage')",
+          "line": 271,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.projectiles', n(e, 'hp') == 100 - damage, 'First same-lane projectile deals exact damage once')",
+          "line": 273,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [
+        "(typ, period, damage) in [('cactus', 1, 20), ('gnome', 2, 35)]"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "enemy contact attack and fox vault",
+      "leaves": [
+        "d2.enemies",
+        "d3.enemies"
+      ],
+      "requirement_ids": [
+        "GG-05"
+      ],
+      "function": "enemies",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d2.enemies', cell['state'] == 'empty' and n(cell, 'hp') == 0, 'Lizard destroys actual blocker')",
+          "line": 282,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.enemies', e['position']['x'] < 2.55, 'Enemy resumes leftward motion after blocker death')",
+          "line": 283,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d2.enemies', e['position']['x'] < 2 and n(e, 'jumped') == 1 and visible(r, e['id']), 'Fox visibly moves past gravestone')",
+          "line": 293,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.enemies', n(cell, 'hp') == 300, 'Vault does not attack gravestone')",
+          "line": 294,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "wave schedule cleanup and loss",
+      "leaves": [
+        "d2.waves",
+        "d3.waves",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "requirement_ids": [
+        "GG-06",
+        "GG-08"
+      ],
+      "function": "waves",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d2.waves', n(s, 'spawn_index') >= 1 and any((a['kind'] == 'enemy' and a['present'] and visible(r, a['id']) for a in s['actors'])), 'First scheduled wave enters actual lane')",
+          "line": 298,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.waves', n(s, 'lives') == 1 and (not any((a['kind'] == 'enemy' and a['present'] for a in s['actors']))), 'One enemy leak debits one life and removes enemy')",
+          "line": 300,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.waves', s['phase'] == 'playing' and n(s, 'elapsed') > self.content['levels'][0]['duration'], 'Timer expiry does not win while enemies survive')",
+          "line": 301,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.journey', s['phase'] == 'lost' and n(s, 'lives') == 0, 'Natural final leak reaches defeat')",
+          "line": 304,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.restart', n(self.validate(r), 'lives') == 5 and n(self.validate(r), 'elapsed') < 0.3, 'Loss Retry resets current level')",
+          "line": 305,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "five-level adjacent campaign",
+      "leaves": [
+        "d2.campaign",
+        "d3.campaign",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "requirement_ids": [
+        "GG-07",
+        "GG-08"
+      ],
+      "function": "campaign",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.restart', n(self.validate(r), 'level') == 5 and n(self.validate(r), 'stars') == 300, 'Victory Retry preserves current selected level')",
+          "line": 319,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d2.campaign', s['phase'] == 'won' and (not any((a['kind'] == 'enemy' and a['present'] for a in s['actors']))), 'Every level has real last-enemy cleanup success')",
+          "line": 312,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.campaign', int(n(s, 'completed_mask')) & 1 << lev - 1 != 0, 'Completion earned by actual projectile kill')",
+          "line": 313,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.journey', s['phase'] == 'won', 'Stable real win reached after legitimate near-clear preparation')",
+          "line": 314,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.journey', n(s, 'level') == lev + 1 and s['phase'] == 'playing', 'Ordinary Next links adjacent real levels')",
+          "line": 317,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.campaign', n(s, 'stars') == 300 and n(s, 'lives') == 5 and (n(s, 'elapsed') < 0.3) and all((a['state'] == 'empty' for a in s['actors'] if a['kind'] == 'cell')), 'Next clears local content/economy/timers')",
+          "line": 318,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [
+        "lev in range(1, 6)"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "natural menu and start",
+      "leaves": [
+        "d4.entry",
+        "d5.controls"
+      ],
+      "requirement_ids": [
+        "GG-01"
+      ],
+      "function": "natural_start",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.entry', s['phase'] == 'playing', 'Natural button enters actual game')",
+          "line": 331,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d5.controls', s['phase'] == 'playing', 'Normal mouse hit real visible Start button and caused its advertised transition')",
+          "line": 332,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d5.overlays', bool(re.search('move|wasd|arrow|select|acceler|shift|click|instructions|controls|help', text(r), re.I)), 'Menu presents control instructions or a discoverable instructions control; no fixed wording/layout')",
+          "line": 329,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "independent pause resume escape",
+      "leaves": [
+        "d4.pause",
+        "d5.overlays"
+      ],
+      "requirement_ids": [
+        "GG-08"
+      ],
+      "function": "pause_flow",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.pause', before['phase'] == 'paused' and state(before) == state(after), 'Pause freezes real state despite delivered input/time')",
+          "line": 347,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d5.overlays', bool(re.search('paus', text(self.p.last), re.I)), 'Pause overlay visible')",
+          "line": 348,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.pause', self.validate(r)['phase'] == 'playing', 'Ordinary Resume releases pause')",
+          "line": 349,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.pause', self.validate(r)['phase'] == 'paused', 'Escape also pauses normally')",
+          "line": 350,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "independent paused restart",
+      "leaves": [
+        "d4.restart"
+      ],
+      "requirement_ids": [
+        "GG-08"
+      ],
+      "function": "paused_restart",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.restart', s['phase'] == 'playing' and (n(s, 'turn') == 0 if self.game == 'fungus' else n(s, 'stars') == 300 if self.game == 'glitch' else n(s, 'countdown') > 2), 'Paused Retry clears local state')",
+          "line": 356,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "independent ordinary menu return",
+      "leaves": [
+        "d4.entry"
+      ],
+      "requirement_ids": [
+        "GG-08"
+      ],
+      "function": "menu_return",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.entry', self.validate(r)['phase'] == 'playing', 'Ordinary play/pause to Menu to Start without duplicate roots')",
+          "line": 360,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "service deep-copy and rejection",
+      "leaves": [
+        "d1.service"
+      ],
+      "requirement_ids": [
+        "DELIVERY"
+      ],
+      "function": "services",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d1.service', True, 'Detached capture and atomically rejected invalid service requests')",
+          "line": 366,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "real close new PID persistence",
+      "leaves": [
+        "d4.reopen"
+      ],
+      "requirement_ids": [
+        "GG-09"
+      ],
+      "function": "reopen",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.reopen', okay, 'Old PID exited; new player opens title with actual earned/manual persistent state')",
+          "line": 393,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    }
+  ],
+  "d6": {
+    "requirement_id": "GG-10",
+    "scope": {
+      "state": "main-play-v1",
+      "review_model": "gpt-5.6-sol",
+      "rounds": 1,
+      "reference": "reference.png",
+      "scope": "Declared bounded adaptation and supplied art, not unannounced original asset/layout requirements."
+    }
+  },
+  "navigation_note": "Genuine ordinary UI can be reached by exact visible label when the published control identity is defective. Required service checks remain."
+}

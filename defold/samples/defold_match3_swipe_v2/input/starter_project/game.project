@@ -1,0 +1,21 @@
+[project]
+title = Match 3 Swipe Campaign Starter
+version = 0.1
+custom_resources = /benchmark
+write_log = 1
+
+[bootstrap]
+main_collection = /main/main.collectionc
+
+[display]
+width = 960
+height = 720
+
+[input]
+game_binding = /main/game.input_bindingc
+
+[osx]
+bundle_identifier = org.benchmark.defoldmatch3swipev2.starter
+
+[graphics]
+max_font_batches = 512

@@ -1,0 +1,39 @@
+{
+  "version": "bonemaze-evaluator-1.0",
+  "engine": {
+    "version": "5.7.4",
+    "changelist": 51494982
+  },
+  "generation": "legacy",
+  "entry": "python evaluator/scripts/evaluate.py --input-root INPUT --output OUTPUT [--project-root PROJECT] --engine-root ENGINE",
+  "runtime": "engine/observation-player/1.1/runtime.py",
+  "player_methods": [
+    "start",
+    "press",
+    "holding",
+    "click_target",
+    "state",
+    "wait",
+    "capture",
+    "reopen",
+    "close"
+  ],
+  "normal_key_map": "input/naming-tables.json",
+  "exit_codes": {
+    "0": "functional collection completed, including candidate defects; D6/finalize may still be pending",
+    "2": "invalid command-line arguments",
+    "3": "positive infrastructure failure; no score published"
+  },
+  "viewport": [
+    1280,
+    720
+  ],
+  "dpi": "recorded in native capture receipts",
+  "attribution": "missing project, build/load/runtime/state/input failures attributable to candidate affect only dependent checks; mapping/host/transport/protocol faults invalidate the run",
+  "scoring_stage_order": [
+    "D1 static",
+    "D2-D5 normal input and observations",
+    "D6 direct conversation images"
+  ],
+  "no_gold_runtime_dependency": true
+}

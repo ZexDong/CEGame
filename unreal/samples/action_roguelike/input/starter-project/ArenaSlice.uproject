@@ -1,0 +1,15 @@
+{
+    "FileVersion": 3,
+    "EngineAssociation": "5.6",
+    "Category": "Games",
+    "Description": "Blank common starting point for an action arena vertical slice.",
+    "Plugins": [
+        {
+            "Name": "AndroidFileServer",
+            "Enabled": false
+        }
+    ],
+    "TargetPlatforms": [
+        "Windows"
+    ]
+}

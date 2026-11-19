@@ -1,0 +1,2355 @@
+{
+  "sample_id": "unity_3d_polyrace_challenge",
+  "evaluator_version": "1.2.1",
+  "status": "Frozen requirement and checkpoint mapping.",
+  "semantic_review": "GDD requirements plus identified v1.1 gaps, not inferred coverage from repeated numeric scores.",
+  "obligations": [
+    {
+      "id": "PR.001",
+      "requirement_ids": [
+        "PR-01",
+        "PR-02",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.motion",
+        "d3.motion",
+        "d2.terrain",
+        "d5.controls",
+        "d5.hud"
+      ],
+      "scenario": "PR/all-natural-selections-countdown",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.motion', n(s, 'countdown') > 0 and n(s, 'speed') == 0 and (n(s, 'elapsed') == 0) and (actor(s, 'racer')['position']['z'] == 2), 'Countdown blocks throttle for the full first2.35s, not only the first frame')",
+      "source": "coverage_polyrace.py",
+      "line": 74,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.002",
+      "requirement_ids": [
+        "PR-01",
+        "PR-02",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.motion",
+        "d3.motion",
+        "d2.terrain",
+        "d5.controls",
+        "d5.hud"
+      ],
+      "scenario": "PR/all-natural-selections-countdown",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.motion', n(s, 'countdown') == 0 and n(s, 'elapsed') > 0 and (n(s, 'speed') > 0), 'The3s countdown actually completes and releases normal input')",
+      "source": "coverage_polyrace.py",
+      "line": 79,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.003",
+      "requirement_ids": [
+        "PR-01",
+        "PR-02",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.motion",
+        "d3.motion",
+        "d2.terrain",
+        "d5.controls",
+        "d5.hud"
+      ],
+      "scenario": "PR/all-natural-selections-countdown",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.motion', n(s, 'track') == track and n(s, 'mode') == mode and (n(s, 'vehicle') == car['id']) and (abs(n(s, 'shield') - car['shield']) < 0.01) and (abs(actor(s, 'racer')['position']['y'] - car['hover_height']) < 0.1), 'Every ordinary track/mode/craft selection launches its actual fresh selected craft/course')",
+      "source": "coverage_polyrace.py",
+      "line": 54,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.004",
+      "requirement_ids": [
+        "PR-01",
+        "PR-02",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.motion",
+        "d3.motion",
+        "d2.terrain",
+        "d5.controls",
+        "d5.hud"
+      ],
+      "scenario": "PR/all-natural-selections-countdown",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.controls', s['phase'] == 'playing', 'Ordinary controls are genuinely raycast/click-operated')",
+      "source": "coverage_polyrace.py",
+      "line": 58,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.005",
+      "requirement_ids": [
+        "PR-01",
+        "PR-02",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.motion",
+        "d3.motion",
+        "d2.terrain",
+        "d5.controls",
+        "d5.hud"
+      ],
+      "scenario": "PR/all-natural-selections-countdown",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.terrain', all((abs(actor(s, item['id'])['position']['x'] - item['x']) < 0.03 and abs(actor(s, item['id'])['position']['z'] - item['z']) < 0.03 and (fact(r, item['id']).get('renderers', 0) > 0) for item in track_content['obstacles'] + track_content['rings'])), 'Every natural selection exposes the correct actual course obstacle/ring locations and real renderer geometry')",
+      "source": "coverage_polyrace.py",
+      "line": 60,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.006",
+      "requirement_ids": [
+        "PR-01",
+        "PR-02",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.motion",
+        "d3.motion",
+        "d2.terrain",
+        "d5.controls",
+        "d5.hud"
+      ],
+      "scenario": "PR/all-natural-selections-countdown",
+      "status": "declared_assertion",
+      "obligation": "self.assert_race_hud(r, {'track': n(s, 'track'), 'shield': n(s, 'shield'), 'speed': n(s, 'speed'), 'time': n(s, 'elapsed'), 'gates': n(s, 'next_gate'), 'points': n(s, 'score')})",
+      "source": "coverage_polyrace.py",
+      "line": 66,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.007",
+      "requirement_ids": [
+        "PR-02",
+        "PR-03",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d3.motion",
+        "d2.boost",
+        "d3.boost",
+        "d5.feedback"
+      ],
+      "scenario": "PR/all-craft-coast-brake-limits-steering",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.boost', n(self.validate(r), 'boost') == 1 and visible(r, 'racer'), 'Each craft actually enters boost')",
+      "source": "coverage_polyrace.py",
+      "line": 130,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.008",
+      "requirement_ids": [
+        "PR-02",
+        "PR-03",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d3.motion",
+        "d2.boost",
+        "d3.boost",
+        "d5.feedback"
+      ],
+      "scenario": "PR/all-craft-coast-brake-limits-steering",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.feedback', fact(r, 'racer').get('particles', 0) > fact(before, 'racer').get('particles', 0) or feedback_changed(before, r) or fact(r, 'racer').get('visualSignature') != fact(before, 'racer').get('visualSignature'), 'Boost produces actual particle/material/UI feedback')",
+      "source": "coverage_polyrace.py",
+      "line": 131,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.009",
+      "requirement_ids": [
+        "PR-02",
+        "PR-03",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d3.motion",
+        "d2.boost",
+        "d3.boost",
+        "d5.feedback"
+      ],
+      "scenario": "PR/all-craft-coast-brake-limits-steering",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.motion', abs((n(s, 'speed') - n(s0, 'speed')) / dt - self.content['vehicles'][0]['acceleration']) < 0.4, 'Measured acceleration remains elapsed-time based at external frame cap' + str(fps))",
+      "source": "coverage_polyrace.py",
+      "line": 142,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.010",
+      "requirement_ids": [
+        "PR-02",
+        "PR-03",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d3.motion",
+        "d2.boost",
+        "d3.boost",
+        "d5.feedback"
+      ],
+      "scenario": "PR/all-craft-coast-brake-limits-steering",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.boost' if boost else 'd3.motion', abs(n(s, 'speed') - limit) < 0.08, 'Actual ' + car['name'] + (' boost max1.4x' if boost else ' normal maximum') + ' is exact')",
+      "source": "coverage_polyrace.py",
+      "line": 91,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.011",
+      "requirement_ids": [
+        "PR-02",
+        "PR-03",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d3.motion",
+        "d2.boost",
+        "d3.boost",
+        "d5.feedback"
+      ],
+      "scenario": "PR/all-craft-coast-brake-limits-steering",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.motion', abs(observed - rate) < 0.65, f\"{car['name']} {('brakes' if key else 'coasts')} at declared {rate}/s over continuous measured elapsed time; actual={observed:.4f}\")",
+      "source": "coverage_polyrace.py",
+      "line": 110,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.012",
+      "requirement_ids": [
+        "PR-02",
+        "PR-03",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d3.motion",
+        "d2.boost",
+        "d3.boost",
+        "d5.feedback"
+      ],
+      "scenario": "PR/all-craft-coast-brake-limits-steering",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.motion', abs(dx / dt - direction * car['steering']) < 0.2, 'Arrow alias uses exact craft-specific real steering rate')",
+      "source": "coverage_polyrace.py",
+      "line": 121,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.013",
+      "requirement_ids": [
+        "PR-02",
+        "PR-03",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d3.motion",
+        "d2.boost",
+        "d3.boost",
+        "d5.feedback"
+      ],
+      "scenario": "PR/all-craft-coast-brake-limits-steering",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.feedback', any((abs(q['euler']['y']) > 1 or abs(q['euler']['z']) > 1 for q in r.get('motion') or [])), 'Steering has independently observed actual yaw/bank feedback')",
+      "source": "coverage_polyrace.py",
+      "line": 123,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.014",
+      "requirement_ids": [
+        "PR-02",
+        "PR-03",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d3.motion",
+        "d2.boost",
+        "d3.boost",
+        "d5.feedback"
+      ],
+      "scenario": "PR/all-craft-coast-brake-limits-steering",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.boost', n(after, 'speed') <= n(before, 'speed') + 0.01 and n(after, 'speed') > car['max_speed'] - 0.1, 'Release decreases boost speed towards normal limit, rather than accelerating or dropping to zero')",
+      "source": "coverage_polyrace.py",
+      "line": 98,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.015",
+      "requirement_ids": [
+        "PR-03",
+        "PR-04",
+        "PR-08"
+      ],
+      "check_ids": [
+        "d2.shield",
+        "d3.shield",
+        "d3.boost"
+      ],
+      "scenario": "PR/all-craft-contact-grace-regeneration",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.shield', bool(pairs) and all((abs(nums(b['values'])['speed'] / nums(a['values'])['speed'] - 0.35) < 0.04 for (a, b) in pairs)), 'Actual obstacle collision changes live forward speed to35%, with real pose observations')",
+      "source": "coverage_polyrace.py",
+      "line": 197,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.016",
+      "requirement_ids": [
+        "PR-03",
+        "PR-04",
+        "PR-08"
+      ],
+      "check_ids": [
+        "d2.shield",
+        "d3.shield",
+        "d3.boost"
+      ],
+      "scenario": "PR/all-craft-contact-grace-regeneration",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.shield', len(events) >= 2 and all((0.55 <= b['time'] - a['time'] <= 0.72 for (a, b) in zip(events, events[1:]))), 'Sustained real rail contact applies0.6s grace, not damage every frame')",
+      "source": "coverage_polyrace.py",
+      "line": 169,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.017",
+      "requirement_ids": [
+        "PR-03",
+        "PR-04",
+        "PR-08"
+      ],
+      "check_ids": [
+        "d2.shield",
+        "d3.shield",
+        "d3.boost"
+      ],
+      "scenario": "PR/all-craft-contact-grace-regeneration",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.shield', n(s, 'shield') == amount, 'Shield does not regenerate during real recent-contact delay')",
+      "source": "coverage_polyrace.py",
+      "line": 181,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.018",
+      "requirement_ids": [
+        "PR-03",
+        "PR-04",
+        "PR-08"
+      ],
+      "check_ids": [
+        "d2.shield",
+        "d3.shield",
+        "d3.boost"
+      ],
+      "scenario": "PR/all-craft-contact-grace-regeneration",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.shield', abs(n(s, 'shield') - expected) < 0.08 and n(s, 'shield') > amount, f\"{car['name']} actual regeneration rate{car['regen']}/s begins after contact delay and respects capacity\")",
+      "source": "coverage_polyrace.py",
+      "line": 189,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.019",
+      "requirement_ids": [
+        "PR-03",
+        "PR-04",
+        "PR-08"
+      ],
+      "check_ids": [
+        "d2.shield",
+        "d3.shield",
+        "d3.boost"
+      ],
+      "scenario": "PR/all-craft-contact-grace-regeneration",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.boost' if boosting else 'd3.shield', abs(n(s, 'shield') - expected) < 0.03 and abs(actor(s, 'racer')['position']['x'] - 5.5) < 0.02, f\"{car['name']} real rail contact bounds x and debits exact {('double' if boosting else 'ordinary')} cost\")",
+      "source": "coverage_polyrace.py",
+      "line": 154,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.020",
+      "requirement_ids": [
+        "PR-03",
+        "PR-04",
+        "PR-08"
+      ],
+      "check_ids": [
+        "d2.shield",
+        "d3.shield",
+        "d3.boost"
+      ],
+      "scenario": "PR/all-craft-contact-grace-regeneration",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.shield', n(s, 'shield') < car['shield'], 'Each craft has a real spatial rail collision')",
+      "source": "coverage_polyrace.py",
+      "line": 157,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.021",
+      "requirement_ids": [
+        "PR-01",
+        "PR-03",
+        "PR-06"
+      ],
+      "check_ids": [
+        "d2.terrain",
+        "d3.terrain"
+      ],
+      "scenario": "PR/continuous-ramps-and-real-road",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.terrain', samples and all((abs(q['position']['y'] - self.height(track, q['position']['z']) - car['hover_height']) < 0.16 for q in samples)), 'Continuous actual ascent/peak/descent respects every selected craft hover height')",
+      "source": "coverage_polyrace.py",
+      "line": 210,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.022",
+      "requirement_ids": [
+        "PR-01",
+        "PR-03",
+        "PR-06"
+      ],
+      "check_ids": [
+        "d2.terrain",
+        "d3.terrain"
+      ],
+      "scenario": "PR/continuous-ramps-and-real-road",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.terrain', bool(raised), 'Actual road renderer geometry, not just racer height, contains a raised ramp')",
+      "source": "coverage_polyrace.py",
+      "line": 214,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.023",
+      "requirement_ids": [
+        "PR-01",
+        "PR-03",
+        "PR-06"
+      ],
+      "check_ids": [
+        "d2.terrain",
+        "d3.terrain"
+      ],
+      "scenario": "PR/continuous-ramps-and-real-road",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.terrain', any((q['position']['z'] >= track['ramp_peak'] for q in samples)) and any((q['position']['z'] <= track['ramp_start'] for q in samples)) and any((q['position']['z'] >= track['ramp_end'] for q in samples)), 'Ramp check observes continuous approach, peak and descent rather than restoring directly to peak')",
+      "source": "coverage_polyrace.py",
+      "line": 217,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.024",
+      "requirement_ids": [
+        "PR-05"
+      ],
+      "check_ids": [
+        "d2.pickups",
+        "d3.pickups"
+      ],
+      "scenario": "PR/all-spatial-pickup-boundaries-cap",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.pause', equivalent(frozen_state(before), frozen_state(after)), 'Pause freezes actual imminent pickup and racer state')",
+      "source": "coverage_polyrace.py",
+      "line": 250,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.025",
+      "requirement_ids": [
+        "PR-05"
+      ],
+      "check_ids": [
+        "d2.pickups",
+        "d3.pickups"
+      ],
+      "scenario": "PR/all-spatial-pickup-boundaries-cap",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.pickups', actor(self.validate(r), ring['id'])['state'] == 'collected', 'Resumed normal approach still collects exactly the same pending ring')",
+      "source": "coverage_polyrace.py",
+      "line": 253,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.026",
+      "requirement_ids": [
+        "PR-05"
+      ],
+      "check_ids": [
+        "d2.pickups",
+        "d3.pickups"
+      ],
+      "scenario": "PR/all-spatial-pickup-boundaries-cap",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.pickups', (actor(self.validate(r), ring['id'])['state'] == 'collected') == collected, 'Real crossing tests either side of declared0.9 lateral collection radius')",
+      "source": "coverage_polyrace.py",
+      "line": 242,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.027",
+      "requirement_ids": [
+        "PR-05"
+      ],
+      "check_ids": [
+        "d2.pickups",
+        "d3.pickups"
+      ],
+      "scenario": "PR/all-spatial-pickup-boundaries-cap",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.pickups', actor(s, ring['id'])['state'] == 'collected' and (not fact(r, ring['id']).get('active', False)), 'Every actual ring in every track is spatially collected and disappears')",
+      "source": "coverage_polyrace.py",
+      "line": 233,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.028",
+      "requirement_ids": [
+        "PR-05"
+      ],
+      "check_ids": [
+        "d2.pickups",
+        "d3.pickups"
+      ],
+      "scenario": "PR/all-spatial-pickup-boundaries-cap",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.pickups', bonus == 100 and n(s, 'shield') == self.content['vehicles'][0]['shield'], 'Every ring grants one100 bonus and clamps +10 at full shield')",
+      "source": "coverage_polyrace.py",
+      "line": 235,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.029",
+      "requirement_ids": [
+        "PR-06",
+        "PR-07",
+        "PR-08",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.race",
+        "d3.race",
+        "d4.journey",
+        "d4.restart",
+        "d5.hud",
+        "d5.overlays"
+      ],
+      "scenario": "PR/six-natural-races-and-result-freeze",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.race', self.validate(self.idle(0.3))['phase'] == 'playing', 'Elapsed time alone cannot finish Time Attack with no gate crossings')",
+      "source": "coverage_polyrace.py",
+      "line": 284,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.030",
+      "requirement_ids": [
+        "PR-06",
+        "PR-07",
+        "PR-08",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.race",
+        "d3.race",
+        "d4.journey",
+        "d4.restart",
+        "d5.hud",
+        "d5.overlays"
+      ],
+      "scenario": "PR/six-natural-races-and-result-freeze",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.restart', n(s, 'vehicle') == 2 and n(s, 'shield') == self.content['vehicles'][2]['shield'] and (n(s, 'speed') == 0) and (n(s, 'next_gate') == 0) and (n(s, 'countdown') > 2) and all((a['state'] == 'active' and a['present'] for a in s['actors'] if a['kind'] == 'ring')) and all((a['state'] == 'pending' for a in s['actors'] if a['kind'] == 'gate')), 'Paused Retry preserves selected craft but restores shield/countdown/all rings/all gates/no residual speed')",
+      "source": "coverage_polyrace.py",
+      "line": 297,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.031",
+      "requirement_ids": [
+        "PR-06",
+        "PR-07",
+        "PR-08",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.race",
+        "d3.race",
+        "d4.journey",
+        "d4.restart",
+        "d5.hud",
+        "d5.overlays"
+      ],
+      "scenario": "PR/six-natural-races-and-result-freeze",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.race', s['phase'] == 'won' and n(s, 'next_gate') == 3, 'Normal unedited full race crosses all three ordered gates from its actual countdown')",
+      "source": "coverage_polyrace.py",
+      "line": 267,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.032",
+      "requirement_ids": [
+        "PR-06",
+        "PR-07",
+        "PR-08",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.race",
+        "d3.race",
+        "d4.journey",
+        "d4.restart",
+        "d5.hud",
+        "d5.overlays"
+      ],
+      "scenario": "PR/six-natural-races-and-result-freeze",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.hud', race_time_visible(r, n(s, 'elapsed')), 'Truthful completed-race time is readable at nonzero elapsed time, not a constant zero label')",
+      "source": "coverage_polyrace.py",
+      "line": 269,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.033",
+      "requirement_ids": [
+        "PR-06",
+        "PR-07",
+        "PR-08",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.race",
+        "d3.race",
+        "d4.journey",
+        "d4.restart",
+        "d5.hud",
+        "d5.overlays"
+      ],
+      "scenario": "PR/six-natural-races-and-result-freeze",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.journey', s['phase'] == 'won', 'Ordinary whole track/mode race has reachable stable success')",
+      "source": "coverage_polyrace.py",
+      "line": 271,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.034",
+      "requirement_ids": [
+        "PR-06",
+        "PR-07",
+        "PR-08",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.race",
+        "d3.race",
+        "d4.journey",
+        "d4.restart",
+        "d5.hud",
+        "d5.overlays"
+      ],
+      "scenario": "PR/six-natural-races-and-result-freeze",
+      "status": "declared_assertion",
+      "obligation": "self.assert_stable(before, after)",
+      "source": "coverage_polyrace.py",
+      "line": 275,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.035",
+      "requirement_ids": [
+        "PR-06",
+        "PR-07",
+        "PR-08",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.race",
+        "d3.race",
+        "d4.journey",
+        "d4.restart",
+        "d5.hud",
+        "d5.overlays"
+      ],
+      "scenario": "PR/six-natural-races-and-result-freeze",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.overlays', bool(re.search('campaign|complete|trials|victory', text(r), re.I)), 'Track3 Next has an actual visible campaign conclusion')",
+      "source": "coverage_polyrace.py",
+      "line": 278,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.036",
+      "requirement_ids": [
+        "PR-07",
+        "PR-08"
+      ],
+      "check_ids": [
+        "d3.race",
+        "d4.reopen"
+      ],
+      "scenario": "PR/fastest-record-isolation-and-retry",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.race', abs(n(slower, 'best_time') - record) < 0.01, 'A slower successful race never overwrites faster successful record')",
+      "source": "coverage_polyrace.py",
+      "line": 323,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.037",
+      "requirement_ids": [
+        "PR-07",
+        "PR-08"
+      ],
+      "check_ids": [
+        "d3.race",
+        "d4.reopen"
+      ],
+      "scenario": "PR/fastest-record-isolation-and-retry",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.reopen', abs(n(self.validate(self.p.last), 'best_time') - record) < 0.01, 'Another track/craft record does not overwrite the first track/craft record')",
+      "source": "coverage_polyrace.py",
+      "line": 327,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.038",
+      "requirement_ids": [
+        "PR-08"
+      ],
+      "check_ids": [
+        "d4.entry"
+      ],
+      "scenario": "COMMON/repeated-natural-menu",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.entry', all((q == footprints[0] for q in footprints)) and footprints[0]['event_systems'] == 1, 'Three normal Menu/Start cycles have stable actual actor/control/EventSystem cardinality')",
+      "source": "coverage_common.py",
+      "line": 150,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.039",
+      "requirement_ids": [
+        "PR-01",
+        "PR-08",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d5.overlays"
+      ],
+      "scenario": "COMMON/required-readable-instructions-and-pause",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.overlays', bool(re.search('move|wasd|arrow|select|acceler|shift|click|instructions|controls|help', text(self.p.last), re.I)), 'Actual readable title includes instructions or a discoverable Help control')",
+      "source": "coverage_common.py",
+      "line": 157,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.040",
+      "requirement_ids": [
+        "PR-01",
+        "PR-08",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d5.overlays"
+      ],
+      "scenario": "COMMON/required-readable-instructions-and-pause",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.overlays', bool(re.search('paus', text(r), re.I)), 'Actual readable pause overlay is available after ordinary Start/Escape')",
+      "source": "coverage_common.py",
+      "line": 163,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.041",
+      "requirement_ids": [
+        "DELIVERY"
+      ],
+      "check_ids": [
+        "d1.service"
+      ],
+      "scenario": "COMMON/session-detached-atomic-own-restore",
+      "status": "declared_assertion",
+      "obligation": "self.check('d1.service', equivalent(frozen_state(before), frozen_state(after)), 'Every chapter restores its own unedited detached public state before any authored fixture')",
+      "source": "coverage_common.py",
+      "line": 175,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.042",
+      "requirement_ids": [
+        "PR-01",
+        "PR-02",
+        "PR-03"
+      ],
+      "check_ids": [
+        "d2.motion",
+        "d3.motion"
+      ],
+      "scenario": "tracks crafts countdown acceleration steering brake",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.motion', n(s, 'speed') == 0 and actor(s, 'racer')['position']['z'] == 2 and (n(s, 'elapsed') == 0), 'Countdown blocks racing input')",
+      "source": "session_core.py",
+      "line": 253,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.043",
+      "requirement_ids": [
+        "PR-01",
+        "PR-02",
+        "PR-03"
+      ],
+      "check_ids": [
+        "d2.motion",
+        "d3.motion"
+      ],
+      "scenario": "tracks crafts countdown acceleration steering brake",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.motion', n(s, 'speed') < 9, 'Brake decelerates actual velocity')",
+      "source": "session_core.py",
+      "line": 264,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.044",
+      "requirement_ids": [
+        "PR-01",
+        "PR-02",
+        "PR-03"
+      ],
+      "check_ids": [
+        "d2.motion",
+        "d3.motion"
+      ],
+      "scenario": "tracks crafts countdown acceleration steering brake",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.motion', actor(s, 'racer')['position']['x'] > 0.8 and xyz(actor(s, 'racer')) == xyz(fact(r, 'racer')), 'Steering changes actual craft transform')",
+      "source": "session_core.py",
+      "line": 265,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.045",
+      "requirement_ids": [
+        "PR-01",
+        "PR-02",
+        "PR-03"
+      ],
+      "check_ids": [
+        "d2.motion",
+        "d3.motion"
+      ],
+      "scenario": "tracks crafts countdown acceleration steering brake",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.motion', actor(s, 'racer')['position']['z'] > 2 and visible(r, 'racer') and (n(s, 'vehicle') == v['id']), 'Every track/mode/craft has actual motion')",
+      "source": "session_core.py",
+      "line": 259,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.046",
+      "requirement_ids": [
+        "PR-01",
+        "PR-02",
+        "PR-03"
+      ],
+      "check_ids": [
+        "d2.motion",
+        "d3.motion"
+      ],
+      "scenario": "tracks crafts countdown acceleration steering brake",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.motion', abs(dv - v['acceleration'] * dt) <= max(0.15, 0.08 * v['acceleration'] * dt), 'Craft-specific acceleration over two observations with throttle continuously held; excludes pre-input and release frames')",
+      "source": "session_core.py",
+      "line": 262,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.047",
+      "requirement_ids": [
+        "PR-03",
+        "PR-04",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.boost",
+        "d3.boost",
+        "d2.shield",
+        "d5.feedback"
+      ],
+      "scenario": "boost and doubled contact cost",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.boost', n(s, 'boost') == 1 and visible(r, 'racer'), 'Held normal Shift produces actual boosted racing')",
+      "source": "session_core.py",
+      "line": 271,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.048",
+      "requirement_ids": [
+        "PR-03",
+        "PR-04",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.boost",
+        "d3.boost",
+        "d2.shield",
+        "d5.feedback"
+      ],
+      "scenario": "boost and doubled contact cost",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.boost', dt > 0 and n(s, 'shield') == 100 and (abs(dv - expected) <= max(0.15, 0.08 * expected)), 'Boosted acceleration over continuously held observations is1.5x; no continuous shield drain')",
+      "source": "session_core.py",
+      "line": 273,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.049",
+      "requirement_ids": [
+        "PR-03",
+        "PR-04",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.boost",
+        "d3.boost",
+        "d2.shield",
+        "d5.feedback"
+      ],
+      "scenario": "boost and doubled contact cost",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.boost', abs(n(s, 'shield') - (100 - cost)) < 0.05, 'Boosted spatial collision doubles normal shield debit')",
+      "source": "session_core.py",
+      "line": 284,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.050",
+      "requirement_ids": [
+        "PR-03",
+        "PR-04",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.boost",
+        "d3.boost",
+        "d2.shield",
+        "d5.feedback"
+      ],
+      "scenario": "boost and doubled contact cost",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.shield', n(s, 'shield') < 100 and visible(r, 'racer'), 'Visible actual craft/obstacle contact causes shield loss')",
+      "source": "session_core.py",
+      "line": 285,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.051",
+      "requirement_ids": [
+        "PR-03",
+        "PR-04",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.boost",
+        "d3.boost",
+        "d2.shield",
+        "d5.feedback"
+      ],
+      "scenario": "boost and doubled contact cost",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.feedback', bool(re.search('shield|impact|collision|damage', text(r), re.I)) and hud_number(r, 'shield', n(s, 'shield')), 'Impact has actual truthful HUD/feedback, independent of cost correctness')",
+      "source": "session_core.py",
+      "line": 286,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.052",
+      "requirement_ids": [
+        "PR-04"
+      ],
+      "check_ids": [
+        "d3.shield",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "shield delay capacity and loss",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.shield', n(s, 'shield') == debit, 'No regeneration within2s of a real normal-input collision; no assumed opaque initial timer')",
+      "source": "session_core.py",
+      "line": 294,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.053",
+      "requirement_ids": [
+        "PR-04"
+      ],
+      "check_ids": [
+        "d3.shield",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "shield delay capacity and loss",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.shield', debit < n(s, 'shield') <= 100, 'Delayed regeneration after leaving contact respects capacity')",
+      "source": "session_core.py",
+      "line": 295,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.054",
+      "requirement_ids": [
+        "PR-04"
+      ],
+      "check_ids": [
+        "d3.shield",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "shield delay capacity and loss",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.shield', n(s, 'shield') == 0 and s['phase'] == 'lost', 'Lethal physical contact enters defeat')",
+      "source": "session_core.py",
+      "line": 298,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.055",
+      "requirement_ids": [
+        "PR-04"
+      ],
+      "check_ids": [
+        "d3.shield",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "shield delay capacity and loss",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.journey', s['phase'] == 'lost', 'Race has reachable real defeat')",
+      "source": "session_core.py",
+      "line": 299,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.056",
+      "requirement_ids": [
+        "PR-04"
+      ],
+      "check_ids": [
+        "d3.shield",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "shield delay capacity and loss",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.restart', n(s, 'shield') == 100 and n(s, 'speed') == 0 and (n(s, 'countdown') > 2), 'Defeat retry restores a clean countdown and vehicle')",
+      "source": "session_core.py",
+      "line": 300,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.057",
+      "requirement_ids": [
+        "PR-01",
+        "PR-03",
+        "PR-06"
+      ],
+      "check_ids": [
+        "d2.terrain",
+        "d3.terrain"
+      ],
+      "scenario": "ramps and ordered gate planes",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.terrain', visible(r, 'racer') and a['position']['y'] > 2 and bool(fact(r, 'road').get('renderers')), 'Real raised ramp and hovering craft')",
+      "source": "session_core.py",
+      "line": 306,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.058",
+      "requirement_ids": [
+        "PR-01",
+        "PR-03",
+        "PR-06"
+      ],
+      "check_ids": [
+        "d2.terrain",
+        "d3.terrain"
+      ],
+      "scenario": "ramps and ordered gate planes",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.terrain', abs(a['position']['y'] - self.height(track, a['position']['z']) - 1) < 0.15, 'Actual craft follows published ramp height')",
+      "source": "session_core.py",
+      "line": 307,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.059",
+      "requirement_ids": [
+        "PR-01",
+        "PR-03",
+        "PR-06"
+      ],
+      "check_ids": [
+        "d2.terrain",
+        "d3.terrain"
+      ],
+      "scenario": "ramps and ordered gate planes",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.terrain', n(s, 'next_gate') == gate + 1 and actor(s, 'gate_' + str(gate))['state'] == 'passed', 'Normal forward crossing passes correct ordered gate')",
+      "source": "session_core.py",
+      "line": 311,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.060",
+      "requirement_ids": [
+        "PR-05",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.pickups",
+        "d3.pickups",
+        "d5.hud"
+      ],
+      "scenario": "spatial collectible and one-shot reward",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.pickups', actor(s, 'ring_0')['state'] == 'collected' and (not fact(r, 'ring_0').get('active', False)), 'Real ring disappears after spatial collection')",
+      "source": "session_core.py",
+      "line": 324,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.061",
+      "requirement_ids": [
+        "PR-05",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.pickups",
+        "d3.pickups",
+        "d5.hud"
+      ],
+      "scenario": "spatial collectible and one-shot reward",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.pickups', bonus(s) == 100 and abs(n(s, 'shield') - 70) < 0.05, 'Exactly100 ring bonus above published Distance Sprint distance score, and10 shield without regen confound')",
+      "source": "session_core.py",
+      "line": 326,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.062",
+      "requirement_ids": [
+        "PR-05",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.pickups",
+        "d3.pickups",
+        "d5.hud"
+      ],
+      "scenario": "spatial collectible and one-shot reward",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.hud', visible_number(r, n(s, 'score')) and hud_number(r, 'shield', n(s, 'shield')), 'HUD truthfully displays actual points/shield independently of mechanic correctness')",
+      "source": "session_core.py",
+      "line": 327,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.063",
+      "requirement_ids": [
+        "PR-05",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.pickups",
+        "d3.pickups",
+        "d5.hud"
+      ],
+      "scenario": "spatial collectible and one-shot reward",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.pickups', bonus(after) == 100, 'Already collected ring cannot reward twice despite increasing distance points')",
+      "source": "session_core.py",
+      "line": 328,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.064",
+      "requirement_ids": [
+        "PR-05",
+        "PR-09"
+      ],
+      "check_ids": [
+        "d2.pickups",
+        "d3.pickups",
+        "d5.hud"
+      ],
+      "scenario": "spatial collectible and one-shot reward",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.pickups', actor(s, 'ring_0')['state'] == 'active' and bonus(s) == 0, 'Wrong-lane pass grants no ring bonus; ordinary distance points allowed')",
+      "source": "session_core.py",
+      "line": 331,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.065",
+      "requirement_ids": [
+        "PR-06",
+        "PR-07",
+        "PR-08"
+      ],
+      "check_ids": [
+        "d2.race",
+        "d3.race",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "six finite races final gates next timeout",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.race', s['phase'] == 'playing' and n(s, 'next_gate') == 0, 'Missing earlier gates prevents finish')",
+      "source": "session_core.py",
+      "line": 342,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.066",
+      "requirement_ids": [
+        "PR-06",
+        "PR-07",
+        "PR-08"
+      ],
+      "check_ids": [
+        "d2.race",
+        "d3.race",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "six finite races final gates next timeout",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.race', s['phase'] == 'lost', 'Distance Sprint timeout is real defeat')",
+      "source": "session_core.py",
+      "line": 344,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.067",
+      "requirement_ids": [
+        "PR-06",
+        "PR-07",
+        "PR-08"
+      ],
+      "check_ids": [
+        "d2.race",
+        "d3.race",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "six finite races final gates next timeout",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.restart', n(s, 'elapsed') == 0 and n(s, 'countdown') > 2 and (n(s, 'next_gate') == 0), 'Timeout retry resets race lifecycle')",
+      "source": "session_core.py",
+      "line": 345,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.068",
+      "requirement_ids": [
+        "PR-06",
+        "PR-07",
+        "PR-08"
+      ],
+      "check_ids": [
+        "d2.race",
+        "d3.race",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "six finite races final gates next timeout",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.race', s['phase'] == 'won' and n(s, 'best_time') > 0, 'All finite track/mode outcomes and record')",
+      "source": "session_core.py",
+      "line": 338,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.069",
+      "requirement_ids": [
+        "PR-06",
+        "PR-07",
+        "PR-08"
+      ],
+      "check_ids": [
+        "d2.race",
+        "d3.race",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "six finite races final gates next timeout",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.journey', s['phase'] == 'won', 'Final gate causes legitimate finish')",
+      "source": "session_core.py",
+      "line": 339,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.070",
+      "requirement_ids": [
+        "PR-06",
+        "PR-07",
+        "PR-08"
+      ],
+      "check_ids": [
+        "d2.race",
+        "d3.race",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "six finite races final gates next timeout",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.journey', n(ss, 'track') == n(s, 'track') + 1 and n(ss, 'countdown') > 2, 'Next enters adjacent track normally')",
+      "source": "session_core.py",
+      "line": 341,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.071",
+      "requirement_ids": [
+        "PR-01"
+      ],
+      "check_ids": [
+        "d4.entry",
+        "d5.controls"
+      ],
+      "scenario": "natural menu and start",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.entry', s['phase'] == 'playing', 'Natural button enters actual game')",
+      "source": "session_core.py",
+      "line": 357,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.072",
+      "requirement_ids": [
+        "PR-01"
+      ],
+      "check_ids": [
+        "d4.entry",
+        "d5.controls"
+      ],
+      "scenario": "natural menu and start",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.controls', s['phase'] == 'playing', 'Normal mouse hit real visible Start button and caused its advertised transition')",
+      "source": "session_core.py",
+      "line": 358,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.073",
+      "requirement_ids": [
+        "PR-01"
+      ],
+      "check_ids": [
+        "d4.entry",
+        "d5.controls"
+      ],
+      "scenario": "natural menu and start",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.overlays', bool(re.search('move|wasd|arrow|select|acceler|shift|click|instructions|controls|help', text(r), re.I)), 'Menu presents control instructions or a discoverable instructions control; no fixed wording/layout')",
+      "source": "session_core.py",
+      "line": 355,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.074",
+      "requirement_ids": [
+        "PR-08"
+      ],
+      "check_ids": [
+        "d4.pause",
+        "d5.overlays"
+      ],
+      "scenario": "independent pause resume escape",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.pause', before['phase'] == 'paused' and state(before) == state(after), 'Pause freezes real state despite delivered input/time')",
+      "source": "session_core.py",
+      "line": 373,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.075",
+      "requirement_ids": [
+        "PR-08"
+      ],
+      "check_ids": [
+        "d4.pause",
+        "d5.overlays"
+      ],
+      "scenario": "independent pause resume escape",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.overlays', bool(re.search('paus', text(self.p.last), re.I)), 'Pause overlay visible')",
+      "source": "session_core.py",
+      "line": 374,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.076",
+      "requirement_ids": [
+        "PR-08"
+      ],
+      "check_ids": [
+        "d4.pause",
+        "d5.overlays"
+      ],
+      "scenario": "independent pause resume escape",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.pause', self.validate(r)['phase'] == 'playing', 'Ordinary Resume releases pause')",
+      "source": "session_core.py",
+      "line": 375,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.077",
+      "requirement_ids": [
+        "PR-08"
+      ],
+      "check_ids": [
+        "d4.pause",
+        "d5.overlays"
+      ],
+      "scenario": "independent pause resume escape",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.pause', self.validate(r)['phase'] == 'paused', 'Escape also pauses normally')",
+      "source": "session_core.py",
+      "line": 376,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.078",
+      "requirement_ids": [
+        "PR-08"
+      ],
+      "check_ids": [
+        "d4.restart"
+      ],
+      "scenario": "independent paused restart",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.restart', s['phase'] == 'playing' and (n(s, 'turn') == 0 if self.game == 'fungus' else n(s, 'stars') == 300 if self.game == 'glitch' else n(s, 'countdown') > 2), 'Paused Retry clears local state')",
+      "source": "session_core.py",
+      "line": 382,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.079",
+      "requirement_ids": [
+        "PR-08"
+      ],
+      "check_ids": [
+        "d4.entry"
+      ],
+      "scenario": "independent ordinary menu return",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.entry', self.validate(r)['phase'] == 'playing', 'Ordinary play/pause to Menu to Start without duplicate roots')",
+      "source": "session_core.py",
+      "line": 386,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.080",
+      "requirement_ids": [
+        "DELIVERY"
+      ],
+      "check_ids": [
+        "d1.service"
+      ],
+      "scenario": "service deep-copy and rejection",
+      "status": "declared_assertion",
+      "obligation": "self.check('d1.service', True, 'Detached capture and atomically rejected invalid service requests')",
+      "source": "session_core.py",
+      "line": 392,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "PR.081",
+      "requirement_ids": [
+        "PR-07"
+      ],
+      "check_ids": [
+        "d4.reopen"
+      ],
+      "scenario": "real close new PID persistence",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.reopen', okay, 'Old PID exited; new player opens title with actual earned/manual persistent state')",
+      "source": "session_core.py",
+      "line": 419,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "PR/all-natural-selections-countdown",
+      "leaves": [
+        "d2.motion",
+        "d3.motion",
+        "d2.terrain",
+        "d5.controls",
+        "d5.hud"
+      ],
+      "requirement_ids": [
+        "PR-01",
+        "PR-02",
+        "PR-09"
+      ],
+      "function": "pr_selections",
+      "source": "coverage_polyrace.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.motion', n(s, 'countdown') > 0 and n(s, 'speed') == 0 and (n(s, 'elapsed') == 0) and (actor(s, 'racer')['position']['z'] == 2), 'Countdown blocks throttle for the full first2.35s, not only the first frame')",
+          "line": 74,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d3.motion', n(s, 'countdown') == 0 and n(s, 'elapsed') > 0 and (n(s, 'speed') > 0), 'The3s countdown actually completes and releases normal input')",
+          "line": 79,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d2.motion', n(s, 'track') == track and n(s, 'mode') == mode and (n(s, 'vehicle') == car['id']) and (abs(n(s, 'shield') - car['shield']) < 0.01) and (abs(actor(s, 'racer')['position']['y'] - car['hover_height']) < 0.1), 'Every ordinary track/mode/craft selection launches its actual fresh selected craft/course')",
+          "line": 54,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d5.controls', s['phase'] == 'playing', 'Ordinary controls are genuinely raycast/click-operated')",
+          "line": 58,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d2.terrain', all((abs(actor(s, item['id'])['position']['x'] - item['x']) < 0.03 and abs(actor(s, item['id'])['position']['z'] - item['z']) < 0.03 and (fact(r, item['id']).get('renderers', 0) > 0) for item in track_content['obstacles'] + track_content['rings'])), 'Every natural selection exposes the correct actual course obstacle/ring locations and real renderer geometry')",
+          "line": 60,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.assert_race_hud(r, {'track': n(s, 'track'), 'shield': n(s, 'shield'), 'speed': n(s, 'speed'), 'time': n(s, 'elapsed'), 'gates': n(s, 'next_gate'), 'points': n(s, 'score')})",
+          "line": 66,
+          "source": "coverage_polyrace.py"
+        }
+      ],
+      "parameterization": [
+        "track in range(1, 4)",
+        "mode in [0, 1]",
+        "car in self.content['vehicles']",
+        "control in [f'track_{track}', 'mode_time' if mode == 0 else 'mode_distance', 'craft_' + str(car['id'])]"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "PR/all-craft-coast-brake-limits-steering",
+      "leaves": [
+        "d3.motion",
+        "d2.boost",
+        "d3.boost",
+        "d5.feedback"
+      ],
+      "requirement_ids": [
+        "PR-02",
+        "PR-03",
+        "PR-09"
+      ],
+      "function": "pr_tuning",
+      "source": "coverage_polyrace.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d2.boost', n(self.validate(r), 'boost') == 1 and visible(r, 'racer'), 'Each craft actually enters boost')",
+          "line": 130,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d5.feedback', fact(r, 'racer').get('particles', 0) > fact(before, 'racer').get('particles', 0) or feedback_changed(before, r) or fact(r, 'racer').get('visualSignature') != fact(before, 'racer').get('visualSignature'), 'Boost produces actual particle/material/UI feedback')",
+          "line": 131,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d3.motion', abs((n(s, 'speed') - n(s0, 'speed')) / dt - self.content['vehicles'][0]['acceleration']) < 0.4, 'Measured acceleration remains elapsed-time based at external frame cap' + str(fps))",
+          "line": 142,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d3.boost' if boost else 'd3.motion', abs(n(s, 'speed') - limit) < 0.08, 'Actual ' + car['name'] + (' boost max1.4x' if boost else ' normal maximum') + ' is exact')",
+          "line": 91,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d3.motion', abs(observed - rate) < 0.65, f\"{car['name']} {('brakes' if key else 'coasts')} at declared {rate}/s over continuous measured elapsed time; actual={observed:.4f}\")",
+          "line": 110,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d3.motion', abs(dx / dt - direction * car['steering']) < 0.2, 'Arrow alias uses exact craft-specific real steering rate')",
+          "line": 121,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d5.feedback', any((abs(q['euler']['y']) > 1 or abs(q['euler']['z']) > 1 for q in r.get('motion') or [])), 'Steering has independently observed actual yaw/bank feedback')",
+          "line": 123,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d3.boost', n(after, 'speed') <= n(before, 'speed') + 0.01 and n(after, 'speed') > car['max_speed'] - 0.1, 'Release decreases boost speed towards normal limit, rather than accelerating or dropping to zero')",
+          "line": 98,
+          "source": "coverage_polyrace.py"
+        }
+      ],
+      "parameterization": [
+        "car in self.content['vehicles']",
+        "fps in [30, 90]",
+        "boost in [False, True]",
+        "(key, rate) in [('', 2), ('DownArrow', 20)]",
+        "(key, direction) in [('RightArrow', 1), ('LeftArrow', -1)]"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "PR/all-craft-contact-grace-regeneration",
+      "leaves": [
+        "d2.shield",
+        "d3.shield",
+        "d3.boost",
+        "d4.pause"
+      ],
+      "requirement_ids": [
+        "PR-03",
+        "PR-04",
+        "PR-08"
+      ],
+      "function": "pr_collisions",
+      "source": "coverage_polyrace.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.shield', bool(pairs) and all((abs(nums(b['values'])['speed'] / nums(a['values'])['speed'] - 0.35) < 0.04 for (a, b) in pairs)), 'Actual obstacle collision changes live forward speed to35%, with real pose observations')",
+          "line": 197,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d3.shield', len(events) >= 2 and all((0.55 <= b['time'] - a['time'] <= 0.72 for (a, b) in zip(events, events[1:]))), 'Sustained real rail contact applies0.6s grace, not damage every frame')",
+          "line": 169,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d3.shield', n(s, 'shield') == amount, 'Shield does not regenerate during real recent-contact delay')",
+          "line": 181,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d3.shield', abs(n(s, 'shield') - expected) < 0.08 and n(s, 'shield') > amount, f\"{car['name']} actual regeneration rate{car['regen']}/s begins after contact delay and respects capacity\")",
+          "line": 189,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d3.boost' if boosting else 'd3.shield', abs(n(s, 'shield') - expected) < 0.03 and abs(actor(s, 'racer')['position']['x'] - 5.5) < 0.02, f\"{car['name']} real rail contact bounds x and debits exact {('double' if boosting else 'ordinary')} cost\")",
+          "line": 154,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d2.shield', n(s, 'shield') < car['shield'], 'Each craft has a real spatial rail collision')",
+          "line": 157,
+          "source": "coverage_polyrace.py"
+        }
+      ],
+      "parameterization": [
+        "car in self.content['vehicles']",
+        "boosting in [False, True]",
+        "q in r.get('motion') or []"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "PR/continuous-ramps-and-real-road",
+      "leaves": [
+        "d2.terrain",
+        "d3.terrain"
+      ],
+      "requirement_ids": [
+        "PR-01",
+        "PR-03",
+        "PR-06"
+      ],
+      "function": "pr_terrain",
+      "source": "coverage_polyrace.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.terrain', samples and all((abs(q['position']['y'] - self.height(track, q['position']['z']) - car['hover_height']) < 0.16 for q in samples)), 'Continuous actual ascent/peak/descent respects every selected craft hover height')",
+          "line": 210,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d2.terrain', bool(raised), 'Actual road renderer geometry, not just racer height, contains a raised ramp')",
+          "line": 214,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d3.terrain', any((q['position']['z'] >= track['ramp_peak'] for q in samples)) and any((q['position']['z'] <= track['ramp_start'] for q in samples)) and any((q['position']['z'] >= track['ramp_end'] for q in samples)), 'Ramp check observes continuous approach, peak and descent rather than restoring directly to peak')",
+          "line": 217,
+          "source": "coverage_polyrace.py"
+        }
+      ],
+      "parameterization": [
+        "track in self.content['tracks']",
+        "car in self.content['vehicles']"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "PR/all-spatial-pickup-boundaries-cap",
+      "leaves": [
+        "d2.pickups",
+        "d3.pickups"
+      ],
+      "requirement_ids": [
+        "PR-05"
+      ],
+      "function": "pr_pickups",
+      "source": "coverage_polyrace.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.pause', equivalent(frozen_state(before), frozen_state(after)), 'Pause freezes actual imminent pickup and racer state')",
+          "line": 250,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d3.pickups', actor(self.validate(r), ring['id'])['state'] == 'collected', 'Resumed normal approach still collects exactly the same pending ring')",
+          "line": 253,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d3.pickups', (actor(self.validate(r), ring['id'])['state'] == 'collected') == collected, 'Real crossing tests either side of declared0.9 lateral collection radius')",
+          "line": 242,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d2.pickups', actor(s, ring['id'])['state'] == 'collected' and (not fact(r, ring['id']).get('active', False)), 'Every actual ring in every track is spatially collected and disappears')",
+          "line": 233,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d3.pickups', bonus == 100 and n(s, 'shield') == self.content['vehicles'][0]['shield'], 'Every ring grants one100 bonus and clamps +10 at full shield')",
+          "line": 235,
+          "source": "coverage_polyrace.py"
+        }
+      ],
+      "parameterization": [
+        "track in self.content['tracks']",
+        "(offset, collected) in [(0.82, True), (1.02, False)]",
+        "(index, ring) in enumerate(track['rings'])"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "PR/six-natural-races-and-result-freeze",
+      "leaves": [
+        "d2.race",
+        "d3.race",
+        "d4.journey",
+        "d4.restart",
+        "d5.hud",
+        "d5.overlays"
+      ],
+      "requirement_ids": [
+        "PR-06",
+        "PR-07",
+        "PR-08",
+        "PR-09"
+      ],
+      "function": "pr_journeys",
+      "source": "coverage_polyrace.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.race', self.validate(self.idle(0.3))['phase'] == 'playing', 'Elapsed time alone cannot finish Time Attack with no gate crossings')",
+          "line": 284,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d4.restart', n(s, 'vehicle') == 2 and n(s, 'shield') == self.content['vehicles'][2]['shield'] and (n(s, 'speed') == 0) and (n(s, 'next_gate') == 0) and (n(s, 'countdown') > 2) and all((a['state'] == 'active' and a['present'] for a in s['actors'] if a['kind'] == 'ring')) and all((a['state'] == 'pending' for a in s['actors'] if a['kind'] == 'gate')), 'Paused Retry preserves selected craft but restores shield/countdown/all rings/all gates/no residual speed')",
+          "line": 297,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d2.race', s['phase'] == 'won' and n(s, 'next_gate') == 3, 'Normal unedited full race crosses all three ordered gates from its actual countdown')",
+          "line": 267,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d5.hud', race_time_visible(r, n(s, 'elapsed')), 'Truthful completed-race time is readable at nonzero elapsed time, not a constant zero label')",
+          "line": 269,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d4.journey', s['phase'] == 'won', 'Ordinary whole track/mode race has reachable stable success')",
+          "line": 271,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.assert_stable(before, after)",
+          "line": 275,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d5.overlays', bool(re.search('campaign|complete|trials|victory', text(r), re.I)), 'Track3 Next has an actual visible campaign conclusion')",
+          "line": 278,
+          "source": "coverage_polyrace.py"
+        }
+      ],
+      "parameterization": [
+        "entry in self.model['entries']",
+        "control in ['track_' + str(track_index), 'mode_' + mode, 'craft_0']"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "PR/fastest-record-isolation-and-retry",
+      "leaves": [
+        "d3.race",
+        "d4.reopen",
+        "d4.restart"
+      ],
+      "requirement_ids": [
+        "PR-07",
+        "PR-08"
+      ],
+      "function": "pr_records",
+      "source": "coverage_polyrace.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.race', abs(n(slower, 'best_time') - record) < 0.01, 'A slower successful race never overwrites faster successful record')",
+          "line": 323,
+          "source": "coverage_polyrace.py"
+        },
+        {
+          "assertion": "self.check('d4.reopen', abs(n(self.validate(self.p.last), 'best_time') - record) < 0.01, 'Another track/craft record does not overwrite the first track/craft record')",
+          "line": 327,
+          "source": "coverage_polyrace.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "COMMON/repeated-natural-menu",
+      "leaves": [
+        "d4.entry"
+      ],
+      "requirement_ids": [
+        "PR-08"
+      ],
+      "function": "repeat_navigation",
+      "source": "coverage_common.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.entry', all((q == footprints[0] for q in footprints)) and footprints[0]['event_systems'] == 1, 'Three normal Menu/Start cycles have stable actual actor/control/EventSystem cardinality')",
+          "line": 150,
+          "source": "coverage_common.py"
+        }
+      ],
+      "parameterization": [
+        "_ in range(3)"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "COMMON/required-readable-instructions-and-pause",
+      "leaves": [
+        "d5.overlays"
+      ],
+      "requirement_ids": [
+        "PR-01",
+        "PR-08",
+        "PR-09"
+      ],
+      "function": "readable_overlays",
+      "source": "coverage_common.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d5.overlays', bool(re.search('move|wasd|arrow|select|acceler|shift|click|instructions|controls|help', text(self.p.last), re.I)), 'Actual readable title includes instructions or a discoverable Help control')",
+          "line": 157,
+          "source": "coverage_common.py"
+        },
+        {
+          "assertion": "self.check('d5.overlays', bool(re.search('paus', text(r), re.I)), 'Actual readable pause overlay is available after ordinary Start/Escape')",
+          "line": 163,
+          "source": "coverage_common.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "COMMON/session-detached-atomic-own-restore",
+      "leaves": [
+        "d1.service"
+      ],
+      "requirement_ids": [
+        "DELIVERY"
+      ],
+      "function": "own_restore",
+      "source": "coverage_common.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d1.service', equivalent(frozen_state(before), frozen_state(after)), 'Every chapter restores its own unedited detached public state before any authored fixture')",
+          "line": 175,
+          "source": "coverage_common.py"
+        }
+      ],
+      "parameterization": [
+        "entry in self.model['entries']"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "tracks crafts countdown acceleration steering brake",
+      "leaves": [
+        "d2.motion",
+        "d3.motion"
+      ],
+      "requirement_ids": [
+        "PR-01",
+        "PR-02",
+        "PR-03"
+      ],
+      "function": "motion",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.motion', n(s, 'speed') == 0 and actor(s, 'racer')['position']['z'] == 2 and (n(s, 'elapsed') == 0), 'Countdown blocks racing input')",
+          "line": 253,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.motion', n(s, 'speed') < 9, 'Brake decelerates actual velocity')",
+          "line": 264,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.motion', actor(s, 'racer')['position']['x'] > 0.8 and xyz(actor(s, 'racer')) == xyz(fact(r, 'racer')), 'Steering changes actual craft transform')",
+          "line": 265,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d2.motion', actor(s, 'racer')['position']['z'] > 2 and visible(r, 'racer') and (n(s, 'vehicle') == v['id']), 'Every track/mode/craft has actual motion')",
+          "line": 259,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.motion', abs(dv - v['acceleration'] * dt) <= max(0.15, 0.08 * v['acceleration'] * dt), 'Craft-specific acceleration over two observations with throttle continuously held; excludes pre-input and release frames')",
+          "line": 262,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [
+        "entry in self.model['entries']",
+        "v in self.content['vehicles']"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "boost and doubled contact cost",
+      "leaves": [
+        "d2.boost",
+        "d3.boost",
+        "d2.shield",
+        "d5.feedback"
+      ],
+      "requirement_ids": [
+        "PR-03",
+        "PR-04",
+        "PR-09"
+      ],
+      "function": "boost",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d2.boost', n(s, 'boost') == 1 and visible(r, 'racer'), 'Held normal Shift produces actual boosted racing')",
+          "line": 271,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.boost', dt > 0 and n(s, 'shield') == 100 and (abs(dv - expected) <= max(0.15, 0.08 * expected)), 'Boosted acceleration over continuously held observations is1.5x; no continuous shield drain')",
+          "line": 273,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.boost', abs(n(s, 'shield') - (100 - cost)) < 0.05, 'Boosted spatial collision doubles normal shield debit')",
+          "line": 284,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d2.shield', n(s, 'shield') < 100 and visible(r, 'racer'), 'Visible actual craft/obstacle contact causes shield loss')",
+          "line": 285,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d5.feedback', bool(re.search('shield|impact|collision|damage', text(r), re.I)) and hud_number(r, 'shield', n(s, 'shield')), 'Impact has actual truthful HUD/feedback, independent of cost correctness')",
+          "line": 286,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [
+        "(boosting, cost) in [(False, 15), (True, 30)]"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "shield delay capacity and loss",
+      "leaves": [
+        "d3.shield",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "requirement_ids": [
+        "PR-04"
+      ],
+      "function": "shields",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.shield', n(s, 'shield') == debit, 'No regeneration within2s of a real normal-input collision; no assumed opaque initial timer')",
+          "line": 294,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.shield', debit < n(s, 'shield') <= 100, 'Delayed regeneration after leaving contact respects capacity')",
+          "line": 295,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.shield', n(s, 'shield') == 0 and s['phase'] == 'lost', 'Lethal physical contact enters defeat')",
+          "line": 298,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.journey', s['phase'] == 'lost', 'Race has reachable real defeat')",
+          "line": 299,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.restart', n(s, 'shield') == 100 and n(s, 'speed') == 0 and (n(s, 'countdown') > 2), 'Defeat retry restores a clean countdown and vehicle')",
+          "line": 300,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "ramps and ordered gate planes",
+      "leaves": [
+        "d2.terrain",
+        "d3.terrain"
+      ],
+      "requirement_ids": [
+        "PR-01",
+        "PR-03",
+        "PR-06"
+      ],
+      "function": "terrain",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d2.terrain', visible(r, 'racer') and a['position']['y'] > 2 and bool(fact(r, 'road').get('renderers')), 'Real raised ramp and hovering craft')",
+          "line": 306,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.terrain', abs(a['position']['y'] - self.height(track, a['position']['z']) - 1) < 0.15, 'Actual craft follows published ramp height')",
+          "line": 307,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.terrain', n(s, 'next_gate') == gate + 1 and actor(s, 'gate_' + str(gate))['state'] == 'passed', 'Normal forward crossing passes correct ordered gate')",
+          "line": 311,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [
+        "track in self.content['tracks']",
+        "gate in range(3)"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "spatial collectible and one-shot reward",
+      "leaves": [
+        "d2.pickups",
+        "d3.pickups",
+        "d5.hud"
+      ],
+      "requirement_ids": [
+        "PR-05",
+        "PR-09"
+      ],
+      "function": "pickups",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d2.pickups', actor(s, 'ring_0')['state'] == 'collected' and (not fact(r, 'ring_0').get('active', False)), 'Real ring disappears after spatial collection')",
+          "line": 324,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.pickups', bonus(s) == 100 and abs(n(s, 'shield') - 70) < 0.05, 'Exactly100 ring bonus above published Distance Sprint distance score, and10 shield without regen confound')",
+          "line": 326,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d5.hud', visible_number(r, n(s, 'score')) and hud_number(r, 'shield', n(s, 'shield')), 'HUD truthfully displays actual points/shield independently of mechanic correctness')",
+          "line": 327,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.pickups', bonus(after) == 100, 'Already collected ring cannot reward twice despite increasing distance points')",
+          "line": 328,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.pickups', actor(s, 'ring_0')['state'] == 'active' and bonus(s) == 0, 'Wrong-lane pass grants no ring bonus; ordinary distance points allowed')",
+          "line": 331,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "six finite races final gates next timeout",
+      "leaves": [
+        "d2.race",
+        "d3.race",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "requirement_ids": [
+        "PR-06",
+        "PR-07",
+        "PR-08"
+      ],
+      "function": "race",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.race', s['phase'] == 'playing' and n(s, 'next_gate') == 0, 'Missing earlier gates prevents finish')",
+          "line": 342,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.race', s['phase'] == 'lost', 'Distance Sprint timeout is real defeat')",
+          "line": 344,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.restart', n(s, 'elapsed') == 0 and n(s, 'countdown') > 2 and (n(s, 'next_gate') == 0), 'Timeout retry resets race lifecycle')",
+          "line": 345,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d2.race', s['phase'] == 'won' and n(s, 'best_time') > 0, 'All finite track/mode outcomes and record')",
+          "line": 338,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.journey', s['phase'] == 'won', 'Final gate causes legitimate finish')",
+          "line": 339,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.journey', n(ss, 'track') == n(s, 'track') + 1 and n(ss, 'countdown') > 2, 'Next enters adjacent track normally')",
+          "line": 341,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [
+        "entry in self.model['entries']"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "natural menu and start",
+      "leaves": [
+        "d4.entry",
+        "d5.controls"
+      ],
+      "requirement_ids": [
+        "PR-01"
+      ],
+      "function": "natural_start",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.entry', s['phase'] == 'playing', 'Natural button enters actual game')",
+          "line": 357,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d5.controls', s['phase'] == 'playing', 'Normal mouse hit real visible Start button and caused its advertised transition')",
+          "line": 358,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d5.overlays', bool(re.search('move|wasd|arrow|select|acceler|shift|click|instructions|controls|help', text(r), re.I)), 'Menu presents control instructions or a discoverable instructions control; no fixed wording/layout')",
+          "line": 355,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "independent pause resume escape",
+      "leaves": [
+        "d4.pause",
+        "d5.overlays"
+      ],
+      "requirement_ids": [
+        "PR-08"
+      ],
+      "function": "pause_flow",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.pause', before['phase'] == 'paused' and state(before) == state(after), 'Pause freezes real state despite delivered input/time')",
+          "line": 373,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d5.overlays', bool(re.search('paus', text(self.p.last), re.I)), 'Pause overlay visible')",
+          "line": 374,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.pause', self.validate(r)['phase'] == 'playing', 'Ordinary Resume releases pause')",
+          "line": 375,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.pause', self.validate(r)['phase'] == 'paused', 'Escape also pauses normally')",
+          "line": 376,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "independent paused restart",
+      "leaves": [
+        "d4.restart"
+      ],
+      "requirement_ids": [
+        "PR-08"
+      ],
+      "function": "paused_restart",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.restart', s['phase'] == 'playing' and (n(s, 'turn') == 0 if self.game == 'fungus' else n(s, 'stars') == 300 if self.game == 'glitch' else n(s, 'countdown') > 2), 'Paused Retry clears local state')",
+          "line": 382,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "independent ordinary menu return",
+      "leaves": [
+        "d4.entry"
+      ],
+      "requirement_ids": [
+        "PR-08"
+      ],
+      "function": "menu_return",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.entry', self.validate(r)['phase'] == 'playing', 'Ordinary play/pause to Menu to Start without duplicate roots')",
+          "line": 386,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "service deep-copy and rejection",
+      "leaves": [
+        "d1.service"
+      ],
+      "requirement_ids": [
+        "DELIVERY"
+      ],
+      "function": "services",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d1.service', True, 'Detached capture and atomically rejected invalid service requests')",
+          "line": 392,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "real close new PID persistence",
+      "leaves": [
+        "d4.reopen"
+      ],
+      "requirement_ids": [
+        "PR-07"
+      ],
+      "function": "reopen",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.reopen', okay, 'Old PID exited; new player opens title with actual earned/manual persistent state')",
+          "line": 419,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    }
+  ],
+  "d6": {
+    "requirement_id": "PR-09",
+    "scope": {
+      "state": "main-play-v1",
+      "review_model": "gpt-5.6-sol",
+      "rounds": 1,
+      "reference": "reference.png",
+      "scope": "Declared bounded adaptation and supplied art, not unannounced original asset/layout requirements."
+    }
+  },
+  "navigation_note": "Genuine ordinary UI can be reached by exact visible label when the published control identity is defective. Required service checks remain."
+}

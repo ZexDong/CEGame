@@ -1,0 +1,2504 @@
+{
+  "schema_version": 1,
+  "catalog_revision": "v2.6-docv2-session-gate-20260912",
+  "source": "Assets/UndercookedStarter/** only",
+  "asset_count": 150,
+  "entries": [
+    {
+      "path": "Assets/UndercookedStarter/Art/Animations/BodyExceptHandsAvatarMask.mask",
+      "role": "animation",
+      "bytes": 591,
+      "sha256": "2c4308a6e6961163ec102b71c06c086c013a654cf43155efebe8ba58dca01fb4",
+      "meta_sha256": "9f7aad9f10490fcf7dac1656280db507516aea35c4589fe12da744408bb68f34",
+      "guid": "e2deb65d52e67f34b831068f96fc1196"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Animations/Chef@Chop.fbx",
+      "role": "animation",
+      "bytes": 186880,
+      "sha256": "7a230bbdb32064bfc16abd344d4cb91108cc01870a47bb381b3620be58e0a68f",
+      "meta_sha256": "661afca114f996b90dc35508413c9427a855c08da499bb11ec70647ae9e48b37",
+      "guid": "9c85ce02e7a2d694e928ccae96c5c8c5",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Animations/Chef@Idle.fbx",
+      "role": "animation",
+      "bytes": 198896,
+      "sha256": "eb588138b38fb9735233d123b0fa4b1ba9e1a3d1b0e04230db6b5650f299a80f",
+      "meta_sha256": "6fed6aa020af89f6b98d68005d26b49096ca51351fad89659a5ca15946ec822a",
+      "guid": "d0d67745f903b0f4aafc5a1d198658d3",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Animations/Chef@Pick.fbx",
+      "role": "animation",
+      "bytes": 205536,
+      "sha256": "c124fc538c239c463ac3f756883a8bba65bdd9902afae0141b5e130ec1ed86f7",
+      "meta_sha256": "05101810f1078bd4630062654039385fbf96cd3dcb7f045eeb8f327f6e057bef",
+      "guid": "09bf8a30cff416542afeefdd94f556a0",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Animations/Chef@Release.fbx",
+      "role": "animation",
+      "bytes": 205552,
+      "sha256": "a9065da01ba97c622dd0ac4f857fb042847297238253ceee7f196aeedee0c93b",
+      "meta_sha256": "54c17e3f28b65930a7a23eaec4979874261bdb7cf0be82178bca6ddf7c9d22df",
+      "guid": "97fa61f2e9f03ef478d9969393e41573",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Animations/Chef@Walk.fbx",
+      "role": "animation",
+      "bytes": 218144,
+      "sha256": "c2554f1143bd20aded7d40a6f296dab5576660b77731c136e84c9e2301869267",
+      "meta_sha256": "39be0974f3bcf8a9b8eeeb01f5db697707fd86a215a303744437813d9bc28044",
+      "guid": "2af37e0d3b656234b8908e3b3f4952c0",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Animations/Chef@Wash.fbx",
+      "role": "animation",
+      "bytes": 186864,
+      "sha256": "333c856564fdf9f88e35e7a0178e0aa2bb9fc79e21d692d5e410aca605978afd",
+      "meta_sha256": "44053e2be66176b6a70258a61bf0bc4dcf40c5e4781864fecf18be0f459001d9",
+      "guid": "d018f985c6689ac49bb0a87d4281ddde",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Animations/HandsAvatarMask.mask",
+      "role": "animation",
+      "bytes": 581,
+      "sha256": "752aa67dfca34abdb179dca1aa3f977421fcd218dc0979d16b4a526de07f0598",
+      "meta_sha256": "0b28b0629cf85e2d21248e38163c94c150316e68642e1e2041c182c1a2b2ae79",
+      "guid": "83287627a95762f4e903d64e096fb217"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Animators/ChefAnimController.controller",
+      "role": "animator",
+      "bytes": 28849,
+      "sha256": "92db8d048dd4c6db2db90d94a8efc2431acf14b9167b5fc61e0f99f8e65f9fa1",
+      "meta_sha256": "2b379a7c242b359a03d0e8097aaaa908720f046996997ad5378a0ef760badf43",
+      "guid": "c45f5e9968f47444eae29fbb3b4d96c7"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Animators/IngredientCrateAnimController.controller",
+      "role": "animator",
+      "bytes": 4925,
+      "sha256": "797b701cb883a39c17799a38c0417bb8aad7a73c7ad57cd4dac935a4241c2b45",
+      "meta_sha256": "00dbaa174df158262a63ed9f55e9b7a380d9e3432cb244e573dcca712933f4d6",
+      "guid": "1c24bd2b11b66444e97bcc0fb700c9f0"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/Chef.fbx",
+      "role": "model",
+      "bytes": 156688,
+      "sha256": "6a61805043d573dfffd00cf34706f7df35b4741c9da338dd5ead18a3b04db6ed",
+      "meta_sha256": "17ca9ec0f750e592c1bed29e928d27546fffa9fae48cad427ef846ce64a33f55",
+      "guid": "635ce679f88e3cc44a3013ae77953687",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      },
+      "render_bounds": {
+        "world_center_at_identity": [
+          0.0,
+          0.72,
+          -0.06
+        ],
+        "world_size_at_identity": [
+          0.97,
+          1.44,
+          0.89
+        ],
+        "use": "visual framing only; not collision or interaction truth"
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/Chef_Model_Head.fbx",
+      "role": "model",
+      "bytes": 64000,
+      "sha256": "b73a1591c21a8c2968f48650aaad713581234180a76838dd7d234e1ff8e18ea6",
+      "meta_sha256": "515aea0a53d61b646c5f49c13e5c2fe36acff8939f81b4d64b2e3c38fa7398ac",
+      "guid": "d9d3829af09395544bc20a30d259751b",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 0,
+        "animationType": 0,
+        "addColliders": 0
+      },
+      "render_bounds": {
+        "world_center_at_identity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "world_size_at_identity": [
+          0.56,
+          0.46,
+          0.52
+        ],
+        "use": "visual framing only; not collision or interaction truth"
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/ChoppingBoard.fbx",
+      "role": "model",
+      "bytes": 27360,
+      "sha256": "e9372fdd6506f33408fdae4cdccd3b819f5a7c8e3b5c773b622b1a52c05a215d",
+      "meta_sha256": "f904c97fb3435f9596fd77d53b016acf35900a01ec27908b7332d14cb4ac0330",
+      "guid": "cdef5e8f2a126ca4da89027d35bafdd8",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      },
+      "render_bounds": {
+        "world_center_at_identity": [
+          0.0,
+          0.03,
+          0.0
+        ],
+        "world_size_at_identity": [
+          0.79,
+          0.05,
+          0.6
+        ],
+        "use": "visual framing only; not collision or interaction truth"
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/CookingPot.fbx",
+      "role": "model",
+      "bytes": 43408,
+      "sha256": "5d16e562ad003d7e52712ac9f54d84ed54ede5298612607d3a568ac4840e395f",
+      "meta_sha256": "681744631c6ee924546b28210b4e090800a9843e2e9718c7e6ad5eb43f60eaeb",
+      "guid": "fd6c75d2ccd069f4096fc2d505c39c02",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      },
+      "render_bounds": {
+        "world_center_at_identity": [
+          0.0,
+          0.23,
+          0.0
+        ],
+        "world_size_at_identity": [
+          0.9,
+          0.45,
+          0.65
+        ],
+        "use": "visual framing only; not collision or interaction truth"
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/Countertop.fbx",
+      "role": "model",
+      "bytes": 32160,
+      "sha256": "e7682f4f2d4d87a282bfb75022c3bd68fb2ae309c84008e618544ee6ad6d9f1d",
+      "meta_sha256": "c85be4cb22b3659b58aec179d569ba2cb186850495144ecaa2e3c98f58d3637e",
+      "guid": "c8f0397811c121f4081ded63ca1c9995",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 0,
+        "animationType": 0,
+        "addColliders": 0
+      },
+      "render_bounds": {
+        "world_center_at_identity": [
+          0.0,
+          0.2,
+          0.0
+        ],
+        "world_size_at_identity": [
+          1.0,
+          0.4,
+          1.0
+        ],
+        "use": "visual framing only; not collision or interaction truth"
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/DeliverCountertop.fbx",
+      "role": "model",
+      "bytes": 35536,
+      "sha256": "bac2f4899550a96cd15e4d2ab5ff8714f987160afbcb6906c8575788b93a6375",
+      "meta_sha256": "ee87dd3886fbeec223207109a3311728a0e7e8962c93616b353dac233e470b35",
+      "guid": "5fdc3d57ff6476e4c909ed428ac0c5fc",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 0,
+        "animationType": 0,
+        "addColliders": 0
+      },
+      "render_bounds": {
+        "world_center_at_identity": [
+          0.0,
+          1.24,
+          -0.3
+        ],
+        "world_size_at_identity": [
+          2.0,
+          2.48,
+          1.68
+        ],
+        "use": "visual framing only; not collision or interaction truth"
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/DustParticle.fbx",
+      "role": "model",
+      "bytes": 39248,
+      "sha256": "8c5fe8be0b0d87f06cc76bf1a39a93f8e17830518b7ddcb32e2239ce96679ff6",
+      "meta_sha256": "16ad79e8cc1a14464a41656bb1c6fb3460c3d9a9dedc6bdff810eeac342a75d3",
+      "guid": "66ae591afedfc2e409314f03c6a55127",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 0,
+        "animationType": 0,
+        "addColliders": 0
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/Extinguisher.fbx",
+      "role": "model",
+      "bytes": 33216,
+      "sha256": "c5cce8d90a3e177e7fb5175c04bd2c882434d50db6cf94ec9910b0d46a5f5219",
+      "meta_sha256": "a90af014d7c2af857edcbaa8d64bab216c50b5857d5391ecba5cbc12eea6507b",
+      "guid": "379b44175d733ec40b864b507076fab1",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 0,
+        "animationType": 0,
+        "addColliders": 0
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/Floor30x30.fbx",
+      "role": "model",
+      "bytes": 39184,
+      "sha256": "d9f5fe080817425375fbdd6566491914009a6d7046569e7ae24992b3bf4fa1db",
+      "meta_sha256": "b70b92308ba81b5ccc6f3cde9305b4a618c1300c5858e732b3b82b90f0c35b19",
+      "guid": "8eea06201cc50e14587f1d865838f227",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      },
+      "render_bounds": {
+        "world_center_at_identity": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "world_size_at_identity": [
+          30.0,
+          0.0,
+          30.0
+        ],
+        "use": "visual framing only; not collision or interaction truth"
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/Hob.fbx",
+      "role": "model",
+      "bytes": 94128,
+      "sha256": "ba2025a18681301f351b6a6a174036727de3b708cb9cc9356edfdd27fe5d0a73",
+      "meta_sha256": "d48a3ee7816aa6224d1cb339e6613b063a83743c79b64f912ac3163be1a5986f",
+      "guid": "59b5b662243a69f4fa70a84b3e331bff",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      },
+      "render_bounds": {
+        "world_center_at_identity": [
+          0.0,
+          0.26,
+          0.01
+        ],
+        "world_size_at_identity": [
+          1.0,
+          0.53,
+          1.03
+        ],
+        "use": "visual framing only; not collision or interaction truth"
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/IngredientCrate.fbx",
+      "role": "model",
+      "bytes": 45312,
+      "sha256": "ac72ca3f6760ccf188e1299f1c0ef007fe674f7fc107265a81799cda35c8111b",
+      "meta_sha256": "a6eac5a5c612d6d1659d5196b93b33b8a6160bfb856c129f55b54efd99be24a2",
+      "guid": "a66c3cc6ed04b504cad9016a84dc2ac8",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 0,
+        "addColliders": 0
+      },
+      "render_bounds": {
+        "world_center_at_identity": [
+          0.0,
+          0.2,
+          0.0
+        ],
+        "world_size_at_identity": [
+          1.0,
+          0.4,
+          1.0
+        ],
+        "use": "visual framing only; not collision or interaction truth"
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/IngreditentCrate@Open.fbx",
+      "role": "model",
+      "bytes": 22256,
+      "sha256": "ab8505472d34b5c933efa6a35d4aead2917e5ef084b28cd89ce51f0860903d2b",
+      "meta_sha256": "b656671237deece3dc9138a5f6619a0c5ea9f65a1ac1d470533e2424727d7d29",
+      "guid": "da15f4807f46af048b1932a81ef51910",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/Knife.fbx",
+      "role": "model",
+      "bytes": 33744,
+      "sha256": "657ae3b5fbbf92b3a138766a5c23d46f100a3597573f36c40bda8f60cd040616",
+      "meta_sha256": "7170fb0968751b7bf3c2abeaab271548100853239d2757e18b889f7fa68b9cc2",
+      "guid": "fd560313e9140c541a80671fdb18cd75",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/Onion_Chopped.fbx",
+      "role": "model",
+      "bytes": 47136,
+      "sha256": "800f73f2f45f7c1c3dd3191c1321b64e568a5a234151d5317dbde962777f36f4",
+      "meta_sha256": "0918645047a4010e955fe45404a96ed2129df7d8cad85896f63620ca06393098",
+      "guid": "b0266c9f9dcff8347bb6801014da125d",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/Onion_Raw.fbx",
+      "role": "model",
+      "bytes": 30432,
+      "sha256": "59f08f50fce425c0c5d76dc001819d36369482db8cc137dbcd4ee24c01f7ac5a",
+      "meta_sha256": "fa7bf0751179c917a93fff13e3f648022558c8ac84644515a7af7b60d4c973e6",
+      "guid": "0b3e58eff12f9404a9a23ddbec8ab7ea",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/Plate.fbx",
+      "role": "model",
+      "bytes": 34896,
+      "sha256": "acff6918e60f2cc04a67fd210901d1991d7f163e5c01e47abbd87b719bd2221b",
+      "meta_sha256": "b7a75a23cebf12659178b5a9ebdb81cb7634130a4340a56fb28bb14206640a5c",
+      "guid": "0d9f0da3f405c4f43bc648354d8fcff0",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      },
+      "render_bounds": {
+        "world_center_at_identity": [
+          0.0,
+          0.08,
+          0.0
+        ],
+        "world_size_at_identity": [
+          0.75,
+          0.15,
+          0.75
+        ],
+        "use": "visual framing only; not collision or interaction truth"
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/Sink.fbx",
+      "role": "model",
+      "bytes": 48736,
+      "sha256": "ead20443fdc33fff560f68c9a0ff9b2f048a374bf4f2dc7a544816c1bd2d6574",
+      "meta_sha256": "c0f63a8bbcae04476a7ba2e3a22b525b85dd3216b11e5dbd2fb8c17d62dcb16f",
+      "guid": "0561b2e405b4c0945a21d51e08b9aef0",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 0,
+        "animationType": 0,
+        "addColliders": 0
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/Tomato_Chopped.fbx",
+      "role": "model",
+      "bytes": 29440,
+      "sha256": "ba8badb0fab0339ca846a5d70811400f62993287fb3b5c94117c863d165f196c",
+      "meta_sha256": "4d634fd14540d9a82e54054b0d18fe481e6c8bcb8011ffbb9635288c4ce6c517",
+      "guid": "058ed46e7d2f23e4cbe411aa6d129fa7",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      },
+      "render_bounds": {
+        "world_center_at_identity": [
+          0.0,
+          0.39,
+          0.0
+        ],
+        "world_size_at_identity": [
+          0.73,
+          0.8,
+          0.84
+        ],
+        "use": "visual framing only; not collision or interaction truth"
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/Tomato_Raw.fbx",
+      "role": "model",
+      "bytes": 42384,
+      "sha256": "b517a94a56d1b05c29b164367e5356ee5f424ab5c2e833745ad4df450e7d3802",
+      "meta_sha256": "56754039923116150e817fc1a5b7703d1dca8cfa5fdb930b65cbfb61050553cd",
+      "guid": "95e5955088f55744f87278a97d0c5507",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 1,
+        "animationType": 2,
+        "addColliders": 0
+      },
+      "render_bounds": {
+        "world_center_at_identity": [
+          0.0,
+          0.34,
+          0.0
+        ],
+        "world_size_at_identity": [
+          0.75,
+          0.68,
+          0.75
+        ],
+        "use": "visual framing only; not collision or interaction truth"
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/Trash.fbx",
+      "role": "model",
+      "bytes": 47520,
+      "sha256": "fd9651ce3578eb4c639c8fbcbabda2180539c38b9f8af459626ecb53d1fd4112",
+      "meta_sha256": "34f205dc93a0a66c17a901b3cfab7a91d7886f929ad56150567d720bd0145f8f",
+      "guid": "7c4981cb3f1c90343a2544d462501a31",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 0,
+        "animationType": 0,
+        "addColliders": 0
+      },
+      "render_bounds": {
+        "world_center_at_identity": [
+          0.0,
+          0.2,
+          0.0
+        ],
+        "world_size_at_identity": [
+          1.03,
+          0.4,
+          1.03
+        ],
+        "use": "visual framing only; not collision or interaction truth"
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/Wall_100cm.fbx",
+      "role": "model",
+      "bytes": 26768,
+      "sha256": "a85274b6f92aa12e0dd3b351cfdef8f63bed68f645bc23521d374b6f4503f81d",
+      "meta_sha256": "ca502bd0d396fa292892d249043f7f0c33965f3753cd56c2094634ea146f0cba",
+      "guid": "85b3f85f298365544823748ec4bb853b",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 0,
+        "animationType": 0,
+        "addColliders": 0
+      },
+      "render_bounds": {
+        "world_center_at_identity": [
+          0.0,
+          1.0,
+          -0.3
+        ],
+        "world_size_at_identity": [
+          1.0,
+          2.0,
+          0.6
+        ],
+        "use": "visual framing only; not collision or interaction truth"
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/Wall_100cmWindow.fbx",
+      "role": "model",
+      "bytes": 28016,
+      "sha256": "06451c7c97bf403708ad99e7b45af8b94137123d6ba8517bf1faa100fd02a189",
+      "meta_sha256": "3f2c7e0705ba47b130cf46828c4e3b22a04f36bd0af478789646c37b5a28bae0",
+      "guid": "b147629ead8dda74c9122642d578b4a8",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 0,
+        "animationType": 0,
+        "addColliders": 0
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/FBX/Wall_60cm.fbx",
+      "role": "model",
+      "bytes": 26976,
+      "sha256": "03af36639abc5a765b5b2ce2b5b23ebe19b730033580f05eb19fe8e9c9b598ba",
+      "meta_sha256": "108d7e7f24f73cf9ea5dc43e546bc7087330277188dd519f4abbf35f97833a12",
+      "guid": "9ce9122b4e7af7a4b913cecaca0d05f7",
+      "importer": {
+        "globalScale": 1,
+        "useFileUnits": 1,
+        "useFileScale": 1,
+        "importAnimation": 0,
+        "animationType": 0,
+        "addColliders": 0
+      }
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/CharacterSelector.psd",
+      "role": "texture",
+      "bytes": 946113,
+      "sha256": "a5ae575773e70298ede37f2657777226f87a0f28e18c3f2d3dba5ab852b003d3",
+      "width": 2048,
+      "height": 2048,
+      "channels": 4,
+      "meta_sha256": "357bdd300942b8867aa6345684f968ab59034a30b7a674c0025c2c4e51365830",
+      "guid": "adf068552ee8fe44e8c01e0fb193fc97",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 1,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        4,
+        4,
+        2044,
+        2044
+      ],
+      "transparent_padding_px": [
+        4,
+        4,
+        4,
+        4
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/Chef_Model_HeadTexture.psd",
+      "role": "texture",
+      "bytes": 2430240,
+      "sha256": "4baed5f93b3681483bbd689a79e35773a9ea13bacf7b2e34d0016a97543ab7cb",
+      "width": 2048,
+      "height": 2048,
+      "channels": 3,
+      "meta_sha256": "e0973ee43ca2c881e19c5f80edc3a0adbfa9acbbf63c16f611c0ebd4e8fddb34",
+      "guid": "147a4d6234531fa45b5d112143a0b463",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        2048,
+        2048
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/Chef_Texture.psd",
+      "role": "texture",
+      "bytes": 5862265,
+      "sha256": "6cbfe6d912c9968d96188a48dfa235890da1904d415900ffbdc7c4a3e7c59522",
+      "width": 2048,
+      "height": 2048,
+      "channels": 3,
+      "meta_sha256": "a0fdf05b01fe4a713f42fda8b48b8a844258b5d0eaaabc19b1d3b7698ae8657b",
+      "guid": "a8fbe7b9027b3604a8e818f630c0e9db",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        2048,
+        2048
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/ChoppingBoardTexture.png",
+      "role": "texture",
+      "bytes": 194182,
+      "sha256": "8d98c78df1976611750445e1e9ec72c4c5ed8fd2952052cd896256ed51a19333",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "meta_sha256": "a91fadb16bb0f5d179ca8a8cc711c22936b93340138f1679059cbd73bff3b43c",
+      "guid": "91905d2e3f4f56d43a7a3397ecc238c8",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/CountertopTexturing.png",
+      "role": "texture",
+      "bytes": 6879,
+      "sha256": "976043a05f8040d99c64fa83a656244c63e94df345f91a012c1ce309c9ddf67d",
+      "width": 1024,
+      "height": 1024,
+      "channels": 4,
+      "meta_sha256": "793043a0a6973f149d44db87697dca8c73857b869877d9be74396d1f4e41fdd4",
+      "guid": "4120d3a78b988b241bb6b08c6cfcb901",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/DarkMetalTexture.psd",
+      "role": "texture",
+      "bytes": 148560,
+      "sha256": "a726f00329c657536b1ea9dc182ec15581f0304d614d3354fba6c4b531bc79bd",
+      "width": 1024,
+      "height": 1024,
+      "channels": 3,
+      "meta_sha256": "e3adbdd0096cea05bc60ae8c1e1e757ed06b32ba950256100a8bfd5b58e77e38",
+      "guid": "8836eec3cd1f0fc42b0e6da2459c4935",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/DeliverCounteropTexture.psd",
+      "role": "texture",
+      "bytes": 193692,
+      "sha256": "6b4f3b949535e570b438872383818f43aa6b38c6d7a2348f834725e121dab3c0",
+      "width": 1024,
+      "height": 1024,
+      "channels": 3,
+      "meta_sha256": "674368423096a9965110a07f8130ac9b0d52b5baac428db3262344e588df7d55",
+      "guid": "cf463caae2bec5844a01a3ca290e43aa",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/DishTray_Texture.png",
+      "role": "texture",
+      "bytes": 6857,
+      "sha256": "9cfa18a9f823d30c06f076469afa64ee566e7877500f524e7984caff08f49541",
+      "width": 1024,
+      "height": 1024,
+      "channels": 4,
+      "meta_sha256": "5143aa4f89a6e6630638e59a14796361138c6ef7fca9cda216c442c745eac58b",
+      "guid": "f39696b1c729a6c4dbb7d37e1e503f1a",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/ExtinguisherTexture.psd",
+      "role": "texture",
+      "bytes": 1596944,
+      "sha256": "3099177cfd53effa62dfde1f0060a7bba580c8cf4d625e580795e8a9b5967c57",
+      "width": 1024,
+      "height": 1024,
+      "channels": 3,
+      "meta_sha256": "6666cae3b49066cc70c8fda24b40d1a5ba31354592d906ccc3a0a77e4b584b3f",
+      "guid": "a5c30b455c231484fa24d9ebdb3094fd",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/Flames1Texture.png",
+      "role": "texture",
+      "bytes": 231922,
+      "sha256": "15327930980134eda1bcc003ac67787eade66db23aecc858e31b5999abcc335b",
+      "width": 1024,
+      "height": 1024,
+      "channels": 4,
+      "meta_sha256": "17a90f112fcae3962fcb44d7744eb987c073a4d267b79568b592e8e5f01e12bf",
+      "guid": "a45561062b77b77418a8d9c6e4e7d1bb",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 1,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        16,
+        26,
+        1012,
+        1005
+      ],
+      "transparent_padding_px": [
+        16,
+        26,
+        12,
+        19
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/FloorTile1.png",
+      "role": "texture",
+      "bytes": 9463,
+      "sha256": "4b00c8ec47e3fd27a066d2693d29f5c1726756c4363c758dc387d5af30609c3d",
+      "width": 1024,
+      "height": 1024,
+      "channels": 4,
+      "meta_sha256": "d29e46f1265effb52fc897b726967e33c61a73f390e7157d2cfb5adbe8f37f22",
+      "guid": "fd402a86c3ff69945854c450ad9ec57d",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/FloorTile2.png",
+      "role": "texture",
+      "bytes": 9606,
+      "sha256": "d3aeb110473970d6b87697844bd0e4eb0bd6beead7afee281c0e26c7d8bde57d",
+      "width": 1024,
+      "height": 1024,
+      "channels": 4,
+      "meta_sha256": "142993809ececa10f2d835a10ba4c793301b653fdccb6dfc1066773a2a926dd7",
+      "guid": "05ad221f270c773448b50b3cc27c7ff3",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/HobTexture.png",
+      "role": "texture",
+      "bytes": 2555,
+      "sha256": "1436b097be90acc518f7e059784d4bb2e446b657d01a4a2f4a367f783d9f492f",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "meta_sha256": "3664c0018af2b78cdbcbd0dcfce7ad64baed82a6c30bffd4202a3d6572f83d49",
+      "guid": "146f2ead07559ac41867bea337fa80d5",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/IngredientCrate_Texture.png",
+      "role": "texture",
+      "bytes": 1193408,
+      "sha256": "2c42f5a1e55341bfbb31739081ea351f6d53a6e8138ef52a9d80d6ec365792c4",
+      "width": 1024,
+      "height": 1024,
+      "channels": 4,
+      "meta_sha256": "7ae01d364f211c3b657e8062ac2644895d1733a5efcf5d505228640ff520674f",
+      "guid": "086392f558fdb3549b0cf353e0ef59df",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/KnifeTexture.png",
+      "role": "texture",
+      "bytes": 199862,
+      "sha256": "135177ad9833cc26cfa68b514b0b1200740571dba7e99d763004d3cfdbc298b4",
+      "width": 1024,
+      "height": 1024,
+      "channels": 4,
+      "meta_sha256": "bfbff91a64e65cc41249e6588eb677f9032e95811d32cf393dba2d1df56c0733",
+      "guid": "a149a473c9b4cc047bd01949b6ce662f",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/OnionTexture.png",
+      "role": "texture",
+      "bytes": 122538,
+      "sha256": "b3ad4c690644a1e9c3694f360efba7be04a147824544110be21406512544d426",
+      "width": 1024,
+      "height": 1024,
+      "channels": 4,
+      "meta_sha256": "4a48585ab621f13e3dc18e571f84af2a3d931eec357303e79fc5918277d7a884",
+      "guid": "53b3a2ffa1bcae148a50f013eb375f50",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/PlateCleanTexture.psd",
+      "role": "texture",
+      "bytes": 539894,
+      "sha256": "a988b3c714c8161d42576d3695d0a33d96eb297eecf166302fea31b4babe967e",
+      "width": 1024,
+      "height": 1024,
+      "channels": 3,
+      "meta_sha256": "b02e20b99f319c026668d4cc915a84f8542f7f590421429912a99dc3259f6211",
+      "guid": "04b00d6fd33e2b34a943ff4ad84f2d38",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/PlateDirtyTexture.psd",
+      "role": "texture",
+      "bytes": 4373543,
+      "sha256": "6fb5aa1dc8b09031cf28fb2256824a59485a808ea7e2659f84bcd55360f9fe66",
+      "width": 1024,
+      "height": 1024,
+      "channels": 3,
+      "meta_sha256": "f31c3ee26e31c20467b2edb0878145ca3b828ef6e7320fcb0483f11719d7f045",
+      "guid": "15c0c6499a50f4041988890d94be8b09",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/SinkTexture.psd",
+      "role": "texture",
+      "bytes": 696675,
+      "sha256": "096e16b62f68d0fa01c9b92d97a993e4459388ebef26e26f7649910b6b4be3c0",
+      "width": 1024,
+      "height": 1024,
+      "channels": 3,
+      "meta_sha256": "7fcf6ea3a25a2b5ceaf782de06ca0baa2511ef27d7f9966e8af1c24b61d5a9a4",
+      "guid": "a6375668f20c7154bb6ee370036b0d76",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/Star.png",
+      "role": "texture",
+      "bytes": 14535,
+      "sha256": "44083eb3ef620bdabe1d6dedc2322e552154c8e3c3d311360b3fca3ff5281b39",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "meta_sha256": "79728e9b66ce532722938845acf7bbb8563f1236b995d59fed96b93fa1224912",
+      "guid": "d0b91401dfb2fde4ea88aa756fac394c",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 1,
+        "textureType": 8,
+        "alphaIsTransparency": 1,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        25,
+        34,
+        487,
+        474
+      ],
+      "transparent_padding_px": [
+        25,
+        34,
+        25,
+        38
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/StarBackground.png",
+      "role": "texture",
+      "bytes": 22187,
+      "sha256": "e25be79c3566c0cc345777b1fea5a2fc7d24f31e19400d1fe854078be8a5ec62",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "meta_sha256": "0a27e4f7fff502c9640fdc38d1a804bc084f4417d0b38b47b9286118a25a71bc",
+      "guid": "fc795be9c3f527e42afd595e7ae4f6c3",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 1,
+        "textureType": 8,
+        "alphaIsTransparency": 1,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        9,
+        512,
+        499
+      ],
+      "transparent_padding_px": [
+        0,
+        9,
+        0,
+        13
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/StarGlowParticle.psd",
+      "role": "texture",
+      "bytes": 1466372,
+      "sha256": "adb6eb2498447d8c9c8b439f47f7e1599e8df4902848baa7613fce02c4bd53dd",
+      "width": 2048,
+      "height": 2048,
+      "channels": 4,
+      "meta_sha256": "fc09880aabddfd7c44519a742d9603dd87ca2635b333507e9e0c0bb447c29305",
+      "guid": "bdbd3057f1d0cf640aad433287a04bb5",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 1,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        75,
+        76,
+        1974,
+        1973
+      ],
+      "transparent_padding_px": [
+        75,
+        76,
+        74,
+        75
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/StarParticle.psd",
+      "role": "texture",
+      "bytes": 101502,
+      "sha256": "b7fdd8d2eeee3299f99c9f30ff5c812e54e096e7477a77e8d15a10e5fa489b24",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "meta_sha256": "6ae2b8bc3e84fd440c44761bc689a5d0cae93874887835a7bd3277c536fd6f7e",
+      "guid": "bdec43cb882af3c46ad902c101de6a6b",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 1,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        9,
+        512,
+        499
+      ],
+      "transparent_padding_px": [
+        0,
+        9,
+        0,
+        13
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/SteamTexture.psd",
+      "role": "texture",
+      "bytes": 996202,
+      "sha256": "15b42170d9df4766b6676f7045c675a74aa3a2e2a27cb7794d03641bfe012ce2",
+      "width": 1024,
+      "height": 1024,
+      "channels": 4,
+      "meta_sha256": "11959cf7cf0d84c24804d1638c1d56d8270f5351d971d948e4e2443c457a1d1d",
+      "guid": "dc12b86551b585040a3ba17242f639aa",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 2,
+        "textureType": 8,
+        "alphaIsTransparency": 1,
+        "maxTextureSize": 2048,
+        "filterMode": 1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/TomatoTexture.png",
+      "role": "texture",
+      "bytes": 16987,
+      "sha256": "1cbbc1b8b4a4b60ec20c63a1534d2e1d550125df9fc6200c56b8cc093357b83a",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "meta_sha256": "09a2707f383e6da9400a3a671544ac85b031827514c1fe87584838f6ca45b0c5",
+      "guid": "025bebb8a3f31184b897652d16089599",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 1,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/TrashTexture.psd",
+      "role": "texture",
+      "bytes": 1109578,
+      "sha256": "ccca78b6eb5db83460ed19daea39014b850b89bdf12b5cb2ece311938f5c6a97",
+      "width": 1024,
+      "height": 1024,
+      "channels": 3,
+      "meta_sha256": "ea4cd874f1cb7b9cb00caabe56e147a2d009d1c9aef8cda07df1a1b6d89b78f6",
+      "guid": "f14e3897113ea6b45a040510e5514a8e",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/Textures/WallTexture.psd",
+      "role": "texture",
+      "bytes": 841417,
+      "sha256": "ce0b715ff40e76e98f87ceed1d839780b3e60e82534b7a632d08ce587c5e2474",
+      "width": 1024,
+      "height": 1024,
+      "channels": 3,
+      "meta_sha256": "47f64a7353cd525ce0d9c78b92866f26196d4e0f1daaa90d6d41cfaaced3633c",
+      "guid": "fdf470fe9914a8f4fb4a4eaf0ed8bc31",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 0,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/UI/CrateDecals/CrateDecalBun.png",
+      "role": "ui texture",
+      "bytes": 25169,
+      "sha256": "145f05fe65e79b274dbea962e77340742f9909296a071b4aeeaa11c8bba16f30",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "meta_sha256": "28514a08f14363acdfef08a12d3ecd6bfc56967de11b6497817ff853292226aa",
+      "guid": "a90bda72a4c18ef4384d5d258acfa5e8",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 1,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        16,
+        14,
+        496,
+        498
+      ],
+      "transparent_padding_px": [
+        16,
+        14,
+        16,
+        14
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/UI/CrateDecals/CrateDecalLettuce.png",
+      "role": "ui texture",
+      "bytes": 25425,
+      "sha256": "9eee2bef7c9be17f11ecdf9ce7c27eb292641d7bfe446529ecfb2a7a8b3034ab",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "meta_sha256": "7c37890d239246fe35058153b3a3d896a7b0e99500edc206529e960aef8722a1",
+      "guid": "8920dc3b87893564298b0b69e5cbe2dc",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 1,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        16,
+        14,
+        496,
+        498
+      ],
+      "transparent_padding_px": [
+        16,
+        14,
+        16,
+        14
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/UI/CrateDecals/CrateDecalMeat.png",
+      "role": "ui texture",
+      "bytes": 20283,
+      "sha256": "49c52c310c16506d8b51d08f49efafb66536a4dd702dda036fddcabc963cfd34",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "meta_sha256": "91c9039fd0ff84ed22ef9a80bdb33a303a2ccf91510836303506fdf24bda9baf",
+      "guid": "f13727e867847d244bacdb95128bb527",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 1,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        16,
+        14,
+        496,
+        498
+      ],
+      "transparent_padding_px": [
+        16,
+        14,
+        16,
+        14
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/UI/CrateDecals/CrateDecalOnion.png",
+      "role": "ui texture",
+      "bytes": 21912,
+      "sha256": "faae507cbe7530de1a564a50222d463fd9193983b7a3b00cfabda40f695fd6d2",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "meta_sha256": "91ae0e5519ec122f59422aeccfe181ff4ced8542582c96c5c9ebf70855185f0f",
+      "guid": "ec446be528e26764cba0b4e816006af2",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 1,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        16,
+        14,
+        496,
+        498
+      ],
+      "transparent_padding_px": [
+        16,
+        14,
+        16,
+        14
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/UI/CrateDecals/CrateDecalTomato.png",
+      "role": "ui texture",
+      "bytes": 25858,
+      "sha256": "6b465bad9c423b1f4bde0e59980fa93f01364f16a61e0074346ef0f7ed27e067",
+      "width": 512,
+      "height": 512,
+      "channels": 4,
+      "meta_sha256": "306cb38e4a1c6e5ba50ee86364834a67714f61719b3ac63dc60eeb3f164c033c",
+      "guid": "7d9fc04a279224f4cae75141ead682d6",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 0,
+        "textureType": 0,
+        "alphaIsTransparency": 1,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        16,
+        14,
+        496,
+        498
+      ],
+      "transparent_padding_px": [
+        16,
+        14,
+        16,
+        14
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/UI/UndercookedIcons1.png",
+      "role": "ui texture",
+      "bytes": 345165,
+      "sha256": "74090c28716a9d5ea6830e564113fec1b75f5780264cc0d3d481f17221644c0c",
+      "width": 2048,
+      "height": 2048,
+      "channels": 4,
+      "meta_sha256": "f32942ed2e7ab95fb501213d35099e7e2b02f3e2735bf6b5952618fd1edb751f",
+      "guid": "c286e9a30b9402c4e8ca82508e97d529",
+      "importer": {
+        "spritePixelsToUnits": 512,
+        "spriteMode": 2,
+        "textureType": 8,
+        "alphaIsTransparency": 1,
+        "maxTextureSize": 2048,
+        "filterMode": 1
+      },
+      "alpha_content_bounds_px": [
+        6,
+        36,
+        2045,
+        2040
+      ],
+      "transparent_padding_px": [
+        6,
+        36,
+        3,
+        8
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Art/UI/WhitePixel.png",
+      "role": "ui texture",
+      "bytes": 782,
+      "sha256": "ae7ec23805634f454dc08f4e924c79f9eb649205243f872e1e4fa14e0ffd3c2f",
+      "width": 1,
+      "height": 1,
+      "channels": 3,
+      "meta_sha256": "df09601db33499de48b43cb1011f75b48f977a1f047c5a072f3bf2f33617b140",
+      "guid": "0e349066879e1df4da2c4a4dc85edec3",
+      "importer": {
+        "spritePixelsToUnits": 100,
+        "spriteMode": 1,
+        "textureType": 8,
+        "alphaIsTransparency": 1,
+        "maxTextureSize": 2048,
+        "filterMode": -1
+      },
+      "alpha_content_bounds_px": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "transparent_padding_px": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "size_note": "Pixel and alpha dimensions describe visual content only, never game collision or interaction reach."
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/backgroundTalkmp3.mp3",
+      "role": "audio",
+      "bytes": 595541,
+      "sha256": "2b77ca1b6ab7af3a3c67c5a6c6b1de3bdc54a70a84d703d4717d404aeedc01e3",
+      "meta_sha256": "3dd9ac722d2f33100fe0e29dafacf2675dc9ea772c370ebe8ac3b0b5d5b5102a",
+      "guid": "74f630a2c93418b4a991b62a11d824d8",
+      "suggested_audio_role": "ambience"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/buzzer_1_lower.mp3",
+      "role": "audio",
+      "bytes": 17009,
+      "sha256": "f66210bf9b990bf7f6c8fc5b2ced81a9653a8b0e9233db77ecc6cc53c4bd8491",
+      "meta_sha256": "9a8921ee4da425f790b4e3b898d8d537c4f17152233c3c5436ae392f712e3feb",
+      "guid": "5dd55e6b474005d47aba444b6044da8e",
+      "suggested_audio_role": "warning"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/chopHit1.mp3",
+      "role": "audio",
+      "bytes": 13248,
+      "sha256": "63a4f2a37c7d3cf31f1cffc2b565c28445c801d799e1f4c490eb41ad619b29ce",
+      "meta_sha256": "c45e812178338f020bded85509b8d20d16948cb274a04b0c357e95d347d4612d",
+      "guid": "a9760757cc6999b4aa4f1328d4af3955",
+      "suggested_audio_role": "chopping"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/chopHit2.mp3",
+      "role": "audio",
+      "bytes": 14832,
+      "sha256": "504ebb1ddc9f402c2991ab5c640a0d4cc8b639cc46e63b40bd32dc0621c8f721",
+      "meta_sha256": "acbf687cc2868fc5b985a36d5a3e09bd9483cd72654e8c684588aacd3afdc17d",
+      "guid": "a8ceef259221764428f8018161404e63",
+      "suggested_audio_role": "chopping"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/chopHit3.mp3",
+      "role": "audio",
+      "bytes": 36624,
+      "sha256": "648191ff61aeb5b0103a312db1da23d4f05db33530e3cef263b908892f6406ef",
+      "meta_sha256": "ed9c3a1ac02c0d9a596e56434bb342363b59aee907743eb8626c9a3ce2bd1081",
+      "guid": "075e1c1fab037b840894d1a508da69d0",
+      "suggested_audio_role": "chopping"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/chopHit4.mp3",
+      "role": "audio",
+      "bytes": 17664,
+      "sha256": "a50fda204490ddfb9566912508146d1c7905a8c2dedc5d4a8f1165eeb55de517",
+      "meta_sha256": "c6da60030a951d1c25a116a8b5dafa520920b392cfcce075c05eff5e2d1767a2",
+      "guid": "5d9fc16aea111f9449570d6528a174ee",
+      "suggested_audio_role": "chopping"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/fireFlames.mp3",
+      "role": "audio",
+      "bytes": 187968,
+      "sha256": "e36e467923fae8ca43d38cd30209ca774223447843639cf4ed6db6e7f7e68e9f",
+      "meta_sha256": "b6c5a5b08a4fa0b8b7553653c32fd2d0b86fdc8903479377daea6a26160e544b",
+      "guid": "3b10e6483796b00499c44dbcc5c23341",
+      "suggested_audio_role": "warning"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/fireWosh.mp3",
+      "role": "audio",
+      "bytes": 11377,
+      "sha256": "6368577f39d06ef45942ceaf8b5e4e31a63204ab6280137c8146f401cee5d7d3",
+      "meta_sha256": "32a470cf9069cecdf74c129b798cca225ab83183bc5da4635bae984e3a789ce6",
+      "guid": "3207647fb1760424eacf8bdb496d68e2",
+      "suggested_audio_role": "warning"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/guitarChord.mp3",
+      "role": "audio",
+      "bytes": 70237,
+      "sha256": "38b8222224d81e65b06ff80dbb8c95a19dc48fdfb4c18ec8f2a6a6aeb42bbc87",
+      "meta_sha256": "6386a2204ed6015e2babf9b019a34011288788a7a728d57f3153e961d05027cd",
+      "guid": "3c615d99bc200fb4fab1802a9aa8d1de",
+      "suggested_audio_role": "success/result"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/ItemDrop.mp3",
+      "role": "audio",
+      "bytes": 6159,
+      "sha256": "13afa69018029dab86f077319ef35a6c511226eae93a14c9f091bcf68d9b3838",
+      "meta_sha256": "e76e0d8e13c249fae2eddab4bc4c040f0c339674c1b4c54a5f65a2a6077309fa",
+      "guid": "d2728590cbe38cd41922364847aaf6b2",
+      "suggested_audio_role": "item/action feedback"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/ItemPick.mp3",
+      "role": "audio",
+      "bytes": 5845,
+      "sha256": "0abe641ab61d80018a0b150146efc3cc1928e3c887a0d9b0a65a76e00dcda836",
+      "meta_sha256": "5f7eee1018e71dbae46feed2a2057edb2a52e561f7735bd6f3c8f435c599af72",
+      "guid": "a5882b7195755a34c87cdb6fb7122ee1",
+      "suggested_audio_role": "item/action feedback"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/menuNote1.mp3",
+      "role": "audio",
+      "bytes": 44817,
+      "sha256": "3eec9fcb4902ddc62f0efb9df261434068711f62ae3f42ac0a3cd55a86f565f3",
+      "meta_sha256": "7eb38ef8a9aa9f5154ade69e9868e7fa7fdd6509dad3bb30445182685a679403",
+      "guid": "a49d8768a3ed2734d945d876630bd742",
+      "suggested_audio_role": "menu/input feedback"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/menuNote2.mp3",
+      "role": "audio",
+      "bytes": 41713,
+      "sha256": "59b98c6d3d9a0e1a9d6fdbf04328df3e16dd0ad8f8c735e06617c44260fb99ad",
+      "meta_sha256": "1978eddfedc27e276cf5e50dffb954dbc67212914040135b85767741caf817dc",
+      "guid": "fb7e666b046cc194abdc30ae836fd164",
+      "suggested_audio_role": "menu/input feedback"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/menuNote3.mp3",
+      "role": "audio",
+      "bytes": 43303,
+      "sha256": "c6a6ad855aa5e1e47f662dfd9c1dfb7bb8291305c4077fef5ad0765c7ecb0a93",
+      "meta_sha256": "13cc79008115d569b194b9d57b32b61f8f8f0a7287376f00459ea37ee3a0072e",
+      "guid": "3c50eb69c8671564ba541027a3e51e59",
+      "suggested_audio_role": "menu/input feedback"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/menuSelection.mp3",
+      "role": "audio",
+      "bytes": 7411,
+      "sha256": "175ce8237a7c88c25709a835f41be3d053677360896f40b2534b7fda565b0481",
+      "meta_sha256": "922a8751a65d07f7a17782798877925c82aaa2552c6be2eb9d480a0a3c34d6b0",
+      "guid": "37e7b863d6b143e43821e924d8661a7b",
+      "suggested_audio_role": "menu/input feedback"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/notification-01.wav",
+      "role": "audio",
+      "bytes": 121348,
+      "sha256": "d668591851a3589e9a8e27308b4b341d2ef01b20917a965babd6ce6abc12c727",
+      "meta_sha256": "2f8b35a79010759d0f903dd5b7e95653d00687f5c009376f830dddec424b3bb0",
+      "guid": "6227f5c43581fca4c9fd3ccd9cb5d01f",
+      "suggested_audio_role": "item/action feedback"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/notification-02.wav",
+      "role": "audio",
+      "bytes": 247340,
+      "sha256": "6d430b17dbdf6c4e5f47ad6e3d9e03c6d0ae8a9bcd9ca03c0102a1452ff3b8d2",
+      "meta_sha256": "f64ea16d719f87babdc44fc8c5c0d98e2ecd5a2cf5cb35b005f611af8788b2cf",
+      "guid": "7c933daba754d064eb6cfebd2dd902dc",
+      "suggested_audio_role": "item/action feedback"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/pop01.mp3",
+      "role": "audio",
+      "bytes": 3168,
+      "sha256": "9b63cb7a70876aaf34968ad5a860e8cb2d1ad8c438d7d92ac6c9bf10d4cbb934",
+      "meta_sha256": "cc0e1540eea207926903182c15a93a9d21fbc6c361461870b1b1d7aafd0f893e",
+      "guid": "4fcab3afd8dae2c4aaa103f2f015b07c",
+      "suggested_audio_role": "item/action feedback"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/pop02.mp3",
+      "role": "audio",
+      "bytes": 2784,
+      "sha256": "becdcd746bae0990b5c44a8da6558d355baf016aa11816265b83e5ad8158a563",
+      "meta_sha256": "baeea93125c388edc9f21c95e14ed79f144a3bef3acea16081ccd542679b61f8",
+      "guid": "bbbbca1e1dd81c64ca8bd323f4cbeb68",
+      "suggested_audio_role": "item/action feedback"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/pop03.mp3",
+      "role": "audio",
+      "bytes": 3840,
+      "sha256": "7e28397bfc751f07e5607c143e1e528c2a80b5321d35906f7fe3bbec023c83eb",
+      "meta_sha256": "fd6570a8c8ab60a2da9b7b225b47ad76b3104a63fde1b5adf030b2959a42dd4e",
+      "guid": "458e7975d934f7344b788bfb2730df8c",
+      "suggested_audio_role": "item/action feedback"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/pop04.mp3",
+      "role": "audio",
+      "bytes": 3888,
+      "sha256": "3a5ddf436ba59b6a64b8c8fa523cdee2ee1d341779c125edef90f5be076f8b60",
+      "meta_sha256": "d5fc89343a3cc3fb0bfb1690c928c9174c478043e1b564b77e8b962c5b93ce4b",
+      "guid": "c099df9cf05e5294a89b29f7365d12e2",
+      "suggested_audio_role": "item/action feedback"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/restaurant-kitchen-ambience_01.mp3",
+      "role": "audio",
+      "bytes": 1060896,
+      "sha256": "a04df82d8e265e9a309d9289c8a1c6b6b241afa992231e8bdd16993024e0e5c3",
+      "meta_sha256": "3223c2fbf3de0e80b472acde60bdba95bccd864bd3a828e0a7d30fbf0ae13af7",
+      "guid": "ac6771a941f25904db92602da05a78f1",
+      "suggested_audio_role": "ambience"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/restaurant-kitchen-ambience_NoiseReducted.mp3",
+      "role": "audio",
+      "bytes": 1079616,
+      "sha256": "86004d69c9fccdbae4e443447fa1cb8135250f9ff2274d1de051fc88c7782b87",
+      "meta_sha256": "4215866596a62395dc82ad7d2b7bafe8ca08e9a8ff8461b48e2235e8b68510fd",
+      "guid": "8444ead7f80b0ae4e9ab438675ae6dd4",
+      "suggested_audio_role": "ambience"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/success-03.wav",
+      "role": "audio",
+      "bytes": 247340,
+      "sha256": "51aadc7b6e4534d7709d72f5f53c272508e9b6a62fea8db965571881e4995c40",
+      "meta_sha256": "0aa05a3ebd07c9650d35cf6c062152e0b6903563d75b449e787745d5a6926f82",
+      "guid": "d84518d67f1a1b64e82f45ddbb790350",
+      "suggested_audio_role": "success/result"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/success-04.wav",
+      "role": "audio",
+      "bytes": 354920,
+      "sha256": "e028ab43287388211bce0a4780d629e4ebacf19cd3b1231f188be6adc9d9b351",
+      "meta_sha256": "dfcfbe7104584e92c0e3dc44208591648bf2b565178e806e267ee4a945b49688",
+      "guid": "001fc1ed9d85a704786c3ff4cb7ad81b",
+      "suggested_audio_role": "success/result"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/success.wav",
+      "role": "audio",
+      "bytes": 163026,
+      "sha256": "0661b7b6f30b4d1b2b567533741f985b35050753c15c2e4dfa583125fda52616",
+      "meta_sha256": "309fac7d15e5c4ad59d874318e64eca9fe23aa3c145f72e9b447e8431d36ee6f",
+      "guid": "1eb2801ff17ce1e4182c46dee83b9df0",
+      "suggested_audio_role": "success/result"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/warnBurnBeep.mp3",
+      "role": "audio",
+      "bytes": 4071,
+      "sha256": "4e764af1d872d52598125d8ed4fd0c2de6748cd486ba3771e1bc75796a0cf92f",
+      "meta_sha256": "f714e75793bb255e2a5917093861b4f2707b693398fab5811cbe3556901552dc",
+      "guid": "c716ed21c2b407940aff974fd586a2c0",
+      "suggested_audio_role": "warning"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/warnBurnCountdown.mp3",
+      "role": "audio",
+      "bytes": 212699,
+      "sha256": "bcb3bec0aa83e0cbb53cf93727aa159bdd8038630762a358b2e50c5b6c39ff8e",
+      "meta_sha256": "cb006f7910e3d20bdef2a1bf8c9d6f1240564a11f3543dc6e08fcde49c5f2149",
+      "guid": "69db86e02181622449f6d08a2dade314",
+      "suggested_audio_role": "warning"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Audio/wosh.mp3",
+      "role": "audio",
+      "bytes": 8324,
+      "sha256": "1d7a208bfa8578558991713dad979e0a0f2f7309dbfe7a08952be47f79879b58",
+      "meta_sha256": "4c76b6d7ec418a36100a9cf770238737586e86e6a4562e49654edb9c27e2b2ee",
+      "guid": "e209557e7335be64993857cecdca6200",
+      "suggested_audio_role": "item/action feedback"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/ChoppingBoardMat.mat",
+      "role": "material",
+      "bytes": 3513,
+      "sha256": "2f274ca39fccf6b09a4b257e58e70ee6ea80a0283737f8318a4fd94b0bb90264",
+      "meta_sha256": "da29df36d044735043d97d45448599d0d82a867890e4416ca6b6d820e2065c25",
+      "guid": "2f3c432bb0122284f8ab2cade5a41185"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/CookingPotMat.mat",
+      "role": "material",
+      "bytes": 3510,
+      "sha256": "acf1995e19b4afd6906a05a4cb725ace9e882d3d4d88af71acc5e35f7b99f138",
+      "meta_sha256": "15f2ccb87407f16d5a1889315378a7592851d27dc4bef8f7f8e3c83b5cadcc6e",
+      "guid": "cbecdabda19a0b541921f498c91a94d4"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/CountertopMat.mat",
+      "role": "material",
+      "bytes": 3551,
+      "sha256": "18bca81afd34df1b8e5efae8559a6de3573a94a089762e341abc89421497db76",
+      "meta_sha256": "2cf9d0f32b9ff60ddcf5923c1e89b7801933da35bc5168643d22d75508ac8a48",
+      "guid": "82f0dae8296851b418058b575656bfe2"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/CrateDecalBunMat.mat",
+      "role": "material",
+      "bytes": 4156,
+      "sha256": "b99a84ca9d89a506950c66b7b3a848a99d89a04eb0b1bc931450b98b64ce0f82",
+      "meta_sha256": "a5e4b49f79404c51393f6dfc3407301e6233e3f106bf022312e79f2ff81c2d41",
+      "guid": "b5788011c53469f4fa19310cc54e2aed"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/CrateDecalLettuceMat.mat",
+      "role": "material",
+      "bytes": 4160,
+      "sha256": "9e7f96875713c31dd3f62f813a701ba06bfb3e8da11879744c7a42491c9276fd",
+      "meta_sha256": "5b12ed383d7d2de0948d70712f52f0939d734bec663fd5bae96a2c9c820e5c59",
+      "guid": "5a864149b5ba1444a9431e45e25e0ad2"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/CrateDecalMeatMat.mat",
+      "role": "material",
+      "bytes": 4157,
+      "sha256": "4831c181e416f8ddda642c27cdfee8320e5f2bffaa7f81d213fb3159726f98b0",
+      "meta_sha256": "2367a8330253d60f2851cac74ef08d4d6723cafba0430ef1ed697d609b85ba75",
+      "guid": "db27533e10c606f4ab869325261ca0c7"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/CrateDecalOnionMat.mat",
+      "role": "material",
+      "bytes": 4192,
+      "sha256": "c5f3c2bf6f027be56295f44f7124a889a4473e9c79574a614853e831e968e8c9",
+      "meta_sha256": "c38784547fb177de4ab93ea0c1b347b358fc6bb068dac14d0ee828c814e71fa3",
+      "guid": "05f778e278610a04fa64629d10a8d8b1"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/CrateDecalTomatoMat.mat",
+      "role": "material",
+      "bytes": 4193,
+      "sha256": "71e9498f70bf53d734e247587f0eefb41fcc013b9ceb0b1442c661fa993ab0ec",
+      "meta_sha256": "1f5005e3ae68906bdc5cbf2ad92eaf49d91c6bdbcbd276494bfde29fe4bc470c",
+      "guid": "021b804224b74474295704f758f93611"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/DeliverCounterTopMat.mat",
+      "role": "material",
+      "bytes": 1904,
+      "sha256": "d83dac4b96c5ff4156e66c346f949413efaf850f0af7673c7c5ceb3a2c9add94",
+      "meta_sha256": "428f534c62b2b8a0e18df8daa1885d7f690882ddf9a1f4628bf99cc606a93bed",
+      "guid": "52ddaef814472594fbb4f69e60560905"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/DishTrayMat.mat",
+      "role": "material",
+      "bytes": 3532,
+      "sha256": "5a435474e511bfe578b369db210bbfe5fc6d2d5edd9329b74bc438502c204cd3",
+      "meta_sha256": "b72d647b5652bfe737c76f6110a30590d459672d3ced349d6fea4229466d15ea",
+      "guid": "4fc65dba632aa1d42b0a8d27c1ccf70c"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/ExtinguisherMat.mat",
+      "role": "material",
+      "bytes": 3513,
+      "sha256": "e1e7075182db37635b9f828b88ad7bff78ce76dafc62bef91ed1d4f90a322e66",
+      "meta_sha256": "6cda0c819533fa5aa3d82aeba0805715ad89bfa1c2f4e554cf678c436b570fcd",
+      "guid": "73330b9309628914d9b90355142d2a60"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/HobFlameMat.mat",
+      "role": "material",
+      "bytes": 3549,
+      "sha256": "b95a2dee21d6ad5272d8666bf7ab37a11d44d3613eca9ca24701dcbc9dea7ca3",
+      "meta_sha256": "aff14341b101508ff0662432781c9bee01557a011e60ec8e1c20471dba7c2c77",
+      "guid": "f73c19fb63b5621428e253e6def96e26"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/HobMat.mat",
+      "role": "material",
+      "bytes": 3544,
+      "sha256": "f6ecd9a10c65c5b826fe1121c21e6aa1e5a39619bfad674cd5cc0af322402990",
+      "meta_sha256": "a1d6d6d931a24dbe5e1a01c2439138717dca5a39e7adf9c5e591b9336ff47dc6",
+      "guid": "1dc6f785664299444adc4c17685b3cfe"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/IngredientCrate_highlightable.mat",
+      "role": "material",
+      "bytes": 3527,
+      "sha256": "63544af5cd4b185459e1ac795edcea1ecd57c1dd3c5fbc4f8e1069996e093359",
+      "meta_sha256": "4155b800fe9d48c06bf2ff1862f7cd7e0f878a8e357b4be8e5eff8632c55fa95",
+      "guid": "288a53f49df37824fb4e6320a9b520c8"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/KnifeMat.mat",
+      "role": "material",
+      "bytes": 3505,
+      "sha256": "c3bc120d6e9ec867b6b85b8d7d96ee195415417b490377e0eeef74ebc690b004",
+      "meta_sha256": "b2deee730d3f6088907e99ac38b4b2715441ac0f5149e4ef3a4a0ad10e448a13",
+      "guid": "be97350481497814aad75c8f908759d5"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/LiquidCookMat.mat",
+      "role": "material",
+      "bytes": 4019,
+      "sha256": "6a97d58252f845beb36b09bf977dff09fe096b564ca1600eb6427872ed40f9bc",
+      "meta_sha256": "fee4af700e4c8a7e7b352f2ecc211de7691d81da922fce5981173a522f45369b",
+      "guid": "444b74b8e2fa24e498f5725affaf4ecb"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/MetalMat.mat",
+      "role": "material",
+      "bytes": 3546,
+      "sha256": "4dc6dac3f1662663c7e431d5d04efa6a93dc864457b0aaffafa7757aa5a6ec0c",
+      "meta_sha256": "dcbb2206c9762f0fd9fbcc3d0f42d9e24cf9c845566b1ed364c10ec22d5088fd",
+      "guid": "36f8ec6d9f1d1184699283878a36167b"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/PlateCleanMat.mat",
+      "role": "material",
+      "bytes": 3511,
+      "sha256": "3507076b4d3391e5b6b6d594e7cba83fa0da520758b556072310888b5d33a504",
+      "meta_sha256": "63cc54356e8265e3efa2b7259cffb71a22312e4a356dde3c88dc502ed4367540",
+      "guid": "112c2cf1bc1e64545b11c40249c8cc94"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/PlateDirtyMat.mat",
+      "role": "material",
+      "bytes": 3511,
+      "sha256": "dd20520701243e0a528195d86fcf6e55835fa36ab10a6c211f2c4ab11c979c32",
+      "meta_sha256": "2e7c3ffbf47e66cf7ccfb0416eb2f52c81a7136a7555e61d28999a66e030316c",
+      "guid": "a5c5fc3d2c3ba564d8e896f1fa6929bf"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/SinkMat.mat",
+      "role": "material",
+      "bytes": 3505,
+      "sha256": "6343b2a667bc23d5a93d2df15b4db3a984c8a649c4c65444e36e28d933be9ead",
+      "meta_sha256": "e6f9999828c9380ed702111d8f1eb9c9abed444a1a8b3217969f4e3b3587035d",
+      "guid": "3376d9f446ca68944ab9124a823d985a"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Appliances/TrashMat.mat",
+      "role": "material",
+      "bytes": 3506,
+      "sha256": "efdec8668bcef1d62e5e4449f5b26aa81c568489d3a79c809d91d5d00a2af56e",
+      "meta_sha256": "9251451c976f2e3c6530be427751e39c04ecfe682739fdcc6ba3d783d4e8f732",
+      "guid": "c46741a7c8d422c49bee61cfc05c4795"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/FlamesMat.mat",
+      "role": "material",
+      "bytes": 3917,
+      "sha256": "c024b31f1fbb20f9131276f9028713235b2f2bc3ce42617fdc73544fc379dd80",
+      "meta_sha256": "01d81fe84ac95d15f6f5acd1f378d447cef14e7430417b0d93464275bd0af52b",
+      "guid": "94b3416830b97334486ca007e15c5ad6"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/FloorTile1.mat",
+      "role": "material",
+      "bytes": 4092,
+      "sha256": "f349e60b7ade9438b7113f916f943417592e23aabe0b4a583ee4e1379aa15108",
+      "meta_sha256": "3ba11e3c8c03a7ba1777634f3dda02d8e2a05a52133c07e977ed0abd14764edd",
+      "guid": "606c3644c15fc8840ad607a9c2621b9b"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/FloorTile2.mat",
+      "role": "material",
+      "bytes": 3948,
+      "sha256": "5b7dfb6ec7fa72362b92e5d5990c8cc9ad15c327f82622d830a95cc5ca7c037b",
+      "meta_sha256": "8dc26a0e19ccb1a38179861441533327ca9edcd42b2cbeed65ed9eab99f6cace",
+      "guid": "85c49505f12cd0e4882e5bcb3ed3815c"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/FrictionlessPhysicMaterial.physicMaterial",
+      "role": "material",
+      "bytes": 353,
+      "sha256": "15101fd0b6aff54615ee29eb922002600b1484e38eab9c17e3d7040dbfc29c19",
+      "meta_sha256": "e76523e59d2b39bae6cf47db6b8e3617dfda3c4bfba4a344bbfb61a95c59e8e7",
+      "guid": "1d0b00b8e69129740b9fdd83f94ce254"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/HighFrictionPhysicMaterial.physicMaterial",
+      "role": "material",
+      "bytes": 359,
+      "sha256": "43baf5b0e4c16cfa8ad785864b9471ddcef298823e9ec0cfce5beec5acacb4bc",
+      "meta_sha256": "28a55b033048b4f800c11cd34865af689cad147a47f306f7269caf9374e27762",
+      "guid": "bc4a59c88acb5474abf917ca8b6d7ac4"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Ingredients/OnionMat.mat",
+      "role": "material",
+      "bytes": 3505,
+      "sha256": "73261daebd775a5aa639453b24f5212ce3f098a69f58457c5edff78bc7f31b74",
+      "meta_sha256": "b80d57153f81a5a212abe34f5ea4159f82e9cf8d3919f97ad7692049c22ca632",
+      "guid": "d3c37f18219743e43be9a1088cb6afd3"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Ingredients/TomatoMat.mat",
+      "role": "material",
+      "bytes": 3506,
+      "sha256": "1ac0b5f150c40e33f669ab638b7dc61d3f70b224fe584aebbc0b280b2048a96f",
+      "meta_sha256": "31243c1aa2bb45ebe6550e5adc76947d755ec21a1a98cfd522291c1f8b2646b3",
+      "guid": "018d5adf0e4406b4399bd910c95dc37b"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Player/CharacterSelectorMat.mat",
+      "role": "material",
+      "bytes": 4459,
+      "sha256": "6ccc977518c0f50c8f26d471d7372a2334a418d5545b2fe9bfd1e87da4772f60",
+      "meta_sha256": "9f70a4ac843741ae661c677b64855bfb8a3e73fed78f6bd49e8ba3d1837a051f",
+      "guid": "a6157fff3f182014ea8abca479af504c"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Player/ChefBaseMat.mat",
+      "role": "material",
+      "bytes": 3957,
+      "sha256": "c837efa3c460119897c710c1c15ea7be3a8a1a9cbb7af8c40dbf48d3e1f7a6a6",
+      "meta_sha256": "4c19c0af31683d10046a40c6ee164d8cd8c16b0f5d120c224687ebbaefefa6ad",
+      "guid": "3be29c336f0730f48883ba428c40dd85"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Player/ChefHeadMat.mat",
+      "role": "material",
+      "bytes": 3957,
+      "sha256": "c06dda2e01c0d5390f159900f5eccf8579add06366a8b08dd1e8b8cd76e2e463",
+      "meta_sha256": "edd897f8f7556e74022aeb55a6f305ce45bfcefdb53f5c275272ba429e00020f",
+      "guid": "06e7c7d32caa297479ac7587eb1dcca1"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Player/DustParticleMat.mat",
+      "role": "material",
+      "bytes": 4043,
+      "sha256": "529dfd039530e6707a4d7ca76f511bd61da45d4470c28528f4c6821fcc535bcd",
+      "meta_sha256": "df38237b9ec43edfd6e29c09ddd0c2e0d3db75843ecca33b178eb35cf19ee776",
+      "guid": "fa86cbdd994bfb046a0bf6b3f09c9c99"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Player/PlayerUniqueColorMat.mat",
+      "role": "material",
+      "bytes": 3911,
+      "sha256": "5fd070255f7853e89e9fd75060db8d39a3d8fda7d50ba8eb64c42a16a45e043f",
+      "meta_sha256": "ab68dd0ec0cbffd944bf34ef8d0e4e20d5d513313941ff9f1274b7c2e0a1a873",
+      "guid": "93dada25e833e1445aca40c2081e8fe2"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/Skybox_Mat.mat",
+      "role": "material",
+      "bytes": 2564,
+      "sha256": "4fcf3a3841445f2982ec79ac791190363397fc3c97429aebff7fdcf9fc0dbd74",
+      "meta_sha256": "d985baf083c5428b90cf8a4627c1cc1e19c25d640356fe718e2630e3c9600964",
+      "guid": "0ffaa0b7117ba8c47a9d05ae701d4b4d"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/StarGlowParticleMat.mat",
+      "role": "material",
+      "bytes": 4721,
+      "sha256": "9a45551a5cf05d5f5aec2fe04f920d8ebe66c1a6fd1a733451737b339892a486",
+      "meta_sha256": "57041edf289d0be17f4b838d6403fcf2af338bcd1df366f975881bb385daacb9",
+      "guid": "1ce2a533ed13b564cbb99b99e5d54740"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/StarParticleMat.mat",
+      "role": "material",
+      "bytes": 3165,
+      "sha256": "2aae5b5ae1be5e4a04443ffdb9e02f36a183fb8e9c15b4a45e77b302942caa31",
+      "meta_sha256": "162531f481e659ad89c981a21c171214e19a57379a07dde2e04aed44a00c8ba9",
+      "guid": "744e244f4738fda439d534ee3be55794"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/SteamMat.mat",
+      "role": "material",
+      "bytes": 3745,
+      "sha256": "4776619ded589d2d3e002702c01f458fd8e11cfc4c19760cee3c56fea4de334f",
+      "meta_sha256": "7c758f5ee36050ce25abd13bddd515ea5aa14f332741eaaf594779c150da8b2e",
+      "guid": "93f099fba9d8458438a27ac0646d5ffc"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/UI_Mat.mat",
+      "role": "material",
+      "bytes": 3301,
+      "sha256": "4ae0d640ee548962b7b5ae600c7af79c017bd6ffdb7778543b533803781b84ea",
+      "meta_sha256": "d9d4be7c21dac17c50507cff4523c3b2ebd82abe1a8aaeddda296b8154852fb3",
+      "guid": "fb0471344e376994aa03acd2d2d6c6b5"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Materials/WallMat.mat",
+      "role": "material",
+      "bytes": 4382,
+      "sha256": "f27c5f761e3638fa7fa08e7a1fa79a36566fa4b8f3f95cce8071803f864597f4",
+      "meta_sha256": "97b5d65baaef64d3d2f6b1226c0295ae67756923b01114f37d677a4ad27213c2",
+      "guid": "5c866dc796a254b4d92b0c08dbdb382f"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Scenes/KitchenStarter.unity",
+      "role": "starter scene",
+      "bytes": 60534,
+      "sha256": "5f433ebed1109b2c8548d3eae90cc998831ae10fec18ec4ef7182a9d3d4e1934",
+      "meta_sha256": "da0e84aac73852a7ba186115c367633c21925dd4671cb4d471fda68a7570fed1",
+      "guid": "9021d0578df36404a85236aac565c6a5"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Settings/ForwardRenderer.asset",
+      "role": "scene settings",
+      "bytes": 1893,
+      "sha256": "7638fa9dec60da784639a6e98f630ed939ee7d24a66301a6f48c2645728e4703",
+      "meta_sha256": "8a936b50e163fd2125b9a74e4777fe651d5e6ce83668d3f0e1e553cd40f8a8de",
+      "guid": "4a8e21d5c33334b11b34a596161b9360"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Settings/InputSystem.inputsettings.asset",
+      "role": "scene settings",
+      "bytes": 762,
+      "sha256": "0fe1f48d7a2c8ae5856d467bcc7b8d9d6b23bd67ca793ccc79bba47302b62da6",
+      "meta_sha256": "1a16e6e17808aad884184b30b447b2caf7b49a2430960fe606a88cff36ac1e3c",
+      "guid": "8c799294d4db5a5439fd4786821d5a7d"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Settings/UniversalRP-HighQuality.asset",
+      "role": "scene settings",
+      "bytes": 4554,
+      "sha256": "ec156068f99f8d2cd8972ee488666c58870892a1ba0787991c27033ae404c41c",
+      "meta_sha256": "378d3f58d3ce839414d1849bffe071f213ed9885a708bdb6fcb0edc0bec82c63",
+      "guid": "19ba41d7c0026c3459d37c2fe90c55a0"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Settings/UniversalRP-LowQuality.asset",
+      "role": "scene settings",
+      "bytes": 4553,
+      "sha256": "c8cd87f8d58888da27c651d580d71bdb8dce98a9810e6ba04c982ecda85ce6b0",
+      "meta_sha256": "f9d7e436e59365cd0b9d4442098c8065746054e0bfe8eee950d131911ee3fb50",
+      "guid": "a31e9f9f9c9d4b9429ed0d1234e22103"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Settings/UniversalRP-MediumQuality.asset",
+      "role": "scene settings",
+      "bytes": 4556,
+      "sha256": "6f229abd29f33e4287abe116e6d00e6f45a5e15d10e2ce358e92537e898dd852",
+      "meta_sha256": "4b0a5651cac167bd548e6a676beb8aa4d2f12017dd1cbc96df91ffddbf34000a",
+      "guid": "d847b876476d3d6468f5dfcd34266f96"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Shaders/Flames.shadergraph",
+      "role": "shader",
+      "bytes": 110220,
+      "sha256": "2d5e24bf3f7c9f7a4fe7045eed229282e69f529ad0994230801a01b66b6029ec",
+      "meta_sha256": "f1eec9fe7edb4899c2157258bd41d03ccf8b2f38db114b378d7d6f771855883b",
+      "guid": "c1c84e947193ce04ea5b161e00a41794"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Shaders/Highlight.shadergraph",
+      "role": "shader",
+      "bytes": 42924,
+      "sha256": "e6d27bcc6fb8b8ba9c1f2e60d9b1ede4953f49e34a4395883be92f220eed7c12",
+      "meta_sha256": "91503e08f36f5244d6f2b6b3e5f2a82a13a7ce33234288dc8991c726960e4f8a",
+      "guid": "f01cef80b77b786478f79af365d17917"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Shaders/HighlightFlame.shadergraph",
+      "role": "shader",
+      "bytes": 74921,
+      "sha256": "51b0dce82026f7e7b37188bfb3b9a8e0b642840ba21cea1a53180875bcd578b6",
+      "meta_sha256": "57be295d570357e235a395a889951fc35f332958ad44c766c95edd4603c7f804",
+      "guid": "40ca13a44ec47194bb7405ea678aaf32"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Shaders/ScrollingTexture.shadergraph",
+      "role": "shader",
+      "bytes": 36161,
+      "sha256": "19fc4ef4aecb191f5c8e46cdd66482f73dfd17f089c2c9e99f2f7c7e0bf8f83c",
+      "meta_sha256": "5b8d26dbf5f40c9351dc4ba4b4bbeda929d4c69544bac7f734e0adccb6a98d65",
+      "guid": "5245329dc6e325a46b298ebb01ea760c"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Shaders/Shader Graphs_Flames.mat",
+      "role": "shader",
+      "bytes": 2418,
+      "sha256": "d1d2fb0226873ff2145ccc9d9b50698449dfba21792dc8361765ebc35f9332ea",
+      "meta_sha256": "60de13d6e8e757be07ccad120bf44c820a0562f5ae6b219e9cc39ab928861073",
+      "guid": "74b7217fa1fd2ca4dad6b5c278c5c65f"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Shaders/Shader Graphs_Highlight.mat",
+      "role": "shader",
+      "bytes": 1948,
+      "sha256": "7b6c2408e8c88a4daf462d47db49af4251a18abea09b8e288fc7b640b591de94",
+      "meta_sha256": "b6cbb35ef8982a20daf7f05382d0be76439437b7afc06a0704fe94054be3cc5f",
+      "guid": "5e6c2e7fa4e933944bcf6519b29674df"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Shaders/Shader Graphs_HighlightFlame.mat",
+      "role": "shader",
+      "bytes": 1774,
+      "sha256": "744f6464d5a3d397c0c28903b020dff37f711f36bdaa7b3b17cf5f3d1e73f7d8",
+      "meta_sha256": "06f9f55a79636bf29e2c1642fca65b12135169e2f7386a69ca615c8904552e71",
+      "guid": "0d9f2f70fe0c0064a9869029d98b2d18"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Shaders/Shader Graphs_SwingFlames.mat",
+      "role": "shader",
+      "bytes": 2256,
+      "sha256": "cd0841ffc513b24a9af899cf9d0ef7b57c5725362a908b234741610688c76dc9",
+      "meta_sha256": "3f311d3dfba90d9be82faba1ef77b391442cb6f3e38843aee8111814aaf145ff",
+      "guid": "e033bbc1ffa794b47bc00ea54f9ce9f9"
+    },
+    {
+      "path": "Assets/UndercookedStarter/Shaders/SwingFlames.shadergraph",
+      "role": "shader",
+      "bytes": 169253,
+      "sha256": "16522a0fd996bad27065f0fc0b0b6d12420a2b75989e2c0219f2111a9c6363cf",
+      "meta_sha256": "ebfd84a03e1370c43efbf30bf800f8353fc433c25325be01d775b297ce83b496",
+      "guid": "6b656486a7b57594284c23232311b681"
+    }
+  ],
+  "usage_notes": {
+    "primary_presentation": "Use original-author kitchen art, chefs, food, appliance models, materials, shaders and audio for the main game presentation.",
+    "allowed_procedural": "Procedural Unity geometry/materials may fill missing supporting structure but must not replace supplied primary roles.",
+    "excluded": [
+      "Assets/3rdParty/Lean/**",
+      "upstream gameplay scripts",
+      "upstream game scenes",
+      "Asset Store/example media"
+    ]
+  },
+  "contact_sheet_provenance": {
+    "purpose": "isolated views of supplied FBX assets, with each thumbnail independently framed",
+    "not_a_game_layout": true,
+    "materials": "Supplied imported materials; one dangling delivery-counter material remap mechanically repaired before this input was issued.",
+    "asset_paths": [
+      "Assets/UndercookedStarter/Art/FBX/Chef.fbx",
+      "Assets/UndercookedStarter/Art/FBX/Chef_Model_Head.fbx",
+      "Assets/UndercookedStarter/Art/FBX/IngredientCrate.fbx",
+      "Assets/UndercookedStarter/Art/FBX/Countertop.fbx",
+      "Assets/UndercookedStarter/Art/FBX/ChoppingBoard.fbx",
+      "Assets/UndercookedStarter/Art/FBX/CookingPot.fbx",
+      "Assets/UndercookedStarter/Art/FBX/Hob.fbx",
+      "Assets/UndercookedStarter/Art/FBX/Plate.fbx",
+      "Assets/UndercookedStarter/Art/FBX/DeliverCountertop.fbx",
+      "Assets/UndercookedStarter/Art/FBX/Trash.fbx",
+      "Assets/UndercookedStarter/Art/FBX/Tomato_Raw.fbx",
+      "Assets/UndercookedStarter/Art/FBX/Tomato_Chopped.fbx",
+      "Assets/UndercookedStarter/Art/FBX/Floor30x30.fbx",
+      "Assets/UndercookedStarter/Art/FBX/Wall_100cm.fbx"
+    ],
+    "dimensions": [
+      1600,
+      1364
+    ],
+    "sha256": "9c0542ce742d60fec1d082f1af84dd496cd599ead812dacb28a8ce1d084125b0"
+  },
+  "geometry_policy": "Imported visual bounds, file scale, alpha crop and thumbnail size are asset facts only; actual player collision, interactions and movement are defined by delivered game behavior and public session spatial semantics."
+}

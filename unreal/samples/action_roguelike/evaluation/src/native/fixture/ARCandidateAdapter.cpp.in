@@ -1,0 +1,62 @@
+#include "ARCandidateAdapter.h"
+#include "UnrealFixtureCapabilities.h"
+#include "Engine/World.h"
+#include "GameFramework/GameModeBase.h"
+@INCLUDES@
+
+// Generated only in the private copy. This is the only translation unit that
+// knows the candidate's state ownership, component types or attribute storage.
+struct FAREvaluationBinding
+{
+    static bool Apply(UWorld* World, const TSharedPtr<FJsonObject>& Request, TSharedRef<FJsonObject> Receipt)
+    {
+        auto* P = Cast<@PLAYER@>(UnrealFixtureCapabilities::FindPlayer(World));
+        auto* G = Cast<@GAMEMODE@>(World->GetAuthGameMode());
+        if (!P || !G) return false;
+        @CONTEXT@
+        auto Read = [&]()
+        {
+            auto State = MakeShared<FJsonObject>();
+            State->SetNumberField(TEXT("health"), @HEALTH_READ@);
+            State->SetNumberField(TEXT("credits"), @CREDITS_READ@);
+            State->SetBoolField(TEXT("teleport_acquired"), @TELEPORT_READ@);
+            State->SetNumberField(TEXT("remaining_seconds"), @CLOCK_READ@);
+            return State;
+        };
+        Receipt->SetObjectField(TEXT("before_state"), Read());
+        double Number; bool Flag;
+        if (Request->TryGetNumberField(TEXT("health"), Number)) { @HEALTH_WRITE@ }
+        if (Request->TryGetNumberField(TEXT("credits"), Number)) { @CREDITS_WRITE@ }
+        if (Request->TryGetBoolField(TEXT("teleport_acquired"), Flag)) { @TELEPORT_WRITE@ }
+        if (Request->TryGetNumberField(TEXT("remaining_seconds"), Number)) { @CLOCK_WRITE@ }
+        const auto After = Read();
+        Receipt->SetObjectField(TEXT("readback"), After);
+        auto Verification = MakeShared<FJsonObject>();
+        bool Verified = true;
+        for (const auto& Pair : After->Values)
+        {
+            // Keep the v1 flat readback fields for the game fixture protocol.
+            Receipt->SetField(Pair.Key, Pair.Value);
+            if (!Request->HasField(Pair.Key)) continue;
+            bool Matches = false;
+            if (Pair.Value->Type == EJson::Boolean)
+                Matches = Request->GetBoolField(Pair.Key) == Pair.Value->AsBool();
+            else
+                Matches = FMath::IsNearlyEqual(Request->GetNumberField(Pair.Key), Pair.Value->AsNumber(), 0.0001);
+            Verification->SetBoolField(Pair.Key, Matches);
+            Verified &= Matches;
+        }
+        Receipt->SetObjectField(TEXT("verified_fields"), Verification);
+        Receipt->SetBoolField(TEXT("readback_verified"), Verified);
+        return Verified;
+    }
+};
+
+namespace ARCandidateAdapter
+{
+    const TCHAR* Identity() { return TEXT("@ADAPTER_ID@"); }
+    bool Apply(UWorld* World, const TSharedPtr<FJsonObject>& Request, TSharedRef<FJsonObject> Receipt)
+    {
+        return FAREvaluationBinding::Apply(World, Request, Receipt);
+    }
+}

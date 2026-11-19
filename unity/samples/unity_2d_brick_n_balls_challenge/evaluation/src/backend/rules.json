@@ -1,0 +1,25 @@
+{
+  "schema_version": 2,
+  "maximum": 90,
+  "dimensions": {"D1":10,"D2":30,"D3":20,"D4":20,"D5":10},
+  "tests": {
+    "D1_EntrySceneAndBuildSettings_5":["D1",5],
+    "D1_CompilableProbeImplementationAndMedia_5":["D1",5],
+    "D2_MenuStartAndOriginalInitialContent_15":["D2",15],
+    "D2_CompleteClickLaunchesVisibleMovingBall_15":["D2",15],
+    "D3_OneFullClickConsumesExactlyOneBall_4":["D3",4],
+    "D3_OneContactChangesOnlyOneBrickByExactlyOneHealth_4":["D3",4],
+    "D3_EachDamageAddsExactlyOneScore_4":["D3",4],
+    "D3_InvalidPointerRoutesDoNotLaunchOrScore_4":["D3",4],
+    "D3_BallsReboundFromSideAndTopBoundaries_2":["D3",2],
+    "D3_BallLeavingBelowLauncherIsRemoved_2":["D3",2],
+    "D4_NormalInputCanClearFieldIntoSharedResult_5":["D4",5],
+    "D4_NormalInputCanExhaustBallsIntoSharedResult_5":["D4",5],
+    "D4_DirtyRunRestartIsCleanAndAcceptsExactlyOneInput_5":["D4",5],
+    "D4_DistinctProcessReopenStartsAtCleanMenu_5":["D4",5],
+    "D5_MenuHudAndSharedTerminalAreReadableAndUsable_4":["D5",4],
+    "D5_SuppliedVisualAssetsAndButtonStatesAreUsed_3":["D5",3],
+    "D5_SixSuppliedAudioRolesPlayFromNormalActions_3":["D5",3]
+  },
+  "support_tests":["D4_WriteDirtyReopenReceipt_5"]
+}

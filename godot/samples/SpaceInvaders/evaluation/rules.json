@@ -1,0 +1,582 @@
+{
+  "schema_version": "2.1",
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "method": "engine_collection_and_requirement_level_review",
+  "checks": [
+    {
+      "id": "D1-01",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-01"
+      ],
+      "description": "Project imports without an engine failure",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-02",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-02"
+      ],
+      "description": "Configured main scene runs",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-03",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-03"
+      ],
+      "description": "No candidate parse, script or resource loading errors",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-04",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-04"
+      ],
+      "description": "Live dashboard snapshots are available",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-05",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-05"
+      ],
+      "description": "Public dashboard shape and required numeric slots",
+      "max_score": 2.0
+    },
+    {
+      "id": "entry_001",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:ENTRY-01"
+      ],
+      "description": "Launch a new process | Open a playable game screen for Level 1 without requiring a hidden command or scene selection | Open the editor, remain on an unresponsive placeholder, or resume a previous game | The battlefield, cannon, invaders, score, lives, and level are visible",
+      "max_score": 15.0
+    },
+    {
+      "id": "entry_002",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:ENTRY-02"
+      ],
+      "description": "Enter Level 1 or Restart | Show a three-second countdown before gameplay begins; keep movement, firing, enemy movement, and enemy fire inactive during it | Let enemies or projectiles move during the countdown | A visible `Level 1`/countdown state changes to active play when it ends",
+      "max_score": 15.0
+    },
+    {
+      "id": "entry_003",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-01"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-01",
+      "max_score": 1.428571
+    },
+    {
+      "id": "entry_004",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-07"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-07",
+      "max_score": 0.588235
+    },
+    {
+      "id": "entry_005",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-08"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-08",
+      "max_score": 0.588235
+    },
+    {
+      "id": "entry_006",
+      "dimension": "D3",
+      "requirement_ids": [
+        "common-baseline:CB-15"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-15",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_001",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PLAYER-01"
+      ],
+      "description": "Hold Left/A or Right/D | During active play | Move the cannon horizontally within the battlefield",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_002",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PLAYER-02"
+      ],
+      "description": "Press W, Up, Space, or Enter | During active play | Fire if no player projectile from the previous shot remains",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_003",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:FORMATION-01"
+      ],
+      "description": "Begin any level | Start with exactly 40 active invaders in five rows of eight: one row of the high-value type, two rows of the middle-value type, and two rows of the low-value type | Start with fewer/more invaders, overlap rows, or omit a type | Forty readable invaders form a regular rectangular grid",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_004",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:FORMATION-02"
+      ],
+      "description": "Active play continues | Move surviving invaders in a synchronized stepped cadence; the cadence becomes shorter as the number of surviving invaders decreases | Leave survivors frozen or move only one isolated invader forever | All surviving invaders change position together and visibly accelerate",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_005",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:FORMATION-03"
+      ],
+      "description": "A moving invader reaches a left/right formation boundary | Reverse the formation direction and move every survivor down by one fixed step | Wrap to the opposite side, reverse only one invader, or descend repeatedly in the same edge frame | Direction changes and the whole formation moves down",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_006",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:FORMATION-04"
+      ],
+      "description": "Any surviving invader reaches the lower danger line above the cannon | Enter Game Over immediately | Continue play, award a level clear, or allow the invader to move below the screen | The loss state is obvious while the player cannot continue firing",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_007",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ATTACK-01"
+      ],
+      "description": "A player projectile reaches an active invader | Remove that projectile, destroy that invader in one hit, and show its hit/deactivation feedback once | Pass through it, destroy multiple invaders, or leave an invisible active invader | The targeted invader disappears after its hit animation and the remaining count updates",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_008",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ATTACK-02"
+      ],
+      "description": "A player or enemy projectile reaches a barrier | Remove that projectile and leave the barrier visible and usable | Damage the player, destroy the barrier, or pass through it | The projectile disappears at the barrier",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_009",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ATTACK-03"
+      ],
+      "description": "An enemy projectile reaches the player or an enemy projectile remains after its shot is no longer valid | Apply one player hit on contact; remove projectiles when they leave the battlefield or the game resets | Apply repeated damage from one projectile, keep orphan projectiles in a terminal state, or let enemy projectiles damage invaders | The player hit/reset or projectile disappearance is visible",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_010",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ENEMY-01"
+      ],
+      "description": "Active play continues | At regular random intervals, choose one surviving invader and fire a downward enemy projectile | Fire from a destroyed invader, fire while paused/counting down, or fire projectiles that never move | A visible projectile travels toward the player area",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_011",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ENEMY-02"
+      ],
+      "description": "Active play continues while invaders remain | Keep a fixed nonzero chance to fire during each enemy-fire interval; the chance must not depend on a nonexistent later level | Suppress enemy fire entirely, require a level increase, or create a second level | Enemy shots appear throughout the single level without changing the intended difficulty profile",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_012",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ENEMY-03"
+      ],
+      "description": "No input is given during active play | Continue only due to the designed enemy simulation; do not automatically clear invaders for the player | Play the player's movement or firing actions automatically or reach a player win without input | Enemies may advance/fire, but the player cannon remains input-controlled",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_013",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:SCORE-01"
+      ],
+      "description": "Destroy the high/middle/low rows | Award `30`, `20`, and `10` displayed points respectively | Award the same value for all types, award on a miss, or award repeatedly for one invader | Score increases visibly by the exact amount",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_014",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:SCORE-02"
+      ],
+      "description": "Start a new game | Show score `0`, lives `3`, level `1`, and 40 remaining invaders | Carry over score from a prior process or start with a different number | HUD values are immediately readable",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_015",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:SCORE-03"
+      ],
+      "description": "A separate bonus-saucer scoring system is not required",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_016",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PAUSE-01"
+      ],
+      "description": "Press Escape | During active play or pause | Pause or resume",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_017",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PAUSE-02"
+      ],
+      "description": "Press Escape or activate Resume while paused | Resume from the same position, score, lives, and formation with the previous countdown time preserved | Restart the level, reset score, duplicate projectiles, or resume without visible feedback | Pause overlay disappears and the game continues",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_018",
+      "dimension": "D3",
+      "requirement_ids": [
+        "common-baseline:CB-04"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-04",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_019",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-05"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-05",
+      "max_score": 0.588235
+    },
+    {
+      "id": "core_020",
+      "dimension": "D3",
+      "requirement_ids": [
+        "common-baseline:CB-06"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-06",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_021",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-09"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-09",
+      "max_score": 0.588235
+    },
+    {
+      "id": "success_001",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:LEVEL-01"
+      ],
+      "description": "Destroy all 40 invaders in Level 1 | Enter a Mission Complete state immediately and stop gameplay | Advance to Level 2, recreate the formation, enter Game Over, or allow more score changes | A clear success result and visible Restart button appear",
+      "max_score": 1.428571
+    },
+    {
+      "id": "success_002",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:LEVEL-02"
+      ],
+      "description": "Mission Complete remains visible | Keep the terminal state stable with no active enemies or projectiles and no automatic restart | Spawn another formation, increase the level, or return to play without a player action | The result remains until Restart or process close",
+      "max_score": 1.428571
+    },
+    {
+      "id": "success_003",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:HUD-01"
+      ],
+      "description": "Any active level is visible | Show current score, remaining lives, current level, and remaining invaders; update each value with the actual state | Display negative lives, stale score, a different level, or an incorrect remaining count | All four values remain readable at `1280x720`",
+      "max_score": 0.588235
+    },
+    {
+      "id": "success_004",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:HUD-02"
+      ],
+      "description": "Pause, Game Over, or Mission Complete appears | Keep the result/pause feedback visible and do not let the underlying HUD be mistaken for active play | Hide the reason for the stopped state or let HUD values continue changing | The overlay and HUD are distinguishable",
+      "max_score": 0.588235
+    },
+    {
+      "id": "success_005",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:HUD-03"
+      ],
+      "description": "A new game starts | Reset/report level `1` and remaining-invader value `40` immediately | Show a prior count or imply that a later level exists | The HUD matches the visible formation from the first frame",
+      "max_score": 0.588235
+    },
+    {
+      "id": "success_006",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:VISUAL-01"
+      ],
+      "description": "Supplied images/audio are available | Use recognizable cannon, invader, projectile, barrier, and background identities from the supplied material | Replace a required identity with an unrelated sprite or leave a missing-resource checkerboard | The battlefield reads as a coherent fixed shooter",
+      "max_score": 0.588235
+    },
+    {
+      "id": "success_007",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:VISUAL-02"
+      ],
+      "description": "Player and enemy projectiles are on screen | Make their direction/identity visually distinct | Use the same ambiguous marker for both sides | The player can tell incoming danger from their own shot",
+      "max_score": 0.588235
+    },
+    {
+      "id": "success_008",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:VISUAL-03"
+      ],
+      "description": "Normal play is observed | Keep sprites and text aligned, readable, and inside the `1280x720` viewport | Stretch, crop, or cover required HUD/controls | No broken or unreadable required element",
+      "max_score": 0.588235
+    },
+    {
+      "id": "success_009",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:QUALITY-01"
+      ],
+      "description": "Launch and play | Remain responsive and stable through the single level, hit/reset paths, pause, Restart, and Reopen | Freeze, crash, hang, or dead-end the main flow | Every required state remains reachable",
+      "max_score": 0.588235
+    },
+    {
+      "id": "success_010",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:QUALITY-02"
+      ],
+      "description": "Play with ordinary keyboard/mouse input | Reach every required action through visible controls or documented keys | Require hidden keyboard combinations, internal calls, or debug controls | Inputs produce immediate visible feedback",
+      "max_score": 0.588235
+    },
+    {
+      "id": "success_011",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:QUALITY-03"
+      ],
+      "description": "Game Over or Mission Complete is visible | Stop gameplay actions; only Retry/Restart and close controls remain effective | Let movement, enemy fire, scoring, or collisions continue behind the result | The terminal state is stable",
+      "max_score": 0.588235
+    },
+    {
+      "id": "success_012",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-02"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-02",
+      "max_score": 1.428571
+    },
+    {
+      "id": "success_013",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-10"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-10",
+      "max_score": 0.588235
+    },
+    {
+      "id": "success_014",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-11"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-11",
+      "max_score": 1.428571
+    },
+    {
+      "id": "success_015",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-16"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-16",
+      "max_score": 0.588235
+    },
+    {
+      "id": "success_016",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-17"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-17",
+      "max_score": 0.588235
+    },
+    {
+      "id": "success_017",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-18"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-18",
+      "max_score": 0.58824
+    },
+    {
+      "id": "failure_001",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-12"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-12",
+      "max_score": 1.428571
+    },
+    {
+      "id": "failure_002",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-14"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-14",
+      "max_score": 1.428571
+    },
+    {
+      "id": "lifecycle_001",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:LIFE-01"
+      ],
+      "description": "An enemy projectile hits the player | Remove active projectiles, stop play, reduce lives by exactly one, and show the remaining life count | Reduce multiple lives for one hit or hide the loss | The hit animation, sound/visual feedback, and life indicator update",
+      "max_score": 1.428571
+    },
+    {
+      "id": "lifecycle_002",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:LIFE-02"
+      ],
+      "description": "A life is lost but lives remain | After a three-second countdown, resume the same level with the remaining formation and preserved score | Advance the level, clear the formation, or leave controls disabled | Countdown returns to active play",
+      "max_score": 1.428571
+    },
+    {
+      "id": "lifecycle_003",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:LIFE-03"
+      ],
+      "description": "Lives reach zero | Enter Game Over and stop movement, firing, enemy movement, and further score changes | Continue playing behind the overlay or allow a later level clear | A Game Over message and a visible Restart button appear",
+      "max_score": 1.428571
+    },
+    {
+      "id": "lifecycle_004",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:RESTART-01"
+      ],
+      "description": "Click the visible Restart button | Game Over or Mission Complete | Start a clean game at Level 1",
+      "max_score": 1.428571
+    },
+    {
+      "id": "lifecycle_005",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:RESTART-02"
+      ],
+      "description": "Close the process and launch a new process | Return to a clean Level 1 with score `0`, lives `3`, and no saved gameplay progress | Resume the previous level, score, enemies, or terminal state | The new process begins at the same initial state",
+      "max_score": 1.428571
+    },
+    {
+      "id": "lifecycle_006",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-03"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-03",
+      "max_score": 1.428571
+    },
+    {
+      "id": "lifecycle_007",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-13"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-13",
+      "max_score": 1.428577
+    },
+    {
+      "id": "D6-01",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:composition"
+      ],
+      "description": "Overall composition and task visual identity",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-02",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:objects"
+      ],
+      "description": "Required objects, character and asset identity",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-03",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:ui"
+      ],
+      "description": "UI readability and information hierarchy",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-04",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:feedback"
+      ],
+      "description": "State transitions and visual feedback",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-05",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:consistency"
+      ],
+      "description": "Visual consistency across gameplay and result states",
+      "max_score": 2.0
+    }
+  ],
+  "d6_protocol": "d6/protocol.json"
+}

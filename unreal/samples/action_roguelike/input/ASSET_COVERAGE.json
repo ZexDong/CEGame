@@ -1,0 +1,529 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "ActionRoguelike",
+  "coverage_policy": "Every hard presentation requirement maps to one or more exact supplied asset candidates or dependencies.",
+  "requirements": [
+    {
+      "requirement_id": "PRESENTATION-01",
+      "object_paths": [
+        "/Game/Characters/Mannequins/Materials/M_Mannequin",
+        "/Game/Characters/Mannequins/Materials/Manny/MI_Manny_01_New",
+        "/Game/Characters/Mannequins/Materials/Manny/MI_Manny_02_New",
+        "/Game/Characters/Mannequins/Textures/Manny/T_Manny_01_BN",
+        "/Game/Characters/Mannequins/Textures/Manny/T_Manny_01_D",
+        "/Game/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA",
+        "/Game/Characters/Mannequins/Textures/Manny/T_Manny_02_BN",
+        "/Game/Characters/Mannequins/Textures/Manny/T_Manny_02_D",
+        "/Game/Characters/Mannequins/Textures/Manny/T_Manny_02_MRA",
+        "/Game/Characters/Mannequins/Textures/Shared/T_UE_Logo_M",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_Blendspace",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_CC",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_CD",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_CU",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_LC",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_LD",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_LU",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_RC",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_RD",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_RU",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/BlackHole_Loop",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Blackhole_Start",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Death_Back",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Death_Fwd",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Death_Montage",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/HitReact_Back",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/HitReact_Front",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/HitReact_Left",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/HitReact_Right",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Idle_Additive",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Idle",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/IdlePoseAdjustment",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Bwd",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Downhill_Fwd",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Fwd_Circle_Left",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Fwd_Circle_Right",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Fwd_Start",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Fwd_Stop",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Fwd",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Left",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Right",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Uphill_Fwd",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/JogFwdSlopeLean",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jump_In_Place_Apex",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jump_In_Place_Land",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jump_In_Place_Recover",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jump_In_Place_Start",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/JumpPad",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/LevelStart_Montage",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/LevelStart",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/LevelStart1",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Primary_Attack_A_Medium_Montage",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Primary_Attack_A_Medium",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Primary_Attack_B_Medium_Montage",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Primary_Attack_B_Medium",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Primary_Attack_C_Medium_Montage",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Primary_Attack_C_Medium",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Recall",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Respawn",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/RMB_Cast",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/RMB_Intro_Additive",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/RMB_Intro",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/RMB_Targeting_Pose_Additive",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/RMB_Targeting_Pose",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Run_Direction",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Sprinting_BS_1D",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Stun_A",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Stun_End",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Stun_Loop",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Stun_Start",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Torn_Space_intro",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Torn_Space_Outro",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Torn_Space_Outro1",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Torn_Space_v2",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Torn_Space",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Travel_Mode_Land",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/TravelMode_Direction_BS",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/TravelMode_Hover_Bwd",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/TravelMode_Hover_Fwd",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/TravelMode_Hover_Idle",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/TravelMode_Hover_Left",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/TravelMode_Hover_Right",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Turn_Left_180",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Turn_Left_90",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Turn_Right_180",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Turn_Right_90_Short_Additive",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Turn_Right_90_Short_Grounded",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Turn_Right_90_Short",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Turn_Right_90",
+        "/Game/ControlRig/Characters/Mannequins/Meshes/SK_Mannequin",
+        "/Game/ControlRig/Characters/Mannequins/Meshes/SKM_Manny_Simple",
+        "/Game/ControlRig/Characters/Mannequins/Rigs/PA_Mannequin"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-02",
+      "object_paths": [
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Aggro_Transition_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Blendspaces/IdleToRun_A_Combat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Blendspaces/IdleToRun_A_NonCombat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Blendspaces/Jog_NonCombat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/CoreVibration",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Death_Back_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Death_Front_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Death_Front_B",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Fire_A_1",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Fire_A_2",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Fire_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Fire_B",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Fire_Montage",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/HitReact_Back_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/HitReact_Front_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/HitReact_FullBody_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/HitReact_Left_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/HitReact_Right_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Idle_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Idle_NonCombat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Fwd_Combat_A_Sliding",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Fwd_Combat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Fwd_Downhill_NonCombat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Fwd_NonCombat_A_Sliding",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Fwd_NonCombat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Fwd_Uphill_NonCombat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Left_Combat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Left_NonCombat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Right_Combat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Right_NonCombat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/KnockUp_A_Loop",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/KnockUp_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/KnockUp_B_Loop",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/KnockUp_B",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Melee_Combo_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Melee_Combo_B",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Melee_Combo_C",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Melee_Combo_D",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Melee_Combo_E",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Melee_Combo_F",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Melee_Montage",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Stun",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/TurnInPlace_Fast_Combat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/TurnInPlace_Zero_Combat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Walk_Fwd_Combat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Walk_Fwd_NonCombat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Blendspaces/Jog_Combat_BS",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/CoreVibration",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Death_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Death_B",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Death_C",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Death_D",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Death_H",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Fire_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Fire_B",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Fire_C",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Fire_Planted_B",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Fire_Planted_NoAdd",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Fire_Planted",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Back_Planted",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Back",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Front_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Front_Planted",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Front",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Left_Planted",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Left",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Right_Planted",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Right",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Idle_Planted",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Idle",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Bwd_Combat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Fwd_Combat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Fwd_NonCombat_Downhill",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Fwd_NonCombat_Uphill",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Fwd_NonCombat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Fwd_Start",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Fwd_Stop",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Left_Combat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Right_Combat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/KnockUp",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/MeleeAttack_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/PlantedExit",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/PlantedIntro",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/ShuffleInPlace",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Stun",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Materials/M_SimpleLaneMinion",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Materials/MI_SimpleMinion_Ranged",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Materials/MI_SimpleMinion_Siege",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Meshes/Minion_Lane_Core_Skeleton",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Meshes/Minion_Lane_Ranged_Dawn",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Meshes/Minion_Lane_Ranged_Physics",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Meshes/Minion_Lane_Siege_Dawn",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Meshes/Minion_Lane_Siege_Physics",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Meshes/Minion_Lane_Siege_Skeleton",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Textures/Ranged/T_Minion_Dawn_Ranged_D",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Textures/Ranged/T_Minion_Dawn_Ranged_N",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Textures/Siege/T_Minion_Dawn_Seige_D",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Textures/Siege/T_Minion_Dawn_Seige_N"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-03",
+      "object_paths": [
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_Blendspace",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_CC",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_CD",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_CU",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_LC",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_LD",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_LU",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_RC",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_RD",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/AO_RU",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Idle_Additive",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Idle",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/IdlePoseAdjustment",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/TravelMode_Hover_Idle"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-04",
+      "object_paths": [
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Bwd",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Downhill_Fwd",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Fwd_Circle_Left",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Fwd_Circle_Right",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Fwd_Start",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Fwd_Stop",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Fwd",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Left",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Right",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jog_Uphill_Fwd",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/JogFwdSlopeLean",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Run_Direction",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Turn_Left_180",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Turn_Left_90",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Turn_Right_180",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Turn_Right_90_Short_Additive",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Turn_Right_90_Short_Grounded",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Turn_Right_90_Short",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Turn_Right_90"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-05",
+      "object_paths": [
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Sprinting_BS_1D",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Travel_Mode_Land",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/TravelMode_Direction_BS",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/TravelMode_Hover_Bwd",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/TravelMode_Hover_Fwd",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/TravelMode_Hover_Idle",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/TravelMode_Hover_Left",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/TravelMode_Hover_Right"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-06",
+      "object_paths": [
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jump_In_Place_Start"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-07",
+      "object_paths": [
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jump_In_Place_Apex",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/JumpPad"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-08",
+      "object_paths": [
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jump_In_Place_Land",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Jump_In_Place_Recover"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-09",
+      "object_paths": [
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Primary_Attack_A_Medium_Montage",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Primary_Attack_A_Medium",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Primary_Attack_B_Medium_Montage",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Primary_Attack_B_Medium",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Primary_Attack_C_Medium_Montage",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Primary_Attack_C_Medium"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-10",
+      "object_paths": [
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Blackhole_Start",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/RMB_Cast"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-11",
+      "object_paths": [
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Torn_Space_intro",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Torn_Space_Outro",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Torn_Space_Outro1",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Torn_Space_v2",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Torn_Space"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-12",
+      "object_paths": [
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/HitReact_Back",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/HitReact_Front",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/HitReact_Left",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/HitReact_Right",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Stun_A",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Stun_End",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Stun_Loop",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Stun_Start"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-13",
+      "object_paths": [
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Death_Back",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Death_Fwd",
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/Death_Montage"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-14",
+      "object_paths": [
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Blendspaces/IdleToRun_A_Combat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Blendspaces/IdleToRun_A_NonCombat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/CoreVibration",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Idle_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Idle_NonCombat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/CoreVibration",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Idle_Planted",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Idle"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-15",
+      "object_paths": [
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Blendspaces/Jog_NonCombat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Fwd_Combat_A_Sliding",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Fwd_Combat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Fwd_Downhill_NonCombat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Fwd_NonCombat_A_Sliding",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Fwd_NonCombat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Fwd_Uphill_NonCombat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Left_Combat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Left_NonCombat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Right_Combat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Jog_Right_NonCombat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/TurnInPlace_Fast_Combat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/TurnInPlace_Zero_Combat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Walk_Fwd_Combat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Walk_Fwd_NonCombat_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Blendspaces/Jog_Combat_BS",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Bwd_Combat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Fwd_Combat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Fwd_NonCombat_Downhill",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Fwd_NonCombat_Uphill",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Fwd_NonCombat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Fwd_Start",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Fwd_Stop",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Left_Combat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Jog_Right_Combat",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/PlantedExit",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/PlantedIntro",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/ShuffleInPlace"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-16",
+      "object_paths": [
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Melee_Combo_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Melee_Combo_B",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Melee_Combo_C",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Melee_Combo_D",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Melee_Combo_E",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Melee_Combo_F",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Melee_Montage",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/MeleeAttack_A"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-17",
+      "object_paths": [
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Fire_A_1",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Fire_A_2",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Fire_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Fire_B",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Fire_Montage",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Fire_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Fire_B",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Fire_C",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Fire_Planted_B",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Fire_Planted_NoAdd",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Fire_Planted"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-18",
+      "object_paths": [
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/HitReact_Back_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/HitReact_Front_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/HitReact_FullBody_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/HitReact_Left_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/HitReact_Right_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/KnockUp_A_Loop",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/KnockUp_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/KnockUp_B_Loop",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/KnockUp_B",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Stun",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Back_Planted",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Back",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Front_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Front_Planted",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Front",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Left_Planted",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Left",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Right_Planted",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/HitReact_Right",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/KnockUp",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Stun"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-19",
+      "object_paths": [
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Death_Back_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Death_Front_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Ranged/Death_Front_B",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Death_A",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Death_B",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Death_C",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Death_D",
+        "/Game/ParagonMinions/Characters/Minions/Down_Minions/Animations/Siege/Death_H"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-20",
+      "object_paths": [
+        "/Game/ExampleContent/Materials/M_Pickup_Coin",
+        "/Game/ExampleContent/Meshes/SM_Pickup_Coin"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-21",
+      "object_paths": [
+        "/Game/ExampleContent/Materials/M_PotionGlass",
+        "/Game/ExampleContent/Meshes/SM_PotionBottle"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-22",
+      "object_paths": [
+        "/Game/Troy/M_GlobalColor_Master",
+        "/Game/Troy/MI_GlobalColor_Orange",
+        "/Game/Troy/SM_OilBarrel"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-23",
+      "object_paths": [
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_Buff_Glow",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_Buff_Sphere_Heart",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Meshes/SM_Buff_Sphere"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-24",
+      "object_paths": [
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_Burden_Projectile_Outer",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_Burden_Projectile_TwoSided_Inst",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_Burden_Projectile",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Meshes/SM_Burden_Projectile_Wisps",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Meshes/SM_Burden_Projectile"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-25",
+      "object_paths": [
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/BlackHole_Loop",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_BlackHole_Dust",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_BlackHole_Mesh",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_BlackHole_OuterSmoke",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_BlackHole_Pebbles",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_BlackHole_Rim",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_BlackHole_Sprite",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_BlackHole_Vortex",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Meshes/SM_Black_Hole_Main",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Meshes/SM_Black_Hole_Rim",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Meshes/SM_Black_Hole_Vortex"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-26",
+      "object_paths": [
+        "/Game/ControlRig/Characters/Mannequins/Animations/Gideon/BlackHole_Loop",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_BlackHole_Dust",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_BlackHole_Mesh",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_BlackHole_OuterSmoke",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_BlackHole_Pebbles",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_BlackHole_Rim",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_BlackHole_Sprite",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_BlackHole_Vortex",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Meshes/SM_Black_Hole_Main",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Meshes/SM_Black_Hole_Rim",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Meshes/SM_Black_Hole_Vortex"
+      ]
+    },
+    {
+      "requirement_id": "PRESENTATION-27",
+      "object_paths": [
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_Portal_Space_Mini",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Materials/M_Teleport_Refraction",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Meshes/SM_Impact_Warp",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Meshes/SM_Portal_Flat",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Textures/T_Portal_Space_D",
+        "/Game/tharlevfx_tutorials/CharacterFX/ParagonSourceAssets/Textures/T_Portal_SpaceMask_M"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1360 @@
+{
+  "schema_version": 2,
+  "status": "frozen",
+  "evaluator_protocol": "trajectory-v8-unity-cli-readonly-probe",
+  "evaluator_revision": "2026.08.27-uncapped-checkpoint-r10",
+  "benchmark_id": "unity.arrow_escape_reconstruction.v2",
+  "coverage_manifest": "requirement-coverage.json",
+  "maximum_score": 100.0,
+  "automatic_maximum_score": 90.0,
+  "accepted_unity_exit_codes": [
+    0,
+    2,
+    6
+  ],
+  "health_prerequisites": {
+    "dynamic": [
+      "EVALUATOR_HEALTH_DynamicInputProbeAndEvidenceWriter"
+    ],
+    "fresh": [
+      "EVALUATOR_HEALTH_FreshProcessProtocol"
+    ],
+    "failure_classification": "invalid_evaluator_health"
+  },
+  "legacy_diagnostics": {
+    "description": "The proven trajectory milestone weights are retained only for regression diagnosis; they do not define the official D1-D6 score.",
+    "maximum_score": 100.0,
+    "capabilities": [
+      {
+        "id": "runtime_and_rendering",
+        "title": "Runtime bootstrap and rendering",
+        "maximum_score": 0
+      },
+      {
+        "id": "engine_input_and_interaction",
+        "title": "Engine-native input and interaction routing",
+        "maximum_score": 10
+      },
+      {
+        "id": "spatial_motion_and_collision",
+        "title": "Spatial motion and collision semantics",
+        "maximum_score": 23
+      },
+      {
+        "id": "game_state_rules_and_resources",
+        "title": "Game-state, resource, and terminal rules",
+        "maximum_score": 29
+      },
+      {
+        "id": "dependency_and_progression",
+        "title": "Dependency and progression reasoning",
+        "maximum_score": 26
+      },
+      {
+        "id": "feedback_and_recovery",
+        "title": "Player feedback and recovery integrity",
+        "maximum_score": 12
+      }
+    ],
+    "score_caps": [
+      {
+        "id": "static_launch_gate",
+        "phase_id": "static",
+        "test_ids": [
+          "STATIC01_ProjectStartsInAPlayableRenderedScene",
+          "STATIC02_CameraProducesANonEmptyFrameWithoutGuiAutomation"
+        ],
+        "requires_full_pass": true,
+        "maximum_final_score": 0,
+        "reason": "A candidate that cannot load, advance and render the canonical scene cannot receive dynamic benchmark credit; a separate submission-profile failure only loses its own D1 checkpoint."
+      },
+      {
+        "id": "canonical_completion_gate",
+        "milestone_id": "canonical.completion",
+        "requires_full_pass": true,
+        "maximum_final_score": 49,
+        "reason": "A candidate that cannot complete the canonical player journey is not a complete game."
+      },
+      {
+        "id": "cardinal_motion_gate",
+        "trajectory_id": "motion_cardinals",
+        "requires_full_pass": true,
+        "maximum_final_score": 79,
+        "reason": "A game missing continuous full-exit motion in any required cardinal direction is missing a core spatial mechanic."
+      },
+      {
+        "id": "blocked_safety_gate",
+        "milestone_id": "blocked.immobility",
+        "requires_full_pass": true,
+        "maximum_final_score": 49,
+        "reason": "A blocked arrow that moves or exits violates the core puzzle safety rule."
+      },
+      {
+        "id": "terminal_loss_gate",
+        "milestone_id": "budget.loss",
+        "requires_full_pass": true,
+        "maximum_final_score": 79,
+        "reason": "A game that cannot enter the specified loss state is missing a core terminal rule."
+      },
+      {
+        "id": "dependency_completion_gate",
+        "milestone_id": "dependency.completion",
+        "requires_full_pass": true,
+        "maximum_final_score": 79,
+        "reason": "The required dependency chain must be completable through normal play."
+      },
+      {
+        "id": "and_dependency_safety_gate",
+        "trajectory_id": "and_dependency",
+        "requires_full_pass": true,
+        "maximum_final_score": 79,
+        "reason": "A dependent arrow that unlocks before all prerequisites exit, or cannot complete in either order, violates the required AND dependency semantics."
+      }
+    ]
+  },
+  "official_scoring": {
+    "formula": "dimension_maximum * passed_checkpoints / total_checkpoints",
+    "checkpoint_statuses": [
+      "pass",
+      "fail",
+      "blocked"
+    ],
+    "blocked_counts_as_failure": true,
+    "unevaluated_d6_makes_overall_pending": true,
+    "d6_protocol": "user-simplified-single-state-single-round-20260824",
+    "d6_requires_single_primary_state": true,
+    "d6_requires_single_vlm_round": true,
+    "score_caps": []
+  },
+  "phases": {
+    "static": {
+      "maximum_score": 10.0,
+      "dimensions": [
+        "D1"
+      ],
+      "launch_gate_test_ids": [
+        "STATIC01_ProjectStartsInAPlayableRenderedScene",
+        "STATIC02_CameraProducesANonEmptyFrameWithoutGuiAutomation"
+      ],
+      "tests": [
+        {
+          "id": "STATIC01_ProjectStartsInAPlayableRenderedScene",
+          "stage": "static"
+        },
+        {
+          "id": "STATIC02_CameraProducesANonEmptyFrameWithoutGuiAutomation",
+          "stage": "static"
+        },
+        {
+          "id": "STATIC03_NormalInputTargetsAreExplicitAndDiscoverable",
+          "stage": "static"
+        }
+      ]
+    },
+    "dynamic": {
+      "maximum_score": 80.0,
+      "dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "trajectories": [
+        {
+          "id": "input_boundaries",
+          "nunit_test": "TRAJ00_InputCommitBoundaries",
+          "weight": 0,
+          "milestones": [
+            {
+              "id": "input.boundaries",
+              "title": "Press/release boundary gestures do not commit and one same-target click commits once",
+              "weight": 0,
+              "capability": "engine_input_and_interaction",
+              "required_check_ids": [
+                "input.press_only.no_commit",
+                "input.outside_down_inside_up.no_commit",
+                "input.inside_down_outside_up.no_commit",
+                "input.full_click.single_commit"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "canonical_success",
+          "nunit_test": "TRAJ01_CanonicalHintClickWinRestart",
+          "weight": 15,
+          "milestones": [
+            {
+              "id": "canonical.presentation",
+              "title": "The initial player surface shows the board, level, mode, budget, Hint, Restart and Next Level together without clipping",
+              "weight": 0,
+              "capability": "feedback_and_recovery",
+              "required_check_ids": [
+                "canonical.initial.surface.board",
+                "canonical.initial.surface.level",
+                "canonical.initial.surface.mode",
+                "canonical.initial.surface.budget",
+                "canonical.initial.surface.controls",
+                "canonical.initial.surface.complete"
+              ]
+            },
+            {
+              "id": "canonical.player_input",
+              "title": "A real player click selects the intended arrow",
+              "weight": 4,
+              "capability": "engine_input_and_interaction",
+              "required_check_ids": [
+                "canonical.arrow_click.1.input.top_hit",
+                "canonical.arrow_state.1.player_source",
+                "canonical.arrow_state.1.selected_id"
+              ]
+            },
+            {
+              "id": "canonical.hint",
+              "title": "Hint is routed, legal, and free",
+              "weight": 1,
+              "capability": "feedback_and_recovery",
+              "required_check_ids": [
+                "canonical.hint_click.1.input.top_hit",
+                "canonical.hint_state.1.legal",
+                "canonical.hint_state.1.budget"
+              ]
+            },
+            {
+              "id": "canonical.completion",
+              "title": "The authored sequence clears the full authored level and reaches a valid win",
+              "weight": 8,
+              "capability": "game_state_rules_and_resources",
+              "required_check_ids": [
+                "canonical.arrow_exit.1.reached",
+                "canonical.arrow_exit.2.reached",
+                "canonical.arrow_exit.3.reached",
+                "canonical.won.reached",
+                "canonical.terminal.completed_ui",
+                "canonical.terminal.three_distinct"
+              ]
+            },
+            {
+              "id": "canonical.restart",
+              "title": "Restart is clickable and restores the exact playable state",
+              "weight": 2,
+              "capability": "feedback_and_recovery",
+              "required_check_ids": [
+                "canonical.restart_click.input.top_hit",
+                "canonical.restarted.reached",
+                "canonical.restart_equivalent.snapshot"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "motion_cardinals",
+          "nunit_test": "TRAJ02_MotionCardinalsFullyExit",
+          "weight": 14,
+          "milestones": [
+            {
+              "id": "motion.right",
+              "title": "Right-moving arrow exits continuously after a player click",
+              "weight": 3.5,
+              "capability": "spatial_motion_and_collision",
+              "required_check_ids": [
+                "motion.discover.right.authored",
+                "motion.exit.right.input.top_hit",
+                "motion.exit.right.moving",
+                "motion.exit.right.continuous_frames",
+                "motion.exit.right.forward_motion",
+                "motion.exit.right.full_exit",
+                "motion.exit.right.shape_preserved"
+              ]
+            },
+            {
+              "id": "motion.left",
+              "title": "Left-moving arrow exits continuously after a player click",
+              "weight": 3.5,
+              "capability": "spatial_motion_and_collision",
+              "required_check_ids": [
+                "motion.discover.left.authored",
+                "motion.exit.left.input.top_hit",
+                "motion.exit.left.moving",
+                "motion.exit.left.continuous_frames",
+                "motion.exit.left.forward_motion",
+                "motion.exit.left.full_exit",
+                "motion.exit.left.shape_preserved"
+              ]
+            },
+            {
+              "id": "motion.up",
+              "title": "Up-moving arrow exits continuously after a player click",
+              "weight": 3.5,
+              "capability": "spatial_motion_and_collision",
+              "required_check_ids": [
+                "motion.discover.up.authored",
+                "motion.exit.up.input.top_hit",
+                "motion.exit.up.moving",
+                "motion.exit.up.continuous_frames",
+                "motion.exit.up.forward_motion",
+                "motion.exit.up.full_exit",
+                "motion.exit.up.shape_preserved"
+              ]
+            },
+            {
+              "id": "motion.down",
+              "title": "Down-moving arrow exits continuously after a player click",
+              "weight": 3.5,
+              "capability": "spatial_motion_and_collision",
+              "required_check_ids": [
+                "motion.discover.down.authored",
+                "motion.exit.down.input.top_hit",
+                "motion.exit.down.moving",
+                "motion.exit.down.continuous_frames",
+                "motion.exit.down.forward_motion",
+                "motion.exit.down.full_exit",
+                "motion.exit.down.shape_preserved"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "blocked_failure",
+          "nunit_test": "TRAJ03_BlockedFailureFeedbackAndRecovery",
+          "weight": 22,
+          "milestones": [
+            {
+              "id": "blocked.player_attempt",
+              "title": "A real player click produces a blocked outcome",
+              "weight": 4,
+              "capability": "engine_input_and_interaction",
+              "required_check_ids": [
+                "blocked.discover.authored",
+                "blocked.click.1.input.top_hit",
+                "blocked.state.1.outcome",
+                "blocked.state.1.player_source"
+              ]
+            },
+            {
+              "id": "blocked.immobility",
+              "title": "A blocked arrow never moves, changes occupancy, or exits",
+              "weight": 9,
+              "capability": "spatial_motion_and_collision",
+              "required_check_ids": [
+                "blocked.state.1.occupancy"
+              ]
+            },
+            {
+              "id": "blocked.single_cost",
+              "title": "A blocked attempt charges exactly once",
+              "weight": 3,
+              "capability": "game_state_rules_and_resources",
+              "required_check_ids": [
+                "blocked.state.1.budget_delta"
+              ]
+            },
+            {
+              "id": "blocked.feedback",
+              "title": "Target-local failure feedback is visible and recovers on time",
+              "weight": 3,
+              "capability": "feedback_and_recovery",
+              "required_check_ids": [
+                "blocked.feedback.changed",
+                "blocked.feedback.duration",
+                "blocked.feedback.recovered"
+              ]
+            },
+            {
+              "id": "blocked.repeat_integrity",
+              "title": "Repeated failure remains reusable without duplicate handling",
+              "weight": 3,
+              "capability": "feedback_and_recovery",
+              "required_check_ids": [
+                "blocked.click.2.input.top_hit",
+                "blocked.repeat.no_duplicates",
+                "blocked.repeat.recovers"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "budget_terminal",
+          "nunit_test": "TRAJ04_BudgetTerminalWinLossAndFreeze",
+          "weight": 17,
+          "milestones": [
+            {
+              "id": "budget.last_move_win",
+              "title": "The final Move can complete the level before loss",
+              "weight": 4,
+              "capability": "game_state_rules_and_resources",
+              "required_check_ids": [
+                "budget.moves_win.click.input.top_hit",
+                "budget.moves_win.zero_while_moving",
+                "budget.moves_win.won.reached"
+              ]
+            },
+            {
+              "id": "budget.hearts_success",
+              "title": "A successful clear does not consume Hearts",
+              "weight": 2,
+              "capability": "game_state_rules_and_resources",
+              "required_check_ids": [
+                "budget.hearts_success.click.input.top_hit",
+                "budget.hearts_success.no_cost",
+                "budget.hearts_success.won.reached"
+              ]
+            },
+            {
+              "id": "budget.loss",
+              "title": "A blocked final Heart produces the correct loss state",
+              "weight": 4,
+              "capability": "game_state_rules_and_resources",
+              "required_check_ids": [
+                "budget.loss.click.input.top_hit",
+                "budget.loss.lost.reached",
+                "budget.loss.failed_ui"
+              ]
+            },
+            {
+              "id": "budget.terminal_freeze",
+              "title": "Terminal loss ignores later player input",
+              "weight": 3,
+              "capability": "game_state_rules_and_resources",
+              "required_check_ids": [
+                "budget.loss.frozen_click.input.top_hit",
+                "budget.loss.frozen.no_change"
+              ]
+            },
+            {
+              "id": "budget.authored_navigation",
+              "title": "The visible Next Level control enters a fresh authored Hearts level",
+              "weight": 4,
+              "capability": "engine_input_and_interaction",
+              "required_check_ids": [
+                "budget.modes.next.input.top_hit",
+                "budget.modes.loaded.authored"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "dependency_chain",
+          "nunit_test": "TRAJ05_SequentialDependencyChain",
+          "weight": 16,
+          "milestones": [
+            {
+              "id": "dependency.locked_attempt",
+              "title": "A locked dependent rejects real player input",
+              "weight": 3,
+              "capability": "dependency_and_progression",
+              "required_check_ids": [
+                "dependency.next.modes.input.top_hit",
+                "dependency.next.chain.input.top_hit",
+                "dependency.loaded.navigation",
+                "dependency.locked_click.input.top_hit",
+                "dependency.locked_state.outcome"
+              ]
+            },
+            {
+              "id": "dependency.first_unlock",
+              "title": "The first key exits before unlocking the middle arrow with correct badges",
+              "weight": 4,
+              "capability": "dependency_and_progression",
+              "required_check_ids": [
+                "dependency.key_click.input.top_hit",
+                "dependency.key_moving.lock_stays_locked",
+                "dependency.key_exit.reached",
+                "dependency.lock_b_available.badges"
+              ]
+            },
+            {
+              "id": "dependency.second_unlock",
+              "title": "The middle arrow exits before unlocking the final dependent",
+              "weight": 4,
+              "capability": "dependency_and_progression",
+              "required_check_ids": [
+                "dependency.lock_b_click.input.top_hit",
+                "dependency.lock_b_moving.final_locked",
+                "dependency.lock_b_exit.reached",
+                "dependency.lock_c_available.state"
+              ]
+            },
+            {
+              "id": "dependency.completion",
+              "title": "The final dependent exits and completes the level",
+              "weight": 5,
+              "capability": "dependency_and_progression",
+              "required_check_ids": [
+                "dependency.lock_c_click.input.top_hit",
+                "dependency.lock_c_exit.reached",
+                "dependency.won.reached"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "and_dependency",
+          "nunit_test": "TRAJ06_AndDependencyBothOrders",
+          "weight": 10,
+          "milestones": [
+            {
+              "id": "and.left_first",
+              "title": "Left-first order remains locked after only one prerequisite",
+              "weight": 2.5,
+              "capability": "dependency_and_progression",
+              "required_check_ids": [
+                "and.navigate.modes.input.top_hit",
+                "and.loaded.authored",
+                "and.left.group.visible",
+                "and.left.first_click.input.top_hit",
+                "and.left.first_exit.reached",
+                "and.left.after_first.still_locked"
+              ]
+            },
+            {
+              "id": "and.left_complete",
+              "title": "Left-first order unlocks after both prerequisites and completes the authored group",
+              "weight": 2.5,
+              "capability": "dependency_and_progression",
+              "required_check_ids": [
+                "and.left.second_click.input.top_hit",
+                "and.left.after_second.available",
+                "and.left.dependent_exit.reached",
+                "and.left.won.reached"
+              ]
+            },
+            {
+              "id": "and.right_first",
+              "title": "Right-first order remains locked after only one prerequisite",
+              "weight": 2.5,
+              "capability": "dependency_and_progression",
+              "required_check_ids": [
+                "and.right.group.visible",
+                "and.right.first_click.input.top_hit",
+                "and.right.first_exit.reached",
+                "and.right.after_first.still_locked"
+              ]
+            },
+            {
+              "id": "and.right_complete",
+              "title": "Right-first order unlocks after both prerequisites and completes the authored group",
+              "weight": 2.5,
+              "capability": "dependency_and_progression",
+              "required_check_ids": [
+                "and.right.second_click.input.top_hit",
+                "and.right.after_second.available",
+                "and.right.dependent_exit.reached",
+                "and.right.won.reached"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "restart_interrupt",
+          "nunit_test": "TRAJ07_RestartInterruptsMovingState",
+          "weight": 4,
+          "milestones": [
+            {
+              "id": "restart.in_flight_input",
+              "title": "A real click starts an in-flight arrow",
+              "weight": 1,
+              "capability": "engine_input_and_interaction",
+              "required_check_ids": [
+                "restart.key_click.input.top_hit",
+                "restart.moving.state"
+              ]
+            },
+            {
+              "id": "restart.immediate_restore",
+              "title": "Restart interrupts motion and immediately restores the level",
+              "weight": 1,
+              "capability": "feedback_and_recovery",
+              "required_check_ids": [
+                "restart.ui_click.input.top_hit",
+                "restart.playing.reached",
+                "restart.equivalent_now.snapshot",
+                "restart.count_now.same"
+              ]
+            },
+            {
+              "id": "restart.delayed_integrity",
+              "title": "No stale coroutine mutates the restored state later",
+              "weight": 1,
+              "capability": "feedback_and_recovery",
+              "required_check_ids": [
+                "restart.equivalent_late.snapshot",
+                "restart.count_late.same"
+              ]
+            },
+            {
+              "id": "restart.reusable_input",
+              "title": "Post-restart input is handled exactly once",
+              "weight": 1,
+              "capability": "game_state_rules_and_resources",
+              "required_check_ids": [
+                "restart.locked_click.input.top_hit",
+                "restart.single_cost.exactly_one"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hint_stability",
+          "nunit_test": "TRAJ08_HintLegalityCostAndRecovery",
+          "weight": 2,
+          "milestones": [
+            {
+              "id": "hint.legal_free",
+              "title": "A real Hint click selects a legal target without cost",
+              "weight": 1,
+              "capability": "engine_input_and_interaction",
+              "required_check_ids": [
+                "hint.click.1.input.top_hit",
+                "hint.state.1.legal",
+                "hint.state.1.no_cost"
+              ]
+            },
+            {
+              "id": "hint.feedback",
+              "title": "Hint feedback remains visible and recovers within the public timing contract",
+              "weight": 0.5,
+              "capability": "feedback_and_recovery",
+              "required_check_ids": [
+                "hint.feedback.changed",
+                "hint.feedback.duration",
+                "hint.feedback.recovered"
+              ]
+            },
+            {
+              "id": "hint.repeat_update",
+              "title": "Repeated hints stay reusable and update after player state changes",
+              "weight": 0.5,
+              "capability": "feedback_and_recovery",
+              "required_check_ids": [
+                "hint.repeated.no_duplicates",
+                "hint.repeated.legal_no_cost",
+                "hint.clear_exit.reached",
+                "hint.click.after_state_change.input.top_hit",
+                "hint.after_state_change.new_legal"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "fresh": {
+      "dimensions": [
+        "D4"
+      ],
+      "tests": [
+        {
+          "id": "FRESH01_ReopenAfterDirtyDynamicStateStartsFreshTutorial",
+          "stage": "fresh"
+        }
+      ],
+      "requires_post_dynamic_dirty_seed": true,
+      "requires_distinct_process_id": true
+    },
+    "visual": {
+      "maximum_score": 10.0,
+      "dimensions": [
+        "D6"
+      ],
+      "mode": "formal_single_state_single_round_visual",
+      "prompt_path": "visual/visual_prompt.txt",
+      "reference_manifest_path": "visual/reference-manifest.json",
+      "score_template_path": "visual/visual-score-input.template.json",
+      "protocol": "user-simplified-single-state-single-round-20260824",
+      "primary_state_id": "initial_gameplay",
+      "required_rounds": 1,
+      "model": "gpt-5.6-sol",
+      "prompt_sha256": "558b4ccffad7d13d3ae3e5c6fc5a9b36a7bba37d9be47da895c2e50bc9c5a6ee",
+      "source_manifest_output": "visual/d6-input.json",
+      "capture_validation_output": "visual/capture-validation.json"
+    }
+  },
+  "dimensions": [
+    {
+      "id": "D1",
+      "title": "Engineering Validity & Engine Integration",
+      "maximum_score": 10.0,
+      "stage": "static",
+      "checkpoints": [
+        {
+          "id": "d1.compile_import",
+          "title": "The pinned Unity version imports and compiles candidate-owned assets",
+          "source": {
+            "type": "baseline_compile"
+          }
+        },
+        {
+          "id": "d1.playable_entry",
+          "title": "The saved main scene loads and advances normal frames",
+          "source": {
+            "type": "static_test",
+            "id": "STATIC01_ProjectStartsInAPlayableRenderedScene"
+          }
+        },
+        {
+          "id": "d1.nonempty_render",
+          "title": "An active camera or overlay produces meaningful rendered content",
+          "source": {
+            "type": "static_test",
+            "id": "STATIC02_CameraProducesANonEmptyFrameWithoutGuiAutomation"
+          }
+        },
+        {
+          "id": "d1.engine_integration",
+          "title": "The scene remains renderable and compatible with a normal Input System player route without requiring one component architecture",
+          "source": {
+            "type": "static_test",
+            "id": "STATIC03_NormalInputTargetsAreExplicitAndDiscoverable"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D2",
+      "title": "Specification Fulfillment & Content Completeness",
+      "maximum_score": 30.0,
+      "stage": "dynamic",
+      "checkpoints": [
+        {
+          "id": "d2.initial_player_surface",
+          "title": "The initial runtime contains the complete required player-facing board, status fields, and three controls",
+          "source": {
+            "type": "dynamic_checks_all",
+            "checks": [
+              {
+                "trajectory_id": "canonical_success",
+                "id": "canonical.initial.surface.board"
+              },
+              {
+                "trajectory_id": "canonical_success",
+                "id": "canonical.initial.surface.level"
+              },
+              {
+                "trajectory_id": "canonical_success",
+                "id": "canonical.initial.surface.mode"
+              },
+              {
+                "trajectory_id": "canonical_success",
+                "id": "canonical.initial.surface.budget"
+              },
+              {
+                "trajectory_id": "canonical_success",
+                "id": "canonical.initial.surface.controls"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d2.tutorial_core",
+          "title": "Tutorial board, arrows, Hint and player click content are present and produce a basic runtime result",
+          "source": {
+            "type": "dynamic_checks_all",
+            "checks": [
+              {
+                "trajectory_id": "canonical_success",
+                "id": "canonical.hint_click.1.input.top_hit"
+              },
+              {
+                "trajectory_id": "canonical_success",
+                "id": "canonical.hint_state.1.legal"
+              },
+              {
+                "trajectory_id": "canonical_success",
+                "id": "canonical.arrow_click.1.input.top_hit"
+              },
+              {
+                "trajectory_id": "canonical_success",
+                "id": "canonical.arrow_state.1.selected_id"
+              },
+              {
+                "trajectory_id": "canonical_success",
+                "id": "canonical.arrow_exit.1.reached"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d2.authored_navigation",
+          "title": "All required authored levels are reached through the visible Next Level control",
+          "source": {
+            "type": "dynamic_checks_all",
+            "checks": [
+              {
+                "trajectory_id": "and_dependency",
+                "id": "and.navigate.modes.input.top_hit"
+              },
+              {
+                "trajectory_id": "and_dependency",
+                "id": "and.loaded.authored"
+              },
+              {
+                "trajectory_id": "dependency_chain",
+                "id": "dependency.next.chain.input.top_hit"
+              },
+              {
+                "trajectory_id": "dependency_chain",
+                "id": "dependency.loaded.navigation"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d2.cardinal_motion_content",
+          "title": "Runtime supports visible arrows leaving in all four cardinal directions",
+          "source": {
+            "type": "dynamic_checks_all",
+            "checks": [
+              {
+                "trajectory_id": "motion_cardinals",
+                "id": "motion.discover.right.authored"
+              },
+              {
+                "trajectory_id": "motion_cardinals",
+                "id": "motion.exit.right.input.top_hit"
+              },
+              {
+                "trajectory_id": "motion_cardinals",
+                "id": "motion.exit.right.forward_motion"
+              },
+              {
+                "trajectory_id": "motion_cardinals",
+                "id": "motion.exit.right.full_exit"
+              },
+              {
+                "trajectory_id": "motion_cardinals",
+                "id": "motion.discover.left.authored"
+              },
+              {
+                "trajectory_id": "motion_cardinals",
+                "id": "motion.exit.left.input.top_hit"
+              },
+              {
+                "trajectory_id": "motion_cardinals",
+                "id": "motion.exit.left.forward_motion"
+              },
+              {
+                "trajectory_id": "motion_cardinals",
+                "id": "motion.exit.left.full_exit"
+              },
+              {
+                "trajectory_id": "motion_cardinals",
+                "id": "motion.discover.up.authored"
+              },
+              {
+                "trajectory_id": "motion_cardinals",
+                "id": "motion.exit.up.input.top_hit"
+              },
+              {
+                "trajectory_id": "motion_cardinals",
+                "id": "motion.exit.up.forward_motion"
+              },
+              {
+                "trajectory_id": "motion_cardinals",
+                "id": "motion.exit.up.full_exit"
+              },
+              {
+                "trajectory_id": "motion_cardinals",
+                "id": "motion.discover.down.authored"
+              },
+              {
+                "trajectory_id": "motion_cardinals",
+                "id": "motion.exit.down.input.top_hit"
+              },
+              {
+                "trajectory_id": "motion_cardinals",
+                "id": "motion.exit.down.forward_motion"
+              },
+              {
+                "trajectory_id": "motion_cardinals",
+                "id": "motion.exit.down.full_exit"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d2.blocked_interaction",
+          "title": "A blocked-arrow interaction exists and can be exercised by the player",
+          "source": {
+            "type": "dynamic_checks_all",
+            "checks": [
+              {
+                "trajectory_id": "blocked_failure",
+                "id": "blocked.discover.authored"
+              },
+              {
+                "trajectory_id": "blocked_failure",
+                "id": "blocked.click.1.input.top_hit"
+              },
+              {
+                "trajectory_id": "blocked_failure",
+                "id": "blocked.state.1.outcome"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d2.moves_mode",
+          "title": "Moves mode and a basic playable completion are present",
+          "source": {
+            "type": "dynamic_checks_all",
+            "checks": [
+              {
+                "trajectory_id": "budget_terminal",
+                "id": "budget.moves_win.click.input.top_hit"
+              },
+              {
+                "trajectory_id": "budget_terminal",
+                "id": "budget.moves_win.won.reached"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d2.hearts_mode",
+          "title": "Hearts mode plus basic successful and failed attempt content are reachable",
+          "source": {
+            "type": "dynamic_checks_all",
+            "checks": [
+              {
+                "trajectory_id": "budget_terminal",
+                "id": "budget.modes.loaded.authored"
+              },
+              {
+                "trajectory_id": "budget_terminal",
+                "id": "budget.hearts_success.click.input.top_hit"
+              },
+              {
+                "trajectory_id": "budget_terminal",
+                "id": "budget.hearts_success.won.reached"
+              },
+              {
+                "trajectory_id": "budget_terminal",
+                "id": "budget.loss.click.input.top_hit"
+              },
+              {
+                "trajectory_id": "budget_terminal",
+                "id": "budget.loss.failed_ui"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d2.terminal_content",
+          "title": "Both COMPLETED and FAILED terminal content appear in reachable runtime states",
+          "source": {
+            "type": "dynamic_checks_all",
+            "checks": [
+              {
+                "trajectory_id": "canonical_success",
+                "id": "canonical.terminal.completed_ui"
+              },
+              {
+                "trajectory_id": "budget_terminal",
+                "id": "budget.loss.failed_ui"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d2.restart_content",
+          "title": "A visible Restart action is present and starts a fresh playable run",
+          "source": {
+            "type": "dynamic_checks_all",
+            "checks": [
+              {
+                "trajectory_id": "canonical_success",
+                "id": "canonical.restart_click.input.top_hit"
+              },
+              {
+                "trajectory_id": "canonical_success",
+                "id": "canonical.restarted.reached"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d2.dependency_chain_content",
+          "title": "The key/lock dependency chain and badges are present and basically usable",
+          "source": {
+            "type": "dynamic_checks_all",
+            "checks": [
+              {
+                "trajectory_id": "dependency_chain",
+                "id": "dependency.loaded.badge_content"
+              },
+              {
+                "trajectory_id": "dependency_chain",
+                "id": "dependency.key_click.input.top_hit"
+              },
+              {
+                "trajectory_id": "dependency_chain",
+                "id": "dependency.key_exit.reached"
+              },
+              {
+                "trajectory_id": "dependency_chain",
+                "id": "dependency.lock_b_available.badges"
+              },
+              {
+                "trajectory_id": "dependency_chain",
+                "id": "dependency.lock_b_click.input.top_hit"
+              },
+              {
+                "trajectory_id": "dependency_chain",
+                "id": "dependency.lock_b_exit.reached"
+              },
+              {
+                "trajectory_id": "dependency_chain",
+                "id": "dependency.lock_c_available.state"
+              },
+              {
+                "trajectory_id": "dependency_chain",
+                "id": "dependency.lock_c_click.input.top_hit"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d2.generic_and_content",
+          "title": "A visible two-key dependency group is present and basically usable in either key order",
+          "source": {
+            "type": "dynamic_checks_all",
+            "checks": [
+              {
+                "trajectory_id": "and_dependency",
+                "id": "and.loaded.authored"
+              },
+              {
+                "trajectory_id": "and_dependency",
+                "id": "and.left.group.visible"
+              },
+              {
+                "trajectory_id": "and_dependency",
+                "id": "and.left.first_click.input.top_hit"
+              },
+              {
+                "trajectory_id": "and_dependency",
+                "id": "and.left.first_exit.reached"
+              },
+              {
+                "trajectory_id": "and_dependency",
+                "id": "and.left.second_click.input.top_hit"
+              },
+              {
+                "trajectory_id": "and_dependency",
+                "id": "and.left.after_second.available"
+              },
+              {
+                "trajectory_id": "and_dependency",
+                "id": "and.right.group.visible"
+              },
+              {
+                "trajectory_id": "and_dependency",
+                "id": "and.right.first_click.input.top_hit"
+              },
+              {
+                "trajectory_id": "and_dependency",
+                "id": "and.right.first_exit.reached"
+              },
+              {
+                "trajectory_id": "and_dependency",
+                "id": "and.right.second_click.input.top_hit"
+              },
+              {
+                "trajectory_id": "and_dependency",
+                "id": "and.right.after_second.available"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "D3",
+      "title": "Gameplay Correctness & System Behavior",
+      "maximum_score": 20.0,
+      "stage": "dynamic",
+      "checkpoints": [
+        {
+          "id": "d3.pointer_semantics",
+          "title": "Normal pointer input reaches the intended arrow once",
+          "source": {
+            "type": "milestones_all",
+            "ids": [
+              "input.boundaries",
+              "canonical.player_input"
+            ]
+          }
+        },
+        {
+          "id": "d3.motion_and_exit",
+          "title": "Movement is continuous, forward and completes only after full exit",
+          "source": {
+            "type": "milestones_all",
+            "ids": [
+              "motion.right",
+              "motion.left",
+              "motion.up",
+              "motion.down"
+            ]
+          }
+        },
+        {
+          "id": "d3.blocking_and_cost",
+          "title": "Blocked arrows remain immobile and charge exactly once",
+          "source": {
+            "type": "milestones_all",
+            "ids": [
+              "blocked.immobility",
+              "blocked.single_cost"
+            ]
+          }
+        },
+        {
+          "id": "d3.moves_priority",
+          "title": "The last legal Move wins after motion instead of losing early",
+          "source": {
+            "type": "milestone",
+            "id": "budget.last_move_win"
+          }
+        },
+        {
+          "id": "d3.hearts_and_loss",
+          "title": "Hearts success/failure costs and terminal freeze are correct",
+          "source": {
+            "type": "milestones_all",
+            "ids": [
+              "budget.authored_navigation",
+              "budget.hearts_success",
+              "budget.loss",
+              "budget.terminal_freeze"
+            ]
+          }
+        },
+        {
+          "id": "d3.dependency_timing",
+          "title": "Locks charge correctly and unlock only after prerequisite exits",
+          "source": {
+            "type": "milestones_all",
+            "ids": [
+              "dependency.locked_attempt",
+              "dependency.first_unlock",
+              "dependency.second_unlock",
+              "dependency.completion"
+            ]
+          }
+        },
+        {
+          "id": "d3.and_semantics",
+          "title": "AND dependencies remain locked after one prerequisite and work in both orders",
+          "source": {
+            "type": "milestones_all",
+            "ids": [
+              "and.left_first",
+              "and.left_complete",
+              "and.right_first",
+              "and.right_complete"
+            ]
+          }
+        },
+        {
+          "id": "d3.hint_rules",
+          "title": "Hint remains legal, free and state-aware",
+          "source": {
+            "type": "milestones_all",
+            "ids": [
+              "hint.legal_free",
+              "hint.repeat_update"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "D4",
+      "title": "End-to-End Flow & Lifecycle Integrity",
+      "maximum_score": 20.0,
+      "stage": "dynamic",
+      "checkpoints": [
+        {
+          "id": "d4.complete_success_journey",
+          "title": "The authored tutorial plays from entry through every arrow to Won",
+          "source": {
+            "type": "milestones_all",
+            "ids": [
+              "canonical.player_input",
+              "canonical.completion"
+            ]
+          }
+        },
+        {
+          "id": "d4.win_restart",
+          "title": "Restart from the successful terminal state restores a fresh run",
+          "source": {
+            "type": "milestone",
+            "id": "canonical.restart"
+          }
+        },
+        {
+          "id": "d4.failure_recovery",
+          "title": "A blocked attempt recovers and remains reusable",
+          "source": {
+            "type": "milestone",
+            "id": "blocked.repeat_integrity"
+          }
+        },
+        {
+          "id": "d4.loss_flow",
+          "title": "The loss journey reaches FAILED and freezes gameplay",
+          "source": {
+            "type": "milestones_all",
+            "ids": [
+              "budget.authored_navigation",
+              "budget.loss",
+              "budget.terminal_freeze"
+            ]
+          }
+        },
+        {
+          "id": "d4.dependency_journey",
+          "title": "The sequential and both-order dependency journeys each reach Won",
+          "source": {
+            "type": "milestones_all",
+            "ids": [
+              "dependency.completion",
+              "and.left_complete",
+              "and.right_complete"
+            ]
+          }
+        },
+        {
+          "id": "d4.restart_during_motion",
+          "title": "Restart interrupts an in-flight arrow and immediately restores the level",
+          "source": {
+            "type": "milestone",
+            "id": "restart.immediate_restore"
+          }
+        },
+        {
+          "id": "d4.restart_integrity",
+          "title": "Restart leaves no stale coroutine/listener and input stays reusable",
+          "source": {
+            "type": "milestones_all",
+            "ids": [
+              "restart.delayed_integrity",
+              "restart.reusable_input"
+            ]
+          }
+        },
+        {
+          "id": "d4.fresh_process_reopen",
+          "title": "A post-Dynamic dirty state is followed by a distinct Fresh Unity process that restores the authored tutorial",
+          "source": {
+            "type": "fresh_process_reopen"
+          }
+        }
+      ]
+    },
+    {
+      "id": "D5",
+      "title": "Interface Functionality & Player Feedback",
+      "maximum_score": 10.0,
+      "stage": "dynamic",
+      "checkpoints": [
+        {
+          "id": "d5.player_surface_integrity",
+          "title": "Required HUD fields and controls are simultaneously readable and fully inside the 1280x720 player frame",
+          "source": {
+            "type": "milestone",
+            "id": "canonical.presentation"
+          }
+        },
+        {
+          "id": "d5.visible_clickable_targets",
+          "title": "Visible arrows, Hint, Restart and Next Level receive one complete normal Mouse action through the candidate's own input route",
+          "source": {
+            "type": "milestones_all",
+            "ids": [
+              "canonical.player_input",
+              "canonical.hint",
+              "canonical.restart",
+              "budget.authored_navigation"
+            ]
+          }
+        },
+        {
+          "id": "d5.hud_terminal_sync",
+          "title": "COMPLETED/FAILED feedback matches the real terminal state",
+          "source": {
+            "type": "milestones_all",
+            "ids": [
+              "canonical.completion",
+              "budget.loss"
+            ]
+          }
+        },
+        {
+          "id": "d5.blocked_feedback",
+          "title": "Blocked feedback is target-local, visible long enough and recovers",
+          "source": {
+            "type": "milestone",
+            "id": "blocked.feedback"
+          }
+        },
+        {
+          "id": "d5.badge_feedback",
+          "title": "Key and lock badges visibly follow dependency state",
+          "source": {
+            "type": "dynamic_checks_all",
+            "checks": [
+              {
+                "trajectory_id": "dependency_chain",
+                "id": "dependency.loaded.badge_content"
+              },
+              {
+                "trajectory_id": "dependency_chain",
+                "id": "dependency.key_moving.lock_stays_locked"
+              },
+              {
+                "trajectory_id": "dependency_chain",
+                "id": "dependency.lock_b_available.badges"
+              },
+              {
+                "trajectory_id": "dependency_chain",
+                "id": "dependency.lock_b_moving.final_locked"
+              },
+              {
+                "trajectory_id": "dependency_chain",
+                "id": "dependency.lock_c_available.state"
+              }
+            ]
+          }
+        },
+        {
+          "id": "d5.hint_feedback",
+          "title": "Hint highlight is visible, bounded and updates after state changes",
+          "source": {
+            "type": "milestones_all",
+            "ids": [
+              "hint.feedback",
+              "hint.repeat_update"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "D6",
+      "title": "Visual Assembly & Presentation Fidelity",
+      "maximum_score": 10.0,
+      "stage": "visual",
+      "checkpoints": [],
+      "status": "formal_single_state_single_round_visual",
+      "state": "initial_gameplay",
+      "rounds": 1,
+      "model": "gpt-5.6-sol",
+      "requirements": [
+        "VISUAL-01"
+      ]
+    }
+  ]
+}

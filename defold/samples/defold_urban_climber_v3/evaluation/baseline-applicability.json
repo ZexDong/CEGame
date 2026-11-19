@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "game": "defold_urban_climber_v3",
+  "checklist_revision": "v2-draft",
+  "items": [
+    {
+      "id": "CB-01",
+      "applies": true,
+      "check_ids": [
+        "D1_RUNTIME_DASHBOARD_SMOKE",
+        "UC_D2_MENU_ENTRY"
+      ]
+    },
+    {
+      "id": "CB-02",
+      "applies": true,
+      "check_ids": [
+        "D1_BOB_BUILD",
+        "UC_D4_FULL_CAMPAIGN_SUCCESS",
+        "UC_D4_TIMEOUT_TERMINAL_LOCK"
+      ]
+    },
+    {
+      "id": "CB-03",
+      "applies": true,
+      "check_ids": [
+        "UC_D4_RESUME_AND_REOPEN_RESET",
+        "UC_D4_REOPEN_CLEARS_CAMPAIGN"
+      ]
+    },
+    {
+      "id": "CB-04",
+      "applies": true,
+      "check_ids": [
+        "UC_D3_ONE_STEP_REJECTION_AND_CAUSALITY",
+        "UC_D3_BUILDING1_MULTI_TRANSFER_ROUTE",
+        "UC_D3_BUILDING2_MULTI_TRANSFER_ROUTE",
+        "UC_D3_BEACON_PROXIMITY_AND_IDEMPOTENCE",
+        "UC_D3_FINAL_WIN_BOUNDARY_AND_PACING"
+      ]
+    },
+    {
+      "id": "CB-05",
+      "applies": true,
+      "check_ids": [
+        "UC_D5_GAMEPLAY_HUD",
+        "UC_D5_WARNING_AND_HIT_FEEDBACK",
+        "UC_D5_CHECKPOINT_FEEDBACK",
+        "UC_D5_CLOSURE_FEEDBACK",
+        "UC_D5_FINAL_SUCCESS_FEEDBACK",
+        "UC_D5_TIMEOUT_FEEDBACK"
+      ]
+    },
+    {
+      "id": "CB-06",
+      "applies": true,
+      "check_ids": [
+        "UC_D3_ONE_STEP_REJECTION_AND_CAUSALITY",
+        "UC_D3_BUILDING1_ONLY_UP_BLOCKED",
+        "UC_D3_BUILDING2_ONLY_UP_BLOCKED",
+        "UC_D3_LOCKED_ROOF_REJECTION",
+        "UC_D5_BEACON_REMOTE_REJECTION_FEEDBACK",
+        "UC_D5_LOCKED_ROOF_FEEDBACK"
+      ]
+    },
+    {
+      "id": "CB-07",
+      "applies": true,
+      "check_ids": [
+        "UC_D2_MENU_ENTRY",
+        "UC_D5_MENU_FEEDBACK",
+        "UC_D5_CHECKPOINT_FEEDBACK"
+      ]
+    },
+    {
+      "id": "CB-08",
+      "applies": true,
+      "check_ids": [
+        "UC_D5_MENU_FEEDBACK",
+        "UC_D5_GAMEPLAY_HUD",
+        "UC_D5_PAUSE_FEEDBACK",
+        "UC_D5_BUILDING2_HUD",
+        "UC_D5_FINAL_SUCCESS_FEEDBACK",
+        "UC_D5_TIMEOUT_FEEDBACK"
+      ]
+    },
+    {
+      "id": "CB-09",
+      "applies": true,
+      "check_ids": [
+        "UC_D3_PAUSE_FREEZES_WORLD",
+        "UC_D4_BUILDING2_FRESH_START",
+        "UC_D3_TIMEOUT_LOSS_BOUNDARY",
+        "UC_D5_GAMEPLAY_HUD"
+      ]
+    },
+    {
+      "id": "CB-10",
+      "applies": true,
+      "check_ids": [
+        "UC_D3_PAUSE_FREEZES_WORLD",
+        "UC_D5_PAUSE_FEEDBACK"
+      ]
+    },
+    {
+      "id": "CB-11",
+      "applies": true,
+      "check_ids": [
+        "UC_D2_BUILDING1_EXTRACTION",
+        "UC_D2_BUILDING2_EXTRACTION",
+        "UC_D3_HELICOPTER_OBSERVATION_BOUNDARY",
+        "UC_D4_FULL_CAMPAIGN_SUCCESS",
+        "UC_D5_FINAL_SUCCESS_FEEDBACK"
+      ]
+    },
+    {
+      "id": "CB-12",
+      "applies": true,
+      "check_ids": [
+        "UC_D3_TIMEOUT_LOSS_BOUNDARY",
+        "UC_D4_TIMEOUT_RETRY_CLEAN",
+        "UC_D5_TIMEOUT_FEEDBACK"
+      ]
+    },
+    {
+      "id": "CB-13",
+      "applies": true,
+      "check_ids": [
+        "UC_D4_BUILDING2_LOCAL_RETRY_RESET",
+        "UC_D4_SUCCESS_RETRY_BUILDING2_CLEAN",
+        "UC_D4_TIMEOUT_RETRY_CLEAN"
+      ]
+    },
+    {
+      "id": "CB-14",
+      "applies": true,
+      "check_ids": [
+        "UC_D4_CHECKPOINT_LOCK_AND_FREEZE",
+        "UC_D4_FULL_CAMPAIGN_SUCCESS",
+        "UC_D4_TIMEOUT_TERMINAL_LOCK"
+      ]
+    },
+    {
+      "id": "CB-15",
+      "applies": true,
+      "check_ids": [
+        "UC_D3_TIMEOUT_LOSS_BOUNDARY"
+      ],
+      "reason": "UC-TIMER-01 and UC-LOSE-01 explicitly define timer-driven no-input loss, so that outcome is intentional."
+    },
+    {
+      "id": "CB-16",
+      "applies": true,
+      "check_ids": [
+        "D6_VISUAL_REVIEW"
+      ],
+      "reason": "Visible debug leftovers remain part of the separate D6 visual protocol."
+    },
+    {
+      "id": "CB-17",
+      "applies": true,
+      "check_ids": [
+        "D6_VISUAL_REVIEW"
+      ],
+      "reason": "Broken or placeholder presentation remains part of the separate D6 visual protocol."
+    },
+    {
+      "id": "CB-18",
+      "applies": true,
+      "check_ids": [
+        "D1_RUNTIME_DASHBOARD_SMOKE",
+        "UC_D2_BUILDING1_WORLD_AND_DASHBOARD",
+        "UC_D3_ONE_STEP_REJECTION_AND_CAUSALITY",
+        "UC_D3_BUILDING1_THREE_VISIBLE_WARNINGS",
+        "UC_D3_BUILDING2_THREE_VISIBLE_WARNINGS",
+        "UC_D3_PAUSE_FREEZES_WORLD",
+        "UC_D3_HELICOPTER_OBSERVATION_BOUNDARY",
+        "UC_D4_LEVEL_ID_SCOPING",
+        "UC_D4_ATTEMPT1_RETRY_ID_SCOPING",
+        "UC_D4_REPEATED_RETRY_DYNAMIC_ID_SCOPING",
+        "UC_D4_SUCCESS_PATH_RETRY_ID_SCOPING",
+        "UC_D4_REOPEN_CLEARS_CAMPAIGN"
+      ]
+    }
+  ]
+}

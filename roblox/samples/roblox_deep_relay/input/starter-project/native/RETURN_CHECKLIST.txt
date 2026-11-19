@@ -1,0 +1,11 @@
+DEEP RELAY CANDIDATE RETURN CHECKLIST
+
+[ ] DeepRelayCandidate.rbxlx (if a build was produced)
+[ ] project/default.project.json
+[ ] project/src/** implementation sources
+[ ] DEVELOPMENT_TRACE.txt with actual actions and timestamps/order
+[ ] BUILD_REPORT.txt with commands, exit codes, Play observations, errors, and NOT RUN items
+[ ] optional_raw_logs/** only when useful
+
+Do not include Gold, private evaluation files, old candidates, hidden test helpers, or administrator shortcuts.
+At 3600 seconds, stop and return the files as they exist. Do not start a second development session.

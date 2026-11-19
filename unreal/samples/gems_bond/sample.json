@@ -1,0 +1,97 @@
+{
+  "schema_version": "2.0",
+  "release_status": "packaged",
+  "sample_id": "gems_bond",
+  "sample_version": "2.0.0",
+  "title": "Gem's Bond",
+  "category": "Strategy / tower defense",
+  "engine": {
+    "name": "Unreal Engine",
+    "version": "5.7.4",
+    "changelist": 51494982,
+    "origin": "Unreal-native; no source-engine port"
+  },
+  "environment": {
+    "os": "Windows x64, build 10.0.26200.0",
+    "python": "3.12.13",
+    "powershell": "7.6.9",
+    "runtime": "UnrealEditor -game",
+    "setup_commands": [
+      [
+        "python",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "evaluation/requirements.txt"
+      ]
+    ],
+    "external_dependencies": [
+      "Licensed installation of the exact Unreal Engine build, Visual Studio C++ toolchain and Windows SDK required by that build.",
+      "Interactive Windows desktop for real input and capture.",
+      "External visual review/API access as specified by the frozen D6 protocol; charges depend on provider."
+    ],
+    "credential_environment_variables": [
+      "NEWAPI_API_KEY"
+    ],
+    "private_endpoint_included": false
+  },
+  "sources": [
+    {
+      "url": "https://github.com/Empheon/ldjam50",
+      "revision": "5f76c859a18210216a107f3a529f5450c1f8bd5a",
+      "revision_status": "fixed",
+      "license": "MIT",
+      "adaptation_scope": "Existing answer-free starter, bounded task assets, public requirements and native evaluator; complete upstream, Gold and submitted games excluded."
+    }
+  ],
+  "input": {
+    "path": "input",
+    "prompt": "input/INITIAL_AGENT_PROMPT.md",
+    "design": "input/GDD.md",
+    "tools": "input/tools/TOOL_GUIDE.md",
+    "assets": "input/assets/ASSET_CATALOG.json",
+    "starter_project": "input/starter-project",
+    "contracts": "input/contracts",
+    "self_check": "input/self-check/check_package.py"
+  },
+  "submission": {
+    "type": "complete_project",
+    "accepted_paths": [
+      "Returned input directory",
+      "Unreal project directory",
+      "Unreal .uproject file"
+    ]
+  },
+  "evaluation": {
+    "version": "2.0.0",
+    "native_game": "GemsBond",
+    "command": [
+      "python",
+      "evaluation/evaluate.py",
+      "--project",
+      "{project}",
+      "--output",
+      "{output}",
+      "--engine",
+      "{engine}"
+    ],
+    "rules": "evaluation/rules.json",
+    "coverage": "evaluation/coverage.json",
+    "result_schema": "evaluation/score.schema.json",
+    "result_file": "score.json",
+    "max_score": 100,
+    "native_layout": "src/native",
+    "native_catalog": "checks.json",
+    "checks": 72,
+    "gdd_requirement_rows": 53,
+    "gdd_sub_obligations": 399,
+    "entry": "evaluation/evaluate.py",
+    "result_format_version": "2.1"
+  },
+  "compatibility": {
+    "input_revision": "Template layout v2; exact frozen input bytes can be reconstructed using evaluation/src/input-layout.json for existing scoring bindings.",
+    "public_session": "Read-only observation interface.",
+    "d6": "Use the task-specific fixed states and round aggregation in evaluation/d6."
+  }
+}

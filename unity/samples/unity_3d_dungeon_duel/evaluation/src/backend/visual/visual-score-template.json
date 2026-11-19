@@ -1,0 +1,142 @@
+{
+  "schema_version": 2,
+  "benchmark_id": "unity.dungeon_duel_3d.v2",
+  "prompt_sha256": "5768572dde98f6568c7720ebd2022dd04f53e83711f45044434e1b17731dfb3b",
+  "image_bindings": [
+    {
+      "id": "initial_play",
+      "reference_sha256": "5e3cb28cdc17caa5c45675730a3733fd53643ed6d8f80296f6c69450ae79c92f",
+      "candidate_sha256": "<sha256 of captured candidate PNG>"
+    },
+    {
+      "id": "combat",
+      "reference_sha256": "8150d84ae9f5c032abd73d292d5adf3e1769b6349c465d8c754efa8e0e8b5562",
+      "candidate_sha256": "<sha256 of captured candidate PNG>"
+    },
+    {
+      "id": "terminal",
+      "reference_sha256": "da0dd0583c67b4f5298354e80278e9b212f5852b59fac21fbd0f19c475cdd74a",
+      "candidate_sha256": "<sha256 of captured candidate PNG>"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "model_id": "<same exact model ID for all rounds>",
+      "raw_response_file": "raw/round-1.txt",
+      "raw_response_sha256": "<sha256 of exact raw response bytes>",
+      "states": [
+        {
+          "id": "initial_play",
+          "scene_assembly": null,
+          "composition_layout": null,
+          "scale_layering_clarity": null,
+          "style_color_cohesion": null,
+          "overall_finish": null,
+          "total": null,
+          "reason": "<at most two sentences>"
+        },
+        {
+          "id": "combat",
+          "scene_assembly": null,
+          "composition_layout": null,
+          "scale_layering_clarity": null,
+          "style_color_cohesion": null,
+          "overall_finish": null,
+          "total": null,
+          "reason": "<at most two sentences>"
+        },
+        {
+          "id": "terminal",
+          "scene_assembly": null,
+          "composition_layout": null,
+          "scale_layering_clarity": null,
+          "style_color_cohesion": null,
+          "overall_finish": null,
+          "total": null,
+          "reason": "<at most two sentences>"
+        }
+      ],
+      "average": null
+    },
+    {
+      "round": 2,
+      "model_id": "<same exact model ID for all rounds>",
+      "raw_response_file": "raw/round-2.txt",
+      "raw_response_sha256": "<sha256 of exact raw response bytes>",
+      "states": [
+        {
+          "id": "initial_play",
+          "scene_assembly": null,
+          "composition_layout": null,
+          "scale_layering_clarity": null,
+          "style_color_cohesion": null,
+          "overall_finish": null,
+          "total": null,
+          "reason": "<at most two sentences>"
+        },
+        {
+          "id": "combat",
+          "scene_assembly": null,
+          "composition_layout": null,
+          "scale_layering_clarity": null,
+          "style_color_cohesion": null,
+          "overall_finish": null,
+          "total": null,
+          "reason": "<at most two sentences>"
+        },
+        {
+          "id": "terminal",
+          "scene_assembly": null,
+          "composition_layout": null,
+          "scale_layering_clarity": null,
+          "style_color_cohesion": null,
+          "overall_finish": null,
+          "total": null,
+          "reason": "<at most two sentences>"
+        }
+      ],
+      "average": null
+    },
+    {
+      "round": 3,
+      "model_id": "<same exact model ID for all rounds>",
+      "raw_response_file": "raw/round-3.txt",
+      "raw_response_sha256": "<sha256 of exact raw response bytes>",
+      "states": [
+        {
+          "id": "initial_play",
+          "scene_assembly": null,
+          "composition_layout": null,
+          "scale_layering_clarity": null,
+          "style_color_cohesion": null,
+          "overall_finish": null,
+          "total": null,
+          "reason": "<at most two sentences>"
+        },
+        {
+          "id": "combat",
+          "scene_assembly": null,
+          "composition_layout": null,
+          "scale_layering_clarity": null,
+          "style_color_cohesion": null,
+          "overall_finish": null,
+          "total": null,
+          "reason": "<at most two sentences>"
+        },
+        {
+          "id": "terminal",
+          "scene_assembly": null,
+          "composition_layout": null,
+          "scale_layering_clarity": null,
+          "style_color_cohesion": null,
+          "overall_finish": null,
+          "total": null,
+          "reason": "<at most two sentences>"
+        }
+      ],
+      "average": null
+    }
+  ],
+  "final_score": null
+}

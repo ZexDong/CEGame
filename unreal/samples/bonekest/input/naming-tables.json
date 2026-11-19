@@ -1,0 +1,184 @@
+{
+  "authority": "GDD.md Section 6; semantic mapping only",
+  "phases": [
+    "not_ready",
+    "menu",
+    "exploring",
+    "transition",
+    "recovering",
+    "paused",
+    "won",
+    "lost"
+  ],
+  "slots": {
+    "lives": {
+      "type": "integer",
+      "unit": "count",
+      "meaning": "Remaining lives; nonnegative integer; no upper cap of five."
+    },
+    "scrolls": {
+      "type": "integer",
+      "unit": "count",
+      "meaning": "Available reveal casts; nonnegative integer; no upper cap of five."
+    },
+    "coins": {
+      "type": "integer",
+      "unit": "count",
+      "meaning": "Coin remainder after exchanges; 0..49 in settled play."
+    },
+    "keys_owned": {
+      "type": "integer",
+      "unit": "count",
+      "meaning": "Number of distinct owned colours, 0..3."
+    },
+    "red_key": {
+      "type": "integer",
+      "unit": "count",
+      "meaning": "Red key ownership: 0 or 1."
+    },
+    "green_key": {
+      "type": "integer",
+      "unit": "count",
+      "meaning": "Green key ownership: 0 or 1."
+    },
+    "blue_key": {
+      "type": "integer",
+      "unit": "count",
+      "meaning": "Blue key ownership: 0 or 1."
+    },
+    "room_x": {
+      "type": "integer",
+      "unit": "identifier",
+      "meaning": "Current chamber x coordinate, 1..maze_size during play; 0 outside a run."
+    },
+    "room_y": {
+      "type": "integer",
+      "unit": "identifier",
+      "meaning": "Current chamber y coordinate, 1..maze_size during play; 0 outside a run."
+    },
+    "maze_size": {
+      "type": "integer",
+      "unit": "count",
+      "meaning": "6, 10 or 15 during a run; 0 outside a run."
+    },
+    "room_changes": {
+      "type": "integer",
+      "unit": "count",
+      "meaning": "Completed passage crossings this round, including encounter-producing crossings; recovery excluded."
+    },
+    "monster_x": {
+      "type": "integer",
+      "unit": "identifier",
+      "meaning": "True monster chamber x; observation only, not a permanent HUD reveal."
+    },
+    "monster_y": {
+      "type": "integer",
+      "unit": "identifier",
+      "meaning": "True monster chamber y; observation only, not a permanent HUD reveal."
+    },
+    "reveal_active": {
+      "type": "integer",
+      "unit": "count",
+      "meaning": "Whether exact sampled monster coordinates are currently shown: 0 or 1."
+    },
+    "danger_nearby": {
+      "type": "integer",
+      "unit": "count",
+      "meaning": "Whether the monster is one maze connection away in the settled state: 0 or 1."
+    },
+    "round_seed": {
+      "type": "integer",
+      "unit": "identifier",
+      "meaning": "Unsigned 32-bit seed of the active round; zero outside a round. Menu text belongs to the seed_input target."
+    }
+  },
+  "entity_states": {
+    "player": [
+      "idle",
+      "moving",
+      "casting",
+      "transitioning",
+      "hit",
+      "dead",
+      "escaped"
+    ],
+    "monster": [
+      "hidden",
+      "manifesting"
+    ],
+    "room": [
+      "start",
+      "ordinary",
+      "red_key",
+      "green_key",
+      "blue_key",
+      "exit"
+    ],
+    "gate": [
+      "locked",
+      "closed",
+      "opening",
+      "open"
+    ],
+    "pickup": [
+      "available",
+      "consumed"
+    ],
+    "exit": [
+      "locked",
+      "ready",
+      "completed"
+    ],
+    "effect": [
+      "active"
+    ]
+  },
+  "target_kinds": [
+    "easy",
+    "medium",
+    "hard",
+    "exit_app",
+    "seed_input",
+    "resume",
+    "restart",
+    "main_menu",
+    "gate",
+    "passage",
+    "final_portal"
+  ],
+  "coordinates": {
+    "room_cell": "[x,y], one-based public chamber coordinates; not world distance",
+    "position": "[x,y,z] in engine world units, optional; no prescribed world origin or internal actor positions",
+    "rect": "[left,top,width,height] normalized to the actual game-client image, excluding borders",
+    "local_position": "[right,forward] normalized to 0..1 across the current chamber floor; optional movement aid"
+  },
+  "controls": {
+    "move_up": "W",
+    "move_left": "A",
+    "move_down": "S",
+    "move_right": "D",
+    "cast": "Q",
+    "interact": "E",
+    "restart": "R",
+    "pause": "Escape",
+    "menu_controls": "left mouse click"
+  },
+  "movement_template": "Continuous view-relative cardinal keys; observe target rectangle while moving. No fixed press count or world coordinate is prescribed.",
+  "seed": {
+    "argument": "-GameSeed=<uint32>",
+    "default": 48,
+    "menu_input": true,
+    "minimum": 0,
+    "maximum": 4294967295,
+    "syntax": "Unsigned decimal integer; outer whitespace and leading zeros accepted.",
+    "invalid_menu": "Show range error and do not start.",
+    "invalid_launch": "Show menu warning and use 48.",
+    "precedence": "Last launch occurrence initializes menu; a valid menu edit overrides it for the next run."
+  },
+  "requirement_groups": {
+    "maze": "MAZE-01 through MAZE-05",
+    "monster": "MONSTER-01 through MONSTER-06",
+    "resources": "ENTRY-02, KEY-01, PICKUP-02 through PICKUP-04, ECON-01, ECON-02",
+    "transport": "OBSERVATION-01"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "task_id": "cervantes_tactics",
+  "coordinate_space": "chapter-one level grid cells; x right, y down",
+  "level_width_cells": 12,
+  "level_height_cells": 9,
+  "slots": ["crystal_hp", "turn", "active_unit_index", "unit_hp", "unit_max_hp", "unit_attack", "unit_xp", "unit_level", "enemy_count"],
+  "entities": [
+    {"kind":"family_unit","states":["ready","selected","acted","down"]},
+    {"kind":"family_unit_card","states":["ready","selected","acted","down"]},
+    {"kind":"enemy_unit","states":["living","selected","down"]},
+    {"kind":"legal_cell","states":["open","occupied"]},
+    {"kind":"illegal_cell","states":["blocked","occupied","outside"]},
+    {"kind":"move_range_cell","states":["highlighted"]},
+    {"kind":"attack_range_cell","states":["highlighted"]}
+  ],
+  "targets": [
+    {"kind":"new_game_button"}, {"kind":"load_game_button"}, {"kind":"continue_button"},
+    {"kind":"save_slot_empty"}, {"kind":"save_slot_existing"}, {"kind":"chapter_one_button"},
+    {"kind":"chapter_start_button"}, {"kind":"family_unit"}, {"kind":"family_unit_card"}, {"kind":"enemy_unit"},
+    {"kind":"legal_cell"}, {"kind":"illegal_cell"}, {"kind":"move_action"},
+    {"kind":"attack_action"}, {"kind":"defend_action"}, {"kind":"wait_action"},
+    {"kind":"magic_action"}, {"kind":"heal_action"}, {"kind":"limit_action"},
+    {"kind":"dialogue_continue_button"},
+    {"kind":"confirm_action_button"}, {"kind":"end_turn_button"}, {"kind":"confirmation_button"}, {"kind":"retry_button"},
+    {"kind":"main_menu_button"}, {"kind":"options_button"}
+  ],
+  "controls": {"movement_template":"clicking visible grid cells", "keys":{"confirm":"Enter","cancel":"Escape","pause":"Escape"}}
+}

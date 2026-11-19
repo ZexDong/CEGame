@@ -1,0 +1,18 @@
+{
+  "schema_version": "2.0.0",
+  "build_timeout_seconds": 600,
+  "start_rpc_timeout_seconds": 85,
+  "stop_rpc_timeout_seconds": 20,
+  "small_rpc_timeout_seconds": 2,
+  "capture_rpc_timeout_seconds": 10,
+  "max_captures": 140,
+  "max_small_rpcs": 1300,
+  "local_wait_budget_seconds": 1800,
+  "preparation_budget_seconds": 120,
+  "cleanup_timeout_seconds": 15,
+  "declared_serial_worst_case_seconds": 6445,
+  "watchdog_seconds": 7200,
+  "headroom_seconds": 755,
+  "watchdog_failure": "Infrastructure invalid; terminate only this run process trees and refuse partial scores.",
+  "d6": "Separate stage: 9 responses, at most 180 seconds each."
+}

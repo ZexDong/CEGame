@@ -1,0 +1,1 @@
+Implement MoonlitGreenhouse as a deterministic single-player Roblox experience. Read GDD.md as the game-specific source of truth.

@@ -1,0 +1,212 @@
+{
+  "schema_version": 3,
+  "evaluator_revision": "2026.09.18-driftfolk-stormbound-session-v2.0",
+  "game": "unity.driftfolk_stormbound.v2",
+  "benchmark_id": "unity.driftfolk_stormbound.v2",
+  "gdd_source": "input-v2/GDD.md",
+  "session_model_source": "input-v2/SESSION_MODEL.json",
+  "script": "checkpoint-script.json",
+  "script_status": "declarative_obligations_implemented_by_session_tests",
+  "script_executed_by_runner": false,
+  "baseline_applicability": "baseline-applicability.json",
+  "routing": "rules.json",
+  "rows": [
+    {
+      "source": "gdd:AUDIO-01",
+      "check_ids": [
+        "D5_AUDIO"
+      ],
+      "trajectory": "T23_Audio",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BUILD-01",
+      "check_ids": [
+        "D2_BUILD",
+        "D3_BUILD_GUARDS",
+        "D4_ADJACENT"
+      ],
+      "trajectory": "T08_BuildAndGuards,T18_Adjacent",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BUILD-02",
+      "check_ids": [
+        "D3_BUILD_CANCEL"
+      ],
+      "trajectory": "T09_BuildCancel",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:CHRONICLE-01",
+      "check_ids": [
+        "D5_CHRONICLE"
+      ],
+      "trajectory": "T22_Chronicle",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:END-01",
+      "check_ids": [
+        "D2_ENDINGS",
+        "D4_TERMINAL_LIFECYCLE"
+      ],
+      "trajectory": "T17_Endings",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:ESCAPE-01",
+      "check_ids": [
+        "D2_ESCAPE",
+        "D3_STAGE_PAYMENT"
+      ],
+      "trajectory": "T13_EscapePayment",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:ESCAPE-02",
+      "check_ids": [
+        "D3_NO_DOUBLE_WORK",
+        "D3_STAGE_CANCEL"
+      ],
+      "trajectory": "T13_EscapePayment,T14_EscapeCancel",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:EVENT-01",
+      "check_ids": [
+        "D2_EVENT",
+        "D3_EVENT_ONCE"
+      ],
+      "trajectory": "T12_Event",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:FERRY-01",
+      "check_ids": [
+        "D2_FERRY",
+        "D3_TRANSPORT_ATOMIC",
+        "D3_UNIQUENESS"
+      ],
+      "trajectory": "T10_TransportAtomic",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:FERRY-02",
+      "check_ids": [
+        "D2_ARRIVAL"
+      ],
+      "trajectory": "T11_Arrival",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:FLOW-01",
+      "check_ids": [
+        "D1_SCENE",
+        "D1_ACTORS",
+        "D2_START"
+      ],
+      "trajectory": "STATIC01_SceneAndCamera,T01A_PublicEntry,T01B_PublicState,T01C_ActualActors,T02_NormalMenu",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:HEALTH-01",
+      "check_ids": [
+        "D2_NIGHT",
+        "D2_MEDIC"
+      ],
+      "trajectory": "T05_NightHealth,T06_Medic",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:PRESENT-01",
+      "check_ids": [
+        "D1_CAMERA",
+        "D5_HUD",
+        "D5_FEEDBACK"
+      ],
+      "trajectory": "STATIC01_SceneAndCamera,T21_HUD",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:REOPEN-01",
+      "check_ids": [
+        "D4_REOPEN"
+      ],
+      "trajectory": "FRESH01_ReopenAndExplicitLoad",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:RESTART-01",
+      "check_ids": [
+        "D4_RESTART"
+      ],
+      "trajectory": "T20_Restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SAVE-01",
+      "check_ids": [
+        "D1_SESSION_ENTRY",
+        "D1_SESSION_STATE"
+      ],
+      "trajectory": "T01A_PublicEntry,T01B_PublicState,T01C_ActualActors",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SAVE-02",
+      "check_ids": [
+        "D2_SAVE_LOAD",
+        "D3_DETERMINISM",
+        "D4_MODAL_CONTINUITY"
+      ],
+      "trajectory": "T16_SaveRestore,T19_ModalContinuity",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SELECT-01",
+      "check_ids": [
+        "D5_CONTROLS"
+      ],
+      "trajectory": "T02_NormalMenu",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:TIME-01",
+      "check_ids": [
+        "D2_SPEED"
+      ],
+      "trajectory": "T15_PauseSpeed",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:TIME-02",
+      "check_ids": [
+        "D2_PAUSE"
+      ],
+      "trajectory": "T15_PauseSpeed",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:WEATHER-01",
+      "check_ids": [
+        "D2_WEATHER"
+      ],
+      "trajectory": "T07_WeatherBoat",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:WORK-01",
+      "check_ids": [
+        "D2_PRODUCTION",
+        "D3_LOCALITY",
+        "D2_FATIGUE"
+      ],
+      "trajectory": "T03_ProductionLocality,T04_FatigueRest",
+      "disposition": "scored"
+    }
+  ],
+  "unmapped_gdd_requirements": [],
+  "runtime_gaps": [],
+  "note": "Full obligation details are in checkpoint-script and actual tests; independent setup/normal input, no implementation adapters."
+}

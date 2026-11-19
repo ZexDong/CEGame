@@ -1,0 +1,65 @@
+{
+  "schema_version": "2.0",
+  "release_status": "packaged",
+  "sample_id": "roblox_skyline_switchyard",
+  "sample_version": "1.0.0",
+  "title": "Skyline Switchyard",
+  "engine": {
+    "name": "Roblox Studio",
+    "version": "0.742.0.7421053"
+  },
+  "environment": {
+    "os": "Windows desktop",
+    "runtime": "CPython 3.14.2",
+    "rojo": "7.7.0",
+    "luau": "0.734",
+    "Pillow": "11.3.0",
+    "credential_environment_variables": []
+  },
+  "sources": [
+    {
+      "kind": "Existing local benchmark public input/evaluator",
+      "label": "Skyline Switchyard"
+    }
+  ],
+  "input": {
+    "path": "input/",
+    "prompt": "input/INITIAL_AGENT_PROMPT.md",
+    "design": "input/GDD.md",
+    "content": "input/CONTENT.json",
+    "tools": "input/tools/",
+    "assets": "input/assets/",
+    "starter_project": "input/starter-project/",
+    "contracts": "input/contracts/",
+    "self_check": "input/self-check/"
+  },
+  "submission": {
+    "type": "complete_project",
+    "native_place": "SkylineSwitchyard.rbxlx"
+  },
+  "evaluation": {
+    "version": "original-native-template-v2",
+    "command": [
+      "python",
+      "evaluation/evaluate.py",
+      "--project",
+      "{project}",
+      "--output",
+      "{output}"
+    ],
+    "rules": "evaluation/rules.json",
+    "coverage": "evaluation/coverage.json",
+    "result_schema": "evaluation/score.schema.json",
+    "result_file": "score.json",
+    "max_score": 100,
+    "D6_protocol": "evaluation/d6/protocol.json",
+    "native_family": "skyline",
+    "D6_reviewer_model": "gpt5.6sol",
+    "D6_parameter_mode": "platform_defaults",
+    "visual_binding": "evaluation/d6/EVIDENCE_FORMAT.md",
+    "entry": "evaluation/evaluate.py",
+    "result_format_version": "2.1"
+  },
+  "display_order": 10,
+  "collection_id": "roblox_ten_games"
+}

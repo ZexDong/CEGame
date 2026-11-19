@@ -1,0 +1,212 @@
+{
+  "assets": [
+    {
+      "path": "Assets/TaskAssets/grass.png",
+      "role": "grass",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT"
+    },
+    {
+      "path": "Assets/TaskAssets/cactus.png",
+      "role": "cactus",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT"
+    },
+    {
+      "path": "Assets/TaskAssets/gnome.png",
+      "role": "gnome",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT"
+    },
+    {
+      "path": "Assets/TaskAssets/gravestone.png",
+      "role": "gravestone",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT"
+    },
+    {
+      "path": "Assets/TaskAssets/trophy.png",
+      "role": "trophy",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT"
+    },
+    {
+      "path": "Assets/TaskAssets/lizard.png",
+      "role": "lizard",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT"
+    },
+    {
+      "path": "Assets/TaskAssets/fox.png",
+      "role": "fox",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT"
+    },
+    {
+      "path": "Assets/TaskAssets/projectile.png",
+      "role": "projectile",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT"
+    },
+    {
+      "path": "Assets/TaskAssets/star.png",
+      "role": "star",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT"
+    },
+    {
+      "path": "Assets/Resources/UIRenderDependencies.prefab",
+      "role": "Inactive script-free uGUI/built-in font rendering dependency, not gameplay or scene composition",
+      "license": "Unity built-in engine resource dependency; no external font copied",
+      "dependencies": [
+        "UnityEngine.UI.Text",
+        "Unity built-in LegacyRuntime font"
+      ],
+      "sha256": "f77284bd8bcdd9edb9b7d63b186c465d369f06d94f85a8b50673cc19cd6970ee"
+    }
+  ]
+}

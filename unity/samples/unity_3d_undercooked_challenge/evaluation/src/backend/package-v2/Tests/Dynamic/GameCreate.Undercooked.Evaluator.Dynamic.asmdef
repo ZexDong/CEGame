@@ -1,0 +1,17 @@
+{
+  "autoReferenced": false,
+  "references": [
+    "GameCreate.Undercooked.Evaluator.Core",
+    "GameCreate.Session",
+    "GameCreate.Kitchen.SessionContract",
+    "GameCreate.Evaluation.Session",
+    "Unity.InputSystem",
+    "UnityEngine.UI",
+    "Unity.TextMeshPro"
+  ],
+  "includePlatforms": [],
+  "name": "GameCreate.Undercooked.Evaluator.Dynamic",
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

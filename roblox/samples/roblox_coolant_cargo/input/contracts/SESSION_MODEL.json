@@ -1,0 +1,66 @@
+{
+  "contract_version": "coolant-cargo-v1",
+  "workspace_attributes": {
+    "CCP_ContractVersion": {"type": "string", "required_value": "coolant-cargo-v1"},
+    "CCP_Ready": {"type": "boolean", "required_value": true}
+  },
+  "tags": {
+    "CCP_CentralSpawn": {"count": 1, "class": "BasePart"},
+    "CCP_Valve": {"count": 3, "class": "BasePart", "id_attribute": "CCP_Id", "ids": ["Intake", "Bypass", "Outlet"]},
+    "CCP_EnergyRack": {"count": 1, "class": "BasePart"},
+    "CCP_EnergyCell": {"count": 1, "class": "BasePart"},
+    "CCP_ChargeDock": {"count": 1, "class": "BasePart"},
+    "CCP_ChargeConsole": {"count": 1, "class": "BasePart"},
+    "CCP_CoreSocket": {"count": 1, "class": "BasePart"},
+    "CCP_ReactorConsole": {"count": 1, "class": "BasePart"},
+    "CCP_SafetyCheckpoint": {"count": 1, "class": "BasePart", "id_attribute": "CCP_Id", "ids": ["Safety"]},
+    "CCP_Hazard": {"count": 1, "class": "BasePart", "id_attribute": "CCP_Id", "ids": ["Safety"]},
+    "CCP_OuterDoor": {"count": 1, "class": "BasePart"},
+    "CCP_InnerDoor": {"count": 1, "class": "BasePart"},
+    "CCP_AirlockZone": {"count": 1, "class": "BasePart"},
+    "CCP_DeconConsole": {"count": 1, "class": "BasePart"},
+    "CCP_EvacuationZone": {"count": 1, "class": "BasePart"}
+  },
+  "valve_order": ["Intake", "Bypass", "Outlet"],
+  "enums": {
+    "cell_state": ["Rack", "Carried", "Docked", "Charging", "Installed"],
+    "airlock_stage": ["Locked", "OuterOpen", "Occupied", "Decontaminating", "InnerOpen"],
+    "checkpoint": ["Central", "Safety"]
+  },
+  "player_attributes": {
+    "CCP_RunId": "number", "CCP_CoolantStep": "number", "CCP_NextValve": "string",
+    "CCP_IntakeOpen": "boolean", "CCP_BypassOpen": "boolean", "CCP_OutletOpen": "boolean",
+    "CCP_CoolantReady": "boolean", "CCP_CellState": "string", "CCP_CellCharged": "boolean",
+    "CCP_ChargeProgress": "number", "CCP_PowerReady": "boolean", "CCP_ReactorStable": "boolean",
+    "CCP_AirlockStage": "string", "CCP_Checkpoint": "string", "CCP_DeathCount": "number",
+    "CCP_Completed": "boolean", "CCP_RunStart": "number", "CCP_FinalTime": "number",
+    "CCP_EventSerial": "number", "CCP_LastEvent": "string", "CCP_FeedbackText": "string"
+  },
+  "events": [
+    "RunStarted", "ValveWrong.Expected.Intake", "ValveWrong.Expected.Bypass", "ValveWrong.Expected.Outlet",
+    "ValveAlreadyOpen.Intake", "ValveAlreadyOpen.Bypass", "ValveAlreadyOpen.Outlet",
+    "ValveOpened.Intake", "ValveOpened.Bypass", "ValveOpened.Outlet",
+    "CellPickedUp.Rack", "CellDocked", "CellPlaceRejected.NotCarrying",
+    "CellInstallRejected.Uncharged", "ChargeStarted", "CellPickupRejected.Charging",
+    "ChargeCompleted", "CellPickedUp.Dock", "CellInstalled",
+    "ReactorLocked.Coolant", "ReactorLocked.Power", "ReactorLocked.Both", "ReactorStabilized",
+    "AirlockOuterOpened", "AirlockOccupied", "DeconRejected.NotInside", "DeconStarted", "DeconCompleted",
+    "CheckpointActivated.Safety", "HazardTriggered.Safety", "Respawned.Safety", "CellRecovered.Rack", "AirlockRecovered.OuterOpen",
+    "Completed", "Restarted"
+  ],
+  "geometry": {
+    "max_horizontal_distance_from_central": 145, "max_target_height_delta": 2,
+    "minimum_walk_width": 12, "minimum_headroom": 8, "minimum_valve_separation": 16,
+    "minimum_interaction_footprint": [7, 7], "checkpoint_hazard_distance_range": [12, 35],
+    "minimum_hazard_footprint": [8, 8], "minimum_airlock_safe_area": [14, 14],
+    "minimum_door_separation": 16, "respawn_radius_from_checkpoint": 16, "central_restart_radius": 24,
+    "carried_cell_radius": 8, "placed_cell_radius": 8
+  },
+  "prompt": {"key": "E", "activation_distance_range": [6, 14], "maximum_hold_duration": 0.5},
+  "timing": {
+    "ready_timeout_seconds": 10, "charge_duration_range_seconds": [3, 6],
+    "decon_duration_range_seconds": [3, 6], "hazard_death_timeout_seconds": 1,
+    "door_transition_timeout_seconds": 2, "restart_timeout_seconds": 2,
+    "minimum_feedback_visible_seconds": 1.5
+  }
+}

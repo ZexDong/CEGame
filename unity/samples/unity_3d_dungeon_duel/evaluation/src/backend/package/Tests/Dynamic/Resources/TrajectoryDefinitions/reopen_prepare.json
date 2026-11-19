@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "id": "reopen_prepare",
+  "title": "Leave ordinary movement, cooldown, and enemy-death progress dirty before the Dynamic Unity process closes",
+  "steps": [
+    {
+      "step_id": "setup",
+      "operation": "load_clean_canonical_scene",
+      "target": "CanonicalSuccess",
+      "check_ids": [
+        "setup.scene",
+        "setup.submission_probe",
+        "setup.submission_probe.version",
+        "setup.semantic_discovery",
+        "setup.clean_start",
+        "setup.world_target.MoveTargetA",
+        "setup.world_target.MoveTargetB",
+        "setup.world_target.DashTarget",
+        "setup.world_target.separation"
+      ]
+    },
+    {
+      "step_id": "initial",
+      "operation": "observe",
+      "target": "clean FLOW-01 before mutation",
+      "check_ids": [
+        "reopen.prepare.initial_clean"
+      ]
+    },
+    {
+      "step_id": "dash_pointer",
+      "operation": "virtual_mouse_move",
+      "target": "DashTarget",
+      "check_ids": [
+        "reopen.prepare.dash.pointer.route"
+      ]
+    },
+    {
+      "step_id": "dash",
+      "operation": "virtual_keyboard_2",
+      "target": "DashTarget",
+      "check_ids": [
+        "reopen.prepare.dash.input.route",
+        "reopen.prepare.dash.dirty"
+      ]
+    },
+    {
+      "step_id": "imp",
+      "operation": "virtual_mouse_right",
+      "target": "ImpA",
+      "check_ids": [
+        "reopen.prepare.imp.input.route",
+        "reopen.prepare.imp.dead"
+      ]
+    },
+    {
+      "step_id": "dirty",
+      "operation": "observe_without_restart",
+      "target": "dirty encounter at process close",
+      "check_ids": [
+        "reopen.prepare.dirty_state",
+        "reopen.prepare.no_restart"
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,117 @@
+{
+  "sample_id": "roblox_tidal_lock",
+  "document_type": "Original GDD and evaluator source index",
+  "new_evaluation_requirement": false,
+  "requirements": [
+    {
+      "requirement_id": "TD-GDD-1",
+      "obligation": "Tidal Lock Dispatch — Game Design Document",
+      "source_line": 1,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "TD-GDD-2",
+      "obligation": "1. Player experience",
+      "source_line": 10,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "TD-GDD-3",
+      "obligation": "2. Controls",
+      "source_line": 16,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "TD-GDD-4",
+      "obligation": "3. World states",
+      "source_line": 26,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "TD-GDD-5",
+      "obligation": "4. Complete success flow",
+      "source_line": 37,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "TD-GDD-6",
+      "obligation": "5. Interlocks and rejection rules",
+      "source_line": 49,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "TD-GDD-7",
+      "obligation": "REQ-TL-01 — Pump station",
+      "source_line": 51,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "TD-GDD-8",
+      "obligation": "REQ-TL-02 — Water levels",
+      "source_line": 57,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "TD-GDD-9",
+      "obligation": "REQ-TL-03 — Gates",
+      "source_line": 65,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "TD-GDD-10",
+      "obligation": "REQ-TL-04 — Barge",
+      "source_line": 73,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "TD-GDD-11",
+      "obligation": "REQ-TL-05 — Docking",
+      "source_line": 82,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "TD-GDD-12",
+      "obligation": "6. Death, checkpoints and restart",
+      "source_line": 91,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "TD-GDD-13",
+      "obligation": "REQ-TL-06 — Ordinary death",
+      "source_line": 93,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "TD-GDD-14",
+      "obligation": "REQ-TL-07 — Clean `R` restart",
+      "source_line": 99,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "TD-GDD-15",
+      "obligation": "7. HUD and feedback",
+      "source_line": 105,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "TD-GDD-16",
+      "obligation": "8. Layout and accessibility",
+      "source_line": 111,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "TD-GDD-17",
+      "obligation": "9. Public semantic contract",
+      "source_line": 124,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "TD-GDD-18",
+      "obligation": "10. Equivalent implementations and invalid shortcuts",
+      "source_line": 134,
+      "native_evaluator_sources": "src/original/"
+    }
+  ],
+  "original_coverage_files": [],
+  "existing_evaluators_preserved": true
+}

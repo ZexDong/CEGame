@@ -1,0 +1,13 @@
+{
+  "name": "com.omnigame.benchmark.dungeon-duel.trajectory-evaluator",
+  "version": "2.0.0",
+  "displayName": "OmniGame Dungeon Duel Trajectory Evaluator",
+  "description": "Private startup, rendering, and engine-native input trajectory evaluation for the Dungeon Duel 3D demo.",
+  "unity": "6000.0",
+  "dependencies": {
+    "com.omnigame.benchmark.dungeon-duel.contracts": "2.0.0",
+    "com.unity.ai.navigation": "2.0.13",
+    "com.unity.inputsystem": "1.19.0",
+    "com.unity.test-framework": "1.6.0"
+  }
+}

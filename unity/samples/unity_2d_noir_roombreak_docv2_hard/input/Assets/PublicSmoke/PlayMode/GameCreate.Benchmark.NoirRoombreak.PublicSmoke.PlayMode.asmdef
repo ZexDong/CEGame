@@ -1,0 +1,10 @@
+{
+  "name": "GameCreate.Benchmark.NoirRoombreak.PublicSmoke.PlayMode",
+  "rootNamespace": "GameCreate.Benchmark.NoirRoombreak.PublicSmoke.PlayMode",
+  "references": [],
+  "includePlatforms": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": true
+}

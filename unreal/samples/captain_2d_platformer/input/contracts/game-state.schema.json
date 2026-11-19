@@ -1,0 +1,596 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "contracts/game-state.schema.json",
+  "title": "Captain's Key Run Read-Only Game State",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "process_token",
+    "process_id",
+    "snapshot_id",
+    "round_id",
+    "round_index",
+    "restart_count",
+    "monotonic_ms",
+    "bridge_ready",
+    "provider_ready",
+    "game_state"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2.0.0"
+    },
+    "process_token": {
+      "$ref": "#/$defs/stable_id"
+    },
+    "process_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "snapshot_id": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "round_id": {
+      "$ref": "#/$defs/stable_id"
+    },
+    "round_index": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "restart_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "monotonic_ms": {
+      "type": "number",
+      "minimum": 0
+    },
+    "bridge_ready": {
+      "const": true
+    },
+    "provider_ready": {
+      "type": "boolean"
+    },
+    "game_state": {
+      "oneOf": [
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/game_state"
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "provider_ready": {
+            "const": true
+          }
+        },
+        "required": [
+          "provider_ready"
+        ]
+      },
+      "then": {
+        "properties": {
+          "game_state": {
+            "$ref": "#/$defs/game_state"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "game_state": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "stable_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "normalized_position": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "x",
+        "y"
+      ],
+      "properties": {
+        "x": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "y": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "normalized_bounds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "left",
+        "top",
+        "right",
+        "bottom"
+      ],
+      "properties": {
+        "left": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "top": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "right": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "bottom": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    },
+    "player": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "object_id",
+        "normalized_position",
+        "grounded",
+        "movement_state",
+        "visible",
+        "input_enabled",
+        "health",
+        "facing",
+        "attacking"
+      ],
+      "properties": {
+        "object_id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "normalized_position": {
+          "$ref": "#/$defs/normalized_position"
+        },
+        "grounded": {
+          "type": "boolean"
+        },
+        "movement_state": {
+          "enum": [
+            "idle",
+            "running",
+            "rising",
+            "falling",
+            "landing",
+            "attacking",
+            "hit",
+            "dying",
+            "dead"
+          ]
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "input_enabled": {
+          "type": "boolean"
+        },
+        "health": {
+          "$ref": "#/$defs/health"
+        },
+        "facing": {
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "attacking": {
+          "type": "boolean"
+        }
+      }
+    },
+    "objective": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "keys_collected",
+        "keys_required",
+        "key_present",
+        "exit_state"
+      ],
+      "properties": {
+        "keys_collected": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "keys_required": {
+          "const": 1
+        },
+        "key_present": {
+          "type": "boolean"
+        },
+        "exit_state": {
+          "enum": [
+            "locked",
+            "opening",
+            "open"
+          ]
+        }
+      }
+    },
+    "session": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "deaths"
+      ],
+      "properties": {
+        "deaths": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "feedback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "locked_visible",
+        "completion_visible",
+        "death_transition_visible",
+        "hud_keys",
+        "hud_deaths",
+        "completion_text",
+        "hud_health"
+      ],
+      "properties": {
+        "locked_visible": {
+          "type": "boolean"
+        },
+        "completion_visible": {
+          "type": "boolean"
+        },
+        "death_transition_visible": {
+          "type": "boolean"
+        },
+        "hud_keys": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "visible",
+            "collected",
+            "required"
+          ],
+          "properties": {
+            "visible": {
+              "type": "boolean"
+            },
+            "collected": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "required": {
+              "const": 1
+            }
+          }
+        },
+        "hud_deaths": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "visible",
+            "value"
+          ],
+          "properties": {
+            "visible": {
+              "type": "boolean"
+            },
+            "value": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "completion_text": {
+          "type": "string",
+          "maxLength": 256
+        },
+        "hud_health": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "visible",
+            "current",
+            "maximum"
+          ],
+          "properties": {
+            "visible": {
+              "type": "boolean"
+            },
+            "current": {
+              "type": "number",
+              "minimum": 0
+            },
+            "maximum": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          }
+        }
+      }
+    },
+    "object_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "player",
+        "key",
+        "exit",
+        "hazard",
+        "enemy",
+        "spring",
+        "one_way_platform"
+      ],
+      "properties": {
+        "player": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "key": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "exit": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "hazard": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "enemy": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "spring": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "one_way_platform": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "visible_target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "object_id",
+        "semantic_role",
+        "present",
+        "visible",
+        "enabled",
+        "normalized_position",
+        "normalized_bounds"
+      ],
+      "properties": {
+        "object_id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "semantic_role": {
+          "enum": [
+            "player",
+            "key",
+            "exit",
+            "hazard",
+            "enemy",
+            "spring",
+            "one_way_platform"
+          ]
+        },
+        "present": {
+          "type": "boolean"
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "normalized_position": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/normalized_position"
+            }
+          ]
+        },
+        "normalized_bounds": {
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "$ref": "#/$defs/normalized_bounds"
+            }
+          ]
+        }
+      }
+    },
+    "world": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "object_counts",
+        "visible_targets",
+        "enemies",
+        "springs"
+      ],
+      "properties": {
+        "object_counts": {
+          "$ref": "#/$defs/object_counts"
+        },
+        "visible_targets": {
+          "type": "array",
+          "maxItems": 64,
+          "items": {
+            "$ref": "#/$defs/visible_target"
+          }
+        },
+        "enemies": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/enemy"
+          }
+        },
+        "springs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/spring"
+          }
+        }
+      }
+    },
+    "game_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "phase",
+        "player",
+        "objective",
+        "session",
+        "feedback",
+        "world"
+      ],
+      "properties": {
+        "phase": {
+          "enum": [
+            "active",
+            "dying",
+            "respawning",
+            "completed"
+          ]
+        },
+        "player": {
+          "$ref": "#/$defs/player"
+        },
+        "objective": {
+          "$ref": "#/$defs/objective"
+        },
+        "session": {
+          "$ref": "#/$defs/session"
+        },
+        "feedback": {
+          "$ref": "#/$defs/feedback"
+        },
+        "world": {
+          "$ref": "#/$defs/world"
+        }
+      }
+    },
+    "health": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "current",
+        "maximum"
+      ],
+      "properties": {
+        "current": {
+          "type": "number",
+          "minimum": 0
+        },
+        "maximum": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      }
+    },
+    "enemy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "object_id",
+        "state",
+        "health",
+        "facing",
+        "normalized_position",
+        "visible"
+      ],
+      "properties": {
+        "object_id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "state": {
+          "enum": [
+            "patrolling",
+            "attacking",
+            "hit",
+            "dying",
+            "dead"
+          ]
+        },
+        "health": {
+          "$ref": "#/$defs/health"
+        },
+        "facing": {
+          "enum": [
+            "left",
+            "right"
+          ]
+        },
+        "normalized_position": {
+          "$ref": "#/$defs/normalized_position"
+        },
+        "visible": {
+          "type": "boolean"
+        }
+      }
+    },
+    "spring": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "object_id",
+        "state"
+      ],
+      "properties": {
+        "object_id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "state": {
+          "enum": [
+            "resting",
+            "compressing",
+            "launching",
+            "recovering"
+          ]
+        }
+      }
+    }
+  }
+}

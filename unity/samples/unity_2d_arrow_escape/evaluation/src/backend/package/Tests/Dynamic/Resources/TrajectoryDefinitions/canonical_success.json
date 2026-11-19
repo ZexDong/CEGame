@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "id": "canonical_success",
+  "title": "Hint -> virtual Mouse arrow selections -> Won -> virtual Mouse Restart",
+  "steps": [
+    {
+      "step_id": "setup.scene",
+      "operation": "load_canonical_scene",
+      "target": "scene:ArrowEscape",
+      "check_ids": [
+        "setup.scene_load",
+        "setup.probe",
+        "setup.playable"
+      ]
+    },
+    {
+      "step_id": "declared.scoring_checks",
+      "operation": "observe_visible_player_journeys",
+      "target": "running_scene",
+      "check_ids": [
+        "canonical.initial.surface.complete",
+        "canonical.initial.surface.controls",
+        "canonical.initial.surface.budget",
+        "canonical.initial.surface.mode",
+        "canonical.initial.surface.level",
+        "canonical.initial.surface.board",
+        "canonical.arrow_click.1.input.top_hit",
+        "canonical.arrow_state.1.player_source",
+        "canonical.arrow_state.1.selected_id",
+        "canonical.hint_click.1.input.top_hit",
+        "canonical.hint_state.1.legal",
+        "canonical.hint_state.1.budget",
+        "canonical.arrow_exit.1.reached",
+        "canonical.arrow_exit.2.reached",
+        "canonical.arrow_exit.3.reached",
+        "canonical.won.reached",
+        "canonical.terminal.completed_ui",
+        "canonical.terminal.three_distinct",
+        "canonical.restart_click.input.top_hit",
+        "canonical.restarted.reached",
+        "canonical.restart_equivalent.snapshot"
+      ]
+    }
+  ]
+}

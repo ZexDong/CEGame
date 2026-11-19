@@ -1,0 +1,29 @@
+Task: Build Reactor Relay Protocol as one independent Roblox candidate.
+Development time limit: 3600 seconds.
+
+Read in this order:
+1. GDD.md — frozen player-facing game specification. Section 6 is the sole source of game-specific requirements.
+2. EVALUABILITY_CONTRACT.md — frozen public observation and real-input contract.
+3. EVALUATION_SCHEMA.json — machine-readable names, types, counts, and bounds.
+4. VISUAL_DIRECTION.md — public visual direction, not a fixed layout.
+5. ROBLOX_STUDIO_ENGINE_TOOL_INTERFACE_CATALOG.md — individual supported engine/tool interfaces.
+6. RETURN_CHECKLIST.txt and DEVELOPMENT_TRACE_REQUIREMENTS.md — required delivery and audit records.
+7. project/ and ReactorRelayStart.rbxlx — constants-only blank starting points with no gameplay solution.
+
+Rules:
+- Work only from this public input. Do not read its parent, neighboring tasks, Gold, scoring rules, evaluator code, private trajectories, reference implementation, or prior candidates.
+- Implement real player-facing behavior. Tags, Attributes, state fields, events, or HUD text must mirror real gameplay; they may not replace gameplay.
+- Keep every frozen identifier, type, count, and operation rule in the public contract.
+- The 1600 by 900 logical canvas, three bay-panel rectangles, 19 control rectangles, cycle targets, lock orders, incident schedule, commit-arm timing, and final sequence are frozen. Instance hierarchy, code organization, styling, decoration, and content inside non-control regions remain your choice.
+- The required primary interaction is a complete real left-button press and release inside the visible GuiButton. Optional keys 1/2/3 may select bays, but pointer controls must remain available.
+- The candidate must expose actual tagged GuiButtons so a controller can read AbsolutePosition and AbsoluteSize from the engine and move the Windows pointer to their live centers. Do not rely on fixed screen coordinates.
+- R must perform Clean Restart from every non-menu state. Closing and reopening must show the menu without saved gameplay progress.
+- You may perform static checks, one Rojo build, and honest runtime checks if time permits. Never claim a runtime PASS that was not actually observed.
+- Do not ask the user to choose implementation details. Make reasonable choices within the frozen public contract.
+
+Required return:
+- Complete `project/` source directory.
+- `ReactorRelayCandidate.rbxlx`.
+- `BUILD_REPORT.txt` based on the template.
+- `DEVELOPMENT_TRACE.txt` based on the template and requirements.
+- ZIP containing the complete candidate source.

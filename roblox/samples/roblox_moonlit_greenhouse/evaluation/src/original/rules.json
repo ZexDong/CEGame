@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "roblox.moonlit_greenhouse.v1",
+  "automatic_score_maximum": 90,
+  "manual_visual_score_maximum": 10,
+  "dimensions": {
+    "D1": {"name": "Startup, contract, and scene", "maximum_score": 10, "checks": [
+      {"id": "D1_BOOT", "weight": 4},
+      {"id": "D1_CONTRACT", "weight": 3},
+      {"id": "D1_WORLD", "weight": 3}
+    ]},
+    "D2": {"name": "Core gameplay", "maximum_score": 35, "checks": [
+      {"id": "D2_RESOURCE", "weight": 5},
+      {"id": "D2_BAD_LOCK", "weight": 5},
+      {"id": "D2_PURGE", "weight": 5},
+      {"id": "D2_COMMIT_GATE", "weight": 4},
+      {"id": "D2_LOCK", "weight": 5},
+      {"id": "D2_CYCLES", "weight": 6},
+      {"id": "D2_FINAL", "weight": 5}
+    ]},
+    "D3": {"name": "Rules and failure boundaries", "maximum_score": 25, "checks": [
+      {"id": "D3_PHASE", "weight": 3},
+      {"id": "D3_LOSS", "weight": 4},
+      {"id": "D3_SEQUENCE", "weight": 4},
+      {"id": "D3_TERMINAL_RESET", "weight": 4},
+      {"id": "D3_WRONG_SIGNAL", "weight": 5},
+      {"id": "D3_TIMEOUT", "weight": 5}
+    ]},
+    "D4": {"name": "End-to-end flow and reopen", "maximum_score": 10, "checks": [
+      {"id": "D4_WORKFLOW", "weight": 6},
+      {"id": "D4_REOPEN", "weight": 4}
+    ]},
+    "D5": {"name": "HUD and feedback", "maximum_score": 10, "checks": [
+      {"id": "D5_HUD", "weight": 3},
+      {"id": "D5_FEEDBACK", "weight": 3},
+      {"id": "D5_RESULT", "weight": 4}
+    ]},
+    "D6": {"name": "Visual evidence review", "maximum_score": 10, "manual": true}
+  }
+}
+

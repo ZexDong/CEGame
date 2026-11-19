@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "protocol": "public-requirements-visual-quality-20260908",
+  "required_rounds": 1,
+  "model": "gpt-5.6-sol",
+  "prompt": "demos/unity_2d_driftfolk_chronicle_challenge/evaluation/session-v21-imgui-20260919/d6/visual-prompt.en-US.txt",
+  "prompt_sha256": "15bd9465622a9dcde235dc9dfe5c292cb7724e79af116d0ac5cb8dd1c86dbffe",
+  "benchmarks": [
+    {
+      "benchmark_id": "unity.driftfolk_stormbound.v2",
+      "primary_state_id": "initial_archipelago"
+    }
+  ],
+  "capture_acquisition": {
+    "method": "standalone-owned-window-native-frame-v2",
+    "routes": [
+      "service_commit",
+      "normal_input"
+    ],
+    "normal_input_requires_fresh_process": true,
+    "normal_input_requires_input_before_candidate_awake": true,
+    "normal_input_actions": [
+      "Enter",
+      "R"
+    ],
+    "normal_input_state_review": "source/image/PID-bound author image review; no fabricated service or save success",
+    "unsupported_or_ambiguous": "observer repair or review, never automatic product zero",
+    "frame_source": "Unity ScreenCapture after real rendered frames and GUI Repaint in the exact owned visible standalone player; never desktop pixels or camera-only reconstruction.",
+    "native_frame_purity_review": {
+      "required_for_all_routes": true,
+      "schema": "stormbound-native-frame-review/v1",
+      "prompt": "demos/unity_2d_driftfolk_chronicle_challenge/evaluation/session-v21-imgui-20260919/d6/frame-purity-review.txt",
+      "prompt_sha256": "19102be41bd1ddee76cf4f829e27155e0af24af6b843f004da3d0f8e1a39885b",
+      "published_decision_write_once": true
+    },
+    "method_applies_to": "candidate_image_only"
+  },
+  "reference_context": {
+    "path": "demos/unity_2d_driftfolk_chronicle_challenge/evaluation/session-v21-imgui-20260919/d6/reference-initial-archipelago.png",
+    "sha256": "ce1b3f013280d890db975918d6a9df252322c5f0bea21990f683b1f75969fd64",
+    "original_capture_method": "standalone-offscreen-viewport-composite-v1",
+    "role": "Original frozen design/asset quality context; not relabeled native whole-frame, not pixel-identity target, not a claim that every Gold presentation detail is correct.",
+    "same_capture_method_as_candidate_claimed": false
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "game": "openrpg_forest_reconstruction",
+  "naming_tables": "../input/sp/benchmark/naming-tables.json",
+  "controls_from_naming_tables": true,
+  "honesty_spot_checks": {
+    "mode": "review_against_captured_render_and_input_trace"
+  },
+  "trajectories": [
+    {
+      "id": "public_controls",
+      "title": "Public controls and dashboard collection",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue"
+          }
+        },
+        {
+          "do": "hold",
+          "key": "D",
+          "seconds": 1
+        },
+        {
+          "do": "press",
+          "key": "E"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "encounter_accept"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    }
+  ]
+}

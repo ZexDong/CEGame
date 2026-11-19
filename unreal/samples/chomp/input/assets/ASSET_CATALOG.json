@@ -1,0 +1,1150 @@
+{
+  "engine": "5.7.4",
+  "units": "centimeters",
+  "policy": "All supplied UE art has mandatory visible roles under GDD ASSET-01..05. Unrelated replacements are prohibited; specified transformations and derived resources are allowed. Source copies need no separate runtime import.",
+  "required_field_semantics": "True binds visible use directly or through the stated dependency. False marks an editing/reference source, not permission to replace its required art.",
+  "assets": [
+    {
+      "id": "SM_Eye-reference-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_Eye.obj",
+      "engine_object_path": null,
+      "type": "OBJ",
+      "purpose": "player",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": false,
+      "bytes": 20571,
+      "sha256": "cdcce2ecba883502e52bdf307261bb056d480e1064fd33593a663901bf100552",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "SM_Eye",
+      "project_copy": "starter-project/SourceArt/Meshes/SM_Eye.obj",
+      "reference_copy": "starter-project/SourceArt/Meshes/SM_Eye.obj"
+    },
+    {
+      "id": "SM_FruitBody-reference-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_FruitBody.obj",
+      "engine_object_path": null,
+      "type": "OBJ",
+      "purpose": "pineapple",
+      "requirements": [
+        "ASSET-03",
+        "FRUIT-01"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": false,
+      "bytes": 5909,
+      "sha256": "bdd505d7e1328eec2f329307479fc84da1234cf4e44cbb38b1af72e6cd834d38",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "SM_FruitBody",
+      "project_copy": "starter-project/SourceArt/Meshes/SM_FruitBody.obj",
+      "reference_copy": "starter-project/SourceArt/Meshes/SM_FruitBody.obj"
+    },
+    {
+      "id": "SM_FruitCrown-reference-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_FruitCrown.obj",
+      "engine_object_path": null,
+      "type": "OBJ",
+      "purpose": "pineapple",
+      "requirements": [
+        "ASSET-03",
+        "FRUIT-01"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": false,
+      "bytes": 1447,
+      "sha256": "53d6a05c438d86203a08a1891c55836fb7f5d74b370ac26528a6e35e3de32585",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "SM_FruitCrown",
+      "project_copy": "starter-project/SourceArt/Meshes/SM_FruitCrown.obj",
+      "reference_copy": "starter-project/SourceArt/Meshes/SM_FruitCrown.obj"
+    },
+    {
+      "id": "SM_GhostBody-reference-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_GhostBody.obj",
+      "engine_object_path": null,
+      "type": "OBJ",
+      "purpose": "ghosts",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": false,
+      "bytes": 6808,
+      "sha256": "9281830ec3c86857ca9f9f9d8a95119d045266452ebf61499925298a6f29c1a8",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "SM_GhostBody",
+      "project_copy": "starter-project/SourceArt/Meshes/SM_GhostBody.obj",
+      "reference_copy": "starter-project/SourceArt/Meshes/SM_GhostBody.obj"
+    },
+    {
+      "id": "SM_GhostHead-reference-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_GhostHead.obj",
+      "engine_object_path": null,
+      "type": "OBJ",
+      "purpose": "ghosts",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": false,
+      "bytes": 24489,
+      "sha256": "1539f5f8afc484300e5c00c3356c3cb9f57df514fafb47b9f4ec97955dfcb2ce",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "SM_GhostHead",
+      "project_copy": "starter-project/SourceArt/Meshes/SM_GhostHead.obj",
+      "reference_copy": "starter-project/SourceArt/Meshes/SM_GhostHead.obj"
+    },
+    {
+      "id": "SM_Jaw-reference-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_Jaw.obj",
+      "engine_object_path": null,
+      "type": "OBJ",
+      "purpose": "player",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": false,
+      "bytes": 29319,
+      "sha256": "46c553a5f8890e648287c7023d71e25be2e6bf1d2db50477b77783d03b049fb4",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "SM_Jaw",
+      "project_copy": "starter-project/SourceArt/Meshes/SM_Jaw.obj",
+      "reference_copy": "starter-project/SourceArt/Meshes/SM_Jaw.obj"
+    },
+    {
+      "id": "SM_Tooth-reference-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_Tooth.obj",
+      "engine_object_path": null,
+      "type": "OBJ",
+      "purpose": "player",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": false,
+      "bytes": 323,
+      "sha256": "3e2f8b609363b5571e04a32625303dcffacbacc59317ead8fccb1be51417a9a2",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "SM_Tooth",
+      "project_copy": "starter-project/SourceArt/Meshes/SM_Tooth.obj",
+      "reference_copy": "starter-project/SourceArt/Meshes/SM_Tooth.obj"
+    },
+    {
+      "id": "T_WallEdge-reference-png",
+      "path": "starter-project/SourceArt/Textures/T_WallEdge.png",
+      "engine_object_path": null,
+      "type": "PNG",
+      "purpose": "maze appearance",
+      "requirements": [
+        "ASSET-04",
+        "VISUAL-01"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": false,
+      "bytes": 770,
+      "sha256": "2a1de7d4c43c10fbde70c8f95a5c1a4179964c130373df2a342dfd6c488096d1",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "T_WallEdge",
+      "project_copy": "starter-project/SourceArt/Textures/T_WallEdge.png",
+      "reference_copy": "starter-project/SourceArt/Textures/T_WallEdge.png"
+    },
+    {
+      "id": "life-icon-reference-svg",
+      "path": "starter-project/SourceArt/UI/life-icon.svg",
+      "engine_object_path": null,
+      "type": "SVG",
+      "purpose": "life icon",
+      "requirements": [
+        "ASSET-05",
+        "HUD-01"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": false,
+      "bytes": 211,
+      "sha256": "6cf9e8c2bce375aae6bfd2eb8cd7be02d97f56a3f7305a148d629fb5b97dd383",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "T_LifeIcon",
+      "project_copy": "starter-project/SourceArt/UI/life-icon.svg",
+      "reference_copy": "starter-project/SourceArt/UI/life-icon.svg"
+    },
+    {
+      "id": "T_LifeIcon-reference-png",
+      "path": "starter-project/SourceArt/UI/T_LifeIcon.png",
+      "engine_object_path": null,
+      "type": "PNG",
+      "purpose": "life icon",
+      "requirements": [
+        "ASSET-05",
+        "HUD-01"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": false,
+      "bytes": 1299,
+      "sha256": "ab3e1ddb9e58de6e826dc147b1061caa8ed338d9dffe8eab074ce08843536d83",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "T_LifeIcon",
+      "project_copy": "starter-project/SourceArt/UI/T_LifeIcon.png",
+      "reference_copy": "starter-project/SourceArt/UI/T_LifeIcon.png"
+    },
+    {
+      "id": "M_Neon",
+      "path": "starter-project/Content/Art/Materials/M_Neon.uasset",
+      "engine_object_path": "/Game/Art/Materials/M_Neon.M_Neon",
+      "type": "Material",
+      "purpose": "shared color material",
+      "requirements": [
+        "ASSET-01",
+        "ASSET-02",
+        "ASSET-03",
+        "ASSET-04"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 6790,
+      "sha256": "d068c181ad4c9899997661435fe16211d011f9840424d66217b994587651b175",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": []
+    },
+    {
+      "id": "M_Wall",
+      "path": "starter-project/Content/Art/Materials/M_Wall.uasset",
+      "engine_object_path": "/Game/Art/Materials/M_Wall.M_Wall",
+      "type": "Material",
+      "purpose": "maze appearance",
+      "requirements": [
+        "ASSET-04",
+        "VISUAL-01"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 4935,
+      "sha256": "fd1ff6f9b610c0b0ad6b34198e53ebd427135ce291270af2a0c043987a46e83e",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Game/Art/Textures/T_WallEdge"
+      ]
+    },
+    {
+      "id": "MI_Crown",
+      "path": "starter-project/Content/Art/Materials/MI_Crown.uasset",
+      "engine_object_path": "/Game/Art/Materials/MI_Crown.MI_Crown",
+      "type": "MaterialInstanceConstant",
+      "purpose": "pineapple",
+      "requirements": [
+        "ASSET-03",
+        "FRUIT-01"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 3811,
+      "sha256": "8f26f89202057bc29dad91dc065bc37ebfa4c9b7e3bb4f06dcee3f94fa8786a9",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Game/Art/Materials/M_Neon"
+      ]
+    },
+    {
+      "id": "MI_Cyan",
+      "path": "starter-project/Content/Art/Materials/MI_Cyan.uasset",
+      "engine_object_path": "/Game/Art/Materials/MI_Cyan.MI_Cyan",
+      "type": "MaterialInstanceConstant",
+      "purpose": "ghosts",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 3806,
+      "sha256": "05921316a19c619a8d62b11daf27f5520bd127a73360f218c2d126b483696046",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Game/Art/Materials/M_Neon"
+      ]
+    },
+    {
+      "id": "MI_Dot",
+      "path": "starter-project/Content/Art/Materials/MI_Dot.uasset",
+      "engine_object_path": "/Game/Art/Materials/MI_Dot.MI_Dot",
+      "type": "MaterialInstanceConstant",
+      "purpose": "teeth and pickups",
+      "requirements": [
+        "ASSET-01",
+        "ASSET-04",
+        "VISUAL-01",
+        "VISUAL-02"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 3801,
+      "sha256": "18eb8e70119f3f677bd9c0f7faaee0ef120ceba795ca75232d071baa474ac688",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Game/Art/Materials/M_Neon"
+      ]
+    },
+    {
+      "id": "MI_Eye",
+      "path": "starter-project/Content/Art/Materials/MI_Eye.uasset",
+      "engine_object_path": "/Game/Art/Materials/MI_Eye.MI_Eye",
+      "type": "MaterialInstanceConstant",
+      "purpose": "player",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 3801,
+      "sha256": "b083ba32db831f2e13c423ba473d3e3990b05ba8fc643f7cf384352e4d06ae10",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Game/Art/Materials/M_Neon"
+      ]
+    },
+    {
+      "id": "MI_Floor",
+      "path": "starter-project/Content/Art/Materials/MI_Floor.uasset",
+      "engine_object_path": "/Game/Art/Materials/MI_Floor.MI_Floor",
+      "type": "MaterialInstanceConstant",
+      "purpose": "maze appearance",
+      "requirements": [
+        "ASSET-04",
+        "VISUAL-01"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 3811,
+      "sha256": "f59584b50b4b108b758027f7f1485f558b0baf01d21e945f1907d3d397317ca1",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Game/Art/Materials/M_Neon"
+      ]
+    },
+    {
+      "id": "MI_Frightened",
+      "path": "starter-project/Content/Art/Materials/MI_Frightened.uasset",
+      "engine_object_path": "/Game/Art/Materials/MI_Frightened.MI_Frightened",
+      "type": "MaterialInstanceConstant",
+      "purpose": "ghosts",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 3836,
+      "sha256": "10257b6c99bc8f16202e8d2a2f5782a18bc14acec98c5718689695536e06a01f",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Game/Art/Materials/M_Neon"
+      ]
+    },
+    {
+      "id": "MI_Fruit",
+      "path": "starter-project/Content/Art/Materials/MI_Fruit.uasset",
+      "engine_object_path": "/Game/Art/Materials/MI_Fruit.MI_Fruit",
+      "type": "MaterialInstanceConstant",
+      "purpose": "pineapple",
+      "requirements": [
+        "ASSET-03",
+        "FRUIT-01"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 3811,
+      "sha256": "a0e87d002e68059617e99d1dbcce75e585fde1cdd18914c6ea52ef6079d7e76d",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Game/Art/Materials/M_Neon"
+      ]
+    },
+    {
+      "id": "MI_Gate",
+      "path": "starter-project/Content/Art/Materials/MI_Gate.uasset",
+      "engine_object_path": "/Game/Art/Materials/MI_Gate.MI_Gate",
+      "type": "MaterialInstanceConstant",
+      "purpose": "maze appearance",
+      "requirements": [
+        "ASSET-04",
+        "VISUAL-01"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 3806,
+      "sha256": "860cd1e3248fd0daac7fffbcc42b3492d9bdfc546dd03bc1323e2149ecb36e76",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Game/Art/Materials/M_Neon"
+      ]
+    },
+    {
+      "id": "MI_Orange",
+      "path": "starter-project/Content/Art/Materials/MI_Orange.uasset",
+      "engine_object_path": "/Game/Art/Materials/MI_Orange.MI_Orange",
+      "type": "MaterialInstanceConstant",
+      "purpose": "ghosts",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 3816,
+      "sha256": "f03e44b75b6df2e727a5e1b7485f693336dee68f209d5e73ce41d74a8f5f2b12",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Game/Art/Materials/M_Neon"
+      ]
+    },
+    {
+      "id": "MI_Pink",
+      "path": "starter-project/Content/Art/Materials/MI_Pink.uasset",
+      "engine_object_path": "/Game/Art/Materials/MI_Pink.MI_Pink",
+      "type": "MaterialInstanceConstant",
+      "purpose": "ghosts",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 3806,
+      "sha256": "52798a7c508ad1bb45956008e161bfb80eee64e0a2c7d145374a48ab452986ff",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Game/Art/Materials/M_Neon"
+      ]
+    },
+    {
+      "id": "MI_Player",
+      "path": "starter-project/Content/Art/Materials/MI_Player.uasset",
+      "engine_object_path": "/Game/Art/Materials/MI_Player.MI_Player",
+      "type": "MaterialInstanceConstant",
+      "purpose": "player",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 3816,
+      "sha256": "51e0a2b291ec82bedaeed70810df63d9e4e6ebed2e88ad3ecd6f9fe4f9698e20",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Game/Art/Materials/M_Neon"
+      ]
+    },
+    {
+      "id": "MI_Red",
+      "path": "starter-project/Content/Art/Materials/MI_Red.uasset",
+      "engine_object_path": "/Game/Art/Materials/MI_Red.MI_Red",
+      "type": "MaterialInstanceConstant",
+      "purpose": "ghosts",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 3801,
+      "sha256": "b7ae48430bcf970b67a348b2dbb652d2b8fbf20516ac7f5299d0e95bc9173f76",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Game/Art/Materials/M_Neon"
+      ]
+    },
+    {
+      "id": "SM_Eye",
+      "path": "starter-project/Content/Art/Meshes/SM_Eye.uasset",
+      "engine_object_path": "/Game/Art/Meshes/SM_Eye.SM_Eye",
+      "type": "StaticMesh",
+      "purpose": "player",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 23718,
+      "sha256": "a1bebc6998f4180ad98f2fdd1e5a98afd32889f10686371bcfcceb0845482465",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Script/NavigationSystem",
+        "/Game/Art/Materials/MI_Eye"
+      ],
+      "bounds_origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "bounds_extent": [
+        5.0,
+        5.0,
+        5.0
+      ],
+      "material_slots": [
+        "/Game/Art/Materials/MI_Eye.MI_Eye",
+        "/Game/Art/Materials/MI_Eye.MI_Eye"
+      ],
+      "reimport_metadata": "../../../SourceArt/Meshes/SM_Eye.obj",
+      "reimport_source": "starter-project/SourceArt/Meshes/SM_Eye.obj"
+    },
+    {
+      "id": "SM_FruitBody",
+      "path": "starter-project/Content/Art/Meshes/SM_FruitBody.uasset",
+      "engine_object_path": "/Game/Art/Meshes/SM_FruitBody.SM_FruitBody",
+      "type": "StaticMesh",
+      "purpose": "pineapple",
+      "requirements": [
+        "ASSET-03",
+        "FRUIT-01"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 17800,
+      "sha256": "6eb7add5d89adb4b847945dd837fec36a9c38d1c488366826e78ae4524c8906c",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Script/NavigationSystem",
+        "/Game/Art/Materials/MI_Fruit"
+      ],
+      "bounds_origin": [
+        0.0,
+        0.0,
+        0.5
+      ],
+      "bounds_extent": [
+        23.0,
+        23.0,
+        23.5
+      ],
+      "material_slots": [
+        "/Game/Art/Materials/MI_Fruit.MI_Fruit"
+      ],
+      "reimport_metadata": "../../../SourceArt/Meshes/SM_FruitBody.obj",
+      "reimport_source": "starter-project/SourceArt/Meshes/SM_FruitBody.obj"
+    },
+    {
+      "id": "SM_FruitCrown",
+      "path": "starter-project/Content/Art/Meshes/SM_FruitCrown.uasset",
+      "engine_object_path": "/Game/Art/Meshes/SM_FruitCrown.SM_FruitCrown",
+      "type": "StaticMesh",
+      "purpose": "pineapple",
+      "requirements": [
+        "ASSET-03",
+        "FRUIT-01"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 16554,
+      "sha256": "c62f3cd3f2718493b6ce6b2e4d54472f0a07ee22e83addb6c128ef25597ec303",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Script/NavigationSystem",
+        "/Game/Art/Materials/MI_Crown"
+      ],
+      "bounds_origin": [
+        0.9407958984375,
+        0.0,
+        11.0
+      ],
+      "bounds_extent": [
+        18.0592041015625,
+        18.523630142211914,
+        11.0
+      ],
+      "material_slots": [
+        "/Game/Art/Materials/MI_Crown.MI_Crown"
+      ],
+      "reimport_metadata": "../../../SourceArt/Meshes/SM_FruitCrown.obj",
+      "reimport_source": "starter-project/SourceArt/Meshes/SM_FruitCrown.obj"
+    },
+    {
+      "id": "SM_GhostBody",
+      "path": "starter-project/Content/Art/Meshes/SM_GhostBody.uasset",
+      "engine_object_path": "/Game/Art/Meshes/SM_GhostBody.SM_GhostBody",
+      "type": "StaticMesh",
+      "purpose": "ghosts",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 18004,
+      "sha256": "c89aaf787157f4fc60f304684ea1d2eac033f0ed2f83f3e2f1bac59b88325f8e",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Script/NavigationSystem",
+        "/Game/Art/Materials/MI_Cyan"
+      ],
+      "bounds_origin": [
+        0.0,
+        0.0,
+        -16.0
+      ],
+      "bounds_extent": [
+        30.0,
+        30.0,
+        16.0
+      ],
+      "material_slots": [
+        "/Game/Art/Materials/MI_Cyan.MI_Cyan"
+      ],
+      "reimport_metadata": "../../../SourceArt/Meshes/SM_GhostBody.obj",
+      "reimport_source": "starter-project/SourceArt/Meshes/SM_GhostBody.obj"
+    },
+    {
+      "id": "SM_GhostHead",
+      "path": "starter-project/Content/Art/Meshes/SM_GhostHead.uasset",
+      "engine_object_path": "/Game/Art/Meshes/SM_GhostHead.SM_GhostHead",
+      "type": "StaticMesh",
+      "purpose": "ghosts",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 23019,
+      "sha256": "fa5741842ed0d4b89ef8d8881b205321768cfbf4b737b9404f13d36c52b53e36",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Script/NavigationSystem",
+        "/Game/Art/Materials/MI_Cyan"
+      ],
+      "bounds_origin": [
+        0.0,
+        0.0,
+        15.0
+      ],
+      "bounds_extent": [
+        30.0,
+        30.0,
+        15.0
+      ],
+      "material_slots": [
+        "/Game/Art/Materials/MI_Cyan.MI_Cyan"
+      ],
+      "reimport_metadata": "../../../SourceArt/Meshes/SM_GhostHead.obj",
+      "reimport_source": "starter-project/SourceArt/Meshes/SM_GhostHead.obj"
+    },
+    {
+      "id": "SM_Jaw",
+      "path": "starter-project/Content/Art/Meshes/SM_Jaw.uasset",
+      "engine_object_path": "/Game/Art/Meshes/SM_Jaw.SM_Jaw",
+      "type": "StaticMesh",
+      "purpose": "player",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 24183,
+      "sha256": "173407c44d0e420355c440ee190e2a3e332dfb139057670941520030b9bf08ac",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Script/NavigationSystem",
+        "/Game/Art/Materials/MI_Player"
+      ],
+      "bounds_origin": [
+        0.0,
+        0.0,
+        16.0
+      ],
+      "bounds_extent": [
+        32.0,
+        32.0,
+        16.0
+      ],
+      "material_slots": [
+        "/Game/Art/Materials/MI_Player.MI_Player"
+      ],
+      "reimport_metadata": "../../../SourceArt/Meshes/SM_Jaw.obj",
+      "reimport_source": "starter-project/SourceArt/Meshes/SM_Jaw.obj"
+    },
+    {
+      "id": "SM_Tooth",
+      "path": "starter-project/Content/Art/Meshes/SM_Tooth.uasset",
+      "engine_object_path": "/Game/Art/Meshes/SM_Tooth.SM_Tooth",
+      "type": "StaticMesh",
+      "purpose": "player",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 14802,
+      "sha256": "7a3665b6ae5e331c11fe2e4082b48545cff33a9cfb2c3dbbdc66d9a00354e515",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [
+        "/Script/NavigationSystem",
+        "/Game/Art/Materials/MI_Dot"
+      ],
+      "bounds_origin": [
+        0.0,
+        0.0,
+        -4.5
+      ],
+      "bounds_extent": [
+        4.0,
+        3.0,
+        4.5
+      ],
+      "material_slots": [
+        "/Game/Art/Materials/MI_Dot.MI_Dot"
+      ],
+      "reimport_metadata": "../../../SourceArt/Meshes/SM_Tooth.obj",
+      "reimport_source": "starter-project/SourceArt/Meshes/SM_Tooth.obj"
+    },
+    {
+      "id": "T_WallEdge",
+      "path": "starter-project/Content/Art/Textures/T_WallEdge.uasset",
+      "engine_object_path": "/Game/Art/Textures/T_WallEdge.T_WallEdge",
+      "type": "Texture2D",
+      "purpose": "maze appearance",
+      "requirements": [
+        "ASSET-04",
+        "VISUAL-01"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 4252,
+      "sha256": "7b7a427f52b8b8755a49058d796fc643526c48fa2cd9ce4bbf91e80f3126b28f",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "width": 256,
+      "height": 256,
+      "reimport_metadata": "../../../SourceArt/Textures/T_WallEdge.png",
+      "reimport_source": "starter-project/SourceArt/Textures/T_WallEdge.png"
+    },
+    {
+      "id": "T_LifeIcon",
+      "path": "starter-project/Content/Art/UI/T_LifeIcon.uasset",
+      "engine_object_path": "/Game/Art/UI/T_LifeIcon.T_LifeIcon",
+      "type": "Texture2D",
+      "purpose": "life icon",
+      "requirements": [
+        "ASSET-05",
+        "HUD-01"
+      ],
+      "required": true,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "mandatory_visible_role",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 6062,
+      "sha256": "b0c2e7dcd91c96e65809902553b7c3d9815954a3767bf5954cb53ee3dc7ef142",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "width": 128,
+      "height": 128,
+      "reimport_metadata": "../../../SourceArt/UI/T_LifeIcon.png",
+      "reimport_source": "starter-project/SourceArt/UI/T_LifeIcon.png"
+    },
+    {
+      "id": "SM_Eye-source-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_Eye.obj",
+      "engine_object_path": null,
+      "type": "OBJ",
+      "purpose": "player",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 20571,
+      "sha256": "cdcce2ecba883502e52bdf307261bb056d480e1064fd33593a663901bf100552",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "SM_Eye",
+      "project_copy": "starter-project/SourceArt/Meshes/SM_Eye.obj",
+      "reference_copy": "starter-project/SourceArt/Meshes/SM_Eye.obj"
+    },
+    {
+      "id": "SM_FruitBody-source-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_FruitBody.obj",
+      "engine_object_path": null,
+      "type": "OBJ",
+      "purpose": "pineapple",
+      "requirements": [
+        "ASSET-03",
+        "FRUIT-01"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 5909,
+      "sha256": "bdd505d7e1328eec2f329307479fc84da1234cf4e44cbb38b1af72e6cd834d38",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "SM_FruitBody",
+      "project_copy": "starter-project/SourceArt/Meshes/SM_FruitBody.obj",
+      "reference_copy": "starter-project/SourceArt/Meshes/SM_FruitBody.obj"
+    },
+    {
+      "id": "SM_FruitCrown-source-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_FruitCrown.obj",
+      "engine_object_path": null,
+      "type": "OBJ",
+      "purpose": "pineapple",
+      "requirements": [
+        "ASSET-03",
+        "FRUIT-01"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 1447,
+      "sha256": "53d6a05c438d86203a08a1891c55836fb7f5d74b370ac26528a6e35e3de32585",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "SM_FruitCrown",
+      "project_copy": "starter-project/SourceArt/Meshes/SM_FruitCrown.obj",
+      "reference_copy": "starter-project/SourceArt/Meshes/SM_FruitCrown.obj"
+    },
+    {
+      "id": "SM_GhostBody-source-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_GhostBody.obj",
+      "engine_object_path": null,
+      "type": "OBJ",
+      "purpose": "ghosts",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 6808,
+      "sha256": "9281830ec3c86857ca9f9f9d8a95119d045266452ebf61499925298a6f29c1a8",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "SM_GhostBody",
+      "project_copy": "starter-project/SourceArt/Meshes/SM_GhostBody.obj",
+      "reference_copy": "starter-project/SourceArt/Meshes/SM_GhostBody.obj"
+    },
+    {
+      "id": "SM_GhostHead-source-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_GhostHead.obj",
+      "engine_object_path": null,
+      "type": "OBJ",
+      "purpose": "ghosts",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 24489,
+      "sha256": "1539f5f8afc484300e5c00c3356c3cb9f57df514fafb47b9f4ec97955dfcb2ce",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "SM_GhostHead",
+      "project_copy": "starter-project/SourceArt/Meshes/SM_GhostHead.obj",
+      "reference_copy": "starter-project/SourceArt/Meshes/SM_GhostHead.obj"
+    },
+    {
+      "id": "SM_Jaw-source-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_Jaw.obj",
+      "engine_object_path": null,
+      "type": "OBJ",
+      "purpose": "player",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 29319,
+      "sha256": "46c553a5f8890e648287c7023d71e25be2e6bf1d2db50477b77783d03b049fb4",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "SM_Jaw",
+      "project_copy": "starter-project/SourceArt/Meshes/SM_Jaw.obj",
+      "reference_copy": "starter-project/SourceArt/Meshes/SM_Jaw.obj"
+    },
+    {
+      "id": "SM_Tooth-source-obj",
+      "path": "starter-project/SourceArt/Meshes/SM_Tooth.obj",
+      "engine_object_path": null,
+      "type": "OBJ",
+      "purpose": "player",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 323,
+      "sha256": "3e2f8b609363b5571e04a32625303dcffacbacc59317ead8fccb1be51417a9a2",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "SM_Tooth",
+      "project_copy": "starter-project/SourceArt/Meshes/SM_Tooth.obj",
+      "reference_copy": "starter-project/SourceArt/Meshes/SM_Tooth.obj"
+    },
+    {
+      "id": "T_WallEdge-source-png",
+      "path": "starter-project/SourceArt/Textures/T_WallEdge.png",
+      "engine_object_path": null,
+      "type": "PNG",
+      "purpose": "maze appearance",
+      "requirements": [
+        "ASSET-04",
+        "VISUAL-01"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 770,
+      "sha256": "2a1de7d4c43c10fbde70c8f95a5c1a4179964c130373df2a342dfd6c488096d1",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "T_WallEdge",
+      "project_copy": "starter-project/SourceArt/Textures/T_WallEdge.png",
+      "reference_copy": "starter-project/SourceArt/Textures/T_WallEdge.png"
+    },
+    {
+      "id": "life-icon-source-svg",
+      "path": "starter-project/SourceArt/UI/life-icon.svg",
+      "engine_object_path": null,
+      "type": "SVG",
+      "purpose": "life icon",
+      "requirements": [
+        "ASSET-05",
+        "HUD-01"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 211,
+      "sha256": "6cf9e8c2bce375aae6bfd2eb8cd7be02d97f56a3f7305a148d629fb5b97dd383",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "T_LifeIcon",
+      "project_copy": "starter-project/SourceArt/UI/life-icon.svg",
+      "reference_copy": "starter-project/SourceArt/UI/life-icon.svg"
+    },
+    {
+      "id": "T_LifeIcon-source-png",
+      "path": "starter-project/SourceArt/UI/T_LifeIcon.png",
+      "engine_object_path": null,
+      "type": "PNG",
+      "purpose": "life icon",
+      "requirements": [
+        "ASSET-05",
+        "HUD-01"
+      ],
+      "required": false,
+      "replacement_allowed": false,
+      "modification_allowed": true,
+      "usage": "editing_source_no_separate_runtime_use",
+      "assembly": "unassembled_static_art",
+      "editable": true,
+      "bytes": 1299,
+      "sha256": "ab3e1ddb9e58de6e826dc147b1061caa8ed338d9dffe8eab074ce08843536d83",
+      "license": "assets/legal/NOTICES.md",
+      "dependencies": [],
+      "editing_source_for": "T_LifeIcon",
+      "project_copy": "starter-project/SourceArt/UI/T_LifeIcon.png",
+      "reference_copy": "starter-project/SourceArt/UI/T_LifeIcon.png"
+    }
+  ],
+  "installed_engine_resources": [
+    {
+      "object_path": "/Engine/BasicShapes/Cube.Cube",
+      "purpose": "Available wall/floor geometry; required surface materials still apply."
+    },
+    {
+      "object_path": "/Engine/BasicShapes/Sphere.Sphere",
+      "purpose": "Available dot/energizer geometry; required MI_Dot still applies."
+    },
+    {
+      "object_path": "/Engine/EngineFonts/Roboto.Roboto",
+      "purpose": "Available installed engine font."
+    }
+  ]
+}

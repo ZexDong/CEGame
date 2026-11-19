@@ -1,0 +1,16 @@
+{
+  "name": "RelayFoundryPublicStart",
+  "tree": {
+    "$className": "DataModel",
+    "Lighting": { "$className": "Lighting", "$properties": { "Brightness": 2, "ClockTime": 14 } },
+    "ReplicatedStorage": { "$className": "ReplicatedStorage", "RelayFoundryPublicSchema": { "$path": "src/shared/RelayFoundrySchema.luau" } },
+    "ServerScriptService": { "$className": "ServerScriptService", "$path": "src/server" },
+    "StarterGui": { "$className": "StarterGui" },
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "$properties": { "CameraMode": "Classic", "CharacterWalkSpeed": 18, "CharacterJumpHeight": 7.2 },
+      "StarterPlayerScripts": { "$path": "src/client" }
+    },
+    "Workspace": { "$className": "Workspace", "$properties": { "Gravity": 196.2, "StreamingEnabled": false } }
+  }
+}

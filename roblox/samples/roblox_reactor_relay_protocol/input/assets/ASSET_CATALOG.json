@@ -1,0 +1,14 @@
+{
+  "path_base": "input/",
+  "assets": [
+    {
+      "path": "starter-project/native/ReactorRelayStart.rbxlx",
+      "purpose": "Original supplied asset or blank starter",
+      "source": "Original public input",
+      "license": "Original legal/ and attribution notices retained in starter-project/native/"
+    }
+  ],
+  "native_catalogs": [
+    "starter-project/native/ROBLOX_STUDIO_ENGINE_TOOL_INTERFACE_CATALOG.md"
+  ]
+}

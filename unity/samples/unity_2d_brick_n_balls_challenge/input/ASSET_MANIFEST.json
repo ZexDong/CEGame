@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "source": "Fixed MIT-licensed media supplied with this benchmark input. Provenance is preserved in legal/.",
+  "protected_root": "Assets/TaskAssets",
+  "files": [
+    {"path":"Assets/TaskAssets/Resources/BrickChallenge/Audio/Ball_Lost.wav","role":"ball lost sound","sha256":"c3c57af2e0866acd3311635b79f904e644c2768b72e34b22a1bff743036ee3a0","bytes":4730},
+    {"path":"Assets/TaskAssets/Resources/BrickChallenge/Audio/Ball_Shoot.wav","role":"launch sound","sha256":"86fc2b84137556f65b94d0da80de210459852ad61ffd1f107119d2bde761564f","bytes":9832},
+    {"path":"Assets/TaskAssets/Resources/BrickChallenge/Audio/Brick_Destroyed.wav","role":"brick destroyed sound","sha256":"4e2dea62e5804b066383dd78b918e8cc3ba200f76253fab4ff03108ab2448a95","bytes":22110},
+    {"path":"Assets/TaskAssets/Resources/BrickChallenge/Audio/Brick_Hit.wav","role":"brick hit sound","sha256":"d64bd3aceaa02973315be0dd9b79d8f5bb4b75cbc4d685c627774c3cfb5653c3","bytes":4810},
+    {"path":"Assets/TaskAssets/Resources/BrickChallenge/Audio/Button_Clicked.wav","role":"button sound","sha256":"8e426e7ee324faa86c6043cb82afdcb4a62f15d7c5549466be1bfe4ca1c929b9","bytes":6522},
+    {"path":"Assets/TaskAssets/Resources/BrickChallenge/Audio/Wall_Hit.wav","role":"wall rebound sound","sha256":"75cc4bbd314a13b6bc988b2ce367bd0f5fb1290769199bc5240dbcfb4739a66d","bytes":5466},
+    {"path":"Assets/TaskAssets/Resources/BrickChallenge/Images/Gameplay/Ball.png","role":"ball sprite","sha256":"60909143a05ef8d0e1ebb5cfdc961408e1247dd4f00e3a1c653012baed214ec3","bytes":672},
+    {"path":"Assets/TaskAssets/Resources/BrickChallenge/Images/Gameplay/Brick.png","role":"brick sprite","sha256":"3afcf0a051ca00d2d70f6bb8b77ce92c191b6b847ecee72c71c84722bbc75204","bytes":157},
+    {"path":"Assets/TaskAssets/Resources/BrickChallenge/Images/Gameplay/Cannon_Base.png","role":"launcher base sprite","sha256":"db5cef9d1876c07aead700f1f5652400237e0e6188794d450c07777bb12c34e8","bytes":199},
+    {"path":"Assets/TaskAssets/Resources/BrickChallenge/Images/Gameplay/Cannon_Pipe.png","role":"launcher pipe sprite","sha256":"0e7716bac1d57ddb7b0ebb8c530f2489d34e260611a0a62d5e4d951d12a30e02","bytes":145},
+    {"path":"Assets/TaskAssets/Resources/BrickChallenge/Images/Gameplay/Wall_Big.png","role":"side wall sprite","sha256":"45674beda5708620821bb9969d3e629a85f22caf42e53e8e5e995503f8921825","bytes":593},
+    {"path":"Assets/TaskAssets/Resources/BrickChallenge/Images/Gameplay/Wall_Small.png","role":"top wall sprite","sha256":"1805ec20ef802b3eecb8ee470d31c0615ab6d36edea6d9dcf61a484f389f6561","bytes":560},
+    {"path":"Assets/TaskAssets/Resources/BrickChallenge/Images/UI/Button_Clicked.png","role":"pressed button sprite","sha256":"91fbaa6c2568e832fc2f72c574535d55673e8a2a7f5df9da260ca449c5c228f2","bytes":785},
+    {"path":"Assets/TaskAssets/Resources/BrickChallenge/Images/UI/Button_Default.png","role":"default button sprite","sha256":"f0e76774d7a6727144d42f65433b0c63f5474526900794bf97adbe38823b6fb0","bytes":748},
+    {"path":"Assets/TaskAssets/Resources/BrickChallenge/Images/UI/Button_Hover.png","role":"hover button sprite","sha256":"5cb0ab21ffb2e35c31abcaeddcabc654775d88cc1b86c950341f42d98b503e7c","bytes":1080}
+  ]
+}

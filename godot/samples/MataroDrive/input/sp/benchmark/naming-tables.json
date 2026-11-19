@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "task_id": "motaro_drive_procedural_reconstruction",
+  "coordinate_space": "visible viewport pixels; x right, y down; origin top-left",
+  "level_width_cells": 1280,
+  "level_height_cells": 720,
+  "slots": [
+    "cash",
+    "combo",
+    "level",
+    "total_levels",
+    "completed_levels",
+    "stars",
+    "owned_cars",
+    "best_distance",
+    "distance",
+    "gems",
+    "profile_cash",
+    "lifetime_cash",
+    "max_combo",
+    "equipped_car",
+    "music_enabled",
+    "sound_enabled",
+    "shield_active",
+    "magnet_seconds",
+    "level_1_stars",
+    "level_2_stars",
+    "level_3_stars",
+    "level_4_stars",
+    "level_5_stars",
+    "level_6_stars",
+    "level_7_stars",
+    "level_8_stars",
+    "level_9_stars",
+    "level_10_stars",
+    "level_11_stars",
+    "level_12_stars",
+    "level_13_stars",
+    "level_14_stars",
+    "level_15_stars",
+    "owns_amber",
+    "owns_crimson",
+    "owns_azure",
+    "owns_emerald",
+    "owns_violet",
+    "owns_graphite",
+    "achievement_first_sale",
+    "achievement_big_spender",
+    "achievement_full_garage",
+    "achievement_star_collector",
+    "achievement_long_hauler",
+    "achievement_combo_master",
+    "achievement_gem_hunter",
+    "achievement_legend"
+  ],
+  "entities": [
+    {
+      "kind": "player",
+      "states": [
+        "normal",
+        "boosted",
+        "shielded",
+        "magnetized",
+        "respawned"
+      ]
+    },
+    {
+      "kind": "coin",
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "kind": "gem",
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "kind": "cone",
+      "states": [
+        "normal",
+        "hit"
+      ]
+    },
+    {
+      "kind": "enemy",
+      "states": [
+        "normal",
+        "hit"
+      ]
+    },
+    {
+      "kind": "powerup",
+      "states": [
+        "magnet",
+        "shield"
+      ]
+    },
+    {
+      "kind": "boost_pad",
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "kind": "spring",
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "kind": "moving_platform",
+      "states": [
+        "normal"
+      ]
+    },
+    {
+      "kind": "goal",
+      "states": [
+        "normal",
+        "reached"
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "kind": "play_button"
+    },
+    {
+      "kind": "levels_button"
+    },
+    {
+      "kind": "endless_button"
+    },
+    {
+      "kind": "hill_climb_button"
+    },
+    {
+      "kind": "garage_button"
+    },
+    {
+      "kind": "settings_button"
+    },
+    {
+      "kind": "trophies_button"
+    },
+    {
+      "kind": "level_button"
+    },
+    {
+      "kind": "car_button"
+    },
+    {
+      "kind": "music_button"
+    },
+    {
+      "kind": "sound_button"
+    },
+    {
+      "kind": "pause_button"
+    },
+    {
+      "kind": "resume_button"
+    },
+    {
+      "kind": "next_button"
+    },
+    {
+      "kind": "retry_button"
+    },
+    {
+      "kind": "restart_button"
+    },
+    {
+      "kind": "main_menu_button"
+    },
+    {
+      "kind": "continue_button"
+    }
+  ],
+  "controls": {
+    "movement_template": "continuous hold plus jump and visible clicks",
+    "keys": {
+      "left": "A or Left Arrow",
+      "right": "D or Right Arrow",
+      "jump": "Space or Up Arrow",
+      "pause": "Escape"
+    }
+  },
+  "observation_details": {
+    "target_identity": "level_button has level_number 1..15; car_button has car_index 0..5; repeated targets have stable id",
+    "absent_context": "Numeric zero outside applicable context; not_ready has unavailable zero values. Profile values remain present after loading."
+  }
+}

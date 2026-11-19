@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "task_id": "defold_timelooper_v2",
+  "coordinate_space": {
+    "name": "world_center_y_up",
+    "dimensions": 2,
+    "origin": "bottom-left",
+    "axes": ["x increases to the right", "y increases upward"],
+    "units": "game-view pixels"
+  },
+  "target_rect_space": {
+    "width": 960,
+    "height": 540,
+    "origin": "bottom-left",
+    "units": "game-view pixels"
+  },
+  "seed_entry": "not applicable; the required level and echo schedule are deterministic",
+  "slots": [
+    "run_serial",
+    "elapsed_milliseconds",
+    "next_echo_milliseconds",
+    "gems_collected",
+    "gem_total",
+    "echoes_active",
+    "player_velocity_x",
+    "player_velocity_y",
+    "player_on_ground",
+    "button_pressed",
+    "door_open",
+    "exit_active",
+    "loss_reason_code"
+  ],
+  "entities": [
+    { "kind": "player", "geometry": "position", "states": ["grounded", "airborne"] },
+    { "kind": "echo", "geometry": "position", "states": ["replaying", "frozen", "stopped"] },
+    { "kind": "platform", "geometry": "position", "states": ["solid"] },
+    { "kind": "gem", "geometry": "position", "states": ["available", "collected"] },
+    { "kind": "spike", "geometry": "position", "states": ["dangerous"] },
+    { "kind": "pressure_button", "geometry": "position", "states": ["released", "pressed"] },
+    { "kind": "controlled_door", "geometry": "position", "states": ["closed", "open"] },
+    { "kind": "exit", "geometry": "position", "states": ["locked", "active"] }
+  ],
+  "targets": [],
+  "honesty": {
+    "phase_ocr_any": {
+      "menu": ["GEM-BOUND PLATFORM PUZZLE", "BEGIN LOOP", "RECORD YOUR ROUTE", "Start loop"],
+      "playing": ["GEMS", "GEM", "gems", "0/5", "0 / 5"],
+      "paused": ["PAUSED", "Pause"],
+      "won": ["COMPLETE", "WIN", "Close level", "Success"],
+      "lost": ["GAME OVER", "RETRY", "Failure", "Retry", "LOOP BROKEN", "ECHO COLLISION", "touched a spike", "Retry and change your timing"]
+    }
+  },
+  "controls": {
+    "movement_template": "continuous_platformer",
+    "keys": {
+      "left": ["A", "LeftArrow"],
+      "right": ["D", "RightArrow"],
+      "jump": ["W", "UpArrow", "Space", "X"],
+      "confirm": "Enter",
+      "restart": "R",
+      "pause_or_back": "Escape"
+    }
+  }
+}

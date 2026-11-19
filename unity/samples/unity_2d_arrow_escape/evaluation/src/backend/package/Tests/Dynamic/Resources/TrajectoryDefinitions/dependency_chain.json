@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "id": "dependency_chain",
+  "title": "Locked attempts and full-exit key-to-lock-to-lock propagation through real input",
+  "steps": [
+    {
+      "step_id": "setup.scene",
+      "operation": "load_canonical_scene",
+      "target": "scene:ArrowEscape",
+      "check_ids": [
+        "setup.scene_load",
+        "setup.probe",
+        "setup.playable"
+      ]
+    },
+    {
+      "step_id": "declared.scoring_checks",
+      "operation": "observe_visible_player_journeys",
+      "target": "running_scene",
+      "check_ids": [
+        "dependency.next.modes.input.top_hit",
+        "dependency.next.chain.input.top_hit",
+        "dependency.loaded.navigation",
+        "dependency.loaded.badge_content",
+        "dependency.locked_click.input.top_hit",
+        "dependency.locked_state.outcome",
+        "dependency.key_click.input.top_hit",
+        "dependency.key_moving.lock_stays_locked",
+        "dependency.key_exit.reached",
+        "dependency.lock_b_available.badges",
+        "dependency.lock_b_click.input.top_hit",
+        "dependency.lock_b_moving.final_locked",
+        "dependency.lock_b_exit.reached",
+        "dependency.lock_c_available.state",
+        "dependency.lock_c_click.input.top_hit",
+        "dependency.lock_c_exit.reached",
+        "dependency.won.reached"
+      ]
+    }
+  ]
+}

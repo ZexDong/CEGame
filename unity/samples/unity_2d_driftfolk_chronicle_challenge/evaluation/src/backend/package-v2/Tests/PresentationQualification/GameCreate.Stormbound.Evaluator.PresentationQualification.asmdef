@@ -1,0 +1,12 @@
+{
+  "name": "GameCreate.Stormbound.Evaluator.PresentationQualification",
+  "references": [
+    "GameCreate.Stormbound.Evaluator.Core",
+    "UnityEngine.UI"
+  ],
+  "includePlatforms": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": false
+}

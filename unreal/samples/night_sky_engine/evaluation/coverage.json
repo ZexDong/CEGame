@@ -1,0 +1,2375 @@
+{
+  "schema_version": "2.0",
+  "coverage_status": "not_reviewed",
+  "gdd_sha256": "3442d323126d9bbf908c05c90b06a855d267e0c96468736d8aba14d6de719f68",
+  "limitations": [
+    "Native requirement mapping is preserved; independent semantic coverage and targeted positive/negative/equivalent game fixtures have not been qualified."
+  ],
+  "requirements": [
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The game process has started.",
+      "check_ids": [
+        "D1-03",
+        "D2-01",
+        "D4-01",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Natural entry.",
+      "check_ids": [
+        "D1-03",
+        "D2-01",
+        "D4-01",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.3.1",
+      "field": "Required Result",
+      "obligation": "Within 2 seconds of the first stable rendered frame, enter one bounded side-view arena with exactly one player fighter on the left and one visually distinct rival fighter on the right.",
+      "check_ids": [
+        "D1-03",
+        "D2-01",
+        "D4-01",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.3.2",
+      "field": "Required Result",
+      "obligation": "Both fighters are simultaneously visible, stand on the same readable floor, face each other, and begin separated by at least two fighter widths.",
+      "check_ids": [
+        "D1-03",
+        "D2-01",
+        "D4-01",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Do not require a menu, character select, console command, network service, or hidden answer control before the round is playable.",
+      "check_ids": [
+        "D1-03",
+        "D2-01",
+        "D4-01",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Show both fighters, arena bounds or walls, the floor, the control legend `A/D Move  W Jump  J Strike  K Bolt  S Block  R Restart`, and the HUD required by `INTERFACE-01`.",
+      "check_ids": [
+        "D1-03",
+        "D2-01",
+        "D4-01",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Restart and Reopen return to the same direct playable arrangement.",
+      "check_ids": [
+        "D1-03",
+        "D2-01",
+        "D4-01",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.6.2",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Side-view 2.5D or stylized 3D presentation is allowed, using the supplied 3D fighters and animations under `ASSET-01` and `ASSET-02`.",
+      "check_ids": [
+        "D1-03",
+        "D2-01",
+        "D4-01",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Phase is active; the player is grounded and not in block, hit reaction, or an attack commitment.",
+      "check_ids": [
+        "D2-02",
+        "D3-01",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Hold `A` or `D`, then release.",
+      "check_ids": [
+        "D2-02",
+        "D3-01",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.3.1",
+      "field": "Required Result",
+      "obligation": "Move continuously left or right while held, remain inside the arena, stop horizontal movement after release, and always face toward the rival.",
+      "check_ids": [
+        "D2-02",
+        "D3-01",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "The player cannot pass through the rival, cross an arena wall, continue sliding after release, or turn away from the rival.",
+      "check_ids": [
+        "D2-02",
+        "D3-01",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Movement must visibly change position; the fighter returns to an idle presentation after release.",
+      "check_ids": [
+        "D2-02",
+        "D3-01",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Opposite-direction input reverses movement without leaving the arena.",
+      "check_ids": [
+        "D2-02",
+        "D3-01",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.6.2",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Restart restores the initial position.",
+      "check_ids": [
+        "D2-02",
+        "D3-01",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Phase is active and the player is grounded.",
+      "check_ids": [
+        "D2-03",
+        "D3-02",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Press `W`.",
+      "check_ids": [
+        "D2-03",
+        "D3-02",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.3.1",
+      "field": "Required Result",
+      "obligation": "Begin one visible jump, become airborne, then land on the arena floor and return to grounded state.",
+      "check_ids": [
+        "D2-03",
+        "D3-02",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "A second `W` press while airborne cannot create an additional jump or reset upward motion.",
+      "check_ids": [
+        "D2-03",
+        "D3-02",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Show a distinct airborne pose or vertical displacement and a visible landing.",
+      "check_ids": [
+        "D2-03",
+        "D3-02",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Repeated grounded presses may create later jumps.",
+      "check_ids": [
+        "D2-03",
+        "D3-02",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.6.2",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Restart removes any airborne motion.",
+      "check_ids": [
+        "D2-03",
+        "D3-02",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Phase is active.",
+      "check_ids": [
+        "D2-04",
+        "D3-03",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Press `J`.",
+      "check_ids": [
+        "D2-04",
+        "D3-03",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.3.1",
+      "field": "Required Result",
+      "obligation": "Attempt one forward close strike.",
+      "check_ids": [
+        "D2-04",
+        "D3-03",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.3.2",
+      "field": "Required Result",
+      "obligation": "If the rival is in close range at the strike's single impact moment, reduce rival health by exactly 25 and resolve exactly one rival hit reaction.",
+      "check_ids": [
+        "D2-04",
+        "D3-03",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "One press cannot deal damage more than once, cannot damage from outside close range, and cannot reduce health below 0.",
+      "check_ids": [
+        "D2-04",
+        "D3-03",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Show a visible strike action.",
+      "check_ids": [
+        "D2-04",
+        "D3-03",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.5.2",
+      "field": "Player-Visible Feedback",
+      "obligation": "On hit, show rival hit reaction plus the hit feedback required by `INTERFACE-02`; on miss, show the miss feedback required by `COMBAT-03`.",
+      "check_ids": [
+        "D2-04",
+        "D3-03",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Further strikes may be attempted after the visible strike commitment ends.",
+      "check_ids": [
+        "D2-04",
+        "D3-03",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.6.2",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Restart cancels an in-progress strike and restores health.",
+      "check_ids": [
+        "D2-04",
+        "D3-03",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-02",
+      "obligation_id": "COMBAT-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Phase is active and the bolt is ready.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-02",
+      "obligation_id": "COMBAT-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Press `K`.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-02",
+      "obligation_id": "COMBAT-02.3.1",
+      "field": "Required Result",
+      "obligation": "Create exactly one visible player energy bolt moving toward the rival, mark the bolt unavailable for 1.0 second, and keep at most one player bolt active.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-02",
+      "obligation_id": "COMBAT-02.3.2",
+      "field": "Required Result",
+      "obligation": "A bolt that reaches the rival reduces rival health by exactly 15 once, resolves one hit reaction, and is removed.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-02",
+      "obligation_id": "COMBAT-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "The bolt cannot damage more than once, cannot persist after impact or leaving the arena, cannot pass through the rival and later damage again, and cannot reduce health below 0.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-02",
+      "obligation_id": "COMBAT-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Show the travelling bolt, a visible ready/cooldown state, and hit feedback when it connects.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-02",
+      "obligation_id": "COMBAT-02.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "A new bolt may be fired only after no earlier player bolt remains and the 1.0-second cooldown has expired.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-02",
+      "obligation_id": "COMBAT-02.6.2",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Restart removes every bolt and makes the action ready.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-03",
+      "obligation_id": "COMBAT-03.1.1",
+      "field": "Preconditions",
+      "obligation": "Phase is active.",
+      "check_ids": [
+        "D2-05",
+        "D3-05",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-03",
+      "obligation_id": "COMBAT-03.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "A close strike reaches its impact moment outside close range, or `K` is pressed while a bolt is active or its cooldown has not expired.",
+      "check_ids": [
+        "D2-05",
+        "D3-05",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-03",
+      "obligation_id": "COMBAT-03.3.1",
+      "field": "Required Result",
+      "obligation": "Preserve both fighters' health and object counts except for the normal removal of a missed bolt at the arena boundary.",
+      "check_ids": [
+        "D2-05",
+        "D3-05",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-03",
+      "obligation_id": "COMBAT-03.3.2",
+      "field": "Required Result",
+      "obligation": "A rejected `K` press creates no new bolt and does not reset or extend the existing cooldown.",
+      "check_ids": [
+        "D2-05",
+        "D3-05",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-03",
+      "obligation_id": "COMBAT-03.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Misses and rejected inputs cannot cause hidden damage, duplicate projectiles, or false hit reactions.",
+      "check_ids": [
+        "D2-05",
+        "D3-05",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-03",
+      "obligation_id": "COMBAT-03.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "A close miss shows a brief `WHIFF` indication; a rejected bolt shows a brief `COOLDOWN` indication.",
+      "check_ids": [
+        "D2-05",
+        "D3-05",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-03",
+      "obligation_id": "COMBAT-03.5.2",
+      "field": "Player-Visible Feedback",
+      "obligation": "Neither indication may claim a hit.",
+      "check_ids": [
+        "D2-05",
+        "D3-05",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-03",
+      "obligation_id": "COMBAT-03.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Repeated rejected presses remain side-effect free.",
+      "check_ids": [
+        "D2-05",
+        "D3-05",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-03",
+      "obligation_id": "COMBAT-03.6.2",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Restart clears both indications.",
+      "check_ids": [
+        "D2-05",
+        "D3-05",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-01",
+      "obligation_id": "DEFENSE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Phase is active.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-01",
+      "obligation_id": "DEFENSE-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Natural time progression.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-01",
+      "obligation_id": "DEFENSE-01.3.1",
+      "field": "Required Result",
+      "obligation": "The stationary rival begins its first pulse telegraph 3.0 seconds after the round becomes active and begins each later telegraph 3.0 seconds after the previous pulse resolves.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-01",
+      "obligation_id": "DEFENSE-01.3.2",
+      "field": "Required Result",
+      "obligation": "Each telegraph lasts 0.75 seconds, then one pulse resolves against the player.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-01",
+      "obligation_id": "DEFENSE-01.3.3",
+      "field": "Required Result",
+      "obligation": "An unblocked pulse reduces player health by exactly 20 once.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-01",
+      "obligation_id": "DEFENSE-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "The rival cannot chase, jump, fire extra pulses, deal damage before the telegraph finishes, deal multiple damage from one pulse, or continue its cadence after a terminal result.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-01",
+      "obligation_id": "DEFENSE-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "During the full telegraph, show a clearly visible warning on or around the rival.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-01",
+      "obligation_id": "DEFENSE-01.5.2",
+      "field": "Player-Visible Feedback",
+      "obligation": "On an unblocked hit, show player hit reaction and the feedback required by `INTERFACE-02`.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-01",
+      "obligation_id": "DEFENSE-01.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Timing tolerance is plus or minus 0.15 seconds for the 3.0-second interval and plus or minus 0.10 seconds for the 0.75-second telegraph.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-01",
+      "obligation_id": "DEFENSE-01.6.2",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Restart begins a new cadence with no inherited pulse.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-02",
+      "obligation_id": "DEFENSE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Phase is active.",
+      "check_ids": [
+        "D2-07",
+        "D3-07",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-02",
+      "obligation_id": "DEFENSE-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Hold `S` before a rival pulse impact and keep it held through the impact.",
+      "check_ids": [
+        "D2-07",
+        "D3-07",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-02",
+      "obligation_id": "DEFENSE-02.3.1",
+      "field": "Required Result",
+      "obligation": "Enter a visible blocking state while held.",
+      "check_ids": [
+        "D2-07",
+        "D3-07",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-02",
+      "obligation_id": "DEFENSE-02.3.2",
+      "field": "Required Result",
+      "obligation": "A pulse resolved during that state deals exactly 0 health damage, produces one guard resolution, and then continues the normal rival cadence.",
+      "check_ids": [
+        "D2-07",
+        "D3-07",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-02",
+      "obligation_id": "DEFENSE-02.3.3",
+      "field": "Required Result",
+      "obligation": "Releasing `S` returns the player to idle if no other state applies.",
+      "check_ids": [
+        "D2-07",
+        "D3-07",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-02",
+      "obligation_id": "DEFENSE-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Blocking cannot heal, damage the rival, create a projectile, move the player, or remain active after `S` is released.",
+      "check_ids": [
+        "D2-07",
+        "D3-07",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-02",
+      "obligation_id": "DEFENSE-02.4.2",
+      "field": "Prohibited Result",
+      "obligation": "A press begun after pulse impact cannot retroactively block that pulse.",
+      "check_ids": [
+        "D2-07",
+        "D3-07",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-02",
+      "obligation_id": "DEFENSE-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Show an unmistakable block pose while held and a brief guard flash plus `BLOCKED` feedback when the pulse resolves.",
+      "check_ids": [
+        "D2-07",
+        "D3-07",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-02",
+      "obligation_id": "DEFENSE-02.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Holding block across multiple later pulses may block each pulse.",
+      "check_ids": [
+        "D2-07",
+        "D3-07",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFENSE-02",
+      "obligation_id": "DEFENSE-02.6.2",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Restart clears block even if the key was held before restart.",
+      "check_ids": [
+        "D2-07",
+        "D3-07",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-01",
+      "obligation_id": "RULE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A fresh round begins.",
+      "check_ids": [
+        "D3-08"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-01",
+      "obligation_id": "RULE-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Natural round initialization and later damage.",
+      "check_ids": [
+        "D3-08"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-01",
+      "obligation_id": "RULE-01.3.1",
+      "field": "Required Result",
+      "obligation": "Set player health and rival health to exactly 100.",
+      "check_ids": [
+        "D3-08"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-01",
+      "obligation_id": "RULE-01.3.2",
+      "field": "Required Result",
+      "obligation": "Apply only the damage values defined by `COMBAT-01`, `COMBAT-02`, and `DEFENSE-01`; clamp both health values to the inclusive range 0 through 100; and update health truth and HUD in the same visible update.",
+      "check_ids": [
+        "D3-08"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-01",
+      "obligation_id": "RULE-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Health cannot become negative, exceed 100, change without a defined damage event or restart, or disagree with the visible HUD.",
+      "check_ids": [
+        "D3-08"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-01",
+      "obligation_id": "RULE-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Show numeric health and proportional bars for both fighters.",
+      "check_ids": [
+        "D3-08"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-01",
+      "obligation_id": "RULE-01.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Repetition remains deterministic under the same input timing.",
+      "check_ids": [
+        "D3-08"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-01",
+      "obligation_id": "RULE-01.6.2",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Restart and Reopen restore both values to 100.",
+      "check_ids": [
+        "D3-08"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-02",
+      "obligation_id": "RULE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Phase is active.",
+      "check_ids": [
+        "D2-01",
+        "D3-06",
+        "D3-08"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-02",
+      "obligation_id": "RULE-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Natural update.",
+      "check_ids": [
+        "D2-01",
+        "D3-06",
+        "D3-08"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-02",
+      "obligation_id": "RULE-02.3.1",
+      "field": "Required Result",
+      "obligation": "Keep exactly one player fighter and one rival fighter.",
+      "check_ids": [
+        "D2-01",
+        "D3-06",
+        "D3-08"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-02",
+      "obligation_id": "RULE-02.3.2",
+      "field": "Required Result",
+      "obligation": "The rival remains at its initial horizontal position except for a short visual hit reaction; the player cannot push it to a new resting position.",
+      "check_ids": [
+        "D2-01",
+        "D3-06",
+        "D3-08"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-02",
+      "obligation_id": "RULE-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Do not spawn replacement fighters, helper fighters, or hidden damage actors that persist as additional fighters.",
+      "check_ids": [
+        "D2-01",
+        "D3-06",
+        "D3-08"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-02",
+      "obligation_id": "RULE-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Both fighters remain identifiable and visible except for momentary effects that do not hide the duel.",
+      "check_ids": [
+        "D2-01",
+        "D3-06",
+        "D3-08"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-02",
+      "obligation_id": "RULE-02.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Restart removes transient combat objects and restores the same two-fighter arrangement.",
+      "check_ids": [
+        "D2-01",
+        "D3-06",
+        "D3-08"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A round exists.",
+      "check_ids": [
+        "D2-10",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Natural state changes.",
+      "check_ids": [
+        "D2-10",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.3.1",
+      "field": "Required Result",
+      "obligation": "Continuously show player health, rival health, and bolt state as `READY` or a remaining cooldown indication.",
+      "check_ids": [
+        "D2-10",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.3.2",
+      "field": "Required Result",
+      "obligation": "During a terminal result, continue showing the final health values.",
+      "check_ids": [
+        "D2-10",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "The HUD cannot display stale, rounded-to-a-different-damage-step, or fabricated values.",
+      "check_ids": [
+        "D2-10",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Use readable labels and bars that distinguish player from rival at 1280 x 720.",
+      "check_ids": [
+        "D2-10",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Restart immediately restores `100`, `100`, and `READY`.",
+      "check_ids": [
+        "D2-10",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.6.2",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Reopen shows the same fresh values.",
+      "check_ids": [
+        "D2-10",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-02",
+      "obligation_id": "INTERFACE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Phase is active or has just become terminal.",
+      "check_ids": [
+        "D2-10",
+        "D5-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-02",
+      "obligation_id": "INTERFACE-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "A strike, bolt, pulse, block, miss, cooldown rejection, or KO resolves.",
+      "check_ids": [
+        "D2-10",
+        "D5-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-02",
+      "obligation_id": "INTERFACE-02.3.1",
+      "field": "Required Result",
+      "obligation": "Provide feedback matching the resolution: visible hit flash/reaction for damage, guard flash plus `BLOCKED` for a block, `WHIFF` for an out-of-range close strike, `COOLDOWN` for a rejected bolt, and a result banner for KO.",
+      "check_ids": [
+        "D2-10",
+        "D5-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-02",
+      "obligation_id": "INTERFACE-02.3.2",
+      "field": "Required Result",
+      "obligation": "Short-lived nonterminal text remains visible for at least 0.30 seconds and no longer than 1.25 seconds.",
+      "check_ids": [
+        "D2-10",
+        "D5-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-02",
+      "obligation_id": "INTERFACE-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Feedback cannot claim damage, block, or KO when the corresponding state transition did not occur.",
+      "check_ids": [
+        "D2-10",
+        "D5-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-02",
+      "obligation_id": "INTERFACE-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Feedback is readable without opening logs or developer tools.",
+      "check_ids": [
+        "D2-10",
+        "D5-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-02",
+      "obligation_id": "INTERFACE-02.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Later feedback may replace earlier short-lived feedback.",
+      "check_ids": [
+        "D2-10",
+        "D5-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-02",
+      "obligation_id": "INTERFACE-02.6.2",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Restart clears every transient and terminal message.",
+      "check_ids": [
+        "D2-10",
+        "D5-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Phase is active and at least one fighter has positive health.",
+      "check_ids": [
+        "D2-08",
+        "D3-09",
+        "D4-02",
+        "D4-03",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "A defined damage event reduces one fighter to 0.",
+      "check_ids": [
+        "D2-08",
+        "D3-09",
+        "D4-02",
+        "D4-03",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.3.1",
+      "field": "Required Result",
+      "obligation": "Resolve exactly one result: rival health 0 and player health above 0 produces player win; player health 0 and rival health above 0 produces rival win.",
+      "check_ids": [
+        "D2-08",
+        "D3-09",
+        "D4-02",
+        "D4-03",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.3.2",
+      "field": "Required Result",
+      "obligation": "If both reach 0 in the same update, produce `DRAW`.",
+      "check_ids": [
+        "D2-08",
+        "D3-09",
+        "D4-02",
+        "D4-03",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.3.3",
+      "field": "Required Result",
+      "obligation": "Show the matching banner `PLAYER WINS`, `RIVAL WINS`, or `DRAW`.",
+      "check_ids": [
+        "D2-08",
+        "D3-09",
+        "D4-02",
+        "D4-03",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "The result cannot contradict final health and cannot fire more than once for the same round.",
+      "check_ids": [
+        "D2-08",
+        "D3-09",
+        "D4-02",
+        "D4-03",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Keep final health visible and show the result banner within 0.5 seconds of the decisive damage update.",
+      "check_ids": [
+        "D2-08",
+        "D3-09",
+        "D4-02",
+        "D4-03",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "`R` remains available through `LIFECYCLE-01`.",
+      "check_ids": [
+        "D2-08",
+        "D3-09",
+        "D4-02",
+        "D4-03",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.6.2",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Reopen follows `LIFECYCLE-02`.",
+      "check_ids": [
+        "D2-08",
+        "D3-09",
+        "D4-02",
+        "D4-03",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-02",
+      "obligation_id": "TERMINAL-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A result from `TERMINAL-01` has resolved.",
+      "check_ids": [
+        "D2-08",
+        "D3-10",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-02",
+      "obligation_id": "TERMINAL-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Natural time progression and any `A`, `D`, `W`, `J`, `K`, or `S` input.",
+      "check_ids": [
+        "D2-08",
+        "D3-10",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-02",
+      "obligation_id": "TERMINAL-02.3.1",
+      "field": "Required Result",
+      "obligation": "Keep both health values, result, fighter count, and final positions stable until `R` is pressed or the process closes.",
+      "check_ids": [
+        "D2-08",
+        "D3-10",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-02",
+      "obligation_id": "TERMINAL-02.3.2",
+      "field": "Required Result",
+      "obligation": "Remove active bolts and cancel the rival cadence.",
+      "check_ids": [
+        "D2-08",
+        "D3-10",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-02",
+      "obligation_id": "TERMINAL-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Movement, jump, attack, block, damage, healing, new projectile creation, or a second result cannot occur during the terminal state.",
+      "check_ids": [
+        "D2-08",
+        "D3-10",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-02",
+      "obligation_id": "TERMINAL-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The result banner remains visible; fighters may hold a win, loss, or draw pose.",
+      "check_ids": [
+        "D2-08",
+        "D3-10",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-02",
+      "obligation_id": "TERMINAL-02.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Waiting at least 3.5 seconds after the result must not permit an old rival pulse to change the terminal state.",
+      "check_ids": [
+        "D2-08",
+        "D3-10",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A process is running in an active or terminal round.",
+      "check_ids": [
+        "D2-09",
+        "D4-04",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Press `R` once.",
+      "check_ids": [
+        "D2-09",
+        "D4-04",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.3.1",
+      "field": "Required Result",
+      "obligation": "Within 1.0 second, create a new round identity and restore the direct playable state: both health values 100, initial positions, grounded idle player, stationary idle rival, bolt ready, no projectile, no telegraph, no block, no transient feedback, no result, and a fresh 3.0-second rival cadence.",
+      "check_ids": [
+        "D2-09",
+        "D4-04",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "The new round cannot inherit health, motion, held block, cooldown, projectile, telegraph, result, or delayed damage from the old round.",
+      "check_ids": [
+        "D2-09",
+        "D4-04",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The HUD and arena visibly return to the fresh state.",
+      "check_ids": [
+        "D2-09",
+        "D4-04",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Repeated `R` presses create later clean rounds.",
+      "check_ids": [
+        "D2-09",
+        "D4-04",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.6.2",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Old delayed events remain unable to affect them.",
+      "check_ids": [
+        "D2-09",
+        "D4-04",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "The game process has been closed normally after any active or terminal progress.",
+      "check_ids": [
+        "D2-09",
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Start a new process using the documented runtime entry.",
+      "check_ids": [
+        "D2-09",
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.3.1",
+      "field": "Required Result",
+      "obligation": "Enter a fresh round with the same state listed in `LIFECYCLE-01`, a new process identity, and no retained match progress.",
+      "check_ids": [
+        "D2-09",
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "A new process cannot restore prior health, positions, cooldown, projectile, telegraph, result, or round identity.",
+      "check_ids": [
+        "D2-09",
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The first playable view is the fresh arena and HUD rather than a resume prompt.",
+      "check_ids": [
+        "D2-09",
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "This task has no save-progress requirement.",
+      "check_ids": [
+        "D2-09",
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The arena is visible.",
+      "check_ids": [
+        "D2-11",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Natural entry and continued play.",
+      "check_ids": [
+        "D2-11",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.3.1",
+      "field": "Required Result",
+      "obligation": "Both fighters visibly use the supplied `SKM_Manny` 3D skeletal character model, with its recognizable body shape and articulated limbs.",
+      "check_ids": [
+        "D2-11",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.3.2",
+      "field": "Required Result",
+      "obligation": "Keep the player and rival visually distinct through color or material treatment.",
+      "check_ids": [
+        "D2-11",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Primitives, sprites, flat images, unrelated meshes, or hidden/off-screen instances of the supplied model cannot substitute for either visible fighter.",
+      "check_ids": [
+        "D2-11",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.4.2",
+      "field": "Prohibited Result",
+      "obligation": "Merely importing or referencing the model is not sufficient.",
+      "check_ids": [
+        "D2-11",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The supplied model is the visible body of each fighter throughout the duel.",
+      "check_ids": [
+        "D2-11",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Reuse the same model for both fighters.",
+      "check_ids": [
+        "D2-11",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.6.2",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Color changes, uniform scaling, and supplemental effects are allowed; replacing its recognizable shape is not.",
+      "check_ids": [
+        "D2-11",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.6.3",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Restart and Reopen preserve this presentation.",
+      "check_ids": [
+        "D2-11",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A fighter is visible in a state already required by this section.",
+      "check_ids": [
+        "D2-12",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Idle; player movement, jump, strike, bolt, or block; either fighter receiving a hit.",
+      "check_ids": [
+        "D2-12",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.3.1",
+      "field": "Required Result",
+      "obligation": "Visibly animate the supplied model with `AS_manny_stand` for idle, `AS_manny_fwalk` for movement toward the rival, `AS_manny_bwalk` for movement away from the rival, `AS_manny_jump` for jumping, `AS_manny_5a` for the close strike, `AS_manny_fireball` for bolt casting, `AS_manny_standblock` for standing guard, and `AS_manny_hitstun` for hit reaction.",
+      "check_ids": [
+        "D2-12",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.3.2",
+      "field": "Required Result",
+      "obligation": "All eight supplied clips must be used for these roles.",
+      "check_ids": [
+        "D2-12",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "A static model, unrelated replacement animation, or clips that are imported but never visibly played do not satisfy this requirement.",
+      "check_ids": [
+        "D2-12",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.4.2",
+      "field": "Prohibited Result",
+      "obligation": "Damage-free whiffs and rejected actions cannot trigger a false hit reaction.",
+      "check_ids": [
+        "D2-12",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The supplied clips make the corresponding existing actions or states recognizable on screen.",
+      "check_ids": [
+        "D2-12",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.6.1",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Blending, looping, pose holds, and playback-rate adjustment are allowed when they preserve the recognizable motion and existing numbered rules.",
+      "check_ids": [
+        "D2-12",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.6.2",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Clip duration does not set gameplay timing, damage, collision, or cooldown.",
+      "check_ids": [
+        "D2-12",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.6.3",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Restart cancels an old action presentation and restores idle",
+      "check_ids": [
+        "D2-12",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.6.4",
+      "field": "Failure, Repetition, Restart, or Other Boundary",
+      "obligation": "Reopen retains the same asset use.",
+      "check_ids": [
+        "D2-12",
+        "D6-initial_duel",
+        "D6-engaged_duel",
+        "D6-jump_takeoff"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-01",
+      "obligation_id": "QUALITY-01.1.1",
+      "field": "Formal Requirement",
+      "obligation": "The project can start, run, exit, and start again by following the public instructions.",
+      "check_ids": [
+        "D1-01",
+        "D1-02",
+        "D1-03",
+        "D1-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-02",
+      "obligation_id": "QUALITY-02.1.1",
+      "field": "Formal Requirement",
+      "obligation": "The main flow uses normal player input and does not depend on an answer button, cheat entry, or direct gameplay-result call.",
+      "check_ids": [
+        "D4-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-03",
+      "obligation_id": "QUALITY-03.1.1",
+      "field": "Formal Requirement",
+      "obligation": "Critical entries, text, controls, and feedback are visible, discoverable, readable, and operable.",
+      "check_ids": [
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-04",
+      "obligation_id": "QUALITY-04.1.1",
+      "field": "Formal Requirement",
+      "obligation": "Player actions produce perceptible feedback, and visible feedback remains consistent with true game state.",
+      "check_ids": [
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-05",
+      "obligation_id": "QUALITY-05.1.1",
+      "field": "Formal Requirement",
+      "obligation": "No severe error blocks the main flow.",
+      "check_ids": [
+        "D1-02",
+        "D1-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-06",
+      "obligation_id": "QUALITY-06.1.1",
+      "field": "Formal Requirement",
+      "obligation": "Repeated runs from the same initial conditions produce substantially stable results.",
+      "check_ids": [
+        "D3-08"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    }
+  ],
+  "qualification_tests": [
+    "tests/test_distribution.py"
+  ],
+  "qualification_test_scope": "Distribution, evidence conversion and attribution invariants only; not gameplay semantic qualification."
+}

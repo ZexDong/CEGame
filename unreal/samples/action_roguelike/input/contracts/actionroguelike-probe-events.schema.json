@@ -1,0 +1,267 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:actionroguelike:evaluator:runtime:schema:probe-events:2.0.0",
+  "title": "ActionRoguelike implementation-neutral read-only probe event batch",
+  "description": "Typed, ordered read-only events associated with one process, round, and snapshot identity, including fail-closed stream continuity metadata.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "publisher", "identity", "coverage", "events", "evidence"],
+  "properties": {
+    "schema_version": { "const": "2.0.0" },
+    "publisher": { "$ref": "#/$defs/publisher" },
+    "identity": { "$ref": "#/$defs/batch_identity" },
+    "coverage": { "$ref": "#/$defs/stream_coverage" },
+    "events": {
+      "type": "array",
+      "maxItems": 4096,
+      "items": { "$ref": "#/$defs/event" }
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/evidence_ref" }
+    }
+  },
+  "$defs": {
+    "stable_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._+-]*$"
+    },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "relative_path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "pattern": "^[^/\\\\][^\\\\\\r\\n\\u0000]*$",
+      "allOf": [
+        { "not": { "pattern": "^[A-Za-z][A-Za-z0-9+.-]*:" } },
+        { "not": { "pattern": "(^|/)\\.\\.?(/|$)" } },
+        { "not": { "pattern": "//|/$" } }
+      ]
+    },
+    "evidence_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "media_type", "byte_length", "captured_monotonic_ms"],
+      "properties": {
+        "path": { "$ref": "#/$defs/relative_path" },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "media_type": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9!#$&^_.+-]+/[A-Za-z0-9!#$&^_.+-]+$"
+        },
+        "byte_length": { "type": "integer", "minimum": 0 },
+        "captured_monotonic_ms": { "type": "integer", "minimum": 0 },
+        "description": { "type": "string", "maxLength": 512 }
+      }
+    },
+    "publisher": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["publisher_id", "publisher_version", "readonly", "accepts_commands", "source_ref"],
+      "properties": {
+        "publisher_id": { "$ref": "#/$defs/stable_id" },
+        "publisher_version": { "$ref": "#/$defs/version" },
+        "readonly": { "const": true },
+        "accepts_commands": { "const": false },
+        "source_ref": { "$ref": "#/$defs/relative_path" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "source_ref", "probe_id", "probe_version"],
+      "properties": {
+        "kind": {
+          "enum": [
+            "readonly_probe", "input_receipt", "render_observation", "process_observation", "redacted_log", "derived_correlation"
+          ]
+        },
+        "source_ref": { "$ref": "#/$defs/relative_path" },
+        "probe_id": { "$ref": "#/$defs/stable_id" },
+        "probe_version": { "$ref": "#/$defs/version" }
+      }
+    },
+    "freshness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observed_monotonic_ms", "valid_for_ms"],
+      "properties": {
+        "observed_monotonic_ms": { "type": "integer", "minimum": 0 },
+        "valid_for_ms": { "type": "integer", "minimum": 1, "maximum": 600000 }
+      }
+    },
+    "record_observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["trust", "provenance", "freshness"],
+      "properties": {
+        "trust": { "enum": ["verified", "corroborated", "unreliable"] },
+        "provenance": { "$ref": "#/$defs/provenance" },
+        "freshness": { "$ref": "#/$defs/freshness" }
+      }
+    },
+    "trusted_record_observation": {
+      "allOf": [
+        { "$ref": "#/$defs/record_observation" },
+        { "properties": { "trust": { "enum": ["verified", "corroborated"] } } }
+      ]
+    },
+    "batch_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "process_token", "round_id", "snapshot_id", "batch_id", "sequence", "monotonic_ms", "observation"
+      ],
+      "properties": {
+        "process_token": { "$ref": "#/$defs/stable_id" },
+        "round_id": { "$ref": "#/$defs/stable_id" },
+        "snapshot_id": { "$ref": "#/$defs/stable_id" },
+        "batch_id": { "$ref": "#/$defs/stable_id" },
+        "sequence": { "type": "integer", "minimum": 0 },
+        "monotonic_ms": { "type": "integer", "minimum": 0 },
+        "observation": { "$ref": "#/$defs/trusted_record_observation" }
+      }
+    },
+    "stream_coverage": {
+      "description": "Cursor boundaries are half-open: this batch contains every sequence in [cursor_start, cursor_end). Head and tail watermarks equal those boundaries. A new epoch starts at cursor zero with no previous batch; later batches must link to the immediately preceding batch. Arithmetic and cross-batch continuity are enforced by the runtime validator.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stream_epoch", "previous_batch_id", "cursor_start", "cursor_end", "dropped_event_count", "head_watermark", "tail_watermark"
+      ],
+      "properties": {
+        "stream_epoch": { "$ref": "#/$defs/stable_id" },
+        "previous_batch_id": {
+          "oneOf": [
+            { "$ref": "#/$defs/stable_id" },
+            { "type": "null" }
+          ]
+        },
+        "cursor_start": { "type": "integer", "minimum": 0 },
+        "cursor_end": { "type": "integer", "minimum": 0 },
+        "dropped_event_count": { "type": "integer", "minimum": 0 },
+        "head_watermark": { "type": "integer", "minimum": 0 },
+        "tail_watermark": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "entity_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entity_id", "role"],
+      "properties": {
+        "entity_id": { "$ref": "#/$defs/stable_id" },
+        "role": {
+          "enum": [
+            "player", "enemy", "player_projectile", "enemy_projectile", "black_hole_projectile", "black_hole_field",
+            "teleport_process", "credits_pickup", "potion", "teleport_pickup", "physics_prop", "static_world",
+            "round", "ui", "executor"
+          ]
+        }
+      }
+    },
+    "vector3": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "z"],
+      "properties": { "x": { "type": "number" }, "y": { "type": "number" }, "z": { "type": "number" } }
+    },
+    "normalized_pointer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y"],
+      "properties": {
+        "x": { "type": "number", "minimum": 0, "maximum": 1 },
+        "y": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "payload": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": false,
+      "properties": {
+        "request_id": { "$ref": "#/$defs/stable_id" },
+        "operation": {
+          "enum": ["Start", "Stop", "Press", "Hold", "Release", "MovePointer", "Click", "FindVisibleTarget", "ReadState", "WaitUntil", "Capture"]
+        },
+        "input_control": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "action": {
+          "enum": [
+            "idle", "move", "jump_start", "airborne", "landing", "dash", "primary_cast", "black_hole_cast",
+            "teleport_cast", "melee_attack", "ranged_attack", "hit_reaction", "death"
+          ]
+        },
+        "process_type": {
+          "enum": ["player_projectile", "enemy_projectile", "black_hole_projectile", "black_hole_field", "teleport"]
+        },
+        "phase": { "enum": ["requested", "started", "active", "resolved", "ended", "cancelled", "blocked", "expired"] },
+        "round_phase": { "enum": ["in_progress", "victory", "failure"] },
+        "ai_mode": { "enum": ["seeking", "melee", "ranged"] },
+        "position_m": { "$ref": "#/$defs/vector3" },
+        "target_position_m": { "$ref": "#/$defs/vector3" },
+        "pointer_position_normalized": { "$ref": "#/$defs/normalized_pointer" },
+        "amount": { "type": "number" },
+        "value_before": { "type": "number" },
+        "value_after": { "type": "number" },
+        "resource": { "enum": ["health", "credits"] },
+        "available": { "type": "boolean" },
+        "successful": { "type": "boolean" },
+        "reason": { "type": "string", "minLength": 1, "maxLength": 512 },
+        "refresh_index": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "spawn_count": { "type": "integer", "minimum": 0 },
+        "terminal_result": { "enum": ["victory", "failure"] },
+        "ui_role": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-z][a-z0-9_]*$" },
+        "visible": { "type": "boolean" },
+        "text": { "type": "string", "maxLength": 1024 }
+      }
+    },
+    "event": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "event_id", "sequence", "monotonic_ms", "category", "event_type", "subject", "object", "payload", "observation", "evidence"
+      ],
+      "properties": {
+        "event_id": { "$ref": "#/$defs/stable_id" },
+        "sequence": { "type": "integer", "minimum": 0 },
+        "monotonic_ms": { "type": "integer", "minimum": 0 },
+        "category": {
+          "enum": ["process", "input", "world", "combat", "resource", "ability", "ai", "round", "ui", "lifecycle", "observation"]
+        },
+        "event_type": {
+          "enum": [
+            "process_started", "process_stopped", "input_requested", "input_sent", "input_received", "entity_spawned",
+            "entity_removed", "action_started", "action_ended", "projectile_spawned", "contact", "hit", "damage", "death",
+            "pickup", "resource_changed", "payment", "healing", "availability_changed", "ability_acquired", "ability_started",
+            "ability_ended", "ai_mode_changed", "refresh_opportunity", "round_phase_changed", "terminal_result",
+            "restart_requested", "restart_completed", "ui_visibility_changed", "ui_value_changed", "target_hit_test",
+            "capture_completed", "state_sampled"
+          ]
+        },
+        "subject": { "oneOf": [{ "$ref": "#/$defs/entity_ref" }, { "type": "null" }] },
+        "object": { "oneOf": [{ "$ref": "#/$defs/entity_ref" }, { "type": "null" }] },
+        "payload": { "$ref": "#/$defs/payload" },
+        "observation": { "$ref": "#/$defs/record_observation" },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/evidence_ref" }
+        }
+      }
+    }
+  }
+}

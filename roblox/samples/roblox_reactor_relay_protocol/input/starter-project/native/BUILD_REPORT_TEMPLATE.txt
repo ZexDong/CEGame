@@ -1,0 +1,11 @@
+Candidate: Reactor Relay Protocol
+Source directory:
+Build command: rojo build default.project.json -o ReactorRelayCandidate.rbxlx
+Build result: PASS / FAIL / NOT RUN
+Output path:
+Static checks actually run:
+Runtime verification: NOT RUN / PARTIAL / COMPLETED
+Runtime observations:
+Unverified requirements:
+Known issues:
+Tool versions:

@@ -1,0 +1,50 @@
+{
+  "schema_version": "3.0.0",
+  "protocol": "nightsky-visual-3.2.0",
+  "reference_source": "Actual normal-input UE 5.7.4 adapted source baseline TestMap; original remains unchanged.",
+  "source_commit": "f26e5a17de2d2de13ce9c3f1867170e2144f4cb0",
+  "frozen_before_candidate_run": true,
+  "source_capture_size": [
+    1920,
+    1080
+  ],
+  "delivered_size": [
+    1280,
+    720
+  ],
+  "transformation": "Uniform Lanczos resize of the complete 16:9 client frame; no crop or overlays.",
+  "vlm_rounds": 3,
+  "states": [
+    {
+      "id": "initial_duel",
+      "label": "Initial playable duel",
+      "reference": "reference/initial_duel.png",
+      "sha256": "ca52e3ceddc0ca5ee39f8eb713ac0552dc1e48a01c5986b2b185a584be046875",
+      "raw_source_sha256": "bf3d164737abcd0918f6a8d9f55a6da3c1b0644378534c090242d92270da7d68",
+      "candidate_capture": "d6-initial",
+      "capture_case": "visual-initial"
+    },
+    {
+      "id": "engaged_duel",
+      "label": "Fighters after moving into close range",
+      "reference": "reference/engaged_duel.png",
+      "sha256": "f5700ae6bfb4bb162634b64f5a28c043ce919a62963921bcb8b1afd5c54ef7c7",
+      "raw_source_sha256": "5aba607670f1cfc3472bd37bf105015a086f7043fd6ba5f1931280d4df69915b",
+      "candidate_capture": "d6-close",
+      "capture_case": "visual-close"
+    },
+    {
+      "id": "jump_takeoff",
+      "label": "Player jump take-off",
+      "reference": "reference/jump_takeoff.png",
+      "sha256": "96c67e751c4441a0e918f7d1daf576b9a518b386f4ab80d5681a0c4fd583ea88",
+      "raw_source_sha256": "fb12e85d853b4f753277e2594f6ca00d3fd53c8eba5745257bb933ec4f7de66a",
+      "candidate_capture": "d6-jump",
+      "capture_case": "visual-jump"
+    }
+  ],
+  "prompt_sha256": "24ab4493f270e838a83a7b0af3c91497090d0702d0669b3ac3fa00d5a8be0992",
+  "scoring_guide_sha256": "3e3e6cf19cbd5cda5667c44710f483fbba2ac30af7d098921acc811cf08dfdae",
+  "model_binding": "One explicitly configured endpoint/model per complete three-round run; returned identity must remain constant.",
+  "rubric_sha256": "478518531c2b98cf733fe4d96ed55d54875c9300c7aeb7d87028538c8fd16674"
+}

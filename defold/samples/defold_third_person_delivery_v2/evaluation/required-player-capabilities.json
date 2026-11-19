@@ -1,0 +1,75 @@
+{
+  "schema_version": 2,
+  "game": "defold_third_person_delivery_v2",
+  "runtime": {
+    "path": "framework/defold_player_runtime",
+    "min_version": "0.5"
+  },
+  "implementation_status": "included",
+  "normal_input_only": true,
+  "capabilities": [
+    {
+      "id": "process_lifecycle",
+      "status": "available",
+      "operations": [
+        "start",
+        "reopen",
+        "normal_exit"
+      ]
+    },
+    {
+      "id": "normal_keyboard_and_live_target_clicks",
+      "status": "available",
+      "operations": [
+        "press",
+        "hold",
+        "click",
+        "restart"
+      ]
+    },
+    {
+      "id": "public_continuous_3d_navigation",
+      "status": "available",
+      "operations": [
+        "target_reacquisition",
+        "contact_target",
+        "obstacle_approach",
+        "bounded_detour"
+      ]
+    },
+    {
+      "id": "dashboard_observation_and_assertions",
+      "status": "available",
+      "operations": [
+        "wait_until",
+        "snapshot",
+        "generic_state_time_and_xz_geometry_assertions"
+      ]
+    },
+    {
+      "id": "window_capture_and_narrow_ocr",
+      "status": "available",
+      "operations": [
+        "capture",
+        "local_ocr"
+      ]
+    },
+    {
+      "id": "randomized_dashboard_honesty",
+      "status": "available",
+      "operations": [
+        "phase_image_cross_check",
+        "no_input_phase_stability"
+      ],
+      "per_trajectory": 2
+    }
+  ],
+  "forbidden": [
+    "UDP or socket gameplay control",
+    "legacy log-state query",
+    "fixed world route",
+    "candidate internal names",
+    "state mutation or result forcing",
+    "VLM in D1-D5"
+  ]
+}

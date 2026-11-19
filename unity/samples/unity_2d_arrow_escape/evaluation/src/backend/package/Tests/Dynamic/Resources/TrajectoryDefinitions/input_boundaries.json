@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "id": "input_boundaries",
+  "title": "Input System press/release boundaries and one complete click",
+  "steps": [
+    {
+      "step_id": "setup.scene",
+      "operation": "load_canonical_scene",
+      "target": "scene:ArrowEscape",
+      "check_ids": [
+        "setup.scene_load",
+        "setup.probe",
+        "setup.playable"
+      ]
+    },
+    {
+      "step_id": "declared.scoring_checks",
+      "operation": "normal_pointer_boundary_sequences",
+      "target": "visible tutorial arrow",
+      "check_ids": [
+        "input.press_only.no_commit",
+        "input.outside_down_inside_up.no_commit",
+        "input.inside_down_outside_up.no_commit",
+        "input.full_click.single_commit"
+      ]
+    }
+  ]
+}

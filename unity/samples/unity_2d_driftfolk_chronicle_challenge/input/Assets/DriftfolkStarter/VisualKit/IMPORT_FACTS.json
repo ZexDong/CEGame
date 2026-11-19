@@ -1,0 +1,878 @@
+{
+  "schema_version": 1,
+  "unity": "6000.0.80f1",
+  "root": "Assets/DriftfolkStarter/VisualKit",
+  "runtime_png_count": 45,
+  "default_runtime_import": {
+    "texture_type": "Sprite (2D and UI)",
+    "sprite_mode": "Single",
+    "filter_mode": "Point",
+    "mip_maps": false,
+    "compression": "None",
+    "alpha_is_transparency": true,
+    "pixels_per_unit": 16,
+    "mesh_type": "Full Rect"
+  },
+  "exceptions": {
+    "terrain": "Repeat wrap mode; every terrain PNG is independently usable and no finished island is supplied.",
+    "ui_9slice": "The three files ending in _9slice use a 4-pixel border.",
+    "contact_sheet_and_palette": "Documentation textures only; not final runtime screen art."
+  },
+  "verified_facts": [
+    {
+      "path": "Terrain/water_calm_a.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "has_transparency": false,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Repeat",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Terrain/water_calm_b.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "has_transparency": false,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Repeat",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Terrain/water_rough.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "has_transparency": false,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Repeat",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Terrain/land_grass.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "has_transparency": false,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Repeat",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Terrain/land_sand.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "has_transparency": false,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Repeat",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Terrain/shore_north.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "has_transparency": false,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Repeat",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Terrain/shore_south.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "has_transparency": false,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Repeat",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Terrain/shore_west.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "has_transparency": false,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Repeat",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Terrain/shore_east.png",
+      "dimensions": [
+        32,
+        32
+      ],
+      "has_transparency": false,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Repeat",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Residents/resident_food.png",
+      "dimensions": [
+        16,
+        20
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Residents/resident_supply.png",
+      "dimensions": [
+        16,
+        20
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Residents/resident_build.png",
+      "dimensions": [
+        16,
+        20
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Residents/resident_care.png",
+      "dimensions": [
+        16,
+        20
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Residents/resident_sick.png",
+      "dimensions": [
+        16,
+        20
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Residents/resident_deceased.png",
+      "dimensions": [
+        20,
+        12
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Buildings/building_shelter.png",
+      "dimensions": [
+        30,
+        26
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Buildings/building_kitchen.png",
+      "dimensions": [
+        30,
+        26
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Buildings/building_storage.png",
+      "dimensions": [
+        30,
+        26
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Buildings/building_beacon.png",
+      "dimensions": [
+        30,
+        26
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Buildings/building_scaffold.png",
+      "dimensions": [
+        30,
+        26
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Environment/palm.png",
+      "dimensions": [
+        13,
+        18
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Environment/bush.png",
+      "dimensions": [
+        8,
+        8
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Environment/rock.png",
+      "dimensions": [
+        8,
+        8
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Environment/boulder.png",
+      "dimensions": [
+        8,
+        8
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Environment/flower.png",
+      "dimensions": [
+        8,
+        8
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Environment/grass_tuft.png",
+      "dimensions": [
+        8,
+        8
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Environment/shell.png",
+      "dimensions": [
+        8,
+        8
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Environment/weather_clear.png",
+      "dimensions": [
+        24,
+        24
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Environment/weather_fog.png",
+      "dimensions": [
+        24,
+        24
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Environment/weather_rain.png",
+      "dimensions": [
+        24,
+        24
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Environment/weather_storm.png",
+      "dimensions": [
+        24,
+        24
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Environment/pressure_hunger.png",
+      "dimensions": [
+        24,
+        24
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Environment/pressure_cold.png",
+      "dimensions": [
+        24,
+        24
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Environment/pressure_sickness.png",
+      "dimensions": [
+        24,
+        24
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Resources/resource_food.png",
+      "dimensions": [
+        16,
+        16
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Resources/resource_firewood.png",
+      "dimensions": [
+        16,
+        16
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Resources/resource_materials.png",
+      "dimensions": [
+        16,
+        16
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Escape/escape_hull.png",
+      "dimensions": [
+        40,
+        32
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Escape/escape_mast.png",
+      "dimensions": [
+        40,
+        32
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "Escape/escape_sail.png",
+      "dimensions": [
+        40,
+        32
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "UI/ui_panel_9slice.png",
+      "dimensions": [
+        24,
+        24
+      ],
+      "has_transparency": false,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "path": "UI/ui_button_9slice.png",
+      "dimensions": [
+        24,
+        24
+      ],
+      "has_transparency": false,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "path": "UI/ui_button_active_9slice.png",
+      "dimensions": [
+        24,
+        24
+      ],
+      "has_transparency": false,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    {
+      "path": "UI/icon_chronicle.png",
+      "dimensions": [
+        24,
+        24
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "path": "UI/ground_shadow.png",
+      "dimensions": [
+        48,
+        24
+      ],
+      "has_transparency": true,
+      "filter_mode": "Point",
+      "mip_maps": false,
+      "compression": "None",
+      "wrap_mode": "Clamp",
+      "pixels_per_unit": 16,
+      "nine_slice_border": [
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ]
+}

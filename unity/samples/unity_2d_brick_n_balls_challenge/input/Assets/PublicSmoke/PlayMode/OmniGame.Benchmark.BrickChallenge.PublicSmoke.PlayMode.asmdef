@@ -1,0 +1,9 @@
+{
+  "name": "OmniGame.Benchmark.BrickChallenge.PublicSmoke.PlayMode",
+  "rootNamespace": "OmniGame.Benchmark.BrickChallenge.PublicSmoke.PlayMode",
+  "references": [],
+  "includePlatforms": [],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "defineConstraints": ["UNITY_INCLUDE_TESTS"],
+  "autoReferenced": true
+}

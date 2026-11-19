@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "game": "defold_timelooper_v2",
+  "naming_tables": "../input/naming-tables.json",
+  "player_runtime_min_version": "0.12",
+  "controls_from_naming_tables": true,
+  "honesty_spot_checks": {
+    "per_trajectory": 2,
+    "mode": "random",
+    "exclusive_phase_ocr": {
+      "menu": ["BEGIN LOOP"]
+    }
+  },
+  "score_caps": [
+    {
+      "id": "core_loop_completion",
+      "requires_all": [
+        "TL_ECHO_APPEARS",
+        "TL_ECHO_REPLAY_AND_DOOR",
+        "TL_DOOR_COLLISION_OPEN",
+        "TL_GEM_CONTENT_AND_COLLECTION",
+        "TL_GEM_EXIT_RULE",
+        "TL_COMPLETE_SUCCESS",
+        "TL_WIN_TERMINAL_LOCK"
+      ],
+      "max_nonvisual_score": 50.0
+    }
+  ],
+  "trajectories": [
+    {
+      "id":"entry_movement_pause_reopen",
+      "title":"Menu, continuous keyboard movement, jump, pause/resume, restart, and fresh reopen",
+      "clean_start":"fresh_process",
+      "steps":[
+        {"do":"start"},
+        {"do":"wait_until","cond":"phase == menu","timeout_s":15,"honesty_safe":true,"check":{"id":"TL_MENU_ENTRY","source":"gdd:TL-Menu-01","dim":"D2","assert":"phase == menu && count(kind=player) == 0 && slots.run_serial == 0"}},
+        {"do":"capture","save_as":"MenuFrame","check":{"id":"TL_MENU_READABLE","source":"gdd:TL-Menu-01","dim":"D5","assert":"capture_nonblank(MenuFrame) && ocr_contains_any(MenuFrame,[\"TIME\",\"ECHO\",\"Time\",\"Echo\"]) && ocr_contains_any(MenuFrame,[\"START\",\"BEGIN LOOP\",\"RECORD YOUR ROUTE\",\"Start\"])"}},
+        {"do":"press","key":"confirm","cond":"phase == playing","timeout_s":3},
+        {"do":"wait_until","cond":"phase == playing","timeout_s":10,"check":{"id":"TL_LEVEL_CONTENT","source":"gdd:TL-level-01","dim":"D2","assert":"phase == playing && count(kind=player) == 1 && count(kind=platform) >= 8 && count(kind=gem,state=available) == 5 && count(kind=spike,state=dangerous) >= 2 && count(kind=pressure_button) == 1 && count(kind=controlled_door) == 1 && count(kind=exit) == 1 && slots.gems_collected == 0 && slots.gem_total == 5"}},
+        {"do":"snapshot","save_as":"Start"},
+        {"do":"press","key":"right","cond":"entity(player).position.x > Start.entity(player).position.x","timeout_s":2},
+        {"do":"wait_until","cond":"entity(player).position.x > Start.entity(player).position.x","timeout_s":2},
+        {"do":"snapshot","save_as":"Tap"},
+        {"do":"hold","key":"right","seconds":0.15},
+        {"do":"wait_until","cond":"entity(player).position.x > Tap.entity(player).position.x && slots.player_velocity_x == 0","timeout_s":2,"check":{"id":"TL_MOVE_TAP_HOLD_RELEASE","source":"gdd:TL-Move-01","dim":"D3","assert":"Tap.entity(player).position.x > Start.entity(player).position.x && entity(player).position.x - Tap.entity(player).position.x > Tap.entity(player).position.x - Start.entity(player).position.x && slots.player_velocity_x == 0"}},
+        {"do":"press","key":"jump"},
+        {"do":"wait_until","cond":"entity(player).state == airborne","timeout_s":2,"check":{"id":"TL_JUMP_GRAVITY_COLLISION","source":"gdd:TL-Move-01","dim":"D3","assert":"entity(player).state == airborne && slots.player_velocity_y > 0"}},
+        {"do":"wait_until","cond":"entity(player).state == grounded && slots.player_on_ground == 1","timeout_s":4},
+        {"do":"capture","save_as":"GameplayFrame","check":{"id":"TL_GAMEPLAY_HUD_READABLE","source":"gdd:TL-Interface-01","dim":"D5","assert":"capture_nonblank(GameplayFrame) && ocr_contains_any(GameplayFrame,[\"PAD OFF\",\"DOOR LOCK\",\"DOOR CLOSED\",\"ARROWS MOVE\",\"ARROWS: MOVE\",\"ESC PAUSE\",\"ESC: PAUSE\"]) && entity(player).visible && slots.gem_total == 5 && count(kind=spike,state=dangerous) >= 2 && entity(pressure_button).visible && entity(controlled_door).visible && entity(exit).visible"}},
+        {"do":"snapshot","save_as":"Active"},
+        {"do":"press","key":"pause_or_back","cond":"phase == paused","timeout_s":3},
+        {"do":"wait_until","cond":"phase == paused","timeout_s":3},
+        {"do":"snapshot","save_as":"Paused"},
+        {"do":"wait_until","cond":"wall_clock_since(Paused) >= 1.1","timeout_s":2,"check":{"id":"TL_PAUSE_FREEZES","source":"gdd:TL-Pause-01","dim":"D3","assert":"phase == paused && entity(player).position == Paused.entity(player).position && slots.elapsed_milliseconds == Paused.slots.elapsed_milliseconds && slots.next_echo_milliseconds == Paused.slots.next_echo_milliseconds && slots.button_pressed == Paused.slots.button_pressed && slots.door_open == Paused.slots.door_open"}},
+        {"do":"capture","save_as":"PauseFrame","honesty_safe":true,"check":{"id":"TL_PAUSE_READABLE","source":"gdd:TL-Pause-01","dim":"D5","assert":"capture_nonblank(PauseFrame) && ocr_contains_any(PauseFrame,[\"PAUSED\",\"TIMERS ARE FROZEN\",\"ESC RESUME\",\"Pause\"])"}},
+        {"do":"press","key":"pause_or_back","cond":"phase == playing","timeout_s":3},
+        {"do":"wait_until","cond":"phase == playing","timeout_s":3,"check":{"id":"TL_PAUSE_RESUME","source":"gdd:TL-Pause-01","dim":"D4","assert":"phase == playing && slots.run_serial == Paused.slots.run_serial"}},
+        {"do":"press","key":"restart"},
+        {"do":"wait_until","cond":"phase == playing && slots.run_serial == Paused.slots.run_serial + 1","timeout_s":5,"check":{"id":"TL_RESTART_CLEAN","source":"gdd:TL-Restart-01","dim":"D4","assert":"slots.gems_collected == 0 && slots.echoes_active == 0 && slots.button_pressed == 0 && slots.door_open == 0 && slots.exit_active == 0 && count(kind=gem,state=available) == 5 && count(kind=echo) == 0"}},
+        {"do":"reopen"},
+        {"do":"wait_until","cond":"phase == menu","timeout_s":15,"check":{"id":"TL_REOPEN_MENU","source":"gdd:TL-Restart-01","dim":"D4","assert":"phase == menu && slots.run_serial == 0 && count(kind=player) == 0 && slots.gems_collected == 0"}}
+      ]
+    },
+    {
+      "id":"echo_button_door_success",
+      "title":"History replay presses the button, opens a real door, enables a target-driven gem route, and reaches success",
+      "clean_start":"fresh_process",
+      "steps":[
+        {"do":"start"},
+        {"do":"wait_until","cond":"phase == menu","timeout_s":15,"honesty_safe":true},
+        {"do":"snapshot","save_as":"HonestyMenuStable"},
+        {"do":"press","key":"confirm","cond":"phase == playing","timeout_s":3},{"do":"wait_until","cond":"phase == playing","timeout_s":10},
+        {"do":"move_toward","target":{"kind":"pressure_button"},"cond":"slots.button_pressed == 1 && distance_from(entity(player),entity(pressure_button)) <= entity(pressure_button).size.x","timeout_s":35},
+        {"do":"snapshot","save_as":"ButtonRecorded"},
+        {"do":"wait_until","cond":"wall_clock_since(ButtonRecorded) >= 2.0 && slots.button_pressed == 1","timeout_s":3},
+        {"do":"move_toward","target":{"kind":"gem","state":"available"},"cond":"slots.gems_collected >= 1 && distance_from(ButtonRecorded.entity(pressure_button),entity(player)) > ButtonRecorded.entity(pressure_button).size.x","timeout_s":35},
+        {"do":"wait_until","cond":"slots.echoes_active >= 1","timeout_s":15,"check":{"id":"TL_ECHO_APPEARS","source":"gdd:TL-Echo-01","dim":"D2","assert":"slots.echoes_active >= 1 && exists(kind=echo,state=replaying) && slots.elapsed_milliseconds >= 10000"}},
+        {"do":"wait_until","cond":"slots.button_pressed == 1 && slots.door_open == 1 && exists(kind=echo,state=replaying)","timeout_s":20,"check":{"id":"TL_ECHO_REPLAY_AND_DOOR","source":"gdd:TL-Organization-01","dim":"D3","assert":"slots.button_pressed == 1 && slots.door_open == 1 && exists(kind=echo,state=replaying) && entity(pressure_button).state == pressed && entity(controlled_door).state == open && distance_from(entity(player),entity(pressure_button)) > entity(pressure_button).size.x"}},
+        {"do":"snapshot","save_as":"DoorOpen"},
+        {"do":"press","key":"pause_or_back","cond":"phase == paused && slots.door_open == 1","timeout_s":2},
+        {"do":"capture","save_as":"DoorFrame","check":{"id":"TL_ECHO_DOOR_FEEDBACK","source":"gdd:TL-Echo-02","dim":"D5","assert":"capture_nonblank(DoorFrame) && ocr_contains_any(DoorFrame,[\"DOOR OPEN\",\"PAD ON\",\"OPEN\",\"Open\"]) && DoorOpen.entity(player).visible && DoorOpen.exists(kind=echo,state=replaying) && DoorOpen.entity(pressure_button).state == pressed && DoorOpen.entity(controlled_door).state == open"}},
+        {"do":"press","key":"pause_or_back","cond":"phase == playing && slots.door_open == 1","timeout_s":2},
+        {"do":"move_toward","target":{"kind":"gem","state":"available"},"cond":"phase == playing && entity(player).position.x > entity(controlled_door).position.x","timeout_s":25,"check":{"id":"TL_DOOR_COLLISION_OPEN","source":"gdd:TL-Organization-02","dim":"D3","assert":"phase == playing && entity(player).position.x > entity(controlled_door).position.x && DoorOpen.slots.door_open == 1"}},
+        {"do":"move_toward","target":{"kind":"gem","state":"available"},"cond":"slots.gems_collected == slots.gem_total","timeout_s":60,"check":{"id":"TL_GEM_CONTENT_AND_COLLECTION","source":"gdd:TL-gems-01","dim":"D2","assert":"slots.gems_collected == 5 && count(kind=gem,state=collected) == 5 && count(kind=gem,state=available) == 0"}},
+        {"do":"snapshot","save_as":"AllGems"},
+        {"do":"wait_until","cond":"slots.exit_active == 1 && entity(exit).state == active","timeout_s":3,"check":{"id":"TL_GEM_EXIT_RULE","source":"gdd:TL-Exit-01","dim":"D3","assert":"AllGems.slots.gems_collected == AllGems.slots.gem_total && slots.exit_active == 1 && entity(exit).state == active"}},
+        {"do":"move_toward","target":{"kind":"exit","state":"active"},"cond":"phase == won","timeout_s":35,"check":{"id":"TL_COMPLETE_SUCCESS","source":"gdd:TL-Exit-01","dim":"D4","assert":"phase == won && slots.gems_collected == 5 && slots.exit_active == 1"}},
+        {"do":"capture","save_as":"WonFrame","check":{"id":"TL_WIN_READABLE_FINAL","source":"gdd:TL-Interface-01","dim":"D5","assert":"capture_nonblank(WonFrame) && ocr_contains_any(WonFrame,[\"COMPLETE\",\"WIN\",\"Close level\",\"Success\"])"}},
+        {"do":"snapshot","save_as":"Won","honesty_safe":true},{"do":"hold","key":"left","seconds":0.5},{"do":"press","key":"jump"},
+        {"do":"wait_until","cond":"wall_clock_since(Won) >= 0.6","timeout_s":2,"check":{"id":"TL_WIN_TERMINAL_LOCK","source":"common-baseline:CB-14","dim":"D4","assert":"phase == won && entity(player).position == Won.entity(player).position && slots.gems_collected == Won.slots.gems_collected"}}
+      ]
+    },
+    {
+      "id":"spike_failure_result_retry",
+      "title":"A visible spike causes failure, the result is readable and retry is clean",
+      "clean_start":"fresh_process",
+      "steps":[
+        {"do":"start"},
+        {"do":"wait_until","cond":"phase == menu","timeout_s":15,"honesty_safe":true},
+        {"do":"snapshot","save_as":"HonestyMenuStable"},
+        {"do":"press","key":"confirm","cond":"phase == playing","timeout_s":3},{"do":"wait_until","cond":"phase == playing","timeout_s":10},
+        {"do":"capture","save_as":"SpikeBeforeFrame","check":{"id":"TL_SPIKE_VISIBLE","source":"gdd:TL-Danger-01","dim":"D2","assert":"capture_nonblank(SpikeBeforeFrame) && count(kind=spike,state=dangerous) >= 2"}},
+        {"do":"move_toward","target":{"kind":"spike","state":"dangerous"},"cond":"phase == lost","timeout_s":25,"check":{"id":"TL_SPIKE_FAILURE_RULE","source":"gdd:TL-Danger-01","dim":"D3","assert":"phase == lost && slots.loss_reason_code == 1"}},
+        {"do":"capture","save_as":"SpikeLossFrame","honesty_safe":true,"check":{"id":"TL_SPIKE_RESULT_READABLE","source":"gdd:TL-Menu-01","dim":"D5","assert":"capture_nonblank(SpikeLossFrame) && ocr_contains_any(SpikeLossFrame,[\"GAME OVER\",\"RETRY\",\"Failure\",\"Retry\",\"LOOP BROKEN\",\"TOUCHED A SPIKE\",\"TOUCHED THE SPIKES\"])"}},
+        {"do":"press","key":"restart"},{"do":"wait_until","cond":"phase == playing && slots.gems_collected == 0 && slots.echoes_active == 0","timeout_s":5,"check":{"id":"TL_SPIKE_FAILURE_RETRY","source":"gdd:TL-Restart-01","dim":"D4","assert":"phase == playing && count(kind=gem,state=available) == 5 && slots.button_pressed == 0 && slots.door_open == 0 && slots.exit_active == 0"}}
+      ]
+    },
+    {
+      "id":"echo_collision_failure",
+      "title":"A generated echo has replay behavior and current-player contact causes the distinct echo loss",
+      "clean_start":"fresh_process",
+      "steps":[
+        {"do":"start"},
+        {"do":"wait_until","cond":"phase == menu","timeout_s":15,"honesty_safe":true},
+        {"do":"snapshot","save_as":"HonestyMenuStable"},
+        {"do":"press","key":"confirm","cond":"phase == playing","timeout_s":3},{"do":"wait_until","cond":"phase == playing","timeout_s":10},
+        {"do":"wait_until","cond":"slots.elapsed_milliseconds >= 9000","timeout_s":12},{"do":"hold","key":"right","seconds":0.2},{"do":"wait_until","cond":"slots.echoes_active >= 1","timeout_s":3},
+        {"do":"move_toward","target":{"kind":"echo","state":"replaying"},"cond":"phase == lost","timeout_s":25,"check":{"id":"TL_ECHO_CONTACT_RULE","source":"gdd:TL-Echo-03","dim":"D3","assert":"phase == lost && slots.loss_reason_code == 2"}},
+        {"do":"capture","save_as":"EchoLossFrame","honesty_safe":true,"check":{"id":"TL_ECHO_RESULT_REACHABLE","source":"gdd:TL-Menu-01","dim":"D2","assert":"capture_nonblank(EchoLossFrame) && ocr_contains_any(EchoLossFrame,[\"GAME OVER\",\"RETRY\",\"Failure\",\"Retry\",\"ECHO COLLISION\",\"change your timing\"])"}}
+      ]
+    }
+  ]
+}

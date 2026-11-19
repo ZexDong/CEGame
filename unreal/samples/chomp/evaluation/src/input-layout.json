@@ -1,0 +1,2861 @@
+{
+  "version": "1.0",
+  "purpose": "Reconstruct frozen native input bindings in an isolated run; the public input uses the template layout.",
+  "files": [
+    {
+      "source": "ASSET_CATALOG.json",
+      "published": "assets/ASSET_CATALOG.json",
+      "sha256": "2715af113abf8eb042e4a24172db8c4ec3832c8c8ec984fda3b4268e1f44ae1f",
+      "published_sha256": "dd6a7ce0f4a98c39cf399794536c08f63c0aba362b7bd7f2ed657174a562bd1d",
+      "restore_edits": [
+        {
+          "start": 8,
+          "end": 9,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_Eye.obj\",\n"
+          ]
+        },
+        {
+          "start": 24,
+          "end": 25,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 27,
+          "end": 29,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/Meshes/SM_Eye.obj\",\n",
+            "      \"reference_copy\": \"assets/raw/SM_Eye.obj\"\n"
+          ]
+        },
+        {
+          "start": 32,
+          "end": 33,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_FruitBody.obj\",\n"
+          ]
+        },
+        {
+          "start": 48,
+          "end": 49,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 51,
+          "end": 53,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/Meshes/SM_FruitBody.obj\",\n",
+            "      \"reference_copy\": \"assets/raw/SM_FruitBody.obj\"\n"
+          ]
+        },
+        {
+          "start": 56,
+          "end": 57,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_FruitCrown.obj\",\n"
+          ]
+        },
+        {
+          "start": 72,
+          "end": 73,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 75,
+          "end": 77,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/Meshes/SM_FruitCrown.obj\",\n",
+            "      \"reference_copy\": \"assets/raw/SM_FruitCrown.obj\"\n"
+          ]
+        },
+        {
+          "start": 80,
+          "end": 81,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_GhostBody.obj\",\n"
+          ]
+        },
+        {
+          "start": 96,
+          "end": 97,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 99,
+          "end": 101,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/Meshes/SM_GhostBody.obj\",\n",
+            "      \"reference_copy\": \"assets/raw/SM_GhostBody.obj\"\n"
+          ]
+        },
+        {
+          "start": 104,
+          "end": 105,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_GhostHead.obj\",\n"
+          ]
+        },
+        {
+          "start": 120,
+          "end": 121,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 123,
+          "end": 125,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/Meshes/SM_GhostHead.obj\",\n",
+            "      \"reference_copy\": \"assets/raw/SM_GhostHead.obj\"\n"
+          ]
+        },
+        {
+          "start": 128,
+          "end": 129,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_Jaw.obj\",\n"
+          ]
+        },
+        {
+          "start": 144,
+          "end": 145,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 147,
+          "end": 149,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/Meshes/SM_Jaw.obj\",\n",
+            "      \"reference_copy\": \"assets/raw/SM_Jaw.obj\"\n"
+          ]
+        },
+        {
+          "start": 152,
+          "end": 153,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_Tooth.obj\",\n"
+          ]
+        },
+        {
+          "start": 168,
+          "end": 169,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 171,
+          "end": 173,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/Meshes/SM_Tooth.obj\",\n",
+            "      \"reference_copy\": \"assets/raw/SM_Tooth.obj\"\n"
+          ]
+        },
+        {
+          "start": 176,
+          "end": 177,
+          "lines": [
+            "      \"path\": \"assets/raw/T_WallEdge.png\",\n"
+          ]
+        },
+        {
+          "start": 192,
+          "end": 193,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 195,
+          "end": 197,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/Textures/T_WallEdge.png\",\n",
+            "      \"reference_copy\": \"assets/raw/T_WallEdge.png\"\n"
+          ]
+        },
+        {
+          "start": 200,
+          "end": 201,
+          "lines": [
+            "      \"path\": \"assets/ui/life-icon.svg\",\n"
+          ]
+        },
+        {
+          "start": 216,
+          "end": 217,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 219,
+          "end": 221,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/UI/life-icon.svg\",\n",
+            "      \"reference_copy\": \"assets/ui/life-icon.svg\"\n"
+          ]
+        },
+        {
+          "start": 224,
+          "end": 225,
+          "lines": [
+            "      \"path\": \"assets/ui/T_LifeIcon.png\",\n"
+          ]
+        },
+        {
+          "start": 240,
+          "end": 241,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 243,
+          "end": 245,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/UI/T_LifeIcon.png\",\n",
+            "      \"reference_copy\": \"assets/ui/T_LifeIcon.png\"\n"
+          ]
+        },
+        {
+          "start": 248,
+          "end": 249,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/M_Neon.uasset\",\n"
+          ]
+        },
+        {
+          "start": 266,
+          "end": 267,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 271,
+          "end": 272,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/M_Wall.uasset\",\n"
+          ]
+        },
+        {
+          "start": 287,
+          "end": 288,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 294,
+          "end": 295,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Crown.uasset\",\n"
+          ]
+        },
+        {
+          "start": 310,
+          "end": 311,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 317,
+          "end": 318,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Cyan.uasset\",\n"
+          ]
+        },
+        {
+          "start": 333,
+          "end": 334,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 340,
+          "end": 341,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Dot.uasset\",\n"
+          ]
+        },
+        {
+          "start": 358,
+          "end": 359,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 365,
+          "end": 366,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Eye.uasset\",\n"
+          ]
+        },
+        {
+          "start": 381,
+          "end": 382,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 388,
+          "end": 389,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Floor.uasset\",\n"
+          ]
+        },
+        {
+          "start": 404,
+          "end": 405,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 411,
+          "end": 412,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Frightened.uasset\",\n"
+          ]
+        },
+        {
+          "start": 427,
+          "end": 428,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 434,
+          "end": 435,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Fruit.uasset\",\n"
+          ]
+        },
+        {
+          "start": 450,
+          "end": 451,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 457,
+          "end": 458,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Gate.uasset\",\n"
+          ]
+        },
+        {
+          "start": 473,
+          "end": 474,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 480,
+          "end": 481,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Orange.uasset\",\n"
+          ]
+        },
+        {
+          "start": 496,
+          "end": 497,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 503,
+          "end": 504,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Pink.uasset\",\n"
+          ]
+        },
+        {
+          "start": 519,
+          "end": 520,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 526,
+          "end": 527,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Player.uasset\",\n"
+          ]
+        },
+        {
+          "start": 542,
+          "end": 543,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 549,
+          "end": 550,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Red.uasset\",\n"
+          ]
+        },
+        {
+          "start": 565,
+          "end": 566,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 572,
+          "end": 573,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_Eye.uasset\",\n"
+          ]
+        },
+        {
+          "start": 588,
+          "end": 589,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 608,
+          "end": 609,
+          "lines": [
+            "      \"reimport_source\": \"project/SourceArt/Meshes/SM_Eye.obj\"\n"
+          ]
+        },
+        {
+          "start": 612,
+          "end": 613,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_FruitBody.uasset\",\n"
+          ]
+        },
+        {
+          "start": 628,
+          "end": 629,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 647,
+          "end": 648,
+          "lines": [
+            "      \"reimport_source\": \"project/SourceArt/Meshes/SM_FruitBody.obj\"\n"
+          ]
+        },
+        {
+          "start": 651,
+          "end": 652,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_FruitCrown.uasset\",\n"
+          ]
+        },
+        {
+          "start": 667,
+          "end": 668,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 686,
+          "end": 687,
+          "lines": [
+            "      \"reimport_source\": \"project/SourceArt/Meshes/SM_FruitCrown.obj\"\n"
+          ]
+        },
+        {
+          "start": 690,
+          "end": 691,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_GhostBody.uasset\",\n"
+          ]
+        },
+        {
+          "start": 706,
+          "end": 707,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 725,
+          "end": 726,
+          "lines": [
+            "      \"reimport_source\": \"project/SourceArt/Meshes/SM_GhostBody.obj\"\n"
+          ]
+        },
+        {
+          "start": 729,
+          "end": 730,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_GhostHead.uasset\",\n"
+          ]
+        },
+        {
+          "start": 745,
+          "end": 746,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 764,
+          "end": 765,
+          "lines": [
+            "      \"reimport_source\": \"project/SourceArt/Meshes/SM_GhostHead.obj\"\n"
+          ]
+        },
+        {
+          "start": 768,
+          "end": 769,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_Jaw.uasset\",\n"
+          ]
+        },
+        {
+          "start": 784,
+          "end": 785,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 803,
+          "end": 804,
+          "lines": [
+            "      \"reimport_source\": \"project/SourceArt/Meshes/SM_Jaw.obj\"\n"
+          ]
+        },
+        {
+          "start": 807,
+          "end": 808,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_Tooth.uasset\",\n"
+          ]
+        },
+        {
+          "start": 823,
+          "end": 824,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 842,
+          "end": 843,
+          "lines": [
+            "      \"reimport_source\": \"project/SourceArt/Meshes/SM_Tooth.obj\"\n"
+          ]
+        },
+        {
+          "start": 846,
+          "end": 847,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Textures/T_WallEdge.uasset\",\n"
+          ]
+        },
+        {
+          "start": 862,
+          "end": 863,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 867,
+          "end": 868,
+          "lines": [
+            "      \"reimport_source\": \"project/SourceArt/Textures/T_WallEdge.png\"\n"
+          ]
+        },
+        {
+          "start": 871,
+          "end": 872,
+          "lines": [
+            "      \"path\": \"project/Content/Art/UI/T_LifeIcon.uasset\",\n"
+          ]
+        },
+        {
+          "start": 887,
+          "end": 888,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 892,
+          "end": 893,
+          "lines": [
+            "      \"reimport_source\": \"project/SourceArt/UI/T_LifeIcon.png\"\n"
+          ]
+        },
+        {
+          "start": 896,
+          "end": 897,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_Eye.obj\",\n"
+          ]
+        },
+        {
+          "start": 912,
+          "end": 913,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 915,
+          "end": 917,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/Meshes/SM_Eye.obj\",\n",
+            "      \"reference_copy\": \"assets/raw/SM_Eye.obj\"\n"
+          ]
+        },
+        {
+          "start": 920,
+          "end": 921,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_FruitBody.obj\",\n"
+          ]
+        },
+        {
+          "start": 936,
+          "end": 937,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 939,
+          "end": 941,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/Meshes/SM_FruitBody.obj\",\n",
+            "      \"reference_copy\": \"assets/raw/SM_FruitBody.obj\"\n"
+          ]
+        },
+        {
+          "start": 944,
+          "end": 945,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_FruitCrown.obj\",\n"
+          ]
+        },
+        {
+          "start": 960,
+          "end": 961,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 963,
+          "end": 965,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/Meshes/SM_FruitCrown.obj\",\n",
+            "      \"reference_copy\": \"assets/raw/SM_FruitCrown.obj\"\n"
+          ]
+        },
+        {
+          "start": 968,
+          "end": 969,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_GhostBody.obj\",\n"
+          ]
+        },
+        {
+          "start": 984,
+          "end": 985,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 987,
+          "end": 989,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/Meshes/SM_GhostBody.obj\",\n",
+            "      \"reference_copy\": \"assets/raw/SM_GhostBody.obj\"\n"
+          ]
+        },
+        {
+          "start": 992,
+          "end": 993,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_GhostHead.obj\",\n"
+          ]
+        },
+        {
+          "start": 1008,
+          "end": 1009,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 1011,
+          "end": 1013,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/Meshes/SM_GhostHead.obj\",\n",
+            "      \"reference_copy\": \"assets/raw/SM_GhostHead.obj\"\n"
+          ]
+        },
+        {
+          "start": 1016,
+          "end": 1017,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_Jaw.obj\",\n"
+          ]
+        },
+        {
+          "start": 1032,
+          "end": 1033,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 1035,
+          "end": 1037,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/Meshes/SM_Jaw.obj\",\n",
+            "      \"reference_copy\": \"assets/raw/SM_Jaw.obj\"\n"
+          ]
+        },
+        {
+          "start": 1040,
+          "end": 1041,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_Tooth.obj\",\n"
+          ]
+        },
+        {
+          "start": 1056,
+          "end": 1057,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 1059,
+          "end": 1061,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/Meshes/SM_Tooth.obj\",\n",
+            "      \"reference_copy\": \"assets/raw/SM_Tooth.obj\"\n"
+          ]
+        },
+        {
+          "start": 1064,
+          "end": 1065,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Textures/T_WallEdge.png\",\n"
+          ]
+        },
+        {
+          "start": 1080,
+          "end": 1081,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 1083,
+          "end": 1085,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/Textures/T_WallEdge.png\",\n",
+            "      \"reference_copy\": \"assets/raw/T_WallEdge.png\"\n"
+          ]
+        },
+        {
+          "start": 1088,
+          "end": 1089,
+          "lines": [
+            "      \"path\": \"project/SourceArt/UI/life-icon.svg\",\n"
+          ]
+        },
+        {
+          "start": 1104,
+          "end": 1105,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 1107,
+          "end": 1109,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/UI/life-icon.svg\",\n",
+            "      \"reference_copy\": \"assets/ui/life-icon.svg\"\n"
+          ]
+        },
+        {
+          "start": 1112,
+          "end": 1113,
+          "lines": [
+            "      \"path\": \"project/SourceArt/UI/T_LifeIcon.png\",\n"
+          ]
+        },
+        {
+          "start": 1128,
+          "end": 1129,
+          "lines": [
+            "      \"license\": \"legal/NOTICES.md\",\n"
+          ]
+        },
+        {
+          "start": 1131,
+          "end": 1133,
+          "lines": [
+            "      \"project_copy\": \"project/SourceArt/UI/T_LifeIcon.png\",\n",
+            "      \"reference_copy\": \"assets/ui/T_LifeIcon.png\"\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ASSET_CATALOG.md",
+      "published": "assets/ASSET_CATALOG.md",
+      "sha256": "f20de39d55b0efdccb99c4a08ec063861547b11b4c4b863392c6581ed95a5809",
+      "published_sha256": "d369e41a79c18d9a2d47dcd8c8026268c022f5adbfb9999c0696fe50aa8a24a8",
+      "restore_edits": [
+        {
+          "start": 4,
+          "end": 5,
+          "lines": [
+            "Runtime assets are ready to use in `project/Content/Art/`; editable sources are also inside `project/SourceArt/`. The copies in `assets/` are protected references. All art is static and unassembled. GDD Section 6 is the acceptance authority; JSON supplies paths, hashes, source-copy links, dimensions and dependency facts. Geometry units are centimeters.\r\n"
+          ]
+        },
+        {
+          "start": 8,
+          "end": 51,
+          "lines": [
+            "| SM_Eye-reference-obj | `assets/raw/SM_Eye.obj` | Editing source for SM_Eye | ASSET-01, VISUAL-02 |\r\n",
+            "| SM_FruitBody-reference-obj | `assets/raw/SM_FruitBody.obj` | Editing source for SM_FruitBody | ASSET-03, FRUIT-01 |\r\n",
+            "| SM_FruitCrown-reference-obj | `assets/raw/SM_FruitCrown.obj` | Editing source for SM_FruitCrown | ASSET-03, FRUIT-01 |\r\n",
+            "| SM_GhostBody-reference-obj | `assets/raw/SM_GhostBody.obj` | Editing source for SM_GhostBody | ASSET-02, VISUAL-03 |\r\n",
+            "| SM_GhostHead-reference-obj | `assets/raw/SM_GhostHead.obj` | Editing source for SM_GhostHead | ASSET-02, VISUAL-03 |\r\n",
+            "| SM_Jaw-reference-obj | `assets/raw/SM_Jaw.obj` | Editing source for SM_Jaw | ASSET-01, VISUAL-02 |\r\n",
+            "| SM_Tooth-reference-obj | `assets/raw/SM_Tooth.obj` | Editing source for SM_Tooth | ASSET-01, VISUAL-02 |\r\n",
+            "| T_WallEdge-reference-png | `assets/raw/T_WallEdge.png` | Editing source for T_WallEdge | ASSET-04, VISUAL-01 |\r\n",
+            "| life-icon-reference-svg | `assets/ui/life-icon.svg` | Editing source for T_LifeIcon | ASSET-05, HUD-01 |\r\n",
+            "| T_LifeIcon-reference-png | `assets/ui/T_LifeIcon.png` | Editing source for T_LifeIcon | ASSET-05, HUD-01 |\r\n",
+            "| M_Neon | `project/Content/Art/Materials/M_Neon.uasset` | Required visible shared color material | ASSET-01, ASSET-02, ASSET-03, ASSET-04 |\r\n",
+            "| M_Wall | `project/Content/Art/Materials/M_Wall.uasset` | Required visible maze appearance | ASSET-04, VISUAL-01 |\r\n",
+            "| MI_Crown | `project/Content/Art/Materials/MI_Crown.uasset` | Required visible pineapple | ASSET-03, FRUIT-01 |\r\n",
+            "| MI_Cyan | `project/Content/Art/Materials/MI_Cyan.uasset` | Required visible ghosts | ASSET-02, VISUAL-03 |\r\n",
+            "| MI_Dot | `project/Content/Art/Materials/MI_Dot.uasset` | Required visible teeth and pickups | ASSET-01, ASSET-04, VISUAL-01, VISUAL-02 |\r\n",
+            "| MI_Eye | `project/Content/Art/Materials/MI_Eye.uasset` | Required visible player | ASSET-01, VISUAL-02 |\r\n",
+            "| MI_Floor | `project/Content/Art/Materials/MI_Floor.uasset` | Required visible maze appearance | ASSET-04, VISUAL-01 |\r\n",
+            "| MI_Frightened | `project/Content/Art/Materials/MI_Frightened.uasset` | Required visible ghosts | ASSET-02, VISUAL-03 |\r\n",
+            "| MI_Fruit | `project/Content/Art/Materials/MI_Fruit.uasset` | Required visible pineapple | ASSET-03, FRUIT-01 |\r\n",
+            "| MI_Gate | `project/Content/Art/Materials/MI_Gate.uasset` | Required visible maze appearance | ASSET-04, VISUAL-01 |\r\n",
+            "| MI_Orange | `project/Content/Art/Materials/MI_Orange.uasset` | Required visible ghosts | ASSET-02, VISUAL-03 |\r\n",
+            "| MI_Pink | `project/Content/Art/Materials/MI_Pink.uasset` | Required visible ghosts | ASSET-02, VISUAL-03 |\r\n",
+            "| MI_Player | `project/Content/Art/Materials/MI_Player.uasset` | Required visible player | ASSET-01, VISUAL-02 |\r\n",
+            "| MI_Red | `project/Content/Art/Materials/MI_Red.uasset` | Required visible ghosts | ASSET-02, VISUAL-03 |\r\n",
+            "| SM_Eye | `project/Content/Art/Meshes/SM_Eye.uasset` | Required visible player | ASSET-01, VISUAL-02 |\r\n",
+            "| SM_FruitBody | `project/Content/Art/Meshes/SM_FruitBody.uasset` | Required visible pineapple | ASSET-03, FRUIT-01 |\r\n",
+            "| SM_FruitCrown | `project/Content/Art/Meshes/SM_FruitCrown.uasset` | Required visible pineapple | ASSET-03, FRUIT-01 |\r\n",
+            "| SM_GhostBody | `project/Content/Art/Meshes/SM_GhostBody.uasset` | Required visible ghosts | ASSET-02, VISUAL-03 |\r\n",
+            "| SM_GhostHead | `project/Content/Art/Meshes/SM_GhostHead.uasset` | Required visible ghosts | ASSET-02, VISUAL-03 |\r\n",
+            "| SM_Jaw | `project/Content/Art/Meshes/SM_Jaw.uasset` | Required visible player | ASSET-01, VISUAL-02 |\r\n",
+            "| SM_Tooth | `project/Content/Art/Meshes/SM_Tooth.uasset` | Required visible player | ASSET-01, VISUAL-02 |\r\n",
+            "| T_WallEdge | `project/Content/Art/Textures/T_WallEdge.uasset` | Required visible maze appearance | ASSET-04, VISUAL-01 |\r\n",
+            "| T_LifeIcon | `project/Content/Art/UI/T_LifeIcon.uasset` | Required visible life icon | ASSET-05, HUD-01 |\r\n",
+            "| SM_Eye-source-obj | `project/SourceArt/Meshes/SM_Eye.obj` | Editing source for SM_Eye | ASSET-01, VISUAL-02 |\r\n",
+            "| SM_FruitBody-source-obj | `project/SourceArt/Meshes/SM_FruitBody.obj` | Editing source for SM_FruitBody | ASSET-03, FRUIT-01 |\r\n",
+            "| SM_FruitCrown-source-obj | `project/SourceArt/Meshes/SM_FruitCrown.obj` | Editing source for SM_FruitCrown | ASSET-03, FRUIT-01 |\r\n",
+            "| SM_GhostBody-source-obj | `project/SourceArt/Meshes/SM_GhostBody.obj` | Editing source for SM_GhostBody | ASSET-02, VISUAL-03 |\r\n",
+            "| SM_GhostHead-source-obj | `project/SourceArt/Meshes/SM_GhostHead.obj` | Editing source for SM_GhostHead | ASSET-02, VISUAL-03 |\r\n",
+            "| SM_Jaw-source-obj | `project/SourceArt/Meshes/SM_Jaw.obj` | Editing source for SM_Jaw | ASSET-01, VISUAL-02 |\r\n",
+            "| SM_Tooth-source-obj | `project/SourceArt/Meshes/SM_Tooth.obj` | Editing source for SM_Tooth | ASSET-01, VISUAL-02 |\r\n",
+            "| T_WallEdge-source-png | `project/SourceArt/Textures/T_WallEdge.png` | Editing source for T_WallEdge | ASSET-04, VISUAL-01 |\r\n",
+            "| life-icon-source-svg | `project/SourceArt/UI/life-icon.svg` | Editing source for T_LifeIcon | ASSET-05, HUD-01 |\r\n",
+            "| T_LifeIcon-source-png | `project/SourceArt/UI/T_LifeIcon.png` | Editing source for T_LifeIcon | ASSET-05, HUD-01 |\r\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ASSET_COVERAGE.json",
+      "published": "ASSET_COVERAGE.json",
+      "sha256": "a78c956e16f629085895b71f1016d185f64dcabc3dbe67737fc3445b930405c2",
+      "published_sha256": "a78c956e16f629085895b71f1016d185f64dcabc3dbe67737fc3445b930405c2"
+    },
+    {
+      "source": "ASSET_MANIFEST.json",
+      "published": "ASSET_MANIFEST.json",
+      "sha256": "28264b019b30e3422ae76a1fcaa5e8912065fbc8dafa3c5868fee154d29d38f3",
+      "published_sha256": "ea1d26eed7f37834ff337f61fb76c92c5a186ee642df58c5a32059b8c969735e",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 5,
+          "lines": [
+            "  \"catalog\": \"ASSET_CATALOG.json\",\n",
+            "  \"legal_map\": \"legal/ASSET_LICENSE_MAP.json\",\n",
+            "  \"copy_strategy\": \"Ready-to-use UE art in project/Content/Art; editable sources in project/SourceArt; matching protected references in assets/.\",\n"
+          ]
+        },
+        {
+          "start": 9,
+          "end": 10,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_Eye.obj\",\n"
+          ]
+        },
+        {
+          "start": 21,
+          "end": 22,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_FruitBody.obj\",\n"
+          ]
+        },
+        {
+          "start": 33,
+          "end": 34,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_FruitCrown.obj\",\n"
+          ]
+        },
+        {
+          "start": 45,
+          "end": 46,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_GhostBody.obj\",\n"
+          ]
+        },
+        {
+          "start": 57,
+          "end": 58,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_GhostHead.obj\",\n"
+          ]
+        },
+        {
+          "start": 69,
+          "end": 70,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_Jaw.obj\",\n"
+          ]
+        },
+        {
+          "start": 81,
+          "end": 82,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_Tooth.obj\",\n"
+          ]
+        },
+        {
+          "start": 93,
+          "end": 94,
+          "lines": [
+            "      \"path\": \"assets/raw/T_WallEdge.png\",\n"
+          ]
+        },
+        {
+          "start": 105,
+          "end": 106,
+          "lines": [
+            "      \"path\": \"assets/ui/life-icon.svg\",\n"
+          ]
+        },
+        {
+          "start": 117,
+          "end": 118,
+          "lines": [
+            "      \"path\": \"assets/ui/T_LifeIcon.png\",\n"
+          ]
+        },
+        {
+          "start": 129,
+          "end": 130,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/M_Neon.uasset\",\n"
+          ]
+        },
+        {
+          "start": 143,
+          "end": 144,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/M_Wall.uasset\",\n"
+          ]
+        },
+        {
+          "start": 155,
+          "end": 156,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Crown.uasset\",\n"
+          ]
+        },
+        {
+          "start": 167,
+          "end": 168,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Cyan.uasset\",\n"
+          ]
+        },
+        {
+          "start": 179,
+          "end": 180,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Dot.uasset\",\n"
+          ]
+        },
+        {
+          "start": 193,
+          "end": 194,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Eye.uasset\",\n"
+          ]
+        },
+        {
+          "start": 205,
+          "end": 206,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Floor.uasset\",\n"
+          ]
+        },
+        {
+          "start": 217,
+          "end": 218,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Frightened.uasset\",\n"
+          ]
+        },
+        {
+          "start": 229,
+          "end": 230,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Fruit.uasset\",\n"
+          ]
+        },
+        {
+          "start": 241,
+          "end": 242,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Gate.uasset\",\n"
+          ]
+        },
+        {
+          "start": 253,
+          "end": 254,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Orange.uasset\",\n"
+          ]
+        },
+        {
+          "start": 265,
+          "end": 266,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Pink.uasset\",\n"
+          ]
+        },
+        {
+          "start": 277,
+          "end": 278,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Player.uasset\",\n"
+          ]
+        },
+        {
+          "start": 289,
+          "end": 290,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Red.uasset\",\n"
+          ]
+        },
+        {
+          "start": 301,
+          "end": 302,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_Eye.uasset\",\n"
+          ]
+        },
+        {
+          "start": 313,
+          "end": 314,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_FruitBody.uasset\",\n"
+          ]
+        },
+        {
+          "start": 325,
+          "end": 326,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_FruitCrown.uasset\",\n"
+          ]
+        },
+        {
+          "start": 337,
+          "end": 338,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_GhostBody.uasset\",\n"
+          ]
+        },
+        {
+          "start": 349,
+          "end": 350,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_GhostHead.uasset\",\n"
+          ]
+        },
+        {
+          "start": 361,
+          "end": 362,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_Jaw.uasset\",\n"
+          ]
+        },
+        {
+          "start": 373,
+          "end": 374,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_Tooth.uasset\",\n"
+          ]
+        },
+        {
+          "start": 385,
+          "end": 386,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Textures/T_WallEdge.uasset\",\n"
+          ]
+        },
+        {
+          "start": 397,
+          "end": 398,
+          "lines": [
+            "      \"path\": \"project/Content/Art/UI/T_LifeIcon.uasset\",\n"
+          ]
+        },
+        {
+          "start": 409,
+          "end": 410,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_Eye.obj\",\n"
+          ]
+        },
+        {
+          "start": 421,
+          "end": 422,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_FruitBody.obj\",\n"
+          ]
+        },
+        {
+          "start": 433,
+          "end": 434,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_FruitCrown.obj\",\n"
+          ]
+        },
+        {
+          "start": 445,
+          "end": 446,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_GhostBody.obj\",\n"
+          ]
+        },
+        {
+          "start": 457,
+          "end": 458,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_GhostHead.obj\",\n"
+          ]
+        },
+        {
+          "start": 469,
+          "end": 470,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_Jaw.obj\",\n"
+          ]
+        },
+        {
+          "start": 481,
+          "end": 482,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_Tooth.obj\",\n"
+          ]
+        },
+        {
+          "start": 493,
+          "end": 494,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Textures/T_WallEdge.png\",\n"
+          ]
+        },
+        {
+          "start": 505,
+          "end": 506,
+          "lines": [
+            "      \"path\": \"project/SourceArt/UI/life-icon.svg\",\n"
+          ]
+        },
+        {
+          "start": 517,
+          "end": 518,
+          "lines": [
+            "      \"path\": \"project/SourceArt/UI/T_LifeIcon.png\",\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "assets/raw/SM_Eye.obj",
+      "published": "starter-project/SourceArt/Meshes/SM_Eye.obj",
+      "sha256": "cdcce2ecba883502e52bdf307261bb056d480e1064fd33593a663901bf100552",
+      "published_sha256": "cdcce2ecba883502e52bdf307261bb056d480e1064fd33593a663901bf100552"
+    },
+    {
+      "source": "assets/raw/SM_FruitBody.obj",
+      "published": "starter-project/SourceArt/Meshes/SM_FruitBody.obj",
+      "sha256": "bdd505d7e1328eec2f329307479fc84da1234cf4e44cbb38b1af72e6cd834d38",
+      "published_sha256": "bdd505d7e1328eec2f329307479fc84da1234cf4e44cbb38b1af72e6cd834d38"
+    },
+    {
+      "source": "assets/raw/SM_FruitCrown.obj",
+      "published": "starter-project/SourceArt/Meshes/SM_FruitCrown.obj",
+      "sha256": "53d6a05c438d86203a08a1891c55836fb7f5d74b370ac26528a6e35e3de32585",
+      "published_sha256": "53d6a05c438d86203a08a1891c55836fb7f5d74b370ac26528a6e35e3de32585"
+    },
+    {
+      "source": "assets/raw/SM_GhostBody.obj",
+      "published": "starter-project/SourceArt/Meshes/SM_GhostBody.obj",
+      "sha256": "9281830ec3c86857ca9f9f9d8a95119d045266452ebf61499925298a6f29c1a8",
+      "published_sha256": "9281830ec3c86857ca9f9f9d8a95119d045266452ebf61499925298a6f29c1a8"
+    },
+    {
+      "source": "assets/raw/SM_GhostHead.obj",
+      "published": "starter-project/SourceArt/Meshes/SM_GhostHead.obj",
+      "sha256": "1539f5f8afc484300e5c00c3356c3cb9f57df514fafb47b9f4ec97955dfcb2ce",
+      "published_sha256": "1539f5f8afc484300e5c00c3356c3cb9f57df514fafb47b9f4ec97955dfcb2ce"
+    },
+    {
+      "source": "assets/raw/SM_Jaw.obj",
+      "published": "starter-project/SourceArt/Meshes/SM_Jaw.obj",
+      "sha256": "46c553a5f8890e648287c7023d71e25be2e6bf1d2db50477b77783d03b049fb4",
+      "published_sha256": "46c553a5f8890e648287c7023d71e25be2e6bf1d2db50477b77783d03b049fb4"
+    },
+    {
+      "source": "assets/raw/SM_Tooth.obj",
+      "published": "starter-project/SourceArt/Meshes/SM_Tooth.obj",
+      "sha256": "3e2f8b609363b5571e04a32625303dcffacbacc59317ead8fccb1be51417a9a2",
+      "published_sha256": "3e2f8b609363b5571e04a32625303dcffacbacc59317ead8fccb1be51417a9a2"
+    },
+    {
+      "source": "assets/raw/T_WallEdge.png",
+      "published": "starter-project/SourceArt/Textures/T_WallEdge.png",
+      "sha256": "2a1de7d4c43c10fbde70c8f95a5c1a4179964c130373df2a342dfd6c488096d1",
+      "published_sha256": "2a1de7d4c43c10fbde70c8f95a5c1a4179964c130373df2a342dfd6c488096d1"
+    },
+    {
+      "source": "assets/ui/life-icon.svg",
+      "published": "starter-project/SourceArt/UI/life-icon.svg",
+      "sha256": "6cf9e8c2bce375aae6bfd2eb8cd7be02d97f56a3f7305a148d629fb5b97dd383",
+      "published_sha256": "6cf9e8c2bce375aae6bfd2eb8cd7be02d97f56a3f7305a148d629fb5b97dd383"
+    },
+    {
+      "source": "assets/ui/T_LifeIcon.png",
+      "published": "starter-project/SourceArt/UI/T_LifeIcon.png",
+      "sha256": "ab3e1ddb9e58de6e826dc147b1061caa8ed338d9dffe8eab074ce08843536d83",
+      "published_sha256": "ab3e1ddb9e58de6e826dc147b1061caa8ed338d9dffe8eab074ce08843536d83"
+    },
+    {
+      "source": "BENCHMARK_MANIFEST.json",
+      "published": "BENCHMARK_MANIFEST.json",
+      
+
+"restore_edits": [
+        {
+          "start": 19,
+          "end": 24,
+          "lines": [
+            "    \"project_root\": \"project\",\n",
+            "    \"project_file\": \"project/ChompStarter.uproject\",\n",
+            "    \"starter_entry\": \"project/ChompStarter.uproject\",\n",
+            "    \"default_entry\": \"project/ChompStarter.uproject\",\n",
+            "    \"final_entry\": \"project/ChompStarter.uproject\",\n"
+          ]
+        },
+        {
+          "start": 25,
+          "end": 26,
+          "lines": [
+            "    \"final_map_source\": \"project/Config/DefaultEngine.ini:GameDefaultMap\",\n"
+          ]
+        },
+        {
+          "start": 28,
+          "end": 30,
+          "lines": [
+            "    \"toolchain\": \"TOOLCHAIN.md\",\n",
+            "    \"tool_guide\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n"
+          ]
+        },
+        {
+          "start": 31,
+          "end": 32,
+          "lines": [
+            "    \"asset_catalog\": \"ASSET_CATALOG.json\",\n"
+          ]
+        },
+        {
+          "start": 33,
+          "end": 34,
+          "lines": [
+            "    \"legal_map\": \"legal/ASSET_LICENSE_MAP.json\",\n"
+          ]
+        },
+        {
+          "start": 36,
+          "end": 37,
+          "lines": [
+            "    \"public_smoke\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n"
+          ]
+        },
+        {
+          "start": 42,
+          "end": 43,
+          "lines": [
+            "    \"README.md\",\n"
+          ]
+        },
+        {
+          "start": 44,
+          "end": 48,
+          "lines": [
+            "    \"ASSET_CATALOG.md\",\n",
+            "    \"contracts/README.md\",\n",
+            "    \"TOOLCHAIN.md\",\n",
+            "    \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\"\n"
+          ]
+        },
+        {
+          "start": 51,
+          "end": 52,
+          "lines": [
+            "      \"project\"\n"
+          ]
+        },
+        {
+          "start": 54,
+          "end": 55,
+          "lines": [
+            "      \"All input files outside project/\"\n"
+          ]
+        },
+        {
+          "start": 158,
+          "end": 160,
+          "lines": [
+            "    \"runtime_root\": \"project/Content/Art\",\n",
+            "    \"editable_source_root\": \"project/SourceArt\",\n"
+          ]
+        },
+        {
+          "start": 183,
+          "end": 192,
+          "lines": [
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n"
+          ]
+        },
+        {
+          "start": 193,
+          "end": 196,
+          "lines": [
+            "\n",
+            "\n",
+            "\n"
+          ]
+        },
+        {
+          "start": 199,
+          "end": 200,
+          "lines": [
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "contracts/game-state.schema.json",
+      "published": "contracts/game-state.schema.json",
+      "sha256": "90adc3bde3adcfec323c17b252d801a8fa2e4c1b43064fa20a63f1f89b5a77f6",
+      "published_sha256": "90adc3bde3adcfec323c17b252d801a8fa2e4c1b43064fa20a63f1f89b5a77f6"
+    },
+    {
+      "source": "contracts/maze-layout.json",
+      "published": "contracts/maze-layout.json",
+      "sha256": "e014bd6aa15faa7464933fb9dde33d282ab48876fe97e1dc5d6d4ee2c7d6987b",
+      "published_sha256": "e014bd6aa15faa7464933fb9dde33d282ab48876fe97e1dc5d6d4ee2c7d6987b"
+    },
+    {
+      "source": "contracts/README.md",
+      "published": "contracts/GAME_SESSION_SPEC.md",
+      "sha256": "f172d52cf25a7f6c726acb8ffca5a31f9c1a81547c3cadf9b1d1f2f30884ecb5",
+      "published_sha256": "f172d52cf25a7f6c726acb8ffca5a31f9c1a81547c3cadf9b1d1f2f30884ecb5"
+    },
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+      "source": "GDD.md",
+      "published": "GDD.md",
+      "sha256": "a91c9e43df08f4d26d17b750e3c47490c2efcf2b063e2917ed7bb69e837fb98f",
+      "published_sha256": "b138175d047f9dd39cd756a65c3aac7966c855b947650a7979f0904c2c813d14",
+      "restore_edits": [
+        {
+          "start": 276,
+          "end": 277,
+          "lines": [
+            "All paths in the resource column are relative to `project/Content/Art/`; the JSON catalog provides the corresponding full input-relative and Unreal object paths.\n"
+          ]
+        },
+        {
+          "start": 278,
+          "end": 279,
+          "lines": [
+            "| Requirements | Required resources under project/Content/Art/ | Visible use |\n"
+          ]
+        },
+        {
+          "start": 287,
+          "end": 288,
+          "lines": [
+            "Editable sources are also inside the project: seven OBJ files in `project/SourceArt/Meshes/`, `T_WallEdge.png` in `project/SourceArt/Textures/`, and `life-icon.svg` plus `T_LifeIcon.png` in `project/SourceArt/UI/`. The matching `assets/raw/` and `assets/ui/` files are protected reference copies. Use the ready-to-use UE assets directly; importing each source copy again is unnecessary.\n"
+          ]
+        },
+        {
+          "start": 289,
+          "end": 290,
+          "lines": [
+            "`ASSET_CATALOG.json` gives per-file hashes, object paths, dimensions, dependencies and source-copy mappings. `legal/NOTICES.md` gives resource-use terms. The resources are static, unassembled parts without gameplay actors or behaviors. `contracts/maze-layout.json` mirrors Figure 6A for MAZE-01 and does not supply an executable level.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "INITIAL_AGENT_PROMPT.md",
+      "published": "INITIAL_AGENT_PROMPT.md",
+      "sha256": "9d6a4c30bff52dce22336c522c399c2d7bc16f6f2ca4e55527f0aa2d1fc0b912",
+      "published_sha256": "256ed1860bf004354377d7307a47341a7a246046af0b04cb92d21095a4627c4b",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "Read `README.md`, `GDD.md`, `ASSET_CATALOG.md`, `contracts/README.md`, `TOOLCHAIN.md`, and the engine tool guide in that order. Implement every numbered requirement in GDD Section 6, including its QUALITY requirements, in the supplied Unreal Engine 5.7.4 project. Other documents provide resources, tooling and observation semantics, not additional gameplay scoring rules.\n"
+          ]
+        },
+        {
+          "start": 4,
+          "end": 5,
+          "lines": [
+            "Your implementation root is `project/`; the final entry remains `project/ChompStarter.uproject`. You may replace the welcome view, create levels and actors, change project source/configuration and add your own resources inside that root. Preserve the public files outside `project/`. Mandatory art is ready to use in `project/Content/Art/`; writable source copies are already in `project/SourceArt/`. Apply ASSET-01..05, including visible use and permitted transformations. Generated project caches belong under the project only; place evidence and your final report in an externally supplied output directory.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "legal/ASSET_LICENSE_MAP.json",
+      "published": "assets/legal/ASSET_LICENSE_MAP.json",
+      "sha256": "c82d1162841944e4dd7bbd449160cec436b914e2dc6a0e449fc0f6b14ee07cad",
+      "published_sha256": "873e157d065b0955aacff83e5e21b67b4d23a91ed5189d0f9cb17f3a1e6fd556",
+      "restore_edits": [
+        {
+          "start": 3,
+          "end": 5,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_Eye.obj\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 7,
+          "end": 9,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_FruitBody.obj\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 11,
+          "end": 13,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_FruitCrown.obj\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 15,
+          "end": 17,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_GhostBody.obj\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 19,
+          "end": 21,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_GhostHead.obj\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 23,
+          "end": 25,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_Jaw.obj\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 27,
+          "end": 29,
+          "lines": [
+            "      \"path\": \"assets/raw/SM_Tooth.obj\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 31,
+          "end": 33,
+          "lines": [
+            "      \"path\": \"assets/raw/T_WallEdge.png\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 35,
+          "end": 37,
+          "lines": [
+            "      \"path\": \"assets/ui/life-icon.svg\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 39,
+          "end": 41,
+          "lines": [
+            "      \"path\": \"assets/ui/T_LifeIcon.png\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 43,
+          "end": 45,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/M_Neon.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 47,
+          "end": 49,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/M_Wall.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 51,
+          "end": 53,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Crown.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 55,
+          "end": 57,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Cyan.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 59,
+          "end": 61,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Dot.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 63,
+          "end": 65,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Eye.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 67,
+          "end": 69,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Floor.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 71,
+          "end": 73,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Frightened.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 75,
+          "end": 77,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Fruit.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 79,
+          "end": 81,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Gate.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 83,
+          "end": 85,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Orange.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 87,
+          "end": 89,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Pink.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 91,
+          "end": 93,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Player.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 95,
+          "end": 97,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Materials/MI_Red.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 99,
+          "end": 101,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_Eye.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 103,
+          "end": 105,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_FruitBody.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 107,
+          "end": 109,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_FruitCrown.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 111,
+          "end": 113,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_GhostBody.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 115,
+          "end": 117,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_GhostHead.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 119,
+          "end": 121,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_Jaw.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 123,
+          "end": 125,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Meshes/SM_Tooth.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 127,
+          "end": 129,
+          "lines": [
+            "      \"path\": \"project/Content/Art/Textures/T_WallEdge.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 131,
+          "end": 133,
+          "lines": [
+            "      \"path\": \"project/Content/Art/UI/T_LifeIcon.uasset\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 135,
+          "end": 137,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_Eye.obj\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 139,
+          "end": 141,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_FruitBody.obj\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 143,
+          "end": 145,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_FruitCrown.obj\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 147,
+          "end": 149,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_GhostBody.obj\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 151,
+          "end": 153,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_GhostHead.obj\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 155,
+          "end": 157,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_Jaw.obj\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 159,
+          "end": 161,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Meshes/SM_Tooth.obj\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 163,
+          "end": 165,
+          "lines": [
+            "      \"path\": \"project/SourceArt/Textures/T_WallEdge.png\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 167,
+          "end": 169,
+          "lines": [
+            "      \"path\": \"project/SourceArt/UI/life-icon.svg\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        },
+        {
+          "start": 171,
+          "end": 173,
+          "lines": [
+            "      \"path\": \"project/SourceArt/UI/T_LifeIcon.png\",\n",
+            "      \"terms\": \"legal/NOTICES.md\"\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "legal/NOTICES.md",
+      "published": "assets/legal/NOTICES.md",
+      "sha256": "5b1fb56d7a08bcdbaf6ffad3e301ca0de02776353088116cb36f3a75bc8e6b59",
+      "published_sha256": "5b1fb56d7a08bcdbaf6ffad3e301ca0de02776353088116cb36f3a75bc8e6b59"
+    },
+    {
+      "source": "project/.gitignore",
+      "published": "starter-project/.gitignore",
+      "sha256": "d9aa0f4b7afc0f15529fc98375ff978523e9f92dcca7c886c06be615281fd3bd",
+      "published_sha256": "d9aa0f4b7afc0f15529fc98375ff978523e9f92dcca7c886c06be615281fd3bd"
+    },
+    {
+      "source": "project/ChompStarter.uproject",
+      "published": "starter-project/ChompStarter.uproject",
+      "sha256": "29147a00c5657af1daf00533421ad71fcfb416597c33c68f8811017cdeecb711",
+      "published_sha256": "29147a00c5657af1daf00533421ad71fcfb416597c33c68f8811017cdeecb711"
+    },
+    {
+      "source": "project/Config/DefaultEngine.ini",
+      "published": "starter-project/Config/DefaultEngine.ini",
+      "sha256": "28424d2bbeeb45c2167327812c601358d011dbb09bf71445ec41b0be1d9614d1",
+      "published_sha256": "28424d2bbeeb45c2167327812c601358d011dbb09bf71445ec41b0be1d9614d1"
+    },
+    {
+      "source": "project/Config/DefaultGame.ini",
+      "published": "starter-project/Config/DefaultGame.ini",
+      "sha256": "0bc6406ec9f70742b269610c2b36c250b581a4e18b2c8ed94b55265e63fde11e",
+      "published_sha256": "0bc6406ec9f70742b269610c2b36c250b581a4e18b2c8ed94b55265e63fde11e"
+    },
+    {
+      "source": "project/Config/DefaultInput.ini",
+      "published": "starter-project/Config/DefaultInput.ini",
+      "sha256": "1bb672076b45da710a1a56a09a91eb6eff008d3de59842e7c588711ba2aa0fd3",
+      "published_sha256": "1bb672076b45da710a1a56a09a91eb6eff008d3de59842e7c588711ba2aa0fd3"
+    },
+    {
+      "source": "project/Content/Art/Materials/M_Neon.uasset",
+      "published": "starter-project/Content/Art/Materials/M_Neon.uasset",
+      "sha256": "d068c181ad4c9899997661435fe16211d011f9840424d66217b994587651b175",
+      "published_sha256": "d068c181ad4c9899997661435fe16211d011f9840424d66217b994587651b175"
+    },
+    {
+      "source": "project/Content/Art/Materials/M_Wall.uasset",
+      "published": "starter-project/Content/Art/Materials/M_Wall.uasset",
+      "sha256": "fd1ff6f9b610c0b0ad6b34198e53ebd427135ce291270af2a0c043987a46e83e",
+      "published_sha256": "fd1ff6f9b610c0b0ad6b34198e53ebd427135ce291270af2a0c043987a46e83e"
+    },
+    {
+      "source": "project/Content/Art/Materials/MI_Crown.uasset",
+      "published": "starter-project/Content/Art/Materials/MI_Crown.uasset",
+      "sha256": "8f26f89202057bc29dad91dc065bc37ebfa4c9b7e3bb4f06dcee3f94fa8786a9",
+      "published_sha256": "8f26f89202057bc29dad91dc065bc37ebfa4c9b7e3bb4f06dcee3f94fa8786a9"
+    },
+    {
+      "source": "project/Content/Art/Materials/MI_Cyan.uasset",
+      "published": "starter-project/Content/Art/Materials/MI_Cyan.uasset",
+      "sha256": "05921316a19c619a8d62b11daf27f5520bd127a73360f218c2d126b483696046",
+      "published_sha256": "05921316a19c619a8d62b11daf27f5520bd127a73360f218c2d126b483696046"
+    },
+    {
+      "source": "project/Content/Art/Materials/MI_Dot.uasset",
+      "published": "starter-project/Content/Art/Materials/MI_Dot.uasset",
+      "sha256": "18eb8e70119f3f677bd9c0f7faaee0ef120ceba795ca75232d071baa474ac688",
+      "published_sha256": "18eb8e70119f3f677bd9c0f7faaee0ef120ceba795ca75232d071baa474ac688"
+    },
+    {
+      "source": "project/Content/Art/Materials/MI_Eye.uasset",
+      "published": "starter-project/Content/Art/Materials/MI_Eye.uasset",
+      "sha256": "b083ba32db831f2e13c423ba473d3e3990b05ba8fc643f7cf384352e4d06ae10",
+      "published_sha256": "b083ba32db831f2e13c423ba473d3e3990b05ba8fc643f7cf384352e4d06ae10"
+    },
+    {
+      "source": "project/Content/Art/Materials/MI_Floor.uasset",
+      "published": "starter-project/Content/Art/Materials/MI_Floor.uasset",
+      "sha256": "f59584b50b4b108b758027f7f1485f558b0baf01d21e945f1907d3d397317ca1",
+      "published_sha256": "f59584b50b4b108b758027f7f1485f558b0baf01d21e945f1907d3d397317ca1"
+    },
+    {
+      "source": "project/Content/Art/Materials/MI_Frightened.uasset",
+      "published": "starter-project/Content/Art/Materials/MI_Frightened.uasset",
+      "sha256": "10257b6c99bc8f16202e8d2a2f5782a18bc14acec98c5718689695536e06a01f",
+      "published_sha256": "10257b6c99bc8f16202e8d2a2f5782a18bc14acec98c5718689695536e06a01f"
+    },
+    {
+      "source": "project/Content/Art/Materials/MI_Fruit.uasset",
+      "published": "starter-project/Content/Art/Materials/MI_Fruit.uasset",
+      "sha256": "a0e87d002e68059617e99d1dbcce75e585fde1cdd18914c6ea52ef6079d7e76d",
+      "published_sha256": "a0e87d002e68059617e99d1dbcce75e585fde1cdd18914c6ea52ef6079d7e76d"
+    },
+    {
+      "source": "project/Content/Art/Materials/MI_Gate.uasset",
+      "published": "starter-project/Content/Art/Materials/MI_Gate.uasset",
+      "sha256": "860cd1e3248fd0daac7fffbcc42b3492d9bdfc546dd03bc1323e2149ecb36e76",
+      "published_sha256": "860cd1e3248fd0daac7fffbcc42b3492d9bdfc546dd03bc1323e2149ecb36e76"
+    },
+    {
+      "source": "project/Content/Art/Materials/MI_Orange.uasset",
+      "published": "starter-project/Content/Art/Materials/MI_Orange.uasset",
+      "sha256": "f03e44b75b6df2e727a5e1b7485f693336dee68f209d5e73ce41d74a8f5f2b12",
+      "published_sha256": "f03e44b75b6df2e727a5e1b7485f693336dee68f209d5e73ce41d74a8f5f2b12"
+    },
+    {
+      "source": "project/Content/Art/Materials/MI_Pink.uasset",
+      "published": "starter-project/Content/Art/Materials/MI_Pink.uasset",
+      "sha256": "52798a7c508ad1bb45956008e161bfb80eee64e0a2c7d145374a48ab452986ff",
+      "published_sha256": "52798a7c508ad1bb45956008e161bfb80eee64e0a2c7d145374a48ab452986ff"
+    },
+    {
+      "source": "project/Content/Art/Materials/MI_Player.uasset",
+      "published": "starter-project/Content/Art/Materials/MI_Player.uasset",
+      "sha256": "51e0a2b291ec82bedaeed70810df63d9e4e6ebed2e88ad3ecd6f9fe4f9698e20",
+      "published_sha256": "51e0a2b291ec82bedaeed70810df63d9e4e6ebed2e88ad3ecd6f9fe4f9698e20"
+    },
+    {
+      "source": "project/Content/Art/Materials/MI_Red.uasset",
+      "published": "starter-project/Content/Art/Materials/MI_Red.uasset",
+      "sha256": "b7ae48430bcf970b67a348b2dbb652d2b8fbf20516ac7f5299d0e95bc9173f76",
+      "published_sha256": "b7ae48430bcf970b67a348b2dbb652d2b8fbf20516ac7f5299d0e95bc9173f76"
+    },
+    {
+      "source": "project/Content/Art/Meshes/SM_Eye.uasset",
+      "published": "starter-project/Content/Art/Meshes/SM_Eye.uasset",
+      "sha256": "a1bebc6998f4180ad98f2fdd1e5a98afd32889f10686371bcfcceb0845482465",
+      "published_sha256": "a1bebc6998f4180ad98f2fdd1e5a98afd32889f10686371bcfcceb0845482465"
+    },
+    {
+      "source": "project/Content/Art/Meshes/SM_FruitBody.uasset",
+      "published": "starter-project/Content/Art/Meshes/SM_FruitBody.uasset",
+      "sha256": "6eb7add5d89adb4b847945dd837fec36a9c38d1c488366826e78ae4524c8906c",
+      "published_sha256": "6eb7add5d89adb4b847945dd837fec36a9c38d1c488366826e78ae4524c8906c"
+    },
+    {
+      "source": "project/Content/Art/Meshes/SM_FruitCrown.uasset",
+      "published": "starter-project/Content/Art/Meshes/SM_FruitCrown.uasset",
+      "sha256": "c62f3cd3f2718493b6ce6b2e4d54472f0a07ee22e83addb6c128ef25597ec303",
+      "published_sha256": "c62f3cd3f2718493b6ce6b2e4d54472f0a07ee22e83addb6c128ef25597ec303"
+    },
+    {
+      "source": "project/Content/Art/Meshes/SM_GhostBody.uasset",
+      "published": "starter-project/Content/Art/Meshes/SM_GhostBody.uasset",
+      "sha256": "c89aaf787157f4fc60f304684ea1d2eac033f0ed2f83f3e2f1bac59b88325f8e",
+      "published_sha256": "c89aaf787157f4fc60f304684ea1d2eac033f0ed2f83f3e2f1bac59b88325f8e"
+    },
+    {
+      "source": "project/Content/Art/Meshes/SM_GhostHead.uasset",
+      "published": "starter-project/Content/Art/Meshes/SM_GhostHead.uasset",
+      "sha256": "fa5741842ed0d4b89ef8d8881b205321768cfbf4b737b9404f13d36c52b53e36",
+      "published_sha256": "fa5741842ed0d4b89ef8d8881b205321768cfbf4b737b9404f13d36c52b53e36"
+    },
+    {
+      "source": "project/Content/Art/Meshes/SM_Jaw.uasset",
+      "published": "starter-project/Content/Art/Meshes/SM_Jaw.uasset",
+      "sha256": "173407c44d0e420355c440ee190e2a3e332dfb139057670941520030b9bf08ac",
+      "published_sha256": "173407c44d0e420355c440ee190e2a3e332dfb139057670941520030b9bf08ac"
+    },
+    {
+      "source": "project/Content/Art/Meshes/SM_Tooth.uasset",
+      "published": "starter-project/Content/Art/Meshes/SM_Tooth.uasset",
+      "sha256": "7a3665b6ae5e331c11fe2e4082b48545cff33a9cfb2c3dbbdc66d9a00354e515",
+      "published_sha256": "7a3665b6ae5e331c11fe2e4082b48545cff33a9cfb2c3dbbdc66d9a00354e515"
+    },
+    {
+      "source": "project/Content/Art/Textures/T_WallEdge.uasset",
+      "published": "starter-project/Content/Art/Textures/T_WallEdge.uasset",
+      "sha256": "7b7a427f52b8b8755a49058d796fc643526c48fa2cd9ce4bbf91e80f3126b28f",
+      "published_sha256": "7b7a427f52b8b8755a49058d796fc643526c48fa2cd9ce4bbf91e80f3126b28f"
+    },
+    {
+      "source": "project/Content/Art/UI/T_LifeIcon.uasset",
+      "published": "starter-project/Content/Art/UI/T_LifeIcon.uasset",
+      "sha256": "b0c2e7dcd91c96e65809902553b7c3d9815954a3767bf5954cb53ee3dc7ef142",
+      "published_sha256": "b0c2e7dcd91c96e65809902553b7c3d9815954a3767bf5954cb53ee3dc7ef142"
+    },
+    {
+      "source": "project/README.md",
+      "published": "starter-project/README.md",
+      "sha256": "f1b21db090dc0b6e84cf4baa1e0ef7282bfc93c6fd50bc1c07cf7aca247431cc",
+      "published_sha256": "f1b21db090dc0b6e84cf4baa1e0ef7282bfc93c6fd50bc1c07cf7aca247431cc"
+    },
+    {
+      "source": "project/Source/ChompStarter/ChompStarter.Build.cs",
+      "published": "starter-project/Source/ChompStarter/ChompStarter.Build.cs",
+      "sha256": "d1ca9dfa8a3c367e21449a53181a53a2850da871a6782478cbd4ba24893acc5f",
+      "published_sha256": "d1ca9dfa8a3c367e21449a53181a53a2850da871a6782478cbd4ba24893acc5f"
+    },
+    {
+      "source": "project/Source/ChompStarter/ChompStarter.cpp",
+      "published": "starter-project/Source/ChompStarter/ChompStarter.cpp",
+      "sha256": "9760cf340e592e848c51b1b3ee633e83cc6665cf886aab35a158bbc16bfb0926",
+      "published_sha256": "9760cf340e592e848c51b1b3ee633e83cc6665cf886aab35a158bbc16bfb0926"
+    },
+    {
+      "source": "project/Source/ChompStarter/ObservationTransport.cpp",
+      "published": "starter-project/Source/ChompStarter/ObservationTransport.cpp",
+      "sha256": "3cdcde748165fc6f8799e369e046e36a3dfba2b40cad708f2af539dd15a32b2b",
+      "published_sha256": "3cdcde748165fc6f8799e369e046e36a3dfba2b40cad708f2af539dd15a32b2b"
+    },
+    {
+      "source": "project/Source/ChompStarter/ObservationTransport.h",
+      "published": "starter-project/Source/ChompStarter/ObservationTransport.h",
+      "sha256": "0f139f75226c548a200a52e99dfd03a9d0aafd70f543b80a05c37729ff8e24e0",
+      "published_sha256": "0f139f75226c548a200a52e99dfd03a9d0aafd70f543b80a05c37729ff8e24e0"
+    },
+    {
+      "source": "project/Source/ChompStarter/StarterShell.cpp",
+      "published": "starter-project/Source/ChompStarter/StarterShell.cpp",
+      "sha256": "06369d8f32ea53671343b31f319bdc6343a22ed813deaa6de36bffdcd2565c28",
+      "published_sha256": "06369d8f32ea53671343b31f319bdc6343a22ed813deaa6de36bffdcd2565c28"
+    },
+    {
+      "source": "project/Source/ChompStarter/StarterShell.h",
+      "published": "starter-project/Source/ChompStarter/StarterShell.h",
+      "sha256": "e4882bef519ba4eb32821c2ef5e099c06c4c205d22d6087226a0af2af547c101",
+      "published_sha256": "e4882bef519ba4eb32821c2ef5e099c06c4c205d22d6087226a0af2af547c101"
+    },
+    {
+      "source": "project/Source/ChompStarter.Target.cs",
+      "published": "starter-project/Source/ChompStarter.Target.cs",
+      "sha256": "1f41a8ff534dc280ce9f3fb2a67fe2a33f8a58a470a7e92bab5ec5463721dd56",
+      "published_sha256": "1f41a8ff534dc280ce9f3fb2a67fe2a33f8a58a470a7e92bab5ec5463721dd56"
+    },
+    {
+      "source": "project/Source/ChompStarterEditor.Target.cs",
+      "published": "starter-project/Source/ChompStarterEditor.Target.cs",
+      "sha256": "3bdfb7892c2f645ffdc48369239047f25c3aa4f9ed76fc5624caa44a42444db5",
+      "published_sha256": "3bdfb7892c2f645ffdc48369239047f25c3aa4f9ed76fc5624caa44a42444db5"
+    },
+    {
+      "source": "project/SourceArt/Meshes/SM_Eye.obj",
+      "published": "starter-project/SourceArt/Meshes/SM_Eye.obj",
+      "sha256": "cdcce2ecba883502e52bdf307261bb056d480e1064fd33593a663901bf100552",
+      "published_sha256": "cdcce2ecba883502e52bdf307261bb056d480e1064fd33593a663901bf100552"
+    },
+    {
+      "source": "project/SourceArt/Meshes/SM_FruitBody.obj",
+      "published": "starter-project/SourceArt/Meshes/SM_FruitBody.obj",
+      "sha256": "bdd505d7e1328eec2f329307479fc84da1234cf4e44cbb38b1af72e6cd834d38",
+      "published_sha256": "bdd505d7e1328eec2f329307479fc84da1234cf4e44cbb38b1af72e6cd834d38"
+    },
+    {
+      "source": "project/SourceArt/Meshes/SM_FruitCrown.obj",
+      "published": "starter-project/SourceArt/Meshes/SM_FruitCrown.obj",
+      "sha256": "53d6a05c438d86203a08a1891c55836fb7f5d74b370ac26528a6e35e3de32585",
+      "published_sha256": "53d6a05c438d86203a08a1891c55836fb7f5d74b370ac26528a6e35e3de32585"
+    },
+    {
+      "source": "project/SourceArt/Meshes/SM_GhostBody.obj",
+      "published": "starter-project/SourceArt/Meshes/SM_GhostBody.obj",
+      "sha256": "9281830ec3c86857ca9f9f9d8a95119d045266452ebf61499925298a6f29c1a8",
+      "published_sha256": "9281830ec3c86857ca9f9f9d8a95119d045266452ebf61499925298a6f29c1a8"
+    },
+    {
+      "source": "project/SourceArt/Meshes/SM_GhostHead.obj",
+      "published": "starter-project/SourceArt/Meshes/SM_GhostHead.obj",
+      "sha256": "1539f5f8afc484300e5c00c3356c3cb9f57df514fafb47b9f4ec97955dfcb2ce",
+      "published_sha256": "1539f5f8afc484300e5c00c3356c3cb9f57df514fafb47b9f4ec97955dfcb2ce"
+    },
+    {
+      "source": "project/SourceArt/Meshes/SM_Jaw.obj",
+      "published": "starter-project/SourceArt/Meshes/SM_Jaw.obj",
+      "sha256": "46c553a5f8890e648287c7023d71e25be2e6bf1d2db50477b77783d03b049fb4",
+      "published_sha256": "46c553a5f8890e648287c7023d71e25be2e6bf1d2db50477b77783d03b049fb4"
+    },
+    {
+      "source": "project/SourceArt/Meshes/SM_Tooth.obj",
+      "published": "starter-project/SourceArt/Meshes/SM_Tooth.obj",
+      "sha256": "3e2f8b609363b5571e04a32625303dcffacbacc59317ead8fccb1be51417a9a2",
+      "published_sha256": "3e2f8b609363b5571e04a32625303dcffacbacc59317ead8fccb1be51417a9a2"
+    },
+    {
+      "source": "project/SourceArt/Textures/T_WallEdge.png",
+      "published": "starter-project/SourceArt/Textures/T_WallEdge.png",
+      "sha256": "2a1de7d4c43c10fbde70c8f95a5c1a4179964c130373df2a342dfd6c488096d1",
+      "published_sha256": "2a1de7d4c43c10fbde70c8f95a5c1a4179964c130373df2a342dfd6c488096d1"
+    },
+    {
+      "source": "project/SourceArt/UI/life-icon.svg",
+      "published": "starter-project/SourceArt/UI/life-icon.svg",
+      "sha256": "6cf9e8c2bce375aae6bfd2eb8cd7be02d97f56a3f7305a148d629fb5b97dd383",
+      "published_sha256": "6cf9e8c2bce375aae6bfd2eb8cd7be02d97f56a3f7305a148d629fb5b97dd383"
+    },
+    {
+      "source": "project/SourceArt/UI/T_LifeIcon.png",
+      "published": "starter-project/SourceArt/UI/T_LifeIcon.png",
+      "sha256": "ab3e1ddb9e58de6e826dc147b1061caa8ed338d9dffe8eab074ce08843536d83",
+      "published_sha256": "ab3e1ddb9e58de6e826dc147b1061caa8ed338d9dffe8eab074ce08843536d83"
+    },
+    {
+      "source": "README.md",
+      "published": "tools/INPUT_GUIDE.md",
+      
+
+"restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "Build the complete neon 3D maze chase described in `GDD.md` from `project/ChompStarter.uproject`. This input targets Unreal Engine **5.7.4, CL 51494982**, Windows x64, independent editor-game mode.\n"
+          ]
+        },
+        {
+          "start": 4,
+          "end": 5,
+          "lines": [
+            "Read in this order: `INITIAL_AGENT_PROMPT.md`, this file, `GDD.md`, `ASSET_CATALOG.md`, `contracts/README.md`, `TOOLCHAIN.md`, then the interface guide as needed. GDD Section 6 is the sole gameplay acceptance authority, including the six quality requirements. The observation contract translates those requirements into read-only data; it adds no hidden gameplay rules.\n"
+          ]
+        },
+        {
+          "start": 12,
+          "end": 16,
+          "lines": [
+            "| project/ | Sole writable implementation root |\n",
+            "| project/Content/Art/ | Mandatory UE meshes, materials, textures and HUD icon |\n",
+            "| project/SourceArt/ | Editable project-local OBJ/PNG/SVG source copies |\n",
+            "| assets/ | Protected reference copies of those sources |\n"
+          ]
+        },
+        {
+          "start": 18,
+          "end": 20,
+          "lines": [
+            "| TOOLCHAIN.md | Build/run entry, viewport and workspace policy |\n",
+            "| UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md | Single-interface tool reference |\n"
+          ]
+        },
+        {
+          "start": 22,
+          "end": 24,
+          "lines": [
+            "| tests/PublicSmoke/ | Untouched-starter health check, not a gameplay test |\n",
+            "| legal/ | Resource-use terms |\n"
+          ]
+        },
+        {
+          "start": 25,
+          "end": 26,
+          "lines": [
+            "Start with engine discovery using `tools/Resolve-Unreal57.ps1`. The concrete build and launch commands are in `TOOLCHAIN.md`. A machine with the stated engine and compiler is required; this package does not install them.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tests/PublicSmoke/Invoke-PublicSmoke.ps1",
+      "published": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
+      "sha256": "d261ac85ddfbd618b4cabb4e92ea2e7d281b9f931cac93aa4f914ef80ec8b0c2",
+      "published_sha256": "c8cac446567b4a46118360629a3da9c954a12bd35d3bb5fcfa6e70977e0eb632",
+      "restore_edits": [
+        {
+          "start": 23,
+          "end": 24,
+          "lines": [
+            "$project = Join-Path $packageRoot 'project/ChompStarter.uproject'\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "TOOLCHAIN.md",
+      "published": "tools/TOOLCHAIN.md",
+      "sha256": "1d579a657ab782e2c3b319364d365bdcdc30f5351870ff4da5ba25a92cdb76fe",
+      "published_sha256": "54404fa1702649c348e15afc70a905baafb770dbc7a61810aa79fe5b76e004d8",
+      "restore_edits": [
+        {
+          "start": 6,
+          "end": 7,
+          "lines": [
+            "The starter entry is `project/ChompStarter.uproject`, target `ChompStarterEditor`; the standalone target is `ChompStarter`. The current default map is the installed engine's `/Engine/Maps/Entry`. A completed implementation sets its own final map in `project/Config/DefaultEngine.ini`. No complete maze map is provided.\n"
+          ]
+        },
+        {
+          "start": 12,
+          "end": 13,
+          "lines": [
+            "$project = (Resolve-Path ./project/ChompStarter.uproject).Path\n"
+          ]
+        },
+        {
+          "start": 32,
+          "end": 33,
+          "lines": [
+            "`project/Content/Art/` contains supplied static presentation assets with portable metadata. Engine primitives such as `/Engine/BasicShapes/Cube.Cube` and `/Engine/BasicShapes/Sphere.Sphere` remain available from the installed engine. `project/SourceArt/Meshes/` contains seven OBJ sources in centimeters; `project/SourceArt/Textures/` contains the PNG wall-edge source; `project/SourceArt/UI/` contains SVG/PNG life-icon sources. `project/Content/Art/UI/T_LifeIcon.uasset` is a ready-to-use 128x128 texture with alpha and UI settings. The imported mesh/texture reimport metadata resolves to these project-local sources. Matching reference copies remain in `assets/raw/` and `assets/ui/`. Visible use is mandatory under ASSET-01..05; reimport is optional because the UE assets are already supplied. Catalog dependencies are exact. The design board is in `contracts/maze-layout.json`, a mirror of GDD Section 6.\n"
+          ]
+        },
+        {
+          "start": 38,
+          "end": 39,
+          "lines": [
+            "`tools/Test-PublicInput.ps1 -InputRoot <input> [-VerifySnapshot]` validates structure and optionally verifies every supplied-file hash. The latter mode applies to the untouched input, not an edited candidate. `tests/PublicSmoke/Invoke-PublicSmoke.ps1 -InputRoot <fresh-copy> -EngineRoot <engine-root> -BenchmarkToolsRoot <public-tools-workspace> -RunRoot <new-output-directory>` builds and verifies the untouched welcome frame, schema, normal close and new-process reopen. It sends no gameplay input and evaluates no gameplay requirement. Exit 0 means health passed; a nonzero exit preserves diagnostic logs/receipts for the failed operation.\n"
+          ]
+        },
+        {
+          "start": 42,
+          "end": 43,
+          "lines": [
+            "Writes are limited to `project/` for implementation and the externally supplied run directory for evidence. Protected documents, schemas and raw reference resources outside the project remain unchanged.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tools/check_input.py",
+      "published": "tools/check_input.py"
+
+
+    },
+    {
+      "source": "tools/Resolve-Unreal57.ps1",
+      "published": "tools/Resolve-Unreal57.ps1",
+      "sha256": "12581ab0254ec09162a8783b412a71951418e8eb9a38a6e9f137d4e9ead873c5",
+      "published_sha256": "12581ab0254ec09162a8783b412a71951418e8eb9a38a6e9f137d4e9ead873c5"
+    },
+    {
+      "source": "tools/Search-UnrealInterfaceCatalog.ps1",
+      "published": "tools/Search-UnrealInterfaceCatalog.ps1",
+      "sha256": "963b6d6b254dbd7e890218bfb8f213d4d5e8bede64ef2e13bc2833af70684446",
+      "published_sha256": "a35eaaa1fc13c0740c649c61b540c43056e0a3c6a4c90a6e7ad0fa7626519afa",
+      "restore_edits": [
+        {
+          "start": 6,
+          "end": 8,
+          "lines": [
+            "    [string]$CatalogPath = (Join-Path $PSScriptRoot '../UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz'),\n",
+            "    [string]$IndexPath = (Join-Path $PSScriptRoot '../UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json')\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tools/Test-Observation.ps1",
+      "published": "tools/Test-Observation.ps1",
+      "sha256": "3ecc912220a1c6533ae052c82451d8216154b29d8349487004eadccac65c6ab6",
+      "published_sha256": "3ecc912220a1c6533ae052c82451d8216154b29d8349487004eadccac65c6ab6"
+    },
+    {
+      "source": "tools/Test-PublicInput.ps1",
+      "published": "tools/Test-PublicInput.ps1",
+      "sha256": "cc18d5212db76daabea3cc6acf31b724affb83ba3c2ce65833838d26548613ff",
+      "published_sha256": "cc18d5212db76daabea3cc6acf31b724affb83ba3c2ce65833838d26548613ff"
+    },
+    {
+      "source": "UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
+      "published": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
+      "sha256": "343486f4a7c0ecdd35cbf9a2d5be3d200668ca1388f116af052ea8a51c669116",
+      "published_sha256": "274f4c88d36a0b38ecc80120bc7e35b5deb997ddd1b9e5d47f6fcafc3ca9bb2f",
+      "restore_edits": [
+        {
+          "start": 64,
+          "end": 65,
+          "lines": [
+            "  \"catalog_file\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz",
+      "published": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz",
+      "sha256": "750f1bd26572c5f4d3e5c2afe7fce14d5d7c76aad4ee806151ced72924a6dfd0",
+      "published_sha256": "750f1bd26572c5f4d3e5c2afe7fce14d5d7c76aad4ee806151ced72924a6dfd0"
+    },
+    {
+      "source": "UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md",
+      "published": "tools/TOOL_GUIDE.md",
+      "sha256": "8e50d54ae985cd1859afea80342f8579664b135724db2a817ca14c8c54d69d16",
+      "published_sha256": "0110369bff38b68f20dcc9c4d776aa9093d89d0642176d5beff30928b26c6d91",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "This guide describes the available Unreal Engine tools. It documents interfaces that a candidate or launcher may call independently; it is not a gameplay recipe, evaluator, score definition, or reference implementation. Task-specific paths remain in `TOOLCHAIN.md`, and gameplay acceptance remains solely in `GDD.md` Section 6.\n"
+          ]
+        },
+        {
+          "start": 20,
+          "end": 21,
+          "lines": [
+            "The adjacent `UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json` and `UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz` form the engine interface catalog. It contains 546,387 independently addressable records covering UE 5.7.4 source/header declarations, engine config defaults, reflection macros, console registrations, UBT/UAT commands, and every installed engine plugin descriptor and module.\n"
+          ]
+        },
+        {
+          "start": 54,
+          "end": 55,
+          "lines": [
+            "  -ProjectPath '<input>/project/ChompStarter.uproject' `\n"
+          ]
+        },
+        {
+          "start": 190,
+          "end": 195,
+          "lines": []
+        }
+      ]
+    }
+  ]
+}

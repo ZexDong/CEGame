@@ -1,0 +1,78 @@
+{
+  "schema_version": "2.0.0",
+  "sources": [
+    {
+      "id": "CC0-1.0",
+      "creator": "Pixel Frog",
+      "packs": [
+        "Treasure Hunters",
+        "Kings and Pigs",
+        "Pixel Adventure"
+      ],
+      "publisher_urls": [
+        "https://pixelfrog-assets.itch.io/treasure-hunters",
+        "https://pixelfrog-assets.itch.io/kings-and-pigs",
+        "https://pixelfrog-assets.itch.io/pixel-adventure-1",
+        "https://pixelfrog-assets.itch.io/pixel-adventure-2"
+      ],
+      "license_file": "assets/legal/CC0-1.0.txt",
+      "files": [
+        "assets/files/treasure-hunters/enemy/enemy_attack_strip.png",
+        "assets/files/treasure-hunters/enemy/enemy_death_strip.png",
+        "assets/files/treasure-hunters/enemy/enemy_fall_strip.png",
+        "assets/files/treasure-hunters/enemy/enemy_hit_strip.png",
+        "assets/files/treasure-hunters/enemy/enemy_idle_strip.png",
+        "assets/files/treasure-hunters/enemy/enemy_run_strip.png",
+        "assets/files/treasure-hunters/objectives/key_pickup_strip.png",
+        "assets/files/treasure-hunters/objectives/key_idle_strip.png",
+        "assets/files/treasure-hunters/world/candle_strip.png",
+        "assets/files/treasure-hunters/world/chain_big_strip.png",
+        "assets/files/treasure-hunters/world/chain_small_strip.png",
+        "assets/files/treasure-hunters/objectives/door_closed.png",
+        "assets/files/treasure-hunters/objectives/door_open_strip.png",
+        "assets/files/treasure-hunters/player/player_attack_a_strip.png",
+        "assets/files/treasure-hunters/player/player_attack_b_strip.png",
+        "assets/files/treasure-hunters/player/player_attack_c_strip.png",
+        "assets/files/treasure-hunters/player/player_death_strip.png",
+        "assets/files/treasure-hunters/player/player_fall_strip.png",
+        "assets/files/treasure-hunters/player/player_hit_strip.png",
+        "assets/files/treasure-hunters/player/player_idle_strip.png",
+        "assets/files/treasure-hunters/player/player_jump_strip.png",
+        "assets/files/treasure-hunters/player/player_land_strip.png",
+        "assets/files/treasure-hunters/player/player_run_strip.png",
+        "assets/files/treasure-hunters/world/spring_strip.png",
+        "assets/files/treasure-hunters/world/terrain_back_wall_tiles.png",
+        "assets/files/treasure-hunters/world/platform_tiles.png",
+        "assets/files/treasure-hunters/world/spike.png",
+        "assets/files/treasure-hunters/ui/health_frame.png",
+        "assets/files/treasure-hunters/ui/health_track.png",
+        "assets/files/treasure-hunters/ui/health_fill.png",
+        "assets/files/treasure-hunters/ui/death_icon.png",
+        "assets/files/treasure-hunters/world/barrel_bottle_decoration_01.png",
+        "assets/files/treasure-hunters/world/barrel_bottle_decoration_02.png",
+        "assets/files/treasure-hunters/world/barrel_bottle_decoration_03.png",
+        "assets/files/treasure-hunters/world/door_decoration_04.png",
+        "assets/files/treasure-hunters/world/chain_decoration_05.png",
+        "assets/files/treasure-hunters/world/barrel_bottle_decoration_06.png",
+        "assets/files/treasure-hunters/world/chain_decoration_07.png",
+        "assets/files/treasure-hunters/world/barrel_bottle_decoration_08.png",
+        "assets/files/treasure-hunters/world/door_decoration_09.png"
+      ]
+    },
+    {
+      "id": "User-authorized-reference",
+      "basis": "The requester supplied the room reference and explicitly authorized providing its source room map for this reconstruction task. This authorization is not a new CC0 dedication of the room composition.",
+      "files": [
+        "assets/files/map/room-art-preview.png",
+        "references/room-reference.png",
+        "assets/files/map/room-layout.json"
+      ]
+    }
+  ],
+  "excluded_material": [
+    "Original game code and Blueprints",
+    "Original Unreal packages and import metadata",
+    "Marketplace plugin payloads",
+    "Gameplay actors, collision, scripts, triggers, navigation and input bindings"
+  ]
+}

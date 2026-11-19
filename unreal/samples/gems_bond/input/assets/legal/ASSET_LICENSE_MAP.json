@@ -1,0 +1,1510 @@
+{
+  "files": [
+    {
+      "path": "starter-project/Content/Characters/Humans/Common/BodyParts_AO.uasset",
+      "sha256": "8ed209199e803c95019d5a2c7984a79f2fdc67f832bd1335a633003bb94631f8",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Characters/Humans/Common/BodyParts_MetallicSmoothness.uasset",
+      "sha256": "5b1cd85a4d3c1b30e2de1455c2d35d7be4df752219e68637ebed938636883d12",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Characters/Humans/Common/BodyParts_Normal.uasset",
+      "sha256": "ae8699b56792a889d2117737b953a6a5e37568da3f888ec8b8c82ad739edf17b",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Characters/Monsters/Common/Albedo.uasset",
+      "sha256": "663742676c80385e5d165f03bebac13e4d85fc4c36624e7600e6362eea881c0a",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Characters/Monsters/Common/AlbedoMaskTint.uasset",
+      "sha256": "b3774453b0cf6841fe734b22d135d9c6a4ee70e42d9f108cdf110c7451385e52",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Characters/Monsters/Common/MaskPBR.uasset",
+      "sha256": "eb2d1094d650e127c29663e313443959c7cf0e7402dcf6483795364b9fc1bd5c",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Characters/Monsters/Common/SAM.uasset",
+      "sha256": "2f40d43c26768d8aba2823a9afc27cabec31758bb819adfc4cbda6fc365a4fbc",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Arrow.uasset",
+      "sha256": "b8873421508751f831826364afd76574680d80fec19ba82f15d6a0a3a41fe033",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Baloo-Regular.uasset",
+      "sha256": "32fa922e003156ab59ba389f6fbd74d89c94432a9f2225fc59bdbb0752888cc0",
+      "license_file": "assets/legal/BALOO_OFL.txt",
+      "basis": "SIL Open Font License for the Baloo font."
+    },
+    {
+      "path": "starter-project/Content/Resources/Baloo-Regular_Font.uasset",
+      "sha256": "cdc801a6d27de99f53b3ae936e54c5f152d10a934a6101545f259ace5a40463f",
+      "license_file": "assets/legal/BALOO_OFL.txt",
+      "basis": "SIL Open Font License for the Baloo font."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/ArcherTower.uasset",
+      "sha256": "709598670aac72562339cd93109681d766d59be738638d576406285a8cce59a1",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Arrow.uasset",
+      "sha256": "4a9b7c382737dbef213f2dcb5d4a7d2b2c245fc8240e6aed70b4e9e669ecada1",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Base.uasset",
+      "sha256": "3d699e0702dc803d20efe41d23f0bf9abcd9482939bc0c262264d4fc82745d8a",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_ArcherTower_Lvl_1.uasset",
+      "sha256": "bdcfe890aa5afc171f3d495a79f6e93abbb610decc358fc875fc57c41239801d",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_ArcherTower_Lvl_2.uasset",
+      "sha256": "c586014775d4044aeb6d70f5ff2d798c6d08b4d0ede57d22d801a470c824e573",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_ArcherTower_Lvl_3.uasset",
+      "sha256": "257a1c1eb4ad7998c88aaa1a6e93b0577b1e1b6156e08644d441cbb083795698",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_Ballista.uasset",
+      "sha256": "9cac94367f3c1517f35a2e3a767f3e83c5aa65af9a7c6f82e0047cc8566ecc90",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_Ballista_Lvl2.uasset",
+      "sha256": "274b1176e2237947ee8993b759bfadff7c0336f692f66a38ae54992560e34c0f",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_Ballista_Lvl3.uasset",
+      "sha256": "264b4a9a611e8b41e6c411f34c49ae7c44c75fe65d1986ff13a6e3ecab561a12",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_Cannon.uasset",
+      "sha256": "ceb2aa3e2e8e75c079b8f1613b76a6498261cd2d0a2e4043c627322183ed4847",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_CannonTower_Lvl_1.uasset",
+      "sha256": "72b58f902b2c7db0995861f22ff81dbda215e7a69e95c3ca05be488dcfed51a8",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_CannonTower_Lvl_2.uasset",
+      "sha256": "584745d4f210715c65ad5384d99512528fa30344c26b82741bb79b8aa9b02c10",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_CannonTower_Lvl_3.uasset",
+      "sha256": "a94f79ffa06bbda9aaa95eadf81c922414ebaa07424fd47b958dc6aac41ec368",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_Cannon_Lvl2.uasset",
+      "sha256": "1fb4be832e5af8ae791dec3b1ff9f813ac6cc4a04550d2d0ea475bd2b61a5e19",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_Cannon_Lvl3.uasset",
+      "sha256": "20cb06144cfeb10b7d9bc3f5c6198076923b2c7dc761759e5283b9caac8439ca",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_Crystal.uasset",
+      "sha256": "a75b9d5a1a5830c5899f7af3146b99100d9bea83d842a5c03114ba927fcc4a33",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_CrystalHolder.uasset",
+      "sha256": "f26a7d02dcd881044741306fa046e577d182f06c6fe3dc343b9a9f4664360b65",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_GoldMine.uasset",
+      "sha256": "f3e134150322e64f28876466bce3d1c44af1c637e406983fcb70f8f8a11097b1",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_GoldMineBuilt.uasset",
+      "sha256": "666ab62fc487956db659ff840a9b3134906257c34cce6e303c5bba00b6ec264c",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_Wall_All.uasset",
+      "sha256": "bf412f72c41138952a2ef4e46a455606de9b548b581cf66cc546b292e02e623f",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_Wall_All_Side.uasset",
+      "sha256": "c77b353468f0a8626d61681d81348ccfb83657f03d57dca3cf4590190ffbcd02",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_Wall_Corner.uasset",
+      "sha256": "d02da50bcaec5449c88b3f9294ad7651c136c1baec2d0563a0f28bde12c12430",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_Wall_One_Side.uasset",
+      "sha256": "7a29282e8a368ee94522a9dc3dcc5011a19a9a1810d7a3997d84a607b46410c2",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Buildings_Wall_Two_Side.uasset",
+      "sha256": "3eb2a038e7ba9ac1b22cd029b9209e5036cb13feca6e27983ce8dd110e1650b3",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Cannon.uasset",
+      "sha256": "3ae235b189e8c45bd77e1fdd6281440f4e0a1831434a97411f4a73dc6686acf1",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/CannonTower.uasset",
+      "sha256": "326043681dd8bdab6785d960a6ce6b49bb371adf9384f6ba7b783fbaacde2853",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/ColorPalette.uasset",
+      "sha256": "829367996cfb52bbe47739809ffe9a1dd16576b3771837cc270556e156db4129",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Crystal.uasset",
+      "sha256": "1b664d8a34eaf4f2e53f50a6d5d0d475ddfd5a7786c1c655c6e060f5523586a9",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Cursor.uasset",
+      "sha256": "6476bad6c316a4d744195fdfb68205a219f6a6b9a15048e6ac7f4f19d04d2359",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/CursorMaterial.uasset",
+      "sha256": "e293fb87a44ba504a4f7a9b3c74dca9ce5f28c90adbb0a775b2b63a19cca92e6",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/CursorMaterialRed.uasset",
+      "sha256": "f0bc5ca935986c2d1c5958637bb50cc027416b847fa87df2c8ea72a6947c0a7b",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/GoldMine.uasset",
+      "sha256": "942a1acb2bab08395baae14c5cdbc22dfd1f12cc189a5e252bd9e40519603d43",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Buildings/Wall.uasset",
+      "sha256": "ee1b10de9b2ab897ed97f9855105ab78ff5c122b0bd764cbefd4ec50d444c304",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Humans/Common/BodyParts_AO.uasset",
+      "sha256": "58d0b85f8aa4f7575998de186c27e929aae633e9789969f9483113de32a89b1c",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Humans/Common/BodyParts_MetallicSmoothness.uasset",
+      "sha256": "1b5f5f2666ffbe5e90399f371b327ba71ab0e1ca14eecb8f976ce19c546cb6ad",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Humans/Common/BodyParts_Normal.uasset",
+      "sha256": "813ed91757c58b50519319dd30bb11f90cc4eb1e8dd2fb9d01f45ee9ef6200b3",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/Animations/Attack01_Bat_Anim.uasset",
+      "sha256": "0b50640c23218a0bab48949854b824248090c2bd1d9f077ec0fec0a3b9137853",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/Animations/Attack02_Bat_Anim.uasset",
+      "sha256": "6fa387d98195a78721d5f7369eaeb744121eed6ed80c19d672494a990aa85bcf",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/Animations/Die_Bat_Anim.uasset",
+      "sha256": "140eac1fb514b8222e2a80f76a9f52f76756b9d2c9ecacbc7c109de6ed585bae",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/Animations/Dizzy_Bat_Anim.uasset",
+      "sha256": "824c8a4fc8906cac71ac5ce9286cb909e2a58fa5be5cc0fc81bbda5309cdcfcf",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/Animations/FlyBWD_Bat_Anim.uasset",
+      "sha256": "8da721b3abb8cf683aa0b9d22e5461eb813f387161216b022f4b45d8fb22ec86",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/Animations/FlyFWD_Bat_Anim.uasset",
+      "sha256": "8f95df66f76a80b22bef6a604a257691e6edacba8fc9292b192715a1bb8e5edd",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/Animations/FlyLeft_Bat_Anim.uasset",
+      "sha256": "712e1b1f46a77f55ca0821587da694051e363f2017003f5e39a7b70145cc9060",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/Animations/FlyRight_Bat_Anim.uasset",
+      "sha256": "2598b7e135b739d30de3b4597a1d3ad00dbd83ed33e93c33167aa353740ad5e5",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/Animations/GetHit_Bat_Anim.uasset",
+      "sha256": "6a2f9150bb8292ca21640ba53d378801eeb5cd849d8d5b45941d6d966be945f2",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/Animations/IdleBattle_Bat_Anim.uasset",
+      "sha256": "0190a64709c19880b8e38a2b8751f2559a7959bc5d35e1050055c44ffcf97c45",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/Animations/IdleNormal_Bat_Anim.uasset",
+      "sha256": "e58ad678be03253c6bb13f3182ba0c6c8a6c47e01d763b97ec78f6cdb134d822",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/Animations/SenseSomethingRPT_Bat_Anim.uasset",
+      "sha256": "bf399e7c779136b9917ef017596be713d41669f3a07bf298b3aa788177eb904c",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/Animations/SenseSomethingST_Bat_Anim.uasset",
+      "sha256": "ec28d2f99029edafaef9415d9ff25eb663b49ba0065b5cf8570fddeb63906565",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/Animations/Taunting_Bat_Anim.uasset",
+      "sha256": "20a55ec9eb9e0c29cdc727d13069a44e3c24992bd9bb9a43c045392ca34b7492",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/Animations/Victory_Bat_Anim.uasset",
+      "sha256": "25f9caae8c2ce35fd5a7ffdb17d4d591a9252d6f4df8325b7d8f3402a3cb7d7e",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/BatMesh.uasset",
+      "sha256": "3420020eef66dc4a95df801fc6f4ea4b85d038b034ddf7f8c94355178a74d399",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/BatMesh_PhysicsAsset.uasset",
+      "sha256": "553312a38dd19a5aa6fe706cb01437eea05422793620dc3fea1777d6826344f3",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Bat/BatMesh_Skeleton.uasset",
+      "sha256": "280c3b7570203abd5591459d0725bd67c42bde6f0b08b214b682d4276bac111a",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Common/Albedo.uasset",
+      "sha256": "acd7270f2fe22abdd24a8358afc076465ab5e7fac9aa34e4703c64fce06b090c",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Common/AlbedoMaskTint.uasset",
+      "sha256": "7e7f9145e13f78653932039c95c945808b61c4378a1e5e5d217404f9355e87b7",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Common/Default_Monster.uasset",
+      "sha256": "466ade6113722511256f396dd741a283e5500f89f6b6d0e16a3aa5bfd720e005",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Common/MI_Bat1.uasset",
+      "sha256": "7894edba3976201e34c63258a53148f3c75ef029b3a21d01aecb454b73dcac61",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Common/MI_Bat2.uasset",
+      "sha256": "a72dc2df8af346b9c65e9efbd0a26bcb21b4e592cb5df3b30a51eac39434d756",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Common/MI_Dragon1.uasset",
+      "sha256": "c83cca324e9bf6b5ade489356def3ae408c9468c32a2a03bf42a4cf4476dad1d",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Common/MI_Dragon2.uasset",
+      "sha256": "823a0fcdc2e75dc82567db4287b8f112212b629eb8daec3131b5f7115ef020c8",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Common/MI_Orc1.uasset",
+      "sha256": "31215822efe06757c83c342c5f42a53fe62e3e7cb51fe1dfa526d6a67fae1da7",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Common/MI_Orc2.uasset",
+      "sha256": "2984fc5646860616fb09be56a0dea21da2345bed4bc03e4fedb3b26dd6717272",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Common/MI_Skeleton1.uasset",
+      "sha256": "f2003e0a1e52bd2b5e72289d3c7ac91d86d9023b91b6ae6d628f95173caec307",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Common/MI_Skeleton2.uasset",
+      "sha256": "6de1c79d50a67daef09077d66f7d1aeed324c6155199420219df24a416d1aa03",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Common/MI_Skeleton3.uasset",
+      "sha256": "8b3edaceabc83cb46e4186171091045c8cabe9d25724539a8e2222cc87517bd7",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Common/MI_Slime1.uasset",
+      "sha256": "2c0595fd3e321a64959ea904fae51449815977f48023ac97c5d5668822ba1c02",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Common/MI_Slime2.uasset",
+      "sha256": "de0b69403bce78cb87c3a7f136484d9adf3fc7aab41a64fa16c198a62b4ba479",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Common/MaskPBR.uasset",
+      "sha256": "2757732098dd54222ebea0d7d81d2ca10ce61347b1d6bfbe8ffc38ec781679ad",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Common/SAM.uasset",
+      "sha256": "a5904558b54310720be0fd6f0338f4337bc8b02280f29dadab544402e249360a",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/Attack01_Dragon_Anim.uasset",
+      "sha256": "16b3931f296cb9d9d85ee531de6a7088b18e2df81ac790b4ff4c0b28fe0c1956",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/Attack02_Dragon_Anim.uasset",
+      "sha256": "b62d6e1c83dfc316486992006bd74a454218004389c4528c73553fa59ed7e303",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/Die_Dragon_Anim.uasset",
+      "sha256": "93c73861d76bb4a51d9864f9a9ee6730410cb80914d7ad34b498e5bede8f0cb8",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/Dizzy_Dragon_Anim.uasset",
+      "sha256": "8babbe174491a54d43279963a2aaf0d453b85f1e8033be6efb04e1a3ef608282",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/FlyBackward_Dragon_Anim.uasset",
+      "sha256": "bd52ae7e2c275f6865fb47541238d18a6758390e97eceb8fa809f1ef01537f4b",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/FlyForward_Dragon_Anim.uasset",
+      "sha256": "69fbfcce9dfa48aa9f3613e6d284c2a34f13cfd996771962528b1ca8db433bf7",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/FlyLeft_Dragon_Anim.uasset",
+      "sha256": "8a0897a78c081cf3f9639b52d50c3d488f6f6c406ba844d2bd67d3116ecd80e1",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/FlyRight_Dragon_Anim.uasset",
+      "sha256": "dfc1347eefcdee9b83b84b00e5a0f18bad3fec7fd887ff53be7bd08111133878",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/GetHit_Dragon_Anim.uasset",
+      "sha256": "62a3ed3451a242e13ebfe5de43289e3c451af1d8298f14c6a402946f45b8fd87",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/IdleBattle_Dragon_Anim.uasset",
+      "sha256": "d73327c015c42b8ec339613384cff36a69038f68b484e5ce375ac1f75552c7df",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/IdleNormal_Dragon_Anim.uasset",
+      "sha256": "6e884eb68257e02d4b6c91d37bf9b8e3c32e6507ccb6c1e1e24161a29b631b31",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/SenseSomethingRPT_Dragon_Anim.uasset",
+      "sha256": "7b0133c69ff484a489949bd7886ed5393464b73775f14cfd4d306ef3dcc63050",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/SenseSomethingST_Dragon_Anim.uasset",
+      "sha256": "e7f687ce12e4f18acbe71c3eef3330f6825b36aa5407db58b9185d96e212bda7",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/Taunting_Dragon_Anim.uasset",
+      "sha256": "2247761b751685ec5a868684bbf3bc6ab81d1afab1f0dbcc8c537ffad5b7cb99",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/Victory_Dragon_Anim.uasset",
+      "sha256": "a13c7dc33b8997585579034c6469332d44c2174dc5f526e5656bb8eb1affa8b9",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/DragonMesh.uasset",
+      "sha256": "f4a3165e553e41fb27a6ef70f4845955e741ce9e5b2ced1bc0ebbf30fa7dfc68",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/DragonMesh_PhysicsAsset.uasset",
+      "sha256": "363a92ed5d0b1077e5438db69c37ec5f9fb754f55a443a1eadfbe5716326be7e",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Dragon/DragonMesh_Skeleton.uasset",
+      "sha256": "2e62fc2ab04738575609f3423b93fcf3a512890159651638a791914034571eff",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/Animations/Attack01_Orc_Anim.uasset",
+      "sha256": "f259d1af6e7ddf6cd487426acffcd1de5dcf526ffba1af53e8b66fbc02c2962a",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/Animations/Attack02_Orc_Anim.uasset",
+      "sha256": "fa8c7bd3aa9babbdbabe7dbfa636c2b49891244ea95c2acfa5eb356709c8a548",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/Animations/Die_Orc_Anim.uasset",
+      "sha256": "bafaf02c1974ed0ab2ac924a79a5ff7a4910f551ddee0724b2050b0ac0de9994",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/Animations/Dizzy_Orc_Anim.uasset",
+      "sha256": "7045248dd7acc0e642280341671f6a6dfae0e673032945c560dab1007b23c316",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/Animations/GetHit_Orc_Anim.uasset",
+      "sha256": "a9437e8e24085cc2ef0177fdc8a98441363c758af05a53bce1f9e875f76ff677",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/Animations/IdleBattle_Orc_Anim.uasset",
+      "sha256": "b04fbe970db65cf3992aef4c40a6f395f6fa459aa2ab2985c1702385c862d0c8",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/Animations/IdleNormal_Orc_Anim.uasset",
+      "sha256": "abaf796d0a47ebb929a2e0b49e364e497d3876c44383b26a19551e7236929304",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/Animations/RunFWD_Orc_Anim.uasset",
+      "sha256": "641a06fb82544d0cd6fd9fc46cfe058c15c225b59e5515d8b01ee35d93c45112",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/Animations/SenseSomethingRPT_Orc_Anim.uasset",
+      "sha256": "6260beb9d0705f39751ec81a003a9ad33e403f39e50f4a3afd80e68a84bd82b9",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/Animations/SenseSomethingST_Orc_Anim.uasset",
+      "sha256": "142dafd6b9aae1799cb8dabad06534c203310c55999b9bf4ed3ac1cf4199919a",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/Animations/Taunting_Orc_Anim.uasset",
+      "sha256": "12b9abe52b1efa9959c0db6d07714d83321c631fdbd3bc43135f0c87d63819ad",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/Animations/Victory_Orc_Anim.uasset",
+      "sha256": "2545d01e6005962da9747c8427648cffd21f53e25b0c67a9d40743e86d61d33f",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/Animations/WalkBWD_Orc_Anim.uasset",
+      "sha256": "86c1678a1657f5a25035d6403884a58e179cbd2c57f3b53c7b84958c8dc0efc1",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/Animations/WalkFWD_Orc_Anim.uasset",
+      "sha256": "ea7a2461277009f64fc62921542b57ff682e34adb02647f2a838f5af767587bf",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/Animations/WalkLeft_Orc_Anim.uasset",
+      "sha256": "fc23d1864ee19da6af3c5aba6ae282b176c80d0ae4185893470ea4c9bb36e6f4",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/Animations/WalkRight_Orc_Anim.uasset",
+      "sha256": "4dd0cdf8df92f06bfaa6ff2851617ad930ad55cfe1b8c53e915a6741788ff8bc",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/OrcMesh.uasset",
+      "sha256": "82df370a1802c2803e5f4fad6ed1698b091f51a6a4ce7f946aa9c89b4e84eea2",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/OrcMesh_PhysicsAsset.uasset",
+      "sha256": "735989a610186d11171510c0c6f58c0699210c3a744f62735449ddb7ec56f7b6",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Orc/OrcMesh_Skeleton.uasset",
+      "sha256": "e3287aeda0a648b138afbdda07b4adcbe65cbe5b13814bf2d3612618bcb95941",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/Attack01_Skeleton_Anim.uasset",
+      "sha256": "d45875b032d424e490de4be1da8b854590d0ffe2058e46d29fa4fc5230ce70f4",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/Attack02_Skeleton_Anim.uasset",
+      "sha256": "3b1053fde9755e56e672a7db48f029ad8f1f6d00b464190911ea4d80dd218c59",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/DefenseGetHit_Skeleton_Anim.uasset",
+      "sha256": "c57088673c62fed2798269857a620f7a53231cc16264d785cf163c019eddc9b9",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/Defense_Skeleton_Anim.uasset",
+      "sha256": "d6e5b1718ef9417021ae7b3bf37297ab79233de94c92eba5c5e4138520348331",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/Die_Skeleton_Anim.uasset",
+      "sha256": "11acb203c654fbab3c52908ba29828b6ab6638d5f2dff59741e949014047e0bc",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/Dizzy_Skeleton_Anim.uasset",
+      "sha256": "1d43ae259d29d59cf924750503cb22e52d3824f8d20964bb8381b0c2e22635ef",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/GetHit_Skeleton_Anim.uasset",
+      "sha256": "46cf7e6ba649be6da6eb5eaf1c70997d322edcd850fae23e9510f275f44d03ba",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/IdleBattle_Skeleton_Anim.uasset",
+      "sha256": "942498af10bd22c6d92bd1c243598b1e019c7f7b738eeb0e97e0e6759db05d06",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/IdleNormal_Skeleton_Anim.uasset",
+      "sha256": "f63f934d85486430a759a8cfe5ff1485c52211a6bb66bf2bfe722f8162876958",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/Run_Skeleton_Anim.uasset",
+      "sha256": "b02d5b15822fa52b16534e5196dcd91de029daedc8356d6b3342a8818260a22a",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/SenseSomethingRT_Skeleton_Anim.uasset",
+      "sha256": "9ce5451de6084caf583f6e297c6bdd5e26d74b0c48c6420d4e461af76ba4a736",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/SenseSomethingST_Skeleton_Anim.uasset",
+      "sha256": "1d5ca914de8bbbe6198f6fe9a54b47894feb085e4fee71515f48491247186b7a",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/SentryWalkFront_Skeleton_Anim.uasset",
+      "sha256": "9291e4b7e44337ae29f4be6f423e90f37e1a338295d3685d6cf0ad73230c193e",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/Taunting_Skeleton_Anim.uasset",
+      "sha256": "39961433477e9df44784dd0e2c47c0d14de361cd98b1850d9704ebbeb27881a8",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/Victory_Skeleton_Anim.uasset",
+      "sha256": "d78a301cbaddec34b269f8f08f67ec6fd5ef4b1458e89160fd6e1244f55eef97",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/WalkBack_Skeleton_Anim.uasset",
+      "sha256": "ae60b0910421fcf2895fb0260d13030c2105a19060e34b7a9896c43b6826b54a",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/WalkFront_Skeleton_Anim.uasset",
+      "sha256": "0c56c3479af4cdb36dff4cd455fd50e968ab2572c56013f1d51d349ee5f9353a",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/WalkLeft_Skeleton_Anim.uasset",
+      "sha256": "1e88d583490de0b5b727940f004e7473db7e6b1b336bda1a0b404f16b1928f0f",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/WalkRight_Skeleton_Anim.uasset",
+      "sha256": "fa7f354d87d0149a8b26900f89bd3cb08d37bb691a8f8bc56b2771225fe1dfae",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/SkeletonMesh.uasset",
+      "sha256": "4a6b4cb86ee600ea3e0e42f918873ec88ee36e50a83d0424bdc1704e6564af16",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/SkeletonMesh_PhysicsAsset.uasset",
+      "sha256": "8d96149214bb2f0852d2d71918e9dcb8fae803f0d1dfa2d0e80164b023aa9d00",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Skeleton/SkeletonMesh_Skeleton.uasset",
+      "sha256": "1c615ae370264148467d4badf810314dbdb1283381dc6fa0a95c55f6d26b8707",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/Animations/Attack01_Slime_Anim.uasset",
+      "sha256": "256204c6a771c4107b57edced0fc1441dae5104d78d4bd9256f543cc54b128a8",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/Animations/Attack02_Slime_Anim.uasset",
+      "sha256": "c32546d0849b8fa4eb787129023bca0e217a2fd763503e615e540bf43f1a7268",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/Animations/Die_Slime_Anim.uasset",
+      "sha256": "82c36c0eda85f468d716d5348f39ba2a7dfaec6e1e02b81edf84886616a790d6",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/Animations/Dizzy_Slime_Anim.uasset",
+      "sha256": "15f9786f49cdfaf3b798d3093d6b583a11ab6dea895e1104b9e712d57a151ffe",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/Animations/GetHit_Slime_Anim.uasset",
+      "sha256": "c784c7f83e49d25e5d2f0d38588cbce38382706f37db0aeb9947c16aa9985cfb",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/Animations/IdleBattle_Slime_Anim.uasset",
+      "sha256": "310ae8a71d9f895a591f68491848d25068879445cc836d897c19a17302b0ee31",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/Animations/IdleNormal_Slime_Anim.uasset",
+      "sha256": "cd7b503e65766b1cb9f64dfb21f918066a927133ceca7162280fdd2a3350f4b7",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/Animations/Run_Slime_Anim.uasset",
+      "sha256": "d709af0d64a5a35a84fec1078bdf4dafbe1d591f5f652d02ca3593414016085e",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/Animations/SenseSomethingRoutine_Slime_Anim.uasset",
+      "sha256": "6f769f129a61a548ee23e20ac8bbfe819a46a4f437e3cf328c3ff8905b2a2aa2",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/Animations/SenseSomethingStart_Slime_Anim.uasset",
+      "sha256": "d6f24f45a17acfb31c0e32ed6ae61db8133db1b5829be89c1832707d4ddf5f97",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/Animations/Taunt_Slime_Anim.uasset",
+      "sha256": "0ed6e823e4edb9a9c2bbf594514afc734f011ce2805f4a50272f4bf245002767",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/Animations/Victory_Slime_Anim.uasset",
+      "sha256": "9badc6f5ed5cfdc7471357eda4cac26a49bf9b9654a051156ac89ced7f2fcba5",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/Animations/WalkBack_Slime_Anim.uasset",
+      "sha256": "fc788d099063be8f7fc74abb76988f490fd7a8e07eed641ad835d7b1e5ec53a0",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/Animations/WalkLeft_Slime_Anim.uasset",
+      "sha256": "3301e18f215e354046069eac242306a78043f7caed655a6c20daf5232ff125ea",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/Animations/WalkRight_Slime_Anim.uasset",
+      "sha256": "4843a093fba390a8d84014767a9915e64b61ad5f2defa396b9fb1c58296caa22",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/Animations/Walk_Slime_Anim.uasset",
+      "sha256": "0732ca4a2cb15bd73b758f99d9f8bca2b1323152e64a9f132e0d3cdd53c80f92",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/SlimeMesh.uasset",
+      "sha256": "e33bfe50554e71100a72be07e91efe8ff8faa51a3b5b13b7943e687b40919b3a",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/SlimeMesh_PhysicsAsset.uasset",
+      "sha256": "8071c3c0c06725362ac976f346c223b71ea77ccaff5d63806aab72e8e49cd3f9",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Characters/Monsters/Slime/SlimeMesh_Skeleton.uasset",
+      "sha256": "8caf85f185f183b9bf8e559630c3ced20eb9766bddbe929e29388abf5a19ff04",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Material/Plant.uasset",
+      "sha256": "9ccb86420507f87bea23f3348d7d4f87edc96a9ce0a2c42c1d472641bce6477f",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Material/Rock_Wall.uasset",
+      "sha256": "b30a8951cbc1385821861d1fd03de1c177e77967223d3368408680fb257981df",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Material/Stone.uasset",
+      "sha256": "991d080676477810775bc2ca65fe974f0487dc5f876f68f984bb824fdbbd2a13",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Material/Village_Plant.uasset",
+      "sha256": "7b1a9f569c2837e4093a7c04daf0ca915e3a3038e8e4e054b7a5d1be61ab0359",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Material/Wood_Beam.uasset",
+      "sha256": "8b0428e27093f0341d1d626f25b46656a0a94612b429069f3b1e0dfca5a8c926",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Material/Wood_Beam_3.uasset",
+      "sha256": "a110cac0fbfc8f8950d3c6865b018862b3f64599ae9627745c84091656d1e7a2",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Material/Wood_Detail.uasset",
+      "sha256": "376334a5e94a387120bfbc766b10d6889f30bdb62c8587bab49204858df01b10",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Material/Wood_Planks_5.uasset",
+      "sha256": "9b96b626740c789c9b37f096ce3d7624a718ce47699a93e8b48a6f99478b35eb",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_bud_v1_01.uasset",
+      "sha256": "0e7b1f2b42072e47403652276428aabd748eec6f085ad056a303c749f09f9837",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_bush_v1_01.uasset",
+      "sha256": "471cba62eb868c6ce2bf31980fd4b29a14c20f0ee08ecd2585fe5f4a4d7ee1b3",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_bush_v1_04.uasset",
+      "sha256": "af7adbf155a82ed8e9af4ee6ac3629f2d9dbc66550d572040bdbbf1c815640ee",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_bush_v2_02.uasset",
+      "sha256": "283dcd5cca2b450eda9d68437064ad04bf39ec2769e13974607ab7232b2c5af1",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_bush_v2_03.uasset",
+      "sha256": "bd6f3d2fda7862f29843b9950151dd70a64de758f54b0430bf2f364d852f2c7d",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_bush_v2_04.uasset",
+      "sha256": "cb919b933dcf38b7fc85312806a7efe37c1b3e4559afff068a6d312dd2c0a55d",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_bush_v2_05.uasset",
+      "sha256": "097d13f62e0fc7b75e6768cae80ed05b4f9ce3b89d04a1b81f5de8b737b99477",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_bush_v3_01.uasset",
+      "sha256": "e0e3bbab58534c3b74de9a8b96040e70386301b936312529b82ed9ca05018c66",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_flower_v1_01.uasset",
+      "sha256": "8cb2c2d6e29d0d71b3e881f6ac54b3b5ed1201887a80fe4dc228296395b4f42d",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_flower_v1_02.uasset",
+      "sha256": "4cba04a9c3e15fe0be3d0ce8d804ea56ba402f277d1aa7faf52ea40a4557cdb5",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_leaf_village.uasset",
+      "sha256": "3e0bfe3fd62cace786d7da7370ac4a504962cd2103f94d151d085ae9e56313bd",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_TREE_village_SM_ENV_TREE_village_LOD0.uasset",
+      "sha256": "bee9841db242f8c9c1b075589f9016f76bac0c348009cb77873195702675b7ff",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_TREE_village_SM_ENV_TREE_village_LOD2.uasset",
+      "sha256": "58cf87b8dddf2ffe722f0ccc5562538efec845b263884bc8fccf04f19086a36a",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Mesh/props/SM_PROP_fence_v03_02_SM_PROP_fence_v03_02.uasset",
+      "sha256": "f6a33f9c7f398226a9e354703842693d58fcf320d9c372cce19ad3a23067c078",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Mesh/props/SM_PROP_fence_v03_03_SM_PROP_fence_v03_03.uasset",
+      "sha256": "3f1f4c683defa07738348d4bfa5cdd658524e3f62573855ba8fec0b801503049",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Mesh/props/SM_PROP_wall_stone_small_03_SM_PROP_wall_stone_small_03.uasset",
+      "sha256": "a3402a584272f22bd4929888e8d03e188f04a9f108b46656ac5c5586c392604f",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Mesh/stones/SM_ENV_stone_06_SM_ENV_stone_06_LOD0.uasset",
+      "sha256": "2cc99ac3e8a83299acb031eb0a21054c497c7d451087c1888be7da2527e5b621",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Dirt_LayerInfo.uasset",
+      "sha256": "e0ac4e9d3a2736240c77831d8255ca9129953c7143787e7b18cac6f1b09d4b42",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Farmland_LayerInfo.uasset",
+      "sha256": "d75a90cf3e724344f66b4aa468d06652790d655a289bc51b0d4bc2d68e888fe5",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Foliage/Bush.uasset",
+      "sha256": "8e64aa1c5f91cafdb60386e8471f6c2448ef18837a03635ef7303939499acc06",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_10.uasset",
+      "sha256": "d9282f5a57eff61fd88ad68ced4cba518467a1e4e0e2836328c3fa7524c05c4c",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_2.uasset",
+      "sha256": "fb49dbdffce26b8fa0535949522d0f92fe8d55be2ecb67e4eaf16e154cce7aa3",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_3.uasset",
+      "sha256": "0c6a6b02ea2fd66f28de8bd30b4316439cb33d15dbf10ede9fc249de66902638",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_4.uasset",
+      "sha256": "e4b07237096076261efe14bc57894797ee0b03cd729bb35fe552a42ae1a95988",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_5.uasset",
+      "sha256": "1cdaee83ef99ade7e64832533f5286aa40f623cb2f188d24fabb0e10606f47c1",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_6.uasset",
+      "sha256": "27470de2c88a56a7a59c6e47c255b679105dbb1a4a8f80eb91e700e98d5995e5",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_7.uasset",
+      "sha256": "6dc994116fb156a763852c62e38ccd3e7b58e3fe781a09244cfaea50b3c073cd",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_8.uasset",
+      "sha256": "3b5bf989203c3281db274f5d0cdbdd2910370cf8a522e6dc1b6a091bf6804ff2",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_9.uasset",
+      "sha256": "f674a02ff1266dda408c27c13724278539db6295151e7f4e226f2e9b7dc72044",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Foliage/Plant.uasset",
+      "sha256": "9bf0b9c69fb206ea17150b3416c8ba1d4aa22fcbf37e7bc1b353e0b5270ef8ff",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Foliage/Rock.uasset",
+      "sha256": "5b36e13217d06ee8cb2f9b05a5fc2af60904d485eee4c645f3186988b719efee",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Foliage/Tree.uasset",
+      "sha256": "a6ac38e153a1d23a8130f22ec7733996a1e15c8a182a80d322c040d000e0183c",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Foliage/Tree_2.uasset",
+      "sha256": "f46e4e328d7758aafca1ecb1298540b03a289f33dd0553ee37f5b71e6746de19",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Foliage/VillageGrass.uasset",
+      "sha256": "b915029b5be7aaba031ecef1ecace664efde709ef1fb546c17adbe957fcd3b71",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Grass_2_LayerInfo.uasset",
+      "sha256": "e267b1b4d761532928610107f504ec77ca4e7b60e2ebce73cdd7dabf06545fe3",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Grass_LayerInfo.uasset",
+      "sha256": "97776e895e3b2d534e6933637b9e1b465d4a03d61918c53d55dff9f51a0ca128",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Gravel_LayerInfo.uasset",
+      "sha256": "2a19043a3759e5f5408b2d7606490a4e48d6980ff2005713965c07c24ffb90b6",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Leaves_LayerInfo.uasset",
+      "sha256": "4c2502b2d80ce8dea1a2f78f2efa3a288b3ab1630caf8a11460c3b7523af4316",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/PavingStone_LayerInfo.uasset",
+      "sha256": "dc7ce364f9c775c4e206969d5cf56c9759e457d3a4d34333b81b50a57d4fb20b",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Sand_LayerInfo.uasset",
+      "sha256": "67aa72a06fabe0de1babb2f1d00c530423ab6160d54afd99022c07276d9e4591",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Stone_LayerInfo.uasset",
+      "sha256": "01f3ab52792354367f90b2184ed5c393286e853cbed36e031a4ec7f29e21ef88",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Terrain/Terrain_Material.uasset",
+      "sha256": "4d41f7bb8cd1d1cc1e026d5d41f3f891ffebe34c83825b3849a32d9b92aab683",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_dirt_BC.uasset",
+      "sha256": "fda0648409dead14b6393a1ca0d9fa9b08b1843cccd01bba0c5b21b2bd0972b0",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_dirt_N.uasset",
+      "sha256": "e0cd3dfd841396d9e2f7c374891610e65d87569d9847529f49957735ff58ca34",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_grass_01_BC.uasset",
+      "sha256": "420b2f8909184d92213b3dfe265d000c984bef23851166231667cf4cac4d5788",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_grass_02_BC.uasset",
+      "sha256": "e6949399dda4d558d2548a32838a39070d60de10b650096acb88dd38c057636a",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_grass_N.uasset",
+      "sha256": "7328dd16c28fa45b633e29c035309f334444a81412a4fa8cc68604e3c525342c",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_gravel_BC.uasset",
+      "sha256": "fa70d892523121c7529224d8a6551d2245e6547b6b7db151149f1b61404cea09",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_gravel_N.uasset",
+      "sha256": "f5d244d85816a3d0fe2479b3eb10ccd0f192f90cdacc91988aa220e7beec7b09",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_leaves_BC.uasset",
+      "sha256": "1b6cdcf297f754618bd78b53a1ab1c638f8767982a83a96225601613763efb4c",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_leaves_N.uasset",
+      "sha256": "2020c36551f99243ec28626efe5fc4de51b417f621703955c3b799e8a1c0904a",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_sand_BC.uasset",
+      "sha256": "cad217339b2d84ee2f357601ad0b05162c2196cdff09427131bbc96de8b6035a",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_sand_N.uasset",
+      "sha256": "85ed98ae7ad2af5a520ef8d6e4759a70c44e934756384eed7f3182cacb248b75",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_ENV_farmfield_BC.uasset",
+      "sha256": "032d68a0a961b881cc661ee71fb5c0dc0a10f8c7f01c2235aab58548d4a8f327",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_ENV_farmfield_N.uasset",
+      "sha256": "ea18e8fe2680c1da01477fecfd007cdaee003dc476e0f8d1b2ddb05065649fc9",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_ENV_pavingstone_01_BC.uasset",
+      "sha256": "96d2f3d52dd33605338e36bfa443466152335adebfd6244ad6227aa632f0ffce",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_ENV_pavingstone_01_N.uasset",
+      "sha256": "6b3ec2e21212328d0bbb8d15746b1ad856ba0662c0b149a0a8cf68b3ade47988",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_ENV_plants_village_BC.uasset",
+      "sha256": "06d1f5834d31deadb58bd10339300c5f05c8f56e5420adee776d8e6d605248b0",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_ENV_stone_BC_.uasset",
+      "sha256": "01854c6f068beabbb60d25327066db32db9c061c6beffa2d1acd03bd3aa2c7d2",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_plants_BC.uasset",
+      "sha256": "e728521630bf5b85123a5def5a57f604d040e651bd6c4b07e9f1b63ed4106a7a",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_stonebrick_02.uasset",
+      "sha256": "d3527dd60630666dbc71a08ccccbbbf8c06d958fa90c2e4865e60397f562f841",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_wood_03_BC.uasset",
+      "sha256": "9c3e23187db3b7919c031061373a7c1d61492c7aec2a0f762a4ebf9a7fbd450b",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_wood_06_BC.uasset",
+      "sha256": "a1a959cec233365da23b8925223affb51d48356090ee8df66c852378dec3f0cc",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_wood_detail_01_BC.uasset",
+      "sha256": "dbd0cbdea3b86682a2c7c1ca6a421305f6af5a391ff96414296518d0457470ec",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Environment/Textures/T_wood_planks_05_BC.uasset",
+      "sha256": "e240a97d5140f5c164ef0786780a5dd3c67aede70b1f90efc21de1a21799b866",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Icon-ArrowUpgrade.uasset",
+      "sha256": "fc7cf5e0f65f479837f6f7bad998b96804ba4c358b13b9ec13407d3f0a93de35",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Icon-Coin.uasset",
+      "sha256": "feff09f41e5f0a6cf993dff15488fcc534aa0e1e7bffc92f43405a5aaa0745cf",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/Materials/Default.uasset",
+      "sha256": "65152b9aca65d287d9ba20d813f7aa0b4d08a377d8dfccdf38f0beb8f38db4af",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/UI-SimpleWhiteBloc.uasset",
+      "sha256": "76a96909f7b4698468d73a6ee507e97fc09087be3daf6c9853bcf06b758edf4e",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/UI-SpeechBubble.uasset",
+      "sha256": "f30766fd55761fa4ab982fe8330190920d9879eae181a6d6a4f4f301c2dc3df8",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/gradientCircle.uasset",
+      "sha256": "3b57369f9bd6202928acd8e457a9f79d60468dca3b8013bc12af5527f4483ae0",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Resources/trash.uasset",
+      "sha256": "a3e4235afcfad994a74a6267bdd101654e6938a203b103969b192f23058a3963",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "starter-project/Content/Sounds/RoundMusic.uasset",
+      "sha256": "7738ef142263dd55c2dc4144b7d916651163764d55ee76c81dbfb14e9f659ca8",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the presentation asset collection."
+    },
+    {
+      "path": "assets/files/audio/arrow.wav",
+      "sha256": "5a05cb673c58d3440ff18d8f7c91ce2152734629a633e97352ea6766adb6d62a",
+      "license_file": "assets/legal/TASK_ASSETS_LICENSE.txt",
+      "basis": "MIT notice for the supplied event audio."
+    },
+    {
+      "path": "assets/files/audio/build.wav",
+      "sha256": "c8270fda664b0c6ed93457928a2ca93eaee387b48acf09483f57d8f3ee22e60a",
+      "license_file": "assets/legal/TASK_ASSETS_LICENSE.txt",
+      "basis": "MIT notice for the supplied event audio."
+    },
+    {
+      "path": "assets/files/audio/cannon.wav",
+      "sha256": "85c1b370ca3a64ac22cdcc7b25f362087efc16e6e774e96f15e6794ff828dccc",
+      "license_file": "assets/legal/TASK_ASSETS_LICENSE.txt",
+      "basis": "MIT notice for the supplied event audio."
+    },
+    {
+      "path": "assets/files/audio/defeat.wav",
+      "sha256": "c983ac12af83f653aff72cb365be895d7b43d73cd03ba0e3a800336ead66352b",
+      "license_file": "assets/legal/TASK_ASSETS_LICENSE.txt",
+      "basis": "MIT notice for the supplied event audio."
+    },
+    {
+      "path": "assets/files/audio/explosion.wav",
+      "sha256": "1defc786e94b6df1d37ab70100f6d84aad684aea4106dca58b8b198f93fb1c4b",
+      "license_file": "assets/legal/TASK_ASSETS_LICENSE.txt",
+      "basis": "MIT notice for the supplied event audio."
+    },
+    {
+      "path": "assets/files/audio/reject.wav",
+      "sha256": "79822327187a948ed622f67044ac8eb951b81802e5094495f594200183386c59",
+      "license_file": "assets/legal/TASK_ASSETS_LICENSE.txt",
+      "basis": "MIT notice for the supplied event audio."
+    },
+    {
+      "path": "assets/files/audio/sale.wav",
+      "sha256": "44048be385288a3e1b3e1d9018c3ecb89c4d639ba7d783e019708d7af1b57e99",
+      "license_file": "assets/legal/TASK_ASSETS_LICENSE.txt",
+      "basis": "MIT notice for the supplied event audio."
+    },
+    {
+      "path": "assets/files/audio/upgrade.wav",
+      "sha256": "299e5f175786e4e0570b50076d87cf163aed6913a56feea3ca7dede60240e58a",
+      "license_file": "assets/legal/TASK_ASSETS_LICENSE.txt",
+      "basis": "MIT notice for the supplied event audio."
+    },
+    {
+      "path": "assets/files/audio/wave_start.wav",
+      "sha256": "235f29cacf543230cb8a2e645e9030ecb98884166524776b5e4ae19cb04b529e",
+      "license_file": "assets/legal/TASK_ASSETS_LICENSE.txt",
+      "basis": "MIT notice for the supplied event audio."
+    },
+    {
+      "path": "reference/01-opening.png",
+      "sha256": "5d1c31bb6e1d2fe9b712faf8b450c08649558f1c61dfae64fa82ddbf5142c0ec",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the illustrative frames."
+    },
+    {
+      "path": "reference/02-placement.png",
+      "sha256": "fe022fbba89eab5306c716a511db2607cab1aea8432c13726dc854bdd67bec95",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the illustrative frames."
+    },
+    {
+      "path": "reference/03-combat.png",
+      "sha256": "3cf2b96b8db63c7c372ac544d3c2c0760315aa7fe080ecc515c25900230c9d62",
+      "license_file": "assets/legal/PRESENTATION_MIT_LICENSE.txt",
+      "basis": "MIT notice supplied with the illustrative frames."
+    }
+  ]
+}

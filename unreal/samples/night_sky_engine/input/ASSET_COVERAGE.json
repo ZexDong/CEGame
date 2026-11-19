@@ -1,0 +1,146 @@
+{
+  "schema_version": "1.0.0",
+  "gdd_authority": "GDD.md#6-numbered-requirements-sole-acceptance-authority",
+  "asset_catalog": "assets/ASSET_CATALOG.json",
+  "delivered_asset_count": 9,
+  "hard_asset_requirement_ids": [
+    "ASSET-01",
+    "ASSET-02"
+  ],
+  "coverage": [
+    {
+      "content_role": "Both visible fighter bodies",
+      "requirement_ids": [
+        "ASSET-01",
+        "CONTENT-01"
+      ],
+      "asset_ids": [
+        "SKM_Manny"
+      ],
+      "delivery": "preimported_unreal_asset_with_fbx_reference",
+      "gap": false
+    },
+    {
+      "content_role": "Idle presentation",
+      "requirement_ids": [
+        "ASSET-02",
+        "INPUT-01"
+      ],
+      "asset_ids": [
+        "AS_manny_stand"
+      ],
+      "delivery": "preimported_unreal_asset_with_fbx_reference",
+      "gap": false
+    },
+    {
+      "content_role": "Player movement toward the rival",
+      "requirement_ids": [
+        "ASSET-02",
+        "INPUT-01"
+      ],
+      "asset_ids": [
+        "AS_manny_fwalk"
+      ],
+      "delivery": "preimported_unreal_asset_with_fbx_reference",
+      "gap": false
+    },
+    {
+      "content_role": "Player movement away from the rival",
+      "requirement_ids": [
+        "ASSET-02",
+        "INPUT-01"
+      ],
+      "asset_ids": [
+        "AS_manny_bwalk"
+      ],
+      "delivery": "preimported_unreal_asset_with_fbx_reference",
+      "gap": false
+    },
+    {
+      "content_role": "Player jump presentation",
+      "requirement_ids": [
+        "ASSET-02",
+        "INPUT-02"
+      ],
+      "asset_ids": [
+        "AS_manny_jump"
+      ],
+      "delivery": "preimported_unreal_asset_with_fbx_reference",
+      "gap": false
+    },
+    {
+      "content_role": "Player close-strike presentation; original 5a basename retained",
+      "requirement_ids": [
+        "ASSET-02",
+        "COMBAT-01"
+      ],
+      "asset_ids": [
+        "AS_manny_5a"
+      ],
+      "delivery": "preimported_unreal_asset_with_fbx_reference",
+      "gap": false
+    },
+    {
+      "content_role": "Player energy-bolt casting presentation",
+      "requirement_ids": [
+        "ASSET-02",
+        "COMBAT-02"
+      ],
+      "asset_ids": [
+        "AS_manny_fireball"
+      ],
+      "delivery": "preimported_unreal_asset_with_fbx_reference",
+      "gap": false
+    },
+    {
+      "content_role": "Player standing-block presentation",
+      "requirement_ids": [
+        "ASSET-02",
+        "DEFENSE-02"
+      ],
+      "asset_ids": [
+        "AS_manny_standblock"
+      ],
+      "delivery": "preimported_unreal_asset_with_fbx_reference",
+      "gap": false
+    },
+    {
+      "content_role": "Either fighter receiving a hit",
+      "requirement_ids": [
+        "ASSET-02",
+        "COMBAT-01",
+        "COMBAT-02",
+        "DEFENSE-01"
+      ],
+      "asset_ids": [
+        "AS_manny_hitstun"
+      ],
+      "delivery": "preimported_unreal_asset_with_fbx_reference",
+      "gap": false
+    },
+    {
+      "content_role": "arena",
+      "requirement_ids": [
+        "CONTENT-01",
+        "RULE-02"
+      ],
+      "asset_ids": [],
+      "delivery": "implementation_created_or_engine_builtin",
+      "gap": false
+    },
+    {
+      "content_role": "bolt_and_combat_feedback_effects",
+      "requirement_ids": [
+        "COMBAT-02",
+        "DEFENSE-01",
+        "DEFENSE-02",
+        "INTERFACE-02"
+      ],
+      "asset_ids": [],
+      "delivery": "implementation_created_or_engine_builtin",
+      "gap": false
+    }
+  ],
+  "preimported_package_root": "starter-project/Content/Provided/Manny",
+  "reference_root": "assets/files/Manny"
+}

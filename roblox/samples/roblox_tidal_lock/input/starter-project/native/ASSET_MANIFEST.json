@@ -1,0 +1,12 @@
+{
+  "schema_version":"roblox-task-assets-v1",
+  "game_id":"roblox_tidal_lock_dispatch",
+  "assets":[
+    {"path":"TaskAssets/VISUAL_PALETTE.json","kind":"palette","role":"procedural world and HUD style","required":true},
+    {"path":"Starter/TidalLockStart.rbxlx","kind":"blank_place","role":"engine-openable starter","required":true},
+    {"path":"Starter/project/default.project.json","kind":"rojo_project","role":"portable starter mapping","required":true}
+  ],
+  "external_bitmap_assets":[],
+  "external_audio_assets":[],
+  "contact_sheet":null
+}

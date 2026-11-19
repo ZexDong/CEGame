@@ -1,0 +1,19 @@
+{
+  "schema_version": "3.0.0",
+  "raw": "raw-evaluation.json",
+  "candidate": "candidate-manifest.json",
+  "inputs": "receipts/",
+  "truth": "states/",
+  "capture": "captures/*.png with *.context.json",
+  "bindings": [
+    "candidate identity",
+    "GDD/catalog/public schema hashes",
+    "loaded runner/executor hashes",
+    "engine Build.version",
+    "run/process/round identities",
+    "raw hash",
+    "all evidence hashes"
+  ],
+  "failure_policy": "Candidate faults affect only dependent checkpoints; positive typed infrastructure faults invalidate publication.",
+  "scores": "evaluation-result.json exists only after complete semantic review and D6."
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "id": "motion_cardinals",
+  "title": "Virtual Mouse exits arrows continuously in all four cardinal directions",
+  "steps": [
+    {
+      "step_id": "setup.scene",
+      "operation": "load_canonical_scene",
+      "target": "scene:ArrowEscape",
+      "check_ids": [
+        "setup.scene_load",
+        "setup.probe",
+        "setup.playable"
+      ]
+    },
+    {
+      "step_id": "declared.scoring_checks",
+      "operation": "observe_visible_player_journeys",
+      "target": "running_scene",
+      "check_ids": [
+        "motion.discover.right.authored",
+        "motion.exit.right.input.top_hit",
+        "motion.exit.right.moving",
+        "motion.exit.right.continuous_frames",
+        "motion.exit.right.forward_motion",
+        "motion.exit.right.full_exit",
+        "motion.exit.right.shape_preserved",
+        "motion.discover.left.authored",
+        "motion.exit.left.input.top_hit",
+        "motion.exit.left.moving",
+        "motion.exit.left.continuous_frames",
+        "motion.exit.left.forward_motion",
+        "motion.exit.left.full_exit",
+        "motion.exit.left.shape_preserved",
+        "motion.discover.up.authored",
+        "motion.exit.up.input.top_hit",
+        "motion.exit.up.moving",
+        "motion.exit.up.continuous_frames",
+        "motion.exit.up.forward_motion",
+        "motion.exit.up.full_exit",
+        "motion.exit.up.shape_preserved",
+        "motion.discover.down.authored",
+        "motion.exit.down.input.top_hit",
+        "motion.exit.down.moving",
+        "motion.exit.down.continuous_frames",
+        "motion.exit.down.forward_motion",
+        "motion.exit.down.full_exit",
+        "motion.exit.down.shape_preserved"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "roblox.relay_foundry.v1",
+  "input_revision": "v1.1-roblox-tool-catalog-3600s-20260826",
+  "engine": "Roblox Studio",
+  "project_system": "Rojo 7.7.0",
+  "language": "Luau",
+  "starter_project": "project/default.project.json",
+  "required_place": "RelayFoundryCandidate.rbxlx",
+  "authored_root": "project/src/**",
+  "public_tool_catalog": "ROBLOX_STUDIO_ENGINE_TOOL_GUIDE.md",
+  "game_toolchain": "TOOLCHAIN.md",
+  "public_scaffold_test": "ScaffoldTests/RUN_SCAFFOLD_TESTS.ps1",
+  "tools": [
+    {
+      "path": "Tools/rojo.exe",
+      "version": "7.7.0",
+      "sha256": "D9154AA9B1D5997967565679D107BF719E273F5881C3C9E263FD6FD223D5E81E"
+    },
+    {
+      "path": "Tools/luau-compile.exe",
+      "version_track": "0.734",
+      "sha256": "9AA9516C62E892A1D0BB87A0A988FEA62D496750DCF24C2F28A4D9B4CAA7954B"
+    }
+  ],
+  "network_download_required": false,
+  "private_content_in_input": false
+}

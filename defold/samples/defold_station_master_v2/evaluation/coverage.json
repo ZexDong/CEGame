@@ -1,0 +1,373 @@
+{
+  "schema_version": 1,
+  "game": "defold_station_master_v2",
+  "script": "rules.json",
+  "rows": [
+    {
+      "source": "gdd:SM-START-01",
+      "check_ids": [
+        "D2_ENTRY_SHIFT",
+        "D4_SUCCESS_FLOW"
+      ],
+      "dim": "D2,D4",
+      "trajectory": "entry_click_feedback_and_pause, upgrades_success_failure_and_restarts",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SM-CLICK-01",
+      "check_ids": [
+        "D3_CLICK_BOUNDARIES",
+        "D5_CLICK_PURCHASE_FEEDBACK"
+      ],
+      "dim": "D3,D5",
+      "trajectory": "entry_click_feedback_and_pause",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SM-UPGRADE-01",
+      "check_ids": [
+        "D2_THREE_UPGRADES",
+        "D3_PURCHASE_BOUNDARIES"
+      ],
+      "dim": "D2,D3",
+      "trajectory": "upgrades_success_failure_and_restarts",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SM-UPGRADE-02",
+      "check_ids": [
+        "D2_THREE_UPGRADES",
+        "D3_PURCHASE_BOUNDARIES",
+        "D3_PASSIVE_PAUSE"
+      ],
+      "dim": "D2,D3",
+      "trajectory": "upgrades_success_failure_and_restarts",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SM-UPGRADE-03",
+      "check_ids": [
+        "D2_THREE_UPGRADES",
+        "D3_PURCHASE_BOUNDARIES"
+      ],
+      "dim": "D2,D3",
+      "trajectory": "upgrades_success_failure_and_restarts",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SM-SHOP-01",
+      "check_ids": [
+        "D2_GENERATOR_SHOP",
+        "D3_PURCHASE_BOUNDARIES",
+        "D5_CLICK_PURCHASE_FEEDBACK"
+      ],
+      "dim": "D2,D3,D5",
+      "trajectory": "entry_click_feedback_and_pause, upgrades_success_failure_and_restarts",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SM-PASSIVE-01",
+      "check_ids": [
+        "D3_PASSIVE_PAUSE"
+      ],
+      "dim": "D3",
+      "trajectory": "upgrades_success_failure_and_restarts",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SM-STAGE-01",
+      "check_ids": [
+        "D3_STAGE_TIMER",
+        "D4_RESTART"
+      ],
+      "dim": "D3,D4",
+      "trajectory": "upgrades_success_failure_and_restarts",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SM-TIMER-01",
+      "check_ids": [
+        "D3_STAGE_TIMER",
+        "D3_PASSIVE_PAUSE"
+      ],
+      "dim": "D3",
+      "trajectory": "entry_click_feedback_and_pause, upgrades_success_failure_and_restarts",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SM-WIN-01",
+      "check_ids": [
+        "D4_SUCCESS_FLOW",
+        "D3_OUTCOME_TERMINAL",
+        "D5_RESULT_CONTROLS"
+      ],
+      "dim": "D3,D4,D5",
+      "trajectory": "upgrades_success_failure_and_restarts",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SM-LOSE-01",
+      "check_ids": [
+        "D4_FAILURE_FLOW",
+        "D3_OUTCOME_TERMINAL",
+        "D5_RESULT_CONTROLS"
+      ],
+      "dim": "D3,D4,D5",
+      "trajectory": "upgrades_success_failure_and_restarts",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SM-HUD-01",
+      "check_ids": [
+        "D5_BRIEFING_HUD",
+        "D2_HUD_STATION"
+      ],
+      "dim": "D2,D5",
+      "trajectory": "entry_click_feedback_and_pause, upgrades_success_failure_and_restarts",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SM-PAUSE-01",
+      "check_ids": [
+        "D2_TIME_PAUSE",
+        "D3_PASSIVE_PAUSE",
+        "D5_PAUSE_CONTROLS",
+        "D4_RESTART",
+        "D4_EXIT"
+      ],
+      "dim": "D2,D3,D4,D5",
+      "trajectory": "entry_click_feedback_and_pause, upgrades_success_failure_and_restarts, normal_exit_from_pause",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SM-RESULT-01",
+      "check_ids": [
+        "D2_RESULTS",
+        "D5_RESULT_CONTROLS",
+        "D4_SUCCESS_FLOW",
+        "D4_FAILURE_FLOW"
+      ],
+      "dim": "D2,D4,D5",
+      "trajectory": "upgrades_success_failure_and_restarts",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SM-VISUAL-01",
+      "check_ids": [
+        "D2_HUD_STATION"
+      ],
+      "dim": "D2",
+      "trajectory": "upgrades_success_failure_and_restarts",
+      "disposition": "scored_content_only; D6 is separate"
+    },
+    {
+      "source": "gdd:SM-RESET-01",
+      "check_ids": [
+        "D4_RESTART"
+      ],
+      "dim": "D4",
+      "trajectory": "upgrades_success_failure_and_restarts",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SM-LIFECYCLE-01",
+      "check_ids": [
+        "D4_REOPEN",
+        "D4_EXIT"
+      ],
+      "dim": "D4",
+      "trajectory": "reopen_fresh_process, normal_exit_from_pause",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SM-DASHBOARD-01",
+      "check_ids": [
+        "D1_DASHBOARD_CONFORMANCE"
+      ],
+      "dim": "D1",
+      "trajectory": "static",
+      "disposition": "static_only"
+    },
+    {
+      "source": "gdd:SM-DASHBOARD-02",
+      "check_ids": [
+        "D1_DASHBOARD_CONFORMANCE",
+        "honesty:spot_checks"
+      ],
+      "dim": "D1",
+      "trajectory": "static, all_dynamic",
+      "disposition": "static_and_honesty"
+    },
+    {
+      "source": "common-baseline:CB-01",
+      "check_ids": [
+        "D2_ENTRY_SHIFT"
+      ],
+      "dim": "D2",
+      "trajectory": "entry_click_feedback_and_pause",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-02",
+      "check_ids": [
+        "D4_SUCCESS_FLOW",
+        "D4_FAILURE_FLOW"
+      ],
+      "dim": "D4",
+      "trajectory": "upgrades_success_failure_and_restarts",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-03",
+      "check_ids": [
+        "D4_REOPEN",
+        "D4_EXIT"
+      ],
+      "dim": "D4",
+      "trajectory": "reopen_fresh_process, normal_exit_from_pause",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-04",
+      "check_ids": [
+        "D3_CLICK_BOUNDARIES"
+      ],
+      "dim": "D3",
+      "trajectory": "entry_click_feedback_and_pause",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-05",
+      "check_ids": [
+        "D5_CLICK_PURCHASE_FEEDBACK"
+      ],
+      "dim": "D5",
+      "trajectory": "entry_click_feedback_and_pause",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-06",
+      "check_ids": [
+        "D3_PURCHASE_BOUNDARIES"
+      ],
+      "dim": "D3",
+      "trajectory": "entry_click_feedback_and_pause, upgrades_success_failure_and_restarts",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-07",
+      "check_ids": [
+        "D5_BRIEFING_HUD",
+        "D5_PAUSE_CONTROLS",
+        "D5_RESULT_CONTROLS"
+      ],
+      "dim": "D5",
+      "trajectory": "all_dynamic",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-08",
+      "check_ids": [
+        "D5_BRIEFING_HUD",
+        "D5_PAUSE_CONTROLS",
+        "D5_RESULT_CONTROLS"
+      ],
+      "dim": "D5",
+      "trajectory": "all_dynamic",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-09",
+      "check_ids": [
+        "D2_HUD_STATION"
+      ],
+      "dim": "D2",
+      "trajectory": "upgrades_success_failure_and_restarts",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-10",
+      "check_ids": [
+        "D2_TIME_PAUSE",
+        "D2_RESULTS"
+      ],
+      "dim": "D2",
+      "trajectory": "entry_click_feedback_and_pause, upgrades_success_failure_and_restarts",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-11",
+      "check_ids": [
+        "D4_SUCCESS_FLOW"
+      ],
+      "dim": "D4",
+      "trajectory": "upgrades_success_failure_and_restarts",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-12",
+      "check_ids": [
+        "D4_FAILURE_FLOW",
+        "D4_RESTART"
+      ],
+      "dim": "D4",
+      "trajectory": "upgrades_success_failure_and_restarts",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-13",
+      "check_ids": [
+        "D4_RESTART"
+      ],
+      "dim": "D4",
+      "trajectory": "upgrades_success_failure_and_restarts",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-14",
+      "check_ids": [
+        "D3_OUTCOME_TERMINAL"
+      ],
+      "dim": "D3",
+      "trajectory": "upgrades_success_failure_and_restarts",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-15",
+      "check_ids": [
+        "D4_FAILURE_FLOW"
+      ],
+      "dim": "D4",
+      "trajectory": "upgrades_success_failure_and_restarts",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-16",
+      "check_ids": [
+        "D5_BRIEFING_HUD"
+      ],
+      "dim": "D5",
+      "trajectory": "entry_click_feedback_and_pause",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-17",
+      "check_ids": [],
+      "dim": "D6",
+      "trajectory": "visual",
+      "disposition": "separate_visual_review"
+    },
+    {
+      "source": "common-baseline:CB-18",
+      "check_ids": [
+        "D1_DASHBOARD_CONFORMANCE",
+        "honesty:spot_checks"
+      ],
+      "dim": "D1",
+      "trajectory": "static, all_dynamic",
+      "disposition": "static_and_honesty"
+    }
+  ],
+  "unmapped_gdd_requirements": [],
+  "note": "Unique checkpoint IDs define scored units; repeated observations are conjunctive."
+}

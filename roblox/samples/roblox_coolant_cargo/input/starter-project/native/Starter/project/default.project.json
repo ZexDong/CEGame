@@ -1,0 +1,22 @@
+{
+  "name": "CoolantCargoPublicStart",
+  "tree": {
+    "$className": "DataModel",
+    "Lighting": {
+      "$className": "Lighting",
+      "$properties": {"Brightness": 2, "ClockTime": 15, "EnvironmentDiffuseScale": 0.35, "EnvironmentSpecularScale": 0.5}
+    },
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "CoolantCargoPublicSchema": {"$path": "src/shared/CoolantCargoSchema.luau"}
+    },
+    "ServerScriptService": {"$className": "ServerScriptService"},
+    "StarterGui": {"$className": "StarterGui"},
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "$properties": {"CameraMode": "Classic", "CharacterWalkSpeed": 18, "CharacterJumpHeight": 7.2},
+      "StarterPlayerScripts": {"$className": "StarterPlayerScripts"}
+    },
+    "Workspace": {"$className": "Workspace", "$properties": {"Gravity": 196.2, "StreamingEnabled": false}}
+  }
+}

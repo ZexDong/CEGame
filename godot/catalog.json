@@ -1,0 +1,72 @@
+{
+  "schema_version": "2.0",
+  "engine": "godot",
+  "scope": "native_task_input_and_evaluator",
+  "samples": [
+    {
+      "sample_id": "CervantesTactics",
+      "title": "Cervantes Tactics - Chapter 1",
+      "path": "samples/CervantesTactics",
+      "engine_version": "4.7.1.stable.official.a13da4feb",
+      "release_status": "packaged",
+      "scope": "public_distribution_only"
+    },
+    {
+      "sample_id": "FourShot",
+      "title": "Four Shot - Five Stage Challenge",
+      "path": "samples/FourShot",
+      "engine_version": "4.7.1.stable.official.a13da4feb",
+      "release_status": "packaged",
+      "scope": "public_distribution_only"
+    },
+    {
+      "sample_id": "MataroDrive",
+      "title": "Motaro Drive - Procedural Reconstruction",
+      "path": "samples/MataroDrive",
+      "engine_version": "4.7.1.stable.official.a13da4feb",
+      "release_status": "packaged",
+      "scope": "public_distribution_only"
+    },
+    {
+      "sample_id": "OpenRPG",
+      "title": "Open RPG - Forest Reconstruction",
+      "path": "samples/OpenRPG",
+      "engine_version": "4.7.1.stable.official.a13da4feb",
+      "release_status": "packaged",
+      "scope": "public_distribution_only"
+    },
+    {
+      "sample_id": "OpenRTS",
+      "title": "Open RTS - Economy Production",
+      "path": "samples/OpenRTS",
+      "engine_version": "4.7.1.stable.official.a13da4feb",
+      "release_status": "packaged",
+      "scope": "public_distribution_only"
+    },
+    {
+      "sample_id": "RougelikeTD",
+      "title": "Roguelike TD - Twelve Wave",
+      "path": "samples/RougelikeTD",
+      "engine_version": "4.7.1.stable.official.a13da4feb",
+      "release_status": "packaged",
+      "scope": "public_distribution_only"
+    },
+    {
+      "sample_id": "SpaceInvaders",
+      "title": "Space Invaders - First Level",
+      "path": "samples/SpaceInvaders",
+      "engine_version": "4.7.1.stable.official.a13da4feb",
+      "release_status": "packaged",
+      "scope": "public_distribution_only"
+    },
+    {
+      "sample_id": "TowerDefense",
+      "title": "Ape Tower Defense - Grassland",
+      "path": "samples/TowerDefense",
+      "engine_version": "4.7.1.stable.official.a13da4feb",
+      "release_status": "packaged",
+      "scope": "public_distribution_only"
+    }
+  ],
+  "task_count": 8
+}

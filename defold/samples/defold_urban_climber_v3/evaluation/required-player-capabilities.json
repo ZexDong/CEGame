@@ -1,0 +1,99 @@
+{
+  "schema_version": 2,
+  "game": "defold_urban_climber_v3",
+  "runtime": {
+    "path": "framework/defold_player_runtime",
+    "min_version": "0.12"
+  },
+  "implementation_status": "included",
+  "normal_input_only": true,
+  "capabilities": [
+    {
+      "id": "process_lifecycle",
+      "status": "available",
+      "operations": [
+        "start",
+        "reopen"
+      ]
+    },
+    {
+      "id": "normal_keyboard",
+      "status": "available",
+      "operations": [
+        "press",
+        "hold",
+        "restart"
+      ]
+    },
+    {
+      "id": "public_edge_graph_navigation",
+      "status": "available",
+      "operations": [
+        "dynamic_route",
+        "max_steps",
+        "condition_driven_replanning",
+        "cell_change_step_accounting",
+        "public_visible_range_progress",
+        "relative_goal_and_closure_navigation",
+        "blocked_edge_wait",
+        "bounded_key_resend_after_no_cell_change"
+      ]
+    },
+    {
+      "id": "dashboard_observation_and_assertions",
+      "status": "available",
+      "operations": [
+        "wait_until",
+        "wait_until_save_as",
+        "snapshot",
+        "generic_state_time_and_geometry_assertions",
+        "input_causality_comparison",
+        "stable_id_comparison_across_levels_and_attempts",
+        "visible_entity_temporal_sampling",
+        "condition_timeout_classification"
+      ]
+    },
+    {
+      "id": "window_capture_and_narrow_ocr",
+      "status": "available",
+      "operations": [
+        "capture",
+        "deferred_capture",
+        "ocr_capture",
+        "tesseract_default_leptonica_otsu_sauvola"
+      ]
+    },
+    {
+      "id": "candidate_runtime_error_scanning",
+      "status": "available",
+      "operations": [
+        "incremental_process_log_scan",
+        "candidate_error_attribution",
+        "downstream_unavailable_classification"
+      ]
+    },
+    {
+      "id": "randomized_dashboard_honesty",
+      "status": "not_requested",
+      "operations": [],
+      "reason": "The frozen public v3 naming table does not declare the optional honesty.phase_ocr_any vocabulary required by Runtime 0.12. The evaluator instead cross-checks Dashboard facts through normal-input causality, phase-specific captures/OCR, freeze invariants, and candidate process logs without inventing a private naming-table extension."
+    }
+  ],
+  "not_automated": [
+    "Independent coverage of every physical alias in both the Arrow and WASD control sets",
+    "Exact 0.10-second response, 0.45-second completion, and 0.15-second post-move-lock timing",
+    "Exhaustive graph-theoretic proof over every alternate route in an equivalent three-column topology; the evaluator instead exercises two observed horizontal transfers and a 17-press only-Up attempt in each building through normal input",
+    "History aggregation inside the two final-success trajectories; three distinct visible warnings per building are instead proven by dedicated clean-progressing deterministic trajectories",
+    "Pixel-level asset identity and visual-quality judgment, which remain in separate D6 review"
+  ],
+  "forbidden": [
+    "UDP or socket gameplay control",
+    "legacy log-state query",
+    "fixed Gold route or internal coordinates",
+    "candidate internal names",
+    "state mutation or result forcing",
+    "private answer-state injection",
+    "model-specific rules or caps",
+    "VLM in D1-D5"
+  ]
+}

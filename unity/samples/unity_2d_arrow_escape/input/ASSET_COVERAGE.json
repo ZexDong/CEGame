@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "unity.arrow_escape_reconstruction.v2",
+  "input_revision": "v2.6-tool-interface-catalog-3600s-20260826",
+  "reference_primary_state": "initial_gameplay",
+  "final_composition_supplied": false,
+  "roles": [
+    {
+      "role": "dark_field_and_board",
+      "status": "supplied_plus_procedural",
+      "sources": [
+        "Assets/BenchmarkStarter/Art/grid_dot.png",
+        "Assets/BenchmarkStarter/Art/ui_panel.png"
+      ],
+      "note": "Use supplied board motifs or a coherent project-owned equivalent; final composition remains authored work."
+    },
+    {
+      "role": "polyline_arrows_and_direction",
+      "status": "supplied_plus_procedural",
+      "sources": [
+        "Assets/BenchmarkStarter/Art/arrow_body.png",
+        "Assets/BenchmarkStarter/Art/arrow_head.png"
+      ],
+      "note": "Supplied arrow textures are optional building blocks; final geometry, colors, and motion remain authored work."
+    },
+    {
+      "role": "budget_and_status_hud",
+      "status": "supplied_plus_procedural",
+      "sources": [
+        "Assets/BenchmarkStarter/Art/heart.png",
+        "Assets/BenchmarkStarter/Art/ui_panel.png"
+      ],
+      "note": "Text, Moves presentation, and layout are authored; Heart and panel art are available."
+    },
+    {
+      "role": "hint_restart_next_controls",
+      "status": "supplied",
+      "sources": [
+        "Assets/BenchmarkStarter/Art/hint_button.png",
+        "Assets/BenchmarkStarter/Art/restart_button.png",
+        "Assets/BenchmarkStarter/Art/next_button.png"
+      ]
+    },
+    {
+      "role": "dependency_badges",
+      "status": "supplied_required",
+      "sources": [
+        "TaskAssets/badges/key_badge.png",
+        "TaskAssets/badges/lock_badge.png"
+      ]
+    },
+    {
+      "role": "terminal_labels_and_feedback",
+      "status": "procedural",
+      "sources": [],
+      "note": "Readable labels/highlights are normal authored UI and require no hidden reference asset."
+    }
+  ],
+  "missing": [],
+  "formal_visual_status": "ready"
+}

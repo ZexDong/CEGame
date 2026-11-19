@@ -1,0 +1,160 @@
+{
+  "contract": "game-session/v1",
+  "contentVersion": "unity_2d_glitch_garden_challenge-v1-20261029",
+  "entries": [
+    "level_1",
+    "level_2",
+    "level_3",
+    "level_4",
+    "level_5"
+  ],
+  "phases": [
+    "menu",
+    "playing",
+    "paused",
+    "won",
+    "lost"
+  ],
+  "operationTimeoutSeconds": 10,
+  "requiredLandmarks": [
+    "board-center",
+    "enemy-entry",
+    "leak-line"
+  ],
+  "values": [
+    {
+      "name": "level",
+      "minimum": 1,
+      "maximum": 5,
+      "integer": true,
+      "editable": false,
+      "meaning": ""
+    },
+    {
+      "name": "stars",
+      "minimum": 0,
+      "maximum": 100000,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "lives",
+      "minimum": 0,
+      "maximum": 5,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "elapsed",
+      "minimum": 0,
+      "maximum": 600,
+      "integer": false,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "spawn_index",
+      "minimum": 0,
+      "maximum": 24,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "selected",
+      "minimum": 0,
+      "maximum": 3,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "completed_mask",
+      "minimum": 0,
+      "maximum": 31,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "volume",
+      "minimum": 0,
+      "maximum": 1,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    }
+  ],
+  "actorKinds": [
+    {
+      "kind": "cell",
+      "states": [
+        "empty",
+        "cactus",
+        "gnome",
+        "gravestone",
+        "trophy"
+      ],
+      "poseEditable": false,
+      "stateEditable": true
+    },
+    {
+      "kind": "enemy",
+      "states": [
+        "pending",
+        "lizard",
+        "fox",
+        "dead"
+      ],
+      "poseEditable": true,
+      "stateEditable": true
+    },
+    {
+      "kind": "projectile",
+      "states": [
+        "flying"
+      ],
+      "poseEditable": true,
+      "stateEditable": true
+    },
+    {
+      "kind": "control",
+      "states": [
+        "normal"
+      ],
+      "poseEditable": false,
+      "stateEditable": false
+    }
+  ],
+  "controls": [
+    "start",
+    "pause",
+    "resume",
+    "restart",
+    "menu",
+    "next",
+    "options",
+    "volume",
+    "return",
+    "card_0",
+    "card_1",
+    "card_2",
+    "card_3",
+    "level_1",
+    "level_2",
+    "level_3",
+    "level_4",
+    "level_5"
+  ],
+  "semanticRules": [
+    "Non-menu: exactly cell_r_c for r0..4,c0..7, kind cell, pose (c+1,r+1,0) immutable, present=true. State identifies empty or defender type. values exactly hp (empty0 otherwise1..role maximum),clock (0..role period; empty/gravestone0), both editable. These are real cell/defender roots with visible role art when occupied, not invisible proxies. Selection 0=cactus,1=gnome,2=gravestone,3=trophy.",
+    "Include all current level enemy_i in content. values exactly hp (0..100 lizard/120 fox),attack_clock (0..1),jumped (0 or1), all editable. Before spawn_index pending/absent enemies have original HP and x10; after their wave has spawned they are live (type/present=true/hp>0) or dead (state dead/present=false/hp0). Lane y is content lane+1; live x is editable within(0,10]. No living enemy may be beyond leak line. Pending waves may not have time strictly less than elapsed; a legal prepared history may mark all waves already spawned/dead, provided elapsed >= their last scheduled spawn time.",
+    "elapsed,stars,lives,spawn_index,selected,completed_mask,volume and the cell/enemy values/states above are editable. level/entry and wave type/lane are fixed. A live defender/ enemy's HP may be lowered legally. phase playing may have elapsed>=duration with surviving enemies; this MUST NOT immediately win. won requires elapsed>=duration and no pending/live enemies, lost requires lives0. Production/shot timers are clock elapsed since last event. Dynamic projectile values exactly damage (20 or35) and speed6; preserve captured projectile identities/opaqueData, do not invent one to manufacture a hit.",
+    "One active IGameSession. Capture has exactly the declared top-level numbers. Each present actor resolves uniquely to its actual visible/interactable gameplay root, not a reporting proxy, and reports its actual transform.position. Facing is +1 except a visibly left-facing actor may use -1. Actor entryId equals the current entry. Unknown/duplicate identities, wrong version, nonfinite or out-of-range values and illegal cross-field combinations are atomically rejected. Preserve opaqueData from this candidate's own capture; explicitly editable public fields take precedence over opaqueData.",
+    "OpenEntry and Restore complete with gameplay suspended until ResumeSimulation; UI, rendering and reads continue. Release of this suspension does not unpause phase=paused. Capture is detached and side-effect-free. Restore establishes a legal initial situation, never performs the next attack, placement, collision, kill or victory on behalf of the player. Input latches and transient visuals must be restored consistently.",
+    "Control actors use the exact listed IDs, kind=control, state=normal, no numeric values. Include only controls that are currently present, or report present=false. ResolveActor returns the real visible uGUI button root. These identities locate ordinary input targets, not action methods. No Dashboard or additional probe is required.",
+    "Menu snapshots still have a valid entryId and complete numeric set. World actors may be omitted in menu. Non-menu snapshots include all fixed content identities; absent/dead/unused actors have present=false and ResolveActor may return null. Dynamic projectiles, when present, have stable IDs projectile_<monotonic integer> and preserve their own timing/pose through opaqueData."
+  ]
+}

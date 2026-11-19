@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "id": "and_dependency",
+  "title": "AND prerequisites remain locked after either first completion and unlock in both orders",
+  "steps": [
+    {
+      "step_id": "setup.scene",
+      "operation": "load_canonical_scene",
+      "target": "scene:ArrowEscape",
+      "check_ids": [
+        "setup.scene_load",
+        "setup.probe",
+        "setup.playable"
+      ]
+    },
+    {
+      "step_id": "declared.scoring_checks",
+      "operation": "observe_visible_player_journeys",
+      "target": "running_scene",
+      "check_ids": [
+        "and.navigate.modes.input.top_hit",
+        "and.loaded.authored",
+        "and.left.group.visible",
+        "and.left.first_click.input.top_hit",
+        "and.left.first_exit.reached",
+        "and.left.after_first.still_locked",
+        "and.left.second_click.input.top_hit",
+        "and.left.after_second.available",
+        "and.left.dependent_exit.reached",
+        "and.left.won.reached",
+        "and.right.group.visible",
+        "and.right.first_click.input.top_hit",
+        "and.right.first_exit.reached",
+        "and.right.after_first.still_locked",
+        "and.right.second_click.input.top_hit",
+        "and.right.after_second.available",
+        "and.right.dependent_exit.reached",
+        "and.right.won.reached"
+      ]
+    }
+  ]
+}

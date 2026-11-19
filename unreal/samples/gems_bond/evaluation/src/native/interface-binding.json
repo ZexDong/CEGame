@@ -1,0 +1,14 @@
+{
+  "runtime": "engine/observation-player/1.0",
+  "executor": "engine/unreal-5.7.4/executor/UnrealEvaluationExecutor.psm1",
+  "observation": "input/OBSERVATION_CONTRACT.md",
+  "operations": {
+    "start": "Start-UnrealEvaluationSession",
+    "key": "Invoke-UnrealPressKey / Start-UnrealKeyHold / Stop-UnrealKeyHold",
+    "mouse": "Move-UnrealPointer / Invoke-UnrealClick",
+    "capture": "Save-UnrealClientCapture",
+    "stop": "Stop-UnrealEvaluationSession",
+    "reopen": "Stop followed by Start with new PID",
+    "setup": "engine/shared/state-fixture probe/apply with a reviewed adapter"
+  }
+}

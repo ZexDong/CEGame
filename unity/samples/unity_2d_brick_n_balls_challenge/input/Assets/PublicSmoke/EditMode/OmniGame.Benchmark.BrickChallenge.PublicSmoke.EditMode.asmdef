@@ -1,0 +1,8 @@
+{
+  "name": "OmniGame.Benchmark.BrickChallenge.PublicSmoke.EditMode",
+  "rootNamespace": "OmniGame.Benchmark.BrickChallenge.PublicSmoke.EditMode",
+  "references": [],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": false
+}

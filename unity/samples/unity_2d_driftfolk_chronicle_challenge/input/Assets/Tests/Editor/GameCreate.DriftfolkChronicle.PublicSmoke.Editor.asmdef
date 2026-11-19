@@ -1,0 +1,14 @@
+{
+  "name": "GameCreate.Stormbound.PublicSmoke.Editor",
+  "rootNamespace": "GameCreate.Stormbound.PublicSmoke",
+  "references": [
+    "GameCreate.Session"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": true
+}

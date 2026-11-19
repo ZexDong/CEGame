@@ -1,0 +1,1493 @@
+{
+  "version": "1.0",
+  "purpose": "Reconstruct frozen native input bindings in an isolated run; the public input uses the template layout.",
+  "files": [
+    {
+      "source": "ASSET_CATALOG.json",
+      "published": "assets/ASSET_CATALOG.json",
+      "sha256": "7505ed162eadb39aa80c40551d45079b352131ee08e8f371d6243daa4bc1b2e4",
+      "published_sha256": "0ac34ae3b8524d9489d98f1020dd91ca07e002a19eceab42133f0082e0b95f63",
+      "restore_edits": [
+        {
+          "start": 6,
+          "end": 7,
+          "lines": [
+            "      \"relative_path\": \"project/Config/FixedRollBallLayout.json\",\n"
+          ]
+        },
+        {
+          "start": 41,
+          "end": 42,
+          "lines": [
+            "      \"relative_path\": \"project/Content/StarterContent/Architecture/Floor_400x400.uasset\",\n"
+          ]
+        },
+        {
+          "start": 59,
+          "end": 60,
+          "lines": [
+            "      \"relative_path\": \"project/Content/StarterContent/Architecture/Floor_400x400_Hole.uasset\",\n"
+          ]
+        },
+        {
+          "start": 79,
+          "end": 80,
+          "lines": [
+            "      \"relative_path\": \"project/Content/StarterContent/Architecture/Wall_400x200.uasset\",\n"
+          ]
+        },
+        {
+          "start": 98,
+          "end": 99,
+          "lines": [
+            "      \"relative_path\": \"project/Content/StarterContent/Shapes/Shape_Sphere.uasset\",\n"
+          ]
+        },
+        {
+          "start": 116,
+          "end": 117,
+          "lines": [
+            "      \"relative_path\": \"project/Content/StarterContent/Materials/M_Basic_Floor.uasset\",\n"
+          ]
+        },
+        {
+          "start": 130,
+          "end": 131,
+          "lines": [
+            "      \"relative_path\": \"project/Content/StarterContent/Materials/M_Basic_Wall.uasset\",\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ASSET_CATALOG.md",
+      "published": "assets/ASSET_CATALOG.md",
+      "sha256": "c2930d5e55c5aba870c90edaedb27a0c585652f162ac918edac282e47267a925",
+      "published_sha256": "b779efc80491d4fe6a72580c66e79c982d14d381f3e519b609594e9ec76fcb25",
+      "restore_edits": [
+        {
+          "start": 9,
+          "end": 10,
+          "lines": [
+            "| Path | `project/Config/FixedRollBallLayout.json` |\n"
+          ]
+        },
+        {
+          "start": 21,
+          "end": 22,
+          "lines": [
+            "| License | `MIT-RollBall`; see `THIRD_PARTY_NOTICES.md` and `legal/MIT-RollBall.txt` |\n"
+          ]
+        },
+        {
+          "start": 29,
+          "end": 33,
+          "lines": [
+            "| `board-floor-mesh` | `project/Content/StarterContent/Architecture/Floor_400x400.uasset` | `/Game/StarterContent/Architecture/Floor_400x400` | Solid 3D board tile for safe floor cells | `LAYOUT-01` | No |\n",
+            "| `board-hole-mesh` | `project/Content/StarterContent/Architecture/Floor_400x400_Hole.uasset` | `/Game/StarterContent/Architecture/Floor_400x400_Hole` | 3D trap tile with a visible center opening and safe surrounding rim | `LAYOUT-01`, `LAYOUT-02`, `HAZARD-01` | No |\n",
+            "| `board-wall-mesh` | `project/Content/StarterContent/Architecture/Wall_400x200.uasset` | `/Game/StarterContent/Architecture/Wall_400x200` | 3D wall geometry for fixed board boundaries and internal walls | `LAYOUT-01`, `COLLISION-01` | No |\n",
+            "| `ball-sphere-mesh` | `project/Content/StarterContent/Shapes/Shape_Sphere.uasset` | `/Game/StarterContent/Shapes/Shape_Sphere` | 3D sphere used for the player-controlled ball | `MOVEMENT-02` | No |\n"
+          ]
+        },
+        {
+          "start": 34,
+          "end": 35,
+          "lines": [
+            "These exact supplied 3D mesh identities must be used in the playable presentation. A 2D drawing, sprite, flat icon, or primitive replacement is not equivalent. Their material references are documented in `ASSET_CATALOG.json`; candidates may assign project-authored materials when a referenced material is not available, but may not replace the meshes with primitives or unrelated models. The mesh packages are sanitized raw visual copies with no gameplay behavior.\n"
+          ]
+        },
+        {
+          "start": 40,
+          "end": 42,
+          "lines": [
+            "| `material-basic-floor` | `project/Content/StarterContent/Materials/M_Basic_Floor.uasset` | `/Game/StarterContent/Materials/M_Basic_Floor` | Default lit material for solid board tiles |\n",
+            "| `material-basic-wall` | `project/Content/StarterContent/Materials/M_Basic_Wall.uasset` | `/Game/StarterContent/Materials/M_Basic_Wall` | Default lit material for walls |\n"
+          ]
+        },
+        {
+          "start": 47,
+          "end": 48,
+          "lines": [
+            "- The mesh packages are supplied visual assets released under the `epic-content-terms` boundary described in `legal/ASSET_LICENSE_MAP.json`.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ASSET_COVERAGE.json",
+      "published": "ASSET_COVERAGE.json",
+      "sha256": "388d44293eda03bfa97a11ae73956693e7eb26cf648890f97f214b7fbc47f7d2",
+      "published_sha256": "388d44293eda03bfa97a11ae73956693e7eb26cf648890f97f214b7fbc47f7d2"
+    },
+    {
+      "source": "ASSET_MANIFEST.json",
+      "published": "ASSET_MANIFEST.json",
+      "sha256": "81fadcfc97e83c8af94c99905c3d25a605d74cd0fc32897b611c5bd250c45fd4",
+      "published_sha256": "628b762a8812b949b881a47017de9986e92873e360e8fc9cd886867cbe817c90",
+      "restore_edits": [
+        {
+          "start": 5,
+          "end": 7,
+          "lines": [
+            "    \"project/Content/StarterContent\",\n",
+            "    \"project/Config\"\n"
+          ]
+        },
+        {
+          "start": 12,
+          "end": 13,
+          "lines": [
+            "      \"path\": \"project/Config/FixedRollBallLayout.json\",\n"
+          ]
+        },
+        {
+          "start": 26,
+          "end": 27,
+          "lines": [
+            "      \"path\": \"project/Content/StarterContent/Architecture/Floor_400x400.uasset\",\n"
+          ]
+        },
+        {
+          "start": 43,
+          "end": 44,
+          "lines": [
+            "      \"path\": \"project/Content/StarterContent/Architecture/Floor_400x400_Hole.uasset\",\n"
+          ]
+        },
+        {
+          "start": 62,
+          "end": 63,
+          "lines": [
+            "      \"path\": \"project/Content/StarterContent/Architecture/Wall_400x200.uasset\",\n"
+          ]
+        },
+        {
+          "start": 80,
+          "end": 81,
+          "lines": [
+            "      \"path\": \"project/Content/StarterContent/Shapes/Shape_Sphere.uasset\",\n"
+          ]
+        },
+        {
+          "start": 97,
+          "end": 98,
+          "lines": [
+            "      \"path\": \"project/Content/StarterContent/Materials/M_Basic_Floor.uasset\",\n"
+          ]
+        },
+        {
+          "start": 110,
+          "end": 111,
+          "lines": [
+            "      \"path\": \"project/Content/StarterContent/Materials/M_Basic_Wall.uasset\",\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "BENCHMARK_MANIFEST.json",
+      "published": "BENCHMARK_MANIFEST.json",
+      
+
+"restore_edits": [
+        {
+          "start": 18,
+          "end": 19,
+          "lines": [
+            "    \"operation_result_schema\": \"engine/unreal-5.7.4/executor/schemas/operation-result.schema.json\",\n",
+            "    \"capability_validation_summary\": \"engine/unreal-5.7.4/validation/latest/summary.json\"\n"
+          ]
+        },
+        {
+          "start": 21,
+          "end": 26,
+          "lines": [
+            "    \"project_root\": \"project\",\n",
+            "    \"project_file\": \"project/RollBallStarter.uproject\",\n",
+            "    \"starter_entry\": \"project/RollBallStarter.uproject\",\n",
+            "    \"default_entry\": \"project/RollBallStarter.uproject\",\n",
+            "    \"final_entry\": \"project/RollBallStarter.uproject\",\n"
+          ]
+        },
+        {
+          "start": 28,
+          "end": 30,
+          "lines": [
+            "    \"final_map_source\": \"project/Config/DefaultEngine.ini: GameDefaultMap\",\n",
+            "    \"fixed_layout\": \"project/Config/FixedRollBallLayout.json\",\n"
+          ]
+        },
+        {
+          "start": 34,
+          "end": 38,
+          "lines": [
+            "    \"toolchain\": \"TOOLCHAIN.md\",\n",
+            "    \"tool_guide\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "    \"tool_catalog_index\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
+            "    \"tool_catalog_archive\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        },
+        {
+          "start": 39,
+          "end": 41,
+          "lines": [
+            "    \"asset_catalog_json\": \"ASSET_CATALOG.json\",\n",
+            "    \"asset_catalog_human\": \"ASSET_CATALOG.md\",\n"
+          ]
+        },
+        {
+          "start": 43,
+          "end": 44,
+          "lines": [
+            "    \"public_smoke\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n"
+          ]
+        },
+        {
+          "start": 45,
+          "end": 46,
+          "lines": [
+            "    \"asset_license_map\": \"legal/ASSET_LICENSE_MAP.json\",\n"
+          ]
+        },
+        {
+          "start": 57,
+          "end": 58,
+          "lines": [
+            "    \"README.md\",\n"
+          ]
+        },
+        {
+          "start": 61,
+          "end": 66,
+          "lines": [
+            "    \"ASSET_CATALOG.md\",\n",
+            "    \"legal/ASSET_LICENSE_MAP.json\",\n",
+            "    \"TOOLCHAIN.md\",\n",
+            "    \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "    \"contracts/README.md\"\n"
+          ]
+        },
+        {
+          "start": 69,
+          "end": 70,
+          "lines": [
+            "      \"project\"\n"
+          ]
+        },
+        {
+          "start": 73,
+          "end": 74,
+          "lines": [
+            "      \"README.md\",\n"
+          ]
+        },
+        {
+          "start": 78,
+          "end": 82,
+          "lines": [
+            "\"TOOLCHAIN.md\",\n",
+            "      \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "      \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
+            "      \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        },
+        {
+          "start": 83,
+          "end": 85,
+          "lines": [
+            "      \"ASSET_CATALOG.json\",\n",
+            "      \"ASSET_CATALOG.md\",\n"
+          ]
+        },
+        {
+          "start": 87,
+          "end": 88,
+          "lines": [
+            "      \"legal\",\n"
+          ]
+        },
+        {
+          "start": 89,
+          "end": 90,
+          "lines": [
+            "      \"tests\",\n"
+          ]
+        },
+        {
+          "start": 167,
+          "end": 168,
+          "lines": [
+            "    \"guide\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n"
+          ]
+        },
+        {
+          "start": 169,
+          "end": 172,
+          "lines": [
+            "    \"complete_catalog_index\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
+            "    \"complete_catalog_index_sha256\": \"44fca8ffb2231ff5f1147673d671823f46068ce369aafae2eff68c13c6d711f0\",\n",
+            "    \"complete_catalog_archive\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        },
+        {
+          "start": 175,
+          "end": 176,
+          "lines": [
+            "    \"validation_scope\": \"Windows x64, Unreal Engine 5.7.4 CL 51494982, editor_game, three independent dynamic validations per public executor interface.\"\n"
+          ]
+        },
+        {
+          "start": 179,
+          "end": 181,
+          "lines": [
+            "    \"catalog_json\": \"ASSET_CATALOG.json\",\n",
+            "    \"catalog_human\": \"ASSET_CATALOG.md\",\n"
+          ]
+        },
+        {
+          "start": 218,
+          "end": 220,
+          "lines": [
+            "\n",
+            "\n"
+          ]
+        },
+        {
+          "start": 229,
+          "end": 231,
+          "lines": [
+            "      \"byte_length\": 5489,\n",
+            "      \"sha256\": \"dbc925d0eb99cc34ebe3bb2709fd73dbbc40a6e59f427278caf0b7dba07bb0fc\"\n"
+          ]
+        },
+        {
+          "start": 233,
+          "end": 236,
+          "lines": [
+            "      \"path\": \"README.md\",\n",
+            "      \"byte_length\": 5414,\n",
+            "      \"sha256\": \"2af45ceda27df6f188a37b1e1b95c4c6fb98679f05563ef348b7974b0fcbe124\"\n"
+          ]
+        },
+        {
+          "start": 239,
+          "end": 241,
+          "lines": [
+            "      \"byte_length\": 23246,\n",
+            "      \"sha256\": \"f2da09a78df9a03f3ec3a36c69716ec89d021ff5390ae85f5f161ada709d0259\"\n"
+          ]
+        },
+        {
+          "start": 244,
+          "end": 246,
+          "lines": [
+            "      \"byte_length\": 2505,\n",
+            "      \"sha256\": \"d4f4137230f1abee87e6038c578b2e98bdb6b0b41bb7d61cd5da536c99ad6d9b\"\n"
+          ]
+        },
+        {
+          "start": 248,
+          "end": 251,
+          "lines": [
+            "      \"path\": \"TOOLCHAIN.md\",\n",
+            "      \"byte_length\": 6848,\n",
+            "      \"sha256\": \"9cb620c10aab60a34d1ec6a6c6d17a1dd510d31626a768f017e4ea5c66295844\"\n"
+          ]
+        },
+        {
+          "start": 253,
+          "end": 256,
+          "lines": [
+            "      \"path\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "      \"byte_length\": 10094,\n",
+            "      \"sha256\": \"26e4c2dc6c730c49a77e97d88987c51ffb339289f0da8cebdfbe832533c51802\"\n"
+          ]
+        },
+        {
+          "start": 259,
+          "end": 261,
+          "lines": [
+            "      \"byte_length\": 5505,\n",
+            "      \"sha256\": \"81fadcfc97e83c8af94c99905c3d25a605d74cd0fc32897b611c5bd250c45fd4\"\n"
+          ]
+        },
+        {
+          "start": 263,
+          "end": 266,
+          "lines": [
+            "      \"path\": \"ASSET_CATALOG.json\",\n",
+            "      \"byte_length\": 5072,\n",
+            "      \"sha256\": \"7505ed162eadb39aa80c40551d45079b352131ee08e8f371d6243daa4bc1b2e4\"\n"
+          ]
+        },
+        {
+          "start": 268,
+          "end": 271,
+          "lines": [
+            "      \"path\": \"ASSET_CATALOG.md\",\n",
+            "      \"byte_length\": 4138,\n",
+            "      \"sha256\": \"c2930d5e55c5aba870c90edaedb27a0c585652f162ac918edac282e47267a925\"\n"
+          ]
+        },
+        {
+          "start": 278,
+          "end": 281,
+          "lines": [
+            "      \"path\": \"contracts/README.md\",\n",
+            "      \"byte_length\": 3517,\n",
+            "      \"sha256\": \"27b9507ff06c49f7a70b3143b78a932c1d2d2eb4b3b5852149e38d1a7aaa2947\"\n"
+          ]
+        },
+        {
+          "start": 288,
+          "end": 289,
+          "lines": [
+            "      \"path\": \"project/RollBallStarter.uproject\",\n"
+          ]
+        },
+        {
+          "start": 293,
+          "end": 294,
+          "lines": [
+            "      \"path\": \"project/Config/FixedRollBallLayout.json\",\n"
+          ]
+        },
+        {
+          "start": 298,
+          "end": 301,
+          "lines": [
+            "      \"path\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
+            "      \"byte_length\": 7852,\n",
+            "      \"sha256\": \"c1ac389c3751d0dc6dacec4de42662c5def9478df7a11bf7adf8b830f73d4ce5\"\n"
+          ]
+        },
+        {
+          "start": 304,
+          "end": 306,
+          "lines": [
+            "      \"byte_length\": 12944,\n",
+            "      \"sha256\": \"adc3cddcfe3402f544912f1bec5c9e81722e7c96910bec2892e410893543ed4e\"\n"
+          ]
+        },
+        {
+          "start": 308,
+          "end": 311,
+          "lines": [
+            "      \"path\": \"legal/ASSET_LICENSE_MAP.json\",\n",
+            "      \"byte_length\": 895,\n",
+            "      \"sha256\": \"40544e5787e2bac00a2c5dcb2716d6d22670478cbd554ce70571b1cebcb73f30\"\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "contracts/game-state.schema.json",
+      "published": "contracts/game-state.schema.json",
+      "sha256": "6785eff9c5c647e0667cf3a23ad1f9b3ed87615a3b65f0793091f072bf60b14c",
+      "published_sha256": "6785eff9c5c647e0667cf3a23ad1f9b3ed87615a3b65f0793091f072bf60b14c"
+    },
+    {
+      "source": "contracts/README.md",
+      "published": "contracts/GAME_SESSION_SPEC.md",
+      "sha256": "27b9507ff06c49f7a70b3143b78a932c1d2d2eb4b3b5852149e38d1a7aaa2947",
+      "published_sha256": "b7af7598e6185ea22c1ac3c56033ef8c1dfa253cd4f316effa42d3bec9b8fd1b",
+      "restore_edits": [
+        {
+          "start": 58,
+          "end": 59,
+          "lines": [
+            "- The fixed layout fields must agree with `project/Config/FixedRollBallLayout.json`.\n"
+          ]
+        }
+      ]
+    },
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+      "source": "FIXED_LAYOUT.md",
+      "published": "FIXED_LAYOUT.md",
+      "sha256": "d4f4137230f1abee87e6038c578b2e98bdb6b0b41bb7d61cd5da536c99ad6d9b",
+      "published_sha256": "1512d9d032e71f8c16fb8e5fd250bc802520b3f95e7ce00a0936721c11f808da",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "This file is a human-readable view of `project/Config/FixedRollBallLayout.json`. It does not add gameplay requirements. `GDD.md` Section 6 defines acceptance, and the JSON file supplies the exact machine layout required there.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "GDD.md",
+      "published": "GDD.md",
+      "sha256": "f2da09a78df9a03f3ec3a36c69716ec89d021ff5390ae85f5f161ada709d0259",
+      "published_sha256": "12df8d731f92a22fa950861a92ead94fd626aab9214d604d2e853b4b90b792a3",
+      "restore_edits": [
+        {
+          "start": 42,
+          "end": 43,
+          "lines": [
+            "| Project entry | `project/RollBallStarter.uproject` opens with Unreal Engine 5.7.4. | `QUALITY-01` |\n"
+          ]
+        },
+        {
+          "start": 49,
+          "end": 50,
+          "lines": [
+            "| Observation bridge | The public bridge reports `provider_ready=false` and `game_state=null`. | Engineering contract in `contracts/README.md` |\n"
+          ]
+        },
+        {
+          "start": 175,
+          "end": 180,
+          "lines": [
+            "| `LAYOUT-01`, `LAYOUT-02` | `project/Config/FixedRollBallLayout.json` | Yes | Defines the fixed maze, start, exit, walls, and trap locations. | No; this exact layout data is the benchmark fixture. |\n",
+            "| `LAYOUT-01` | `project/Content/StarterContent/Architecture/Floor_400x400.uasset` | Yes | Supplied solid 3D board tile for safe floor cells. Its three-dimensional thickness and shading must remain visible in play. | No; use the supplied mesh. |\n",
+            "| `LAYOUT-01`, `LAYOUT-02`, `HAZARD-01` | `project/Content/StarterContent/Architecture/Floor_400x400_Hole.uasset` | Yes | Supplied 3D trap tile with a visible center opening and safe surrounding rim. The rim and opening must remain distinct in the playable view. | No; use the supplied mesh. |\n",
+            "| `LAYOUT-01` | `project/Content/StarterContent/Architecture/Wall_400x200.uasset` | Yes | Supplied 3D board wall for the fixed maze boundaries, with visible height above the floor. | No; use the supplied mesh. |\n",
+            "| `MOVEMENT-02` | `project/Content/StarterContent/Shapes/Shape_Sphere.uasset` | Yes | Supplied 3D sphere mesh used for the player-controlled ball, with readable volume, lighting, and rolling rotation. | No; use the supplied mesh. |\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "INITIAL_AGENT_PROMPT.md",
+      "published": "INITIAL_AGENT_PROMPT.md",
+      "sha256": "dbc925d0eb99cc34ebe3bb2709fd73dbbc40a6e59f427278caf0b7dba07bb0fc",
+      "published_sha256": "a9ea7e5c8f63878cad4b37a8da99c0a78fc51264ec6c9ffe30018b78118a91fa",
+      "restore_edits": [
+        {
+          "start": 8,
+          "end": 9,
+          "lines": [
+            "Read the public files in the exact order listed in `README.md`. `GDD.md` Section 6 is the sole gameplay acceptance authority.\n"
+          ]
+        },
+        {
+          "start": 12,
+          "end": 13,
+          "lines": [
+            "Before handoff, set `GameDefaultMap` and `EditorStartupMap` in `project/Config/DefaultEngine.ini` to the project-owned playable map you created. Leaving the starter value `/Engine/Maps/Entry` launches the inert preview and makes an Alt+P smoke check appear to do nothing. Verify one Alt+P (or the documented public runtime command) after a successful build, then record the observed window and map in your handoff.\n"
+          ]
+        },
+        {
+          "start": 16,
+          "end": 18,
+          "lines": [
+            "- Start from `project/RollBallStarter.uproject` and deliver through the same project entry.\n",
+            "- `project/` is the only writable input root.\n"
+          ]
+        },
+        {
+          "start": 32,
+          "end": 33,
+          "lines": [
+            "Implement the player results in `GDD.md` while preserving reasonable implementation freedom. Normal keyboard input must reach all required gameplay. Keep the fixed layout and trap positions supplied in `project/Config/FixedRollBallLayout.json`, and use the supplied board, trap-hole, wall, and ball meshes in their required visible roles; do not replace them with primitives or hidden substitutes.\n"
+          ]
+        },
+        {
+          "start": 34,
+          "end": 35,
+          "lines": [
+            "Retain and extend the read-only transport defined by `contracts/README.md`. The starter reports `provider_ready=false`; the completed candidate must publish schema-valid snapshots with `provider_ready=true` to the launcher path supplied through `-RollBallStatePath`. This transport is evaluator interoperability, not a gameplay control path, and it must never mutate the game.\n"
+          ]
+        },
+        {
+          "start": 42,
+          "end": 43,
+          "lines": [
+            "Before handing off, leave the best runnable candidate in `project/`. Report the checks actually run and their outcomes, the final project entry, incomplete or unverified requirement IDs, and any build, runtime, tool, or environment fault. Do not invent scores, token counts, step counts, package validity, or evaluator results.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "legal/ASSET_LICENSE_MAP.json",
+      "published": "",
+      "sha256": "40544e5787e2bac00a2c5dcb2716d6d22670478cbd554ce70571b1cebcb73f30",
+      "published_sha256": "face284cf3a94b3356e6845c6e15eac779216cdd179b20dbb59c94ec24427c1f",
+      "restore_edits": [
+        {
+          "start": 3,
+          "end": 5,
+          "lines": [
+            "  \"notice\": \"../THIRD_PARTY_NOTICES.md\",\n",
+            "  \"mapping_rule\": \"Each cataloged item carries a license_id (directly or in licensing) and relative_path in ASSET_CATALOG.json.\",\n"
+          ]
+        },
+        {
+          "start": 22,
+          "end": 23,
+          "lines": [
+            "      \"notice_file\": \"../THIRD_PARTY_NOTICES.md\"\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "legal/MIT-RollBall.txt",
+      "published": "assets/legal/MIT-RollBall.txt",
+      "sha256": "2c1a1eb589d7db117b3f47dc9c9a1abb5025b2fb7b00b1b759abe7e62f55c486",
+      "published_sha256": "2c1a1eb589d7db117b3f47dc9c9a1abb5025b2fb7b00b1b759abe7e62f55c486"
+    },
+    {
+      "source": "legal/README.md",
+      "published": "",
+      "published_sha256": "6f74ea48f70eec1272d7a4134142feb36a82441c957979a70524c81dbd36cb40",
+      "restore_edits": [
+        {
+          "start": 4,
+          "end": 5,
+          "lines": [
+            "The only binary content in the package is the raw visual mesh kit cataloged in `ASSET_CATALOG.json`.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "project/.gitignore",
+      "published": "starter-project/.gitignore",
+      "sha256": "79b778312a41e5b11855617f0b7aac4358b7d1f3a5282a313db64d689c6eb430",
+      "published_sha256": "79b778312a41e5b11855617f0b7aac4358b7d1f3a5282a313db64d689c6eb430"
+    },
+    {
+      "source": "project/Config/DefaultEngine.ini",
+      "published": "starter-project/Config/DefaultEngine.ini",
+      "sha256": "9d54bc128d37d7bb8615c9f05dbd2256d49072aeac92dcc3c9f6a31666321a05",
+      "published_sha256": "9d54bc128d37d7bb8615c9f05dbd2256d49072aeac92dcc3c9f6a31666321a05"
+    },
+    {
+      "source": "project/Config/DefaultGame.ini",
+      "published": "starter-project/Config/DefaultGame.ini",
+      "sha256": "cd1ff8dbbe0e50a35ee5486d601203cd599cdf661db7a66e33a0ea4114e79421",
+      "published_sha256": "cd1ff8dbbe0e50a35ee5486d601203cd599cdf661db7a66e33a0ea4114e79421"
+    },
+    {
+      "source": "project/Config/DefaultInput.ini",
+      "published": "starter-project/Config/DefaultInput.ini",
+      "sha256": "fc6db2017aaa509c4c8dc08f27ea57263eb7277d45390e2e0d8328a5567de960",
+      "published_sha256": "fc6db2017aaa509c4c8dc08f27ea57263eb7277d45390e2e0d8328a5567de960"
+    },
+    {
+      "source": "project/Config/FixedRollBallLayout.json",
+      "published": "starter-project/Config/FixedRollBallLayout.json",
+      "sha256": "7588fdc31eac6d0389c7de39e0a66fbd6ec7be7836efac76d7af33133ff2b44a",
+      "published_sha256": "7588fdc31eac6d0389c7de39e0a66fbd6ec7be7836efac76d7af33133ff2b44a"
+    },
+    {
+      "source": "project/Content/StarterContent/Architecture/Floor_400x400.uasset",
+      "published": "starter-project/Content/StarterContent/Architecture/Floor_400x400.uasset",
+      "sha256": "72573433c6e49f50cc003f425087c75c7c3b1d872733fb8a340f0a6cc5791eb4",
+      "published_sha256": "72573433c6e49f50cc003f425087c75c7c3b1d872733fb8a340f0a6cc5791eb4"
+    },
+    {
+      "source": "project/Content/StarterContent/Architecture/Floor_400x400_Hole.uasset",
+      "published": "starter-project/Content/StarterContent/Architecture/Floor_400x400_Hole.uasset",
+      "sha256": "25546179fbef984745218563660972bb9a4c634ea90db82a5653d64bac185ee3",
+      "published_sha256": "25546179fbef984745218563660972bb9a4c634ea90db82a5653d64bac185ee3"
+    },
+    {
+      "source": "project/Content/StarterContent/Architecture/Wall_400x200.uasset",
+      "published": "starter-project/Content/StarterContent/Architecture/Wall_400x200.uasset",
+      "sha256": "60dce32583bedcb8be71c456418d4f3af48311672d7190495d01273147feea1c",
+      "published_sha256": "60dce32583bedcb8be71c456418d4f3af48311672d7190495d01273147feea1c"
+    },
+    {
+      "source": "project/Content/StarterContent/Materials/M_Basic_Floor.uasset",
+      "published": "starter-project/Content/StarterContent/Materials/M_Basic_Floor.uasset",
+      "sha256": "38e9963796183aa39c6cd4219fe60403740c902dadd223b96e37158f5b8e07f8",
+      "published_sha256": "38e9963796183aa39c6cd4219fe60403740c902dadd223b96e37158f5b8e07f8"
+    },
+    {
+      "source": "project/Content/StarterContent/Materials/M_Basic_Wall.uasset",
+      "published": "starter-project/Content/StarterContent/Materials/M_Basic_Wall.uasset",
+      "sha256": "8d98628a1928336e234cf6b0c1b65a394bc7b6ba7b8ced62bc2fb9e029b45c0b",
+      "published_sha256": "8d98628a1928336e234cf6b0c1b65a394bc7b6ba7b8ced62bc2fb9e029b45c0b"
+    },
+    {
+      "source": "project/Content/StarterContent/Shapes/Shape_Sphere.uasset",
+      "published": "starter-project/Content/StarterContent/Shapes/Shape_Sphere.uasset",
+      "sha256": "5b6f2e72405d8a0f0b224fe7d8a30a9a24f1d2dd0179c87ed5f4017fa68e7df4",
+      "published_sha256": "5b6f2e72405d8a0f0b224fe7d8a30a9a24f1d2dd0179c87ed5f4017fa68e7df4"
+    },
+    {
+      "source": "project/README.md",
+      "published": "starter-project/README.md",
+      "sha256": "2a5ba1e892bc9b3a7f46ff5b139aa6a2a9cef417b82198a68958be3868eb8dbb",
+      "published_sha256": "2a5ba1e892bc9b3a7f46ff5b139aa6a2a9cef417b82198a68958be3868eb8dbb"
+    },
+    {
+      "source": "project/RollBallStarter.uproject",
+      "published": "starter-project/RollBallStarter.uproject",
+      "sha256": "b958c4bc0457459c6b9ffcfdbf23d0d59e29e2138a67ac9f42a0f98904c0db46",
+      "published_sha256": "b958c4bc0457459c6b9ffcfdbf23d0d59e29e2138a67ac9f42a0f98904c0db46"
+    },
+    {
+      "source": "project/Source/RollBallStarter/RollBallStarter.Build.cs",
+      "published": "starter-project/Source/RollBallStarter/RollBallStarter.Build.cs",
+      "sha256": "6fa9d80a149dda3cd68883ac881c0eae954bb7e463f345ad402ae22ff75419bf",
+      "published_sha256": "6fa9d80a149dda3cd68883ac881c0eae954bb7e463f345ad402ae22ff75419bf"
+    },
+    {
+      "source": "project/Source/RollBallStarter/RollBallStarter.cpp",
+      "published": "starter-project/Source/RollBallStarter/RollBallStarter.cpp",
+      "sha256": "7e274299e3e156ade1dafab1d4224559dfc4b83039559d727d9b24463f79c0b4",
+      "published_sha256": "7e274299e3e156ade1dafab1d4224559dfc4b83039559d727d9b24463f79c0b4"
+    },
+    {
+      "source": "project/Source/RollBallStarter/RollBallStarterController.cpp",
+      "published": "starter-project/Source/RollBallStarter/RollBallStarterController.cpp",
+      "sha256": "2df981ba4b5d1b5cb2ad9689d0bb09f98be372ed8b08a279df0c6a5a5a15cf35",
+      "published_sha256": "2df981ba4b5d1b5cb2ad9689d0bb09f98be372ed8b08a279df0c6a5a5a15cf35"
+    },
+    {
+      "source": "project/Source/RollBallStarter/RollBallStarterController.h",
+      "published": "starter-project/Source/RollBallStarter/RollBallStarterController.h",
+      "sha256": "a5093490c9ed9654e80f9bdc5e88226a1fae7098a9e5eb3320d24b3163849bac",
+      "published_sha256": "a5093490c9ed9654e80f9bdc5e88226a1fae7098a9e5eb3320d24b3163849bac"
+    },
+    {
+      "source": "project/Source/RollBallStarter/RollBallStarterDisplay.cpp",
+      "published": "starter-project/Source/RollBallStarter/RollBallStarterDisplay.cpp",
+      "sha256": "c41026abadadb239ec0c6ec9853e67921076aaeda414fdfa58239b807b8794e3",
+      "published_sha256": "c41026abadadb239ec0c6ec9853e67921076aaeda414fdfa58239b807b8794e3"
+    },
+    {
+      "source": "project/Source/RollBallStarter/RollBallStarterDisplay.h",
+      "published": "starter-project/Source/RollBallStarter/RollBallStarterDisplay.h",
+      "sha256": "c18c4d35ddfc5764f1447ae342825733689cf6df0d8936fd6f6805be08dafbe6",
+      "published_sha256": "c18c4d35ddfc5764f1447ae342825733689cf6df0d8936fd6f6805be08dafbe6"
+    },
+    {
+      "source": "project/Source/RollBallStarter/RollBallStarterGameMode.cpp",
+      "published": "starter-project/Source/RollBallStarter/RollBallStarterGameMode.cpp",
+      "sha256": "b7e4b31fa4b97b6255cd7bf2f3169b42344c49883886b68739b864d437f6a67f",
+      "published_sha256": "b7e4b31fa4b97b6255cd7bf2f3169b42344c49883886b68739b864d437f6a67f"
+    },
+    {
+      "source": "project/Source/RollBallStarter/RollBallStarterGameMode.h",
+      "published": "starter-project/Source/RollBallStarter/RollBallStarterGameMode.h",
+      "sha256": "881f7de546654bafa33f22579c223cb8b6512a9d261b4b2b361c9f68672c7053",
+      "published_sha256": "881f7de546654bafa33f22579c223cb8b6512a9d261b4b2b361c9f68672c7053"
+    },
+    {
+      "source": "project/Source/RollBallStarter/RollBallStarterHUD.cpp",
+      "published": "starter-project/Source/RollBallStarter/RollBallStarterHUD.cpp",
+      "sha256": "10b665fba3cd1c97b4b7191b1d95ccc0d4b45f00aac77d941ee6e4690329bad9",
+      "published_sha256": "10b665fba3cd1c97b4b7191b1d95ccc0d4b45f00aac77d941ee6e4690329bad9"
+    },
+    {
+      "source": "project/Source/RollBallStarter/RollBallStarterHUD.h",
+      "published": "starter-project/Source/RollBallStarter/RollBallStarterHUD.h",
+      "sha256": "c4b6dafefff0f1902141773ee8d8f0b60143e9ef003cb765c1785afd94efdce7",
+      "published_sha256": "c4b6dafefff0f1902141773ee8d8f0b60143e9ef003cb765c1785afd94efdce7"
+    },
+    {
+      "source": "project/Source/RollBallStarter/RollBallStarterState.cpp",
+      "published": "starter-project/Source/RollBallStarter/RollBallStarterState.cpp",
+      "sha256": "edc5aace2d75b5a20a3975f5275e3f4481dbd1206e1d970fe37040dc83e3d57f",
+      "published_sha256": "edc5aace2d75b5a20a3975f5275e3f4481dbd1206e1d970fe37040dc83e3d57f"
+    },
+    {
+      "source": "project/Source/RollBallStarter/RollBallStarterState.h",
+      "published": "starter-project/Source/RollBallStarter/RollBallStarterState.h",
+      "sha256": "bd7267ecdb93188626f7b48dbfceba091557395393615ab1559541e243ae7dbf",
+      "published_sha256": "bd7267ecdb93188626f7b48dbfceba091557395393615ab1559541e243ae7dbf"
+    },
+    {
+      "source": "project/Source/RollBallStarter.Target.cs",
+      "published": "starter-project/Source/RollBallStarter.Target.cs",
+      "sha256": "12b9470acd587fcf0f27018cc946860c5ec391268d992ecae9721d5f7ef07a30",
+      "published_sha256": "12b9470acd587fcf0f27018cc946860c5ec391268d992ecae9721d5f7ef07a30"
+    },
+    {
+      "source": "project/Source/RollBallStarterEditor.Target.cs",
+      "published": "starter-project/Source/RollBallStarterEditor.Target.cs",
+      "sha256": "93fb1f99f1205f18eb79145b712167d168680b6c9b93d5905ba9708b54b9241f",
+      "published_sha256": "93fb1f99f1205f18eb79145b712167d168680b6c9b93d5905ba9708b54b9241f"
+    },
+    {
+      "source": "README.md",
+      "published": "tools/INPUT_GUIDE.md",
+      
+
+"restore_edits": [
+        {
+          "start": 9,
+          "end": 10,
+          "lines": [
+            "2. `README.md` — package map and authority boundaries.\n"
+          ]
+        },
+        {
+          "start": 12,
+          "end": 16,
+          "lines": [
+            "5. `ASSET_MANIFEST.json`, then `ASSET_CATALOG.md` and `legal/ASSET_LICENSE_MAP.json` — exact public content facts, replacement policy, and license boundaries.\n",
+            "6. `TOOLCHAIN.md` — task-specific engine, entry, path, and environment parameters.\n",
+            "7. `UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md` — one public interface at a time.\n",
+            "8. `contracts/README.md` — implementation-independent read-only state transport.\n"
+          ]
+        },
+        {
+          "start": 28,
+          "end": 32,
+          "lines": [
+            "| Fixed cell, wall, start, exit, and trap data | `project/Config/FixedRollBallLayout.json` as required by `GDD.md` Section 6 |\n",
+            "| Content identity, hashes, licenses, and replacement policy | `ASSET_CATALOG.json` and `ASSET_MANIFEST.json` |\n",
+            "| Task paths, engine parameters, and release policy | `BENCHMARK_MANIFEST.json` and `TOOLCHAIN.md` |\n",
+            "| Public engine interface signatures | `UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md` and the adjacent complete catalog |\n"
+          ]
+        },
+        {
+          "start": 41,
+          "end": 42,
+          "lines": [
+            "| `project/` | Answer-free Unreal project, fixed fixture, and supplied raw visual meshes; no assembled gameplay | Yes |\n"
+          ]
+        },
+        {
+          "start": 43,
+          "end": 45,
+          "lines": [
+            "| `legal/` | Offline third-party notice and license text | No |\n",
+            "| `tests/PublicSmoke/` | Public project and starter-health check | No |\n"
+          ]
+        },
+        {
+          "start": 52,
+          "end": 53,
+          "lines": [
+            "Open `project/RollBallStarter.uproject` with Unreal Engine 5.7.4. The starter presents a small inert 3D mesh and material display with real lighting and a patterned rotating sphere. It deliberately contains no playable ball, movement, active traps, completion flow, gameplay restart, or game-state provider. Its read-only bridge reports `provider_ready=false` and `game_state=null`.\n"
+          ]
+        },
+        {
+          "start": 67,
+          "end": 68,
+          "lines": [
+            "pwsh -NoProfile -File tests/PublicSmoke/Invoke-PublicSmoke.ps1 `\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tests/PublicSmoke/Invoke-PublicSmoke.ps1",
+      "published": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
+      "sha256": "c1ac389c3751d0dc6dacec4de42662c5def9478df7a11bf7adf8b830f73d4ce5",
+      "published_sha256": "f64b9a082a431cadaebba97549002274efc77e6137ed52f2a295540f94cb15d2",
+      "restore_edits": [
+        {
+          "start": 80,
+          "end": 81,
+          "lines": [
+            "$project = Join-Path $input 'project/RollBallStarter.uproject'\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tests/PublicSmoke/README.md",
+      "published": "self-check/PublicSmoke/CONTRACT.md",
+      "sha256": "b6f36b1b41e089c5d7e6699eb3ec011e1708322ee6d1c9d7815e66cfc9dd3392",
+      "published_sha256": "b6f36b1b41e089c5d7e6699eb3ec011e1708322ee6d1c9d7815e66cfc9dd3392"
+    },
+    {
+      "source": "",
+      "published": "",
+      "restore_edits": [
+        {
+          "start": 4,
+          "end": 5,
+          "lines": [
+            "The fixed-layout fixture in `project/Config/FixedRollBallLayout.json` is supplied under the MIT license. The copyright and permission notice is preserved in `legal/MIT-RollBall.txt`.\n"
+          ]
+        },
+        {
+          "start": 8,
+          "end": 9,
+          "lines": [
+            "The supplied board floor, trap-hole, wall, and sphere meshes are Unreal Starter Content assets. These files remain subject to the applicable Unreal Engine EULA, Epic Content License Agreement, and any applicable Epic asset terms. The license mapping is recorded in `legal/ASSET_LICENSE_MAP.json`.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "TOOLCHAIN.md",
+      "published": "tools/TOOLCHAIN.md",
+      "sha256": "9cb620c10aab60a34d1ec6a6c6d17a1dd510d31626a768f017e4ea5c66295844",
+      "published_sha256": "04ba808fa4dfe576a81db51f1f5b16dd2822e5c3839ed9c29e6e1fa8200ec15a",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "This file is authoritative for task-specific engine, path, entry, and environment parameters. `UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md` is authoritative for individual public interface signatures. `GDD.md` Section 6 remains the sole gameplay acceptance authority.\n"
+          ]
+        },
+        {
+          "start": 12,
+          "end": 14,
+          "lines": [
+            "| Project root | `project/` |\n",
+            "| Project file | `project/RollBallStarter.uproject` |\n"
+          ]
+        },
+        {
+          "start": 15,
+          "end": 17,
+          "lines": [
+            "| Final entry | `project/RollBallStarter.uproject` using its configured default map |\n",
+            "| Fixed layout | `project/Config/FixedRollBallLayout.json` |\n"
+          ]
+        },
+        {
+          "start": 73,
+          "end": 74,
+          "lines": [
+            "The candidate publishes the read-only file defined in `contracts/README.md` atomically. Gameplay remains reachable only through normal player input. The state publisher reports facts and must not control gameplay.\n"
+          ]
+        },
+        {
+          "start": 97,
+          "end": 98,
+          "lines": [
+            "`project/Config/FixedRollBallLayout.json` is immutable public fixture data. It uses bottom-left grid coordinates and contains:\n"
+          ]
+        },
+        {
+          "start": 109,
+          "end": 110,
+          "lines": [
+            "Exact supplied content, hashes, requirement relationships, and license boundaries are in `ASSET_MANIFEST.json`, `ASSET_CATALOG.json`, `ASSET_CATALOG.md`, and `legal/ASSET_LICENSE_MAP.json`. Only `project/` is writable during generation. Launcher evidence and model-run metadata remain outside this input.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tools/Resolve-Unreal57.ps1",
+      "published": "tools/Resolve-Unreal57.ps1",
+      "sha256": "12581ab0254ec09162a8783b412a71951418e8eb9a38a6e9f137d4e9ead873c5",
+      "published_sha256": "12581ab0254ec09162a8783b412a71951418e8eb9a38a6e9f137d4e9ead873c5"
+    },
+    {
+      "source": "tools/Search-UnrealInterfaceCatalog.ps1",
+      "published": "tools/Search-UnrealInterfaceCatalog.ps1",
+      "sha256": "963b6d6b254dbd7e890218bfb8f213d4d5e8bede64ef2e13bc2833af70684446",
+      "published_sha256": "a35eaaa1fc13c0740c649c61b540c43056e0a3c6a4c90a6e7ad0fa7626519afa",
+      "restore_edits": [
+        {
+          "start": 6,
+          "end": 8,
+          "lines": [
+            "    [string]$CatalogPath = (Join-Path $PSScriptRoot '../UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz'),\n",
+            "    [string]$IndexPath = (Join-Path $PSScriptRoot '../UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json')\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tools/Test-PublicInput.ps1",
+      "published": "tools/Test-PublicInput.ps1",
+      
+
+"restore_edits": [
+        {
+          "start": 25,
+          "end": 35,
+          "lines": [
+            "    'INITIAL_AGENT_PROMPT.md', 'README.md', 'GDD.md', 'FIXED_LAYOUT.md',\n",
+            "    'BENCHMARK_MANIFEST.json', 'TOOLCHAIN.md',\n",
+            "    'UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md',\n",
+            "    'UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json',\n",
+            "    'UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz',\n",
+            "    'ASSET_MANIFEST.json', 'ASSET_CATALOG.json', 'ASSET_CATALOG.md', 'ASSET_COVERAGE.json',\n",
+            "    'THIRD_PARTY_NOTICES.md', 'legal/MIT-RollBall.txt', 'legal/ASSET_LICENSE_MAP.json',\n",
+            "    'contracts/README.md', 'contracts/game-state.schema.json',\n",
+            "    'project/RollBallStarter.uproject', 'project/Config/FixedRollBallLayout.json',\n",
+            "    'tests/PublicSmoke/Invoke-PublicSmoke.ps1', 'tools/Search-UnrealInterfaceCatalog.ps1', 'tools/Resolve-Unreal57.ps1'\n"
+          ]
+        },
+        {
+          "start": 45,
+          "end": 46,
+          "lines": [
+            "Assert-PublicInput ([string]$benchmark.paths.project_file -ceq 'project/RollBallStarter.uproject') 'Unexpected project entry.'\n"
+          ]
+        },
+        {
+          "start": 49,
+          "end": 51,
+          "lines": [
+            "$layoutPath = Join-Path $root 'project/Config/FixedRollBallLayout.json'\n",
+            "$layout = Read-Json 'project/Config/FixedRollBallLayout.json'\n"
+          ]
+        },
+        {
+          "start": 93,
+          "end": 94,
+          "lines": [
+            "$assetCatalog = Read-Json 'ASSET_CATALOG.json'\n"
+          ]
+        },
+        {
+          "start": 115,
+          "end": 116,
+          "lines": [
+            "Assert-PublicInput ([string]$fixedAsset.relative_path -ceq 'project/Config/FixedRollBallLayout.json') 'Unexpected fixed-layout catalog path.'\n"
+          ]
+        },
+        {
+          "start": 119,
+          "end": 120,
+          "lines": [
+            "$actualBinaryPaths = @(Get-ChildItem -LiteralPath (Join-Path $root 'project/Content') -Recurse -File -Include '*.uasset','*.umap' | ForEach-Object { $_.FullName.Substring($root.Length).TrimStart('\\','/').Replace('\\','/') } | Sort-Object)\n"
+          ]
+        },
+        {
+          "start": 131,
+          "end": 133,
+          "lines": [
+            "$catalogIndex = Read-Json 'UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json'\n",
+            "$catalogArchive = Join-Path $root 'UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz'\n"
+          ]
+        },
+        {
+          "start": 139,
+          "end": 140,
+          "lines": [
+            "$forbiddenGenerated = @('project/Binaries','project/DerivedDataCache','project/Intermediate','project/Saved','project/.vs')\n"
+          ]
+        },
+        {
+          "start": 144,
+          "end": 145,
+          "lines": [
+            "$sourceRoot = Join-Path $root 'project/Source'\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
+      "published": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
+      "sha256": "44fca8ffb2231ff5f1147673d671823f46068ce369aafae2eff68c13c6d711f0",
+      "published_sha256": "bd1b60f121dc840a67bdc9dfccab11bcd0b9221ea1fd23a3fa411bd758197c1e",
+      "restore_edits": [
+        {
+          "start": 66,
+          "end": 67,
+          "lines": [
+            "  \"catalog_file\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz",
+      "published": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz",
+      "sha256": "750f1bd26572c5f4d3e5c2afe7fce14d5d7c76aad4ee806151ced72924a6dfd0",
+      "published_sha256": "750f1bd26572c5f4d3e5c2afe7fce14d5d7c76aad4ee806151ced72924a6dfd0"
+    },
+    {
+      "source": "UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md",
+      "published": "tools/TOOL_GUIDE.md",
+      "sha256": "26e4c2dc6c730c49a77e97d88987c51ffb339289f0da8cebdfbe832533c51802",
+      "published_sha256": "c564e126a4133a87ef7b401d70320b06909b9f0a7c464133eb7e713fe75005f3",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "This is the task's public, single-interface guide for the published Unreal benchmark surface. It documents interfaces that a candidate or launcher may call independently; it is not a gameplay recipe, evaluator, score definition, or reference implementation. Task-specific paths remain in `TOOLCHAIN.md`, and gameplay acceptance remains solely in `GDD.md` Section 6.\n"
+          ]
+        },
+        {
+          "start": 22,
+          "end": 23,
+          "lines": [
+            "The adjacent `UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json` and `UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz` form the version-bound all-interface catalog. It contains 546,387 independently addressable records extracted from 74,084 UE 5.7.4 source/header files, engine config defaults, reflection macros, console registrations, UBT/UAT commands, and every installed engine plugin descriptor and module.\n"
+          ]
+        },
+        {
+          "start": 56,
+          "end": 57,
+          "lines": [
+            "  -ProjectPath '<input>/project/RollBallStarter.uproject' `\n"
+          ]
+        },
+        {
+          "start": 194,
+          "end": 199,
+          "lines": []
+        }
+      ]
+    }
+  ]
+}

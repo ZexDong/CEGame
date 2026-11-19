@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "id": "budget_terminal",
+  "title": "Moves and Hearts costs, last-move win priority, loss UI, and terminal freeze",
+  "steps": [
+    {
+      "step_id": "setup.scene",
+      "operation": "load_canonical_scene",
+      "target": "scene:ArrowEscape",
+      "check_ids": [
+        "setup.scene_load",
+        "setup.probe",
+        "setup.playable"
+      ]
+    },
+    {
+      "step_id": "declared.scoring_checks",
+      "operation": "observe_visible_player_journeys",
+      "target": "running_scene",
+      "check_ids": [
+        "budget.moves_win.click.input.top_hit",
+        "budget.moves_win.zero_while_moving",
+        "budget.moves_win.won.reached",
+        "budget.hearts_success.click.input.top_hit",
+        "budget.hearts_success.no_cost",
+        "budget.hearts_success.won.reached",
+        "budget.loss.click.input.top_hit",
+        "budget.loss.lost.reached",
+        "budget.loss.failed_ui",
+        "budget.loss.frozen_click.input.top_hit",
+        "budget.loss.frozen.no_change",
+        "budget.modes.next.input.top_hit",
+        "budget.modes.loaded.authored"
+      ]
+    }
+  ]
+}

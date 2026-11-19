@@ -1,0 +1,6252 @@
+{
+  "schema_version": "2.0",
+  "coverage_status": "not_reviewed",
+  "gdd_sha256": "513ee8855ebdf34fa03df1bcad6d2fbb2a06c6e297a4288118d1b150376a8671",
+  "limitations": [
+    "Native requirement mapping is preserved; independent semantic coverage and targeted positive/negative/equivalent game fixtures have not been qualified."
+  ],
+  "requirements": [
+    {
+      "requirement_id": "ENTRY-01",
+      "obligation_id": "ENTRY-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Fresh application or Main Menu.",
+      "check_ids": [
+        "D2-menu",
+        "D4-entry",
+        "D5-controls"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENTRY-01",
+      "obligation_id": "ENTRY-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Choose Easy, Medium or Hard; or Exit.",
+      "check_ids": [
+        "D2-menu",
+        "D4-entry",
+        "D5-controls"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENTRY-01",
+      "obligation_id": "ENTRY-01.3.1",
+      "field": "Required result",
+      "obligation": "Show the BoneMaze title and four named clickable buttons.",
+      "check_ids": [
+        "D2-menu",
+        "D4-entry",
+        "D5-controls"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENTRY-01",
+      "obligation_id": "ENTRY-01.3.2",
+      "field": "Required result",
+      "obligation": "A difficulty starts that size",
+      "check_ids": [
+        "D2-menu",
+        "D4-entry",
+        "D5-controls"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENTRY-01",
+      "obligation_id": "ENTRY-01.3.3",
+      "field": "Required result",
+      "obligation": "Exit closes normally.",
+      "check_ids": [
+        "D2-menu",
+        "D4-entry",
+        "D5-controls"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENTRY-01",
+      "obligation_id": "ENTRY-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No automatic run before a selection.",
+      "check_ids": [
+        "D2-menu",
+        "D4-entry",
+        "D5-controls"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENTRY-01",
+      "obligation_id": "ENTRY-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Hover/pressed states and a visible difficulty label.",
+      "check_ids": [
+        "D2-menu",
+        "D4-entry",
+        "D5-controls"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENTRY-01",
+      "obligation_id": "ENTRY-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "A click starts one run even if repeated during loading.",
+      "check_ids": [
+        "D2-menu",
+        "D4-entry",
+        "D5-controls"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENTRY-02",
+      "obligation_id": "ENTRY-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A difficulty has been selected.",
+      "check_ids": [
+        "D3-initial",
+        "D4-entry"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENTRY-02",
+      "obligation_id": "ENTRY-02.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Finish loading.",
+      "check_ids": [
+        "D3-initial",
+        "D4-entry"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENTRY-02",
+      "obligation_id": "ENTRY-02.3.1",
+      "field": "Required result",
+      "obligation": "Place the mage safely in the start chamber with 5 lives, 5 scrolls, 0 coins and no keys.",
+      "check_ids": [
+        "D3-initial",
+        "D4-entry"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENTRY-02",
+      "obligation_id": "ENTRY-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No damage, pickup or room-turn charge on initial spawn.",
+      "check_ids": [
+        "D3-initial",
+        "D4-entry"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENTRY-02",
+      "obligation_id": "ENTRY-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "The HUD and spawn animation agree with the initial values.",
+      "check_ids": [
+        "D3-initial",
+        "D4-entry"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENTRY-02",
+      "obligation_id": "ENTRY-02.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Starting from any difficulty uses these same resources.",
+      "check_ids": [
+        "D3-initial",
+        "D4-entry"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-01",
+      "obligation_id": "MAZE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A new run is starting.",
+      "check_ids": [
+        "D2-rooms",
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-01",
+      "obligation_id": "MAZE-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Generate the dungeon.",
+      "check_ids": [
+        "D2-rooms",
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-01",
+      "obligation_id": "MAZE-01.3.1",
+      "field": "Required result",
+      "obligation": "Easy has 36 chambers labelled by coordinates 1..6 on both axes",
+      "check_ids": [
+        "D2-rooms",
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-01",
+      "obligation_id": "MAZE-01.3.2",
+      "field": "Required result",
+      "obligation": "Medium has 100 with 1..10",
+      "check_ids": [
+        "D2-rooms",
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-01",
+      "obligation_id": "MAZE-01.3.3",
+      "field": "Required result",
+      "obligation": "Hard has 225 with 1..15.",
+      "check_ids": [
+        "D2-rooms",
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-01",
+      "obligation_id": "MAZE-01.3.4",
+      "field": "Required result",
+      "obligation": "Every pair identifies exactly one persistent chamber.",
+      "check_ids": [
+        "D2-rooms",
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-01",
+      "obligation_id": "MAZE-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No difficulty implemented by changing only a label or resource amount.",
+      "check_ids": [
+        "D2-rooms",
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-01",
+      "obligation_id": "MAZE-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Current chamber coordinates are always shown during play.",
+      "check_ids": [
+        "D2-rooms",
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-01",
+      "obligation_id": "MAZE-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Coordinates do not change when revisiting a chamber.",
+      "check_ids": [
+        "D2-rooms",
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-02",
+      "obligation_id": "MAZE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A dungeon is generated.",
+      "check_ids": [
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-02",
+      "obligation_id": "MAZE-02.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Explore its exits.",
+      "check_ids": [
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-02",
+      "obligation_id": "MAZE-02.3.1",
+      "field": "Required result",
+      "obligation": "Each chamber has four distinct perimeter exit slots.",
+      "check_ids": [
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-02",
+      "obligation_id": "MAZE-02.3.2",
+      "field": "Required result",
+      "obligation": "Pair slots into stable, bidirectional connections to different chambers; each chamber has four different neighbours.",
+      "check_ids": [
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-02",
+      "obligation_id": "MAZE-02.3.3",
+      "field": "Required result",
+      "obligation": "All chambers form one connected maze.",
+      "check_ids": [
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-02",
+      "obligation_id": "MAZE-02.3.4",
+      "field": "Required result",
+      "obligation": "Include non-geometric connections: at least one exit connects coordinate pairs more than one grid step apart.",
+      "check_ids": [
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-02",
+      "obligation_id": "MAZE-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No self-loops, dangling exits, disconnected rooms or re-randomizing an exit during a run.",
+      "check_ids": [
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-02",
+      "obligation_id": "MAZE-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Visible passage openings; arrival is inside the paired destination exit.",
+      "check_ids": [
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-02",
+      "obligation_id": "MAZE-02.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Coordinates identify chambers, not a promise of geometric adjacency.",
+      "check_ids": [
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-02",
+      "obligation_id": "MAZE-02.6.2",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Returning through the paired exit returns to the chamber just left.",
+      "check_ids": [
+        "D3-graph"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-03",
+      "obligation_id": "MAZE-03.1.1",
+      "field": "Preconditions",
+      "obligation": "The maze is generated.",
+      "check_ids": [
+        "D2-roles",
+        "D3-locks"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-03",
+      "obligation_id": "MAZE-03.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Explore and collect keys.",
+      "check_ids": [
+        "D2-roles",
+        "D3-locks"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-03",
+      "obligation_id": "MAZE-03.3.1",
+      "field": "Required result",
+      "obligation": "Use five different chambers for start, exit, red key, green key and blue key.",
+      "check_ids": [
+        "D2-roles",
+        "D3-locks"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-03",
+      "obligation_id": "MAZE-03.3.2",
+      "field": "Required result",
+      "obligation": "Include at least one gate of each key colour on maze connections.",
+      "check_ids": [
+        "D2-roles",
+        "D3-locks"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-03",
+      "obligation_id": "MAZE-03.3.3",
+      "field": "Required result",
+      "obligation": "Every key is reachable without requiring that same key or a circular key dependency; all chambers are reachable after collecting keys.",
+      "check_ids": [
+        "D2-roles",
+        "D3-locks"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-03",
+      "obligation_id": "MAZE-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No key or exit in the spawn chamber, unreachable collectible or unavoidable locked-key cycle.",
+      "check_ids": [
+        "D2-roles",
+        "D3-locks"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-03",
+      "obligation_id": "MAZE-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "Distinct key chambers and a recognizable exit chamber.",
+      "check_ids": [
+        "D2-roles",
+        "D3-locks"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-03",
+      "obligation_id": "MAZE-03.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Both sides of a gated connection share its lock/open state.",
+      "check_ids": [
+        "D2-roles",
+        "D3-locks"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-03",
+      "obligation_id": "MAZE-03.6.2",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "No particular key order is prescribed.",
+      "check_ids": [
+        "D2-roles",
+        "D3-locks"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-04",
+      "obligation_id": "MAZE-04.1.1",
+      "field": "Preconditions",
+      "obligation": "Difficulty and a 32-bit unsigned seed are selected.",
+      "check_ids": [
+        "D3-seed",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-04",
+      "obligation_id": "MAZE-04.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Start or Restart; repeat the same normal input sequence.",
+      "check_ids": [
+        "D3-seed",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-04",
+      "obligation_id": "MAZE-04.3.1",
+      "field": "Required result",
+      "obligation": "The same difficulty and seed reproduce room links, roles, layouts, pickups and monster decisions.",
+      "check_ids": [
+        "D3-seed",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-04",
+      "obligation_id": "MAZE-04.3.2",
+      "field": "Required result",
+      "obligation": "Accept a seed in the start menu and the documented launch option; use 48 when omitted.",
+      "check_ids": [
+        "D3-seed",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-04",
+      "obligation_id": "MAZE-04.3.3",
+      "field": "Required result",
+      "obligation": "Different seeds vary the generated dungeon.",
+      "check_ids": [
+        "D3-seed",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-04",
+      "obligation_id": "MAZE-04.4.1",
+      "field": "Forbidden result",
+      "obligation": "No dependence of monster choices on frame rate, screenshot capture, waiting time or observation reads.",
+      "check_ids": [
+        "D3-seed",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-04",
+      "obligation_id": "MAZE-04.5.1",
+      "field": "Visible feedback",
+      "obligation": "Display the active seed and difficulty in the menu/pause information.",
+      "check_ids": [
+        "D3-seed",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-04",
+      "obligation_id": "MAZE-04.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Restart reuses the current seed.",
+      "check_ids": [
+        "D3-seed",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-04",
+      "obligation_id": "MAZE-04.6.2",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Changing the seed starts a fresh run.",
+      "check_ids": [
+        "D3-seed",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-04",
+      "obligation_id": "MAZE-04.6.3",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Exact generated layouts need not match another implementation.",
+      "check_ids": [
+        "D3-seed",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-05",
+      "obligation_id": "MAZE-05.1.1",
+      "field": "Preconditions",
+      "obligation": "A complete dungeon is generated.",
+      "check_ids": [
+        "D2-arrangements"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-05",
+      "obligation_id": "MAZE-05.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Visit chambers.",
+      "check_ids": [
+        "D2-arrangements"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-05",
+      "obligation_id": "MAZE-05.3.1",
+      "field": "Required result",
+      "obligation": "Provide at least 20 distinguishable ordinary room arrangements plus separate start, three coloured key and exit arrangements.",
+      "check_ids": [
+        "D2-arrangements"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-05",
+      "obligation_id": "MAZE-05.3.2",
+      "field": "Required result",
+      "obligation": "Every ordinary arrangement appears at least once even on Easy.",
+      "check_ids": [
+        "D2-arrangements"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-05",
+      "obligation_id": "MAZE-05.3.3",
+      "field": "Required result",
+      "obligation": "Vary walkable prop placement and architectural silhouettes using pillars, coffins, grates, rubble, skulls, furnishings and floor tiles.",
+      "check_ids": [
+        "D2-arrangements"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-05",
+      "obligation_id": "MAZE-05.4.1",
+      "field": "Forbidden result",
+      "obligation": "No set of colour swaps or identical empty rooms counted as different arrangements.",
+      "check_ids": [
+        "D2-arrangements"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-05",
+      "obligation_id": "MAZE-05.5.1",
+      "field": "Visible feedback",
+      "obligation": "Room composition helps the player recognize previously visited locations.",
+      "check_ids": [
+        "D2-arrangements"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-05",
+      "obligation_id": "MAZE-05.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "All mandatory exits and collectibles remain physically reachable; props do not conceal required interactions.",
+      "check_ids": [
+        "D2-arrangements"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-01",
+      "obligation_id": "MOVE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Exploration is active.",
+      "check_ids": [
+        "D2-mage",
+        "D3-movement",
+        "D5-focus"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-01",
+      "obligation_id": "MOVE-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Hold W/A/S/D or a diagonal pair, then release.",
+      "check_ids": [
+        "D2-mage",
+        "D3-movement",
+        "D5-focus"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-01",
+      "obligation_id": "MOVE-01.3.1",
+      "field": "Required result",
+      "obligation": "Move continuously up/left/down/right relative to the fixed view; diagonal movement has the same top speed as axial movement.",
+      "check_ids": [
+        "D2-mage",
+        "D3-movement",
+        "D5-focus"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-01",
+      "obligation_id": "MOVE-01.3.2",
+      "field": "Required result",
+      "obligation": "Face the travel direction.",
+      "check_ids": [
+        "D2-mage",
+        "D3-movement",
+        "D5-focus"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-01",
+      "obligation_id": "MOVE-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No click-only movement, grid-step-only locomotion or drifting after release.",
+      "check_ids": [
+        "D2-mage",
+        "D3-movement",
+        "D5-focus"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-01",
+      "obligation_id": "MOVE-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Visible locomotion and idle poses.",
+      "check_ids": [
+        "D2-mage",
+        "D3-movement",
+        "D5-focus"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-01",
+      "obligation_id": "MOVE-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Opposite directions cancel; menu/terminal input does not move the character.",
+      "check_ids": [
+        "D2-mage",
+        "D3-movement",
+        "D5-focus"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-02",
+      "obligation_id": "MOVE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A room contains solid boundaries or props.",
+      "check_ids": [
+        "D3-collision"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-02",
+      "obligation_id": "MOVE-02.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Walk against them.",
+      "check_ids": [
+        "D3-collision"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-02",
+      "obligation_id": "MOVE-02.3.1",
+      "field": "Required result",
+      "obligation": "Walls, unopened gates and large solid props block passage; the floor supports the player.",
+      "check_ids": [
+        "D3-collision"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-02",
+      "obligation_id": "MOVE-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No clipping out of the chamber, falling through the floor or walking through a closed door.",
+      "check_ids": [
+        "D3-collision"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-02",
+      "obligation_id": "MOVE-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "The player stops at the obstacle while controls remain responsive.",
+      "check_ids": [
+        "D3-collision"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-02",
+      "obligation_id": "MOVE-02.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Sliding along a wall does not create a room transition unless an exit threshold is crossed.",
+      "check_ids": [
+        "D3-collision"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-03",
+      "obligation_id": "MOVE-03.1.1",
+      "field": "Preconditions",
+      "obligation": "Exploration is active.",
+      "check_ids": [
+        "D2-mage",
+        "D5-resolution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-03",
+      "obligation_id": "MOVE-03.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Walk and change chambers.",
+      "check_ids": [
+        "D2-mage",
+        "D5-resolution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-03",
+      "obligation_id": "MOVE-03.3.1",
+      "field": "Required result",
+      "obligation": "Use an elevated, fixed-orientation three-quarter 3D camera that tracks the mage smoothly, shows the surrounding floor and exits, and settles on the destination after a transition.",
+      "check_ids": [
+        "D2-mage",
+        "D5-resolution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-03",
+      "obligation_id": "MOVE-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No free first-person camera or flat top-down board substituting for the dungeon scene.",
+      "check_ids": [
+        "D2-mage",
+        "D5-resolution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-03",
+      "obligation_id": "MOVE-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "Readable character silhouette, depth and floor perspective.",
+      "check_ids": [
+        "D2-mage",
+        "D5-resolution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-03",
+      "obligation_id": "MOVE-03.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Walls may fade or be cut away when necessary to keep the player readable.",
+      "check_ids": [
+        "D2-mage",
+        "D5-resolution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-01",
+      "obligation_id": "PORTAL-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A passage is unobstructed.",
+      "check_ids": [
+        "D3-passages"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-01",
+      "obligation_id": "PORTAL-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Walk across its threshold.",
+      "check_ids": [
+        "D3-passages"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-01",
+      "obligation_id": "PORTAL-01.3.1",
+      "field": "Required result",
+      "obligation": "Transfer to its connected chamber and place the mage just inside the paired arrival passage.",
+      "check_ids": [
+        "D3-passages"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-01",
+      "obligation_id": "PORTAL-01.3.2",
+      "field": "Required result",
+      "obligation": "Update chamber coordinates once.",
+      "check_ids": [
+        "D3-passages"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-01",
+      "obligation_id": "PORTAL-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No E press required for an already open passage; no coordinate-only change while displaying the previous room.",
+      "check_ids": [
+        "D3-passages"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-01",
+      "obligation_id": "PORTAL-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Short portal/scene transition feedback and destination scenery.",
+      "check_ids": [
+        "D3-passages"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-01",
+      "obligation_id": "PORTAL-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Arrival does not immediately send the player back without leaving and re-entering the threshold.",
+      "check_ids": [
+        "D3-passages"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-02",
+      "obligation_id": "PORTAL-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A transfer has started.",
+      "check_ids": [
+        "D3-passages"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-02",
+      "obligation_id": "PORTAL-02.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Hold movement or press Q/E during the transition.",
+      "check_ids": [
+        "D3-passages"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-02",
+      "obligation_id": "PORTAL-02.3.1",
+      "field": "Required result",
+      "obligation": "Complete only one room transfer and one monster turn; resolve arrival/encounter within 1 second.",
+      "check_ids": [
+        "D3-passages"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-02",
+      "obligation_id": "PORTAL-02.3.2",
+      "field": "Required result",
+      "obligation": "Without a hit, settle by then; a nonfatal hit instead enters the separate MONSTER-05 recovery interval.",
+      "check_ids": [
+        "D3-passages"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-02",
+      "obligation_id": "PORTAL-02.3.3",
+      "field": "Required result",
+      "obligation": "Accept new gameplay actions only after settlement.",
+      "check_ids": [
+        "D3-passages"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-02",
+      "obligation_id": "PORTAL-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No duplicate turns, pickup activation in two rooms, or stacked transitions from one crossing.",
+      "check_ids": [
+        "D3-passages"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-02",
+      "obligation_id": "PORTAL-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Destination and HUD become stable together.",
+      "check_ids": [
+        "D3-passages"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-02",
+      "obligation_id": "PORTAL-02.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Cancel in-flight effects and callbacks if the run is restarted.",
+      "check_ids": [
+        "D3-passages"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-03",
+      "obligation_id": "PORTAL-03.1.1",
+      "field": "Preconditions",
+      "obligation": "A visited chamber contains opened gates or consumed pickups.",
+      "check_ids": [
+        "D3-gate_shared",
+        "D3-pickup_once"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-03",
+      "obligation_id": "PORTAL-03.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Leave and return.",
+      "check_ids": [
+        "D3-gate_shared",
+        "D3-pickup_once"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-03",
+      "obligation_id": "PORTAL-03.3.1",
+      "field": "Required result",
+      "obligation": "Restore that chamber with its existing gate and pickup state.",
+      "check_ids": [
+        "D3-gate_shared",
+        "D3-pickup_once"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-03",
+      "obligation_id": "PORTAL-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No resource respawn, duplicate key or reset door when revisiting.",
+      "check_ids": [
+        "D3-gate_shared",
+        "D3-pickup_once"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-03",
+      "obligation_id": "PORTAL-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "The same room identity, architecture and remaining items.",
+      "check_ids": [
+        "D3-gate_shared",
+        "D3-pickup_once"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PORTAL-03",
+      "obligation_id": "PORTAL-03.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Persistence lasts for this run only.",
+      "check_ids": [
+        "D3-gate_shared",
+        "D3-pickup_once"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-01",
+      "obligation_id": "MONSTER-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A fresh run is generated.",
+      "check_ids": [
+        "D3-initial"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-01",
+      "obligation_id": "MONSTER-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Enter the start chamber.",
+      "check_ids": [
+        "D3-initial"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-01",
+      "obligation_id": "MONSTER-01.3.1",
+      "field": "Required result",
+      "obligation": "There is exactly one roaming monster, initially in a different chamber at least two maze connections away from the player.",
+      "check_ids": [
+        "D3-initial"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-01",
+      "obligation_id": "MONSTER-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No initially unavoidable hit or simultaneous roaming duplicates.",
+      "check_ids": [
+        "D3-initial"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-01",
+      "obligation_id": "MONSTER-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The monster is hidden when it occupies another chamber.",
+      "check_ids": [
+        "D3-initial"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-01",
+      "obligation_id": "MONSTER-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "No global permanent monster marker in normal gameplay.",
+      "check_ids": [
+        "D3-initial"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-02",
+      "obligation_id": "MONSTER-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A run is active.",
+      "check_ids": [
+        "D3-turns"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-02",
+      "obligation_id": "MONSTER-02.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Wait, walk inside a room, cast, open a gate or cross a passage.",
+      "check_ids": [
+        "D3-turns"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-02",
+      "obligation_id": "MONSTER-02.3.1",
+      "field": "Required result",
+      "obligation": "The monster takes exactly one turn per completed room crossing.",
+      "check_ids": [
+        "D3-turns"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-02",
+      "obligation_id": "MONSTER-02.3.2",
+      "field": "Required result",
+      "obligation": "Waiting, local movement, casting, pickups and door interactions take no monster turn.",
+      "check_ids": [
+        "D3-turns"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-02",
+      "obligation_id": "MONSTER-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No real-time pursuit between room crossings or extra turn on respawn.",
+      "check_ids": [
+        "D3-turns"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-02",
+      "obligation_id": "MONSTER-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Danger/reveal information reflects the settled room turn.",
+      "check_ids": [
+        "D3-turns"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-02",
+      "obligation_id": "MONSTER-02.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Failed, blocked and cancelled transfers do not move the monster.",
+      "check_ids": [
+        "D3-turns"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-03",
+      "obligation_id": "MONSTER-03.1.1",
+      "field": "Preconditions",
+      "obligation": "A room crossing has selected a destination different from the current monster room.",
+      "check_ids": [
+        "D3-monster_step",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-03",
+      "obligation_id": "MONSTER-03.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Resolve that crossing.",
+      "check_ids": [
+        "D3-monster_step",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-03",
+      "obligation_id": "MONSTER-03.3.1",
+      "field": "Required result",
+      "obligation": "The monster moves to exactly one connected neighbour.",
+      "check_ids": [
+        "D3-monster_step",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-03",
+      "obligation_id": "MONSTER-03.3.2",
+      "field": "Required result",
+      "obligation": "On each turn, choose pursuit with probability 6/11 and wandering with probability 5/11.",
+      "check_ids": [
+        "D3-monster_step",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-03",
+      "obligation_id": "MONSTER-03.3.3",
+      "field": "Required result",
+      "obligation": "Pursuit selects a neighbour that shortens the minimum connection distance to the destination; wandering selects uniformly among neighbours.",
+      "check_ids": [
+        "D3-monster_step",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-03",
+      "obligation_id": "MONSTER-03.3.4",
+      "field": "Required result",
+      "obligation": "Locked player gates do not block the monster.",
+      "check_ids": [
+        "D3-monster_step",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-03",
+      "obligation_id": "MONSTER-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No jumping multiple edges, leaving the maze or using wall-clock randomness.",
+      "check_ids": [
+        "D3-monster_step",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-03",
+      "obligation_id": "MONSTER-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "A subsequent reveal reports the resulting chamber.",
+      "check_ids": [
+        "D3-monster_step",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-03",
+      "obligation_id": "MONSTER-03.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Shortest-route ties may be resolved consistently by the implementation; wandering may choose a pursuit neighbour.",
+      "check_ids": [
+        "D3-monster_step",
+        "D3-monster_distribution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-04",
+      "obligation_id": "MONSTER-04.1.1",
+      "field": "Preconditions",
+      "obligation": "The player crosses into the monster room, or its one movement step reaches the player destination.",
+      "check_ids": [
+        "D3-hit",
+        "D4-failure"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-04",
+      "obligation_id": "MONSTER-04.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Resolve the encounter.",
+      "check_ids": [
+        "D3-hit",
+        "D4-failure"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-04",
+      "obligation_id": "MONSTER-04.3.1",
+      "field": "Required result",
+      "obligation": "Lose exactly 1 life.",
+      "check_ids": [
+        "D3-hit",
+        "D4-failure"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-04",
+      "obligation_id": "MONSTER-04.3.2",
+      "field": "Required result",
+      "obligation": "A direct entry into the occupied room resolves the hit before the monster can escape; no additional monster move occurs on that direct-entry hit.",
+      "check_ids": [
+        "D3-hit",
+        "D4-failure"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-04",
+      "obligation_id": "MONSTER-04.4.1",
+      "field": "Forbidden result",
+      "obligation": "No missed encounter, negative life count or repeated damage from a single crossing.",
+      "check_ids": [
+        "D3-hit",
+        "D4-failure"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-04",
+      "obligation_id": "MONSTER-04.5.1",
+      "field": "Visible feedback",
+      "obligation": "Visible monster/bonk reaction, impact sound and one life decrease.",
+      "check_ids": [
+        "D3-hit",
+        "D4-failure"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-04",
+      "obligation_id": "MONSTER-04.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "If the new life count is zero, use LIFE-01.",
+      "check_ids": [
+        "D3-hit",
+        "D4-failure"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-04",
+      "obligation_id": "MONSTER-04.6.2",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Otherwise use MONSTER-05.",
+      "check_ids": [
+        "D3-hit",
+        "D4-failure"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-05",
+      "obligation_id": "MONSTER-05.1.1",
+      "field": "Preconditions",
+      "obligation": "A hit leaves at least 1 life.",
+      "check_ids": [
+        "D3-recovery"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-05",
+      "obligation_id": "MONSTER-05.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Finish the hit reaction.",
+      "check_ids": [
+        "D3-recovery"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-05",
+      "obligation_id": "MONSTER-05.3.1",
+      "field": "Required result",
+      "obligation": "Within 2 seconds of the life decrease return the mage to the start chamber, move the monster if necessary so it is at least two connections away, and restore control.",
+      "check_ids": [
+        "D3-recovery"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-05",
+      "obligation_id": "MONSTER-05.3.2",
+      "field": "Required result",
+      "obligation": "Retain keys, scrolls, coin remainder, consumed pickups, opened gates and the maze.",
+      "check_ids": [
+        "D3-recovery"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-05",
+      "obligation_id": "MONSTER-05.4.1",
+      "field": "Forbidden result",
+      "obligation": "No full run reset or recursive damage caused by recovery.",
+      "check_ids": [
+        "D3-recovery"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-05",
+      "obligation_id": "MONSTER-05.5.1",
+      "field": "Visible feedback",
+      "obligation": "A brief hit/return transition and the start coordinates.",
+      "check_ids": [
+        "D3-recovery"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-05",
+      "obligation_id": "MONSTER-05.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Recovery itself does not count as a player crossing or another monster turn.",
+      "check_ids": [
+        "D3-recovery"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-06",
+      "obligation_id": "MONSTER-06.1.1",
+      "field": "Preconditions",
+      "obligation": "The mage is settled in a chamber.",
+      "check_ids": [
+        "D3-danger",
+        "D5-danger"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-06",
+      "obligation_id": "MONSTER-06.2.1",
+      "field": "Player action / trigger",
+      "obligation": "A turn finishes or recovery completes.",
+      "check_ids": [
+        "D3-danger",
+        "D5-danger"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-06",
+      "obligation_id": "MONSTER-06.3.1",
+      "field": "Required result",
+      "obligation": "Show a nearby-danger cue when the monster is exactly one maze connection away, otherwise clear it.",
+      "check_ids": [
+        "D3-danger",
+        "D5-danger"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-06",
+      "obligation_id": "MONSTER-06.3.2",
+      "field": "Required result",
+      "obligation": "Use a distinct safe/nearby visual state and a brief warning sound when entering danger.",
+      "check_ids": [
+        "D3-danger",
+        "D5-danger"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-06",
+      "obligation_id": "MONSTER-06.4.1",
+      "field": "Forbidden result",
+      "obligation": "No coordinate-based diagonal false positives or hidden exact position disclosure.",
+      "check_ids": [
+        "D3-danger",
+        "D5-danger"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-06",
+      "obligation_id": "MONSTER-06.5.1",
+      "field": "Visible feedback",
+      "obligation": "A conspicuous monster/warning icon or indicator.",
+      "check_ids": [
+        "D3-danger",
+        "D5-danger"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MONSTER-06",
+      "obligation_id": "MONSTER-06.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Recompute after every settled turn, recovery and Restart.",
+      "check_ids": [
+        "D3-danger",
+        "D5-danger"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-01",
+      "obligation_id": "SPELL-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Exploration is active and scroll count is positive.",
+      "check_ids": [
+        "D2-spell",
+        "D3-spell_cost"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-01",
+      "obligation_id": "SPELL-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Press Q once.",
+      "check_ids": [
+        "D2-spell",
+        "D3-spell_cost"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-01",
+      "obligation_id": "SPELL-01.3.1",
+      "field": "Required result",
+      "obligation": "Consume exactly 1 scroll and cast a reveal spell.",
+      "check_ids": [
+        "D2-spell",
+        "D3-spell_cost"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-01",
+      "obligation_id": "SPELL-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No life/coin cost or monster turn from casting.",
+      "check_ids": [
+        "D2-spell",
+        "D3-spell_cost"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-01",
+      "obligation_id": "SPELL-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Mage casting action, luminous ring/sparks, cast sound and decremented scroll HUD.",
+      "check_ids": [
+        "D2-spell",
+        "D3-spell_cost"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-01",
+      "obligation_id": "SPELL-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "A held key does not repeatedly consume scrolls; release and press again for another cast.",
+      "check_ids": [
+        "D2-spell",
+        "D3-spell_cost"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-02",
+      "obligation_id": "SPELL-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A reveal spell succeeds.",
+      "check_ids": [
+        "D2-spell",
+        "D3-reveal_timer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-02",
+      "obligation_id": "SPELL-02.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Read the reveal, wait or cross a passage.",
+      "check_ids": [
+        "D2-spell",
+        "D3-reveal_timer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-02",
+      "obligation_id": "SPELL-02.3.1",
+      "field": "Required result",
+      "obligation": "Show the monster coordinates sampled at cast time for 3 seconds or until the next room crossing, whichever happens first.",
+      "check_ids": [
+        "D2-spell",
+        "D3-reveal_timer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-02",
+      "obligation_id": "SPELL-02.3.2",
+      "field": "Required result",
+      "obligation": "A new successful cast refreshes the information and duration.",
+      "check_ids": [
+        "D2-spell",
+        "D3-reveal_timer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-02",
+      "obligation_id": "SPELL-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No live tracking after the monster moves and no stale position presented as current.",
+      "check_ids": [
+        "D2-spell",
+        "D3-reveal_timer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-02",
+      "obligation_id": "SPELL-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Monster icon plus explicit coordinate pair below the chamber label.",
+      "check_ids": [
+        "D2-spell",
+        "D3-reveal_timer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-02",
+      "obligation_id": "SPELL-02.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Restart, recovery, terminal state and menu return clear the reveal.",
+      "check_ids": [
+        "D2-spell",
+        "D3-reveal_timer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-03",
+      "obligation_id": "SPELL-03.1.1",
+      "field": "Preconditions",
+      "obligation": "Scroll count is zero or a transition/terminal state is active.",
+      "check_ids": [
+        "D3-depleted",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-03",
+      "obligation_id": "SPELL-03.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Press or hold Q.",
+      "check_ids": [
+        "D3-depleted",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-03",
+      "obligation_id": "SPELL-03.3.1",
+      "field": "Required result",
+      "obligation": "Reject casting without changing resources or the monster; in active play show a brief No scrolls message when depleted.",
+      "check_ids": [
+        "D3-depleted",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-03",
+      "obligation_id": "SPELL-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No negative scrolls or free position reveal.",
+      "check_ids": [
+        "D3-depleted",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-03",
+      "obligation_id": "SPELL-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "Visible rejection without a cast effect.",
+      "check_ids": [
+        "D3-depleted",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPELL-03",
+      "obligation_id": "SPELL-03.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Rejected presses do not queue a cast for after recovery or Restart.",
+      "check_ids": [
+        "D3-depleted",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "KEY-01",
+      "obligation_id": "KEY-01.1.1",
+      "field": "Preconditions",
+      "obligation": "An uncollected coloured key is physically reachable.",
+      "check_ids": [
+        "D2-roles",
+        "D3-keys",
+        "D4-journey"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "KEY-01",
+      "obligation_id": "KEY-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Touch it.",
+      "check_ids": [
+        "D2-roles",
+        "D3-keys",
+        "D4-journey"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "KEY-01",
+      "obligation_id": "KEY-01.3.1",
+      "field": "Required result",
+      "obligation": "Acquire exactly its red, green or blue key and remove that pickup.",
+      "check_ids": [
+        "D2-roles",
+        "D3-keys",
+        "D4-journey"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "KEY-01",
+      "obligation_id": "KEY-01.3.2",
+      "field": "Required result",
+      "obligation": "Record at most one owned key per colour.",
+      "check_ids": [
+        "D2-roles",
+        "D3-keys",
+        "D4-journey"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "KEY-01",
+      "obligation_id": "KEY-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No other key colours granted, key consumption on door use or duplicate credit.",
+      "check_ids": [
+        "D2-roles",
+        "D3-keys",
+        "D4-journey"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "KEY-01",
+      "obligation_id": "KEY-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Coloured key glow, pickup sound and that HUD key becoming active.",
+      "check_ids": [
+        "D2-roles",
+        "D3-keys",
+        "D4-journey"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "KEY-01",
+      "obligation_id": "KEY-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Key ownership persists across rooms and nonfatal hits",
+      "check_ids": [
+        "D2-roles",
+        "D3-keys",
+        "D4-journey"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "KEY-01",
+      "obligation_id": "KEY-01.6.2",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Restart clears it.",
+      "check_ids": [
+        "D2-roles",
+        "D3-keys",
+        "D4-journey"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-01",
+      "obligation_id": "DOOR-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A closed gate is within 1.5 mage body widths and unobstructed.",
+      "check_ids": [
+        "D2-gates",
+        "D3-gate_range",
+        "D5-gate_prompt"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-01",
+      "obligation_id": "DOOR-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Press E.",
+      "check_ids": [
+        "D2-gates",
+        "D3-gate_range",
+        "D5-gate_prompt"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-01",
+      "obligation_id": "DOOR-01.3.1",
+      "field": "Required result",
+      "obligation": "Interact with the nearest eligible gate; if equally near, choose one consistently.",
+      "check_ids": [
+        "D2-gates",
+        "D3-gate_range",
+        "D5-gate_prompt"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-01",
+      "obligation_id": "DOOR-01.3.2",
+      "field": "Required result",
+      "obligation": "Show an E interaction prompt in range.",
+      "check_ids": [
+        "D2-gates",
+        "D3-gate_range",
+        "D5-gate_prompt"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-01",
+      "obligation_id": "DOOR-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No remote opening, hidden/offscreen target selection or multiple gates affected by one press.",
+      "check_ids": [
+        "D2-gates",
+        "D3-gate_range",
+        "D5-gate_prompt"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-01",
+      "obligation_id": "DOOR-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Prompt names the gate colour or Open action.",
+      "check_ids": [
+        "D2-gates",
+        "D3-gate_range",
+        "D5-gate_prompt"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-01",
+      "obligation_id": "DOOR-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Moving out of range removes the prompt",
+      "check_ids": [
+        "D2-gates",
+        "D3-gate_range",
+        "D5-gate_prompt"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-01",
+      "obligation_id": "DOOR-01.6.2",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "E elsewhere changes nothing.",
+      "check_ids": [
+        "D2-gates",
+        "D3-gate_range",
+        "D5-gate_prompt"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-02",
+      "obligation_id": "DOOR-02.1.1",
+      "field": "Preconditions",
+      "obligation": "The matching key is not owned.",
+      "check_ids": [
+        "D3-gate_locked",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-02",
+      "obligation_id": "DOOR-02.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Press E on a coloured gate.",
+      "check_ids": [
+        "D3-gate_locked",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-02",
+      "obligation_id": "DOOR-02.3.1",
+      "field": "Required result",
+      "obligation": "Keep the gate closed and block passage; state which key colour is missing.",
+      "check_ids": [
+        "D3-gate_locked",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-02",
+      "obligation_id": "DOOR-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No spending scrolls/coins, moving the monster or opening on repeated presses.",
+      "check_ids": [
+        "D3-gate_locked",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-02",
+      "obligation_id": "DOOR-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Coloured gate/rune and explicit locked feedback.",
+      "check_ids": [
+        "D3-gate_locked",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-02",
+      "obligation_id": "DOOR-02.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "A key of another colour never substitutes.",
+      "check_ids": [
+        "D3-gate_locked",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-03",
+      "obligation_id": "DOOR-03.1.1",
+      "field": "Preconditions",
+      "obligation": "The matching key is owned and the gate is closed.",
+      "check_ids": [
+        "D2-gates",
+        "D3-gate_time"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-03",
+      "obligation_id": "DOOR-03.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Press E.",
+      "check_ids": [
+        "D2-gates",
+        "D3-gate_time"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-03",
+      "obligation_id": "DOOR-03.3.1",
+      "field": "Required result",
+      "obligation": "Animate the gate from closed to open over 3 seconds, with a door sound; allow crossing after it is fully open.",
+      "check_ids": [
+        "D2-gates",
+        "D3-gate_time"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-03",
+      "obligation_id": "DOOR-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No instant invisible unlock, key consumption or transition while still blocked.",
+      "check_ids": [
+        "D2-gates",
+        "D3-gate_time"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-03",
+      "obligation_id": "DOOR-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "Visible gate motion and an open passage.",
+      "check_ids": [
+        "D2-gates",
+        "D3-gate_time"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-03",
+      "obligation_id": "DOOR-03.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Pressing E repeatedly during opening does not restart, reverse or duplicate it.",
+      "check_ids": [
+        "D2-gates",
+        "D3-gate_time"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-04",
+      "obligation_id": "DOOR-04.1.1",
+      "field": "Preconditions",
+      "obligation": "A gate has opened.",
+      "check_ids": [
+        "D3-gate_shared"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-04",
+      "obligation_id": "DOOR-04.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Leave, return or interact again.",
+      "check_ids": [
+        "D3-gate_shared"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-04",
+      "obligation_id": "DOOR-04.3.1",
+      "field": "Required result",
+      "obligation": "Keep both sides of that connection open for the remainder of the run.",
+      "check_ids": [
+        "D3-gate_shared"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-04",
+      "obligation_id": "DOOR-04.4.1",
+      "field": "Forbidden result",
+      "obligation": "No automatic re-lock, extra resource charge or needless opening animation.",
+      "check_ids": [
+        "D3-gate_shared"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-04",
+      "obligation_id": "DOOR-04.5.1",
+      "field": "Visible feedback",
+      "obligation": "A permanently clear passage until Restart.",
+      "check_ids": [
+        "D3-gate_shared"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOOR-04",
+      "obligation_id": "DOOR-04.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Restart restores the initially closed gate state.",
+      "check_ids": [
+        "D3-gate_shared"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-01",
+      "obligation_id": "PICKUP-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A dungeon is generated.",
+      "check_ids": [
+        "D2-resources"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-01",
+      "obligation_id": "PICKUP-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Explore its ordinary chambers.",
+      "check_ids": [
+        "D2-resources"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-01",
+      "obligation_id": "PICKUP-01.3.1",
+      "field": "Required result",
+      "obligation": "Distribute at least 60 single-coin pickups, 5 scroll pickups and 3 heart pickups on Easy; scale their counts by at least the room-count ratio on larger difficulties.",
+      "check_ids": [
+        "D2-resources"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-01",
+      "obligation_id": "PICKUP-01.3.2",
+      "field": "Required result",
+      "obligation": "Put them across at least 12 ordinary chambers.",
+      "check_ids": [
+        "D2-resources"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-01",
+      "obligation_id": "PICKUP-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No overlap with solid props, inaccessible placement or all resources stacked in one room.",
+      "check_ids": [
+        "D2-resources"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-01",
+      "obligation_id": "PICKUP-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Visible rotating/bobbing collectible silhouettes with distinct colours.",
+      "check_ids": [
+        "D2-resources"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-01",
+      "obligation_id": "PICKUP-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "All remain reachable after obtaining keys.",
+      "check_ids": [
+        "D2-resources"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-01",
+      "obligation_id": "PICKUP-01.6.2",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Counts are minimum content, not starting inventory.",
+      "check_ids": [
+        "D2-resources"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-02",
+      "obligation_id": "PICKUP-02.1.1",
+      "field": "Preconditions",
+      "obligation": "An unconsumed pickup overlaps the mage.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-pickup_once"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-02",
+      "obligation_id": "PICKUP-02.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Collect it, wait, then revisit.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-pickup_once"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-02",
+      "obligation_id": "PICKUP-02.3.1",
+      "field": "Required result",
+      "obligation": "Apply its effect once and remove its world presentation and collision for the run.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-pickup_once"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-02",
+      "obligation_id": "PICKUP-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No repeated credit from sustained overlap, duplicate components or room reload.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-pickup_once"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-02",
+      "obligation_id": "PICKUP-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Pickup sound/effect and matching HUD change.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-pickup_once"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-02",
+      "obligation_id": "PICKUP-02.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "A Restart recreates each pickup at its initial seeded position.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-pickup_once"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-03",
+      "obligation_id": "PICKUP-03.1.1",
+      "field": "Preconditions",
+      "obligation": "An unconsumed scroll pickup is touched.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-scroll_uncapped"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-03",
+      "obligation_id": "PICKUP-03.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Collect it.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-scroll_uncapped"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-03",
+      "obligation_id": "PICKUP-03.3.1",
+      "field": "Required result",
+      "obligation": "Increase scroll count by exactly 1, including when already at or above 5.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-scroll_uncapped"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-03",
+      "obligation_id": "PICKUP-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No implicit cap of 5 or life/coin increase.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-scroll_uncapped"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-03",
+      "obligation_id": "PICKUP-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "Scroll pickup cue and updated scroll count.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-scroll_uncapped"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-03",
+      "obligation_id": "PICKUP-03.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "A recovered scroll enables Q again immediately after settlement.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-scroll_uncapped"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-04",
+      "obligation_id": "PICKUP-04.1.1",
+      "field": "Preconditions",
+      "obligation": "An unconsumed heart pickup is touched.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-heart_uncapped"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-04",
+      "obligation_id": "PICKUP-04.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Collect it.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-heart_uncapped"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-04",
+      "obligation_id": "PICKUP-04.3.1",
+      "field": "Required result",
+      "obligation": "Increase lives by exactly 1, including when already at or above 5.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-heart_uncapped"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-04",
+      "obligation_id": "PICKUP-04.4.1",
+      "field": "Forbidden result",
+      "obligation": "No health bar subsystem or full-health rejection that makes hearts unusable.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-heart_uncapped"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-04",
+      "obligation_id": "PICKUP-04.5.1",
+      "field": "Visible feedback",
+      "obligation": "Heart pickup cue and updated life count.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-heart_uncapped"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PICKUP-04",
+      "obligation_id": "PICKUP-04.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Terminal states cannot be revived by a late pickup.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-heart_uncapped"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECON-01",
+      "obligation_id": "ECON-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A coin pickup is touched.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-coin_exchange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECON-01",
+      "obligation_id": "ECON-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Collect it.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-coin_exchange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECON-01",
+      "obligation_id": "ECON-01.3.1",
+      "field": "Required result",
+      "obligation": "Add exactly 1 to the coin remainder, then apply ECON-02 when the threshold is reached.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-coin_exchange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECON-01",
+      "obligation_id": "ECON-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No score-only coin that fails to affect the life economy.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-coin_exchange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECON-01",
+      "obligation_id": "ECON-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Coin sound and matching numeric counter.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-coin_exchange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECON-01",
+      "obligation_id": "ECON-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Already consumed coins never grant credit again.",
+      "check_ids": [
+        "D2-pickups",
+        "D3-coin_exchange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECON-02",
+      "obligation_id": "ECON-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Coin remainder reaches 50 or more.",
+      "check_ids": [
+        "D3-coin_exchange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECON-02",
+      "obligation_id": "ECON-02.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Finish the pickup transaction.",
+      "check_ids": [
+        "D3-coin_exchange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECON-02",
+      "obligation_id": "ECON-02.3.1",
+      "field": "Required result",
+      "obligation": "Exchange each complete group of 50 coins for 1 life and keep the remainder; 49 plus 1 becomes 0 coins and one extra life.",
+      "check_ids": [
+        "D3-coin_exchange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECON-02",
+      "obligation_id": "ECON-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No lost overflow, repeated life reward or fixed 5-life cap.",
+      "check_ids": [
+        "D3-coin_exchange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECON-02",
+      "obligation_id": "ECON-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Extra-life sound and simultaneous life/coin HUD updates.",
+      "check_ids": [
+        "D3-coin_exchange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECON-02",
+      "obligation_id": "ECON-02.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Normal settled remainder stays in 0..49.",
+      "check_ids": [
+        "D3-coin_exchange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-01",
+      "obligation_id": "EXIT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The mage is at the final portal without all three keys.",
+      "check_ids": [
+        "D2-roles",
+        "D3-exit_lock",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-01",
+      "obligation_id": "EXIT-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Touch or interact with it.",
+      "check_ids": [
+        "D2-roles",
+        "D3-exit_lock",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-01",
+      "obligation_id": "EXIT-01.3.1",
+      "field": "Required result",
+      "obligation": "Keep the run active and display the missing key colours.",
+      "check_ids": [
+        "D2-roles",
+        "D3-exit_lock",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-01",
+      "obligation_id": "EXIT-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No early victory, consumed owned keys or teleport to the ending.",
+      "check_ids": [
+        "D2-roles",
+        "D3-exit_lock",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-01",
+      "obligation_id": "EXIT-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The portal visibly communicates its locked state.",
+      "check_ids": [
+        "D2-roles",
+        "D3-exit_lock",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-01",
+      "obligation_id": "EXIT-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Any two keys are insufficient; repeated attempts remain harmless.",
+      "check_ids": [
+        "D2-roles",
+        "D3-exit_lock",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-02",
+      "obligation_id": "EXIT-02.1.1",
+      "field": "Preconditions",
+      "obligation": "All three keys are owned, lives are positive and the player is settled in the exit chamber.",
+      "check_ids": [
+        "D2-outcomes",
+        "D3-exit_trigger",
+        "D4-journey",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-02",
+      "obligation_id": "EXIT-02.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Walk into the final portal.",
+      "check_ids": [
+        "D2-outcomes",
+        "D3-exit_trigger",
+        "D4-journey",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-02",
+      "obligation_id": "EXIT-02.3.1",
+      "field": "Required result",
+      "obligation": "Enter victory exactly once.",
+      "check_ids": [
+        "D2-outcomes",
+        "D3-exit_trigger",
+        "D4-journey",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-02",
+      "obligation_id": "EXIT-02.3.2",
+      "field": "Required result",
+      "obligation": "Show You escaped, difficulty, seed, and visible Restart and Main Menu controls.",
+      "check_ids": [
+        "D2-outcomes",
+        "D3-exit_trigger",
+        "D4-journey",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-02",
+      "obligation_id": "EXIT-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No victory merely from acquiring the third key somewhere else.",
+      "check_ids": [
+        "D2-outcomes",
+        "D3-exit_trigger",
+        "D4-journey",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-02",
+      "obligation_id": "EXIT-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "A luminous portal completion effect, win sound and readable end overlay.",
+      "check_ids": [
+        "D2-outcomes",
+        "D3-exit_trigger",
+        "D4-journey",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-02",
+      "obligation_id": "EXIT-02.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "A lethal encounter on entry to the exit chamber resolves before exit activation.",
+      "check_ids": [
+        "D2-outcomes",
+        "D3-exit_trigger",
+        "D4-journey",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-01",
+      "obligation_id": "LIFE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "An encounter removes the final life.",
+      "check_ids": [
+        "D2-outcomes",
+        "D3-fatal",
+        "D4-failure",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-01",
+      "obligation_id": "LIFE-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Finish the damage event.",
+      "check_ids": [
+        "D2-outcomes",
+        "D3-fatal",
+        "D4-failure",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-01",
+      "obligation_id": "LIFE-01.3.1",
+      "field": "Required result",
+      "obligation": "Clamp lives to 0 and enter defeat once.",
+      "check_ids": [
+        "D2-outcomes",
+        "D3-fatal",
+        "D4-failure",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-01",
+      "obligation_id": "LIFE-01.3.2",
+      "field": "Required result",
+      "obligation": "Show You were bonked and visible Restart and Main Menu controls.",
+      "check_ids": [
+        "D2-outcomes",
+        "D3-fatal",
+        "D4-failure",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-01",
+      "obligation_id": "LIFE-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No continued exploration, negative life count or recovery to start.",
+      "check_ids": [
+        "D2-outcomes",
+        "D3-fatal",
+        "D4-failure",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-01",
+      "obligation_id": "LIFE-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Distinct defeat presentation and lose sound.",
+      "check_ids": [
+        "D2-outcomes",
+        "D3-fatal",
+        "D4-failure",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-01",
+      "obligation_id": "LIFE-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "A simultaneous late pickup cannot cancel defeat.",
+      "check_ids": [
+        "D2-outcomes",
+        "D3-fatal",
+        "D4-failure",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-02",
+      "obligation_id": "LIFE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Victory or defeat is active.",
+      "check_ids": [
+        "D3-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-02",
+      "obligation_id": "LIFE-02.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Wait or press movement/Q/E.",
+      "check_ids": [
+        "D3-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-02",
+      "obligation_id": "LIFE-02.3.1",
+      "field": "Required result",
+      "obligation": "Keep maze, monster and resources fixed until Restart or Main Menu.",
+      "check_ids": [
+        "D3-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-02",
+      "obligation_id": "LIFE-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No post-result casts, pickups, motion, monster turns or alternate outcome.",
+      "check_ids": [
+        "D3-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-02",
+      "obligation_id": "LIFE-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "The terminal overlay remains stable and usable.",
+      "check_ids": [
+        "D3-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-02",
+      "obligation_id": "LIFE-02.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Repeated terminal input does not dismiss or duplicate the result.",
+      "check_ids": [
+        "D3-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-01",
+      "obligation_id": "RESET-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Exploring, transitioning, recovering or on a result screen.",
+      "check_ids": [
+        "D4-restart"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-01",
+      "obligation_id": "RESET-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Press R or click Restart where shown.",
+      "check_ids": [
+        "D4-restart"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-01",
+      "obligation_id": "RESET-01.3.1",
+      "field": "Required result",
+      "obligation": "Begin a new round with the same difficulty and seed, starting state ENTRY-02, restored pickups/closed gates and the seeded initial monster placement.",
+      "check_ids": [
+        "D4-restart"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-01",
+      "obligation_id": "RESET-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No retained keys, inventory, room progress, danger or old ending.",
+      "check_ids": [
+        "D4-restart"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-01",
+      "obligation_id": "RESET-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "A short fresh-start transition and the initial HUD.",
+      "check_ids": [
+        "D4-restart"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-01",
+      "obligation_id": "RESET-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "A repeated restart request during the reset produces one settled fresh round.",
+      "check_ids": [
+        "D4-restart"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-02",
+      "obligation_id": "RESET-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A cast, gate animation, transfer, hit or end effect is in flight.",
+      "check_ids": [
+        "D4-cancel",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-02",
+      "obligation_id": "RESET-02.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Restart or return to Main Menu.",
+      "check_ids": [
+        "D4-cancel",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-02",
+      "obligation_id": "RESET-02.3.1",
+      "field": "Required result",
+      "obligation": "Cancel all state-changing activity from the old round before the new state is exposed.",
+      "check_ids": [
+        "D4-cancel",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-02",
+      "obligation_id": "RESET-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No delayed old hit, teleport, key credit, door opening, reveal or sound loop leaking into the next run.",
+      "check_ids": [
+        "D4-cancel",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-02",
+      "obligation_id": "RESET-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "The new state remains stable after the old effect would have finished.",
+      "check_ids": [
+        "D4-cancel",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-02",
+      "obligation_id": "RESET-02.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Entity and round identities in observations change consistently with the new run.",
+      "check_ids": [
+        "D4-cancel",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-03",
+      "obligation_id": "RESET-03.1.1",
+      "field": "Preconditions",
+      "obligation": "A live round is exploring, transitioning or recovering, or is already paused.",
+      "check_ids": [
+        "D4-pause",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-03",
+      "obligation_id": "RESET-03.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Press Escape to expose pause controls, then Resume, Restart or Main Menu.",
+      "check_ids": [
+        "D4-pause",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-03",
+      "obligation_id": "RESET-03.3.1",
+      "field": "Required result",
+      "obligation": "Pause freezes gameplay and active effect/reveal timers.",
+      "check_ids": [
+        "D4-pause",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-03",
+      "obligation_id": "RESET-03.3.2",
+      "field": "Required result",
+      "obligation": "Resume restores the same state, including an interrupted transition or recovery.",
+      "check_ids": [
+        "D4-pause",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-03",
+      "obligation_id": "RESET-03.3.3",
+      "field": "Required result",
+      "obligation": "Main Menu discards the run and shows difficulty/seed selection again.",
+      "check_ids": [
+        "D4-pause",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-03",
+      "obligation_id": "RESET-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No movement/casting behind the pause UI or continued monster progress.",
+      "check_ids": [
+        "D4-pause",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-03",
+      "obligation_id": "RESET-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "Readable Resume, Restart and Main Menu controls.",
+      "check_ids": [
+        "D4-pause",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-03",
+      "obligation_id": "RESET-03.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Escape closes the pause UI; opening/closing it does not generate a turn.",
+      "check_ids": [
+        "D4-pause",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-03",
+      "obligation_id": "RESET-03.6.2",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Result screens keep their own Restart/Main Menu controls",
+      "check_ids": [
+        "D4-pause",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-03",
+      "obligation_id": "RESET-03.6.3",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Escape there changes nothing.",
+      "check_ids": [
+        "D4-pause",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-04",
+      "obligation_id": "RESET-04.1.1",
+      "field": "Preconditions",
+      "obligation": "The application has been closed.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-04",
+      "obligation_id": "RESET-04.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Launch it again.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-04",
+      "obligation_id": "RESET-04.3.1",
+      "field": "Required result",
+      "obligation": "Show the main menu with no retained run progress.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-04",
+      "obligation_id": "RESET-04.3.2",
+      "field": "Required result",
+      "obligation": "An explicitly supplied launch seed is accepted again.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-04",
+      "obligation_id": "RESET-04.4.1",
+      "field": "Forbidden result",
+      "obligation": "No resumed maze, inventory, end state or stale observation from a former process.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-04",
+      "obligation_id": "RESET-04.5.1",
+      "field": "Visible feedback",
+      "obligation": "Normal menu and a fresh process/session.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESET-04",
+      "obligation_id": "RESET-04.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Persistent save-game progression is outside scope.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A run is active.",
+      "check_ids": [
+        "D5-hud",
+        "D5-resolution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Move, collect, cast or take damage.",
+      "check_ids": [
+        "D5-hud",
+        "D5-resolution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.3.1",
+      "field": "Required result",
+      "obligation": "Show lives at upper left, chamber coordinates at top centre, scrolls and coins at upper right, and three red/green/blue key indicators at lower right.",
+      "check_ids": [
+        "D5-hud",
+        "D5-resolution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.3.2",
+      "field": "Required result",
+      "obligation": "Update affected values by the next rendered frame after settlement.",
+      "check_ids": [
+        "D5-hud",
+        "D5-resolution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No mismatch between displayed values and actual game state.",
+      "check_ids": [
+        "D5-hud",
+        "D5-resolution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Supplied icons with legible light text and visibly different inactive/owned keys.",
+      "check_ids": [
+        "D5-hud",
+        "D5-resolution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Values remain readable at both 1280x720 and 1920x1080.",
+      "check_ids": [
+        "D5-hud",
+        "D5-resolution"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-02",
+      "obligation_id": "UI-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Danger or an active spell reveal exists.",
+      "check_ids": [
+        "D5-danger"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-02",
+      "obligation_id": "UI-02.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Read the HUD.",
+      "check_ids": [
+        "D5-danger"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-02",
+      "obligation_id": "UI-02.3.1",
+      "field": "Required result",
+      "obligation": "Keep nearby danger distinct from exact position reveal; show exact coordinates only while SPELL-02 is active.",
+      "check_ids": [
+        "D5-danger"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-02",
+      "obligation_id": "UI-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No ambiguous stale coordinate text or permanent map exposing all pickups/monster.",
+      "check_ids": [
+        "D5-danger"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-02",
+      "obligation_id": "UI-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "A monster icon with clear safe/nearby/revealed meaning.",
+      "check_ids": [
+        "D5-danger"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-02",
+      "obligation_id": "UI-02.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Clearing a reveal does not clear an independently valid nearby warning.",
+      "check_ids": [
+        "D5-danger"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-03",
+      "obligation_id": "UI-03.1.1",
+      "field": "Preconditions",
+      "obligation": "Any game/menu screen is visible.",
+      "check_ids": [
+        "D2-menu",
+        "D5-controls",
+        "D5-gate_prompt",
+        "D5-results",
+        "D5-resolution",
+        "D5-focus"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-03",
+      "obligation_id": "UI-03.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Read controls and use buttons.",
+      "check_ids": [
+        "D2-menu",
+        "D5-controls",
+        "D5-gate_prompt",
+        "D5-results",
+        "D5-resolution",
+        "D5-focus"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-03",
+      "obligation_id": "UI-03.3.1",
+      "field": "Required result",
+      "obligation": "Present all player-facing text in English.",
+      "check_ids": [
+        "D2-menu",
+        "D5-controls",
+        "D5-gate_prompt",
+        "D5-results",
+        "D5-resolution",
+        "D5-focus"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-03",
+      "obligation_id": "UI-03.3.2",
+      "field": "Required result",
+      "obligation": "Explain WASD, Q, E, R and Escape from the menu or pause UI; keep prompts and controls readable, clickable and within the 16:9 client.",
+      "check_ids": [
+        "D2-menu",
+        "D5-controls",
+        "D5-gate_prompt",
+        "D5-results",
+        "D5-resolution",
+        "D5-focus"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-03",
+      "obligation_id": "UI-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No clipped labels, untranslated errors or essential controls hidden behind decorative UI.",
+      "check_ids": [
+        "D2-menu",
+        "D5-controls",
+        "D5-gate_prompt",
+        "D5-results",
+        "D5-resolution",
+        "D5-focus"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-03",
+      "obligation_id": "UI-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "Hover/pressed/disabled distinctions and concise rejection messages.",
+      "check_ids": [
+        "D2-menu",
+        "D5-controls",
+        "D5-gate_prompt",
+        "D5-results",
+        "D5-resolution",
+        "D5-focus"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-03",
+      "obligation_id": "UI-03.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Keyboard focus and mouse click focus work after returning from gameplay.",
+      "check_ids": [
+        "D2-menu",
+        "D5-controls",
+        "D5-gate_prompt",
+        "D5-results",
+        "D5-resolution",
+        "D5-focus"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Exploration is visible.",
+      "check_ids": [
+        "D2-mage",
+        "D2-architecture",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "View a room.",
+      "check_ids": [
+        "D2-mage",
+        "D2-architecture",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.3.1",
+      "field": "Required result",
+      "obligation": "Render a three-dimensional low-poly stone dungeon: dark olive/grey walls and irregular tiled floors, thick pillars, broken masonry, skulls/coffins and scattered props.",
+      "check_ids": [
+        "D2-mage",
+        "D2-architecture",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.3.2",
+      "field": "Required result",
+      "obligation": "The central mage has a pale skull, dark blue robe, open book and cyan spectral flame.",
+      "check_ids": [
+        "D2-mage",
+        "D2-architecture",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No primitive-only arena, flat board or text-only scene replacing the supplied art.",
+      "check_ids": [
+        "D2-mage",
+        "D2-architecture",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Strong character silhouette within enclosed architectural depth.",
+      "check_ids": [
+        "D2-mage",
+        "D2-architecture",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Room variety remains visually coherent across all difficulties.",
+      "check_ids": [
+        "D2-mage",
+        "D2-architecture",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Exploration is visible.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Walk through rooms.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.3.1",
+      "field": "Required result",
+      "obligation": "Use localized cyan/white magical flames and warm pale light pools against dark corners, with restrained bloom and a dark outer vignette.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.3.2",
+      "field": "Required result",
+      "obligation": "Keep paths, gates, collectibles and the mage visible.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No uniform bright default lighting, unreadable black rooms or bloom that erases all silhouettes.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Animated flames, contrasting coloured keys/gates and readable floor depth.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Maintain legibility around emissive effects and in darker room variants.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.1.1",
+      "field": "Preconditions",
+      "obligation": "Gameplay is rendered.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Move and cast.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.3.1",
+      "field": "Required result",
+      "obligation": "Apply a deliberate retro pixelated/dithered 3D treatment to the world while preserving clear UI text and icons.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.3.2",
+      "field": "Required result",
+      "obligation": "Visible low-resolution edges and textured shading remain consistent in motion.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No heavy blur replacing pixelation or pixelated HUD that becomes unreadable.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "A coherent coarse world image, dark vignette and sharp HUD.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "At both output resolutions the treatment keeps equivalent visual scale.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.1.1",
+      "field": "Preconditions",
+      "obligation": "The mage spawns, idles, walks, casts, takes a hit or escapes.",
+      "check_ids": [
+        "D2-animations",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Perform the corresponding action.",
+      "check_ids": [
+        "D2-animations",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.3.1",
+      "field": "Required result",
+      "obligation": "Play distinct supplied skeletal poses/clips for spawn, idle, locomotion, casting, damage/death and a final magical flourish on escape.",
+      "check_ids": [
+        "D2-animations",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.3.2",
+      "field": "Required result",
+      "obligation": "Blend locomotion coherently and synchronize casts/hits to their visible feedback.",
+      "check_ids": [
+        "D2-animations",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.4.1",
+      "field": "Forbidden result",
+      "obligation": "No static T-pose, permanent sliding idle, interrupted loop stuck forever or attack-combat substitution.",
+      "check_ids": [
+        "D2-animations",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.5.1",
+      "field": "Visible feedback",
+      "obligation": "Book/robe movement and cyan head flame remain attached to the mage.",
+      "check_ids": [
+        "D2-animations",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Return to idle after nonterminal actions; death/escape may hold a final pose.",
+      "check_ids": [
+        "D2-animations",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.6.2",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Restart cancels old animation/event effects.",
+      "check_ids": [
+        "D2-animations",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-05",
+      "obligation_id": "VISUAL-05.1.1",
+      "field": "Preconditions",
+      "obligation": "A portal, spell, pickup or encounter occurs.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-05",
+      "obligation_id": "VISUAL-05.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Trigger it.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-05",
+      "obligation_id": "VISUAL-05.3.1",
+      "field": "Required result",
+      "obligation": "Show separate spatial effects: portal glow/transition, a ground ring and rising spell sparks, pickup disappearance/glow, and a red/impact hit reaction with a visible monster manifestation.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-05",
+      "obligation_id": "VISUAL-05.4.1",
+      "field": "Forbidden result",
+      "obligation": "No identical generic flash for every event or invisible effects represented only by counters.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-05",
+      "obligation_id": "VISUAL-05.5.1",
+      "field": "Visible feedback",
+      "obligation": "Effects identify the affected character/object without obscuring the whole scene.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-05",
+      "obligation_id": "VISUAL-05.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Temporary effects end; surviving room lights and portal ambience continue.",
+      "check_ids": [
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "obligation_id": "VISUAL-06.1.1",
+      "field": "Preconditions",
+      "obligation": "Main menu or result screen is displayed.",
+      "check_ids": [
+        "D2-interface_assets",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "obligation_id": "VISUAL-06.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Hover and activate a button.",
+      "check_ids": [
+        "D2-interface_assets",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "obligation_id": "VISUAL-06.3.1",
+      "field": "Required result",
+      "obligation": "Use a dark background, large light gothic title, vertically organized stone-grey beveled buttons and clear hover/pressed states.",
+      "check_ids": [
+        "D2-interface_assets",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "obligation_id": "VISUAL-06.3.2",
+      "field": "Required result",
+      "obligation": "Display BoneMaze as the title.",
+      "check_ids": [
+        "D2-interface_assets",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "obligation_id": "VISUAL-06.4.1",
+      "field": "Forbidden result",
+      "obligation": "No engine debug screen or default starter health screen left as the final interface.",
+      "check_ids": [
+        "D2-interface_assets",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "obligation_id": "VISUAL-06.5.1",
+      "field": "Visible feedback",
+      "obligation": "Polished menu/result composition consistent with dungeon art.",
+      "check_ids": [
+        "D2-interface_assets",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "obligation_id": "VISUAL-06.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Result controls remain distinct from decorative title elements.",
+      "check_ids": [
+        "D2-interface_assets",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-01",
+      "obligation_id": "AUDIO-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Exploration begins or resumes.",
+      "check_ids": [
+        "D2-music"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-01",
+      "obligation_id": "AUDIO-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Play, pause, restart or leave the run.",
+      "check_ids": [
+        "D2-music"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-01",
+      "obligation_id": "AUDIO-01.3.1",
+      "field": "Required result",
+      "obligation": "Play the supplied background music as a continuous loop at a level below important cues.",
+      "check_ids": [
+        "D2-music"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-01",
+      "obligation_id": "AUDIO-01.3.2",
+      "field": "Required result",
+      "obligation": "Pause/resume coherently and keep a single music instance across Restart.",
+      "check_ids": [
+        "D2-music"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-01",
+      "obligation_id": "AUDIO-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No stacking music tracks or silent gameplay when audio is enabled.",
+      "check_ids": [
+        "D2-music"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-01",
+      "obligation_id": "AUDIO-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Audible musical atmosphere.",
+      "check_ids": [
+        "D2-music"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-01",
+      "obligation_id": "AUDIO-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Main Menu and application exit stop gameplay music cleanly.",
+      "check_ids": [
+        "D2-music"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-02",
+      "obligation_id": "AUDIO-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Cast, coin, key, heart, scroll, gate, passage, nearby warning, hit, victory or defeat occurs.",
+      "check_ids": [
+        "D2-sounds"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-02",
+      "obligation_id": "AUDIO-02.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Trigger each event normally.",
+      "check_ids": [
+        "D2-sounds"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-02",
+      "obligation_id": "AUDIO-02.3.1",
+      "field": "Required result",
+      "obligation": "Use distinct supplied event sounds at the corresponding event; a rejected action does not play its success sound.",
+      "check_ids": [
+        "D2-sounds"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-02",
+      "obligation_id": "AUDIO-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No persistent repeated one-shot cue or unrelated cue assignment.",
+      "check_ids": [
+        "D2-sounds"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-02",
+      "obligation_id": "AUDIO-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "The action is audibly identifiable.",
+      "check_ids": [
+        "D2-sounds"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-02",
+      "obligation_id": "AUDIO-02.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Repeated overlap and in-flight cancellation do not multiply one-shot rewards/sounds.",
+      "check_ids": [
+        "D2-sounds"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The character is assembled.",
+      "check_ids": [
+        "D1-assets",
+        "D2-mage",
+        "D2-animations",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Render its required states.",
+      "check_ids": [
+        "D1-assets",
+        "D2-mage",
+        "D2-animations",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.3.1",
+      "field": "Required result",
+      "obligation": "Use the supplied mage mesh, its material/texture dependencies and the required idle, run, spawn, default-attack, blast, hit and die animation clips identified in Section 11.",
+      "check_ids": [
+        "D1-assets",
+        "D2-mage",
+        "D2-animations",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.3.2",
+      "field": "Required result",
+      "obligation": "Use default-attack as the casting gesture and blast for the escape flourish; no combat system is implied.",
+      "check_ids": [
+        "D1-assets",
+        "D2-mage",
+        "D2-animations",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No substituted mannequin, generated character, flat sprite or newly drawn stand-in.",
+      "check_ids": [
+        "D1-assets",
+        "D2-mage",
+        "D2-animations",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The specified mage and animations are recognizable in play.",
+      "check_ids": [
+        "D1-assets",
+        "D2-mage",
+        "D2-animations",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Retargeting, blending and presentation adjustments are allowed; gameplay event bindings are implemented independently.",
+      "check_ids": [
+        "D1-assets",
+        "D2-mage",
+        "D2-animations",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Rooms and gates are assembled.",
+      "check_ids": [
+        "D1-assets",
+        "D2-gates",
+        "D2-architecture",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Explore each role and ordinary-room variant.",
+      "check_ids": [
+        "D1-assets",
+        "D2-gates",
+        "D2-architecture",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.3.1",
+      "field": "Required result",
+      "obligation": "Use the mandatory stone floor, wall, doorway, door leaf, pillar, coffin, skull and torch models in Section 11, and additional supplied environment pieces for MAZE-05.",
+      "check_ids": [
+        "D1-assets",
+        "D2-gates",
+        "D2-architecture",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No primitive geometry substituted for the principal dungeon architecture.",
+      "check_ids": [
+        "D1-assets",
+        "D2-gates",
+        "D2-architecture",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Recognizable low-poly stone surfaces and prop silhouettes.",
+      "check_ids": [
+        "D1-assets",
+        "D2-gates",
+        "D2-architecture",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Placement, collision, material instances and lighting may be changed while retaining mesh identity.",
+      "check_ids": [
+        "D1-assets",
+        "D2-gates",
+        "D2-architecture",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.1.1",
+      "field": "Preconditions",
+      "obligation": "Pickups and coloured gates are rendered.",
+      "check_ids": [
+        "D1-assets",
+        "D2-pickups",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Approach/collect them.",
+      "check_ids": [
+        "D1-assets",
+        "D2-pickups",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.3.1",
+      "field": "Required result",
+      "obligation": "Use the supplied key, coin and heart meshes, supplied pickup colour materials, and scroll icon on a visible pickup presentation for scrolls.",
+      "check_ids": [
+        "D1-assets",
+        "D2-pickups",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No text-only pickup markers or mismatched key colours.",
+      "check_ids": [
+        "D1-assets",
+        "D2-pickups",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "Gold coin, red heart, coloured keys and distinct scroll silhouette.",
+      "check_ids": [
+        "D1-assets",
+        "D2-pickups",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "A scroll may use a textured billboard; mandatory 3D key/coin/heart silhouettes remain.",
+      "check_ids": [
+        "D1-assets",
+        "D2-pickups",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.1.1",
+      "field": "Preconditions",
+      "obligation": "HUD and buttons are assembled.",
+      "check_ids": [
+        "D1-assets",
+        "D2-interface_assets",
+        "D5-hud",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Play and interact.",
+      "check_ids": [
+        "D1-assets",
+        "D2-interface_assets",
+        "D5-hud",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.3.1",
+      "field": "Required result",
+      "obligation": "Use the supplied heart, scroll, coin, monster, coloured key active/inactive icons and three button-state textures mapped in Section 11.",
+      "check_ids": [
+        "D1-assets",
+        "D2-interface_assets",
+        "D5-hud",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.4.1",
+      "field": "Forbidden result",
+      "obligation": "No generic engine icons or emoji replacing the required icon set.",
+      "check_ids": [
+        "D1-assets",
+        "D2-interface_assets",
+        "D5-hud",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.5.1",
+      "field": "Visible feedback",
+      "obligation": "Consistent illustrated HUD and stone-grey button states.",
+      "check_ids": [
+        "D1-assets",
+        "D2-interface_assets",
+        "D5-hud",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Scaling/cropping is permitted without changing icon meaning.",
+      "check_ids": [
+        "D1-assets",
+        "D2-interface_assets",
+        "D5-hud",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.1.1",
+      "field": "Preconditions",
+      "obligation": "Effects and monster presentation are assembled.",
+      "check_ids": [
+        "D1-assets",
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Cast, transition or encounter the monster.",
+      "check_ids": [
+        "D1-assets",
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.3.1",
+      "field": "Required result",
+      "obligation": "Use the supplied ghost smoke, magic circle, heal aura, lightning particle material collections and retro postprocess material for their mapped visible roles.",
+      "check_ids": [
+        "D1-assets",
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.3.2",
+      "field": "Required result",
+      "obligation": "Present the monster as a shadowy magical presence using the supplied Magic pickup material and spectral effects.",
+      "check_ids": [
+        "D1-assets",
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.4.1",
+      "field": "Forbidden result",
+      "obligation": "No preassembled gameplay Blueprint imported as an implementation.",
+      "check_ids": [
+        "D1-assets",
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.5.1",
+      "field": "Visible feedback",
+      "obligation": "Cyan spectral flame, magical geometry and a brief spectral threat during an encounter.",
+      "check_ids": [
+        "D1-assets",
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Emitters and material parameters may be edited; the supplied raw textures/meshes remain the visual basis.",
+      "check_ids": [
+        "D1-assets",
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.6.2",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "A simple volume may carry the spectral monster material.",
+      "check_ids": [
+        "D1-assets",
+        "D2-effects",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-06",
+      "obligation_id": "ASSET-06.1.1",
+      "field": "Preconditions",
+      "obligation": "Audio is integrated.",
+      "check_ids": [
+        "D1-assets",
+        "D2-music",
+        "D2-sounds",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-06",
+      "obligation_id": "ASSET-06.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Play the game.",
+      "check_ids": [
+        "D1-assets",
+        "D2-music",
+        "D2-sounds",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-06",
+      "obligation_id": "ASSET-06.3.1",
+      "field": "Required result",
+      "obligation": "Use the supplied music and event SoundWave assets with the mapping in Section 11.",
+      "check_ids": [
+        "D1-assets",
+        "D2-music",
+        "D2-sounds",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-06",
+      "obligation_id": "ASSET-06.4.1",
+      "field": "Forbidden result",
+      "obligation": "No silent placeholders or replacement tone generator for these cues.",
+      "check_ids": [
+        "D1-assets",
+        "D2-music",
+        "D2-sounds",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-06",
+      "obligation_id": "ASSET-06.5.1",
+      "field": "Visible feedback",
+      "obligation": "AUDIO-01 and AUDIO-02 are audible.",
+      "check_ids": [
+        "D1-assets",
+        "D2-music",
+        "D2-sounds",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-06",
+      "obligation_id": "ASSET-06.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Mix, attenuation, timing and looping configuration are free.",
+      "check_ids": [
+        "D1-assets",
+        "D2-music",
+        "D2-sounds",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-07",
+      "obligation_id": "ASSET-07.1.1",
+      "field": "Preconditions",
+      "obligation": "Typography is integrated.",
+      "check_ids": [
+        "D1-assets",
+        "D2-interface_assets",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-07",
+      "obligation_id": "ASSET-07.2.1",
+      "field": "Player action / trigger",
+      "obligation": "View the menu and HUD.",
+      "check_ids": [
+        "D1-assets",
+        "D2-interface_assets",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-07",
+      "obligation_id": "ASSET-07.3.1",
+      "field": "Required result",
+      "obligation": "Use supplied UnifrakturCook title and Grenze Gotisch main fonts in their mapped roles.",
+      "check_ids": [
+        "D1-assets",
+        "D2-interface_assets",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-07",
+      "obligation_id": "ASSET-07.4.1",
+      "field": "Forbidden result",
+      "obligation": "No unreadable decorative body text or replacement system-font-only presentation.",
+      "check_ids": [
+        "D1-assets",
+        "D2-interface_assets",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-07",
+      "obligation_id": "ASSET-07.5.1",
+      "field": "Visible feedback",
+      "obligation": "Gothic title and readable matching interface typography.",
+      "check_ids": [
+        "D1-assets",
+        "D2-interface_assets",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-07",
+      "obligation_id": "ASSET-07.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "An additional font may serve accessibility/small diagnostic text; required title/HUD roles remain.",
+      "check_ids": [
+        "D1-assets",
+        "D2-interface_assets",
+        "D6-chamber",
+        "D6-camera",
+        "D6-reveal",
+        "D6-transfer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBSERVATION-01",
+      "obligation_id": "OBSERVATION-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The application is running.",
+      "check_ids": [
+        "D1-observation",
+        "D3-observation_truth"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBSERVATION-01",
+      "obligation_id": "OBSERVATION-01.2.1",
+      "field": "Player action / trigger",
+      "obligation": "Read the published observation without changing gameplay.",
+      "check_ids": [
+        "D1-observation",
+        "D3-observation_truth"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBSERVATION-01",
+      "obligation_id": "OBSERVATION-01.3.1",
+      "field": "Required result",
+      "obligation": "Publish truthful read-only state under the supplied observation contract, covering phase, round identity, live resources, maze connections, monster position, room/gate/pickup states and visible interaction targets.",
+      "check_ids": [
+        "D1-observation",
+        "D3-observation_truth"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBSERVATION-01",
+      "obligation_id": "OBSERVATION-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No input commands, setters, fixture loaders, outcome shortcuts or fabricated success fields in that surface.",
+      "check_ids": [
+        "D1-observation",
+        "D3-observation_truth"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBSERVATION-01",
+      "obligation_id": "OBSERVATION-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Player UI continues to reflect the same live state; hidden observation values do not appear in the gameplay HUD.",
+      "check_ids": [
+        "D1-observation",
+        "D3-observation_truth"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBSERVATION-01",
+      "obligation_id": "OBSERVATION-01.6.1",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "Implementations may choose their own classes, scene structure and algorithms.",
+      "check_ids": [
+        "D1-observation",
+        "D3-observation_truth"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBSERVATION-01",
+      "obligation_id": "OBSERVATION-01.6.2",
+      "field": "Failure, repetition and lifecycle boundaries",
+      "obligation": "The unfinished starter reports not_ready only.",
+      "check_ids": [
+        "D1-observation",
+        "D3-observation_truth"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-01",
+      "obligation_id": "QUALITY-01.1.1",
+      "field": "Requirement",
+      "obligation": "The project starts, runs, exits and starts again using the public instructions.",
+      "check_ids": [
+        "D1-entry",
+        "D1-build",
+        "D1-startup",
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-02",
+      "obligation_id": "QUALITY-02.1.1",
+      "field": "Requirement",
+      "obligation": "The main flow uses normal player input, without answer buttons, cheats or direct outcome shortcuts.",
+      "check_ids": [
+        "D4-entry",
+        "D4-journey"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-03",
+      "obligation_id": "QUALITY-03.1.1",
+      "field": "Requirement",
+      "obligation": "Essential entries, text and controls are visible, discoverable, understandable and operable.",
+      "check_ids": [
+        "D5-controls",
+        "D5-focus"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-04",
+      "obligation_id": "QUALITY-04.1.1",
+      "field": "Requirement",
+      "obligation": "Player input produces perceptible feedback consistent with the actual game state.",
+      "check_ids": [
+        "D5-hud",
+        "D5-rejection"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-05",
+      "obligation_id": "QUALITY-05.1.1",
+      "field": "Requirement",
+      "obligation": "No severe error blocks the main flow.",
+      "check_ids": [
+        "D1-build",
+        "D1-startup",
+        "D4-journey"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-06",
+      "obligation_id": "QUALITY-06.1.1",
+      "field": "Requirement",
+      "obligation": "Repeated runs from identical initial conditions are substantially stable.",
+      "check_ids": [
+        "D3-seed"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    }
+  ],
+  "qualification_tests": [
+    "tests/test_distribution.py"
+  ],
+  "qualification_test_scope": "Distribution, evidence conversion and attribution invariants only; not gameplay semantic qualification."
+}

@@ -1,0 +1,15 @@
+key_trigger { input: KEY_A action: "left" }
+key_trigger { input: KEY_LEFT action: "left" }
+key_trigger { input: KEY_D action: "right" }
+key_trigger { input: KEY_RIGHT action: "right" }
+key_trigger { input: KEY_W action: "up" }
+key_trigger { input: KEY_UP action: "up" }
+key_trigger { input: KEY_S action: "down" }
+key_trigger { input: KEY_DOWN action: "down" }
+key_trigger { input: KEY_ENTER action: "confirm" }
+key_trigger { input: KEY_ESC action: "pause" }
+key_trigger { input: KEY_R action: "restart" }
+key_trigger { input: KEY_SPACE action: "action" }
+key_trigger { input: KEY_E action: "interact" }
+mouse_trigger { input: MOUSE_BUTTON_1 action: "click" }
+key_trigger { input: KEY_Q action: "starter_quit" }

@@ -1,0 +1,1050 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "dashboard-snapshot.schema.json",
+  "title": "OpenRPG public dashboard snapshot",
+  "description": "Shape of the existing game-state-dashboard/v2-godot task contract. Live PID, visibility, identity and HP relationships are checked by the public self-check.",
+  "type": "object",
+  "required": [
+    "revision",
+    "process_id",
+    "phase",
+    "slots",
+    "entities",
+    "targets"
+  ],
+  "properties": {
+    "revision": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "process_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "phase": {
+      "enum": [
+        "not_ready",
+        "menu",
+        "playing",
+        "paused",
+        "lost",
+        "won"
+      ]
+    },
+    "slots": {
+      "type": "object",
+      "required": [
+        "region",
+        "opening_complete",
+        "dialogue_open",
+        "opening_line",
+        "coins",
+        "key",
+        "bombs",
+        "wand_red",
+        "pedestal_red",
+        "wand_blue",
+        "pedestal_blue",
+        "wand_green",
+        "pedestal_green",
+        "quest_1_complete",
+        "quest_1_claimed",
+        "quest_2_complete",
+        "quest_2_claimed",
+        "quest_3_complete",
+        "quest_3_claimed",
+        "quest_4_complete",
+        "quest_4_claimed",
+        "trade_complete",
+        "house_open",
+        "chest_open",
+        "grove_open",
+        "bugcat_won",
+        "wolf_won",
+        "ending_complete",
+        "encounter",
+        "battle_stage",
+        "acting_party",
+        "selected_action",
+        "hp_baloo",
+        "max_hp_baloo",
+        "hp_nutsy",
+        "max_hp_nutsy"
+      ],
+      "properties": {
+        "region": {
+          "type": "number",
+          "description": "0 forest, 1 house, 2 grove; during battle/outcome use 2",
+          "enum": [
+            0,
+            1,
+            2
+          ]
+        },
+        "opening_complete": {
+          "type": "number",
+          "description": "Opening dialogue has finished (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "dialogue_open": {
+          "type": "number",
+          "description": "A dialogue/choice is open (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "opening_line": {
+          "type": "number",
+          "description": "1..5 while opening is visible; 0 otherwise",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "coins": {
+          "type": "number",
+          "description": "Current inventory count",
+          "minimum": 0
+        },
+        "key": {
+          "type": "number",
+          "description": "Current inventory count",
+          "minimum": 0
+        },
+        "bombs": {
+          "type": "number",
+          "description": "Current inventory count",
+          "minimum": 0
+        },
+        "wand_red": {
+          "type": "number",
+          "description": "Held unplaced red wand (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "pedestal_red": {
+          "type": "number",
+          "description": "Filled red pedestal (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "wand_blue": {
+          "type": "number",
+          "description": "Held unplaced blue wand (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "pedestal_blue": {
+          "type": "number",
+          "description": "Filled blue pedestal (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "wand_green": {
+          "type": "number",
+          "description": "Held unplaced green wand (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "pedestal_green": {
+          "type": "number",
+          "description": "Filled green pedestal (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "quest_1_complete": {
+          "type": "number",
+          "description": "Objective for NPC 1 complete (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "quest_1_claimed": {
+          "type": "number",
+          "description": "NPC 1 Coin reward claimed (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "quest_2_complete": {
+          "type": "number",
+          "description": "Objective for NPC 2 complete (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "quest_2_claimed": {
+          "type": "number",
+          "description": "NPC 2 Coin reward claimed (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "quest_3_complete": {
+          "type": "number",
+          "description": "Objective for NPC 3 complete (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "quest_3_claimed": {
+          "type": "number",
+          "description": "NPC 3 Coin reward claimed (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "quest_4_complete": {
+          "type": "number",
+          "description": "Objective for NPC 4 complete (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "quest_4_claimed": {
+          "type": "number",
+          "description": "NPC 4 Coin reward claimed (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "trade_complete": {
+          "type": "number",
+          "description": "Committed completion flag (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "house_open": {
+          "type": "number",
+          "description": "Committed completion flag (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "chest_open": {
+          "type": "number",
+          "description": "Committed completion flag (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "grove_open": {
+          "type": "number",
+          "description": "Committed completion flag (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "bugcat_won": {
+          "type": "number",
+          "description": "Committed completion flag (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "wolf_won": {
+          "type": "number",
+          "description": "Committed completion flag (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "ending_complete": {
+          "type": "number",
+          "description": "Committed completion flag (0/1)",
+          "enum": [
+            0,
+            1
+          ]
+        },
+        "encounter": {
+          "type": "number",
+          "description": "0 none, 1 Bugcat, 2 Wolf; retained on that battle outcome",
+          "enum": [
+            0,
+            1,
+            2
+          ]
+        },
+        "battle_stage": {
+          "type": "number",
+          "description": "0 outside battle, 1 action menu, 2 selection/preview, 3 resolving, 4 victory, 5 defeat",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "acting_party": {
+          "type": "number",
+          "description": "0 none/enemy, 1 Baloo, 2 Nutsy",
+          "enum": [
+            0,
+            1,
+            2
+          ]
+        },
+        "selected_action": {
+          "type": "number",
+          "description": "0 none, 1 Bear Arms, 2 First Aid, 3 Nutsy attack, 4 Bomb",
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "hp_baloo": {
+          "type": "number",
+          "description": "Current HP; -1 outside battle/outcome",
+          "minimum": -1
+        },
+        "max_hp_baloo": {
+          "type": "number",
+          "description": "Maximum HP; -1 outside battle/outcome",
+          "minimum": -1
+        },
+        "hp_nutsy": {
+          "type": "number",
+          "description": "Current HP; -1 outside battle/outcome",
+          "minimum": -1
+        },
+        "max_hp_nutsy": {
+          "type": "number",
+          "description": "Maximum HP; -1 outside battle/outcome",
+          "minimum": -1
+        }
+      },
+      "additionalProperties": {
+        "type": "number"
+      }
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "id",
+          "state",
+          "rect"
+        ],
+        "properties": {
+          "kind": {
+            "enum": [
+              "player",
+              "npc_1",
+              "quest_object_1",
+              "npc_2",
+              "quest_object_2",
+              "npc_3",
+              "quest_object_3",
+              "npc_4",
+              "quest_object_4",
+              "gatekeeper",
+              "house_door",
+              "house_exit",
+              "grove_entrance",
+              "grove_exit",
+              "chest",
+              "wand_red",
+              "pedestal_red",
+              "wand_blue",
+              "pedestal_blue",
+              "wand_green",
+              "pedestal_green",
+              "ghost",
+              "baloo",
+              "nutsy",
+              "enemy_bugcat",
+              "enemy_wolf"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "state": {
+            "type": "string"
+          },
+          "rect": {
+            "$ref": "#/definitions/rect"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "player"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "normal",
+                    "dialogue_locked",
+                    "paused"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "npc_1"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "available",
+                    "objective_complete",
+                    "rewarded"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "quest_object_1"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "available",
+                    "completed"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "npc_2"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "available",
+                    "objective_complete",
+                    "rewarded"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "quest_object_2"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "available",
+                    "completed"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "npc_3"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "available",
+                    "objective_complete",
+                    "rewarded"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "quest_object_3"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "available",
+                    "completed"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "npc_4"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "available",
+                    "objective_complete",
+                    "rewarded"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "quest_object_4"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "available",
+                    "completed"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "gatekeeper"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "available",
+                    "traded"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "house_door"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "locked",
+                    "open"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "house_exit"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "open"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "grove_entrance"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "blocked",
+                    "open"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "grove_exit"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "open"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "chest"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "closed",
+                    "opened"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "wand_red"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "available"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "pedestal_red"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "empty",
+                    "filled"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "wand_blue"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "available"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "pedestal_blue"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "empty",
+                    "filled"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "wand_green"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "available"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "pedestal_green"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "empty",
+                    "filled"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "ghost"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "bugcat_pending",
+                    "wolf_pending",
+                    "resolution_pending",
+                    "safe"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "baloo"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "living",
+                    "downed"
+                  ]
+                },
+                "hp": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "max_hp": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "selected": {
+                  "type": "boolean"
+                },
+                "acting": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "hp",
+                "max_hp",
+                "selected",
+                "acting"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "nutsy"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "living",
+                    "downed"
+                  ]
+                },
+                "hp": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "max_hp": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "selected": {
+                  "type": "boolean"
+                },
+                "acting": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "hp",
+                "max_hp",
+                "selected",
+                "acting"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "enemy_bugcat"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "living",
+                    "downed"
+                  ]
+                },
+                "hp": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "max_hp": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "selected": {
+                  "type": "boolean"
+                },
+                "acting": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "hp",
+                "max_hp",
+                "selected",
+                "acting"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "kind": {
+                  "const": "enemy_wolf"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "state": {
+                  "enum": [
+                    "living",
+                    "downed"
+                  ]
+                },
+                "hp": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "max_hp": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "selected": {
+                  "type": "boolean"
+                },
+                "acting": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "hp",
+                "max_hp",
+                "selected",
+                "acting"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "id",
+          "rect",
+          "visible",
+          "interactable"
+        ],
+        "properties": {
+          "kind": {
+            "enum": [
+              "dialogue_continue",
+              "dialogue_choice",
+              "encounter_accept",
+              "cancel_button",
+              "place_red",
+              "place_blue",
+              "place_green",
+              "placement_confirm",
+              "bear_arms_action",
+              "first_aid_action",
+              "nutsy_attack_action",
+              "bomb_action",
+              "focus_action",
+              "combatant_target",
+              "action_confirm",
+              "victory_continue",
+              "retry_button",
+              "restart_button",
+              "resume_button",
+              "quit_button"
+            ]
+          },
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rect": {
+            "$ref": "#/definitions/rect"
+          },
+          "visible": {
+            "type": "boolean"
+          },
+          "interactable": {
+            "type": "boolean"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "rect": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 4,
+      "maxItems": 4
+    }
+  }
+}

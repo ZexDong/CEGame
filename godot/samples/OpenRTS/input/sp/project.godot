@@ -1,0 +1,63 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+;
+; Target editor/runtime: Godot 4.7.1.stable.official.a13da4feb
+
+config_version=5
+
+[application]
+
+config/name="Open RTS Starter"
+run/main_scene="res://main.tscn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+
+[input]
+
+camera_left={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":65)]}
+camera_right={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":68)]}
+camera_up={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":87)]}
+camera_down={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":83)]}
+selection_modifier={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":4194325)]}
+rotate_blueprint={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":82)]}
+focus_base={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":4194317)]}
+idle_worker={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":73)]}
+help={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":4194332)]}
+pause={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":4194305)]}
+group_1={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":49)]}
+group_2={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":50)]}
+group_3={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":51)]}
+group_4={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":52)]}
+group_5={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":53)]}
+group_6={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":54)]}
+group_7={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":55)]}
+group_8={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":56)]}
+group_9={"deadzone":0.5,"events":[Object(InputEventKey,"physical_keycode":57)]}
+select={"deadzone":0.5,"events":[Object(InputEventMouseButton,"button_index":1)]}
+command={"deadzone":0.5,"events":[Object(InputEventMouseButton,"button_index":2)]}
+zoom_in={"deadzone":0.5,"events":[Object(InputEventMouseButton,"button_index":4)]}
+zoom_out={"deadzone":0.5,"events":[Object(InputEventMouseButton,"button_index":5)]}

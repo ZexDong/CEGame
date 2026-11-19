@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "RollBall",
+  "requirements": {
+    "LAYOUT-01": {
+      "required_asset_ids": ["fixed-layout-data", "board-floor-mesh", "board-wall-mesh"],
+      "coverage": "complete"
+    },
+    "LAYOUT-02": {
+      "required_asset_ids": ["fixed-layout-data", "board-hole-mesh"],
+      "coverage": "complete"
+    },
+    "MOVEMENT-02": {
+      "required_asset_ids": ["ball-sphere-mesh"],
+      "coverage": "complete"
+    },
+    "COLLISION-01": {
+      "required_asset_ids": ["board-wall-mesh"],
+      "coverage": "complete"
+    },
+    "HAZARD-01": {
+      "required_asset_ids": ["board-hole-mesh"],
+      "coverage": "complete"
+    }
+  },
+  "unmapped_required_assets": [],
+  "requirements_missing_required_assets": []
+}

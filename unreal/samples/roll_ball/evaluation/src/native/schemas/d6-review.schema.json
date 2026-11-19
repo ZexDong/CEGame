@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "version",
+    "status",
+    "rounds"
+  ],
+  "properties": {
+    "version": {
+      "const": "4.0.0"
+    },
+    "status": {
+      "enum": [
+        "completed",
+        "evaluation_incomplete"
+      ]
+    },
+    "rounds": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3
+    }
+  }
+}

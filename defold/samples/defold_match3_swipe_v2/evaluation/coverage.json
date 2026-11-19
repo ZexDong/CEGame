@@ -1,0 +1,145 @@
+{
+  "schema_version": 1,
+  "task_id": "defold_match3_swipe_v2",
+  "scope": "D1-D5 functional /90; every frozen GDD requirement is mapped",
+  "requirements": [
+    {
+      "requirement": "CB-01",
+      "checks": [
+        "D1.PROJECT",
+        "D1.BUILD"
+      ]
+    },
+    {
+      "requirement": "CB-02",
+      "checks": [
+        "D1.START"
+      ]
+    },
+    {
+      "requirement": "M3-BOARD-01",
+      "checks": [
+        "D2.BOARD"
+      ]
+    },
+    {
+      "requirement": "M3-CAMPAIGN-01",
+      "checks": [
+        "D2.MENU",
+        "D2.CHAPTERS",
+        "D4.CHAPTERS"
+      ]
+    },
+    {
+      "requirement": "M3-CLEAN-01",
+      "checks": [
+        "D4.ORDER"
+      ]
+    },
+    {
+      "requirement": "M3-COMMIT-01",
+      "checks": [
+        "D4.CHAPTERS"
+      ]
+    },
+    {
+      "requirement": "M3-END-01",
+      "checks": [
+        "D2.RESULTS",
+        "D4.SUCCESS",
+        "D4.FAILURE"
+      ]
+    },
+    {
+      "requirement": "M3-GOAL-01",
+      "checks": [
+        "D3.GOALS"
+      ]
+    },
+    {
+      "requirement": "M3-ICE-01",
+      "checks": [
+        "D3.ICE"
+      ]
+    },
+    {
+      "requirement": "M3-INPUT-01",
+      "checks": [
+        "D2.INPUT",
+        "D2.POINTER",
+        "D3.GESTURE"
+      ]
+    },
+    {
+      "requirement": "M3-MATCH-01",
+      "checks": [
+        "D3.CASCADE"
+      ]
+    },
+    {
+      "requirement": "M3-OBSERVE-01",
+      "checks": [
+        "D1.CONTRACT"
+      ]
+    },
+    {
+      "requirement": "M3-PAUSE-01",
+      "checks": [
+        "D3.PAUSE",
+        "D5.PAUSE"
+      ]
+    },
+    {
+      "requirement": "M3-PERSIST-01",
+      "checks": [
+        "D4.REOPEN",
+        "D4.RESET"
+      ]
+    },
+    {
+      "requirement": "M3-POWER-01",
+      "checks": [
+        "D3.CASCADE"
+      ]
+    },
+    {
+      "requirement": "M3-REFILL-01",
+      "checks": [
+        "D3.CASCADE"
+      ]
+    },
+    {
+      "requirement": "M3-RESET-01",
+      "checks": [
+        "D4.RETRY"
+      ]
+    },
+    {
+      "requirement": "M3-SCORE-01",
+      "checks": [
+        "D3.CASCADE"
+      ]
+    },
+    {
+      "requirement": "M3-STONE-01",
+      "checks": [
+        "D3.STONE"
+      ]
+    },
+    {
+      "requirement": "M3-SWAP-01",
+      "checks": [
+        "D3.CASCADE"
+      ]
+    },
+    {
+      "requirement": "M3-UI-01",
+      "checks": [
+        "D5.MENU",
+        "D5.HUD",
+        "D5.PAUSE",
+        "D5.RESULT"
+      ]
+    }
+  ]
+}

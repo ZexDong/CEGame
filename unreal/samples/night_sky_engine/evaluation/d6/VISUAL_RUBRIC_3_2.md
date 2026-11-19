@@ -1,0 +1,74 @@
+# NightSkyEngine visual rubric 3.2.0
+
+This task-specific revision supersedes the repository
+guide's section 6.2 prompt only for NightSkyEngine. It does not claim that the new
+prompt is identical to the repository-wide canonical prompt. The base guide hash
+remains verified. Other games, public input, Gold and D1-D5 are unchanged.
+
+Compatibility: the former five assembly/layout criteria become five equal criteria:
+scene/composition, model refinement, model/spatial plausibility, HUD appearance,
+and style/finish. Each contributes 0-2 points. Total remains 10; the same three
+source reference states, paired image order, three full rounds, half-point steps,
+candidate-zero attribution and arithmetic aggregation remain unchanged. Old D6
+responses are incompatible and must not be relabeled or reused as new scores.
+Existing hash-verified captures can be reused. Gold receives no privileged score
+and never replaces the original-source visual quality reference.
+
+This is a retrospective diagnostic rubric change. Scores under the
+two rubric revisions are not interchangeable; this is not a pre-candidate freeze.
+Only directly visible geometry, silhouette, surface detail and materials are
+assessed. No polygon counts, rig topology, animation smoothness or HUD interaction
+can be inferred from still images. Functional correctness remains in D1-D5.
+
+The following is the exact fixed prompt (only the state label is substituted):
+
+```text
+You are a strict reviewer of game visuals.
+
+You will receive two images:
+- Image 1: original-game reference (Reference)
+- Image 2: candidate game (Candidate)
+- Current state:{{CURRENT_STATE_LABEL}}
+
+Score Image 2 against Image 1 using directly visible evidence, focusing on model detail, shape and spatial plausibility, and HUD presentation. The reference is a quality benchmark; candidate/reference-solution identity earns no bonus.
+
+Do not judge gameplay, clickability, numeric/damage logic, outcomes, saves, code, or internal state. Do not infer polygon count, skeleton topology, animation smoothness, HUD interaction, or offscreen content. Assess HUD appearance only, without validating values or requiring reference-only timer/turn/resource mechanics.
+
+Assets are provided; assess visible assembly, modeling, and presentation, not originality. Pixel-perfect copying or identical style is unnecessary. Equivalent, minimal, or stylized designs can score highly when shape finish, detail control, spatial credibility, and interface quality meet the reference standard. Mere content presence or readable text does not justify full credit.
+
+Do not penalize object positions, animation frames, small capture-time differences, or pose differences alone. Do not invent indistinguishable details. If composition makes the subject too small or blurred to show reference-level detail, score its actual presentation. A defect affects multiple categories only through distinct visible consequences; explain those consequences.
+
+Five equally weighted categories, 0-2 each, total 0-10. Use only 0, 0.5, 1.0, 1.5, or 2.0.
+
+1. Scene completeness and composition(0–2)
+   Assess completeness of background, characters, and arena; framing, positions, spacing, visual focus, depth, cropping, and occlusion. HUD internal layout belongs to category 4. Allow reasonable equivalent scenes/layouts.
+
+2. Model detail(0–2)
+   Compare visible character/scene silhouettes, limb/part shaping, joints, surface detail, material layering, and detail clarity. Penalize crude primitives, unfinished graybox/placeholders, obvious angularity/stretching, and missing shape/material detail. Loading the same character type or having limbs does not establish equivalent quality. Judge minimal designs by controlled detail and finish, not realism or complexity alone.
+
+3. Model and spatial plausibility(0–2)
+   Assess visible body/part proportions, structural connections, plausible poses, character/environment scale, perspective, grounding, and contact. Penalize deformity, breaks, interpenetration, unintended floating, scale imbalance, or inconsistent contact shadows. Allow reasonable airborne jump poses. Do not infer collision/physics implementation.
+
+4. HUD visual quality(0–2)
+   Assess health bars, status text, panel shapes/materials, typography, alignment, whitespace, contrast, hierarchy, character association, and scene integration. Distinguish a finished HUD from temporary debug text/default rectangles; readability is only a baseline. Penalize crowding, cropping, overlap, excessive scene occlusion, rough edges, and style conflict. A refined minimal HUD may earn full credit; more information or correct values earn no bonus.
+
+5. Style and overall polish(0–2)
+   Assess coherent character/scene/HUD language, colors, lighting, materials, and delivery readiness. Penalize rendering/transparency errors, abnormal large shadows, debug warnings, and unfinished effects. Judge overall coherence and rendering finish without duplicating category 2 geometry or category 4 local layout penalties.
+
+Score anchors, comparing each category to the reference:
+- 2.0:this category meets or exceeds reference quality without obvious visible defects;
+- 1.5:good overall, with minor visible gaps;
+- 1.0:substantially present, with clear detail, plausibility, or presentation gaps;
+- 0.5:severely crude, implausible, incomplete, or visually poor;
+- 0.0:major category content missing, severely broken, or not meaningfully comparable.
+
+Return only the following format, without additional content:
+
+Scene completeness and composition:<0–2>/2
+Model detail:<0–2>/2
+Model and spatial plausibility:<0–2>/2
+HUD visual quality:<0–2>/2
+Style and overall polish:<0–2>/2
+Total:<sum of five categories>/10
+Reason:<at most two sentences on visible modeling, plausibility, and HUD differences and primary deductions>
+```

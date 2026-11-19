@@ -1,0 +1,12 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0.0",
+  "FriendlyName": "Bomber evaluator viewport capture",
+  "Description": "Private, read-only engine screenshot transport. No gameplay hooks.",
+  "Category": "Testing",
+  "EnabledByDefault": true,
+  "CanContainContent": false,
+  "SupportedTargetPlatforms": ["Win64"],
+  "Modules": [{"Name": "BomberEvalCapture", "Type": "Runtime", "LoadingPhase": "PostEngineInit"}]
+}

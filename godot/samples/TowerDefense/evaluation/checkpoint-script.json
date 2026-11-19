@@ -1,0 +1,638 @@
+{
+  "schema_version": 1,
+  "game": "tower_defense",
+  "naming_tables": "../input/sp/benchmark/naming-tables.json",
+  "controls_from_naming_tables": true,
+  "honesty_spot_checks": {
+    "mode": "review_against_captured_render_and_input_trace"
+  },
+  "trajectories": [
+    {
+      "id": "entry_and_initial",
+      "title": "entry and initial",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 30
+        },
+        {
+          "check": {
+            "id": "D2-01",
+            "source": "gdd:ENTRY-01",
+            "dim": "D2",
+            "assert": "The initial menu, START, Grassland selection, and battlefield entry are complete and operable"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "grassland_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 30
+        },
+        {
+          "check": {
+            "id": "D3-01",
+            "source": "gdd:STATE-01",
+            "dim": "D3",
+            "assert": "Initial 200 Gold, 30/30 base HP, Wave 0/10, countdown, and zero entities are correct"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-02",
+            "source": "gdd:MAP-01",
+            "dim": "D2",
+            "assert": "The Grassland map, continuous grass, stone road, and route relationships are clearly visible"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-10",
+            "source": "gdd:ASSET-01",
+            "dim": "D2",
+            "assert": "Menu, map, four towers, four Dino types, and procedural projectiles/durability UI use the correct asset identities"
+          }
+        },
+        {
+          "check": {
+            "id": "D5-ENTRY",
+            "source": "common-baseline:CB-07",
+            "dim": "D5",
+            "assert": "START, Grassland, tower cards, and the main HUD are visible, readable, and inside the window"
+          }
+        },
+        {
+          "check": {
+            "id": "D5-HUD",
+            "source": "gdd:HUD-01",
+            "dim": "D5",
+            "assert": "Gold, base HP, Wave, countdown, and Remaining are synchronized with the dashboard"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "building_and_management",
+      "title": "building and management",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 30
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "grassland_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 30
+        },
+        {
+          "do": "drag",
+          "from": {
+            "kind": "tower_card",
+            "state": "explosive"
+          },
+          "to": {
+            "kind": "build_surface",
+            "state": "open_grass_1"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-03",
+            "source": "gdd:BUILD-01",
+            "dim": "D2",
+            "assert": "All four tower cards support free dragging, legal preview/building, and complete invalid-drop feedback"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-03",
+            "source": "gdd:BUILD-02",
+            "dim": "D3",
+            "assert": "Building on continuous grass works; road/obstacle/overlap/bounds/funds rejections never deduct resources incorrectly"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-04",
+            "source": "gdd:TOWER-01",
+            "dim": "D2",
+            "assert": "Gatling, Flamethrower, Raygun, and Explosive roles, assets, and attack presentations are distinguishable"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-04",
+            "source": "gdd:TOWER_HP-01",
+            "dim": "D3",
+            "assert": "Maximum tower HP at each level, damage, upgrade ratios, repair, and destruction/refund rules are correct"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "tower",
+            "state": "selected"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.wave >= 1",
+          "timeout_s": 60
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.remaining_enemies <= 4",
+          "timeout_s": 60
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "repair_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "upgrade_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "sell_button"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-07",
+            "source": "gdd:MANAGE-01",
+            "dim": "D2",
+            "assert": "Tower details, upgrades, sale, level cap, and economy feedback are complete"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-08",
+            "source": "gdd:REPAIR-01",
+            "dim": "D2",
+            "assert": "Tower health bars, HP text, Repair - 20 Gold, and repair feedback are complete"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-05",
+            "source": "gdd:ECON-01",
+            "dim": "D3",
+            "assert": "Gold accounting for purchases, kills, upgrades, sales, and repairs is correct"
+          }
+        },
+        {
+          "check": {
+            "id": "D5-BUILD",
+            "source": "gdd:FEEDBACK-01",
+            "dim": "D5",
+            "assert": "Drag preview, rejection, building, selection, upgrade, sale, and repair feedback are clear and consistent"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "waves_attacks_and_success",
+      "title": "waves attacks and success",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 30
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "grassland_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 30
+        },
+        {
+          "do": "drag",
+          "from": {
+            "kind": "tower_card",
+            "state": "explosive"
+          },
+          "to": {
+            "kind": "build_surface",
+            "state": "open_grass_1"
+          }
+        },
+        {
+          "do": "drag",
+          "from": {
+            "kind": "tower_card",
+            "state": "explosive"
+          },
+          "to": {
+            "kind": "build_surface",
+            "state": "open_grass_2"
+          }
+        },
+        {
+          "do": "drag",
+          "from": {
+            "kind": "tower_card",
+            "state": "raygun"
+          },
+          "to": {
+            "kind": "build_surface",
+            "state": "open_grass_5"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.gold >= 70",
+          "timeout_s": 180
+        },
+        {
+          "do": "drag",
+          "from": {
+            "kind": "tower_card",
+            "state": "explosive"
+          },
+          "to": {
+            "kind": "build_surface",
+            "state": "open_grass_3"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.gold >= 50",
+          "timeout_s": 180
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "upgrade_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.gold >= 70",
+          "timeout_s": 180
+        },
+        {
+          "do": "drag",
+          "from": {
+            "kind": "tower_card",
+            "state": "explosive"
+          },
+          "to": {
+            "kind": "build_surface",
+            "state": "open_grass_4"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.gold >= 50",
+          "timeout_s": 180
+        },
+        {
+          "do": "drag",
+          "from": {
+            "kind": "tower_card",
+            "state": "gatling_gun"
+          },
+          "to": {
+            "kind": "build_surface",
+            "state": "open_grass_7"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.gold >= 50",
+          "timeout_s": 180
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "upgrade_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.gold >= 70",
+          "timeout_s": 180
+        },
+        {
+          "do": "drag",
+          "from": {
+            "kind": "tower_card",
+            "state": "flamethrower"
+          },
+          "to": {
+            "kind": "build_surface",
+            "state": "open_grass_8"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.gold >= 50",
+          "timeout_s": 180
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "upgrade_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.gold >= 30",
+          "timeout_s": 180
+        },
+        {
+          "do": "drag",
+          "from": {
+            "kind": "tower_card",
+            "state": "raygun"
+          },
+          "to": {
+            "kind": "build_surface",
+            "state": "open_grass_6"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.gold >= 50",
+          "timeout_s": 180
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "upgrade_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.gold >= 100",
+          "timeout_s": 240
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "upgrade_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.wave >= 1",
+          "timeout_s": 60
+        },
+        {
+          "check": {
+            "id": "D2-05",
+            "source": "gdd:WAVE-01",
+            "dim": "D2",
+            "assert": "Ten-wave countdowns, fixed spawn order, inter-wave progression, and remaining-enemy counts are complete"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-02",
+            "source": "gdd:ROUTE-01",
+            "dim": "D3",
+            "assert": "Enemies follow the public main road to the base; leaks resolve only after fully arriving"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-06",
+            "source": "gdd:WAVE-03",
+            "dim": "D3",
+            "assert": "Wave counts, composition, 0.35-second spawn intervals, and progression after a full clear are correct"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-06",
+            "source": "gdd:ENEMY_ATTACK-01",
+            "dim": "D2",
+            "assert": "Red/Green attack while moving; both red projectile types, tower-hit damage, and projectile cancellation are complete"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-08",
+            "source": "gdd:ENEMY_ATTACK-03",
+            "dim": "D3",
+            "assert": "Red/Green both have 102 px range and correct intervals, diameters, speeds, and 1/5 hit damage; Blue/Yellow do not attack towers"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == won",
+          "timeout_s": 1200
+        },
+        {
+          "check": {
+            "id": "D3-07",
+            "source": "gdd:BOSS-01",
+            "dim": "D3",
+            "assert": "Wave 10 spawns 20 Red/6 Blue/6 Yellow followed by one 1.6x Green boss with correct attributes"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-09",
+            "source": "gdd:BALANCE-01",
+            "dim": "D3",
+            "assert": "A normal public strategy can win; any single level-1 tower loses before Wave 10"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-09",
+            "source": "gdd:RESTART-02",
+            "dim": "D2",
+            "assert": "Mutually exclusive Map Complete/Game Over outcomes and Restart/Main Menu flows are complete"
+          }
+        },
+        {
+          "check": {
+            "id": "D4-SUCCESS",
+            "source": "gdd:SUCCESS-01",
+            "dim": "D4",
+            "assert": "A normal public strategy reaches one Map Complete after Wave 10 and the boss are fully resolved"
+          }
+        },
+        {
+          "check": {
+            "id": "D5-COMBAT",
+            "source": "gdd:ASSET-05",
+            "dim": "D5",
+            "assert": "Tower attacks, Dino projectiles, tower health bars, HP text, and Repair feedback are visible and synchronized"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "failure_and_restart",
+      "title": "failure and restart",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 30
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "grassland_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 30
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == lost",
+          "timeout_s": 240
+        },
+        {
+          "check": {
+            "id": "D4-LOSS",
+            "source": "gdd:FAIL-01",
+            "dim": "D4",
+            "assert": "Undefended leaks reduce base HP to zero and show a single Game Over with Retry"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-10",
+            "source": "gdd:TERMINAL-01",
+            "dim": "D3",
+            "assert": "Outcomes trigger once under the correct conditions; terminal freeze and Restart/Reopen cleanup are correct"
+          }
+        },
+        {
+          "do": "restart"
+        },
+        {
+          "check": {
+            "id": "D4-RESTART",
+            "source": "common-baseline:CB-13",
+            "dim": "D4",
+            "assert": "Repeated Restart restores the current map to a clean initial state"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "lifecycle_reopen",
+      "title": "lifecycle reopen",
+      "clean_start": "none",
+      "steps": [
+        {
+          "do": "reopen"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 30
+        },
+        {
+          "check": {
+            "id": "D4-REOPEN",
+            "source": "common-baseline:CB-03",
+            "dim": "D4",
+            "assert": "The old PID ends; the new PID returns to the initial menu without preserving the previous battle"
+          }
+        },
+        {
+          "check": {
+            "id": "D5-END",
+            "source": "common-baseline:CB-12",
+            "dim": "D5",
+            "assert": "Map Complete/Game Over reasons and subsequent Restart/Main Menu entries are clear and usable"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 10
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    }
+  ]
+}

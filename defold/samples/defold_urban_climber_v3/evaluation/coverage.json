@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "game": "defold_urban_climber_v3",
+  "runtime_version": "0.12",
+  "dimension_maxima": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "checkpoint_counts": {
+    "D1": 4,
+    "D2": 10,
+    "D3": 18,
+    "D4": 13,
+    "D5": 12
+  },
+  "trajectory_count": 8,
+  "rows": [
+    {
+      "source": "gdd:UC-MENU-01",
+      "check_ids": [
+        "UC_D2_MENU_ENTRY",
+        "UC_D5_MENU_FEEDBACK",
+        "UC_D5_CHECKPOINT_FEEDBACK",
+        "UC_D5_FINAL_SUCCESS_FEEDBACK",
+        "UC_D5_TIMEOUT_FEEDBACK"
+      ],
+      "dim": "D2,D5",
+      "trajectory": "entry_movement_pause_reopen,two_building_campaign_success_and_retry,timeout_loss_terminal_and_retry",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:UC-LEVEL-01",
+      "check_ids": [
+        "UC_D2_BUILDING1_WORLD_AND_DASHBOARD",
+        "UC_D2_BUILDING2_WORLD_AND_LOCKED_GOAL",
+        "UC_D3_BUILDING1_MULTI_TRANSFER_ROUTE",
+        "UC_D3_BUILDING2_MULTI_TRANSFER_ROUTE",
+        "UC_D3_BUILDING1_ONLY_UP_BLOCKED",
+        "UC_D3_BUILDING2_ONLY_UP_BLOCKED",
+        "UC_D3_BUILDING1_CHECKPOINT_BOUNDARY",
+        "UC_D3_FINAL_WIN_BOUNDARY_AND_PACING"
+      ],
+      "dim": "D2,D3",
+      "trajectory": "entry_movement_pause_reopen,building2_hazards_closure_and_retry,two_building_campaign_success_and_retry,only_up_routes_do_not_complete",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:UC-LEVEL-02",
+      "check_ids": [
+        "UC_D2_BUILDING1_WORLD_AND_DASHBOARD",
+        "UC_D3_BUILDING1_CHECKPOINT_BOUNDARY",
+        "UC_D3_FINAL_WIN_BOUNDARY_AND_PACING"
+      ],
+      "dim": "D2,D3,D6",
+      "trajectory": "entry_movement_pause_reopen,two_building_campaign_success_and_retry",
+      "disposition": "partially_scored_and_visual_d6",
+      "reason": "Opening and roof-height view ranges plus full scrolling routes are exercised; exact visual smoothness and three-frame composition remain D6."
+    },
+    {
+      "source": "gdd:UC-MOVE-01",
+      "check_ids": [
+        "UC_D3_ONE_STEP_REJECTION_AND_CAUSALITY",
+        "UC_D3_CLOSURE_BLOCK_FREEZE_REOPEN",
+        "UC_D3_FINAL_WIN_BOUNDARY_AND_PACING"
+      ],
+      "dim": "D3",
+      "trajectory": "entry_movement_pause_reopen,building2_hazards_closure_and_retry,two_building_campaign_success_and_retry"
+    },
+    {
+      "source": "gdd:UC-TIMER-01",
+      "check_ids": [
+        "UC_D3_PAUSE_FREEZES_WORLD",
+        "UC_D4_CHECKPOINT_LOCK_AND_FREEZE",
+        "UC_D4_BUILDING2_FRESH_START",
+        "UC_D3_TIMEOUT_LOSS_BOUNDARY"
+      ],
+      "dim": "D3,D4",
+      "trajectory": "entry_movement_pause_reopen,two_building_campaign_success_and_retry,timeout_loss_terminal_and_retry",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:UC-HAZARD-01",
+      "check_ids": [
+        "UC_D2_BUILDING1_TWO_HAZARD_KINDS",
+        "UC_D2_BUILDING2_TWO_HAZARD_KINDS",
+        "UC_D2_NONTERMINAL_HIT_SYSTEM"
+      ],
+      "dim": "D2",
+      "trajectory": "building1_hazard_warning_and_variety,hazard_collision_drop_recovery,building2_hazards_closure_and_retry",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:UC-HAZARD-02",
+      "check_ids": [
+        "UC_D3_WARNING_DURATION_AND_SOURCE",
+        "UC_D3_BUILDING1_THREE_VISIBLE_WARNINGS",
+        "UC_D3_BUILDING2_THREE_VISIBLE_WARNINGS",
+        "UC_D2_BUILDING1_TWO_HAZARD_KINDS",
+        "UC_D2_BUILDING2_TWO_HAZARD_KINDS"
+      ],
+      "dim": "D2,D3",
+      "trajectory": "building1_hazard_warning_and_variety,building2_hazards_closure_and_retry,building2_three_visible_warnings",
+      "disposition": "partially_scored",
+      "reason": "Source-window lead time, source column, and three separate visible warning episodes in each level are checked; aggregation inside the separate final-success runs is a declared Runtime limit."
+    },
+    {
+      "source": "gdd:UC-HIT-01",
+      "check_ids": [
+        "UC_D2_NONTERMINAL_HIT_SYSTEM",
+        "UC_D3_FOUR_ROW_DROP_AND_RECOVERY",
+        "UC_D5_WARNING_AND_HIT_FEEDBACK"
+      ],
+      "dim": "D2,D3,D5",
+      "trajectory": "hazard_collision_drop_recovery",
+      "disposition": "scored_with_real_collision_trace"
+    },
+    {
+      "source": "gdd:UC-PACING-01",
+      "check_ids": [
+        "UC_D3_BUILDING1_CHECKPOINT_BOUNDARY",
+        "UC_D3_FINAL_WIN_BOUNDARY_AND_PACING"
+      ],
+      "dim": "D3",
+      "trajectory": "two_building_campaign_success_and_retry",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:UC-BEACON-01",
+      "check_ids": [
+        "UC_D2_BEACON_AND_ROOF_UNLOCK",
+        "UC_D3_BEACON_PROXIMITY_AND_IDEMPOTENCE",
+        "UC_D5_BEACON_REMOTE_REJECTION_FEEDBACK",
+        "UC_D5_BEACON_ACTIVATION_FEEDBACK"
+      ],
+      "dim": "D2,D3,D5",
+      "trajectory": "two_building_campaign_success_and_retry",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:UC-BEACON-02",
+      "check_ids": [
+        "UC_D2_BUILDING2_WORLD_AND_LOCKED_GOAL",
+        "UC_D3_LOCKED_ROOF_REJECTION",
+        "UC_D2_BEACON_AND_ROOF_UNLOCK",
+        "UC_D5_LOCKED_ROOF_FEEDBACK"
+      ],
+      "dim": "D2,D3,D5",
+      "trajectory": "building2_hazards_closure_and_retry,two_building_campaign_success_and_retry",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:UC-CLOSURE-01",
+      "check_ids": [
+        "UC_D3_CLOSURE_WARNING_AND_DURATION",
+        "UC_D2_CLOSURE_LIFECYCLE",
+        "UC_D3_CLOSURE_BLOCK_FREEZE_REOPEN",
+        "UC_D5_CLOSURE_FEEDBACK"
+      ],
+      "dim": "D2,D3,D5",
+      "trajectory": "building2_hazards_closure_and_retry",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:UC-WIN-01",
+      "check_ids": [
+        "UC_D2_BUILDING1_EXTRACTION",
+        "UC_D3_HELICOPTER_OBSERVATION_BOUNDARY",
+        "UC_D3_BUILDING1_CHECKPOINT_BOUNDARY",
+        "UC_D4_CHECKPOINT_LOCK_AND_FREEZE",
+        "UC_D5_CHECKPOINT_FEEDBACK",
+        "UC_D2_BUILDING2_EXTRACTION"
+      ],
+      "dim": "D2,D3,D4,D5",
+      "trajectory": "two_building_campaign_success_and_retry",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:UC-WIN-02",
+      "check_ids": [
+        "UC_D3_FINAL_WIN_BOUNDARY_AND_PACING",
+        "UC_D4_FULL_CAMPAIGN_SUCCESS",
+        "UC_D5_FINAL_SUCCESS_FEEDBACK",
+        "UC_D4_SUCCESS_RETRY_BUILDING2_CLEAN"
+      ],
+      "dim": "D3,D4,D5",
+      "trajectory": "two_building_campaign_success_and_retry",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:UC-LOSE-01",
+      "check_ids": [
+        "UC_D3_TIMEOUT_LOSS_BOUNDARY",
+        "UC_D4_TIMEOUT_TERMINAL_LOCK",
+        "UC_D4_TIMEOUT_RETRY_CLEAN",
+        "UC_D5_TIMEOUT_FEEDBACK"
+      ],
+      "dim": "D3,D4,D5",
+      "trajectory": "timeout_loss_terminal_and_retry",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:UC-PAUSE-01",
+      "check_ids": [
+        "UC_D3_PAUSE_FREEZES_WORLD",
+        "UC_D5_PAUSE_FEEDBACK",
+        "UC_D3_CLOSURE_BLOCK_FREEZE_REOPEN"
+      ],
+      "dim": "D3,D5",
+      "trajectory": "entry_movement_pause_reopen,building2_hazards_closure_and_retry",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:UC-RESET-01",
+      "check_ids": [
+        "UC_D4_BUILDING2_LOCAL_RETRY_RESET",
+        "UC_D4_SUCCESS_RETRY_BUILDING2_CLEAN",
+        "UC_D4_TIMEOUT_RETRY_CLEAN"
+      ],
+      "dim": "D4",
+      "trajectory": "building2_hazards_closure_and_retry,two_building_campaign_success_and_retry,timeout_loss_terminal_and_retry",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:UC-RESET-02",
+      "check_ids": [
+        "UC_D4_RESUME_AND_REOPEN_RESET",
+        "UC_D4_REOPEN_CLEARS_CAMPAIGN"
+      ],
+      "dim": "D4",
+      "trajectory": "entry_movement_pause_reopen,two_building_campaign_success_and_retry",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:UC-UI-01",
+      "check_ids": [
+        "UC_D5_MENU_FEEDBACK",
+        "UC_D5_GAMEPLAY_HUD",
+        "UC_D5_PAUSE_FEEDBACK",
+        "UC_D5_WARNING_AND_HIT_FEEDBACK",
+        "UC_D5_CHECKPOINT_FEEDBACK",
+        "UC_D5_BUILDING2_HUD",
+        "UC_D5_CLOSURE_FEEDBACK",
+        "UC_D5_FINAL_SUCCESS_FEEDBACK",
+        "UC_D5_TIMEOUT_FEEDBACK"
+      ],
+      "dim": "D5,D6",
+      "trajectory": "all",
+      "disposition": "scored_and_visual_d6"
+    },
+    {
+      "source": "gdd:UC-CAMERA-01",
+      "check_ids": [
+        "UC_D2_BUILDING1_WORLD_AND_DASHBOARD",
+        "UC_D3_BUILDING1_CHECKPOINT_BOUNDARY",
+        "UC_D3_FINAL_WIN_BOUNDARY_AND_PACING"
+      ],
+      "dim": "D2,D3,D6",
+      "trajectory": "entry_movement_pause_reopen,two_building_campaign_success_and_retry",
+      "disposition": "partially_scored_and_visual_d6"
+    },
+    {
+      "source": "gdd:UC-VISUAL-01",
+      "check_ids": [
+        "UC_D5_MENU_FEEDBACK",
+        "UC_D5_GAMEPLAY_HUD",
+        "UC_D5_CHECKPOINT_FEEDBACK",
+        "UC_D5_FINAL_SUCCESS_FEEDBACK",
+        "D6_VISUAL_REVIEW"
+      ],
+      "dim": "D5,D6",
+      "trajectory": "captures,visual",
+      "disposition": "narrow_feedback_scored_and_visual_d6"
+    },
+    {
+      "source": "gdd:UC-ASSET-01",
+      "check_ids": [
+        "D6_VISUAL_REVIEW"
+      ],
+      "dim": "D6",
+      "trajectory": "visual",
+      "disposition": "visual_d6"
+    },
+    {
+      "source": "gdd:UC-DASHBOARD-01",
+      "check_ids": [
+        "D1_RUNTIME_DASHBOARD_SMOKE",
+        "UC_D2_BUILDING1_WORLD_AND_DASHBOARD",
+        "UC_D2_BUILDING2_WORLD_AND_LOCKED_GOAL",
+        "UC_D3_ONE_STEP_REJECTION_AND_CAUSALITY",
+        "UC_D4_REOPEN_CLEARS_CAMPAIGN"
+      ],
+      "dim": "D1,D2,D3,D4",
+      "trajectory": "static,entry_movement_pause_reopen,building2_hazards_closure_and_retry,two_building_campaign_success_and_retry",
+      "disposition": "scored_by_contract_and_causal_cross_checks"
+    },
+    {
+      "source": "gdd:UC-DASHBOARD-02",
+      "check_ids": [
+        "UC_D3_WARNING_DURATION_AND_SOURCE",
+        "UC_D3_BUILDING1_THREE_VISIBLE_WARNINGS",
+        "UC_D3_BUILDING2_THREE_VISIBLE_WARNINGS",
+        "UC_D2_BUILDING1_TWO_HAZARD_KINDS",
+        "UC_D2_BUILDING2_TWO_HAZARD_KINDS",
+        "UC_D2_CLOSURE_LIFECYCLE",
+        "UC_D3_CLOSURE_BLOCK_FREEZE_REOPEN",
+        "UC_D3_HELICOPTER_OBSERVATION_BOUNDARY",
+        "UC_D4_LEVEL_ID_SCOPING",
+        "UC_D4_ATTEMPT1_RETRY_ID_SCOPING",
+        "UC_D4_REPEATED_RETRY_DYNAMIC_ID_SCOPING",
+        "UC_D4_SUCCESS_PATH_RETRY_ID_SCOPING"
+      ],
+      "dim": "D2,D3,D4",
+      "trajectory": "building1_hazard_warning_and_variety,hazard_collision_drop_recovery,building2_hazards_closure_and_retry,building2_three_visible_warnings,two_building_campaign_success_and_retry",
+      "disposition": "scored_by_temporal_and_input_causality"
+    },
+    {
+      "source": "common-baseline:CB-01..CB-18",
+      "check_ids": [
+        "baseline-applicability.json"
+      ],
+      "dim": "D1-D6",
+      "trajectory": "all",
+      "disposition": "mapped_individually_in_baseline_applicability"
+    }
+  ],
+  "unmapped_gdd_requirements": [],
+  "unmapped_common_baseline_items": []
+}

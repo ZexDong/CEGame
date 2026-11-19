@@ -1,0 +1,19 @@
+[gd_scene format=3]
+
+[node name="Main" type="Node2D"]
+
+[node name="Title" type="Label" parent="."]
+offset_left = 80.0
+offset_top = 80.0
+offset_right = 900.0
+offset_bottom = 150.0
+text = "Cervantes Tactics — Chapter One"
+theme_override_font_sizes/font_size = 32
+
+[node name="Status" type="Label" parent="."]
+offset_left = 80.0
+offset_top = 170.0
+offset_right = 900.0
+offset_bottom = 230.0
+text = "Public starter: implement the chapter flow and tactical battle from GDD-en.md."
+theme_override_font_sizes/font_size = 18

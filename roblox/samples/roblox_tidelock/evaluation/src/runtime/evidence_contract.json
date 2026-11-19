@@ -1,0 +1,38 @@
+{
+  "schema_version": "tide-lock-evidence-v1",
+  "contract_id": "tide-lock-v1",
+  "valid_statuses": [
+    "pass",
+    "fail",
+    "inconclusive",
+    "not_run"
+  ],
+  "required_metadata": [
+    "run_id",
+    "candidate_zip_sha256",
+    "candidate_place_sha256",
+    "candidate_project_tree_sha256",
+    "qa_place_sha256",
+    "evaluator_sha256",
+    "policy_audit_sha256",
+    "input_backend",
+    "judgment_backend",
+    "started_at_utc"
+  ],
+  "formal_validity": {
+    "completed_runner_required": true,
+    "evaluator_or_host_timeout_invalidates_score": true,
+    "inconclusive_or_not_run_requires_review": true,
+    "pass_requires_trace_ids": true,
+    "fail_requires_trace_ids": true
+  },
+  "files": [
+    "evidence.json",
+    "score.json",
+    "trace_index.json",
+    "engine_events.jsonl",
+    "studio_session.log",
+    "budget_report.json",
+    "policy_audit.json"
+  ]
+}

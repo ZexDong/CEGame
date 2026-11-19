@@ -1,0 +1,212 @@
+{
+  "schema_version": 1,
+  "input_revision": "g04-g08-public-20261020-r2",
+  "path_base": "package root",
+  "runtime_root": "sp",
+  "material_mapping": "MaterialMapping-en.md",
+  
+"contact_sheet": "Assets/asset-contact-sheet.png",
+  "source_of_previews": "Supplied source images only; no gameplay screenshot is used.",
+  "roles": [
+    {
+      "role": "terrain",
+      "status": "supplied",
+      "path": "sp/assets/assets/tilesets/GroundTileset.png",
+      "requirement": "VISUAL-01"
+    },
+    {
+      "role": "portal",
+      "status": "supplied",
+      "path": "sp/assets/assets/sprites/Portals.png",
+      "requirement": "WAVE-04"
+    },
+    {
+      "role": "archer",
+      "status": "supplied",
+      "path": "sp/assets/assets/sprites/heroes/Archer_idle.png",
+      "requirement": "HERO-01"
+    },
+    {
+      "role": "mage",
+      "status": "supplied",
+      "path": "sp/assets/assets/sprites/towers/SlowTower.png",
+      "requirement": "HERO-02"
+    },
+    {
+      "role": "warrior",
+      "status": "supplied",
+      "path": "sp/assets/assets/sprites/towers/AoeTower.png",
+      "requirement": "HERO-03"
+    },
+    {
+      "role": "basic_enemy",
+      "status": "supplied",
+      "path": "sp/assets/assets/sprites/enemies/BaseEnemy.png",
+      "requirement": "ENEMY-01"
+    },
+    {
+      "role": "runner_enemy",
+      "status": "supplied",
+      "path": "sp/assets/assets/sprites/enemies/RunnerEnemy.png",
+      "requirement": "ENEMY-02"
+    },
+    {
+      "role": "tank_enemy",
+      "status": "supplied",
+      "path": "sp/assets/assets/sprites/enemies/TankEnemy.png",
+      "requirement": "ENEMY-03"
+    },
+    {
+      "role": "boss_enemy",
+      "status": "supplied",
+      "path": "sp/assets/assets/sprites/enemies/BossEnemy.png",
+      "requirement": "ENEMY-04"
+    },
+    {
+      "role": "projectile",
+      "status": "supplied",
+      "path": "sp/assets/assets/sprites/projectiles/Projectile.png",
+      "requirement": "HERO-04"
+    },
+    {
+      "role": "placement_preview",
+      "status": "procedural",
+      "requirement": "VISUAL-02"
+    },
+    {
+      "role": "health_bars",
+      "status": "procedural",
+      "requirement": "HUD-01"
+    },
+    {
+      "role": "reward_cards",
+      "status": "procedural",
+      "requirement": "HUD-03"
+    },
+    {
+      "role": "result_overlay",
+      "status": "procedural",
+      "requirement": "BASE-02"
+    }
+  ],
+  "files": [
+    {
+      "path": "sp/assets/assets/tilesets/GroundTileset.png",
+      "type": "Image",
+      "size": [
+        256,
+        256
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/assets/sprites/Portals.png",
+      "type": "Image",
+      "size": [
+        94,
+        72
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/assets/sprites/heroes/Archer_idle.png",
+      "type": "Image",
+      "size": [
+        390,
+        540
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/assets/sprites/heroes/Archer_attack1.png",
+      "type": "Image",
+      "size": [
+        390,
+        540
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/assets/sprites/heroes/Archer_attack2.png",
+      "type": "Image",
+      "size": [
+        390,
+        540
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/assets/sprites/towers/SlowTower.png",
+      "type": "Image",
+      "size": [
+        22,
+        30
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/assets/sprites/towers/AoeTower.png",
+      "type": "Image",
+      "size": [
+        23,
+        33
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/assets/sprites/towers/BaseTower.png",
+      "type": "Image",
+      "size": [
+        16,
+        37
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/assets/sprites/enemies/BaseEnemy.png",
+      "type": "Image",
+      "size": [
+        48,
+        48
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/assets/sprites/enemies/RunnerEnemy.png",
+      "type": "Image",
+      "size": [
+        48,
+        48
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/assets/sprites/enemies/TankEnemy.png",
+      "type": "Image",
+      "size": [
+        48,
+        48
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/assets/sprites/enemies/BossEnemy.png",
+      "type": "Image",
+      "size": [
+        48,
+        48
+      ],
+      "filter": "nearest"
+    },
+    {
+      "path": "sp/assets/assets/sprites/projectiles/Projectile.png",
+      "type": "Image",
+      "size": [
+        6,
+        6
+      ],
+      "filter": "nearest"
+    }
+  ],
+  "missing_roles": []
+}

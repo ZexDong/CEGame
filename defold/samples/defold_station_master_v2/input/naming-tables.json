@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "task_id": "defold_station_master_v2",
+  "coordinate_space": {
+    "name": "station_gui_logical_pixels",
+    "dimensions": 2,
+    "origin": "bottom-left",
+    "axes": ["x-right", "y-up"],
+    "units": "game-view pixels"
+  },
+  "target_rect_space": {
+    "width": 1280,
+    "height": 720,
+    "origin": "bottom-left",
+    "units": "game-view pixels"
+  },
+  "seed_entry": "not applicable; this task has no randomized layout or economy",
+  "slots": [
+    "energy",
+    "display_energy",
+    "manual_click_count",
+    "click_power",
+    "passive_per_second",
+    "stage",
+    "stage_total",
+    "time_remaining"
+  ],
+  "entities": [
+    { "kind": "station_core", "geometry": "rect", "states": ["active"] },
+    { "kind": "base_module", "geometry": "rect", "states": ["hidden", "installed"] },
+    { "kind": "solar_wing", "geometry": "rect", "states": ["hidden", "installed"] },
+    { "kind": "power_booster", "geometry": "rect", "states": ["hidden", "installed"] },
+    { "kind": "base_module_card", "geometry": "rect", "states": ["locked", "unaffordable", "affordable", "purchased"] },
+    { "kind": "solar_wing_card", "geometry": "rect", "states": ["locked", "unaffordable", "affordable", "purchased"] },
+    { "kind": "power_booster_card", "geometry": "rect", "states": ["locked", "unaffordable", "affordable", "purchased"] },
+    { "kind": "generator_control", "geometry": "rect", "states": ["disabled", "idle", "pressed"] },
+    { "kind": "feedback_banner", "geometry": "rect", "states": ["hidden", "shift_started", "generator_click", "purchase_insufficient", "purchase_locked", "purchase_owned", "purchase_success"] }
+  ],
+  "targets": [
+    { "kind": "start_button" },
+    { "kind": "exit_button" },
+    { "kind": "generator_button" },
+    { "kind": "pause_button" },
+    { "kind": "base_module_card" },
+    { "kind": "solar_wing_card" },
+    { "kind": "power_booster_card" },
+    { "kind": "resume_button" },
+    { "kind": "restart_button" }
+  ],
+  "honesty": {
+    "phase_ocr_any": {
+      "menu": ["EMERGENCY SHIFT", "START SHIFT", "Emergency expansion shift", "Start the shift"],
+      "playing": ["EXPANSION QUEUE", "CHARGE CORE", "Expansion queue", "Charging core"],
+      "paused": ["SHIFT PAUSED", "Paused"],
+      "won": ["STATION ONLINE", "The space station is online"],
+      "lost": ["SHIFT ENDED", "End of shift"]
+    }
+  },
+  "controls": {
+    "movement_template": "pointer_targets",
+    "pointer": "MouseButton1",
+    "target_rect_origin": "bottom_left"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "GameCreate.Benchmark.NoirRoombreak.DashboardChecks",
+  "rootNamespace": "GameCreate.Benchmark.NoirRoombreak.DashboardChecks",
+  "references": [
+    "GameCreate.Benchmark.NoirRoombreak.Contracts"
+  ],
+  "includePlatforms": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": true
+}

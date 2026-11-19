@@ -1,0 +1,43 @@
+{
+  "protocol": "canonical-guide-section-6",
+  "guide_sha256": "3e3e6cf19cbd5cda5667c44710f483fbba2ac30af7d098921acc811cf08dfdae",
+  "prompt_sha256": "5768572dde98f6568c7720ebd2022dd04f53e83711f45044434e1b17731dfb3b",
+  "rounds": 3,
+  "equal_state_weights": true,
+  "selected_before_candidate_visual_inspection": true,
+  "transport": "direct conversation; actual image pairs and fixed prompt; record raw response for every state and round",
+  "states": [
+    {
+      "id": "chamber",
+      "label": "Initial dungeon chamber",
+      "reference": "../../input/reference/01-chamber.png",
+      "sha256": "5b09cef50fea0745ba4e7f57a8d8bd94b7c77056246f929203d7473d85a5bf0a",
+      "source": "Existing public baseline-rendered reference",
+      "capture_method": "normal player input"
+    },
+    {
+      "id": "camera",
+      "label": "Exploration and floor perspective",
+      "reference": "../../input/reference/02-camera-and-floor.png",
+      "sha256": "44091fcab8eac812cba967fed9c31b4349447442dcb677ccf73d289bb526ebde",
+      "source": "Existing public baseline-rendered reference",
+      "capture_method": "normal player input"
+    },
+    {
+      "id": "reveal",
+      "label": "Successful reveal spell",
+      "reference": "../../input/reference/03-reveal-spell.png",
+      "sha256": "004148e4957193bc9a020cdd9ef4c778e13d5b6e4ee15c25c506592d8d4e0a16",
+      "source": "Existing public baseline-rendered reference",
+      "capture_method": "normal player input"
+    },
+    {
+      "id": "transfer",
+      "label": "Another chamber after a passage",
+      "reference": "../../input/reference/04-room-transfer.png",
+      "sha256": "ec06a09cb63e9a4defd5ba075c6c0b0b4aa3d9b158274e2247f6e543fd7da562",
+      "source": "Existing public baseline-rendered reference",
+      "capture_method": "normal player input"
+    }
+  ]
+}

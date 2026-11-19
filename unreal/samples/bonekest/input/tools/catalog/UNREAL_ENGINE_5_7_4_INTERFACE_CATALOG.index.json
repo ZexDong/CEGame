@@ -1,0 +1,64 @@
+{
+  "engine": {
+    "name": "Unreal Engine",
+    "version": "5.7.4",
+    "changelist": 51494982,
+    "platform": "Windows x64",
+    "mode": "editor_game"
+  },
+  "scope": "Engine source/public headers, reflection macros, console registrations, config defaults, UBT/UAT commands, and every installed engine plugin descriptor/module. Third-party source bodies are excluded.",
+  "entry_contract": [
+    "Name / purpose",
+    "Owner / version",
+    "Source",
+    "Exact entry",
+    "Parameters",
+    "Preconditions",
+    "Return/result",
+    "Faults",
+    "Side effects",
+    "Minimal example",
+    "Limitations",
+    "Platform availability"
+  ],
+  "value_dictionary": {
+    "P1": "Use the owning module or tool in a compatible UE 5.7.4 process, target, and thread/context.",
+    "R1": "The exact declaration, command, setting or schema defines the returned value/result.",
+    "F1": "Unsupported platform/target, unavailable owner module, invalid parameter, or engine/tool failure. Preserve diagnostics and restore changed state before retrying.",
+    "S1": "Side effects depend on the exact interface; consult its owning module before a state-changing call.",
+    "D1": "See the exact UE 5.7.4 declaration and owning implementation for type-specific defaults, units, ranges, and restrictions.",
+    "L1": "Use the exact UE patch and respect the interface platform, module and target restrictions."
+  },
+  "entry_count": 546387,
+  "counts_by_kind": {
+    "automation_tool_command": 91,
+    "blueprint_callable": 22515,
+    "blueprint_property": 74775,
+    "config_setting": 9501,
+    "console_command": 1063,
+    "console_variable": 9729,
+    "delegate_event": 966,
+    "plugin_descriptor": 741,
+    "plugin_module": 1528,
+    "public_cpp_callable": 395551,
+    "reflected_class": 13538,
+    "reflected_enum": 4367,
+    "reflected_interface": 477,
+    "reflected_struct": 11515,
+    "unreal_build_tool_mode": 30
+  },
+  "uncompressed_byte_length": 489506128,
+  "uncompressed_sha256": "8ab42395f133ec9e6e456044fbf7f85766cb7580254134d28da6e19d48742d9d",
+  "catalog_file": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz",
+  "catalog_byte_length": 36007314,
+  "catalog_sha256": "770668f644c222660b6c7e98a7ec4699f59914559b66432fb529c03fed7953fd",
+  "records_are_sorted": true,
+  "availability_values": [
+    "documented",
+    "unavailable_on_windows"
+  ],
+  "counts_by_availability": {
+    "documented": 542434,
+    "unavailable_on_windows": 3953
+  }
+}

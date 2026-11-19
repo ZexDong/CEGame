@@ -1,0 +1,9 @@
+{
+  "version": "gemsbond-rendered-review-1.1.2",
+  "policy": "These are explicit subcriteria of existing public requirements, not additional weighted checkpoints. A positive visual verdict requires rendered evidence for each criterion; source object creation alone is insufficient.",
+  "checks": {
+    "ui_context": ["detail_type_level_health_refund", "tower_damage_cooldown_range", "next_upgrade_or_maximum", "selected_tower_range_ring", "visible_disabled_controls", "sale_operable"],
+    "feedback_content": ["construction_rise", "weapon_aim_and_recoil", "impact_flash", "cannon_shock_or_smoke", "upgrade_glow", "floating_income", "pulsing_placement_range", "representative_event_audio"],
+    "weapons_content": ["arrow_visible", "cannonball_visible", "projectiles_distinguishable", "localized_impacts_visible"]
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "sample_id": "roblox_coolant_cargo",
+  "document_type": "Original GDD and evaluator source index",
+  "new_evaluation_requirement": false,
+  "requirements": [
+    {
+      "requirement_id": "CC-GDD-1",
+      "obligation": "Coolant Cargo Protocol — Game Design Document",
+      "source_line": 1,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "CC-GDD-2",
+      "obligation": "1. Player experience",
+      "source_line": 10,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "CC-GDD-3",
+      "obligation": "2. Controls",
+      "source_line": 16,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "CC-GDD-4",
+      "obligation": "3. Complete success flow",
+      "source_line": 26,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "CC-GDD-5",
+      "obligation": "4. Required rejection behavior",
+      "source_line": 41,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "CC-GDD-6",
+      "obligation": "REQ-CC-01 — Valve order",
+      "source_line": 43,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "CC-GDD-7",
+      "obligation": "REQ-CC-02 — Cell lifecycle",
+      "source_line": 50,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "CC-GDD-8",
+      "obligation": "REQ-CC-03 — Reactor and airlock",
+      "source_line": 57,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "CC-GDD-9",
+      "obligation": "5. Death, checkpoint and restart",
+      "source_line": 65,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "CC-GDD-10",
+      "obligation": "REQ-CC-04 — Ordinary death",
+      "source_line": 67,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "CC-GDD-11",
+      "obligation": "REQ-CC-05 — Clean `R` restart",
+      "source_line": 76,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "CC-GDD-12",
+      "obligation": "6. HUD and feedback",
+      "source_line": 82,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "CC-GDD-13",
+      "obligation": "7. Layout and accessibility",
+      "source_line": 99,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "CC-GDD-14",
+      "obligation": "8. Public semantic contract",
+      "source_line": 112,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "CC-GDD-15",
+      "obligation": "9. Equivalent implementations",
+      "source_line": 125,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "CC-GDD-16",
+      "obligation": "10. Invalid shortcuts",
+      "source_line": 129,
+      "native_evaluator_sources": "src/original/"
+    }
+  ],
+  "original_coverage_files": [],
+  "existing_evaluators_preserved": true
+}

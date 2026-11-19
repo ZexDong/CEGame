@@ -1,0 +1,32 @@
+{
+  "profile_version": "docv2-session-dataset/v1",
+  "benchmark_id": "unity.undercooked_kitchen_shift.v2",
+  "evaluator_root": "demos/unity_3d_undercooked_challenge/evaluation/session-v231-oracle-isolation-20260919",
+  "runner": "run.ps1",
+  "rules": "rules.json",
+  "evaluator_package": "package-v2",
+  "evaluator_contract_files": [
+    "rules.json",
+    "checkpoint-script.json",
+    "baseline-applicability.json",
+    "requirement-coverage.json",
+    "session-profile.json",
+    "session-dependencies.json",
+    "run.ps1",
+    "scripts/score.ps1",
+    "scripts/score.py"
+  ],
+  "player_name": "UndercookedKitchen",
+  "d6": {
+    "protocol_id": "public-requirements-visual-quality-20260908",
+    "protocol_path": "demos/unity_3d_undercooked_challenge/evaluation/session/d6-kitchen-20260918/protocol.json",
+    "prompt_path": "demos/unity_3d_undercooked_challenge/evaluation/session/d6-kitchen-20260918/visual-prompt.en-US.txt",
+    "state_id": "initial_kitchen",
+    "candidate_image": "visual-candidates/01_initial_kitchen.png",
+    "capture_receipt": "visual/standalone-capture-receipt.json",
+    "capture_validation": "visual/capture-validation.json",
+    "input_path": "visual/d6-input.json",
+    "result_path": "visual/d6/d6-result.json"
+  },
+  "dependency_graph": "session-dependencies.json"
+}

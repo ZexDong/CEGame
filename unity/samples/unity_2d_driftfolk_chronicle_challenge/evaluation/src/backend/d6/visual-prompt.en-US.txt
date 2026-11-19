@@ -1,0 +1,28 @@
+You are a strict reviewer of game visuals.
+
+Image 1 is the initial two-island scene and provides quality context for clarity and polish only. Image 2 is the candidate being scored.
+Current state:<short state label: menu, initial gameplay, mid/late game, management, success, or failure>
+
+Public visual goal: use the modular assets to create a recognizable two-island maritime survival and transport-management game, rather than a text-only table. At 1280x720 the initial scene shows two islands, six recognizable residents, a docked ferry, construction areas, and the escape project. Relevant island inventories, resident name/location/job/health/fatigue/morale, weather/pressure, time/speed/pause, selection controls, build requirements/progress, cargo/passengers, and chronicle information must be readable. Grouped panels and selected-object details are allowed; not all unselected information must appear simultaneously. The initial state need not show future storms, decisions, voyages, completed buildings, or endings.
+
+Assess only Image 2 visible asset assembly and quality. Image 1 does not mandate composition, positions, layout, decoration, scale, camera, fonts, HUD style, or extra content. Judge the candidate on its own layout. Reasonable alternatives in composition, scale, fonts, values, icons, colors, decoration, and rendering framework may receive full credit. Do not penalize absence of reference-only content outside the public goal or differences from an imagined design.
+
+Do not infer gameplay, button interaction, resource correctness, transport logic, timing, saves, collisions, interaction range, or offscreen content. Rendered size and transparent margins are not collision or interaction ranges. Do not penalize animation/capture timing alone; normal HUD values, icons, and decoration are not debug residue.
+
+Five categories, each limited to 0, 0.5, 1.0, 1.5, or 2.0; total 0-10:
+1. Scene completeness and asset assembly:A complete maritime island scene with recognizable islands, residents, ferry, and relevant sites, without obvious placeholders, breakage, or irrelevant debug content.
+2. Composition and layout:Judge spacing, alignment, balance, and map/management interface arrangement within the candidate layout.
+3. Scale, hierarchy, and clarity:Relevant map elements, characters, and interface information are identifiable, with reasonable occlusion, cropping, and depth ordering.
+4. Style and color consistency:Terrain, characters, buildings, resource symbols, and interface assets are internally consistent and communicate a maritime management game.
+5. Overall polish:No obvious stretching, transparency errors, overlap, blur, or broken effects; the image is ready for delivery.
+
+2.0: well finished without obvious defects; 1.5: minor visible defects; 1.0: broadly complete with clear defects; 0.5: severely incomplete or confusing; 0.0: this aspect is largely absent or unrecognizable.
+
+Return exactly these seven lines:
+Scene completeness and asset assembly:<0–2>/2
+Composition and layout:<0–2>/2
+Scale, hierarchy, and clarity:<0–2>/2
+Style and color consistency:<0–2>/2
+Overall polish:<0–2>/2
+Total:<sum of five categories>/10
+Reason:<at most two sentences on visible Image 2 defects; do not infer game logic or penalize layout differences alone>

@@ -1,0 +1,711 @@
+{
+  "schema_version": 2,
+  "game": "defold_bomb_frog_v3",
+  "gdd": "../input/GDD.md",
+  "common_baseline": "../input/COMMON_BASELINE.md",
+  "checkpoint_script": "rules.json",
+  "scoring_compatibility": {
+    "source": "shared Defold D1-D5 rules",
+    "dimension_maxima": {
+      "D1": 10,
+      "D2": 30,
+      "D3": 20,
+      "D4": 20,
+      "D5": 10
+    },
+    "checkpoint_counts": {
+      "D1": 4,
+      "D2": 12,
+      "D3": 20,
+      "D4": 16,
+      "D5": 13
+    },
+    "rule": "D1 is supplied by the four static checks. For D2-D5, each unique check ID declared by rules.json is one equally weighted pass/fail unit within its dimension. Steps, assertion clauses, OCR tokens, saved snapshots, and repeated evidence rows are not separate points.",
+    "score_caps": [
+      {
+        "id": "two_chamber_progression",
+        "max_nonvisual_score": 50,
+        "meaning": "Chamber 1 must complete as a non-final frozen stage and Continue must reach the exact carried-state chamber-2 start."
+      },
+      {
+        "id": "armored_and_final_closure",
+        "max_nonvisual_score": 70,
+        "meaning": "Two settled explosion cycles must expose then kill the armored ghost, and the complete two-chamber campaign must reach and lock final success."
+      }
+    ]
+  },
+  "static_checks": [
+    {
+      "id": "D1-01",
+      "title": "Defold project entry, input binding, delivery hygiene, and public Dashboard files are recognizable"
+    },
+    {
+      "id": "D1-02",
+      "title": "Bob resolves and builds the project without errors"
+    },
+    {
+      "id": "D1-03",
+      "title": "A runnable macOS debug bundle is produced"
+    },
+    {
+      "id": "D1-04",
+      "title": "The bundle reaches its menu without player input and emits a conformant stable Dashboard snapshot"
+    }
+  ],
+  "dynamic_checks": {
+    "D2": [
+      {
+        "id": "BF3_MENU_ENTRY_CONTENT",
+        "title": "Menu state and all three public entries exist and operate"
+      },
+      {
+        "id": "BF3_CHAMBER1_INITIAL_EXACT",
+        "title": "A new campaign has the exact chamber-1 dimensions, entities, resources, and zero campaign totals"
+      },
+      {
+        "id": "BF3_PAUSE_CONTENT_PRESENT",
+        "title": "Ordinary pause exposes Resume, Restart Campaign, and Return to Menu"
+      },
+      {
+        "id": "BF3_BOMB_WORLD_INTERACTION_PRESENT",
+        "title": "A real bomb proceeds through fuse, blast, removal, and obstacle destruction"
+      },
+      {
+        "id": "BF3_DAMAGE_AND_PROTECTION_PRESENT",
+        "title": "A valid hit changes health and enters the declared invulnerable state"
+      },
+      {
+        "id": "BF3_FAILURE_RESULT_CONTENT",
+        "title": "Failure exposes stable Retry and Return to Menu entries"
+      },
+      {
+        "id": "BF3_CHAMBER1_OBJECTIVE_SYSTEMS",
+        "title": "Chamber-1 treasure partition, enemy counts, and campaign totals agree"
+      },
+      {
+        "id": "BF3_STAGE_RESULT_CONTENT",
+        "title": "The chamber-clear boundary exposes only its three stage choices"
+      },
+      {
+        "id": "BF3_CHAMBER2_INITIAL_EXACT",
+        "title": "Continue produces the exact distinct 9x7 chamber-2 population and resources"
+      },
+      {
+        "id": "BF3_ARMORED_SYSTEM_PRESENT",
+        "title": "Chamber 2 begins with two normal enemies and one visible armored enemy"
+      },
+      {
+        "id": "BF3_CAMPAIGN_OBJECTIVE_SYSTEMS",
+        "title": "Chamber and campaign objective accounting agree before final collection"
+      },
+      {
+        "id": "BF3_SUCCESS_RESULT_CONTENT",
+        "title": "Final success exposes the result choices and no stage Continue entry"
+      }
+    ],
+    "D3": [
+      {
+        "id": "BF3_GRID_MOVEMENT_LEGAL",
+        "title": "Normal movement changes to a legal in-bounds chamber-1 cell"
+      },
+      {
+        "id": "BF3_PAUSE_FREEZES_WORLD",
+        "title": "Ordinary pause freezes player, enemies, resources, health, and protection time"
+      },
+      {
+        "id": "BF3_BOMB_PLACEMENT_EXACT",
+        "title": "One Space press creates one bomb at the player and spends one inventory bomb"
+      },
+      {
+        "id": "BF3_DUPLICATE_BOMB_REJECTED",
+        "title": "A second Space press on the occupied cell neither spends nor creates a bomb"
+      },
+      {
+        "id": "BF3_FUSE_PAUSE_FREEZE",
+        "title": "More than the full fuse duration can pass under pause without explosion"
+      },
+      {
+        "id": "BF3_FUSE_AND_CROSS_FOOTPRINT",
+        "title": "Resume produces a positive orthogonal radius-one blast footprint"
+      },
+      {
+        "id": "BF3_BLAST_BLOCKING_AND_DAMAGE",
+        "title": "The same blast preserves solid walls and cannot double-hit an actor"
+      },
+      {
+        "id": "BF3_TREASURE_REVEAL_INVARIANT",
+        "title": "Obstacle destruction reveals treasure while preserving the three-state partition"
+      },
+      {
+        "id": "BF3_TREASURE_COLLECT_ONCE",
+        "title": "Entering revealed treasure transfers it exactly once into chamber and campaign progress"
+      },
+      {
+        "id": "BF3_DAMAGE_EXACT_AND_INVULNERABILITY",
+        "title": "A hit removes exactly one heart, pause freezes health and protection time, and protection expires only after resume"
+      },
+      {
+        "id": "BF3_HEALTH_LOSS_BOUNDARY",
+        "title": "Zero health reaches the health-specific loss boundary before campaign completion"
+      },
+      {
+        "id": "BF3_RESOURCE_LOSS_BOUNDARY",
+        "title": "The last bomb resolves before a genuine bomb-resource loss is declared"
+      },
+      {
+        "id": "BF3_CHAMBER1_ADAPTIVE_OBJECTIVES",
+        "title": "A target-driven normal player clears both chamber-1 objectives within five bombs"
+      },
+      {
+        "id": "BF3_STAGE_CLEAR_BOUNDARY",
+        "title": "Chamber 1 becomes paused stage-clear, not won, only at exact objective completion"
+      },
+      {
+        "id": "BF3_CONTINUE_CARRIES_CAMPAIGN",
+        "title": "Continue preserves run identity, health, and totals while assigning eight chamber-2 bombs"
+      },
+      {
+        "id": "BF3_CHAMBER2_PAUSE_FREEZE",
+        "title": "Ordinary pause in chamber 2 freezes the player and all three enemy states"
+      },
+      {
+        "id": "BF3_ARMOR_FIRST_EXPLOSION_ONLY",
+        "title": "A settled blast hit changes armored to exposed without counting that ghost defeated"
+      },
+      {
+        "id": "BF3_ARMOR_SECOND_EXPLOSION_KILLS",
+        "title": "A later distinct settled blast hit removes the exposed ghost and advances defeat accounting"
+      },
+      {
+        "id": "BF3_CHAMBER2_ADAPTIVE_OBJECTIVES",
+        "title": "A target-driven normal player clears chamber 2 within seven bombs including armor"
+      },
+      {
+        "id": "BF3_FINAL_SUCCESS_BOUNDARY",
+        "title": "Won requires two completed chambers, six treasures, five defeated enemies, and no live armor state"
+      }
+    ],
+    "D4": [
+      {
+        "id": "BF3_PAUSE_RESUME_FLOW",
+        "title": "Escape resumes the same chamber-1 campaign"
+      },
+      {
+        "id": "BF3_RESET_FROM_PAUSE",
+        "title": "Pause restart creates a clean chamber-1 campaign and new run serial"
+      },
+      {
+        "id": "BF3_CONSECUTIVE_RESTARTS_CLEAN",
+        "title": "A second restart reproduces the same clean initial state"
+      },
+      {
+        "id": "BF3_LOSS_TERMINAL_FREEZE",
+        "title": "Movement and bombing cannot alter a health-loss result"
+      },
+      {
+        "id": "BF3_RESET_FROM_FAILURE",
+        "title": "Failure retry creates a clean chamber-1 campaign"
+      },
+      {
+        "id": "BF3_COMPLETE_RESOURCE_FAILURE_FLOW",
+        "title": "Bomb-resource failure reaches a usable stable result"
+      },
+      {
+        "id": "BF3_FAILURE_RETURN_TO_MENU",
+        "title": "A failure can return to the clean initial menu"
+      },
+      {
+        "id": "BF3_STAGE_CLEAR_FREEZE",
+        "title": "The chamber-clear overlay freezes every reported gameplay subsystem"
+      },
+      {
+        "id": "BF3_RESET_FROM_STAGE_CLEAR",
+        "title": "Stage restart creates a clean new chamber-1 campaign"
+      },
+      {
+        "id": "BF3_CHAMBER2_PAUSE_RESUME",
+        "title": "Escape resumes the same chamber-2 campaign"
+      },
+      {
+        "id": "BF3_REOPEN_FROM_CHAMBER2",
+        "title": "Closing and reopening from chamber 2 returns to a zeroed initial menu"
+      },
+      {
+        "id": "BF3_NORMAL_MENU_EXIT",
+        "title": "The visible Quit entry exits normally"
+      },
+      {
+        "id": "BF3_RESET_FROM_CHAMBER2",
+        "title": "Restart from active chamber 2 creates a clean new chamber-1 campaign"
+      },
+      {
+        "id": "BF3_COMPLETE_CAMPAIGN_FLOW",
+        "title": "A normal journey crosses the intermediate stage and reaches final campaign success"
+      },
+      {
+        "id": "BF3_WIN_TERMINAL_FREEZE",
+        "title": "Movement and bombing cannot alter the final success state"
+      },
+      {
+        "id": "BF3_RESET_FROM_SUCCESS",
+        "title": "Success retry creates a clean new chamber-1 campaign"
+      }
+    ],
+    "D5": [
+      {
+        "id": "BF3_MENU_READABLE",
+        "title": "Title and simultaneous menu choices are readable"
+      },
+      {
+        "id": "BF3_INSTRUCTIONS_READABLE",
+        "title": "Instructions visibly explain controls, failure, both chambers, and two-explosion armor"
+      },
+      {
+        "id": "BF3_CHAMBER1_HUD_SYNC",
+        "title": "Chamber-1 HUD labels and values agree with visible public state"
+      },
+      {
+        "id": "BF3_PAUSE_READABLE",
+        "title": "Ordinary pause and all choices are readable"
+      },
+      {
+        "id": "BF3_BOMB_BLAST_FEEDBACK",
+        "title": "The time-sensitive orthogonal blast is visibly captured"
+      },
+      {
+        "id": "BF3_DAMAGE_FEEDBACK_SYNC",
+        "title": "Post-damage HUD feedback agrees with health and inventory"
+      },
+      {
+        "id": "BF3_HEALTH_FAILURE_READABLE",
+        "title": "Health failure reason and recovery choices are readable"
+      },
+      {
+        "id": "BF3_RESOURCE_FAILURE_READABLE",
+        "title": "Bomb-resource failure reason and recovery choice are readable"
+      },
+      {
+        "id": "BF3_STAGE_CLEAR_READABLE",
+        "title": "Chamber Clear is visually distinct from final success and has all stage choices"
+      },
+      {
+        "id": "BF3_CHAMBER2_HUD_AND_ARMOR_READABLE",
+        "title": "Chamber-2 HUD and the visible armored state are understandable"
+      },
+      {
+        "id": "BF3_NO_DEBUG_TEXT",
+        "title": "The reopened menu contains no common diagnostic or placeholder text"
+      },
+      {
+        "id": "BF3_ARMOR_BREAK_FEEDBACK_VISIBLE",
+        "title": "The exposed armor state is visibly distinguishable and reported visible"
+      },
+      {
+        "id": "BF3_SUCCESS_RESULT_READABLE",
+        "title": "Final campaign result, totals, and recovery choices are readable"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "source": "gdd:BF3-ENTRY-01",
+      "check_ids": [
+        "BF3_MENU_ENTRY_CONTENT",
+        "BF3_MENU_READABLE",
+        "BF3_INSTRUCTIONS_READABLE"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-CHAMBER-01",
+      "check_ids": [
+        "BF3_CHAMBER1_INITIAL_EXACT",
+        "BF3_CHAMBER1_ADAPTIVE_OBJECTIVES",
+        "BF3_CHAMBER1_OBJECTIVE_SYSTEMS"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-CHAMBER-02",
+      "check_ids": [
+        "BF3_CHAMBER2_INITIAL_EXACT",
+        "BF3_CONTINUE_CARRIES_CAMPAIGN",
+        "BF3_CHAMBER2_ADAPTIVE_OBJECTIVES",
+        "BF3_RESET_FROM_CHAMBER2",
+        "BF3_REOPEN_FROM_CHAMBER2"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-MOVE-01",
+      "check_ids": [
+        "BF3_GRID_MOVEMENT_LEGAL"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-BOMB-01",
+      "check_ids": [
+        "BF3_BOMB_PLACEMENT_EXACT",
+        "BF3_DUPLICATE_BOMB_REJECTED",
+        "BF3_RESOURCE_LOSS_BOUNDARY"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-FUSE-01",
+      "check_ids": [
+        "BF3_FUSE_PAUSE_FREEZE",
+        "BF3_FUSE_AND_CROSS_FOOTPRINT",
+        "BF3_STAGE_CLEAR_FREEZE",
+        "BF3_WIN_TERMINAL_FREEZE"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-BLAST-01",
+      "check_ids": [
+        "BF3_BOMB_WORLD_INTERACTION_PRESENT",
+        "BF3_FUSE_AND_CROSS_FOOTPRINT",
+        "BF3_BLAST_BLOCKING_AND_DAMAGE",
+        "BF3_BOMB_BLAST_FEEDBACK"
+      ],
+      "disposition": "partially_scored",
+      "reason": "The evaluator scores the radius-one orthogonal footprint, solid-wall preservation, bounded one-hit effects, obstacle destruction, and visible blast feedback. Runtime 0.12 cannot generically select an actor by its spatial relation behind a selected wall or quantify all wall/blast/actor triples, so the wall-shielding clause is not automated without Gold coordinates."
+    },
+    {
+      "source": "gdd:BF3-TREASURE-01",
+      "check_ids": [
+        "BF3_TREASURE_REVEAL_INVARIANT",
+        "BF3_TREASURE_COLLECT_ONCE",
+        "BF3_CHAMBER1_ADAPTIVE_OBJECTIVES",
+        "BF3_CHAMBER2_ADAPTIVE_OBJECTIVES"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-TREASURE-02",
+      "check_ids": [
+        "BF3_TREASURE_REVEAL_INVARIANT",
+        "BF3_TREASURE_COLLECT_ONCE",
+        "BF3_CHAMBER1_OBJECTIVE_SYSTEMS",
+        "BF3_CAMPAIGN_OBJECTIVE_SYSTEMS",
+        "BF3_FINAL_SUCCESS_BOUNDARY"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-ENEMY-01",
+      "check_ids": [
+        "BF3_CHAMBER1_ADAPTIVE_OBJECTIVES",
+        "BF3_CHAMBER2_ADAPTIVE_OBJECTIVES",
+        "BF3_PAUSE_FREEZES_WORLD",
+        "BF3_CHAMBER2_PAUSE_FREEZE"
+      ],
+      "disposition": "partially_scored",
+      "reason": "The evaluator scores normal-enemy existence, defeat accounting, objective closure, and enemy freeze in both chambers. Runtime 0.12 requires entity() to resolve uniquely and has no per-entity temporal path quantifier, so complete repeatable orthogonal patrol routes and every blocked/occupied/out-of-arena transition are not automated for the two simultaneous normal enemies."
+    },
+    {
+      "source": "gdd:BF3-ARMOR-01",
+      "check_ids": [
+        "BF3_ARMORED_SYSTEM_PRESENT",
+        "BF3_ARMOR_FIRST_EXPLOSION_ONLY",
+        "BF3_ARMOR_BREAK_FEEDBACK_VISIBLE",
+        "BF3_ARMOR_SECOND_EXPLOSION_KILLS",
+        "BF3_CHAMBER2_ADAPTIVE_OBJECTIVES"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-DAMAGE-01",
+      "check_ids": [
+        "BF3_DAMAGE_AND_PROTECTION_PRESENT",
+        "BF3_DAMAGE_EXACT_AND_INVULNERABILITY",
+        "BF3_DAMAGE_FEEDBACK_SYNC",
+        "BF3_PAUSE_FREEZES_WORLD"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-STAGE-01",
+      "check_ids": [
+        "BF3_CHAMBER1_ADAPTIVE_OBJECTIVES",
+        "BF3_STAGE_CLEAR_BOUNDARY",
+        "BF3_STAGE_RESULT_CONTENT",
+        "BF3_STAGE_CLEAR_READABLE",
+        "BF3_STAGE_CLEAR_FREEZE",
+        "BF3_CONTINUE_CARRIES_CAMPAIGN"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-WIN-01",
+      "check_ids": [
+        "BF3_FINAL_SUCCESS_BOUNDARY",
+        "BF3_SUCCESS_RESULT_CONTENT",
+        "BF3_COMPLETE_CAMPAIGN_FLOW",
+        "BF3_SUCCESS_RESULT_READABLE",
+        "BF3_WIN_TERMINAL_FREEZE"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-LOSE-01",
+      "check_ids": [
+        "BF3_HEALTH_LOSS_BOUNDARY",
+        "BF3_RESOURCE_LOSS_BOUNDARY",
+        "BF3_COMPLETE_RESOURCE_FAILURE_FLOW",
+        "BF3_HEALTH_FAILURE_READABLE",
+        "BF3_RESOURCE_FAILURE_READABLE"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-HUD-01",
+      "check_ids": [
+        "BF3_CHAMBER1_HUD_SYNC",
+        "BF3_CHAMBER2_HUD_AND_ARMOR_READABLE",
+        "BF3_DAMAGE_FEEDBACK_SYNC",
+        "BF3_CAMPAIGN_OBJECTIVE_SYSTEMS"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-PAUSE-01",
+      "check_ids": [
+        "BF3_PAUSE_CONTENT_PRESENT",
+        "BF3_PAUSE_FREEZES_WORLD",
+        "BF3_PAUSE_READABLE",
+        "BF3_PAUSE_RESUME_FLOW",
+        "BF3_CHAMBER2_PAUSE_FREEZE",
+        "BF3_CHAMBER2_PAUSE_RESUME"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-RESULT-01",
+      "check_ids": [
+        "BF3_STAGE_RESULT_CONTENT",
+        "BF3_FAILURE_RESULT_CONTENT",
+        "BF3_SUCCESS_RESULT_CONTENT",
+        "BF3_STAGE_CLEAR_READABLE",
+        "BF3_HEALTH_FAILURE_READABLE",
+        "BF3_RESOURCE_FAILURE_READABLE",
+        "BF3_SUCCESS_RESULT_READABLE",
+        "BF3_LOSS_TERMINAL_FREEZE",
+        "BF3_WIN_TERMINAL_FREEZE"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-VISUAL-01",
+      "check_ids": [
+        "D6-frozen-frame"
+      ],
+      "disposition": "visual_d6"
+    },
+    {
+      "source": "gdd:BF3-RESET-01",
+      "check_ids": [
+        "BF3_RESET_FROM_PAUSE",
+        "BF3_CONSECUTIVE_RESTARTS_CLEAN",
+        "BF3_RESET_FROM_FAILURE",
+        "BF3_RESET_FROM_STAGE_CLEAR",
+        "BF3_RESET_FROM_CHAMBER2",
+        "BF3_RESET_FROM_SUCCESS"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-REOPEN-01",
+      "check_ids": [
+        "BF3_REOPEN_FROM_CHAMBER2",
+        "BF3_NORMAL_MENU_EXIT"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-DASHBOARD-01",
+      "check_ids": [
+        "D1-04",
+        "BF3_CHAMBER1_INITIAL_EXACT",
+        "BF3_CHAMBER2_INITIAL_EXACT",
+        "BF3_ARMORED_SYSTEM_PRESENT",
+        "honesty:spot_checks"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BF3-DASHBOARD-02",
+      "check_ids": [
+        "BF3_MENU_ENTRY_CONTENT",
+        "BF3_STAGE_RESULT_CONTENT",
+        "BF3_FAILURE_RESULT_CONTENT",
+        "BF3_SUCCESS_RESULT_CONTENT",
+        "honesty:spot_checks"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-01",
+      "check_ids": [
+        "D1-04"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-02",
+      "check_ids": [
+        "D1-02",
+        "BF3_COMPLETE_CAMPAIGN_FLOW",
+        "BF3_COMPLETE_RESOURCE_FAILURE_FLOW"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-03",
+      "check_ids": [
+        "BF3_REOPEN_FROM_CHAMBER2",
+        "BF3_NORMAL_MENU_EXIT"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-04",
+      "check_ids": [
+        "BF3_GRID_MOVEMENT_LEGAL",
+        "BF3_BOMB_PLACEMENT_EXACT",
+        "BF3_PAUSE_RESUME_FLOW"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-05",
+      "check_ids": [
+        "BF3_BOMB_BLAST_FEEDBACK",
+        "BF3_DAMAGE_FEEDBACK_SYNC",
+        "BF3_ARMOR_BREAK_FEEDBACK_VISIBLE"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-06",
+      "check_ids": [
+        "BF3_DUPLICATE_BOMB_REJECTED",
+        "BF3_GRID_MOVEMENT_LEGAL"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-07",
+      "check_ids": [
+        "BF3_MENU_ENTRY_CONTENT",
+        "BF3_STAGE_RESULT_CONTENT",
+        "BF3_FAILURE_RESULT_CONTENT",
+        "BF3_SUCCESS_RESULT_CONTENT"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-08",
+      "check_ids": [
+        "BF3_MENU_READABLE",
+        "BF3_INSTRUCTIONS_READABLE",
+        "BF3_CHAMBER1_HUD_SYNC",
+        "BF3_STAGE_CLEAR_READABLE",
+        "BF3_SUCCESS_RESULT_READABLE"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-09",
+      "check_ids": [
+        "BF3_CHAMBER1_HUD_SYNC",
+        "BF3_CHAMBER2_HUD_AND_ARMOR_READABLE",
+        "BF3_DAMAGE_FEEDBACK_SYNC",
+        "BF3_CAMPAIGN_OBJECTIVE_SYSTEMS"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-10",
+      "check_ids": [
+        "BF3_PAUSE_RESUME_FLOW",
+        "BF3_CHAMBER2_PAUSE_RESUME",
+        "BF3_FAILURE_RETURN_TO_MENU"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-11",
+      "check_ids": [
+        "BF3_FINAL_SUCCESS_BOUNDARY",
+        "BF3_COMPLETE_CAMPAIGN_FLOW",
+        "BF3_SUCCESS_RESULT_READABLE"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-12",
+      "check_ids": [
+        "BF3_HEALTH_LOSS_BOUNDARY",
+        "BF3_RESOURCE_LOSS_BOUNDARY",
+        "BF3_RESET_FROM_FAILURE",
+        "BF3_FAILURE_RETURN_TO_MENU"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-13",
+      "check_ids": [
+        "BF3_CONSECUTIVE_RESTARTS_CLEAN",
+        "BF3_RESET_FROM_PAUSE",
+        "BF3_RESET_FROM_STAGE_CLEAR",
+        "BF3_RESET_FROM_CHAMBER2",
+        "BF3_RESET_FROM_FAILURE",
+        "BF3_RESET_FROM_SUCCESS"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-14",
+      "check_ids": [
+        "BF3_LOSS_TERMINAL_FREEZE",
+        "BF3_WIN_TERMINAL_FREEZE"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-15",
+      "check_ids": [
+        "honesty:no_input_no_terminal_transition"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-16",
+      "check_ids": [
+        "D1-01",
+        "BF3_NO_DEBUG_TEXT"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-17",
+      "check_ids": [
+        "D6-frozen-frame"
+      ],
+      "disposition": "visual_d6"
+    },
+    {
+      "source": "common-baseline:CB-18",
+      "check_ids": [
+        "D1-04",
+        "honesty:spot_checks"
+      ],
+      "disposition": "scored"
+    }
+  ],
+  "unmapped_gdd_requirements": [],
+  "unmapped_common_baseline_items": []
+}

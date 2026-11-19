@@ -1,0 +1,876 @@
+{
+  "version": "chomp-atomic-1.0.0",
+  "aggregation": "dimension_maximum * passed / all_checkpoints; unreachable counts zero",
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "checks": [
+    {
+      "id": "D1-project",
+      "dimension": "D1",
+      "stage": "static",
+      "sources": [
+        "gdd:QUALITY-01"
+      ],
+      "assertion": "Project descriptor and engine-bound entry resolve",
+      "case": null,
+      "score_owner": "D1-project"
+    },
+    {
+      "id": "D1-build",
+      "dimension": "D1",
+      "stage": "static",
+      "sources": [
+        "gdd:QUALITY-01",
+        "gdd:QUALITY-05"
+      ],
+      "assertion": "Clean assessment project compiles",
+      "case": null,
+      "score_owner": "D1-build"
+    },
+    {
+      "id": "D1-startup",
+      "dimension": "D1",
+      "stage": "static",
+      "sources": [
+        "gdd:QUALITY-01"
+      ],
+      "assertion": "Default entry renders a responsive nonblack frame without player input",
+      "case": null,
+      "score_owner": "D1-startup"
+    },
+    {
+      "id": "D1-observation",
+      "dimension": "D1",
+      "stage": "static",
+      "sources": [
+        "gdd:OBSERVE-01"
+      ],
+      "assertion": "Read-only observation meets the public schema and envelope identity",
+      "case": null,
+      "score_owner": "D1-observation"
+    },
+    {
+      "id": "D2-title",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:FLOW-01"
+      ],
+      "assertion": "Title menu and saved high score are present",
+      "case": "entry",
+      "score_owner": "D2-title"
+    },
+    {
+      "id": "D4-start",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:FLOW-02",
+        "gdd:QUALITY-02"
+      ],
+      "assertion": "A visible Start click enters a fresh live run",
+      "case": "entry",
+      "score_owner": "D4-start"
+    },
+    {
+      "id": "D3-initial",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:FLOW-02"
+      ],
+      "assertion": "Initial resources, ghost roles, pickup layout and fresh identity match the specification",
+      "case": "entry",
+      "score_owner": "D3-initial"
+    },
+    {
+      "id": "D2-maze",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:MAZE-01"
+      ],
+      "assertion": "The complete public maze and pickup population appear in the running scene",
+      "case": "entry",
+      "score_owner": "D2-maze"
+    },
+    {
+      "id": "D2-actors",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:GHOST-01",
+        "gdd:VISUAL-01",
+        "gdd:VISUAL-02",
+        "gdd:VISUAL-03",
+        "gdd:ASSET-01",
+        "gdd:ASSET-02",
+        "gdd:ASSET-04"
+      ],
+      "assertion": "Player, all four ghosts and supplied maze/character art contribute to the rendered scene",
+      "case": "entry",
+      "score_owner": "D2-actors"
+    },
+    {
+      "id": "D5-title",
+      "dimension": "D5",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:FLOW-01",
+        "gdd:QUALITY-03",
+        "gdd:VISUAL-06"
+      ],
+      "assertion": "The rendered title and Start target are legible and the target receives the click",
+      "case": "entry",
+      "score_owner": "D5-title"
+    },
+    {
+      "id": "D5-hud",
+      "dimension": "D5",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:HUD-01",
+        "gdd:ASSET-05",
+        "gdd:QUALITY-04"
+      ],
+      "assertion": "Rendered score and supplied life icons agree with changing live resources",
+      "case": "entry",
+      "score_owner": "D5-hud"
+    },
+    {
+      "id": "D3-speed",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:MOVE-01"
+      ],
+      "assertion": "Cardinal continuous player movement is 6 cells/s and persists after release",
+      "case": "speed",
+      "score_owner": "D3-speed"
+    },
+    {
+      "id": "D3-blocked",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:MOVE-01",
+        "gdd:MOVE-04"
+      ],
+      "assertion": "Walls and the ghost gate reject player travel without a position jump",
+      "case": "blocked",
+      "score_owner": "D3-blocked"
+    },
+    {
+      "id": "D3-buffer",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:MOVE-02"
+      ],
+      "assertion": "A held early perpendicular request turns at the first legal center",
+      "case": "buffer",
+      "score_owner": "D3-buffer"
+    },
+    {
+      "id": "D3-buffer_expiry",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:MOVE-02"
+      ],
+      "assertion": "A released turn expires at its active-time deadline",
+      "case": "buffer_expiry",
+      "score_owner": "D3-buffer_expiry"
+    },
+    {
+      "id": "D3-reverse",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:MOVE-03"
+      ],
+      "assertion": "Mid-edge opposite input reverses within 0.10 active seconds",
+      "case": "reverse",
+      "score_owner": "D3-reverse"
+    },
+    {
+      "id": "D3-wrap",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:MOVE-04"
+      ],
+      "assertion": "All three paired wrap passages preserve direction and traverse one edge",
+      "case": "wrap",
+      "score_owner": "D3-wrap"
+    },
+    {
+      "id": "D3-dot",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:DOT-01"
+      ],
+      "assertion": "Ordinary pickups award 10 exactly once and conserve the total",
+      "case": "dot",
+      "score_owner": "D3-dot"
+    },
+    {
+      "id": "D3-power",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:POWER-01"
+      ],
+      "assertion": "Energizer grants 50, preserves ordinary count and establishes five-second vulnerability",
+      "case": "power",
+      "score_owner": "D3-power"
+    },
+    {
+      "id": "D3-refresh",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:POWER-02"
+      ],
+      "assertion": "A second energizer refreshes, preserves the chain and cancels the prior expiry",
+      "case": "refresh",
+      "score_owner": "D3-refresh"
+    },
+    {
+      "id": "D3-ghost_speed",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:GHOST-01"
+      ],
+      "assertion": "Normal/frightened/returning ghost speed follows 2/2/4 cells per second",
+      "case": "ghost_speed",
+      "score_owner": "D3-ghost_speed"
+    },
+    {
+      "id": "D3-release",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:GHOST-02"
+      ],
+      "assertion": "30/60/90 ordinary-dot thresholds release the matching waiting ghost",
+      "case": "release",
+      "score_owner": "D3-release"
+    },
+    {
+      "id": "D3-inactivity",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:GHOST-03"
+      ],
+      "assertion": "Five active seconds without an ordinary dot releases one waiting ghost in order",
+      "case": "inactivity",
+      "score_owner": "D3-inactivity"
+    },
+    {
+      "id": "D3-waves",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:GHOST-04",
+        "gdd:TIME-01"
+      ],
+      "assertion": "Seven finite five-second waves lead to endless chase and fright suspends the remainder",
+      "case": "waves",
+      "score_owner": "D3-waves"
+    },
+    {
+      "id": "D3-red",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:GHOST-05"
+      ],
+      "assertion": "Red updates a shortest-route destination to the current player cell",
+      "case": "red",
+      "score_owner": "D3-red"
+    },
+    {
+      "id": "D3-pink",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:GHOST-06"
+      ],
+      "assertion": "Pink targets up to four legal forward cells without crossing a border",
+      "case": "pink",
+      "score_owner": "D3-pink"
+    },
+    {
+      "id": "D3-cyan",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:GHOST-07"
+      ],
+      "assertion": "Cyan reflects red about two cells ahead and clamps to nearest legal destination",
+      "case": "cyan",
+      "score_owner": "D3-cyan"
+    },
+    {
+      "id": "D3-orange",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:GHOST-08"
+      ],
+      "assertion": "Orange chases strictly below eight straight-line cells and scatters otherwise",
+      "case": "orange",
+      "score_owner": "D3-orange"
+    },
+    {
+      "id": "D3-flee",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:GHOST-09"
+      ],
+      "assertion": "Frightened center choices increase corridor distance when possible",
+      "case": "flee",
+      "score_owner": "D3-flee"
+    },
+    {
+      "id": "D3-capture",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:CAPTURE-01"
+      ],
+      "assertion": "Live vulnerable contacts grant the 200/400/800/1600 chain without damage or duplicate capture",
+      "case": "capture",
+      "score_owner": "D3-capture"
+    },
+    {
+      "id": "D3-return",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:CAPTURE-02"
+      ],
+      "assertion": "A captured ghost travels home harmlessly and rejoins without a threshold wait",
+      "case": "return",
+      "score_owner": "D3-return"
+    },
+    {
+      "id": "D3-death",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:LIFE-01"
+      ],
+      "assertion": "Simultaneous dangerous contacts cost exactly one life and stop gameplay during dying",
+      "case": "death",
+      "score_owner": "D3-death"
+    },
+    {
+      "id": "D3-recovery",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:LIFE-02"
+      ],
+      "assertion": "Three-second recovery preserves board/score and resets life-level timers and transients",
+      "case": "recovery",
+      "score_owner": "D3-recovery"
+    },
+    {
+      "id": "D3-loss",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:LIFE-03"
+      ],
+      "assertion": "Final contact produces one three-second death interval then a frozen GAME OVER",
+      "case": "loss",
+      "score_owner": "D3-loss"
+    },
+    {
+      "id": "D3-extra_life",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:LIFE-04"
+      ],
+      "assertion": "A positive score change crosses 2000 progress, grants one life and discards overflow",
+      "case": "extra_life",
+      "score_owner": "D3-extra_life"
+    },
+    {
+      "id": "D3-fruit_spawn",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:FRUIT-01"
+      ],
+      "assertion": "70/170 ordinary-dot thresholds produce a ten-second pineapple or spend a skipped opportunity",
+      "case": "fruit_spawn",
+      "score_owner": "D3-fruit_spawn"
+    },
+    {
+      "id": "D3-fruit_reward",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:FRUIT-02",
+        "gdd:ASSET-03"
+      ],
+      "assertion": "Fruit contact grants 1000 once without changing ordinary counts and presents feedback",
+      "case": "fruit_reward",
+      "score_owner": "D3-fruit_reward"
+    },
+    {
+      "id": "D3-fruit_expiry",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:FRUIT-01",
+        "gdd:FRUIT-02"
+      ],
+      "assertion": "Fruit expires at ten active seconds without reward and cannot be picked at expiry",
+      "case": "fruit_expiry",
+      "score_owner": "D3-fruit_expiry"
+    },
+    {
+      "id": "D3-victory",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:FLOW-03",
+        "gdd:FLOW-04"
+      ],
+      "assertion": "Only the last ordinary dot wins, awards ten and precedes simultaneous hazards",
+      "case": "victory",
+      "score_owner": "D3-victory"
+    },
+    {
+      "id": "D3-pause",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:PAUSE-01",
+        "gdd:TIME-01"
+      ],
+      "assertion": "Pause freezes position, resources and every active clock and rejects input leakage",
+      "case": "pause",
+      "score_owner": "D3-pause"
+    },
+    {
+      "id": "D2-movement",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:MOVE-01",
+        "gdd:MOVE-02",
+        "gdd:MOVE-03",
+        "gdd:MOVE-04"
+      ],
+      "assertion": "The live player responds to normal directional input",
+      "case": "speed",
+      "score_owner": "D2-movement"
+    },
+    {
+      "id": "D2-power",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:POWER-01",
+        "gdd:POWER-02"
+      ],
+      "assertion": "An energizer actually changes the running power state",
+      "case": "power",
+      "score_owner": "D2-power"
+    },
+    {
+      "id": "D2-release",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:GHOST-02",
+        "gdd:GHOST-03"
+      ],
+      "assertion": "Waiting ghosts visibly depart their home",
+      "case": "release",
+      "score_owner": "D2-release"
+    },
+    {
+      "id": "D2-pursuit",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:GHOST-04",
+        "gdd:GHOST-05",
+        "gdd:GHOST-06",
+        "gdd:GHOST-07",
+        "gdd:GHOST-08",
+        "gdd:GHOST-09"
+      ],
+      "assertion": "All four pursuit roles have live moving behavior",
+      "case": "ghost_speed",
+      "score_owner": "D2-pursuit"
+    },
+    {
+      "id": "D2-capture",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:CAPTURE-01",
+        "gdd:CAPTURE-02"
+      ],
+      "assertion": "Vulnerable contact visibly creates a returning ghost",
+      "case": "capture",
+      "score_owner": "D2-capture"
+    },
+    {
+      "id": "D2-fruit",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:FRUIT-01",
+        "gdd:FRUIT-02",
+        "gdd:ASSET-03"
+      ],
+      "assertion": "Supplied pineapple parts appear and the fruit is collectible",
+      "case": "fruit_reward",
+      "score_owner": "D2-fruit"
+    },
+    {
+      "id": "D2-recovery",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:LIFE-01",
+        "gdd:LIFE-02"
+      ],
+      "assertion": "Death feedback and nonfinal recovery are implemented",
+      "case": "recovery",
+      "score_owner": "D2-recovery"
+    },
+    {
+      "id": "D2-extra_life",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:LIFE-04"
+      ],
+      "assertion": "Extra-life functionality can grant a life",
+      "case": "extra_life",
+      "score_owner": "D2-extra_life"
+    },
+    {
+      "id": "D2-results",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:FLOW-04",
+        "gdd:LIFE-03"
+      ],
+      "assertion": "Both distinct win and loss interfaces can be reached",
+      "case": "victory",
+      "score_owner": "D2-results"
+    },
+    {
+      "id": "D2-pause",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:PAUSE-01",
+        "gdd:PAUSE-02"
+      ],
+      "assertion": "A usable pause overlay offers the required actions",
+      "case": "pause",
+      "score_owner": "D2-pause"
+    },
+    {
+      "id": "D4-restart_normal",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:PAUSE-02"
+      ],
+      "assertion": "Normal Restart clears the previous normal run and all delayed effects",
+      "case": "restart_normal",
+      "score_owner": "D4-restart_normal"
+    },
+    {
+      "id": "D4-restart_fright",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:POWER-02",
+        "gdd:PAUSE-02"
+      ],
+      "assertion": "Normal Restart clears the previous fright run and all delayed effects",
+      "case": "restart_fright",
+      "score_owner": "D4-restart_fright"
+    },
+    {
+      "id": "D4-restart_return",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:CAPTURE-02",
+        "gdd:PAUSE-02"
+      ],
+      "assertion": "Normal Restart clears the previous return run and all delayed effects",
+      "case": "restart_return",
+      "score_owner": "D4-restart_return"
+    },
+    {
+      "id": "D4-restart_fruit",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:FRUIT-01",
+        "gdd:PAUSE-02"
+      ],
+      "assertion": "Normal Restart clears the previous fruit run and all delayed effects",
+      "case": "restart_fruit",
+      "score_owner": "D4-restart_fruit"
+    },
+    {
+      "id": "D4-restart_dying",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:LIFE-01",
+        "gdd:PAUSE-02"
+      ],
+      "assertion": "Normal Restart clears the previous dying run and all delayed effects",
+      "case": "restart_dying",
+      "score_owner": "D4-restart_dying"
+    },
+    {
+      "id": "D4-restart_won",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:FLOW-04",
+        "gdd:PAUSE-02"
+      ],
+      "assertion": "Normal Restart clears the previous won run and all delayed effects",
+      "case": "restart_won",
+      "score_owner": "D4-restart_won"
+    },
+    {
+      "id": "D4-restart_lost",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:LIFE-03",
+        "gdd:PAUSE-02"
+      ],
+      "assertion": "Normal Restart clears the previous lost run and all delayed effects",
+      "case": "restart_lost",
+      "score_owner": "D4-restart_lost"
+    },
+    {
+      "id": "D4-menu",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:MENU-01",
+        "gdd:QUALITY-05"
+      ],
+      "assertion": "Options returns to its origin and Main Menu discards the run without losing focus",
+      "case": "menu_navigation",
+      "score_owner": "D4-menu"
+    },
+    {
+      "id": "D2-menus",
+      "dimension": "D2",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:MENU-01",
+        "gdd:MENU-02",
+        "gdd:OPTIONS-01"
+      ],
+      "assertion": "Main/pause/options controls are dynamically reachable",
+      "case": "menu_navigation",
+      "score_owner": "D2-menus"
+    },
+    {
+      "id": "D3-options",
+      "dimension": "D3",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:OPTIONS-01",
+        "gdd:OPTIONS-02"
+      ],
+      "assertion": "Pending settings remain unapplied and Revert/Back discard them",
+      "case": "options",
+      "score_owner": "D3-options"
+    },
+    {
+      "id": "D4-options",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:OPTIONS-03"
+      ],
+      "assertion": "Apply changes actual engine settings and the window, while preserving operability",
+      "case": "options",
+      "score_owner": "D4-options"
+    },
+    {
+      "id": "D5-options",
+      "dimension": "D5",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:OPTIONS-01",
+        "gdd:OPTIONS-02",
+        "gdd:OPTIONS-03",
+        "gdd:VISUAL-06"
+      ],
+      "assertion": "Labels, selectors and pending actions stay readable and clickable after resize",
+      "case": "options",
+      "score_owner": "D5-options"
+    },
+    {
+      "id": "D4-save",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:SAVE-01",
+        "gdd:MENU-02"
+      ],
+      "assertion": "Earned high score persists across normal close and never decreases",
+      "case": "persistence",
+      "score_owner": "D4-save"
+    },
+    {
+      "id": "D4-reopen",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:SAVE-02",
+        "gdd:QUALITY-01"
+      ],
+      "assertion": "A new process opens the menu and starts a fresh run without restoring partial state",
+      "case": "persistence",
+      "score_owner": "D4-reopen"
+    },
+    {
+      "id": "D4-quit",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:MENU-02"
+      ],
+      "assertion": "Visible Quit closes its owned game process normally",
+      "case": "persistence",
+      "score_owner": "D4-quit"
+    },
+    {
+      "id": "D4-repeat",
+      "dimension": "D4",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:QUALITY-06"
+      ],
+      "assertion": "Repeated fresh runs reproduce initial resources and normal basic behavior",
+      "case": "persistence",
+      "score_owner": "D4-repeat"
+    },
+    {
+      "id": "D5-power",
+      "dimension": "D5",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:VISUAL-03",
+        "gdd:VISUAL-05",
+        "gdd:QUALITY-04"
+      ],
+      "assertion": "Energizer causes a bounded camera impulse and visible empowered/vulnerable appearance",
+      "case": "power",
+      "score_owner": "D5-power"
+    },
+    {
+      "id": "D5-capture",
+      "dimension": "D5",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:VISUAL-03",
+        "gdd:VISUAL-05"
+      ],
+      "assertion": "Capture visibly reduces the ghost body and produces a bounded impulse",
+      "case": "capture",
+      "score_owner": "D5-capture"
+    },
+    {
+      "id": "D5-fruit",
+      "dimension": "D5",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:FRUIT-02",
+        "gdd:VISUAL-05"
+      ],
+      "assertion": "Fruit reward overlay and camera impulse appear and settle within their deadlines",
+      "case": "fruit_reward",
+      "score_owner": "D5-fruit"
+    },
+    {
+      "id": "D5-death",
+      "dimension": "D5",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:LIFE-01",
+        "gdd:VISUAL-05"
+      ],
+      "assertion": "Death feedback and a usable Restart appear promptly",
+      "case": "death",
+      "score_owner": "D5-death"
+    },
+    {
+      "id": "D5-results",
+      "dimension": "D5",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:FLOW-04",
+        "gdd:LIFE-03",
+        "gdd:SAVE-01",
+        "gdd:VISUAL-06"
+      ],
+      "assertion": "Result titles, score/record and all terminal actions are readable and reachable",
+      "case": "victory",
+      "score_owner": "D5-results"
+    },
+    {
+      "id": "D5-camera",
+      "dimension": "D5",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:VISUAL-04",
+        "gdd:VISUAL-02"
+      ],
+      "assertion": "Following perspective camera keeps the animated player within the central view",
+      "case": "presentation",
+      "score_owner": "D5-camera"
+    },
+    {
+      "id": "D5-honesty",
+      "dimension": "D5",
+      "stage": "dynamic",
+      "sources": [
+        "gdd:OBSERVE-01",
+        "gdd:QUALITY-04"
+      ],
+      "assertion": "Independent native transforms, public state and client frames agree across input",
+      "case": "presentation",
+      "score_owner": "D5-honesty"
+    }
+  ]
+}

@@ -1,0 +1,573 @@
+{
+  "schema_version": "2.1",
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "method": "engine_collection_and_requirement_level_review",
+  "checks": [
+    {
+      "id": "D1-01",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-01"
+      ],
+      "description": "Project imports without an engine failure",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-02",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-02"
+      ],
+      "description": "Configured main scene runs",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-03",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-03"
+      ],
+      "description": "No candidate parse, script or resource loading errors",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-04",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-04"
+      ],
+      "description": "Live dashboard snapshots are available",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-05",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-05"
+      ],
+      "description": "Public dashboard shape and required numeric slots",
+      "max_score": 2.0
+    },
+    {
+      "id": "entry_001",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:MAIN-01"
+      ],
+      "description": "Launch, choose Quick play | Show a menu, then the fixed two-side Plain and Simple match | Require custom setup or hidden actions | Menu changes to 3D battlefield",
+      "max_score": 10.0
+    },
+    {
+      "id": "entry_002",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:MAIN-02"
+      ],
+      "description": "Start or restart | Each side starts with one completed Command Center, two Workers, one Drone; player has 10 blue and 10 red resources | Retain prior units/resources | Initial units and HUD",
+      "max_score": 10.0
+    },
+    {
+      "id": "entry_003",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:MAP-01"
+      ],
+      "description": "Enter match | Flat bounded ground 0–50 on both axes; friendly base (10,7), enemy base (40,43); blue/red deposits near each with reserves sufficient to build every structure/unit type | Block every route or change layout on restart | Ownership/minerals distinguishable; deposit arrangement is free",
+      "max_score": 10.0
+    },
+    {
+      "id": "entry_004",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-01"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-01",
+      "max_score": 1.538462
+    },
+    {
+      "id": "entry_005",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-07"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-07",
+      "max_score": 1.0
+    },
+    {
+      "id": "entry_006",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-08"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-08",
+      "max_score": 1.0
+    },
+    {
+      "id": "entry_007",
+      "dimension": "D3",
+      "requirement_ids": [
+        "common-baseline:CB-15"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-15",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_001",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:SELECT-01"
+      ],
+      "description": "Left click friendly unit/building or empty ground | Select object and show health/context controls, or clear on empty ground | Control enemies | Selection marker",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_002",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:SELECT-02"
+      ],
+      "description": "Drag; Shift-select | Rectangle selects friendly mobiles inside it; Shift adds/removes without clearing others | Select enemies or outside objects | Group markers",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_003",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ECON-01"
+      ],
+      "description": "Worker right-clicks blue/red minerals | Travel, gather, return to completed friendly Command Center and credit the correct resource; repeat | Credit before deposit or duplicate delivery | Movement and HUD update",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_004",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:ECON-02"
+      ],
+      "description": "Source empty or no completed destination | Stop invalid gathering safely | Generate resources from nothing | Idle/unavailable state",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_005",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:BUILD-01"
+      ],
+      "description": "Worker places valid affordable blueprint | Charge listed cost once, construct over visible nonzero duration, become usable on completion | Produce/fire while unfinished | Progress and completed appearance",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_006",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:BUILD-02"
+      ],
+      "description": "Placement outside bounds, overlapping solids, or unaffordable | Reject without resource/object changes | Charge invalid placement | Invalid preview/reason",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_007",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:BUILD-03"
+      ],
+      "description": "R or right click during preview | R rotates a quarter-turn; right click cancels without charge | Build on cancel | Rotated/removed preview",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_008",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:BUILD-04"
+      ],
+      "description": "Selected building destroyed | Remove selection, controls, queues, minimap/fog presence; discard pending production without refund | Stale controls or post-destruction output | Other units remain controllable",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_009",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PROD-01"
+      ],
+      "description": "Unit chosen at completed compatible producer | Charge once, append FIFO entry, max five including active; produce after listed simulation time | Unfinished/incompatible production or sixth entry | Ordered queue/progress",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_010",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PROD-02"
+      ],
+      "description": "Click queued or blocked entry | Remove it and refund full cost once | Double refund or cancelled output | Queue/resources update",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_011",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PROD-03"
+      ],
+      "description": "Completed first ground entry has no free output space | Wait at front with blocked label; after space clears spawn once without charge, then continue | Lose/overlap output or pass later entries ahead | Automatic unblock",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_012",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:AIR-01"
+      ],
+      "description": "Helicopter/Drone finishes | Spawn at flight altitude in free nearby in-bounds airspace; occupied airspace waits as PROD-03 | Aircraft overlap or remain stuck after clearing | Aircraft and queue update",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_013",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:RALLY-01"
+      ],
+      "description": "Factory right-clicks ground/friendly unit | Set visible rally destination; new output moves there or toward living target | Move factory or change old unit commands | Destroyed target falls back to last valid position",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_014",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-01"
+      ],
+      "description": "Mobiles right-click terrain | Move toward destination inside bounds; ground avoids solids, aircraft flies above terrain | Teleport or ignore a new valid order | Travel then stop",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_015",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-02"
+      ],
+      "description": "Armed unit right-clicks supported visible enemy | Approach and attack with nonzero cadence; remove at zero HP | Damage friendly/unsupported targets | Attack, health and destruction",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_016",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-03"
+      ],
+      "description": "Unsupported target/unarmed unit ordered to attack | Reject without damage | Worker/Drone attack or ground weapon damages aircraft | Movement remains usable",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_017",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COMBAT-04"
+      ],
+      "description": "Enemy enters completed turret range | Attack supported domain automatically | Fire unfinished or at unsupported targets | Distinct ground/air turret roles",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_018",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:AI-01"
+      ],
+      "description": "Match progresses | Enemy may gather and build defenses; initial completed anti-ground turret covers its base approach | Produce offensive mobiles such as Tanks/Helicopters | Defensive construction/fire",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_019",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:AI-02"
+      ],
+      "description": "Enemy economy left uninterrupted | Enemy Workers can advance and construct anti-ground defenses within range of friendly base, enabling defeat through ordinary play | Require debug controls to lose | Visible construction precedes damage; player can prevent it",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_020",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:VIEW-01"
+      ],
+      "description": "Hold WASD, use wheel | Continuous pan, bounded zoom | Edge scroll or Q/E/middle-mouse rotation | Useful battlefield view",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_021",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:GROUP-01"
+      ],
+      "description": "Ctrl+1–9 then 1–9 | Store selection and recall surviving members | Recall destroyed/enemy objects | Selection markers",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_022",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:SHORTCUT-01"
+      ],
+      "description": "Home, I, F1 | Focus friendly base, cycle idle Workers, toggle controls help respectively | Select destroyed Workers | Camera/selection/help update",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_023",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:FOG-01"
+      ],
+      "description": "Units explore | Hide enemies outside friendly vision; retain explored terrain; minimap shows currently visible enemy locations | Minimap reveals unseen enemies | Fog/minimap agree; radius is free",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_024",
+      "dimension": "D3",
+      "requirement_ids": [
+        "common-baseline:CB-04"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-04",
+      "max_score": 0.769231
+    },
+    {
+      "id": "core_025",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-05"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-05",
+      "max_score": 1.0
+    },
+    {
+      "id": "core_026",
+      "dimension": "D3",
+      "requirement_ids": [
+        "common-baseline:CB-06"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-06",
+      "max_score": 0.769225
+    },
+    {
+      "id": "core_027",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-09"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-09",
+      "max_score": 1.0
+    },
+    {
+      "id": "success_001",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:END-01"
+      ],
+      "description": "No completed enemy base remains, friendly base remains | Victory freezes match | Remaining non-command units prevent victory | Restart/Main Menu",
+      "max_score": 1.538462
+    },
+    {
+      "id": "success_002",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:END-02"
+      ],
+      "description": "No completed friendly base remains | Defeat freezes match; priority on simultaneous final-base loss | Unfinished bases or surviving units prevent defeat | Restart/Main Menu",
+      "max_score": 1.538462
+    },
+    {
+      "id": "success_003",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:HUD-01"
+      ],
+      "description": "Match state changes | Show resources, elapsed simulation time, mobile count, idle Workers, selected health, construction/queue progress, blocked output, events | Stale totals or progress during pause | Immediate readable changes",
+      "max_score": 1.0
+    },
+    {
+      "id": "success_004",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:ART-01"
+      ],
+      "description": "Battlefield visible | Use supplied model identities for Workers, Tanks, Helicopters, Drones, factories, turrets, minerals; assemble recognizable bases from supplied structures | Unrelated replacement identities | Ownership and ground/air distinction",
+      "max_score": 1.0
+    },
+    {
+      "id": "success_005",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-02"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-02",
+      "max_score": 1.538462
+    },
+    {
+      "id": "success_006",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-10"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-10",
+      "max_score": 1.0
+    },
+    {
+      "id": "success_007",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-11"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-11",
+      "max_score": 1.538462
+    },
+    {
+      "id": "success_008",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-16"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-16",
+      "max_score": 1.0
+    },
+    {
+      "id": "success_009",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-17"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-17",
+      "max_score": 1.0
+    },
+    {
+      "id": "success_010",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-18"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-18",
+      "max_score": 1.0
+    },
+    {
+      "id": "failure_001",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-12"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-12",
+      "max_score": 1.538462
+    },
+    {
+      "id": "failure_002",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-14"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-14",
+      "max_score": 1.538462
+    },
+    {
+      "id": "lifecycle_001",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:LIFE-01"
+      ],
+      "description": "Escape during play/pause or Resume | Pause/resume preserving state and freezing simulation timers | Background orders/timers | Resume/Restart/Main Menu panel",
+      "max_score": 1.538462
+    },
+    {
+      "id": "lifecycle_002",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:LIFE-02"
+      ],
+      "description": "Restart from pause/result | Clean MAIN-02 state; clear queues/groups/selection | Retain paused/result state | Fresh battlefield",
+      "max_score": 1.538462
+    },
+    {
+      "id": "lifecycle_003",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:LIFE-03"
+      ],
+      "description": "Main Menu from pause/result | End match and return to menu; Quick play starts fresh | Background simulation | Usable menu",
+      "max_score": 1.538462
+    },
+    {
+      "id": "lifecycle_004",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:LIFE-04"
+      ],
+      "description": "Close/reopen | Menu with no saved match | Resume unfinished match | Initial menu",
+      "max_score": 1.538462
+    },
+    {
+      "id": "lifecycle_005",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-03"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-03",
+      "max_score": 1.538462
+    },
+    {
+      "id": "lifecycle_006",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-13"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-13",
+      "max_score": 1.538456
+    },
+    {
+      "id": "D6-01",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:composition"
+      ],
+      "description": "Overall composition and task visual identity",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-02",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:objects"
+      ],
+      "description": "Required objects, character and asset identity",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-03",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:ui"
+      ],
+      "description": "UI readability and information hierarchy",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-04",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:feedback"
+      ],
+      "description": "State transitions and visual feedback",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-05",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:consistency"
+      ],
+      "description": "Visual consistency across gameplay and result states",
+      "max_score": 2.0
+    }
+  ],
+  "d6_protocol": "d6/protocol.json"
+}

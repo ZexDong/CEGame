@@ -1,0 +1,874 @@
+{
+  "schema_version": "2.0.0",
+  "language": "en",
+  "asset_count": 30,
+  "source_identity": {
+    "upstream_commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+    "upstream_tag": "23-06-2026",
+    "license": "MIT"
+  },
+  "clean_asset_policy": {
+    "content_only_plugin": true,
+    "author_facing_content_removed": true,
+    "credit_and_community_ui_removed": true,
+    "gameplay_and_answer_assets_removed": true,
+    "legal_notice_retained_only_under_legal": true,
+    "privacy_scan_scope": "All released uasset bytes were scanned for URLs, author names, personal identifiers, email addresses, and host absolute paths."
+  },
+  "assets": [
+    {
+      "asset_id": "m_emissive_master",
+      "display_name": "M Emissive Master",
+      "path": "starter-project/Content/Bomber/Materials/M_Emissive_Master.uasset",
+      "unreal_object_path": "/Game/Bomber/Materials/M_Emissive_Master",
+      "asset_type": "Unreal Material",
+      "semantic_role": "Required marker parent material",
+      "requirement_ids": [
+        "ASSET-04"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_dependency",
+      "hard_dependencies": [],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Content/Bomber/Materials/M_Emissive_Master.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 16842,
+      "sha256": "0699c486ebbd7f7eb8ed75205f1cb72871bf85be5f609b470cb15852df7b37f7",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "m_bomb",
+      "display_name": "M Bomb",
+      "path": "starter-project/Content/Bomber/Materials/MI_Bombs/M_Bomb.uasset",
+      "unreal_object_path": "/Game/Bomber/Materials/MI_Bombs/M_Bomb",
+      "asset_type": "Unreal Material",
+      "semantic_role": "Required bomb parent material",
+      "requirement_ids": [
+        "ASSET-04"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_dependency",
+      "hard_dependencies": [
+        "/Game/Bomber/Meshes/SM_Bomb"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Content/Bomber/Materials/MI_Bombs/M_Bomb.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 13633,
+      "sha256": "aa37b30f9e2d23c9e4830d7c4bbfb755471992b4412a22f053f24f07a446247a",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "mi_bomb_blue",
+      "display_name": "MI Bomb Blue",
+      "path": "starter-project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Blue.uasset",
+      "unreal_object_path": "/Game/Bomber/Materials/MI_Bombs/MI_Bomb_Blue",
+      "asset_type": "Unreal MaterialInstance",
+      "semantic_role": "Required supplied bomb owner-color option",
+      "requirement_ids": [
+        "ASSET-04"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_asset",
+      "hard_dependencies": [
+        "/Engine/EngineMaterials/RandomAngles",
+        "/Game/Bomber/Materials/MI_Bombs/M_Bomb"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Content/Bomber/Materials/MI_Bombs/MI_Bomb_Blue.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 10233,
+      "sha256": "21d8f5ee29dc2409ab26cdce26481cf4eccc76a8e56231d71efe535c3d9a3354",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "mi_bomb_pink",
+      "display_name": "MI Bomb Pink",
+      "path": "starter-project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Pink.uasset",
+      "unreal_object_path": "/Game/Bomber/Materials/MI_Bombs/MI_Bomb_Pink",
+      "asset_type": "Unreal MaterialInstance",
+      "semantic_role": "Required supplied bomb owner-color option",
+      "requirement_ids": [
+        "ASSET-04"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_asset",
+      "hard_dependencies": [
+        "/Engine/EngineMaterials/RandomAngles",
+        "/Game/Bomber/Materials/MI_Bombs/M_Bomb"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Content/Bomber/Materials/MI_Bombs/MI_Bomb_Pink.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 10348,
+      "sha256": "8ed55f76144e4ea67be36b0b8bcf7e6ef6b7a3c5c1f13a6c00c5476a9b52c916",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "mi_bomb_silver",
+      "display_name": "MI Bomb Silver",
+      "path": "starter-project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Silver.uasset",
+      "unreal_object_path": "/Game/Bomber/Materials/MI_Bombs/MI_Bomb_Silver",
+      "asset_type": "Unreal MaterialInstance",
+      "semantic_role": "Required supplied bomb owner-color option",
+      "requirement_ids": [
+        "ASSET-04"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_asset",
+      "hard_dependencies": [
+        "/Engine/EngineMaterials/RandomAngles",
+        "/Game/Bomber/Materials/MI_Bombs/M_Bomb"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Content/Bomber/Materials/MI_Bombs/MI_Bomb_Silver.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 9589,
+      "sha256": "f2822e38849cb341cbd7ada507bc3363aee0f7309a550d34b2cad0d4308265dc",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "mi_bomb_yellow",
+      "display_name": "MI Bomb Yellow",
+      "path": "starter-project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Yellow.uasset",
+      "unreal_object_path": "/Game/Bomber/Materials/MI_Bombs/MI_Bomb_Yellow",
+      "asset_type": "Unreal MaterialInstance",
+      "semantic_role": "Required supplied bomb owner-color option",
+      "requirement_ids": [
+        "ASSET-04"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_asset",
+      "hard_dependencies": [
+        "/Engine/EngineMaterials/RandomAngles",
+        "/Game/Bomber/Materials/MI_Bombs/M_Bomb"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Content/Bomber/Materials/MI_Bombs/MI_Bomb_Yellow.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 10049,
+      "sha256": "1dd0f1fd9a2c0f23cd2a45e97ca7aebfc15533ab4505fcf1a70b8f8034123348",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "mi_player_arrow_start",
+      "display_name": "MI PlayerArrowStart",
+      "path": "starter-project/Content/Bomber/Materials/MI_PlayerArrowStart.uasset",
+      "unreal_object_path": "/Game/Bomber/Materials/MI_PlayerArrowStart",
+      "asset_type": "Unreal MaterialInstance",
+      "semantic_role": "Required marker material",
+      "requirement_ids": [
+        "ASSET-04"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_asset",
+      "hard_dependencies": [
+        "/Game/Bomber/Materials/M_Emissive_Master"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Content/Bomber/Materials/MI_PlayerArrowStart.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 10755,
+      "sha256": "be24335ca312bba837ed3986eba3e6d96ab6d6acfc966cfca06452d213ee7a30",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "sm_bomb",
+      "display_name": "SM Bomb",
+      "path": "starter-project/Content/Bomber/Meshes/SM_Bomb.uasset",
+      "unreal_object_path": "/Game/Bomber/Meshes/SM_Bomb",
+      "asset_type": "Unreal StaticMesh",
+      "semantic_role": "Required visible bomb mesh",
+      "requirement_ids": [
+        "ASSET-04"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_asset",
+      "hard_dependencies": [
+        "/Engine/EngineMaterials/WorldGridMaterial",
+        "/Script/NavigationSystem"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Content/Bomber/Meshes/SM_Bomb.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 120550,
+      "sha256": "fc377d4340379a3a7cbcf74018fdcb8524b4926987d4f89f4f0d33463864f8a6",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "sm_player_arrow_start",
+      "display_name": "SM PlayerArrowStart",
+      "path": "starter-project/Content/Bomber/Meshes/SM_PlayerArrowStart.uasset",
+      "unreal_object_path": "/Game/Bomber/Meshes/SM_PlayerArrowStart",
+      "asset_type": "Unreal StaticMesh",
+      "semantic_role": "Required visible Player 1 start marker mesh",
+      "requirement_ids": [
+        "ASSET-04"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_asset",
+      "hard_dependencies": [
+        "/Game/Bomber/Materials/MI_PlayerArrowStart",
+        "/Script/NavigationSystem"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Content/Bomber/Meshes/SM_PlayerArrowStart.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 18255,
+      "sha256": "1114d30c106ec306a4c1d41c584b7748cca564feafdc607798627292aa0e98c4",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "skel_bomber",
+      "display_name": "SKEL Bomber",
+      "path": "starter-project/Content/Bomber/SkeletalMeshes/SKEL_Bomber.uasset",
+      "unreal_object_path": "/Game/Bomber/SkeletalMeshes/SKEL_Bomber",
+      "asset_type": "Unreal Skeleton",
+      "semantic_role": "Required character skeleton dependency",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_dependency",
+      "hard_dependencies": [],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Content/Bomber/SkeletalMeshes/SKEL_Bomber.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 40479,
+      "sha256": "83ab3d681834911e811bf52802292d2d918052a70cb8fcbaeb5ac8f10758a16f",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "mm_manny_idle",
+      "display_name": "MM Manny Idle",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Animations/MM_Manny_Idle.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Animations/MM_Manny_Idle",
+      "asset_type": "Unreal AnimSequence",
+      "semantic_role": "Required character idle animation",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_asset",
+      "hard_dependencies": [
+        "/ACLPlugin/ACLAnimBoneCompressionSettings",
+        "/ACLPlugin/ACLAnimCurveCompressionSettings",
+        "/BlockoutMap/BlockoutMap/Characters/Mannequins/Meshes/SKM_Quinn_Simple",
+        "/Engine/Animation/DefaultVariableFrameStrippingSettings",
+        "/Game/Bomber/SkeletalMeshes/SKEL_Bomber",
+        "/Script/AnimationData",
+        "/Script/AnimationModifiers",
+        "/Script/ControlRig",
+        "/Script/InterchangeEngine",
+        "/Script/MovieScene"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Animations/MM_Manny_Idle.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 1208891,
+      "sha256": "1cbd9e9120bde2ec5f1bc82fa335679ad21a3842012a26cddb94d2d2539ea228",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "m_mannequin",
+      "display_name": "M Mannequin",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/M_Mannequin.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Materials/M_Mannequin",
+      "asset_type": "Unreal Material",
+      "semantic_role": "Required parent material dependency for the character kit",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_dependency",
+      "hard_dependencies": [
+        "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_BN",
+        "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_D",
+        "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA",
+        "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Shared/T_UE_Logo_M",
+        "/Engine/Functions/Engine_MaterialFunctions01/Opacity/CameraDepthFade",
+        "/Engine/Functions/Engine_MaterialFunctions01/Texturing/ScaleUVsByCenter",
+        "/Engine/Functions/Engine_MaterialFunctions02/Utility/BreakOutFloat2Components"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/M_Mannequin.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 55390,
+      "sha256": "e227093116da12734443c381fb402ae0c508a0015108a4533239a16c682a97d4",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "mi_quinn_01",
+      "display_name": "MI Quinn 01",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_01.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_01",
+      "asset_type": "Unreal MaterialInstance",
+      "semantic_role": "Required Player 1 character material",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_asset",
+      "hard_dependencies": [
+        "/BlockoutMap/BlockoutMap/Characters/Mannequins/Materials/M_Mannequin",
+        "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_D",
+        "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_MRA",
+        "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_N"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_01.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 12578,
+      "sha256": "0eb7e33313e3ac3ed5dd4c3f3c89750a18ddf29271e00f8ef703039a35d03a4d",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "mi_quinn_02",
+      "display_name": "MI Quinn 02",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_02.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_02",
+      "asset_type": "Unreal MaterialInstance",
+      "semantic_role": "Required Player 2 character material",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_asset",
+      "hard_dependencies": [
+        "/BlockoutMap/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_01",
+        "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_D",
+        "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_MRA",
+        "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_N"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_02.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 11812,
+      "sha256": "0d674fc327b3d5dddd847061b1c88423eedb8274a20045d3aba6817cd49ce64d",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "skm_quinn_simple",
+      "display_name": "SKM Quinn Simple",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Meshes/SKM_Quinn_Simple.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Meshes/SKM_Quinn_Simple",
+      "asset_type": "Unreal SkeletalMesh",
+      "semantic_role": "Required visible character mesh for both players",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_asset",
+      "hard_dependencies": [
+        "/BlockoutMap/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_01",
+        "/BlockoutMap/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_02",
+        "/Game/Bomber/SkeletalMeshes/SKEL_Bomber",
+        "/Script/InterchangeEngine"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Meshes/SKM_Quinn_Simple.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 10839298,
+      "sha256": "ca3aef7d6fc4f05ea3bec05647e7b756b00f64fa8001a590721a53a31705e867",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "t_manny_01_bn",
+      "display_name": "T Manny 01 BN",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_BN.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_BN",
+      "asset_type": "Unreal Texture2D",
+      "semantic_role": "Required texture dependency for the character material kit",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_dependency",
+      "hard_dependencies": [],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_BN.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 1415930,
+      "sha256": "e79c94da260884dbbf7003b896f291de5acaa5c1f2cf0a75143044ff90c13ad8",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "t_manny_01_d",
+      "display_name": "T Manny 01 D",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_D.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_D",
+      "asset_type": "Unreal Texture2D",
+      "semantic_role": "Required texture dependency for the character material kit",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_dependency",
+      "hard_dependencies": [],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_D.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 687614,
+      "sha256": "0724df9913f29c30f0fce811d6d95cff8f28261574d6c11e96567170964f4b90",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "t_manny_01_mra",
+      "display_name": "T Manny 01 MRA",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA",
+      "asset_type": "Unreal Texture2D",
+      "semantic_role": "Required texture dependency for the character material kit",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_dependency",
+      "hard_dependencies": [],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 696119,
+      "sha256": "69da36dd1fe8c3128a2fd02998ee89ebe29f9217002464f8341597c3e9cb86ca",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "t_quinn_01_d",
+      "display_name": "T Quinn 01 D",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_D.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_D",
+      "asset_type": "Unreal Texture2D",
+      "semantic_role": "Required texture dependency for the character material kit",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_dependency",
+      "hard_dependencies": [],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_D.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 658626,
+      "sha256": "60d91a481e0ecccfdcb5a576583b9199622375edcd347f0f4e6495330ef3b821",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "t_quinn_01_mra",
+      "display_name": "T Quinn 01 MRA",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_MRA.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_MRA",
+      "asset_type": "Unreal Texture2D",
+      "semantic_role": "Required texture dependency for the character material kit",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_dependency",
+      "hard_dependencies": [],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_MRA.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 764541,
+      "sha256": "f94755b1a0afb76df0e01311f876a795b1a34be67c110515869f2aa13d96dad1",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "t_quinn_01_n",
+      "display_name": "T Quinn 01 N",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_N.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_N",
+      "asset_type": "Unreal Texture2D",
+      "semantic_role": "Required texture dependency for the character material kit",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_dependency",
+      "hard_dependencies": [],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_N.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 1256907,
+      "sha256": "cb7effad1e88bc1c5271b8dfbeb6116c7605d1abf163c572611d137028b452b7",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "t_quinn_02_d",
+      "display_name": "T Quinn 02 D",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_D.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_D",
+      "asset_type": "Unreal Texture2D",
+      "semantic_role": "Required texture dependency for the character material kit",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_dependency",
+      "hard_dependencies": [],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_D.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 928506,
+      "sha256": "ba6db8596e76d378c9153b86dd36b1ac3db5acce5a7c32294cf1c642c2182df0",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "t_quinn_02_mra",
+      "display_name": "T Quinn 02 MRA",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_MRA.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_MRA",
+      "asset_type": "Unreal Texture2D",
+      "semantic_role": "Required texture dependency for the character material kit",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_dependency",
+      "hard_dependencies": [],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_MRA.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 943558,
+      "sha256": "4f4d4974d5911c9c3e198539e985adfca3352d0c99c5fa491f17071685d0119a",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "t_quinn_02_n",
+      "display_name": "T Quinn 02 N",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_N.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_N",
+      "asset_type": "Unreal Texture2D",
+      "semantic_role": "Required texture dependency for the character material kit",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_dependency",
+      "hard_dependencies": [],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_N.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 1516990,
+      "sha256": "6634c1c525eddc9d52bc40fe1ef24593d9df8bf9afcab7dcb577ce551448c112",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "t_ue_logo_m",
+      "display_name": "T UE Logo M",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Shared/T_UE_Logo_M.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Shared/T_UE_Logo_M",
+      "asset_type": "Unreal Texture2D",
+      "semantic_role": "Required texture dependency for the character material kit",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_dependency",
+      "hard_dependencies": [],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Shared/T_UE_Logo_M.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 59795,
+      "sha256": "8a7854ccb25b7649b5d440384aadb97dfe9969b45049805c1a960ee1b4d3f060",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "sm_blockout_map_box",
+      "display_name": "SM BlockoutMap Box",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Box.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Meshes/SM_BlockoutMap_Box",
+      "asset_type": "Unreal StaticMesh",
+      "semantic_role": "Required visible destructible-crate mesh",
+      "requirement_ids": [
+        "ASSET-02"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_asset",
+      "hard_dependencies": [
+        "/Engine/Engine_MI_Shaders/Instances/M_ES_Phong_Opaque_INST_01",
+        "/Script/NavigationSystem"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Box.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 14994,
+      "sha256": "6fccd03f76f5ef66ce9bf94cd8853143020f5fe302667cbff2456dae4fa459c0",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "sm_blockout_map_powerup_bomb",
+      "display_name": "SM BlockoutMap Powerup Bomb",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Bomb.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Bomb",
+      "asset_type": "Unreal StaticMesh",
+      "semantic_role": "Required visible Bomb power-up mesh",
+      "requirement_ids": [
+        "ASSET-03"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_asset",
+      "hard_dependencies": [
+        "/Engine/BasicShapes/BasicShapeMaterial",
+        "/Engine/BasicShapes/BasicShapeMaterial_Inst",
+        "/Script/NavigationSystem"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Bomb.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 61112,
+      "sha256": "dca67735633706d502dc188a3e09069f1e454176038034963b66336f0ddc7778",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "sm_blockout_map_powerup_fire",
+      "display_name": "SM BlockoutMap Powerup Fire",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Fire.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Fire",
+      "asset_type": "Unreal StaticMesh",
+      "semantic_role": "Required visible Fire power-up mesh",
+      "requirement_ids": [
+        "ASSET-03"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_asset",
+      "hard_dependencies": [
+        "/Engine/BasicShapes/BasicShapeMaterial",
+        "/Engine/BasicShapes/BasicShapeMaterial_Inst",
+        "/Script/NavigationSystem"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Fire.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 38270,
+      "sha256": "5a6fe3ed6bfcc559da865d84b18087139b7b741061a34f6b4aaa7dfc50150edc",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "sm_blockout_map_powerup_skate",
+      "display_name": "SM BlockoutMap Powerup Skate",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Skate.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Skate",
+      "asset_type": "Unreal StaticMesh",
+      "semantic_role": "Required visible Skate power-up mesh",
+      "requirement_ids": [
+        "ASSET-03"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_asset",
+      "hard_dependencies": [
+        "/Engine/BasicShapes/BasicShapeMaterial",
+        "/Engine/BasicShapes/BasicShapeMaterial_Inst",
+        "/Script/NavigationSystem"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Skate.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 36838,
+      "sha256": "57b311161ed4567890e9841a682bb88612d410cbfdee14d72daa69c20cfb7650",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    },
+    {
+      "asset_id": "sm_blockout_map_wall",
+      "display_name": "SM BlockoutMap Wall",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Wall.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Meshes/SM_BlockoutMap_Wall",
+      "asset_type": "Unreal StaticMesh",
+      "semantic_role": "Required visible indestructible-wall mesh",
+      "requirement_ids": [
+        "ASSET-02"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "editable": true,
+      "classification": "raw_visual_asset",
+      "hard_dependencies": [
+        "/Engine/BasicShapes/BasicShapeMaterial_Inst",
+        "/Script/NavigationSystem"
+      ],
+      "source": {
+        "snapshot": "private upstream source snapshot",
+        "upstream_relative_path": "Plugins/GameFeatures/Maps/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Wall.uasset",
+        "commit": "0894f21af0767c2de582aba887aebe5f86add9b6",
+        "license": "MIT",
+        "license_file": "assets/legal/MIT-Bomber-assets.txt"
+      },
+      "byte_length": 26868,
+      "sha256": "c999547b2076ab67ef392bc84e16c9e3cca09ab87eb61c2d38383a954f0041a9",
+      "notes": "Retained as clean visual content only; no gameplay logic, map, menu, evaluator, credits, links, or source implementation is included."
+    }
+  ]
+}

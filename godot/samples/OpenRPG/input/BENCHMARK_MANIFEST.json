@@ -1,0 +1,111 @@
+{
+  "schema_version": 2,
+  "benchmark_id": "godot.openrpg_forest_reconstruction.v2",
+  "input_revision": "dashboard-contract-20261022-r2",
+  "public_contract_status": "authoritative",
+  "track": "reconstruction",
+  "engine": "Godot",
+  "engine_version": "4.7.1.stable.official.a13da4feb",
+  "project_root": "sp",
+  "renderer": "gl_compatibility",
+  "viewport": [
+    1920,
+    1080
+  ],
+  "initial_window": [
+    960,
+    540
+  ],
+  "entry_scene": "res://src/main.tscn",
+  "required_final_scene": "res://src/main.tscn",
+  "public_spec": "GDD-en.md",
+  "public_toolchain": "TOOLCHAIN-en.md",
+  "initial_prompt": "INITIAL_AGENT_PROMPT-en.md",
+  "tool_guide": "GODOT_BENCHMARK_TOOL_GUIDE.md",
+  "dashboard_spec": "DASHBOARD_SPEC.md",
+  "common_baseline": "COMMON_BASELINE.md",
+  "naming_table": "sp/benchmark/naming-tables.json",
+  "dashboard_skeleton": "sp/benchmark/dashboard.gd",
+  "dashboard_self_check": "sp/benchmark/dashboard_self_check.gd",
+  "public_smoke": "sp/benchmark/public_smoke.gd",
+  "observation": {
+    "contract": "game-state-dashboard/v2-godot",
+    "transport": "latest_utf8_json_file",
+    "state_path": "user://benchmark_dashboard.json",
+    "process_identity_field": "process_id",
+    "positions": "logical_viewport_rect",
+    "readonly": true
+  },
+  "save_path": "user://openrpg_save.json",
+  "contact_sheet": "Assets/asset-contact-sheet.png",
+  
+"legal_notices": [
+    "legal/LICENSE",
+    "legal/CREDITS.md",
+    "legal/LICENSES.md",
+    "sp/LICENSE",
+    "sp/CREDITS.md"
+  ],
+  "writable_paths": [
+    "sp/**"
+  ],
+  "protected_paths": [
+    "*.md",
+    "*.json",
+    
+"legal/**",
+    "Assets/**",
+    "sp/assets/**",
+    "sp/battlers/**",
+    "sp/addons/**",
+    "sp/LICENSE",
+    "sp/CREDITS.md",
+    "sp/maps/opening_cutscene.dtl",
+    "sp/benchmark/naming-tables.json",
+    "sp/benchmark/dashboard_self_check.gd",
+    "sp/benchmark/public_smoke.gd",
+    "sp/src/**/*.png",
+    "sp/src/**/*.png.import",
+    "sp/benchmark/dashboard-snapshot.schema.json"
+  ],
+  "path_rule": "Package-relative glob patterns; protected matches take precedence over writable matches. Engine-generated caches are not deliverables.",
+  "baseline": {
+    "kind": "forest_only",
+    "preserved": [
+      "five-line opening",
+      "Gobot movement",
+      "forest terrain/collision",
+      "camera"
+    ],
+    "reporting": "truthful read-only starter adapter",
+    "scope_notes": "README-en.md"
+  },
+  "network_allowed": false,
+  "external_path_access_allowed": false,
+  "external_packages_required": false,
+  "engine_migration_allowed": false,
+  
+"canonical_input": ".",
+  "language": "English",
+  "engine_track_version": "4.7.1",
+  "project_file": "sp/project.godot",
+  "dashboard_schema": "sp/benchmark/dashboard-snapshot.schema.json",
+  "material_mapping": "MaterialMapping-en.md",
+  "material_index": "Assets/material-index.json",
+  "material_root": "sp",
+  "asset_discovery_root": "Assets",
+  "forbidden_entries": [
+    ".godot/",
+    "*.log",
+    "screenshots/",
+    "runtime-state/",
+    "evaluation-results/",
+    "*.tmp",
+    "*.bak"
+  ]
+
+
+
+
+
+}

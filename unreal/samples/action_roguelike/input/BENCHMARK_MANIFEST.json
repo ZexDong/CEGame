@@ -1,0 +1,248 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "ActionRoguelike",
+  "task_name": "Rift Hunting",
+  "task_revision": "2.2.0-diagnostic",
+  "language": "en",
+  "engine": {
+    "name": "Unreal Engine",
+    "version": "5.6.1",
+    "changelist": 44394996,
+    "platform": "Windows x64",
+    "runtime_mode": "editor_game",
+    "tool_contract_version": "1.0.0",
+    "explicit_project_plugins": [],
+    "disabled_project_plugins": [
+      "AndroidFileServer"
+    ],
+    "marketplace_plugins_required": []
+  },
+  "paths": {
+    "project_root": "starter-project",
+    "project_file": "starter-project/ArenaSlice.uproject",
+    "starter_entry": "starter-project/ArenaSlice.uproject",
+    "default_entry": "starter-project/ArenaSlice.uproject",
+    "final_entry": "starter-project/ArenaSlice.uproject",
+    "starter_map": "/Game/Arena/Maps/StarterArena",
+    "default_map_at_release": "/Game/Arena/Maps/StarterArena",
+    "initial_prompt": "INITIAL_AGENT_PROMPT.md",
+    "gdd": "GDD.md",
+    "toolchain": "tools/TOOLCHAIN.md",
+    "tool_guide": "tools/TOOL_GUIDE.md",
+    "tool_catalog_index": "tools/catalog/UNREAL_ENGINE_5_6_1_INTERFACE_CATALOG.index.json",
+    "tool_catalog_archive": "tools/catalog/UNREAL_ENGINE_5_6_1_INTERFACE_CATALOG.jsonl.gz",
+    "asset_manifest": "ASSET_MANIFEST.json",
+    "asset_catalog_json": "assets/ASSET_CATALOG.json",
+    "asset_catalog_human": "assets/ASSET_CATALOG.md",
+    "asset_coverage": "ASSET_COVERAGE.json",
+    "license_map": "assets/legal/ASSET_LICENSE_MAP.json",
+    "task_snapshot_schema": "contracts/actionroguelike-probe-snapshot.schema.json",
+    "task_events_schema": "contracts/actionroguelike-probe-events.schema.json",
+    "public_static_gate": "tools/Test-PublicInput.ps1",
+    "engine_resolver": "tools/Resolve-Unreal56.ps1",
+    "public_smoke": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
+    "public_smoke_schema": "self-check/PublicSmoke/schemas/public-smoke-result.schema.json"
+  },
+  "viewport": {
+    "width_px": 1280,
+    "height_px": 720,
+    "dpi_scale": 1,
+    "windowed": true,
+    "client_capture_only": true
+  },
+  "read_order": [
+    "INITIAL_AGENT_PROMPT.md",
+    "tools/INPUT_GUIDE.md",
+    "GDD.md",
+    "ASSET_MANIFEST.json",
+    "assets/ASSET_CATALOG.md",
+    "assets/legal/LICENSE_SCOPE.md",
+    "tools/TOOLCHAIN.md",
+    "tools/TOOL_GUIDE.md",
+    "contracts/GAME_SESSION_SPEC.md",
+    "self-check/PublicSmoke/CONTRACT.md"
+  ],
+  "workspace": {
+    "writable_roots": [
+      "starter-project"
+    ],
+    "protected_roots": [
+      "INITIAL_AGENT_PROMPT.md",
+      "tools/INPUT_GUIDE.md",
+      "GDD.md",
+      "BENCHMARK_MANIFEST.json",
+      
+"tools/TOOLCHAIN.md",
+      "tools/TOOL_GUIDE.md",
+      "ASSET_MANIFEST.json",
+      "assets/ASSET_CATALOG.json",
+      "assets/ASSET_CATALOG.md",
+      "ASSET_COVERAGE.json",
+      "THIRD_PARTY_NOTICES.md",
+      "tools/catalog/UNREAL_ENGINE_5_6_1_INTERFACE_CATALOG.index.json",
+      "tools/catalog/UNREAL_ENGINE_5_6_1_INTERFACE_CATALOG.jsonl.gz",
+      "contracts",
+      "assets/legal",
+      "self-check",
+      "tools"
+    ]
+  },
+  "policy": {
+    "network": "disabled",
+    "installation": "prohibited",
+    "external_dependencies": "prohibited_except_launcher_engine_and_public_benchmark_tools",
+    "normal_player_input_only": true,
+    "observer_read_only": true,
+    "no_answer_path": true,
+    "no_cheat_path": true,
+    "no_private_evaluator_material": true,
+    "english_only_public_input": true,
+    "privacy_no_host_paths_or_credentials": true,
+    "generated_output_exclusions": [
+      "Binaries/",
+      "DerivedDataCache/",
+      "Intermediate/",
+      "Saved/",
+      ".vs/",
+      ".idea/",
+      "logs/",
+      "captures/",
+      "packages/",
+      "usage/",
+      "trajectory/",
+      "evaluation/"
+    ]
+  },
+  "starter_boundary": {
+    "strategy": "clean_blank_forward_build_with_allowlisted_unassembled_assets",
+    "target_gameplay_present": false,
+    "source_directory_present": false,
+    "gameplay_blueprints_present": false,
+    "gameplay_input_assets_present": false,
+    "answer_or_cheat_entry_present": false,
+    "static_arena_present": true,
+    "unassembled_source_assets_present": true
+  },
+  "requirements": {
+    "gdd_sha256": "c372230c69d11198e2bd8073d3dd4d822ff95a6eb3cc740a47100596ec226886",
+    "gameplay_requirement_count": 183,
+    "quality_requirement_count": 11,
+    "total_requirement_count": 194,
+    "categories": {
+      "PLAYER-CONTROL": 18,
+      "PRESENTATION": 27,
+      "COMBAT": 25,
+      "ATTRIBUTE": 10,
+      "RESOURCE": 12,
+      "AI": 15,
+      "SURVIVAL": 16,
+      "ENDGAME": 23,
+      "UI": 5,
+      "LIFECYCLE": 32,
+      "QUALITY": 11
+    }
+  },
+  "assets": {
+    "manifest": "ASSET_MANIFEST.json",
+    "catalog_json": "assets/ASSET_CATALOG.json",
+    "catalog_human": "assets/ASSET_CATALOG.md",
+    "coverage": "ASSET_COVERAGE.json",
+    "asset_count": 269
+  },
+  "tooling": {
+    "guide": "tools/TOOL_GUIDE.md",
+    "guide_sha256": "ab7e8587af9e0068faac896819e5181c09e5fce71768b72bc7c1a091e7c298a4",
+    "complete_catalog_index": "tools/catalog/UNREAL_ENGINE_5_6_1_INTERFACE_CATALOG.index.json",
+    "complete_catalog_index_sha256": "5de22dca60100842b052e3b7d64460d182ff9d3d2a28f9828eddae89f661b38f",
+    "complete_catalog_archive": "tools/catalog/UNREAL_ENGINE_5_6_1_INTERFACE_CATALOG.jsonl.gz",
+    "complete_catalog_archive_sha256": "c900747e7a964d3a04f12ecad752ed47fbd7070666a895fc66e9245c357ce058",
+    "complete_catalog_entry_count": 523937,
+    "public_executor_supported_interface_count": 16,
+    "public_executor_validation_scope": "Windows x64, Unreal Engine 5.6.1, editor_game, three independent dynamic validations per interface.",
+    "identities": {
+      "capability_contract": {
+        "path": "engine/unreal-5.6.1/CAPABILITIES.md",
+        "sha256": "452b66dda0c5ba90bf46957c2108695edfdf9b7d406aa482ae98ca5a549f7b8a"
+      },
+      "executor_module": {
+        "path": "engine/unreal-5.6.1/executor/UnrealEvaluationExecutor.psm1",
+        "sha256": "9bf2dfd1e6a195613d78c743e402a27d5630b72c5a30364094b0135feff46a2f"
+      },
+      "executor_native_interop": {
+        "path": "engine/unreal-5.6.1/executor/Private/WindowsEvaluationNative.cs",
+        "sha256": "f30294711d13bcf44037154b5d8dc0225151b36d95372923078d8db5807a8661"
+      },
+      "observer_module": {
+        "path": "engine/unreal-5.6.1/observer/UnrealEvaluationObserver.psm1",
+        "sha256": "5121ae3b6340dbcaa61b026e1e13c43008197c7ef4a3f5a523fd267414ec44ee"
+      },
+      "operation_result_schema": {
+        "path": "engine/unreal-5.6.1/executor/schemas/operation-result.schema.json",
+        "sha256": "bc252f4125cb32748ab14372a87a250db0298838f617db0ac9f5f13681cd38b3"
+      },
+      "state_snapshot_schema": {
+        "path": "engine/unreal-5.6.1/executor/schemas/state-snapshot.schema.json",
+        "sha256": "f1fc29f44643ebefee500bcb98f38224df115ec36adb43fa921db5ac3951f55c"
+      }
+    },
+    "complete_engine_and_plugin_interface_catalog_status": "complete_source_and_descriptor_catalog_generated",
+    "complete_engine_and_plugin_interface_catalog_note": "The version-bound generated catalog covers UE 5.6.1 public C++, Blueprint/reflection, console, config, UBT/UAT, and every installed engine-plugin descriptor/module interface. Per-entry status distinguishes source-backed documentation from the separately validated 16-interface benchmark executor."
+  },
+  "state_contract": {
+    "snapshot_schema": "contracts/actionroguelike-probe-snapshot.schema.json",
+    "event_schema": "contracts/actionroguelike-probe-events.schema.json",
+    "event_schema_version": "2.0.0",
+    "candidate_publication_is_trusted_evidence": false,
+    "trust_upgrade_requires_evaluator_owned_protected_publisher": true,
+    "trust_upgrade_status": "implemented_contract_tested_and_live_validated",
+    "typed_event_continuity_contract": "stream epoch, exact half-open cursor coverage, previous-batch linkage, zero dropped events, and matching head/tail watermarks",
+    "typed_event_host_validator_status": "implemented_and_contract_tested",
+    "typed_event_protected_publisher_end_to_end_status": "implemented_contract_tested_and_live_validated"
+  },
+  "public_smoke": {
+    "entry": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
+    "result_schema": "self-check/PublicSmoke/schemas/public-smoke-result.schema.json",
+    "result_path": "<run-root>/public-smoke-result.json",
+    "exit_codes": {
+      "0": "all_public_health_assertions_passed",
+      "1": "release_or_project_assertion_failed",
+      "2": "smoke_infrastructure_or_cleanup_blocked_a_valid_verdict"
+    },
+    "gameplay_requirements_evaluated": false,
+    "minimum_assertions": [
+      "package_identity",
+      "tool_identity",
+      "contract_schema",
+      "project_copy",
+      "data_validation",
+      "initial_start",
+      "initial_capture",
+      "reopen_identity",
+      "reopen_capture",
+      "final_cleanup"
+    ]
+  },
+  
+
+
+
+
+
+
+
+
+
+"release_boundary": {
+    "does_not_include": [
+      "original source snapshot",
+      "private compatibility baseline",
+      "reference implementation",
+      "private evaluator or scoring rules",
+      "private trajectories or historical results",
+      "host-local evidence or generated build output"
+    ],
+    "gdd_acceptance_authority": "GDD.md Section 6",
+    "diagnostic_only": true,
+    "formal_freeze_performed": false
+  }
+}

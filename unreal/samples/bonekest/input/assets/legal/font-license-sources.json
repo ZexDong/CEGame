@@ -1,0 +1,12 @@
+{
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/unifrakturcook/OFL.txt",
+      "local": "UNIFRAKTURCOOK_OFL.txt"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/google/fonts/main/ofl/grenzegotisch/OFL.txt",
+      "local": "GRENZE_GOTISCH_OFL.txt"
+    }
+  ]
+}

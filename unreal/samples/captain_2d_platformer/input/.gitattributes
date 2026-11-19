@@ -1,0 +1,4 @@
+# Content manifests bind exact bytes across Windows and other checkouts.
+* text eol=lf
+*.png -text -diff
+*.gz -text -diff

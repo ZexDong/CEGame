@@ -1,0 +1,133 @@
+{
+  "layout_id": "chomp-maze-30x28",
+  "columns": 30,
+  "rows": 28,
+  "coordinate_system": "Zero-based column x from left to right; row y from top to bottom in Figure 6A.",
+  "cells": [
+    "##############T###############",
+    "#........#XXX#.#XXX#....##...#",
+    "#.###.##.#XXX#.#XXX#.##.##.#.#",
+    "#E###.##.#XXX#.#XXX#.##....#E#",
+    "#.###.##.#XXX#.#XXX#.##.##.#.#",
+    "#.###.##.#####.#####.##.##.#.#",
+    "#..........................#.#",
+    "#.###.########.#####.#######.#",
+    "#.###.########.#####.#######.#",
+    "#.###....##...R......##....#.#",
+    "#.###.##.##.##=##.##.##.##.#.#",
+    "#.###.##....#HHH#.##.##.##.#.#",
+    "T.....#####.#####.##....##...T",
+    "#####.#####...P...#####.####.#",
+    "#####.#####.##.##.#####.####.#",
+    "T.....#####.##.##.##....##...T",
+    "#.###.##....##.##.##.##.##.#.#",
+    "#.###.##.##.##.##.##.##.##.#.#",
+    "#E###....##...F......##....#E#",
+    "#.###.########.#####.#######.#",
+    "#.###.########.#####.#######.#",
+    "#..........................#.#",
+    "#.###.##.#####.#####.#####.#.#",
+    "#.###.##.#XXX#.#XXX#.#####.#.#",
+    "#.###.##.#XXX#.#XXX#.##....#.#",
+    "#.###.##.#XXX#.#XXX#.##.##.#.#",
+    "#........#XXX#.#XXX#....##...#",
+    "##############T###############"
+  ],
+  "legend": {
+    "#": "solid wall",
+    "X": "blocked empty void",
+    "T": "wrap passage and ordinary dot",
+    ".": "ordinary dot corridor",
+    "E": "energizer corridor",
+    "R": "red start; empty corridor",
+    "=": "ghost-only home gate",
+    "H": "ghost home",
+    "P": "player start; empty corridor",
+    "F": "fruit spawn and ordinary dot"
+  },
+  "ordinary_dot_count": 299,
+  "energizer_count": 4,
+  "player_start": [
+    14,
+    13
+  ],
+  "ghost_starts": {
+    "red": [
+      14,
+      9
+    ],
+    "cyan": [
+      13,
+      11
+    ],
+    "pink": [
+      14,
+      11
+    ],
+    "orange": [
+      15,
+      11
+    ]
+  },
+  "ghost_homes": {
+    "red": [
+      14,
+      11
+    ],
+    "cyan": [
+      13,
+      11
+    ],
+    "pink": [
+      14,
+      11
+    ],
+    "orange": [
+      15,
+      11
+    ]
+  },
+  "scatter_pairs": {
+    "red": [
+      [
+        20,
+        6
+      ],
+      [
+        28,
+        1
+      ]
+    ],
+    "cyan": [
+      [
+        8,
+        6
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "pink": [
+      [
+        20,
+        21
+      ],
+      [
+        28,
+        26
+      ]
+    ],
+    "orange": [
+      [
+        8,
+        21
+      ],
+      [
+        1,
+        26
+      ]
+    ]
+  },
+  "authority": "GDD.md Section 6, MAZE-01, FLOW-02 and GHOST-04. This file is the machine-readable mirror, not additional requirements."
+}

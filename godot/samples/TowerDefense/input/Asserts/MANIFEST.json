@@ -1,0 +1,232 @@
+{
+  "schema_version": 4,
+  "asset_set_id": "ape_tower_defense_fixed_v2_assets_v2_20260811",
+  "kit_manifest_sha256": "51f1fffad1e49a3b2b02ededb6e80446e5862181d09d595e4a0d327a7c170da6",
+  "copy_verified_on": "2026-08-11",
+  "scope": {
+    "map": "Grassland only",
+    "tower_types": [
+      "Gatling Gun",
+      "Flamethrower",
+      "Raygun",
+      "Explosive"
+    ],
+    "enemy_types": [
+      "Red Dino",
+      "Blue Dino",
+      "Yellow Dino",
+      "Green Dino"
+    ]
+  },
+  "godot_import_boundary": {
+    "raw_source_root": "Asserts",
+    "raw_source_root_contains_gdignore": true,
+    "agent_runtime_root": "game_assets",
+    "runtime_root_present_at_input_freeze": false,
+    "legacy_import_sidecars_included": false,
+    "engine_cache_included": false,
+    "source_game_scripts_or_scenes_included": false,
+    "required_sequence": [
+      "copy each source_path to runtime_path",
+      "cold import with this Godot project",
+      "bind runtime_path resources in newly authored scenes",
+      "save, close, and reopen"
+    ]
+  },
+  "public_path_reference": "Asserts/path_reference.json",
+  "legal_notices": [
+    "legal/LICENSE"
+  ],
+  "files": [
+    {
+      "logical_id": "grassland_map",
+      "source_path": "Asserts/maps/map1.webp",
+      "runtime_path": "game_assets/maps/map1.webp",
+      "dimensions": [
+        826,
+        532
+      ],
+      "bytes": 154394,
+      "sha256": "f056075495067811b375240b63cac4dbd082c3cde84a85705d8eb5c7c96f5f6a",
+      "task_role": "Grassland battlefield, visible stone road, grass and base-space reference",
+      "gdd_requirement": "MAP-01"
+    },
+    {
+      "logical_id": "menu_background",
+      "source_path": "Asserts/menu/bg.png",
+      "runtime_path": "game_assets/menu/bg.png",
+      "dimensions": [
+        480,
+        270
+      ],
+      "bytes": 224418,
+      "sha256": "14d1247ef7bf6ca00fc79eb19314d78d984cded661da414102c544dd96fea61b",
+      "task_role": "Initial menu background",
+      "gdd_requirement": "ENTRY-01"
+    },
+    {
+      "logical_id": "gatling_tower",
+      "source_path": "Asserts/turrets/technoturret.png",
+      "runtime_path": "game_assets/turrets/technoturret.png",
+      "dimensions": [
+        24,
+        24
+      ],
+      "bytes": 463,
+      "sha256": "01a433fdda938ce4d141c7aeee5eaef6aba543edf5bda73e31734a2cb3862dc8",
+      "task_role": "Gatling Gun shop, drag preview, placed tower and details",
+      "gdd_requirement": "SHOP-01/VISUAL-02",
+      "display_note": "Small pixel source; must be scaled proportionally enough to remain recognizable."
+    },
+    {
+      "logical_id": "flamethrower_tower",
+      "source_path": "Asserts/turrets/laserturret.png",
+      "runtime_path": "game_assets/turrets/laserturret.png",
+      "dimensions": [
+        80,
+        77
+      ],
+      "bytes": 13033,
+      "sha256": "38e279a253727ec05513106fa381648e995cee62a4fa9409631f1a16e1ca3a73",
+      "task_role": "Flamethrower shop, drag preview, placed tower and details",
+      "gdd_requirement": "SHOP-01/VISUAL-02"
+    },
+    {
+      "logical_id": "raygun_tower",
+      "source_path": "Asserts/turrets/reallaser.png",
+      "runtime_path": "game_assets/turrets/reallaser.png",
+      "dimensions": [
+        109,
+        114
+      ],
+      "bytes": 24390,
+      "sha256": "8695895881e6509e5ed116bee9d05a586070df16bc48a79cb8ecdb9577e886dc",
+      "task_role": "Raygun shop, drag preview, placed tower and details",
+      "gdd_requirement": "SHOP-01/VISUAL-02"
+    },
+    {
+      "logical_id": "explosive_shop",
+      "source_path": "Asserts/turrets/dynamite.png",
+      "runtime_path": "game_assets/turrets/dynamite.png",
+      "dimensions": [
+        28,
+        32
+      ],
+      "bytes": 329,
+      "sha256": "f41bca30bee3796aabcfb45a395a0064a04ae6a187e41cd02903aadd66c2dce4",
+      "task_role": "Explosive shop card, drag preview and details",
+      "gdd_requirement": "SHOP-01/VISUAL-02"
+    },
+    {
+      "logical_id": "explosive_placed",
+      "source_path": "Asserts/turrets/dynamite-pack.png",
+      "runtime_path": "game_assets/turrets/dynamite-pack.png",
+      "dimensions": [
+        96,
+        96
+      ],
+      "bytes": 2305,
+      "sha256": "915d7a87b2d99984d6055337f03ffa45db341a62b9da2e76d3544c56d78f8579",
+      "task_role": "Placed Explosive primary visual; 3 by 3 sheet of 32x32 cells",
+      "gdd_requirement": "SHOP-01/VISUAL-02",
+      "atlas": {
+        "columns": 3,
+        "rows": 3,
+        "frame_width": 32,
+        "frame_height": 32
+      }
+    },
+    {
+      "logical_id": "red_dino",
+      "source_path": "Asserts/enemies/dino1.png",
+      "runtime_path": "game_assets/enemies/dino1.png",
+      "dimensions": [
+        576,
+        24
+      ],
+      "bytes": 1906,
+      "sha256": "e943ca70acce1e936d4e17ffdc068e1f7b0824c844f728fe11e7b1a699930136",
+      "task_role": "Red Dino live enemy sprite sheet",
+      "gdd_requirement": "WAVE-04/VISUAL-03",
+      "atlas": {
+        "columns": 24,
+        "rows": 1,
+        "frame_width": 24,
+        "frame_height": 24,
+        "movement_frame_range": [
+          4,
+          9
+        ]
+      }
+    },
+    {
+      "logical_id": "blue_dino",
+      "source_path": "Asserts/enemies/dino2.png",
+      "runtime_path": "game_assets/enemies/dino2.png",
+      "dimensions": [
+        576,
+        24
+      ],
+      "bytes": 1899,
+      "sha256": "9f1e25749a47a817639cdefefb68ed9878334481042f39922d95b0695584018e",
+      "task_role": "Blue Dino live enemy sprite sheet",
+      "gdd_requirement": "WAVE-04/VISUAL-03",
+      "atlas": {
+        "columns": 24,
+        "rows": 1,
+        "frame_width": 24,
+        "frame_height": 24,
+        "movement_frame_range": [
+          4,
+          9
+        ]
+      }
+    },
+    {
+      "logical_id": "yellow_dino",
+      "source_path": "Asserts/enemies/dino3.png",
+      "runtime_path": "game_assets/enemies/dino3.png",
+      "dimensions": [
+        576,
+        24
+      ],
+      "bytes": 1920,
+      "sha256": "bcfda2b005df54c02ce11e5293583d94313b40e2ed349de28f0d85b259df4b50",
+      "task_role": "Yellow Dino live enemy sprite sheet",
+      "gdd_requirement": "WAVE-04/VISUAL-03",
+      "atlas": {
+        "columns": 24,
+        "rows": 1,
+        "frame_width": 24,
+        "frame_height": 24,
+        "movement_frame_range": [
+          4,
+          9
+        ]
+      }
+    },
+    {
+      "logical_id": "green_dino",
+      "source_path": "Asserts/enemies/dino4.png",
+      "runtime_path": "game_assets/enemies/dino4.png",
+      "dimensions": [
+        576,
+        24
+      ],
+      "bytes": 1957,
+      "sha256": "b1066ad427c2b8a578269fa5fd481a36ddfdc197867370af60c15a51f03fed46",
+      "task_role": "Green Dino live enemy sprite sheet",
+      "gdd_requirement": "WAVE-04/VISUAL-03",
+      "atlas": {
+        "columns": 24,
+        "rows": 1,
+        "frame_width": 24,
+        "frame_height": 24,
+        "movement_frame_range": [
+          4,
+          9
+        ]
+      }
+    }
+  ]
+}

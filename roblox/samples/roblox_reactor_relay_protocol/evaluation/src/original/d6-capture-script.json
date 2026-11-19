@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "game": "reactor_relay_protocol",
+  "naming_tables": "naming-tables.json",
+  "trajectories": [
+    {
+      "id": "d6_visual_states",
+      "clean_start": "fresh_process",
+      "steps": [
+        {"do":"wait_until","cond":"phase == 'menu'","timeout_s":30},
+        {"do":"capture","save_as":"d6_menu"},
+        {"do":"click","target":{"kind":"start_button"}},
+        {"do":"wait_until","cond":"phase == 'cycle'","timeout_s":5},
+        {"do":"capture","save_as":"d6_active_board"},
+        {"do":"wrong_lock_until_lost"},
+        {"do":"wait_until","cond":"phase == 'lost'","timeout_s":5},
+        {"do":"capture","save_as":"d6_lost"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": "2.1",
+  "sample_id": "unity_2d_noir_roombreak_challenge",
+  "sample_version": "1.0.0-open-release",
+  "evaluator_version": "2026.08.24-v1-template-conformant+portable.2",
+  "run_id": "not-run",
+  "evaluation_valid": false,
+  "classification": "not_run",
+  "coverage_status": "not_reviewed",
+  "reason": "Output structure only. No candidate has been evaluated.",
+  "dimensions": {
+    "D1": {
+      "score": null,
+      "max_score": 10,
+      "status": "not_run",
+      "evidence": []
+    },
+    "D2": {
+      "score": null,
+      "max_score": 30,
+      "status": "not_run",
+      "evidence": []
+    },
+    "D3": {
+      "score": null,
+      "max_score": 20,
+      "status": "not_run",
+      "evidence": []
+    },
+    "D4": {
+      "score": null,
+      "max_score": 20,
+      "status": "not_run",
+      "evidence": []
+    },
+    "D5": {
+      "score": null,
+      "max_score": 10,
+      "status": "not_run",
+      "evidence": []
+    },
+    "D6": {
+      "score": null,
+      "max_score": 10,
+      "status": "not_run",
+      "evidence": []
+    }
+  },
+  "checks": [],
+  "coverage_evidence": [],
+  "final_score": null,
+  "max_score": 100
+}

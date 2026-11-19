@@ -1,0 +1,37 @@
+local dashboard = require("main.dashboard")
+
+local function capture_starter()
+	return {
+		phase = "not_ready",
+		slots = {
+			energy = 0,
+			display_energy = 0,
+			manual_click_count = 0,
+			click_power = 0,
+			passive_per_second = 0,
+			stage = 0,
+			stage_total = 4,
+			time_remaining = 0,
+		},
+		entities = {},
+		targets = {},
+	}
+end
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	dashboard.init(capture_starter)
+	print("STATION_MASTER_STARTER_READY")
+end
+
+function update(self, dt)
+	dashboard.update(dt)
+end
+
+function on_input(self, action_id, action)
+	-- The public starting point intentionally contains no gameplay behavior.
+end
+
+function final(self)
+	dashboard.final()
+end

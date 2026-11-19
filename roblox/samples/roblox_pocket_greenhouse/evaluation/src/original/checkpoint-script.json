@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "game": "pocket_greenhouse",
+  "naming_tables": "naming-tables.json",
+  "player_runtime_min_version": "1.0",
+  "controls_from_naming_tables": true,
+  "trajectories": [
+    {
+      "id": "entry_and_initial_state",
+      "title": "Menu, start entry, and clean initial state",
+      "clean_start": "fresh_process",
+      "steps": [
+        {"do": "start"},
+        {"do": "wait_until", "cond": "phase == 'menu'", "timeout_s": 30,
+          "check": {"id": "CB-01", "source": "common-baseline:CB-01", "dim": "D4", "assert": "phase == 'menu'"}},
+        {"check": {"id": "UI-ENTRY", "source": "gdd:UI-01", "dim": "D5", "assert": "target('start_button').visible and target('start_button').interactable"}},
+        {"do": "click", "target": {"kind": "start_button"}},
+        {"do": "wait_until", "cond": "phase == 'playing'", "timeout_s": 10,
+          "check": {"id": "FLOW-START", "source": "gdd:FLOW-01", "dim": "D4", "assert": "phase == 'playing'"}},
+        {"check": {"id": "INIT", "source": "gdd:STATE-01", "dim": "D3", "assert": "slots.day == 1 and slots.coins == 8 and slots.water == 4 and slots.sunberry_inventory == 0 and slots.moonleaf_inventory == 0 and slots.selected_plot == 0 and entity('plot_1').state == 'empty' and entity('plot_2').state == 'empty' and entity('plot_3').state == 'empty'"}},
+        {"check": {"id": "CONTENT-CONTROLS", "source": "gdd:CONTENT-01", "dim": "D2", "assert": "all_targets_visible('plot_1','plot_2','plot_3','plant_sunberry_button','plant_moonleaf_button','water_button','harvest_button','end_day_button','deliver_button','restart_button')"}}
+      ]
+    },
+    {
+      "id": "invalid_actions",
+      "title": "Invalid actions are rejected with visible feedback",
+      "clean_start": "restart",
+      "steps": [
+        {"do": "snapshot", "save_as": "N0"},
+        {"do": "click", "target": {"kind": "water_button"}},
+        {"check": {"id": "NEG-NO-PLOT", "source": "gdd:RULE-NEG-01", "dim": "D3", "assert": "revision == N0.revision and slots.water == N0.slots.water"}},
+        {"check": {"id": "CB-06-FEEDBACK", "source": "common-baseline:CB-06", "dim": "D5", "assert": "visible_change_since('N0')"}},
+        {"do": "click", "target": {"kind": "plot_1"}},
+        {"check": {"id": "SELECT-PLOT", "source": "gdd:CONTENT-01", "dim": "D2", "assert": "slots.selected_plot == 1"}},
+        {"do": "snapshot", "save_as": "N1"},
+        {"do": "click", "target": {"kind": "harvest_button"}},
+        {"check": {"id": "NEG-HARVEST", "source": "gdd:RULE-NEG-02", "dim": "D3", "assert": "revision == N1.revision and slots.sunberry_inventory == 0 and slots.moonleaf_inventory == 0"}},
+        {"do": "click", "target": {"kind": "deliver_button"}},
+        {"check": {"id": "NEG-DELIVER", "source": "gdd:RULE-NEG-03", "dim": "D3", "assert": "phase == 'playing' and slots.sunberry_inventory == 0 and slots.moonleaf_inventory == 0"}}
+      ]
+    },
+    {
+      "id": "success_path",
+      "title": "Planting, watering, day transition, growth, harvest, delivery, and victory",
+      "clean_start": "restart",
+      "steps": [
+        {"do": "click", "target": {"kind": "plot_1"}},
+        {"check": {"id": "SELECT-PLOT-1", "source": "gdd:CONTENT-01", "dim": "D2", "assert": "slots.selected_plot == 1"}},
+        {"do": "snapshot", "save_as": "S0"},
+        {"do": "click", "target": {"kind": "plant_sunberry_button"}},
+        {"check": {"id": "PLANT-SUN", "source": "gdd:CROP-01", "dim": "D2", "assert": "entity('plot_1').state == 'sunberry_stage0_dry'"}},
+        {"check": {"id": "PLANT-ISOLATION", "source": "gdd:RULE-01", "dim": "D3", "assert": "entity('plot_2').state == 'empty' and entity('plot_3').state == 'empty'"}},
+        {"check": {"id": "PLANT-FEEDBACK", "source": "common-baseline:CB-05", "dim": "D5", "assert": "visible_change_since('S0')"}},
+        {"check": {"id": "COST-SUN", "source": "gdd:RULE-01", "dim": "D3", "assert": "slots.coins == S0.slots.coins - 3"}},
+        {"do": "click", "target": {"kind": "water_button"}},
+        {"check": {"id": "WATER-SUN", "source": "gdd:RULE-02", "dim": "D3", "assert": "slots.water == S0.slots.water - 1 and entity('plot_1').state == 'sunberry_stage0_watered'"}},
+
+        {"do": "click", "target": {"kind": "plot_2"}},
+        {"do": "snapshot", "save_as": "S1"},
+        {"do": "click", "target": {"kind": "plant_sunberry_button"}},
+        {"check": {"id": "PLANT-SUN-SECOND", "source": "gdd:CROP-01", "dim": "D2", "assert": "entity('plot_2').state == 'sunberry_stage0_dry'"}},
+        {"check": {"id": "COST-SUN-SECOND", "source": "gdd:RULE-01", "dim": "D3", "assert": "slots.coins == S1.slots.coins - 3"}},
+        {"do": "click", "target": {"kind": "water_button"}},
+        {"check": {"id": "WATER-SUN-SECOND", "source": "gdd:RULE-02", "dim": "D3", "assert": "slots.water == S1.slots.water - 1 and entity('plot_2').state == 'sunberry_stage0_watered'"}},
+        {"do": "click", "target": {"kind": "plot_3"}},
+        {"do": "snapshot", "save_as": "M0"},
+        {"do": "click", "target": {"kind": "plant_moonleaf_button"}},
+        {"check": {"id": "PLANT-MOON", "source": "gdd:CROP-02", "dim": "D2", "assert": "entity('plot_3').state == 'moonleaf_stage0_dry'"}},
+        {"check": {"id": "COST-MOON", "source": "gdd:RULE-01", "dim": "D3", "assert": "slots.coins == M0.slots.coins - 2"}},
+        {"do": "click", "target": {"kind": "water_button"}},
+        {"check": {"id": "WATER-MOON", "source": "gdd:RULE-02", "dim": "D2", "assert": "entity('plot_3').state == 'moonleaf_stage0_watered'"}},
+        {"do": "snapshot", "save_as": "G0"},
+        {"do": "click", "target": {"kind": "end_day_button"}},
+        {"do": "wait_until", "cond": "slots.day == 2", "timeout_s": 5,
+          "check": {"id": "DAY-ADVANCE", "source": "gdd:DAY-01", "dim": "D2", "assert": "slots.day == 2 and slots.water == 4"}},
+        {"check": {"id": "GROWTH-1", "source": "gdd:RULE-03", "dim": "D3", "assert": "entity('plot_1').state == 'sunberry_stage1_dry' and entity('plot_2').state == 'sunberry_stage1_dry' and entity('plot_3').state == 'moonleaf_ripe'"}},
+        {"check": {"id": "GROWTH-FEEDBACK-1", "source": "common-baseline:CB-05", "dim": "D5", "assert": "visible_change_since('G0')"}},
+
+        {"do": "click", "target": {"kind": "harvest_button"}},
+        {"check": {"id": "HARVEST-MOON", "source": "gdd:HARVEST-01", "dim": "D2", "assert": "slots.moonleaf_inventory == 1 and entity('plot_3').state == 'empty'"}},
+        {"do": "click", "target": {"kind": "plot_1"}},
+        {"do": "click", "target": {"kind": "water_button"}},
+        {"do": "click", "target": {"kind": "plot_2"}},
+        {"do": "click", "target": {"kind": "water_button"}},
+        {"do": "snapshot", "save_as": "G1"},
+        {"do": "click", "target": {"kind": "end_day_button"}},
+        {"check": {"id": "GROWTH-2", "source": "gdd:RULE-03", "dim": "D3", "assert": "slots.day == 3 and entity('plot_1').state == 'sunberry_ripe' and entity('plot_2').state == 'sunberry_ripe'"}},
+        {"check": {"id": "GROWTH-FEEDBACK-2", "source": "common-baseline:CB-05", "dim": "D5", "assert": "visible_change_since('G1')"}},
+        {"do": "click", "target": {"kind": "plot_1"}},
+        {"do": "click", "target": {"kind": "harvest_button"}},
+        {"do": "click", "target": {"kind": "plot_2"}},
+        {"do": "click", "target": {"kind": "harvest_button"}},
+        {"check": {"id": "HARVEST-SUN", "source": "gdd:HARVEST-01", "dim": "D2", "assert": "slots.sunberry_inventory == 2 and slots.moonleaf_inventory == 1"}},
+        {"do": "snapshot", "save_as": "PREWIN"},
+        {"do": "click", "target": {"kind": "deliver_button"}, "retry_once_if_no_change": true},
+        {"do": "wait_until", "cond": "phase == 'won'", "timeout_s": 5,
+          "check": {"id": "WIN", "source": "gdd:END-01", "dim": "D4", "assert": "phase == 'won'"}},
+        {"check": {"id": "VICTORY-FEEDBACK", "source": "common-baseline:CB-11", "dim": "D5", "assert": "visible_change_since('PREWIN')"}},
+        {"do": "capture", "save_as": "Victory"},
+        {"do": "snapshot", "save_as": "W0"},
+        {"do": "click", "target": {"kind": "plot_1"}},
+        {"check": {"id": "TERMINAL-LOCK", "source": "common-baseline:CB-14", "dim": "D4", "assert": "phase == 'won' and revision == W0.revision"}}
+      ]
+    },
+    {
+      "id": "midrun_restart",
+      "title": "In-game restart clears all temporary state",
+      "clean_start": "restart",
+      "steps": [
+        {"do": "click", "target": {"kind": "plot_2"}},
+        {"do": "click", "target": {"kind": "plant_moonleaf_button"}},
+        {"do": "click", "target": {"kind": "water_button"}},
+        {"do": "snapshot", "save_as": "MIDRUN"},
+        {"do": "click", "target": {"kind": "restart_button"}},
+        {"do": "wait_until", "cond": "phase == 'playing'", "timeout_s": 5,
+          "check": {"id": "RESTART-MIDRUN", "source": "common-baseline:CB-13", "dim": "D4", "assert": "slots.day == 1 and slots.coins == 8 and slots.water == 4 and slots.sunberry_inventory == 0 and slots.moonleaf_inventory == 0 and slots.selected_plot == 0 and entity('plot_1').state == 'empty' and entity('plot_2').state == 'empty' and entity('plot_3').state == 'empty'"}},
+        {"check": {"id": "RESTART-FEEDBACK", "source": "common-baseline:CB-13", "dim": "D5", "assert": "visible_change_since('MIDRUN')"}}
+      ]
+    },
+    {
+      "id": "failure_and_restart",
+      "title": "Day 4 deadline failure and clean restart",
+      "clean_start": "restart",
+      "steps": [
+        {"do": "click", "target": {"kind": "end_day_button"}},
+        {"do": "click", "target": {"kind": "end_day_button"}},
+        {"do": "click", "target": {"kind": "end_day_button"}},
+        {"check": {"id": "DEADLINE-NOT-EARLY", "source": "gdd:END-02", "dim": "D3", "assert": "slots.day == 4 and phase == 'playing'"}},
+        {"do": "snapshot", "save_as": "PRELOSE"},
+        {"do": "click", "target": {"kind": "end_day_button"}},
+        {"do": "wait_until", "cond": "phase == 'lost'", "timeout_s": 5,
+          "check": {"id": "LOSE", "source": "gdd:END-02", "dim": "D4", "assert": "phase == 'lost'"}},
+        {"check": {"id": "FAILURE-FEEDBACK", "source": "common-baseline:CB-12", "dim": "D5", "assert": "visible_change_since('PRELOSE')"}},
+        {"do": "capture", "save_as": "Failure"},
+        {"do": "snapshot", "save_as": "L0"},
+        {"do": "click", "target": {"kind": "plot_1"}},
+        {"check": {"id": "LOSS-TERMINAL-LOCK", "source": "common-baseline:CB-14", "dim": "D4", "assert": "phase == 'lost' and revision == L0.revision"}},
+        {"do": "click", "target": {"kind": "restart_button"}},
+        {"do": "wait_until", "cond": "phase == 'playing'", "timeout_s": 5,
+          "check": {"id": "RESTART", "source": "common-baseline:CB-13", "dim": "D4", "assert": "slots.day == 1 and slots.coins == 8 and slots.water == 4 and slots.sunberry_inventory == 0 and slots.moonleaf_inventory == 0 and entity('plot_1').state == 'empty' and entity('plot_2').state == 'empty' and entity('plot_3').state == 'empty'"}}
+      ]
+    },
+    {
+      "id": "reopen",
+      "title": "Reopen returns to the menu",
+      "clean_start": "none",
+      "steps": [
+        {"do": "reopen"},
+        {"do": "wait_until", "cond": "phase == 'menu'", "timeout_s": 30,
+          "check": {"id": "REOPEN", "source": "common-baseline:CB-03", "dim": "D4", "assert": "phase == 'menu'"}}
+      ]
+    }
+  ],
+  "honesty_spot_checks": {"per_trajectory": 1, "mode": "random"}
+}

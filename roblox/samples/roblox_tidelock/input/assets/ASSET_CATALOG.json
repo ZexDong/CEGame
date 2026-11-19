@@ -1,0 +1,23 @@
+{
+  "schema_version": "1.0",
+  "path_base": "input/",
+  "external_assets_required": false,
+  "assets": [
+    {
+      "path": "starter-project/TideLockStart.rbxlx",
+      "purpose": "Blank Studio place; no completed gameplay",
+      "source": "Frozen Tide Lock public input",
+      "license": "MIT",
+      "license_path": "legal/LICENSE.txt"
+    },
+    {
+      "path": "contracts/src/TideLockSchema.luau",
+      "purpose": "Public semantic constants only",
+      "source": "Frozen Tide Lock public input",
+      "license": "MIT",
+      "license_path": "legal/LICENSE.txt"
+    }
+  ],
+  "third_party_assets": [],
+  "platform_note": "Roblox Studio and built-in platform resources are subject to Roblox terms; none are separately bundled."
+}

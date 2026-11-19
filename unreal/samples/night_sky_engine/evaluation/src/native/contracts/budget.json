@@ -1,0 +1,18 @@
+{
+  "schema_version": "3.0.0",
+  "build_timeout_seconds": 600,
+  "start_rpc_timeout_seconds": 185,
+  "stop_rpc_timeout_seconds": 20,
+  "small_rpc_timeout_seconds": 10,
+  "max_start_rpcs": 29,
+  "max_stop_rpcs": 29,
+  "max_small_rpcs": 430,
+  "local_wait_budget_seconds": 650,
+  "preparation_budget_seconds": 120,
+  "cleanup_timeout_seconds": 15,
+  "headroom_seconds": 300,
+  "declared_serial_worst_case_seconds": 11630,
+  "watchdog_seconds": 11930,
+  "watchdog_failure": "Infrastructure invalid with no score publication; local candidate timeouts fail only their dependent checks.",
+  "d6": "Independent finite requests: three rounds times the declared 3-5 states; request timeout comes from model configuration."
+}

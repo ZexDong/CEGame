@@ -1,0 +1,38 @@
+{
+  "name": "UndercookedBenchmark",
+  "maps": [
+    {
+      "name": "Gameplay",
+      "id": "5d38bd39-e09b-4f28-8d65-acde157de001",
+      "actions": [
+        {"name":"Move","type":"Value","id":"5d38bd39-e09b-4f28-8d65-acde157de002","expectedControlType":"Vector2","processors":"","interactions":"","initialStateCheck":true},
+        {"name":"Primary","type":"Button","id":"5d38bd39-e09b-4f28-8d65-acde157de003","expectedControlType":"Button","processors":"","interactions":"","initialStateCheck":false},
+        {"name":"Secondary","type":"Button","id":"5d38bd39-e09b-4f28-8d65-acde157de004","expectedControlType":"Button","processors":"","interactions":"","initialStateCheck":false},
+        {"name":"Pause","type":"Button","id":"5d38bd39-e09b-4f28-8d65-acde157de005","expectedControlType":"Button","processors":"","interactions":"","initialStateCheck":false},
+        {"name":"Restart","type":"Button","id":"5d38bd39-e09b-4f28-8d65-acde157de006","expectedControlType":"Button","processors":"","interactions":"","initialStateCheck":false},
+        {"name":"Start","type":"Button","id":"5d38bd39-e09b-4f28-8d65-acde157de007","expectedControlType":"Button","processors":"","interactions":"","initialStateCheck":false},
+        {"name":"SwitchChef","type":"Button","id":"5d38bd39-e09b-4f28-8d65-acde157de008","expectedControlType":"Button","processors":"","interactions":"","initialStateCheck":false}
+      ],
+      "bindings": [
+        {"name":"WASD","id":"5d38bd39-e09b-4f28-8d65-acde157de010","path":"2DVector","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Move","isComposite":true,"isPartOfComposite":false},
+        {"name":"up","id":"5d38bd39-e09b-4f28-8d65-acde157de011","path":"<Keyboard>/w","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Move","isComposite":false,"isPartOfComposite":true},
+        {"name":"down","id":"5d38bd39-e09b-4f28-8d65-acde157de012","path":"<Keyboard>/s","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Move","isComposite":false,"isPartOfComposite":true},
+        {"name":"left","id":"5d38bd39-e09b-4f28-8d65-acde157de013","path":"<Keyboard>/a","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Move","isComposite":false,"isPartOfComposite":true},
+        {"name":"right","id":"5d38bd39-e09b-4f28-8d65-acde157de014","path":"<Keyboard>/d","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Move","isComposite":false,"isPartOfComposite":true},
+        {"name":"Arrows","id":"5d38bd39-e09b-4f28-8d65-acde157de015","path":"2DVector","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Move","isComposite":true,"isPartOfComposite":false},
+        {"name":"up","id":"5d38bd39-e09b-4f28-8d65-acde157de016","path":"<Keyboard>/upArrow","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Move","isComposite":false,"isPartOfComposite":true},
+        {"name":"down","id":"5d38bd39-e09b-4f28-8d65-acde157de017","path":"<Keyboard>/downArrow","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Move","isComposite":false,"isPartOfComposite":true},
+        {"name":"left","id":"5d38bd39-e09b-4f28-8d65-acde157de018","path":"<Keyboard>/leftArrow","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Move","isComposite":false,"isPartOfComposite":true},
+        {"name":"right","id":"5d38bd39-e09b-4f28-8d65-acde157de019","path":"<Keyboard>/rightArrow","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Move","isComposite":false,"isPartOfComposite":true},
+        {"name":"","id":"5d38bd39-e09b-4f28-8d65-acde157de020","path":"<Keyboard>/e","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Primary","isComposite":false,"isPartOfComposite":false},
+        {"name":"","id":"5d38bd39-e09b-4f28-8d65-acde157de021","path":"<Keyboard>/f","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Secondary","isComposite":false,"isPartOfComposite":false},
+        {"name":"","id":"5d38bd39-e09b-4f28-8d65-acde157de022","path":"<Keyboard>/escape","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Pause","isComposite":false,"isPartOfComposite":false},
+        {"name":"","id":"5d38bd39-e09b-4f28-8d65-acde157de023","path":"<Keyboard>/r","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Restart","isComposite":false,"isPartOfComposite":false},
+        {"name":"","id":"5d38bd39-e09b-4f28-8d65-acde157de024","path":"<Keyboard>/enter","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Start","isComposite":false,"isPartOfComposite":false},
+        {"name":"","id":"5d38bd39-e09b-4f28-8d65-acde157de025","path":"<Keyboard>/space","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Start","isComposite":false,"isPartOfComposite":false},
+        {"name":"","id":"5d38bd39-e09b-4f28-8d65-acde157de026","path":"<Keyboard>/q","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"SwitchChef","isComposite":false,"isPartOfComposite":false}
+      ]
+    }
+  ],
+  "controlSchemes": [{"name":"Keyboard&Mouse","bindingGroup":"Keyboard&Mouse","devices":[{"devicePath":"<Keyboard>","isOptional":false,"isOR":false}]}]
+}

@@ -1,0 +1,13 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "5.7",
+  "Category": "Benchmark Starter",
+  "Description": "Answer-free fixed-layout starter for the RollBall benchmark task.",
+  "Modules": [
+    {
+      "Name": "RollBallStarter",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}

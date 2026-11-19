@@ -1,0 +1,608 @@
+{
+  "columns": 8,
+  "lanes": 5,
+  "start_stars": 300,
+  "start_lives": 5,
+  "levels": [
+    {
+      "id": "level_1",
+      "duration": 30,
+      "waves": [
+        {
+          "id": "enemy_0",
+          "time": 2.0,
+          "lane": 1,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_1",
+          "time": 4.167,
+          "lane": 3,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_2",
+          "time": 6.333,
+          "lane": 0,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_3",
+          "time": 8.5,
+          "lane": 2,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_4",
+          "time": 10.667,
+          "lane": 4,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_5",
+          "time": 12.833,
+          "lane": 1,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_6",
+          "time": 15.0,
+          "lane": 3,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_7",
+          "time": 17.167,
+          "lane": 0,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_8",
+          "time": 19.333,
+          "lane": 2,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_9",
+          "time": 21.5,
+          "lane": 4,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_10",
+          "time": 23.667,
+          "lane": 1,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_11",
+          "time": 25.833,
+          "lane": 3,
+          "type": "fox"
+        }
+      ]
+    },
+    {
+      "id": "level_2",
+      "duration": 40,
+      "waves": [
+        {
+          "id": "enemy_0",
+          "time": 2.0,
+          "lane": 2,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_1",
+          "time": 4.25,
+          "lane": 4,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_2",
+          "time": 6.5,
+          "lane": 1,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_3",
+          "time": 8.75,
+          "lane": 3,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_4",
+          "time": 11.0,
+          "lane": 0,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_5",
+          "time": 13.25,
+          "lane": 2,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_6",
+          "time": 15.5,
+          "lane": 4,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_7",
+          "time": 17.75,
+          "lane": 1,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_8",
+          "time": 20.0,
+          "lane": 3,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_9",
+          "time": 22.25,
+          "lane": 0,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_10",
+          "time": 24.5,
+          "lane": 2,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_11",
+          "time": 26.75,
+          "lane": 4,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_12",
+          "time": 29.0,
+          "lane": 1,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_13",
+          "time": 31.25,
+          "lane": 3,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_14",
+          "time": 33.5,
+          "lane": 0,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_15",
+          "time": 35.75,
+          "lane": 2,
+          "type": "lizard"
+        }
+      ]
+    },
+    {
+      "id": "level_3",
+      "duration": 50,
+      "waves": [
+        {
+          "id": "enemy_0",
+          "time": 2.0,
+          "lane": 3,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_1",
+          "time": 4.556,
+          "lane": 0,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_2",
+          "time": 7.111,
+          "lane": 2,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_3",
+          "time": 9.667,
+          "lane": 4,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_4",
+          "time": 12.222,
+          "lane": 1,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_5",
+          "time": 14.778,
+          "lane": 3,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_6",
+          "time": 17.333,
+          "lane": 0,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_7",
+          "time": 19.889,
+          "lane": 2,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_8",
+          "time": 22.444,
+          "lane": 4,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_9",
+          "time": 25.0,
+          "lane": 1,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_10",
+          "time": 27.556,
+          "lane": 3,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_11",
+          "time": 30.111,
+          "lane": 0,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_12",
+          "time": 32.667,
+          "lane": 2,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_13",
+          "time": 35.222,
+          "lane": 4,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_14",
+          "time": 37.778,
+          "lane": 1,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_15",
+          "time": 40.333,
+          "lane": 3,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_16",
+          "time": 42.889,
+          "lane": 0,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_17",
+          "time": 45.444,
+          "lane": 2,
+          "type": "lizard"
+        }
+      ]
+    },
+    {
+      "id": "level_4",
+      "duration": 60,
+      "waves": [
+        {
+          "id": "enemy_0",
+          "time": 2.0,
+          "lane": 4,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_1",
+          "time": 4.8,
+          "lane": 1,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_2",
+          "time": 7.6,
+          "lane": 3,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_3",
+          "time": 10.4,
+          "lane": 0,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_4",
+          "time": 13.2,
+          "lane": 2,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_5",
+          "time": 16.0,
+          "lane": 4,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_6",
+          "time": 18.8,
+          "lane": 1,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_7",
+          "time": 21.6,
+          "lane": 3,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_8",
+          "time": 24.4,
+          "lane": 0,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_9",
+          "time": 27.2,
+          "lane": 2,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_10",
+          "time": 30.0,
+          "lane": 4,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_11",
+          "time": 32.8,
+          "lane": 1,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_12",
+          "time": 35.6,
+          "lane": 3,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_13",
+          "time": 38.4,
+          "lane": 0,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_14",
+          "time": 41.2,
+          "lane": 2,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_15",
+          "time": 44.0,
+          "lane": 4,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_16",
+          "time": 46.8,
+          "lane": 1,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_17",
+          "time": 49.6,
+          "lane": 3,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_18",
+          "time": 52.4,
+          "lane": 0,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_19",
+          "time": 55.2,
+          "lane": 2,
+          "type": "lizard"
+        }
+      ]
+    },
+    {
+      "id": "level_5",
+      "duration": 70,
+      "waves": [
+        {
+          "id": "enemy_0",
+          "time": 2.0,
+          "lane": 0,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_1",
+          "time": 4.75,
+          "lane": 2,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_2",
+          "time": 7.5,
+          "lane": 4,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_3",
+          "time": 10.25,
+          "lane": 1,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_4",
+          "time": 13.0,
+          "lane": 3,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_5",
+          "time": 15.75,
+          "lane": 0,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_6",
+          "time": 18.5,
+          "lane": 2,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_7",
+          "time": 21.25,
+          "lane": 4,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_8",
+          "time": 24.0,
+          "lane": 1,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_9",
+          "time": 26.75,
+          "lane": 3,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_10",
+          "time": 29.5,
+          "lane": 0,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_11",
+          "time": 32.25,
+          "lane": 2,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_12",
+          "time": 35.0,
+          "lane": 4,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_13",
+          "time": 37.75,
+          "lane": 1,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_14",
+          "time": 40.5,
+          "lane": 3,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_15",
+          "time": 43.25,
+          "lane": 0,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_16",
+          "time": 46.0,
+          "lane": 2,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_17",
+          "time": 48.75,
+          "lane": 4,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_18",
+          "time": 51.5,
+          "lane": 1,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_19",
+          "time": 54.25,
+          "lane": 3,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_20",
+          "time": 57.0,
+          "lane": 0,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_21",
+          "time": 59.75,
+          "lane": 2,
+          "type": "lizard"
+        },
+        {
+          "id": "enemy_22",
+          "time": 62.5,
+          "lane": 4,
+          "type": "fox"
+        },
+        {
+          "id": "enemy_23",
+          "time": 65.25,
+          "lane": 1,
+          "type": "lizard"
+        }
+      ]
+    }
+  ],
+  "defenders": [
+    {
+      "type": "cactus",
+      "cost": 100,
+      "hp": 100,
+      "period": 1,
+      "damage": 20
+    },
+    {
+      "type": "gnome",
+      "cost": 150,
+      "hp": 100,
+      "period": 2,
+      "damage": 35
+    },
+    {
+      "type": "gravestone",
+      "cost": 75,
+      "hp": 300,
+      "period": 0,
+      "damage": 0
+    },
+    {
+      "type": "trophy",
+      "cost": 50,
+      "hp": 80,
+      "period": 5,
+      "damage": 0
+    }
+  ]
+}

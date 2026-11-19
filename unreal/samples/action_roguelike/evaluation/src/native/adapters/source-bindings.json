@@ -1,0 +1,288 @@
+{
+  "schema_version": "2.0.0",
+  "binding_policy": "Analyze reviewed class/member/source anchors; generate a private adapter; compilation, native write/readback and independent observer confirmation are mandatory. Ambiguous or unsupported mappings invalidate the run.",
+  "bindings": [
+    {
+      "id": "reference-native-v1",
+      "module": "ArenaSlice",
+      "headers": [
+        "ArenaPlayerCharacter.h",
+        "ArenaGameMode.h"
+      ],
+      "damage_guards": [
+        {
+          "file": "ArenaPlayerCharacter.cpp",
+          "pattern": "void\\s+AArenaPlayerCharacter::ReceiveEnemyDamage\\([^)]*\\)\\s*\\{",
+          "insertion": " if (AREvaluationFixture::Protected(this)) return; "
+        }
+      ],
+      "cpp": {
+        "PLAYER": "AArenaPlayerCharacter",
+        "GAMEMODE": "AArenaGameMode",
+        "HEALTH_WRITE": "P->CurrentHealth = Number;",
+        "HEALTH_READ": "P->CurrentHealth",
+        "CREDITS_WRITE": "P->Credits = Number;",
+        "CREDITS_READ": "P->Credits",
+        "TELEPORT_WRITE": "P->bHasTeleportAbility = Flag;",
+        "TELEPORT_READ": "P->bHasTeleportAbility",
+        "CLOCK_WRITE": "G->SurvivalTime = 60.0 - Number;",
+        "CLOCK_READ": "60.0 - (G->SurvivalTime)",
+        "CONTEXT": ""
+      },
+      "source_sha256": {
+        "Source/ArenaSlice/ArenaGameMode.cpp": "f41bd29546d1dba32ca134b5a03065387d75bdcba7e4eec6a78faa231689a30d",
+        "Source/ArenaSlice/ArenaGameMode.h": "72bff1ac79ac794e90462948df0c2abbf55c7d6cb79e5f099f403154e1cbc4e5",
+        "Source/ArenaSlice/ArenaPlayerCharacter.cpp": "8adb97d92defb5e0610c20e194e15aca4a01e901d41efe5d012854b54e9ddbed",
+        "Source/ArenaSlice/ArenaPlayerCharacter.h": "271db6fa37f6e5f8e897280b9000034f30c409b8af44a8b8229c21645f69ea1c"
+      },
+      "source_hash_mode": "utf8_lf",
+      "source_revision": "7d5442f",
+      "required_members": {
+        "P": [
+          "Credits",
+          "CurrentHealth",
+          "bHasTeleportAbility"
+        ],
+        "G": [
+          "SurvivalTime"
+        ]
+      }
+    },
+    {
+      "id": "native-layout-a-v2",
+      "module": "ArenaSlice",
+      "headers": [
+        "ArenaCharacter.h",
+        "ArenaGameMode.h",
+        "ArenaWorldActors.h"
+      ],
+      "damage_guards": [
+        {
+          "file": "ArenaCharacter.cpp",
+          "pattern": "void\\s+AArenaCharacter::ApplyDamage\\([^)]*\\)\\s*\\{",
+          "insertion": " if (AREvaluationFixture::Protected(this)) return; "
+        }
+      ],
+      "cpp": {
+        "PLAYER": "AArenaCharacter",
+        "GAMEMODE": "AArenaGameMode",
+        "HEALTH_WRITE": "P->Health = Number;",
+        "HEALTH_READ": "P->Health",
+        "CREDITS_WRITE": "P->Credits = Number;",
+        "CREDITS_READ": "P->Credits",
+        "TELEPORT_WRITE": "P->bTeleportAcquired = Flag;",
+        "TELEPORT_READ": "P->bTeleportAcquired",
+        "CLOCK_WRITE": "G->SurvivalTime = 60.0 - Number;",
+        "CLOCK_READ": "60.0 - (G->SurvivalTime)",
+        "CONTEXT": "// Remove only records for physics props already destroyed by the engine setup.\n        const TArray<TSharedPtr<FJsonValue>>* RemovedProps;\n        if (Request->TryGetArrayField(TEXT(\"remove_props\"), RemovedProps))\n        {\n            int32 RemovedCount = 0;\n            for (const auto& Value : *RemovedProps)\n            {\n                const auto Position = Value->AsObject();\n                const FVector Where(Position->GetNumberField(TEXT(\"x\")) * 100.0,\n                                    Position->GetNumberField(TEXT(\"y\")) * 100.0,\n                                    Position->GetNumberField(TEXT(\"z\")) * 100.0);\n                int32 Match = INDEX_NONE;\n                for (int32 Index = 0; Index < G->Objects.Num(); ++Index)\n                {\n                    auto* Prop = Cast<AArenaPhysicsProp>(G->Objects[Index].Get());\n                    if (!Prop || !Prop->IsActorBeingDestroyed() ||\n                        FVector::Dist(Prop->GetActorLocation(), Where) > 10.0) continue;\n                    if (Match != INDEX_NONE) return false;\n                    Match = Index;\n                }\n                if (Match == INDEX_NONE) return false;\n                G->Objects.RemoveAt(Match);\n                ++RemovedCount;\n            }\n            Receipt->SetNumberField(TEXT(\"removed_prop_records\"), RemovedCount);\n            Receipt->SetBoolField(TEXT(\"prop_storage_verified\"), RemovedCount == RemovedProps->Num());\n        }"
+      },
+      "source_sha256": {
+        "Source/ArenaSlice/ArenaCharacter.cpp": "2564cd77eac0dc9a2a7aed47751b278e7e532c92ffaab159ff081c07f3e2a417",
+        "Source/ArenaSlice/ArenaCharacter.h": "aafb0ab223df40af4667dc04ffc2e7144c72e8cda7cf2194eb0711837d8d446d",
+        "Source/ArenaSlice/ArenaGameMode.cpp": "6cd387e7290853f042ff89ccece18a03abd269c6b7179fc96e2bedcf52b7c0fe",
+        "Source/ArenaSlice/ArenaGameMode.h": "51c2e9b2f23252607225e947400d70a296da66293be5e1603ea594b35fb16061",
+        "Source/ArenaSlice/ArenaWorldActors.h": "c96eecf49894abe004e85a16404cc31b22598686909965f81f0202c36d360d5b"
+      },
+      "required_members": {
+        "P": [
+          "Credits",
+          "Health",
+          "bTeleportAcquired"
+        ],
+        "G": [
+          "SurvivalTime"
+        ]
+      }
+    },
+    {
+      "id": "native-layout-b-v1",
+      "module": "ArenaSlice",
+      "headers": [
+        "ArenaGame.h"
+      ],
+      "damage_guards": [
+        {
+          "file": "ArenaGame.cpp",
+          "pattern": "void\\s+AArenaGameMode::ResolvePlayerDamage\\([^)]*\\)\\s*\\{",
+          "insertion": " if (AREvaluationFixture::Protected(this)) return; "
+        }
+      ],
+      "cpp": {
+        "PLAYER": "AArenaPlayerCharacter",
+        "GAMEMODE": "AArenaGameMode",
+        "HEALTH_WRITE": "G->PlayerHealth = Number; P->Health = Number;",
+        "HEALTH_READ": "G->PlayerHealth",
+        "CREDITS_WRITE": "G->Credits = Number;",
+        "CREDITS_READ": "G->Credits",
+        "TELEPORT_WRITE": "G->bTeleportAcquired = Flag; P->bTeleportAcquired = Flag;",
+        "TELEPORT_READ": "G->bTeleportAcquired",
+        "CLOCK_WRITE": "G->SurvivalTime = 60.0 - Number;",
+        "CLOCK_READ": "60.0 - (G->SurvivalTime)",
+        "CONTEXT": ""
+      },
+      "source_sha256": {
+        "Source/ArenaSlice/ArenaGame.cpp": "0c949a289d575db3c90f07dbf521baf037a23375f8c932f7d4ff819da85bd639",
+        "Source/ArenaSlice/ArenaGame.h": "0239fe6bb8540b54eb78c3234ae53b4e9f2a6e67d868f9d39dae2745df1b2eeb"
+      },
+      "required_members": {
+        "P": [
+          "Health",
+          "bTeleportAcquired"
+        ],
+        "G": [
+          "Credits",
+          "PlayerHealth",
+          "SurvivalTime",
+          "bTeleportAcquired"
+        ]
+      }
+    },
+    {
+      "id": "native-layout-c-v1",
+      "module": "ArenaSlice",
+      "headers": [
+        "ArenaGameplay.h"
+      ],
+      "damage_guards": [
+        {
+          "file": "ArenaGameplay.cpp",
+          "pattern": "void\\s+ARiftPlayer::TakeHit\\([^)]*\\)\\s*\\{",
+          "insertion": " if (AREvaluationFixture::Protected(this)) return; "
+        }
+      ],
+      "cpp": {
+        "PLAYER": "ARiftPlayer",
+        "GAMEMODE": "ARiftGameMode",
+        "HEALTH_WRITE": "P->Health = Number;",
+        "HEALTH_READ": "P->Health",
+        "CREDITS_WRITE": "P->Credits = Number;",
+        "CREDITS_READ": "P->Credits",
+        "TELEPORT_WRITE": "P->bHasTeleport = Flag;",
+        "TELEPORT_READ": "P->bHasTeleport",
+        "CLOCK_WRITE": "G->Elapsed = 60.0 - Number;",
+        "CLOCK_READ": "60.0 - (G->Elapsed)",
+        "CONTEXT": ""
+      },
+      "source_sha256": {
+        "Source/ArenaSlice/ArenaGameplay.cpp": "a5677c659cf6a8988ff9e8f0701332a1062873874c53baa83690a5f796caafe0",
+        "Source/ArenaSlice/ArenaGameplay.h": "078b3b20612abe353e9f2968d5d42ddae5c6c6367e74a72a7c5c5f0f8f6985de"
+      },
+      "required_members": {
+        "P": [
+          "Credits",
+          "Health",
+          "bHasTeleport"
+        ],
+        "G": [
+          "Elapsed"
+        ]
+      }
+    },
+    {
+      "id": "native-layout-d-v1",
+      "module": "ArenaSlice",
+      "headers": [
+        "ArenaGameMode.h"
+      ],
+      "damage_guards": [
+        {
+          "file": "ArenaGameMode.cpp",
+          "pattern": "void\\s+ARiftPawn::Hurt\\([^)]*\\)\\s*\\{",
+          "insertion": " if (IsPlayerControlled() && AREvaluationFixture::Protected(this)) return; "
+        }
+      ],
+      "cpp": {
+        "PLAYER": "ARiftPawn",
+        "GAMEMODE": "AArenaGameMode",
+        "HEALTH_WRITE": "P->Health = Number;",
+        "HEALTH_READ": "P->Health",
+        "CREDITS_WRITE": "G->Credits = Number;",
+        "CREDITS_READ": "G->Credits",
+        "TELEPORT_WRITE": "G->Acquired = Flag;",
+        "TELEPORT_READ": "G->Acquired",
+        "CLOCK_WRITE": "G->Elapsed = 60.0 - Number;",
+        "CLOCK_READ": "60.0 - (G->Elapsed)",
+        "CONTEXT": "// The native actor has already been destroyed by the engine layer.\n        // Remove only its source-audited prop storage entry, never a result event.\n        const TArray<TSharedPtr<FJsonValue>>* RemovedProps;\n        if (Request->TryGetArrayField(TEXT(\"remove_props\"), RemovedProps))\n        {\n            int32 RemovedCount = 0;\n            for (const auto& Value : *RemovedProps)\n            {\n                const auto Position = Value->AsObject();\n                const FVector Where(Position->GetNumberField(TEXT(\"x\")) * 100.0,\n                                    Position->GetNumberField(TEXT(\"y\")) * 100.0,\n                                    Position->GetNumberField(TEXT(\"z\")) * 100.0);\n                int32 Match = INDEX_NONE;\n                for (int32 Index = 0; Index < G->Pickups.Num(); ++Index)\n                {\n                    const auto& Prop = G->Pickups[Index];\n                    if (Prop.Kind != 3 || !Prop.Actor || !Prop.Actor->IsActorBeingDestroyed() ||\n                        FVector::Dist(Prop.Actor->GetActorLocation(), Where) > 10.0) continue;\n                    if (Match != INDEX_NONE) return false;\n                    Match = Index;\n                }\n                if (Match == INDEX_NONE) return false;\n                G->Pickups.RemoveAt(Match);\n                ++RemovedCount;\n            }\n            Receipt->SetNumberField(TEXT(\"removed_prop_records\"), RemovedCount);\n            Receipt->SetBoolField(TEXT(\"prop_storage_verified\"), RemovedCount == RemovedProps->Num());\n        }"
+      },
+      "source_sha256": {
+        "Source/ArenaSlice/ArenaGameMode.cpp": "98c5c5b0b3320d7b2f7f46e19387e86fb598ef3c1c8e77779bfcce34dc5a3e93",
+        "Source/ArenaSlice/ArenaGameMode.h": "e2e4bf9bc3927168f3506ff1a5d742976d655ffc78c2237c1d3151082a2cd683"
+      },
+      "required_members": {
+        "P": [
+          "Health"
+        ],
+        "G": [
+          "Acquired",
+          "Credits",
+          "Elapsed"
+        ]
+      },
+      "source_anchors": [
+        {
+          "file": "ArenaGameMode.h",
+          "pattern": "TArray\\s*<\\s*FRiftPickup\\s*>\\s+Pickups\\s*;"
+        },
+        {
+          "file": "ArenaGameMode.h",
+          "pattern": "struct\\s+FRiftPickup\\s*\\{\\s*GENERATED_BODY\\(\\)\\s*UPROPERTY\\(\\)\\s*AActor\\s*\\*\\s*Actor\\s*=\\s*nullptr;\\s*int\\s+Kind\\s*=\\s*0;"
+        },
+        {
+          "file": "ArenaGameMode.cpp",
+          "pattern": "for\\(auto& O:Pickups\\)if\\(O.Kind==3&&!O.Consumed\\)"
+        }
+      ]
+    },
+    {
+      "id": "native-layout-e-v1",
+      "module": "ArenaSlice",
+      "headers": [
+        "ArenaCharacter.h",
+        "ArenaGameMode.h"
+      ],
+      "damage_guards": [
+        {
+          "file": "ArenaEnemy.cpp",
+          "pattern": "C\\->Health=FMath::Max\\(0\\.f,C\\->Health\\-10\\.f\\);",
+          "replacement": "if (!AREvaluationFixture::Protected(C)) { C->Health=FMath::Max(0.f,C->Health-10.f); }"
+        },
+        {
+          "file": "ArenaProjectile.cpp",
+          "pattern": "C\\->Health=FMath::Max\\(0\\.f,C\\->Health\\-8\\);",
+          "replacement": "if (!AREvaluationFixture::Protected(C)) { C->Health=FMath::Max(0.f,C->Health-8); }"
+        }
+      ],
+      "cpp": {
+        "PLAYER": "AArenaCharacter",
+        "GAMEMODE": "AArenaGameMode",
+        "HEALTH_WRITE": "P->Health = Number;",
+        "HEALTH_READ": "P->Health",
+        "CREDITS_WRITE": "P->Credits = Number;",
+        "CREDITS_READ": "P->Credits",
+        "TELEPORT_WRITE": "P->TeleportAcquired = Flag;",
+        "TELEPORT_READ": "P->TeleportAcquired",
+        "CLOCK_WRITE": "G->StartTime = World->GetTimeSeconds() - (60.0 - Number); G->Elapsed = 60.0 - Number;",
+        "CLOCK_READ": "60.0 - (G->Elapsed)",
+        "CONTEXT": ""
+      },
+      "source_sha256": {
+        "Source/ArenaSlice/ArenaCharacter.h": "8e8610c92bc9e4e422f4d4fa9258ef696b47a9aa70567aeb9018eea5888806ef",
+        "Source/ArenaSlice/ArenaEnemy.cpp": "9e2bdd2daee5d903f7d6b7fcbe5e0ca060ff4b92e8abe48d2e99338a87c8a66d",
+        "Source/ArenaSlice/ArenaGameMode.cpp": "f825a1091b7183799029678424d6336acd2356c6d3372d94b6587da00cb6ef1d",
+        "Source/ArenaSlice/ArenaGameMode.h": "3f59e2e6f145929329dbc1da5302bf183f97cac4e3e9b042636a28d875a7b7ee",
+        "Source/ArenaSlice/ArenaProjectile.cpp": "edbf42c7cb7cde4a770a69cc964c73bce4752f4fe8c5363b201f0727c6646a7a"
+      },
+      "required_members": {
+        "P": [
+          "Credits",
+          "Health",
+          "TeleportAcquired"
+        ],
+        "G": [
+          "Elapsed",
+          "StartTime"
+        ]
+      }
+    }
+  ]
+}

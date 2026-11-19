@@ -1,0 +1,57 @@
+{
+  "version": "gemsbond-evaluator-1.1.2-evidence-review",
+  "engine": {
+    "version": "5.7.4",
+    "changelist": 51494982,
+    "mode": "Windows editor_game"
+  },
+  "commands": {
+    "collect": "python evaluator/scripts/collect.py --candidate <returned-input> --run <new-private-output> --engine <engine-root> --mapping <reviewed-private-map>",
+    "d6_prepare": "python evaluator/scripts/d6.py prepare --run <output>",
+    "d6_aggregate": "python evaluator/scripts/d6.py aggregate --run <output>",
+    "score": "python evaluator/scripts/score.py --run <output>"
+  },
+  "exit_codes": {
+    "0": "collection or scoring completed",
+    "1": "candidate failure collected",
+    "2": "infrastructure/authoring blocker; no numeric score published"
+  },
+  "dependencies": [
+    "Python 3.11 standard library",
+    "PowerShell 7",
+    ".NET System.Drawing",
+    "installed UE toolchain",
+    "versioned repository executor"
+  ],
+  "candidate_faults": [
+    "missing/malformed project or manifest",
+    "compile/start failure",
+    "crash",
+    "unresponsive legal local wait",
+    "black client",
+    "missing/malformed/stale public observation",
+    "unreachable player state",
+    "D6 candidate missing/broken frame"
+  ],
+  "infrastructure_faults": [
+    "wrong engine installation",
+    "fixture map absent/mismatched",
+    "private setup not independently confirmed",
+    "host input/capture failure",
+    "evidence lost after capture",
+    "invalid dialogue answer/parser",
+    "watchdog budget or cleanup failure"
+  ],
+  "partial_observation_policy": "Fail only the affected observation compliance check and dependent assertions. Preserve independently observed results.",
+  "candidate_zero_policy": "fail/unreachable contribute zero; never null or N/A",
+  "scoring_dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "formula": "dimension maximum * passed independent checkpoints / total checkpoints; one decimal",
+  "reference_dependency": "Only D6 loads original reference images. Scorer/cases/player do not load Gold. One optional exact-fingerprint setup mapping is isolated in fixtures/."
+}

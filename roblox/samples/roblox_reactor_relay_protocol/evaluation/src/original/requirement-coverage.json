@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "game": "reactor_relay_protocol",
+  "source": "Reactor Relay Protocol GDD Section 6 and EVALUABILITY_CONTRACT",
+  "dimensions": {
+    "D1": ["artifact readability", "required scripts", "source wiring", "source/archive match", "public RR contract"],
+    "D2": ["three bays", "18 controls", "selection", "scan", "purge"],
+    "D3": ["initial resources", "power boundary", "unstable-lock penalty", "six deterministic incident transitions"],
+    "D4": ["menu", "start", "R restart", "preview/sequence", "win", "loss", "terminal locks", "clean reopen"],
+    "D5": ["start visibility", "restart feedback", "win feedback", "loss feedback"],
+    "D6": ["independent frozen visual comparison only"]
+  },
+  "input_policy": "Complete Windows SendInput pointer clicks and documented keyboard input only; public engine state is read-only evidence."
+}

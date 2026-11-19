@@ -1,0 +1,81 @@
+requirement_id,checkpoint_id,dimension,stage,question
+QUALITY-01,D1-01,D1,static,Valid portable project entry and allowed engine/plugin configuration
+QUALITY-01,D1-02,D1,static,Clean source build succeeds using the required toolchain
+QUALITY-01,D1-03,D1,static,Default entry starts and produces a nonblack client frame
+QUALITY-02,D1-04,D1,static,Public read-only provider has fresh identity and schema-valid state
+ASSET-01,D1-05,D1,static,Required referenced presentation files load without blocking asset errors
+ASSET-02,D1-05,D1,static,Required referenced presentation files load without blocking asset errors
+ASSET-03,D1-05,D1,static,Required referenced presentation files load without blocking asset errors
+ASSET-04,D1-05,D1,static,Required referenced presentation files load without blocking asset errors
+ASSET-05,D1-05,D1,static,Required referenced presentation files load without blocking asset errors
+CONTENT-01,D2-01,D2,dynamic,"Fixed room, exact functional objects and static decoration composition appear at runtime"
+CONTENT-02,D2-01,D2,dynamic,"Fixed room, exact functional objects and static decoration composition appear at runtime"
+ASSET-03,D2-01,D2,dynamic,"Fixed room, exact functional objects and static decoration composition appear at runtime"
+INPUT-01,D2-02,D2,dynamic,Walking and grounded jumping are usable through normal controls
+INPUT-02,D2-02,D2,dynamic,Walking and grounded jumping are usable through normal controls
+COMBAT-01,D2-03,D2,dynamic,Sword swings and connected strikes can be used
+ENEMY-01,D2-04,D2,dynamic,"One patrol enemy can attack, take damage and die"
+ENEMY-02,D2-04,D2,dynamic,"One patrol enemy can attack, take damage and die"
+TRAVERSAL-01,D2-05,D2,dynamic,Spring is reachable and launches the player
+TRAVERSAL-02,D2-06,D2,dynamic,All three one-way ledges can support the player
+HAZARD-01,D2-07,D2,dynamic,Both spike groups cause damage and death feedback can occur
+HAZARD-02,D2-07,D2,dynamic,Both spike groups cause damage and death feedback can occur
+OBJECTIVE-01,D2-08,D2,dynamic,"Key, closed/open door and completion are reachable objective content"
+OBJECTIVE-02,D2-08,D2,dynamic,"Key, closed/open door and completion are reachable objective content"
+OBJECTIVE-03,D2-08,D2,dynamic,"Key, closed/open door and completion are reachable objective content"
+OBJECTIVE-04,D2-08,D2,dynamic,"Key, closed/open door and completion are reachable objective content"
+INTERFACE-01,D2-09,D2,dynamic,Health/key/death indicators and player restart are usable
+LIFECYCLE-01,D2-09,D2,dynamic,Health/key/death indicators and player restart are usable
+ASSET-01,D2-10,D2,dynamic,Supplied captain and pig action frames appear in their corresponding runtime actions
+ASSET-04,D2-10,D2,dynamic,Supplied captain and pig action frames appear in their corresponding runtime actions
+ASSET-02,D2-11,D2,dynamic,Supplied objective and HUD art appear in their corresponding runtime states
+ASSET-05,D2-11,D2,dynamic,Supplied objective and HUD art appear in their corresponding runtime states
+CONTENT-02,D3-01,D3,dynamic,"Fresh attempt has the required counts, safe player, 100/50 health and locked key state"
+ENEMY-01,D3-01,D3,dynamic,"Fresh attempt has the required counts, safe player, 100/50 health and locked key state"
+HAZARD-01,D3-01,D3,dynamic,"Fresh attempt has the required counts, safe player, 100/50 health and locked key state"
+INPUT-01,D3-02,D3,dynamic,"Direction, 250-pixel speed, release stop and masonry boundaries are correct"
+INPUT-02,D3-03,D3,dynamic,"370/980 jump arc, steering, landing and rejected air/held jumps are correct"
+COMBAT-01,D3-04,D3,dynamic,"Swing lock, empty misses, range/wall rejection, 25/45 damage and no stacked hit are correct"
+ENEMY-01,D3-05,D3,dynamic,Pig patrols both corridor boundaries at 50 pixels/second without leaving its floor
+ENEMY-02,D3-06,D3,dynamic,"Connected pig attacks deal 55 once; dead pig cannot damage, respawn or grant progress"
+TRAVERSAL-01,D3-07,D3,dynamic,Spring produces a local 500-pixel boost and recovers for a separate repeat contact
+TRAVERSAL-02,D3-08,D3,dynamic,"Each ledge permits upward passage, catches descent and remains fixed on repeat use"
+HAZARD-01,D3-09,D3,dynamic,"Both spike contacts deal 50, push away, do not stack or reset nonfatal progress"
+HAZARD-02,D3-10,D3,dynamic,Each lethal event increments deaths exactly once and resets the attempt
+OBJECTIVE-01,D3-11,D3,dynamic,"Pickup is single-use, door opens persistently, and pickup alone never completes"
+OBJECTIVE-03,D3-11,D3,dynamic,"Pickup is single-use, door opens persistently, and pickup alone never completes"
+OBJECTIVE-02,D3-12,D3,dynamic,Closed exit harmlessly rejects repeated visits; only entering the opened exit completes
+OBJECTIVE-04,D3-12,D3,dynamic,Closed exit harmlessly rejects repeated visits; only entering the opened exit completes
+TERMINAL-01,D3-13,D3,dynamic,"Terminal movement, jump, sword, enemy, health and objective remain stable"
+QUALITY-02,D4-01,D4,dynamic,An uninterrupted normal-input journey connects fresh entry to room completion
+QUALITY-05,D4-01,D4,dynamic,An uninterrupted normal-input journey connects fresh entry to room completion
+OBJECTIVE-04,D4-01,D4,dynamic,An uninterrupted normal-input journey connects fresh entry to room completion
+HAZARD-02,D4-02,D4,dynamic,"Lethal failure returns to safe, playable fresh room with session deaths retained"
+LIFECYCLE-01,D4-03,D4,dynamic,Consecutive manual restarts restore completed/progressed attempts without adding deaths
+LIFECYCLE-01,D4-04,D4,dynamic,"Restart during sword, spring and death clears pending effects across their due windows"
+QUALITY-06,D4-04,D4,dynamic,"Restart during sword, spring and death clears pending effects across their due windows"
+LIFECYCLE-02,D4-05,D4,dynamic,True process close/reopen changes identity and clears session progress/deaths
+QUALITY-01,D4-05,D4,dynamic,True process close/reopen changes identity and clears session progress/deaths
+QUALITY-05,D4-06,D4,dynamic,Independent feature journeys and a second success remain responsive and clean up
+QUALITY-06,D4-06,D4,dynamic,Independent feature journeys and a second success remain responsive and clean up
+INTERFACE-01,D5-01,D5,dynamic,"Initial HUD values, controls and restart hint are readable; no stage numbering"
+QUALITY-03,D5-01,D5,dynamic,"Initial HUD values, controls and restart hint are readable; no stage numbering"
+INPUT-01,D5-02,D5,dynamic,"Facing, move, jump, fall, land and sword feedback follow actual actions"
+INPUT-02,D5-02,D5,dynamic,"Facing, move, jump, fall, land and sword feedback follow actual actions"
+COMBAT-01,D5-02,D5,dynamic,"Facing, move, jump, fall, land and sword feedback follow actual actions"
+QUALITY-04,D5-02,D5,dynamic,"Facing, move, jump, fall, land and sword feedback follow actual actions"
+HAZARD-01,D5-03,D5,dynamic,"Hit, enemy and death feedback and health/death HUD updates are perceptible and truthful"
+HAZARD-02,D5-03,D5,dynamic,"Hit, enemy and death feedback and health/death HUD updates are perceptible and truthful"
+ENEMY-02,D5-03,D5,dynamic,"Hit, enemy and death feedback and health/death HUD updates are perceptible and truthful"
+INTERFACE-01,D5-03,D5,dynamic,"Hit, enemy and death feedback and health/death HUD updates are perceptible and truthful"
+OBJECTIVE-01,D5-04,D5,dynamic,Key pickup/count and closed/opening/open door are visually understandable
+OBJECTIVE-02,D5-04,D5,dynamic,Key pickup/count and closed/opening/open door are visually understandable
+OBJECTIVE-03,D5-04,D5,dynamic,Key pickup/count and closed/opening/open door are visually understandable
+INTERFACE-01,D5-04,D5,dynamic,Key pickup/count and closed/opening/open door are visually understandable
+OBJECTIVE-04,D5-05,D5,dynamic,ROOM CLEARED and R hint remain readable; R visibly restores play
+TERMINAL-01,D5-05,D5,dynamic,ROOM CLEARED and R hint remain readable; R visibly restores play
+LIFECYCLE-01,D5-05,D5,dynamic,ROOM CLEARED and R hint remain readable; R visibly restores play
+TRAVERSAL-01,D5-06,D5,dynamic,Spring and one-way platform feedback explain usable traversal without obstruction
+TRAVERSAL-02,D5-06,D5,dynamic,Spring and one-way platform feedback explain usable traversal without obstruction
+QUALITY-03,D5-06,D5,dynamic,Spring and one-way platform feedback explain usable traversal without obstruction
+QUALITY-04,D5-06,D5,dynamic,Spring and one-way platform feedback explain usable traversal without obstruction

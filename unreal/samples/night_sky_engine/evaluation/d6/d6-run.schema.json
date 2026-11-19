@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "3.0.0"
+    },
+    "status": {
+      "enum": [
+        "completed",
+        "invalid"
+      ]
+    },
+    "rounds": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "number",
+          "states"
+        ],
+        "properties": {
+          "number": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "states": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 5,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "status",
+                "criteria"
+              ],
+              "properties": {
+                "status": {
+                  "enum": [
+                    "compared",
+                    "candidate_missing",
+                    "candidate_black",
+                    "candidate_broken",
+                    "candidate_incomparable"
+                  ]
+                },
+                "criteria": {
+                  "type": "array",
+                  "minItems": 5,
+                  "maxItems": 5,
+                  "items": {
+                    "enum": [
+                      0,
+                      0.5,
+                      1,
+                      1.5,
+                      2
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "if": {
+    "properties": {
+      "status": {
+        "const": "completed"
+      }
+    }
+  },
+  "then": {
+    "required": [
+      "rounds",
+      "run_id",
+      "candidate_identity_sha256",
+      "catalog_sha256",
+      "raw_sha256",
+      "manifest_sha256",
+      "prompt_sha256",
+      "protocol_sha256",
+      "model_config",
+      "model_config_sha256",
+      "model_returned",
+      "capability_receipt"
+    ]
+  }
+}

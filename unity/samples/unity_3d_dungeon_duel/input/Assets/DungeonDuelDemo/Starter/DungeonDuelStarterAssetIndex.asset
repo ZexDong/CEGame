@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70f402b3273fd3f4f833a71c4cb6f03f, type: 3}
+  m_Name: DungeonDuelStarterAssetIndex
+  m_EditorClassIdentifier: 
+  PlayerVisual: {fileID: 7007299546426565654, guid: 85cd6bf97ccdd3e479313e597e168667, type: 3}
+  ImpVisual: {fileID: 2208196959483170717, guid: 7d4dbea91f7fd0447bf6fdc87f6456bd, type: 3}
+  BossVisual: {fileID: 928910598555811499, guid: 592792f790e5f2e4cb6cf51c61f301de, type: 3}
+  BossGateVisual: {fileID: 1899106884463111546, guid: 89cc929d293c08549aad4cd70359b76e, type: 3}
+  AttackVfx: {fileID: 5484667644151651130, guid: e1a27cb18e3a1d649aa3fc6420f3731b, type: 3}
+  DashVfx: {fileID: 7020717588864085867, guid: 210c34a446a65e94599c469444c03ad6, type: 3}
+  DeathVfx: {fileID: 6991483021183243482, guid: 9537f4739c7bc2f4e8d6b2d49bfcc97e, type: 3}
+  BakedNavMesh: {fileID: 23800000, guid: 370564daf57dc744495c4853cdfcf4dd, type: 2}
+  InputActions: {fileID: -944628639613478452, guid: add476edce0d24d26bcdaf1681449ecf, type: 3}
+  BattleMusic: {fileID: 8300000, guid: f770930a596a5a145a53f25b2ef34131, type: 3}
+  VictoryMusic: {fileID: 8300000, guid: 197a19cfbce09394d9afa55cc2c5ca22, type: 3}

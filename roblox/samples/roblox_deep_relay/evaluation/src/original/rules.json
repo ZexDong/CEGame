@@ -1,0 +1,70 @@
+{
+  "schema_version": "deep-relay-frozen-rules-v1",
+  "source_scoring_guide_sha256": "FC52D97A72DA8447A049597FF0B4DC8D2A11EAFF80A0FF58069BDC36F01802E3",
+  "scoring_formula": "dimension points * passed checkpoints / total checkpoints",
+  "dimensions": [
+    {
+      "id": "D1",
+      "name": "Engineering Validity & Engine Integration",
+      "points": 10,
+      "method": "static only",
+      "checkpoints": [
+        "d1.package_integrity",
+        "d1.source_compile",
+        "d1.rojo_clean_build",
+        "d1.delivered_place_integrity",
+        "d1.studio_open_smoke"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Specification Fulfillment & Content Completeness",
+      "points": 30,
+      "method": "live Play with OS input and engine state",
+      "checkpoints": [
+        "d2.world_and_protocol", "d2.power_system", "d2.coolant_system", "d2.auth_system",
+        "d2.carry_items", "d2.assembly_system", "d2.airlock_system", "d2.hazard_checkpoint",
+        "d2.final_system", "d2.completion_content"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Gameplay Correctness & System Behavior",
+      "points": 20,
+      "method": "live Play with positive and negative rules",
+      "checkpoints": [
+        "d3.initial_state", "d3.rejection_rules", "d3.power_rules", "d3.coolant_rules",
+        "d3.auth_rules", "d3.assembly_rules", "d3.airlock_rules", "d3.hazard_rules",
+        "d3.final_order_rules", "d3.completion_condition"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "End-to-End Flow & Lifecycle Integrity",
+      "points": 20,
+      "method": "live Play success/recovery plus separate clean Reopen",
+      "checkpoints": [
+        "d4.start_to_play", "d4.restart_midrun", "d4.systems_to_core", "d4.airlock_to_checkpoint",
+        "d4.death_recovery", "d4.complete_success_flow", "d4.restart_after_complete",
+        "d4.reopen_clean_session"
+      ]
+    },
+    {
+      "id": "D5",
+      "name": "Interface Functionality & Player Feedback",
+      "points": 10,
+      "method": "live HUD objects and feedback state",
+      "checkpoints": [
+        "d5.input_and_hud", "d5.hud_state_sync", "d5.rejection_feedback",
+        "d5.stage_feedback", "d5.completion_feedback"
+      ]
+    },
+    {
+      "id": "D6",
+      "name": "Visual Assembly & Presentation Fidelity",
+      "points": 10,
+      "method": "independent Reference/Candidate image pairs, fixed VLM prompt, three complete rounds",
+      "checkpoints": ["d6.visual_three_round_mean"]
+    }
+  ]
+}

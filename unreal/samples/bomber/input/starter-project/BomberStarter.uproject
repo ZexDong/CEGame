@@ -1,0 +1,19 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "5.7",
+  "Category": "Evaluation Starter",
+  "Description": "Source-only Bomber local duel starter with clean original visual assets and a read-only health publisher.",
+	"Modules": [
+    {
+      "Name": "BomberStarter",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+	],
+	"Plugins": [
+		{
+			"Name": "BlockoutMap",
+			"Enabled": true
+		}
+	]
+}

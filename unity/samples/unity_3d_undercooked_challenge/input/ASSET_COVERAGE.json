@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "coverage_revision": "v2.6-docv2-session-gate-20260912",
+  "roles": [
+    {
+      "role": "chef_characters",
+      "status": "supplied",
+      "paths": [
+        "Assets/UndercookedStarter/Art/FBX/Chef.fbx",
+        "Assets/UndercookedStarter/Art/Animations/**",
+        "Assets/UndercookedStarter/Art/Animators/**"
+      ],
+      "required_primary": true,
+      "notes": "Use supplied model and authored animation for both visible chefs."
+    },
+    {
+      "role": "tomato_ingredients",
+      "status": "supplied",
+      "paths": [
+        "Assets/UndercookedStarter/Art/FBX/Tomato_Raw.fbx",
+        "Assets/UndercookedStarter/Art/FBX/Tomato_Chopped.fbx",
+        "Assets/UndercookedStarter/Art/Textures/TomatoTexture.png"
+      ],
+      "required_primary": true,
+      "notes": "Tomato soup is the only recipe."
+    },
+    {
+      "role": "kitchen_stations",
+      "status": "supplied",
+      "paths": [
+        "Assets/UndercookedStarter/Art/FBX/IngredientCrate.fbx",
+        "Assets/UndercookedStarter/Art/FBX/Countertop.fbx",
+        "Assets/UndercookedStarter/Art/FBX/ChoppingBoard.fbx",
+        "Assets/UndercookedStarter/Art/FBX/CookingPot.fbx",
+        "Assets/UndercookedStarter/Art/FBX/Hob.fbx",
+        "Assets/UndercookedStarter/Art/FBX/Plate.fbx",
+        "Assets/UndercookedStarter/Art/FBX/DeliverCountertop.fbx",
+        "Assets/UndercookedStarter/Art/FBX/Trash.fbx"
+      ],
+      "required_primary": true,
+      "notes": "Station roles remain recognizable; colliders and interaction volumes are implementation-owned."
+    },
+    {
+      "role": "environment",
+      "status": "supplied",
+      "paths": [
+        "Assets/UndercookedStarter/Art/FBX/Floor30x30.fbx",
+        "Assets/UndercookedStarter/Art/FBX/Wall_*.fbx",
+        "Assets/UndercookedStarter/Materials/**",
+        "Assets/UndercookedStarter/Shaders/**"
+      ],
+      "required_primary": true,
+      "notes": "A coherent kitchen presentation may add supporting geometry."
+    },
+    {
+      "role": "ui_support",
+      "status": "supplied",
+      "paths": [
+        "Assets/UndercookedStarter/Art/UI/**",
+        "Assets/UndercookedStarter/Art/Fonts/**"
+      ],
+      "required_primary": false,
+      "notes": "uGUI layout and text are authored by the model; supplied textures are optional support."
+    },
+    {
+      "role": "audio",
+      "status": "supplied",
+      "paths": [
+        "Assets/UndercookedStarter/Audio/**"
+      ],
+      "required_primary": true,
+      "notes": "Use supplied ambience and feedback clips where appropriate."
+    },
+    {
+      "role": "input",
+      "status": "supplied",
+      "paths": [
+        "Assets/InputSystem/UndercookedBenchmark.inputactions"
+      ],
+      "required_primary": true,
+      "notes": "The normal bindings are published in GDD and may be wired by equivalent Input System code."
+    },
+    {
+      "role": "supporting_geometry",
+      "status": "procedural_allowed",
+      "paths": [],
+      "required_primary": false,
+      "notes": "Simple floor/collider/support geometry is allowed when it does not replace supplied primary roles."
+    },
+    {
+      "role": "external_or_third_party",
+      "status": "excluded",
+      "paths": [
+        "Assets/3rdParty/Lean/**",
+        "upstream gameplay scripts",
+        "upstream game scenes",
+        "Asset Store example media"
+      ],
+      "required_primary": false,
+      "notes": "Do not copy or use excluded content."
+    }
+  ]
+}

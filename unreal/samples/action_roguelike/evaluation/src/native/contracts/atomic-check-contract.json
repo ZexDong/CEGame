@@ -1,0 +1,610 @@
+{
+  "schema_version": "4.0.0",
+  "game_id": "ActionRoguelike",
+  "evaluator_revision": "actionroguelike-atomic-evaluator-4.1.0",
+  "engine": "Unreal Engine 5.6.1 CL 44394996",
+  "module": "scripts/ActionRoguelikeAtomicChecks.ps1",
+  "entrypoint": "Test-ActionRoguelikeAtomicCheckpoint -CheckpointId <id> -Traces <dictionary>",
+  "functions": [
+    "Test-ActionRoguelikeAtomicCheckpoint",
+    "Get-ActionRoguelikeAtomicVariantMap"
+  ],
+  "input": "evaluator_owned_independent_trace_dictionary",
+  "event_payload_compatibility": {
+    "revision": "ar-state-history-1.1.0",
+    "optional_fields": "Exact same-window state may corroborate resource amount, availability, teleport success and restart phase; explicit contradictory fields still fail.",
+    "process_aliases": "Public ability start/end may identify projectile creation/removal. Canonical events take precedence for the same opaque entity; duplicate canonical events remain visible.",
+    "source_corroboration": "A player-only damage record requires one enclosing enemy melee action ending by the first following snapshot, with no prior intervening action end. Ambiguity fails."
+  },
+  "snapshot_schema": "../input/contracts/actionroguelike-probe-snapshot.schema.json",
+  "event_schema": "../input/contracts/actionroguelike-probe-events.schema.json",
+  "verdicts": [
+    "pass",
+    "fail",
+    "unreachable",
+    "run_invalid"
+  ],
+  "required_result_fields": [
+    "checkpoint_id",
+    "verdict",
+    "passed",
+    "reason_code",
+    "detail",
+    "attribution",
+    "variants",
+    "evidence",
+    "measurements"
+  ],
+  "required_trace_fields": [
+    "execution",
+    "setup",
+    "input_receipts",
+    "samples",
+    "capture_paths",
+    "cleanup"
+  ],
+  "trace_contract": {
+    "execution": {
+      "required": [
+        "status",
+        "attribution",
+        "evidence_paths"
+      ],
+      "status": [
+        "completed",
+        "candidate_blocked",
+        "evaluator_blocked"
+      ],
+      "blocked_required": [
+        "reason_code",
+        "detail"
+      ],
+      "candidate_blocked": "Requires direct positive candidate fault evidence; converts this variant to unreachable. A missing executor, unsupported fixture, or uncollected trace is never candidate_blocked."
+    },
+    "setup": {
+      "required": [
+        "method",
+        "confirmed",
+        "before_identity",
+        "after_identity"
+      ],
+      "methods": [
+        "normal_input",
+        "state_fixture",
+        "hybrid"
+      ],
+      "identity": "Both receipts bind the observed process_token and round_id. The trace begins after setup with a fresh before sample.",
+      "target_binding": "When multiple matching objects exist, target_entity_id binds one observed public semantic entity; IDs remain opaque.",
+      "fixture_boundary": "Only versioned evaluator or engine adapters may set declared semantic preconditions. The Dashboard remains read-only. A hidden candidate hook is forbidden.",
+      "direction_change": "Latest-direction variants require setup.direction_change.confirmed=true, evaluator-owned input_receipt, and trusted before_facing/after_facing vectors that differ and match the first sampled player.facing. A receipted pointer preparation and fresh sample precede the measured pointer movement so absolute input cannot be a zero-distance move."
+    },
+    "input_receipts": {
+      "required": [
+        "semantic_action",
+        "monotonic_ms",
+        "input_dispatched",
+        "release_verified",
+        "attribution",
+        "evidence_path",
+        "process_token",
+        "round_id"
+      ],
+      "owner": "evaluator",
+      "source": "Actual keyboard, mouse, controller, or protected engine input dispatch and release receipts.",
+      "event_stream_is_input_receipt": false,
+      "identity": "Every receipt belongs to the same process and round and falls inside the trace sample window."
+    },
+    "samples": {
+      "minimum": 2,
+      "shape": {
+        "snapshot": "public snapshot object",
+        "events": "public event batch object"
+      },
+      "identity": "All samples share process_token and round_id, with strictly increasing snapshot sequence and nondecreasing monotonic clock. Each snapshot/event pair matches process, round, snapshot ID and clock.",
+      "event_coverage": "Mandatory for atomic acceptance: same process and round, increasing samples, contiguous half-open cursors, matching watermarks, no dropped events, one epoch, valid prior-batch linkage and immutable event IDs and sequences. Identical republished batches do not require self-linkage. Repeated unlinked empty heartbeats establish snapshot transport only. After independent setup, input, identity, capture and cleanup checks pass, this isolated candidate deficiency returns fail/CANDIDATE_EVENT_STREAM_UNAVAILABLE; other collection or chain faults remain run_invalid. Linked empty batches can establish a no-event window."
+    },
+    "capture_paths": "At least one synchronized client capture for the variant, retained in the evidence directory.",
+    "cleanup": {
+      "verified": true,
+      "required": [
+        "verified",
+        "receipt_id",
+        "attribution",
+        "release_all_inputs",
+        "fixture_cleared",
+        "process_tree_stopped",
+        "evidence_paths",
+        "process_token",
+        "round_id"
+      ],
+      "meaning": "All held inputs released, fixture mutations cleared, and owned runtime cleanup recorded. A bare verified flag is not sufficient evidence."
+    }
+  },
+  "fault_attribution": {
+    "fail": "Confirmed setup and valid evaluator input expose an observed candidate rule violation or malformed required public observation.",
+    "unreachable": "Direct candidate fault evidence prevents the variant's required state or action; execution.status is candidate_blocked.",
+    "run_invalid": "Evaluator case not executed, unsupported or unconfirmed setup, missing or candidate-authored input receipt, missing capture, unverified cleanup, torn identity, replayed samples, insufficient observation window, or rule exception. No score row is publishable until this fault is resolved.",
+    "precedence": [
+      "run_invalid",
+      "fail",
+      "unreachable",
+      "pass"
+    ]
+  },
+  "forbidden_operations": [
+    "call_damage",
+    "call_pickup",
+    "call_heal",
+    "call_win",
+    "call_loss",
+    "call_score",
+    "call_restart_result",
+    "write_verdict"
+  ],
+  "case_policy": {
+    "clean_start_required": true,
+    "depends_on_other_cases": false,
+    "default_maximum_actions": 2,
+    "actions_mean": "Measured rule triggers; preparation uses separately bounded normal input or audited fixture operations.",
+    "sample_before_and_after": true,
+    "synchronized_capture_required": true,
+    "cleanup_required": true,
+    "lifecycle": "Victory, failure, and repeated failure use distinct normal-input fresh rounds. Restart is a separate trace with an explicitly captured new-round result."
+  },
+  "checkpoints": {
+    "D2-08": [
+      "teleport.pickup",
+      "teleport.legal"
+    ],
+    "D2-10": [
+      "resources.pickup",
+      "resources.heal_basic"
+    ],
+    "D2-13": [
+      "journey.victory",
+      "journey.failure"
+    ],
+    "D3-03": [
+      "primary.hit",
+      "primary.obstacle",
+      "primary.miss",
+      "primary.repeat_reuse",
+      "primary.latest_direction"
+    ],
+    "D3-04": [
+      "blackhole.props",
+      "blackhole.empty",
+      "blackhole.multiple"
+    ],
+    "D3-05": [
+      "teleport.locked",
+      "teleport.pickup_repeat",
+      "teleport.legal",
+      "teleport.invalid",
+      "teleport.repeat_reuse",
+      "teleport.latest_direction"
+    ],
+    "D3-07": [
+      "resources.initial",
+      "resources.pickup_recovery",
+      "resources.reject_full",
+      "resources.reject_poor",
+      "resources.heal_exact50"
+    ],
+    "D4-02": [
+      "journey.failure",
+      "journey.failure_repeat",
+      "journey.failure_restart"
+    ]
+  },
+  "variants": {
+    "primary.hit": {
+      "required_input": "primary_attack",
+      "minimum_actions": 1,
+      "max_actions": 1,
+      "max_serial_seconds": 4,
+      "setup_method": "hybrid",
+      "setup": "Fresh isolated case, living enemy above 20 Health, unobstructed first-contact path, no unrelated damage.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/primary.hit/receipts/trace.json",
+      "setup_receipt_path": "variants/primary.hit/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "primary.obstacle": {
+      "required_input": "primary_attack",
+      "minimum_actions": 1,
+      "max_actions": 1,
+      "max_serial_seconds": 4,
+      "setup_method": "hybrid",
+      "setup": "Fresh isolated case aimed at a static obstacle before any enemy.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/primary.obstacle/receipts/trace.json",
+      "setup_receipt_path": "variants/primary.obstacle/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "primary.miss": {
+      "required_input": "primary_attack",
+      "minimum_actions": 1,
+      "max_actions": 1,
+      "max_serial_seconds": 4,
+      "setup_method": "hybrid",
+      "setup": "Fresh isolated case aimed into empty space; observe actual projectile termination.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/primary.miss/receipts/trace.json",
+      "setup_receipt_path": "variants/primary.miss/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "primary.repeat_reuse": {
+      "required_input": "primary_attack",
+      "minimum_actions": 3,
+      "max_actions": 3,
+      "max_serial_seconds": 4,
+      "setup_method": "hybrid",
+      "setup": "Fresh isolated firing case.",
+      "action_budget_reason": "First trigger, repeat during the active action, and reuse after the first action ends.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/primary.repeat_reuse/receipts/trace.json",
+      "setup_receipt_path": "variants/primary.repeat_reuse/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "primary.latest_direction": {
+      "required_input": "primary_attack",
+      "minimum_actions": 1,
+      "max_actions": 1,
+      "max_serial_seconds": 4,
+      "setup_method": "hybrid",
+      "setup": "Fresh isolated case after a real direction change; sample current facing and two projectile flight positions.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/primary.latest_direction/receipts/trace.json",
+      "setup_receipt_path": "variants/primary.latest_direction/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "blackhole.props": {
+      "required_input": "black_hole",
+      "minimum_actions": 1,
+      "max_actions": 1,
+      "max_serial_seconds": 8,
+      "setup_method": "hybrid",
+      "setup": "Fresh isolated case; isolated_motion confirmed externally. Physics_prop targets are present.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/blackhole.props/receipts/trace.json",
+      "setup_receipt_path": "variants/blackhole.props/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "blackhole.empty": {
+      "required_input": "black_hole",
+      "minimum_actions": 1,
+      "max_actions": 1,
+      "max_serial_seconds": 8,
+      "setup_method": "hybrid",
+      "setup": "Fresh isolated case; isolated_motion confirmed externally. No physics_prop target is present.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/blackhole.empty/receipts/trace.json",
+      "setup_receipt_path": "variants/blackhole.empty/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "blackhole.multiple": {
+      "required_input": "black_hole",
+      "minimum_actions": 2,
+      "max_actions": 2,
+      "max_serial_seconds": 8,
+      "setup_method": "hybrid",
+      "setup": "Fresh isolated case; isolated_motion confirmed externally. Independently identified simultaneous fields and physics_prop targets are present.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/blackhole.multiple/receipts/trace.json",
+      "setup_receipt_path": "variants/blackhole.multiple/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "teleport.pickup": {
+      "required_input": "move_toward",
+      "minimum_actions": 1,
+      "max_actions": 1,
+      "max_serial_seconds": 4,
+      "setup_method": "hybrid",
+      "setup": "Fresh unacquired state beside one bound available teleport_pickup. Position is taken from the candidate read-only objects array; missing position is a candidate failure. Native setup teleports to safe nearby ground; the tested pickup or interaction uses short real input.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/teleport.pickup/receipts/trace.json",
+      "setup_receipt_path": "variants/teleport.pickup/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "teleport.pickup_repeat": {
+      "required_input": "move_toward",
+      "minimum_actions": 2,
+      "max_actions": 3,
+      "max_serial_seconds": 6,
+      "setup_method": "hybrid",
+      "setup": "Fresh unacquired state beside one bound available teleport_pickup; repeat contact after acquisition. Position is taken from the candidate read-only objects array; missing position is a candidate failure. Native setup teleports to safe nearby ground; the tested pickup or interaction uses short real input.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/teleport.pickup_repeat/receipts/trace.json",
+      "setup_receipt_path": "variants/teleport.pickup_repeat/receipts/fixture-setup.json",
+      "default_invulnerable": true,
+      "action_budget_reason": "Contact, exit the overlap, then re-enter after acquisition."
+    },
+    "teleport.locked": {
+      "required_input": "teleport",
+      "minimum_actions": 2,
+      "max_actions": 2,
+      "max_serial_seconds": 3,
+      "setup_method": "hybrid",
+      "setup": "Fresh unacquired state; observe at least 500 ms without process launch or position change.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/teleport.locked/receipts/trace.json",
+      "setup_receipt_path": "variants/teleport.locked/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "teleport.legal": {
+      "required_input": "teleport",
+      "minimum_actions": 1,
+      "max_actions": 1,
+      "max_serial_seconds": 3,
+      "setup_method": "hybrid",
+      "setup": "Fresh acquired state; endpoint_class=legal independently established; sample both 0.2-second boundaries and destination.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/teleport.legal/receipts/trace.json",
+      "setup_receipt_path": "variants/teleport.legal/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "teleport.invalid": {
+      "required_input": "teleport",
+      "minimum_actions": 1,
+      "max_actions": 1,
+      "max_serial_seconds": 3,
+      "setup_method": "hybrid",
+      "setup": "Fresh acquired state; endpoint_class=illegal independently established; observe resolution, rejection and unchanged player position.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/teleport.invalid/receipts/trace.json",
+      "setup_receipt_path": "variants/teleport.invalid/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "teleport.repeat_reuse": {
+      "required_input": "teleport",
+      "minimum_actions": 3,
+      "max_actions": 3,
+      "max_serial_seconds": 4,
+      "setup_method": "hybrid",
+      "setup": "Fresh acquired state with legal independent endpoint binding.",
+      "action_budget_reason": "First trigger, repeat before commit, and reuse after the first process ends.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/teleport.repeat_reuse/receipts/trace.json",
+      "setup_receipt_path": "variants/teleport.repeat_reuse/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "teleport.latest_direction": {
+      "required_input": "teleport",
+      "minimum_actions": 1,
+      "max_actions": 1,
+      "max_serial_seconds": 3,
+      "setup_method": "hybrid",
+      "setup": "Fresh acquired state after a real direction change; observe current facing and two flight positions.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/teleport.latest_direction/receipts/trace.json",
+      "setup_receipt_path": "variants/teleport.latest_direction/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "resources.initial": {
+      "required_input": null,
+      "minimum_actions": 0,
+      "max_actions": 0,
+      "max_serial_seconds": 2,
+      "setup_method": "normal_input",
+      "setup": "Fresh normal round before any pickup or payment. Position is taken from the candidate read-only objects array; missing position is a candidate failure. Native setup teleports to safe nearby ground; the tested pickup or interaction uses short real input.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/resources.initial/receipts/trace.json",
+      "setup_receipt_path": "variants/resources.initial/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "resources.pickup": {
+      "required_input": "move_toward",
+      "minimum_actions": 1,
+      "max_actions": 1,
+      "max_serial_seconds": 4,
+      "setup_method": "hybrid",
+      "setup": "Fresh isolated case beside one available credits_pickup; no other credit sources. Position is taken from the candidate read-only objects array; missing position is a candidate failure. Native setup teleports to safe nearby ground; the tested pickup or interaction uses short real input.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/resources.pickup/receipts/trace.json",
+      "setup_receipt_path": "variants/resources.pickup/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "resources.pickup_recovery": {
+      "required_input": "move_toward",
+      "minimum_actions": 2,
+      "max_actions": 4,
+      "max_serial_seconds": 15,
+      "setup_method": "hybrid",
+      "setup": "Fresh available credits_pickup; repeat contact while unavailable; observe the 10-second recovery boundary. Position is taken from the candidate read-only objects array; missing position is a candidate failure. Native setup teleports to safe nearby ground; the tested pickup or interaction uses short real input.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/resources.pickup_recovery/receipts/trace.json",
+      "setup_receipt_path": "variants/resources.pickup_recovery/receipts/fixture-setup.json",
+      "default_invulnerable": true,
+      "action_budget_reason": "Contact, exit, re-enter while unavailable, then exit before recovery to avoid a legitimate automatic second pickup."
+    },
+    "resources.heal_basic": {
+      "required_input": "interact",
+      "minimum_actions": 1,
+      "max_actions": 1,
+      "max_serial_seconds": 4,
+      "setup_method": "hybrid",
+      "setup": "Fresh isolated case with positive damaged Health, at least 50 Credits and one available potion. Position is taken from the candidate read-only objects array; missing position is a candidate failure. Native setup teleports to safe nearby ground; the tested pickup or interaction uses short real input.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/resources.heal_basic/receipts/trace.json",
+      "setup_receipt_path": "variants/resources.heal_basic/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "resources.heal_exact50": {
+      "required_input": "interact",
+      "minimum_actions": 2,
+      "max_actions": 2,
+      "max_serial_seconds": 6,
+      "setup_method": "hybrid",
+      "setup": "Fresh isolated case with positive damaged Health, exactly 50 Credits and one available potion; repeat while unavailable and observe 4-second recovery. Position is taken from the candidate read-only objects array; missing position is a candidate failure. Native setup teleports to safe nearby ground; the tested pickup or interaction uses short real input.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/resources.heal_exact50/receipts/trace.json",
+      "setup_receipt_path": "variants/resources.heal_exact50/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "resources.reject_full": {
+      "required_input": "interact",
+      "minimum_actions": 2,
+      "max_actions": 2,
+      "max_serial_seconds": 3,
+      "setup_method": "hybrid",
+      "setup": "Fresh isolated case with full Health and one available potion; repeated rejection preserves Health, Credits and potion availability. Position is taken from the candidate read-only objects array; missing position is a candidate failure. Native setup teleports to safe nearby ground; the tested pickup or interaction uses short real input.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/resources.reject_full/receipts/trace.json",
+      "setup_receipt_path": "variants/resources.reject_full/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "resources.reject_poor": {
+      "required_input": "interact",
+      "minimum_actions": 2,
+      "max_actions": 2,
+      "max_serial_seconds": 3,
+      "setup_method": "hybrid",
+      "setup": "Fresh isolated case with positive damaged Health, 49 Credits and one available potion; repeated rejection preserves all resources. Position is taken from the candidate read-only objects array; missing position is a candidate failure. Native setup teleports to safe nearby ground; the tested pickup or interaction uses short real input.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/resources.reject_poor/receipts/trace.json",
+      "setup_receipt_path": "variants/resources.reject_poor/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "journey.victory": {
+      "required_input": null,
+      "minimum_actions": 0,
+      "max_actions": 0,
+      "max_serial_seconds": 12,
+      "setup_method": "state_fixture",
+      "setup": "Fresh protected round; expire only countdown and observe natural victory.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/journey.victory/receipts/trace.json",
+      "setup_receipt_path": "variants/journey.victory/receipts/fixture-setup.json",
+      "default_invulnerable": true
+    },
+    "journey.failure": {
+      "required_input": null,
+      "minimum_actions": 0,
+      "max_actions": 0,
+      "max_serial_seconds": 12,
+      "setup_method": "state_fixture",
+      "setup": "Fresh round; set Health to 1 and teleport near a reported enemy; disable protection only for the real enemy hit, then restore protection. Restart remains real input.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/journey.failure/receipts/trace.json",
+      "setup_receipt_path": "variants/journey.failure/receipts/fixture-setup.json",
+      "default_invulnerable": false
+    },
+    "journey.failure_repeat": {
+      "required_input": null,
+      "minimum_actions": 0,
+      "max_actions": 0,
+      "max_serial_seconds": 12,
+      "setup_method": "state_fixture",
+      "setup": "Fresh round; set Health to 1 and teleport near a reported enemy; disable protection only for the real enemy hit, then restore protection. Restart remains real input.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/journey.failure_repeat/receipts/trace.json",
+      "setup_receipt_path": "variants/journey.failure_repeat/receipts/fixture-setup.json",
+      "default_invulnerable": false
+    },
+    "journey.failure_restart": {
+      "required_input": "restart",
+      "minimum_actions": 1,
+      "max_actions": 1,
+      "max_serial_seconds": 12,
+      "setup_method": "state_fixture",
+      "setup": "Fresh round; set Health to 1 and teleport near a reported enemy; disable protection only for the real enemy hit, then restore protection. Restart remains real input.",
+      "collector": "Invoke-ARAtomicVariant",
+      "collector_module": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "trace_path": "variants/journey.failure_restart/receipts/trace.json",
+      "setup_receipt_path": "variants/journey.failure_restart/receipts/fixture-setup.json",
+      "default_invulnerable": false
+    }
+  },
+  "score_ownership": {
+    "D2": "Content presence and basic operation only. Exact resource amounts and recovery boundaries are owned by D3.",
+    "D3": "Exact rules, timing, repeat, rejection and boundary semantics.",
+    "D4": "Independent failure continuity, repeated fresh-round failure and restart initial state."
+  },
+  "collection_gate": "Every declared variant must execute. Missing variants are evaluator run_invalid even if every collected variant passes. Shared smoke observations cannot manufacture independent setup, input or cleanup receipts.",
+  "fixture_runtime": {
+    "revision": "ar-private-fixture-2.0.0",
+    "collector": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+    "native_template": "fixture/AREvaluationFixture.cpp",
+    "source_bindings": "adapters/source-bindings.json",
+    "source_stager": "scripts/stage_fixture.py",
+    "candidate_hidden_hook_required": false,
+    "default_invulnerable": true,
+    "damage_exceptions": [
+      "journey.failure",
+      "journey.failure_repeat",
+      "journey.failure_restart",
+      "shared_smoke_ai_damage_window"
+    ],
+    "health_policy": "Write positive target Health once; block damage at its native entry while allowing healing. Never restore Health every frame.",
+    "victory_policy": "Set remaining_seconds=0 (or elapsed=60 in a count-up implementation), then observe natural game tick; never call a terminal result function.",
+    "missing_item_position": "candidate_blocked/CANDIDATE_ITEM_POSITION_UNAVAILABLE; only dependent checkpoints score zero",
+    "unknown_source_binding": "run_invalid/FIXTURE_BINDING_UNAVAILABLE; source layout is evaluator mapping, not a candidate hook requirement",
+    "isolation": "Fresh process per variant; release input and stop the owned process tree before advancing.",
+    "setup_seconds": 8,
+    "native_request_timeout_seconds": 3,
+    "allowed_native_writes": [
+      "invulnerable",
+      "health",
+      "credits",
+      "teleport_acquired",
+      "remaining_seconds",
+      "near_position_m",
+      "distance_m",
+      "position_m",
+      "freeze_enemies",
+      "remove_props",
+      "aim",
+      "aim_position_m",
+      "block_forward_space",
+      "capture_pointer"
+    ],
+    "source_matching": "Conservative class/member and unique damage-anchor analysis selects exactly one reviewed mapping. Source hashes bind generated adapter identity; all writes require native readback and independent observer confirmation.",
+    "viewport_capture": "Acquire bound OS foreground; focus the viewport, then apply the standard Slate capture reply. Synchronize engine activation only when the actual native window reports foreground. Verify HasMouseCapture and wait for a subsequent update before writing position/aim preconditions.",
+    "position_settling": "After placement, wait for two distinct equal grounded positions before creating the protected assertion baseline. For aim_position_m, reject surfaces more than 0.5 m above the observed target to avoid placing the player on a wall roof. Field cases also wait for frozen enemy movement to settle after any previously queued input; no per-frame position writes are allowed.",
+    "illegal_endpoint": "Spawn blocking engine collision immediately ahead and verify the capsule sweep; never call the teleport result.",
+    "legal_endpoint": "Find a ground-level capsule corridor; re-aim between completed repeat/reuse attempts with a separate setup receipt.",
+    "input_ready_evidence": "Separate fixture-input-ready receipt, frame-clock settling wait and setup input_ready_receipt_path; capture retries never reapply gameplay preconditions.",
+    "layers": {
+      "engine": "../../../engine/shared/unreal-fixture",
+      "game": "fixture/AREvaluationFixture.cpp + scripts/ActionRoguelikeFixtureRuntime.ps1",
+      "candidate": "scripts/analyze_fixture_adapter.py + fixture/ARCandidateAdapter.cpp.in + adapters/source-bindings.json"
+    },
+    "source_analyzer": "scripts/analyze_fixture_adapter.py",
+    "tick_binding": "FWorldDelegates::OnWorldPreActorTick; no candidate Tick source patch",
+    "write_readback_mismatch": "run_invalid; never a candidate gameplay failure"
+  },
+  "observation_interpretation": {
+    "sparse_event_references": "Optional entity references may be resolved by the bound setup target and synchronized state transitions. Player-scoped acquisition requires target consumption; player credit changes establish payment only with bound potion consumption and healing. One healing action plus its simultaneous health update is one transition, while duplicate actions still fail. Round-scoped terminal events may omit entity references. Raw candidate events are never rewritten.",
+    "resource_recovery": "No early recovery; must be available at the first continuous sample at or after its deadline.",
+    "history": "Expand each scoring window with every validated journal pair; restart includes the new-round genesis batch.",
+    "ui": "Replay verified same-round UI visibility/value events through the requested sequence.",
+    "teleport_commit": "Exact commit-event position plus grounded same-XY later state permits engine floor correction.",
+    "black_hole": "Opaque identity can persist across projectile-to-field semantic role changes. Only field-subject contacts describe attraction; reverse projectile impacts do not. Prop setup aims from the engine eye position toward the observed prop position, without invoking travel, attraction or absorption. Explicit pitched aim is checked against native controller readback bound to its fixture receipt, since public facing may describe upright body yaw. All setup baselines must be published after the native setup receipt clock."
+  }
+}

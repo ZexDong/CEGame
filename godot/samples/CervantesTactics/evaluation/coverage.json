@@ -1,0 +1,4352 @@
+{
+  "schema_version": "2.1",
+  "rows": [
+    {
+      "source": "delivery:D1-01",
+      "check_ids": [
+        "D1-01"
+      ],
+      "dimension": "D1"
+    },
+    {
+      "source": "delivery:D1-02",
+      "check_ids": [
+        "D1-02"
+      ],
+      "dimension": "D1"
+    },
+    {
+      "source": "delivery:D1-03",
+      "check_ids": [
+        "D1-03"
+      ],
+      "dimension": "D1"
+    },
+    {
+      "source": "delivery:D1-04",
+      "check_ids": [
+        "D1-04"
+      ],
+      "dimension": "D1"
+    },
+    {
+      "source": "delivery:D1-05",
+      "check_ids": [
+        "D1-05"
+      ],
+      "dimension": "D1"
+    },
+    {
+      "source": "gdd:MENU-01",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:MENU-02a",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:MENU-02b",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:MENU-02c",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:MENU-02d",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:MENU-03a",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:MENU-03b",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:MENU-03c",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:MENU-03d",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:MENU-03e",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:MENU-03f",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:MENU-04a",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:MENU-04b",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:MENU-04c",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:EXIT-01",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:EXIT-02a",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:EXIT-02b",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:EXIT-02c",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:EXIT-02d",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:EXIT-02e",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:EXIT-03",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:EXIT-04",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:EXIT-05a",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:EXIT-05b",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:EXIT-05c",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CHAPTER-01a",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CHAPTER-01b",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CHAPTER-01c",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CHAPTER-01d",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CHAPTER-02a",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CHAPTER-02b",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CHAPTER-02c",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CHAPTER-02d",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CHAPTER-02e",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CHAPTER-03a",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CHAPTER-03b",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CHAPTER-03c",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CHAPTER-04",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FLOW_ORDER-01a",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FLOW_ORDER-01b",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FLOW_ORDER-02",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FLOW_ORDER-03a",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FLOW_ORDER-03b",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FLOW_ORDER-04a",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FLOW_ORDER-04b",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "common-baseline:CB-01",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "common-baseline:CB-02",
+      "check_ids": [
+        "D2-01"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:SAVE-01",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-02",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-03a",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-03b",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-03c",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-03d",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-04",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-05a",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-05b",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-05c",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-05d",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-06",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-07a",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-07b",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-07c",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-07d",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-08",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-09",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-10",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-11a",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-11b",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-11c",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-12",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-13a",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-13b",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SAVE-14",
+      "check_ids": [
+        "D3-02"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SCENE-01a",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:SCENE-01e",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:SCENE-01h",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:SCENE-01i",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:SCENE-01j",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:SCENE-05a",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:SCENE-05b",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:SCENE-05c",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:SCENE-05d",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:SCENE-05e",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:SCENE-05f",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:SCENE-05g",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:SCENE-06a",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:SCENE-06b",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:SCENE-06c",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01b",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01c",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01d",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01e",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01f",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01g",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01h",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01i",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01j",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01k",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01l",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01m",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01n",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01o",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01p",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01q",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01r",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01s",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01t",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-02a",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-02b",
+      "check_ids": [
+        "D2-02"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:DATA-01a",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-01b",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-01c",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-01d",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-02a",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-02b",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-02c",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-02d",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-03",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-04",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-05",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-06a",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-06b",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-07a",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-07b",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-07d",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-07c",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-07e",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-07f",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-08a",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-08b",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-08e",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-08c",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-08d",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-08f",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-09a",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-09b",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-09d",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-09c",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-09e",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-10a",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-10b",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-10e",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-10c",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-10d",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-11a",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-11b",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-11f",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-11c",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-11d",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-11e",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-12a",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-12b",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-12f",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-12c",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-12d",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-12e",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-13a",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-13b",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-13f",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-13c",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-13d",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-13e",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-14a",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-14b",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-14c",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-14d",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-14e",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-15a",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-15b",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-15c",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-15d",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-15e",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-16a",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-16b",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-16c",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-16d",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-16e",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-17a",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-17b",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-17c",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-17d",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-17e",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-17f",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-17g",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-18a",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-18b",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-18c",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-18d",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-18e",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-18f",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-18g",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DATA-18h",
+      "check_ids": [
+        "D3-01"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:LANGUAGE-01a",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LANGUAGE-01b",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LANGUAGE-01c",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LANGUAGE-01d",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LANGUAGE-01e",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-01a",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-01b",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-01c",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-01d",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-01e",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-01f",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-01g",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-01h",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-01i",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-01j",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-01k",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-01l",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-01m",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-02a",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-02b",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-02c",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-02d",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-02e",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-02f",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-02g",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-02h",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-02i",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-03a",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-03b",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-03c",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-03d",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-03e",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-03f",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-03g",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-03h",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-03i",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-03j",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-03k",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-03l",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-03m",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-04a",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-05a",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-05b",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-05c",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-05d",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-05e",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-06a",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-06b",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-06c",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-06d",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-06e",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ASSET-06f",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-01b",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-01c",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-01d",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-01e",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-01f",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-01g",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-01h",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-03a",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-03b",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-03c",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-03d",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-04a",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-04b",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-04c",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-04d",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-04e",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-04f",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-04g",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-04h",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-04i",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-02a",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-02b",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-02c",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HUD-02d",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PRESENTATION-01a",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PRESENTATION-01b",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PRESENTATION-01c",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PRESENTATION-01d",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PRESENTATION-02a",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PRESENTATION-02b",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PRESENTATION-03a",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PRESENTATION-03b",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PRESENTATION-03c",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FEEDBACK-01b",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FEEDBACK-01c",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FEEDBACK-01d",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FEEDBACK-01e",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FEEDBACK-02a",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FEEDBACK-02b",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FEEDBACK-02c",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FEEDBACK-02d",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FEEDBACK-03a",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FEEDBACK-03b",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FEEDBACK-03c",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FEEDBACK-03d",
+      "check_ids": [
+        "D2-10"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-01",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-01a",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-01b",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-01c",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-02",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-03a",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-03b",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-04",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-05",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-06",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-07a",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-07b",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-07c",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-07d",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-07e",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-07f",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-07g",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-07h",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-07i",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-07j",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-07k",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:INTERACTION-08",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "common-baseline:CB-04",
+      "check_ids": [
+        "D2-03"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:TURN-01a",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:TURN-01b",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:TURN-02a",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:TURN-02b",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:TURN-02c",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:TURN-02d",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:TURN-02e",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:TURN-02f",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:TURN-02g",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:TURN-02h",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:TURN-02i",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:TURN-03",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:TURN-04a",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:TURN-04b",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:TURN-04c",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:TURN-04d",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:TURN-04e",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:TURN-04f",
+      "check_ids": [
+        "D3-03"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:MOVEMENT-01",
+      "check_ids": [
+        "D3-04"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:MOVEMENT-01a",
+      "check_ids": [
+        "D3-04"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:MOVEMENT-02",
+      "check_ids": [
+        "D3-04"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:MOVEMENT-03",
+      "check_ids": [
+        "D3-04"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:MOVEMENT-04",
+      "check_ids": [
+        "D3-04"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:MOVEMENT-05",
+      "check_ids": [
+        "D3-04"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:MOVEMENT-06",
+      "check_ids": [
+        "D3-04"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:MOVEMENT-07",
+      "check_ids": [
+        "D3-04"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:RULE-01",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:RULE-02",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:RULE-03",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:RULE-04a",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:RULE-04b",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:RULE-05",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:STATE-01",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:STATE-02",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:STATE-02a",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:STATE-02b",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:STATE-02c",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:STATE-03",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:STATE-04a",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:STATE-04b",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:STATE-04c",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:STATE-05a",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:STATE-05b",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PROHIBITION-01a",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PROHIBITION-01b",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PROHIBITION-01c",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PROHIBITION-01d",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PROHIBITION-01e",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PROHIBITION-01f",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PROHIBITION-01g",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "common-baseline:CB-06",
+      "check_ids": [
+        "D3-10"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:ATTACK-01",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ATTACK-01a",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ATTACK-02",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ATTACK-03a",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ATTACK-03b",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:DEFENSE-01",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:DEFENSE-02",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:WAIT-01",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:MAGIC-01",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:MAGIC-02",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:MAGIC-03",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HEAL-01",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HEAL-02a",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HEAL-02b",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HEAL-02c",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HEAL-02d",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HEAL-02e",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HEAL-02f",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HEAL-03a",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HEAL-03b",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:HEAL-04",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LIMIT-01",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LIMIT-02",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LIMIT-03a",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LIMIT-03b",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LIMIT-03c",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LIMIT-03d",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LIMIT-04",
+      "check_ids": [
+        "D2-04"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:TRAP-01a",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:TRAP-01b",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:TRAP-01c",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:TRAP-01d",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:TRAP-01e",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:TRAP-01f",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:TRAP-01g",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:TRAP-02",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:TRAP-03a",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:TRAP-03b",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:TRAP-03c",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:TRAP-03d",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:TRAP-03e",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:TRAP-03f",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:AURA-01",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CRYSTAL-01",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CRYSTAL-02",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CRYSTAL-03",
+      "check_ids": [
+        "D2-05"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:FEEDBACK-01a",
+      "check_ids": [
+        "D5-ACTION"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "common-baseline:CB-05",
+      "check_ids": [
+        "D5-ACTION"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "gdd:ENEMY-01a",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-01b",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-01c",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-01d",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-01e",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-02a",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-02b",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-02c",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-03a",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-03b",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-03c",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-03d",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-03e",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-04",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-05",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-05a",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-05b",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-06",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-07a",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-07b",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-07c",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENEMY-07d",
+      "check_ids": [
+        "D2-06"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:DAMAGE-01",
+      "check_ids": [
+        "D3-05"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DAMAGE-02a",
+      "check_ids": [
+        "D3-05"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DAMAGE-02b",
+      "check_ids": [
+        "D3-05"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DAMAGE-02c",
+      "check_ids": [
+        "D3-05"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DAMAGE-02d",
+      "check_ids": [
+        "D3-05"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DAMAGE-02e",
+      "check_ids": [
+        "D3-05"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DAMAGE-02f",
+      "check_ids": [
+        "D3-05"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DAMAGE-02g",
+      "check_ids": [
+        "D3-05"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DAMAGE-02h",
+      "check_ids": [
+        "D3-05"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:DAMAGE-02i",
+      "check_ids": [
+        "D3-05"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:RESOLUTION-01",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:RESOLUTION-01a",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:RESOLUTION-01b",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:RESOLUTION-01c",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:RESOLUTION-01d",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:RESOLUTION-02a",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:RESOLUTION-02b",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:RESOLUTION-02c",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:RESOLUTION-02d",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:RESOLUTION-02e",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:RESOLUTION-02f",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:UNIFIED_SEQUENCE-01",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:UNIFIED_SEQUENCE-02",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:UNIFIED_SEQUENCE-03",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:UNIFIED_SEQUENCE-04a",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:UNIFIED_SEQUENCE-04b",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:UNIFIED_SEQUENCE-05",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:UNIFIED_SEQUENCE-06a",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:UNIFIED_SEQUENCE-06b",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:UNIFIED_SEQUENCE-06c",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:UNIFIED_SEQUENCE-06d",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:UNIFIED_SEQUENCE-07a",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:UNIFIED_SEQUENCE-07b",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:UNIFIED_SEQUENCE-07c",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:UNIFIED_SEQUENCE-08",
+      "check_ids": [
+        "D3-06"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:OUTCOME-01",
+      "check_ids": [
+        "D3-07"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:OUTCOME-02a",
+      "check_ids": [
+        "D3-07"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:OUTCOME-02b",
+      "check_ids": [
+        "D3-07"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:OUTCOME-02c",
+      "check_ids": [
+        "D3-07"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:OUTCOME-03a",
+      "check_ids": [
+        "D3-07"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:OUTCOME-03b",
+      "check_ids": [
+        "D3-07"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:OUTCOME-03c",
+      "check_ids": [
+        "D3-07"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PLAYABILITY-02",
+      "check_ids": [
+        "D3-07"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:STORY-01",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-02",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-02a",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-03",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-04",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-05",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-06",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-07",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-08",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-09",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-10",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-11",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-12",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-12a",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-12b",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-13",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-14",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-15",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-16a",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-16b",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-17a",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-19",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-17b",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-17c",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-18a",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:STORY-18b",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENDGAME_FLOW-01",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENDGAME_FLOW-02a",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENDGAME_FLOW-02b",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENDGAME_FLOW-03a",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENDGAME_FLOW-03b",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENDGAME_FLOW-04a",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENDGAME_FLOW-04b",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENDGAME_FLOW-05",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:RESULT-01b",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:RESULT-01c",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:RESULT-02a",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:RESULT-02b",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:RESULT-02c",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:RESULT-02d",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:RESULT-02e",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:RESULT-03a",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:RESULT-03b",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:DEFEAT_RESOLUTION-01",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:DEFEAT_RESOLUTION-02",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:DEFEAT_RESOLUTION-03",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:DEFEAT_RESOLUTION-04",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:DEFEAT_RESOLUTION-05",
+      "check_ids": [
+        "D2-07"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PROGRESSION-01",
+      "check_ids": [
+        "D2-08"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PROGRESSION-02a",
+      "check_ids": [
+        "D2-08"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PROGRESSION-02b",
+      "check_ids": [
+        "D2-08"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PROGRESSION-02c",
+      "check_ids": [
+        "D2-08"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PROGRESSION-03",
+      "check_ids": [
+        "D2-08"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PROGRESSION-03a",
+      "check_ids": [
+        "D2-08"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PROGRESSION-04a",
+      "check_ids": [
+        "D2-08"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PROGRESSION-04b",
+      "check_ids": [
+        "D2-08"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PROGRESSION-04c",
+      "check_ids": [
+        "D2-08"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PROGRESSION-04d",
+      "check_ids": [
+        "D2-08"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PROGRESSION-05",
+      "check_ids": [
+        "D2-08"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PROGRESSION-06a",
+      "check_ids": [
+        "D2-08"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PROGRESSION-06b",
+      "check_ids": [
+        "D2-08"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PROGRESSION-06c",
+      "check_ids": [
+        "D2-08"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:XP-01a",
+      "check_ids": [
+        "D3-08"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:XP-01b",
+      "check_ids": [
+        "D3-08"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:XP-02",
+      "check_ids": [
+        "D3-08"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:XP-03",
+      "check_ids": [
+        "D3-08"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:XP-04",
+      "check_ids": [
+        "D3-08"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:XP-05a",
+      "check_ids": [
+        "D3-08"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:XP-05b",
+      "check_ids": [
+        "D3-08"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:XP-06a",
+      "check_ids": [
+        "D3-08"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:XP-06b",
+      "check_ids": [
+        "D3-08"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:XP-07",
+      "check_ids": [
+        "D3-08"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PLAYABILITY-01",
+      "check_ids": [
+        "D4-SUCCESS"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "common-baseline:CB-11",
+      "check_ids": [
+        "D4-SUCCESS"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "gdd:RESULT-01a",
+      "check_ids": [
+        "D5-RESULT"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "common-baseline:CB-12",
+      "check_ids": [
+        "D4-LOSS"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "common-baseline:CB-14",
+      "check_ids": [
+        "D4-FINAL"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "common-baseline:CB-13",
+      "check_ids": [
+        "D4-RESTART"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "gdd:PAUSE-01a",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-01b",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-02a",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-02b",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-03a",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-03b",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-04",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-05a",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-05b",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-06a",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-06b",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-06c",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-07a",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-07b",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-07c",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-07d",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-07e",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-06e",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-06f",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:PAUSE-06g",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CAMERA-01a",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CAMERA-01b",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CAMERA-01c",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CAMERA-02a",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:CAMERA-02b",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:OPTIONS-01a",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:OPTIONS-01b",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:OPTIONS-01c",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:OPTIONS-02a",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:OPTIONS-02b",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:OPTIONS-03a",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:OPTIONS-03b",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:OPTIONS-03c",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:OPTIONS-03d",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LIFECYCLE-01a",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LIFECYCLE-01b",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LIFECYCLE-01c",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LIFECYCLE-01e",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LIFECYCLE-01f",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LIFECYCLE-01d",
+      "check_ids": [
+        "D2-09"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:LAYOUT-01a",
+      "check_ids": [
+        "D5-ENTRY"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "common-baseline:CB-07",
+      "check_ids": [
+        "D5-ENTRY"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "common-baseline:CB-10",
+      "check_ids": [
+        "D5-ENTRY"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "gdd:HUD-01a",
+      "check_ids": [
+        "D5-HUD"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "common-baseline:CB-09",
+      "check_ids": [
+        "D5-HUD"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "gdd:PERSISTENCE-01",
+      "check_ids": [
+        "D3-09"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PERSISTENCE-02",
+      "check_ids": [
+        "D3-09"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PERSISTENCE-03a",
+      "check_ids": [
+        "D3-09"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PERSISTENCE-03b",
+      "check_ids": [
+        "D3-09"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PERSISTENCE-03c",
+      "check_ids": [
+        "D3-09"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PERSISTENCE-04a",
+      "check_ids": [
+        "D3-09"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PERSISTENCE-04b",
+      "check_ids": [
+        "D3-09"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PERSISTENCE-04c",
+      "check_ids": [
+        "D3-09"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PERSISTENCE-05",
+      "check_ids": [
+        "D3-09"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "common-baseline:CB-03",
+      "check_ids": [
+        "D4-REOPEN"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "common-baseline:CB-15",
+      "check_ids": [
+        "D4-REOPEN"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "common-baseline:CB-08",
+      "check_ids": [
+        "D5-READABLE"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "visual:composition",
+      "check_ids": [
+        "D6-01"
+      ],
+      "dimension": "D6"
+    },
+    {
+      "source": "visual:objects",
+      "check_ids": [
+        "D6-02"
+      ],
+      "dimension": "D6"
+    },
+    {
+      "source": "visual:ui",
+      "check_ids": [
+        "D6-03"
+      ],
+      "dimension": "D6"
+    },
+    {
+      "source": "visual:feedback",
+      "check_ids": [
+        "D6-04"
+      ],
+      "dimension": "D6"
+    },
+    {
+      "source": "visual:consistency",
+      "check_ids": [
+        "D6-05"
+      ],
+      "dimension": "D6"
+    }
+  ]
+}

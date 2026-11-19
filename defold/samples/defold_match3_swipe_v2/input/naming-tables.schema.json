@@ -1,0 +1,153 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Campaign Dashboard v3 naming tables",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "task_id",
+    "phases",
+    "slots",
+    "entities",
+    "targets",
+    "controls",
+    "design_size",
+    "target_rect_space"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 3
+    },
+    "task_id": {
+      "type": "string"
+    },
+    "phases": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "not_ready",
+          "menu",
+          "playing",
+          "paused",
+          "level_clear",
+          "campaign_won",
+          "lost"
+        ]
+      },
+      "uniqueItems": true
+    },
+    "slots": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "design_size": {
+      "type": "array",
+      "items": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "grid_size": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "minItems": 2,
+      "maxItems": 2
+    },
+    "data_file": {
+      "const": "campaign.json"
+    },
+    "coordinate_space": {
+      "type": "string"
+    },
+    "target_rect_space": {
+      "const": {
+        "width_slot": "client_width",
+        "height_slot": "client_height",
+        "origin": "bottom-left",
+        "units": "client coordinates"
+      }
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "kind",
+          "geometry",
+          "states"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string"
+          },
+          "geometry": {
+            "enum": [
+              "cell",
+              "position",
+              "rect",
+              "none"
+            ]
+          },
+          "states": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "kind"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "kind": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "controls": {
+      "type": "object",
+      "required": [
+        "keys"
+      ],
+      "properties": {
+        "keys": {
+          "type": "object",
+          "additionalProperties": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "minItems": 1
+              }
+            ]
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

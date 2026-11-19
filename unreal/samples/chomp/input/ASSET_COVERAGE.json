@@ -1,0 +1,119 @@
+{
+  "roles": [
+    {
+      "role": "player",
+      "requirements": [
+        "ASSET-01",
+        "VISUAL-02"
+      ],
+      "resources": [
+        "MI_Eye",
+        "MI_Player",
+        "SM_Eye",
+        "SM_Jaw",
+        "SM_Tooth"
+      ],
+      "coverage": "mandatory_static_parts_available",
+      "remaining_work": "Visible integration, assembly and behavior required by the listed GDD rows."
+    },
+    {
+      "role": "ghosts",
+      "requirements": [
+        "ASSET-02",
+        "VISUAL-03"
+      ],
+      "resources": [
+        "MI_Cyan",
+        "MI_Frightened",
+        "MI_Orange",
+        "MI_Pink",
+        "MI_Red",
+        "SM_GhostBody",
+        "SM_GhostHead"
+      ],
+      "coverage": "mandatory_static_parts_available",
+      "remaining_work": "Visible integration, assembly and behavior required by the listed GDD rows."
+    },
+    {
+      "role": "pineapple",
+      "requirements": [
+        "ASSET-03",
+        "FRUIT-01"
+      ],
+      "resources": [
+        "MI_Crown",
+        "MI_Fruit",
+        "SM_FruitBody",
+        "SM_FruitCrown"
+      ],
+      "coverage": "mandatory_static_parts_available",
+      "remaining_work": "Visible integration, assembly and behavior required by the listed GDD rows."
+    },
+    {
+      "role": "maze appearance",
+      "requirements": [
+        "ASSET-04",
+        "VISUAL-01"
+      ],
+      "resources": [
+        "M_Wall",
+        "MI_Floor",
+        "MI_Gate",
+        "T_WallEdge"
+      ],
+      "coverage": "mandatory_static_parts_available",
+      "remaining_work": "Visible integration, assembly and behavior required by the listed GDD rows."
+    },
+    {
+      "role": "life icon",
+      "requirements": [
+        "ASSET-05",
+        "HUD-01"
+      ],
+      "resources": [
+        "T_LifeIcon"
+      ],
+      "coverage": "mandatory_static_parts_available",
+      "remaining_work": "Visible integration, assembly and behavior required by the listed GDD rows."
+    },
+    {
+      "role": "teeth and pickups",
+      "requirements": [
+        "ASSET-01",
+        "ASSET-04",
+        "VISUAL-01",
+        "VISUAL-02"
+      ],
+      "resources": [
+        "MI_Dot"
+      ],
+      "coverage": "mandatory_static_parts_available",
+      "remaining_work": "Visible integration, assembly and behavior required by the listed GDD rows."
+    },
+    {
+      "role": "shared color material",
+      "requirements": [
+        "ASSET-01",
+        "ASSET-02",
+        "ASSET-03",
+        "ASSET-04"
+      ],
+      "resources": [
+        "M_Neon"
+      ],
+      "coverage": "mandatory_static_parts_available",
+      "remaining_work": "Visible integration, assembly and behavior required by the listed GDD rows."
+    }
+  ],
+  "intentional_non_asset_work": [
+    "All gameplay",
+    "Character assembly and animation",
+    "Maze geometry and collision",
+    "Follow camera",
+    "Menu layout and controls",
+    "Camera impulses",
+    "Fruit overlay",
+    "Death feedback"
+  ],
+  "missing_required_external_assets": []
+}

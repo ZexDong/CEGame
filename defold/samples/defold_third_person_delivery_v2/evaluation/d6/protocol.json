@@ -1,0 +1,72 @@
+{
+  "protocol": "defold-visual-review/v1",
+  "comparison_scope": "original-game-reference-stills",
+  "states": {
+    "state_01": "input/reference_images/original_arena.png",
+    "state_02": "input/reference_images/original_carrying_gold.png",
+    "state_03": "input/reference_images/original_delivery_zone.png"
+  },
+  "references": [
+    "input/GDD.md",
+    "input/reference_images/original_arena.png",
+    "input/reference_images/original_carrying_gold.png",
+    "input/reference_images/original_delivery_zone.png"
+  ],
+  "judge_model": "gpt-4o",
+  "judge_settings": {
+    "temperature": 0,
+    "top_p": 1
+  },
+  "rounds": 3,
+  "rubric": {
+    "scene_completeness": "Required scene content and recognizable objects are present.",
+    "composition": "Layout, grouping and focal hierarchy support the reference state.",
+    "scale_and_layering": "Object proportions, depth ordering and layering are coherent.",
+    "style_and_color": "Palette, visual language and supplied asset use match the reference.",
+    "overall_finish": "The state looks coherent, polished and free of distracting rendering defects."
+  },
+  "anchors": {
+    "0": "Absent or substantially incorrect",
+    "0.5": "Major visible defects",
+    "1": "Recognizable with substantial differences",
+    "1.5": "Mostly faithful with minor defects",
+    "2": "Complete and faithful within the registered comparison scope"
+  },
+  "aggregation": "Each state receives five 0..2 subscores in each round. Take the median total over three rounds, then average across registered states.",
+  "review_input": {
+    "candidate_sha256": "From evidence/binding.json",
+    "reference_hashes": "The references object from evidence/binding.json",
+    "model": "gpt-4o",
+    "settings": {
+      "temperature": 0,
+      "top_p": 1
+    },
+    "states": {
+      "<registered_state>": {
+        "image": "<native capture path from evidence/visual-captures.json>",
+        "sha256": "<capture sha256>"
+      }
+    },
+    "rounds": [
+      {
+        "<registered_state>": {
+          "request_id": "<unique provider request id>",
+          "raw_response": "<result-relative receipt JSON>",
+          "raw_response_sha256": "<receipt sha256>"
+        }
+      }
+    ]
+  },
+  "response_receipt_fields": [
+    "request_id",
+    "model",
+    "state",
+    "candidate_sha256",
+    "image_sha256",
+    "reference_hashes",
+    "scores",
+    "rationale",
+    "raw_provider_response"
+  ],
+  "missing_evidence": "Keep D6 and final_score null."
+}

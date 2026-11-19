@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "fresh_reopen",
+  "title": "After Dynamic closes, a new Unity process naturally reopens into complete stable FLOW-01",
+  "steps": [
+    {
+      "step_id": "setup",
+      "operation": "independent_process_clean_scene_load",
+      "target": "saved Dungeon Duel entry scene",
+      "check_ids": [
+        "setup.scene",
+        "setup.submission_probe",
+        "setup.submission_probe.version",
+        "setup.semantic_discovery",
+        "setup.clean_start",
+        "setup.world_target.MoveTargetA",
+        "setup.world_target.MoveTargetB",
+        "setup.world_target.DashTarget",
+        "setup.world_target.separation"
+      ]
+    },
+    {
+      "step_id": "fresh",
+      "operation": "observe_native_flow01",
+      "target": "new-process encounter",
+      "check_ids": [
+        "fresh.phase.playing",
+        "fresh.player.full_health",
+        "fresh.imps.two_alive",
+        "fresh.boss.dormant",
+        "fresh.gate.closed",
+        "fresh.gate.blocking",
+        "fresh.dash.ready",
+        "fresh.audio.battle_loop",
+        "fresh.hud.neutral"
+      ]
+    },
+    {
+      "step_id": "stable",
+      "operation": "wait_and_reobserve",
+      "target": "stable new-process encounter",
+      "check_ids": [
+        "fresh.stable.flow01"
+      ]
+    }
+  ]
+}
+

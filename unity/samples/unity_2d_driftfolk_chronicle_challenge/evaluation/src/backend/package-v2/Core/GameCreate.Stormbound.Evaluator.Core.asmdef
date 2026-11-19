@@ -1,0 +1,16 @@
+{
+  "name": "GameCreate.Stormbound.Evaluator.Core",
+  "references": [
+    "GameCreate.Session",
+    "GameCreate.Evaluation.Session",
+    "GameCreate.Stormbound.SessionContract",
+    "Unity.InputSystem",
+    "Unity.TextMeshPro",
+    "UnityEngine.UI"
+  ],
+  "includePlatforms": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": false
+}

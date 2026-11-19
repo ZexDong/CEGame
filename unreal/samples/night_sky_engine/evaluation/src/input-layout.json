@@ -1,0 +1,2140 @@
+{
+  "version": "1.0",
+  "purpose": "Reconstruct frozen native input bindings in an isolated run; the public input uses the template layout.",
+  "files": [
+    {
+      "source": ".gitattributes",
+      "published": ".gitattributes",
+      "sha256": "e286dc03dbf2ab010a84e43cc46fc5e32335b99d163eee238ca58d9bf62575b1",
+      "published_sha256": "e286dc03dbf2ab010a84e43cc46fc5e32335b99d163eee238ca58d9bf62575b1"
+    },
+    {
+      "source": "ASSET_CATALOG.json",
+      "published": "assets/ASSET_CATALOG.json",
+      "sha256": "cbcf5f78486190ca5e06ae14db03141db542ce58dc2fa26eaf0fa793ca5686f5",
+      "published_sha256": "6d992d0b5153092074eb53363a0f402b9516eb90b93aa486652be9c021c11ebb",
+      "restore_edits": [
+        {
+          "start": 9,
+          "end": 10,
+          "lines": [
+            "      \"path\": \"assets/Manny/SKM_Manny.fbx\",\n"
+          ]
+        },
+        {
+          "start": 23,
+          "end": 24,
+          "lines": [
+            "      \"license_notice\": \"legal/README.md\",\n"
+          ]
+        },
+        {
+          "start": 29,
+          "end": 30,
+          "lines": [
+            "        \"content_directory\": \"project/Content/Provided/Manny\",\n"
+          ]
+        },
+        {
+          "start": 41,
+          "end": 42,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_stand.fbx\",\n"
+          ]
+        },
+        {
+          "start": 56,
+          "end": 57,
+          "lines": [
+            "      \"license_notice\": \"legal/README.md\",\n"
+          ]
+        },
+        {
+          "start": 65,
+          "end": 66,
+          "lines": [
+            "        \"content_directory\": \"project/Content/Provided/Manny/Animations\",\n"
+          ]
+        },
+        {
+          "start": 77,
+          "end": 78,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_fwalk.fbx\",\n"
+          ]
+        },
+        {
+          "start": 92,
+          "end": 93,
+          "lines": [
+            "      \"license_notice\": \"legal/README.md\",\n"
+          ]
+        },
+        {
+          "start": 101,
+          "end": 102,
+          "lines": [
+            "        \"content_directory\": \"project/Content/Provided/Manny/Animations\",\n"
+          ]
+        },
+        {
+          "start": 113,
+          "end": 114,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_bwalk.fbx\",\n"
+          ]
+        },
+        {
+          "start": 128,
+          "end": 129,
+          "lines": [
+            "      \"license_notice\": \"legal/README.md\",\n"
+          ]
+        },
+        {
+          "start": 137,
+          "end": 138,
+          "lines": [
+            "        \"content_directory\": \"project/Content/Provided/Manny/Animations\",\n"
+          ]
+        },
+        {
+          "start": 149,
+          "end": 150,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_jump.fbx\",\n"
+          ]
+        },
+        {
+          "start": 164,
+          "end": 165,
+          "lines": [
+            "      \"license_notice\": \"legal/README.md\",\n"
+          ]
+        },
+        {
+          "start": 173,
+          "end": 174,
+          "lines": [
+            "        \"content_directory\": \"project/Content/Provided/Manny/Animations\",\n"
+          ]
+        },
+        {
+          "start": 185,
+          "end": 186,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_5a.fbx\",\n"
+          ]
+        },
+        {
+          "start": 200,
+          "end": 201,
+          "lines": [
+            "      \"license_notice\": \"legal/README.md\",\n"
+          ]
+        },
+        {
+          "start": 209,
+          "end": 210,
+          "lines": [
+            "        \"content_directory\": \"project/Content/Provided/Manny/Animations\",\n"
+          ]
+        },
+        {
+          "start": 221,
+          "end": 222,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_fireball.fbx\",\n"
+          ]
+        },
+        {
+          "start": 236,
+          "end": 237,
+          "lines": [
+            "      \"license_notice\": \"legal/README.md\",\n"
+          ]
+        },
+        {
+          "start": 245,
+          "end": 246,
+          "lines": [
+            "        \"content_directory\": \"project/Content/Provided/Manny/Animations\",\n"
+          ]
+        },
+        {
+          "start": 257,
+          "end": 258,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_standblock.fbx\",\n"
+          ]
+        },
+        {
+          "start": 272,
+          "end": 273,
+          "lines": [
+            "      \"license_notice\": \"legal/README.md\",\n"
+          ]
+        },
+        {
+          "start": 281,
+          "end": 282,
+          "lines": [
+            "        \"content_directory\": \"project/Content/Provided/Manny/Animations\",\n"
+          ]
+        },
+        {
+          "start": 293,
+          "end": 294,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_hitstun.fbx\",\n"
+          ]
+        },
+        {
+          "start": 310,
+          "end": 311,
+          "lines": [
+            "      \"license_notice\": \"legal/README.md\",\n"
+          ]
+        },
+        {
+          "start": 319,
+          "end": 320,
+          "lines": [
+            "        \"content_directory\": \"project/Content/Provided/Manny/Animations\",\n"
+          ]
+        },
+        {
+          "start": 328,
+          "end": 330,
+          "lines": [
+            "  \"package_root\": \"project/Content/Provided/Manny\",\n",
+            "  \"reference_root\": \"assets/Manny\"\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ASSET_CATALOG.md",
+      "published": "assets/ASSET_CATALOG.md",
+      "sha256": "5650085c0dd8ad39d8a11332ea39719b3b92c2469ea7ae94ef58c367abb95da9",
+      "published_sha256": "e48b88bb84c4d06f354c3e710a1a6a56a831fa822023169012fac1132ebd741f",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "`ASSET_CATALOG.json` is the authority for asset identity, dependencies, license facts, and package paths. `GDD.md` Section 6 defines mandatory use (`ASSET-01`, `ASSET-02`); `ASSET_MANIFEST.json` summarizes delivery and replacement policy.\n"
+          ]
+        },
+        {
+          "start": 8,
+          "end": 17,
+          "lines": [
+            "| `SKM_Manny` | Both visible fighter bodies | `assets/Manny/SKM_Manny.fbx` | `/Game/Provided/Manny/SKM_Manny.SKM_Manny` |\n",
+            "| `AS_manny_stand` | Idle presentation | `assets/Manny/AS_manny_stand.fbx` | `/Game/Provided/Manny/Animations/AS_manny_stand.AS_manny_stand` |\n",
+            "| `AS_manny_fwalk` | Player movement toward the rival | `assets/Manny/AS_manny_fwalk.fbx` | `/Game/Provided/Manny/Animations/AS_manny_fwalk.AS_manny_fwalk` |\n",
+            "| `AS_manny_bwalk` | Player movement away from the rival | `assets/Manny/AS_manny_bwalk.fbx` | `/Game/Provided/Manny/Animations/AS_manny_bwalk.AS_manny_bwalk` |\n",
+            "| `AS_manny_jump` | Player jump presentation | `assets/Manny/AS_manny_jump.fbx` | `/Game/Provided/Manny/Animations/AS_manny_jump.AS_manny_jump` |\n",
+            "| `AS_manny_5a` | Player close-strike presentation | `assets/Manny/AS_manny_5a.fbx` | `/Game/Provided/Manny/Animations/AS_manny_5a.AS_manny_5a` |\n",
+            "| `AS_manny_fireball` | Player energy-bolt casting presentation | `assets/Manny/AS_manny_fireball.fbx` | `/Game/Provided/Manny/Animations/AS_manny_fireball.AS_manny_fireball` |\n",
+            "| `AS_manny_standblock` | Player standing-block presentation | `assets/Manny/AS_manny_standblock.fbx` | `/Game/Provided/Manny/Animations/AS_manny_standblock.AS_manny_standblock` |\n",
+            "| `AS_manny_hitstun` | Either fighter receiving a hit | `assets/Manny/AS_manny_hitstun.fbx` | `/Game/Provided/Manny/Animations/AS_manny_hitstun.AS_manny_hitstun` |\n"
+          ]
+        },
+        {
+          "start": 20,
+          "end": 21,
+          "lines": [
+            "- The mesh package, Skeleton package, and eight animation packages are already saved in `project/Content/Provided/Manny/`.\n"
+          ]
+        },
+        {
+          "start": 37,
+          "end": 38,
+          "lines": [
+            "See `legal/README.md` and the included license notices. License identifiers and per-asset notices are recorded in `ASSET_CATALOG.json`.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ASSET_COVERAGE.json",
+      "published": "ASSET_COVERAGE.json",
+      "sha256": "6161dc71a5fbda6ae47758ed22571a8f80fe6ddd5896bf567d9a5b090be4c46e",
+      "published_sha256": "b3ba92e0204a553bb959bbcad9a10d886918ad65a033c11fe1804cce1a258890",
+      "restore_edits": [
+        {
+          "start": 3,
+          "end": 4,
+          "lines": [
+            "  \"asset_catalog\": \"ASSET_CATALOG.json\",\n"
+          ]
+        },
+        {
+          "start": 143,
+          "end": 145,
+          "lines": [
+            "  \"preimported_package_root\": \"project/Content/Provided/Manny\",\n",
+            "  \"reference_root\": \"assets/Manny\"\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ASSET_PACKAGE_INDEX.json",
+      "published": "ASSET_PACKAGE_INDEX.json",
+      "sha256": "d03fddd28340da8674b6c09400ed1908cea46a7adb4979ae051e684acc8dfd58",
+      "published_sha256": "49e62f91606818c9cc8c7779c13b79b9309fd2650916a530205077fbfb80732b",
+      "restore_edits": [
+        {
+          "start": 12,
+          "end": 13,
+          "lines": [
+            "      \"path\": \"assets/Manny/SKM_Manny.fbx\",\n"
+          ]
+        },
+        {
+          "start": 23,
+          "end": 24,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_stand.fbx\",\n"
+          ]
+        },
+        {
+          "start": 37,
+          "end": 38,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_fwalk.fbx\",\n"
+          ]
+        },
+        {
+          "start": 51,
+          "end": 52,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_bwalk.fbx\",\n"
+          ]
+        },
+        {
+          "start": 65,
+          "end": 66,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_jump.fbx\",\n"
+          ]
+        },
+        {
+          "start": 79,
+          "end": 80,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_5a.fbx\",\n"
+          ]
+        },
+        {
+          "start": 93,
+          "end": 94,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_fireball.fbx\",\n"
+          ]
+        },
+        {
+          "start": 107,
+          "end": 108,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_standblock.fbx\",\n"
+          ]
+        },
+        {
+          "start": 121,
+          "end": 122,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_hitstun.fbx\",\n"
+          ]
+        },
+        {
+          "start": 134,
+          "end": 136,
+          "lines": [
+            "  \"preimported_package_root\": \"project/Content/Provided/Manny\",\n",
+            "  \"reference_root\": \"assets/Manny\"\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ASSET_MANIFEST.json",
+      "published": "ASSET_MANIFEST.json",
+      "sha256": "ce44f9af3dfd078d15a609f4ff87d28781471e981ec1eedce32ee0ff9ad09952",
+      "published_sha256": "781aadeb08f1ec79c864d60ab755fd840c743e257ddbddab08ca20149bf73105",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "  \"authority\": \"ASSET_CATALOG.json\",\n"
+          ]
+        },
+        {
+          "start": 4,
+          "end": 5,
+          "lines": [
+            "  \"delivery_root\": \"project/Content/Provided/Manny\",\n"
+          ]
+        },
+        {
+          "start": 15,
+          "end": 16,
+          "lines": [
+            "    \"candidate_import_destination\": \"project/Content/Provided/Manny\",\n"
+          ]
+        },
+        {
+          "start": 23,
+          "end": 25,
+          "lines": [
+            "    \"The skeletal mesh, Skeleton, and eight animation sequences are preimported under project/Content/Provided/Manny/.\",\n",
+            "    \"The protected FBX reference files under assets/Manny/ retain the stable asset IDs and are available for identity and validation checks.\",\n"
+          ]
+        },
+        {
+          "start": 31,
+          "end": 32,
+          "lines": [
+            "      \"path\": \"assets/Manny/SKM_Manny.fbx\",\n"
+          ]
+        },
+        {
+          "start": 44,
+          "end": 45,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_stand.fbx\",\n"
+          ]
+        },
+        {
+          "start": 59,
+          "end": 60,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_fwalk.fbx\",\n"
+          ]
+        },
+        {
+          "start": 74,
+          "end": 75,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_bwalk.fbx\",\n"
+          ]
+        },
+        {
+          "start": 89,
+          "end": 90,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_jump.fbx\",\n"
+          ]
+        },
+        {
+          "start": 104,
+          "end": 105,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_5a.fbx\",\n"
+          ]
+        },
+        {
+          "start": 119,
+          "end": 120,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_fireball.fbx\",\n"
+          ]
+        },
+        {
+          "start": 134,
+          "end": 135,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_standblock.fbx\",\n"
+          ]
+        },
+        {
+          "start": 149,
+          "end": 150,
+          "lines": [
+            "      \"path\": \"assets/Manny/AS_manny_hitstun.fbx\",\n"
+          ]
+        },
+        {
+          "start": 165,
+          "end": 167,
+          "lines": [
+            "  \"reference_root\": \"assets/Manny\",\n",
+            "  \"preimported_package_root\": \"project/Content/Provided/Manny\",\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "assets/Manny/AS_manny_5a.fbx",
+      "published": "assets/files/Manny/AS_manny_5a.fbx",
+      "sha256": "395cf56281cab43036bc2a6b140b4ea686de4f20b25cf8ace30b70036eedc5ae",
+      "published_sha256": "395cf56281cab43036bc2a6b140b4ea686de4f20b25cf8ace30b70036eedc5ae"
+    },
+    {
+      "source": "assets/Manny/AS_manny_bwalk.fbx",
+      "published": "assets/files/Manny/AS_manny_bwalk.fbx",
+      "sha256": "f60cfe188fe4aa1eed946bd830d982091ab70b3f76ea63c267065670a5141d87",
+      "published_sha256": "f60cfe188fe4aa1eed946bd830d982091ab70b3f76ea63c267065670a5141d87"
+    },
+    {
+      "source": "assets/Manny/AS_manny_fireball.fbx",
+      "published": "assets/files/Manny/AS_manny_fireball.fbx",
+      "sha256": "0e1f38ad36dbcb3eb5a57f0320523fdd46b68a32ffe5d4b94f61ef6e0ecb86bf",
+      "published_sha256": "0e1f38ad36dbcb3eb5a57f0320523fdd46b68a32ffe5d4b94f61ef6e0ecb86bf"
+    },
+    {
+      "source": "assets/Manny/AS_manny_fwalk.fbx",
+      "published": "assets/files/Manny/AS_manny_fwalk.fbx",
+      "sha256": "f3b57f49da16137007ac964a7e5009577077b3b928656a2a27e038112ae66e88",
+      "published_sha256": "f3b57f49da16137007ac964a7e5009577077b3b928656a2a27e038112ae66e88"
+    },
+    {
+      "source": "assets/Manny/AS_manny_hitstun.fbx",
+      "published": "assets/files/Manny/AS_manny_hitstun.fbx",
+      "sha256": "8e639233333c1a166bf3dc670347077d651f8dca54fbe9ebbe6ed65f35eea4ac",
+      "published_sha256": "8e639233333c1a166bf3dc670347077d651f8dca54fbe9ebbe6ed65f35eea4ac"
+    },
+    {
+      "source": "assets/Manny/AS_manny_jump.fbx",
+      "published": "assets/files/Manny/AS_manny_jump.fbx",
+      "sha256": "3b089fb7e7f184499d231b9cecc8d5194cf898745a6613e5c7ec72de6045a5d0",
+      "published_sha256": "3b089fb7e7f184499d231b9cecc8d5194cf898745a6613e5c7ec72de6045a5d0"
+    },
+    {
+      "source": "assets/Manny/AS_manny_stand.fbx",
+      "published": "assets/files/Manny/AS_manny_stand.fbx",
+      "sha256": "2acd00c676622c153cf47a55ab409600f3461bf8bf92d05ee72dd324c1a95b11",
+      "published_sha256": "2acd00c676622c153cf47a55ab409600f3461bf8bf92d05ee72dd324c1a95b11"
+    },
+    {
+      "source": "assets/Manny/AS_manny_standblock.fbx",
+      "published": "assets/files/Manny/AS_manny_standblock.fbx",
+      "sha256": "f4fbd37be4a5185fc0fbe966fac650ba7cba29f74c4db4217640edf1cef2bb62",
+      "published_sha256": "f4fbd37be4a5185fc0fbe966fac650ba7cba29f74c4db4217640edf1cef2bb62"
+    },
+    {
+      "source": "assets/Manny/SKM_Manny.fbx",
+      "published": "assets/files/Manny/SKM_Manny.fbx",
+      "sha256": "34001bf4ddf69eac6eef4ea4d90f0add931bdacd91f876b1fafd34e62dddaf5d",
+      "published_sha256": "34001bf4ddf69eac6eef4ea4d90f0add931bdacd91f876b1fafd34e62dddaf5d"
+    },
+    {
+      "source": "BENCHMARK_MANIFEST.json",
+      "published": "BENCHMARK_MANIFEST.json",
+      
+
+"restore_edits": [
+        {
+          "start": 23,
+          "end": 24,
+          "lines": [
+            "    \"operation_result_schema\": \"engine/unreal-5.7.4/executor/schemas/operation-result.schema.json\",\n",
+            "    \"capability_validation_summary\": \"engine/unreal-5.7.4/validation/latest/summary.json\"\n"
+          ]
+        },
+        {
+          "start": 26,
+          "end": 31,
+          "lines": [
+            "    \"project_root\": \"project\",\n",
+            "    \"project_file\": \"project/NightSkyDuelScaffold.uproject\",\n",
+            "    \"starter_entry\": \"project/NightSkyDuelScaffold.uproject\",\n",
+            "    \"default_entry\": \"project/NightSkyDuelScaffold.uproject\",\n",
+            "    \"final_entry\": \"project/NightSkyDuelScaffold.uproject\",\n"
+          ]
+        },
+        {
+          "start": 33,
+          "end": 34,
+          "lines": [
+            "    \"final_map_source\": \"project/Config/DefaultEngine.ini: GameDefaultMap\",\n"
+          ]
+        },
+        {
+          "start": 37,
+          "end": 41,
+          "lines": [
+            "    \"toolchain\": \"TOOLCHAIN.md\",\n",
+            "    \"tool_guide\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "    \"interface_catalog_index\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
+            "    \"interface_catalog\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        },
+        {
+          "start": 42,
+          "end": 44,
+          "lines": [
+            "    \"asset_catalog_json\": \"ASSET_CATALOG.json\",\n",
+            "    \"asset_catalog_human\": \"ASSET_CATALOG.md\",\n"
+          ]
+        },
+        {
+          "start": 45,
+          "end": 48,
+          "lines": [
+            "    \"legal_notice\": \"legal/README.md\",\n",
+            "    \"public_smoke\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
+            "    \"public_smoke_schema\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n"
+          ]
+        },
+        {
+          "start": 59,
+          "end": 60,
+          "lines": [
+            "    \"README.md\",\n"
+          ]
+        },
+        {
+          "start": 62,
+          "end": 66,
+          "lines": [
+            "    \"ASSET_CATALOG.md\",\n",
+            "    \"TOOLCHAIN.md\",\n",
+            "    \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "    \"contracts/README.md\"\n"
+          ]
+        },
+        {
+          "start": 69,
+          "end": 70,
+          "lines": [
+            "      \"project\"\n"
+          ]
+        },
+        {
+          "start": 73,
+          "end": 74,
+          "lines": [
+            "      \"README.md\",\n"
+          ]
+        },
+        {
+          "start": 77,
+          "end": 81,
+          "lines": [
+            "\"TOOLCHAIN.md\",\n",
+            "      \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "      \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
+            "      \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        },
+        {
+          "start": 82,
+          "end": 84,
+          "lines": [
+            "      \"ASSET_CATALOG.json\",\n",
+            "      \"ASSET_CATALOG.md\",\n"
+          ]
+        },
+        {
+          "start": 85,
+          "end": 86,
+          "lines": [
+            "      \"legal\",\n"
+          ]
+        },
+        {
+          "start": 87,
+          "end": 88,
+          "lines": [
+            "      \"tests\",\n"
+          ]
+        },
+        {
+          "start": 157,
+          "end": 159,
+          "lines": [
+            "    \"entry\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
+            "    \"result_schema\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n"
+          ]
+        },
+        {
+          "start": 180,
+          "end": 182,
+          "lines": [
+            "    \"guide\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "    \"guide_sha256\": \"de71db706d8036f12552f4ffcf3a57cb107b7fd5d4bbcd1d7890490470298b06\",\n"
+          ]
+        },
+        {
+          "start": 183,
+          "end": 184,
+          "lines": [
+            "    \"capabilities_contract_sha256\": \"9007a3a623ce2c24e8a14c8f69764db31b146c9b5c5019704ab034c803cc2412\",\n"
+          ]
+        },
+        {
+          "start": 190,
+          "end": 193,
+          "lines": [
+            "    \"validation_scope\": \"Windows x64, Unreal Engine 5.7.4, editor_game, three independent dynamic validations per interface.\",\n",
+            "    \"interface_catalog_index\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
+            "    \"interface_catalog_file\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        },
+        {
+          "start": 195,
+          "end": 196,
+          "lines": [
+            "    \"interface_catalog_index_sha256\": \"9121e0d1f9b7f98529b026191284bea96102e06732faf61289bf8c3b06d9c5ab\"\n"
+          ]
+        },
+        {
+          "start": 199,
+          "end": 201,
+          "lines": [
+            "    \"catalog_json\": \"ASSET_CATALOG.json\",\n",
+            "    \"catalog_human\": \"ASSET_CATALOG.md\",\n"
+          ]
+        },
+        {
+          "start": 202,
+          "end": 203,
+          "lines": [
+            "    \"legal_notice\": \"legal/README.md\",\n"
+          ]
+        },
+        {
+          "start": 206,
+          "end": 207,
+          "lines": [
+            "    \"delivery_root\": \"project/Content/Provided/Manny\",\n"
+          ]
+        },
+        {
+          "start": 211,
+          "end": 213,
+          "lines": [
+            "    \"reference_root\": \"assets/Manny\",\n",
+            "    \"preimported_package_root\": \"project/Content/Provided/Manny\",\n"
+          ]
+        },
+        {
+          "start": 268,
+          "end": 269,
+          "lines": [
+            "        \"tool\": \"tests/AssetPayload/Test-AssetPayload.ps1\"\n"
+          ]
+        },
+        {
+          "start": 275,
+          "end": 277,
+          "lines": [
+            "\n",
+            "\n"
+          ]
+        },
+        {
+          "start": 285,
+          "end": 287,
+          "lines": [
+            "      \"byte_length\": 2883,\n",
+            "      \"sha256\": \"2ad779dbfeded64f4724f3d0be3350375074b44adda3e170f0bbf9681e64fcc9\"\n"
+          ]
+        },
+        {
+          "start": 289,
+          "end": 292,
+          "lines": [
+            "      \"path\": \"README.md\",\n",
+            "      \"byte_length\": 5245,\n",
+            "      \"sha256\": \"346550cb91ea86140981844e33afeb742c480a4f4d4a94a7735cba49cd2009d8\"\n"
+          ]
+        },
+        {
+          "start": 295,
+          "end": 297,
+          "lines": [
+            "      \"byte_length\": 26481,\n",
+            "      \"sha256\": \"48c1ae0d9d42b0f0fb0e8d74a6d30bfb096da732d0e29c4ff0187fa1456a5b8d\"\n"
+          ]
+        },
+        {
+          "start": 299,
+          "end": 302,
+          "lines": [
+            "      \"path\": \"TOOLCHAIN.md\",\n",
+            "      \"byte_length\": 6460,\n",
+            "      \"sha256\": \"3dd90ee042121e0f204c5d76eef60efaed21e2921f6a927ea85d619ad57bec8e\"\n"
+          ]
+        },
+        {
+          "start": 304,
+          "end": 307,
+          "lines": [
+            "      \"path\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "      \"byte_length\": 31477,\n",
+            "      \"sha256\": \"de71db706d8036f12552f4ffcf3a57cb107b7fd5d4bbcd1d7890490470298b06\"\n"
+          ]
+        },
+        {
+          "start": 309,
+          "end": 312,
+          "lines": [
+            "      \"path\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
+            "      \"byte_length\": 3026,\n",
+            "      \"sha256\": \"9121e0d1f9b7f98529b026191284bea96102e06732faf61289bf8c3b06d9c5ab\"\n"
+          ]
+        },
+        {
+          "start": 314,
+          "end": 315,
+          "lines": [
+            "      \"path\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        },
+        {
+          "start": 320,
+          "end": 322,
+          "lines": [
+            "      \"byte_length\": 5810,\n",
+            "      \"sha256\": \"ce44f9af3dfd078d15a609f4ff87d28781471e981ec1eedce32ee0ff9ad09952\"\n"
+          ]
+        },
+        {
+          "start": 324,
+          "end": 327,
+          "lines": [
+            "      \"path\": \"ASSET_CATALOG.json\",\n",
+            "      \"byte_length\": 12750,\n",
+            "      \"sha256\": \"cbcf5f78486190ca5e06ae14db03141db542ce58dc2fa26eaf0fa793ca5686f5\"\n"
+          ]
+        },
+        {
+          "start": 329,
+          "end": 332,
+          "lines": [
+            "      \"path\": \"ASSET_CATALOG.md\",\n",
+            "      \"byte_length\": 3502,\n",
+            "      \"sha256\": \"5650085c0dd8ad39d8a11332ea39719b3b92c2469ea7ae94ef58c367abb95da9\"\n"
+          ]
+        },
+        {
+          "start": 335,
+          "end": 337,
+          "lines": [
+            "      \"byte_length\": 3524,\n",
+            "      \"sha256\": \"6161dc71a5fbda6ae47758ed22571a8f80fe6ddd5896bf567d9a5b090be4c46e\"\n"
+          ]
+        },
+        {
+          "start": 339,
+          "end": 342,
+          "lines": [
+            "      \"path\": \"legal/README.md\",\n",
+            "      \"byte_length\": 1318,\n",
+            "      \"sha256\": \"7683fd95f8f21b2cc21b8c48a4d7bec5a82193ebf3a029c01c5ae6473db5a06e\"\n"
+          ]
+        },
+        {
+          "start": 344,
+          "end": 345,
+          "lines": [
+            "      \"path\": \"contracts/README.md\",\n"
+          ]
+        },
+        {
+          "start": 354,
+          "end": 357,
+          "lines": [
+            "      \"path\": \"tests/PublicSmoke/README.md\",\n",
+            "      \"byte_length\": 3383,\n",
+            "      \"sha256\": \"695c82d9ec7269c19f0023e6c3523917be5be2156353562a971a5b192dfa60d2\"\n"
+          ]
+        },
+        {
+          "start": 359,
+          "end": 362,
+          "lines": [
+            "      \"path\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
+            "      \"byte_length\": 27947,\n",
+            "      \"sha256\": \"80e7810a77f7c96b6593fbcbbf7a6d754d25dfde6c47565298a01d5f0bd24c15\"\n"
+          ]
+        },
+        {
+          "start": 364,
+          "end": 367,
+          "lines": [
+            "      \"path\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n",
+            "      \"byte_length\": 4460,\n",
+            "      \"sha256\": \"226cdb4393c8020648d7d4b0be0a6e33e41a8943f8646858ce634f711f078a31\"\n"
+          ]
+        },
+        {
+          "start": 369,
+          "end": 370,
+          "lines": [
+            "      \"path\": \"project/NightSkyDuelScaffold.uproject\",\n"
+          ]
+        },
+        {
+          "start": 374,
+          "end": 375,
+          "lines": [
+            "      \"path\": \"legal/MIT-NightSkyEngine.txt\",\n"
+          ]
+        },
+        {
+          "start": 380,
+          "end": 382,
+          "lines": [
+            "      \"byte_length\": 5349,\n",
+            "      \"sha256\": \"d03fddd28340da8674b6c09400ed1908cea46a7adb4979ae051e684acc8dfd58\"\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "contracts/duel-state.schema.json",
+      "published": "contracts/duel-state.schema.json",
+      "sha256": "a959fd00e04ff82fc13c724575a7108aed63f14abc5a00097a95e56664b29677",
+      "published_sha256": "a959fd00e04ff82fc13c724575a7108aed63f14abc5a00097a95e56664b29677"
+    },
+    {
+      "source": "contracts/README.md",
+      "published": "contracts/GAME_SESSION_SPEC.md",
+      "sha256": "854542009bf7012ec4d78e313f1b93c09f62da74ada44a8a50e058a6cdd09310",
+      "published_sha256": "854542009bf7012ec4d78e313f1b93c09f62da74ada44a8a50e058a6cdd09310"
+    },
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+      "source": "GDD.md",
+      "published": "GDD.md",
+      "sha256": "48c1ae0d9d42b0f0fb0e8d74a6d30bfb096da732d0e29c4ff0187fa1456a5b8d",
+      "published_sha256": "3442d323126d9bbf908c05c90b06a855d267e0c96468736d8aba14d6de719f68",
+      "restore_edits": [
+        {
+          "start": 173,
+          "end": 174,
+          "lines": [
+            "Exact delivery, dependency, license, and package facts are in `ASSET_MANIFEST.json`, `ASSET_CATALOG.json`, and `TOOLCHAIN.md`. The following lookup summarizes `ASSET-01` and `ASSET-02`; it does not prescribe gameplay logic.\n"
+          ]
+        },
+        {
+          "start": 177,
+          "end": 186,
+          "lines": [
+            "| `SKM_Manny` | Manny skeletal character model, used by both fighters | `assets/Manny/SKM_Manny.fbx` | `/Game/Provided/Manny/SKM_Manny.SKM_Manny` |\n",
+            "| `AS_manny_stand` | Standing idle | `assets/Manny/AS_manny_stand.fbx` | `/Game/Provided/Manny/Animations/AS_manny_stand.AS_manny_stand` |\n",
+            "| `AS_manny_fwalk` | Forward walk, toward the rival | `assets/Manny/AS_manny_fwalk.fbx` | `/Game/Provided/Manny/Animations/AS_manny_fwalk.AS_manny_fwalk` |\n",
+            "| `AS_manny_bwalk` | Backward walk, away from the rival | `assets/Manny/AS_manny_bwalk.fbx` | `/Game/Provided/Manny/Animations/AS_manny_bwalk.AS_manny_bwalk` |\n",
+            "| `AS_manny_jump` | Jump motion | `assets/Manny/AS_manny_jump.fbx` | `/Game/Provided/Manny/Animations/AS_manny_jump.AS_manny_jump` |\n",
+            "| `AS_manny_5a` | Standing close strike | `assets/Manny/AS_manny_5a.fbx` | `/Game/Provided/Manny/Animations/AS_manny_5a.AS_manny_5a` |\n",
+            "| `AS_manny_fireball` | Projectile-casting motion, used for the energy bolt | `assets/Manny/AS_manny_fireball.fbx` | `/Game/Provided/Manny/Animations/AS_manny_fireball.AS_manny_fireball` |\n",
+            "| `AS_manny_standblock` | Standing guard | `assets/Manny/AS_manny_standblock.fbx` | `/Game/Provided/Manny/Animations/AS_manny_standblock.AS_manny_standblock` |\n",
+            "| `AS_manny_hitstun` | Receiving a hit | `assets/Manny/AS_manny_hitstun.fbx` | `/Game/Provided/Manny/Animations/AS_manny_hitstun.AS_manny_hitstun` |\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "INITIAL_AGENT_PROMPT.md",
+      "published": "INITIAL_AGENT_PROMPT.md",
+      "sha256": "2ad779dbfeded64f4724f3d0be3350375074b44adda3e170f0bbf9681e64fcc9",
+      "published_sha256": "03f4eb8babbe06a9dfc2b1b90dfc10930e4e90f323246cd8d898c51100f60e04",
+      "restore_edits": [
+        {
+          "start": 11,
+          "end": 12,
+          "lines": [
+            "2. `README.md`\n"
+          ]
+        },
+        {
+          "start": 14,
+          "end": 18,
+          "lines": [
+            "5. `ASSET_CATALOG.md`\n",
+            "6. `TOOLCHAIN.md`\n",
+            "7. `UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md`\n",
+            "8. `contracts/README.md`\n"
+          ]
+        },
+        {
+          "start": 23,
+          "end": 24,
+          "lines": [
+            "- The only writable release root is `project/`.\n"
+          ]
+        },
+        {
+          "start": 33,
+          "end": 34,
+          "lines": [
+            "Both visible fighters must use the supplied `SKM_Manny` 3D model and the eight supplied animation clips in the roles specified by `ASSET-01` and `ASSET-02`. The preimported skeletal mesh, Skeleton, and animation sequences are available under `/Game/Provided/Manny/` and `/Game/Provided/Manny/Animations/`; exact object paths, names, meanings, and dependencies are in `ASSET_CATALOG.md` and `ASSET_CATALOG.json`. Merely including the files or replacing the fighters with primitives, sprites, or unrelated models is not sufficient.\n"
+          ]
+        },
+        {
+          "start": 41,
+          "end": 42,
+          "lines": [
+            "1. Leave the complete candidate under `project/`.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "legal/MIT-NightSkyEngine.txt",
+      "published": "assets/legal/MIT-NightSkyEngine.txt",
+      "sha256": "e417a2867b8c81cde9cdfb8abccd240554b0c40730029d76b40ad7bfd601d725",
+      "published_sha256": "e417a2867b8c81cde9cdfb8abccd240554b0c40730029d76b40ad7bfd601d725"
+    },
+    {
+      "source": "legal/README.md",
+      "published": "assets/legal/LICENSE_SCOPE.md",
+      "sha256": "7683fd95f8f21b2cc21b8c48a4d7bec5a82193ebf3a029c01c5ae6473db5a06e",
+      "published_sha256": "06c54886f6a9ac0a34f7f2d828fc045db6abd8c461484fabc29a8f775b3bcd91",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "This input contains nine art-only FBX reference files: the Manny skeletal model and eight animation clips. The corresponding preimported packages are under `project/Content/Provided/Manny/`. Per-file hashes and license IDs are in `ASSET_CATALOG.json`. No gameplay code, Blueprint, plugin, map, save, or assembled gameplay asset is included.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "project/.gitignore",
+      "published": "starter-project/.gitignore",
+      "sha256": "ef5883f1a331d73daa036d6fada910fdb324df2f5c538b6dd331c199ec7de4ef",
+      "published_sha256": "ef5883f1a331d73daa036d6fada910fdb324df2f5c538b6dd331c199ec7de4ef"
+    },
+    {
+      "source": "project/Config/DefaultEngine.ini",
+      "published": "starter-project/Config/DefaultEngine.ini",
+      "sha256": "daf4bcd6fa0a6ad8f9822fb9f5be8accf678f468c3762f80ccd1b9415db829ff",
+      "published_sha256": "daf4bcd6fa0a6ad8f9822fb9f5be8accf678f468c3762f80ccd1b9415db829ff"
+    },
+    {
+      "source": "project/Config/DefaultGame.ini",
+      "published": "starter-project/Config/DefaultGame.ini",
+      "sha256": "b567687efb1e4d9851c3ede7ecff0134ce0a83cf0299687aaffc14938d0aa231",
+      "published_sha256": "b567687efb1e4d9851c3ede7ecff0134ce0a83cf0299687aaffc14938d0aa231"
+    },
+    {
+      "source": "project/Config/DefaultGameUserSettings.ini",
+      "published": "starter-project/Config/DefaultGameUserSettings.ini",
+      "sha256": "df57875a4a7998d56d0cb5e9bccb60597a79a0f00c8176828db261d5a59f140d",
+      "published_sha256": "df57875a4a7998d56d0cb5e9bccb60597a79a0f00c8176828db261d5a59f140d"
+    },
+    {
+      "source": "project/Config/DefaultInput.ini",
+      "published": "starter-project/Config/DefaultInput.ini",
+      "sha256": "4d28e52122422f06d865ecef88e532948f7ef05d090d73075af0a1188bf0a562",
+      "published_sha256": "4d28e52122422f06d865ecef88e532948f7ef05d090d73075af0a1188bf0a562"
+    },
+    {
+      "source": "project/Content/Provided/Manny/Animations/AS_manny_5a.uasset",
+      "published": "starter-project/Content/Provided/Manny/Animations/AS_manny_5a.uasset",
+      "sha256": "8276fcaa6c5d05ecb6bebca1cea70a98612d35f497fe53358d27f15587bea974",
+      "published_sha256": "8276fcaa6c5d05ecb6bebca1cea70a98612d35f497fe53358d27f15587bea974"
+    },
+    {
+      "source": "project/Content/Provided/Manny/Animations/AS_manny_bwalk.uasset",
+      "published": "starter-project/Content/Provided/Manny/Animations/AS_manny_bwalk.uasset",
+      "sha256": "5bc0ebf8d4ffc32cad7e3270d9293c3d7abd38de2e493a0ff187a27e42a2c9dd",
+      "published_sha256": "5bc0ebf8d4ffc32cad7e3270d9293c3d7abd38de2e493a0ff187a27e42a2c9dd"
+    },
+    {
+      "source": "project/Content/Provided/Manny/Animations/AS_manny_fireball.uasset",
+      "published": "starter-project/Content/Provided/Manny/Animations/AS_manny_fireball.uasset",
+      "sha256": "e72332d814b513d8924ab52e627864e2d6957c5a13bd2a2944749e1df908b2d2",
+      "published_sha256": "e72332d814b513d8924ab52e627864e2d6957c5a13bd2a2944749e1df908b2d2"
+    },
+    {
+      "source": "project/Content/Provided/Manny/Animations/AS_manny_fwalk.uasset",
+      "published": "starter-project/Content/Provided/Manny/Animations/AS_manny_fwalk.uasset",
+      "sha256": "2217e051a680b69f35559936ced487f69250e6009d98307193e9b7e135fa1a69",
+      "published_sha256": "2217e051a680b69f35559936ced487f69250e6009d98307193e9b7e135fa1a69"
+    },
+    {
+      "source": "project/Content/Provided/Manny/Animations/AS_manny_hitstun.uasset",
+      "published": "starter-project/Content/Provided/Manny/Animations/AS_manny_hitstun.uasset",
+      "sha256": "db75d9865787a2366a82a4ceb1f06d4f52aed50a0e8f044a46a6664f9e81e07f",
+      "published_sha256": "db75d9865787a2366a82a4ceb1f06d4f52aed50a0e8f044a46a6664f9e81e07f"
+    },
+    {
+      "source": "project/Content/Provided/Manny/Animations/AS_manny_jump.uasset",
+      "published": "starter-project/Content/Provided/Manny/Animations/AS_manny_jump.uasset",
+      "sha256": "171fe02ee0b0952653b2d4033cd755d0bd9f65418eb0143bc2e9820125df248e",
+      "published_sha256": "171fe02ee0b0952653b2d4033cd755d0bd9f65418eb0143bc2e9820125df248e"
+    },
+    {
+      "source": "project/Content/Provided/Manny/Animations/AS_manny_stand.uasset",
+      "published": "starter-project/Content/Provided/Manny/Animations/AS_manny_stand.uasset",
+      "sha256": "f9eb15a36cb180a5f613fa38262f5a86d4ab2bbb86fb59d5639f44d50f5fd4f9",
+      "published_sha256": "f9eb15a36cb180a5f613fa38262f5a86d4ab2bbb86fb59d5639f44d50f5fd4f9"
+    },
+    {
+      "source": "project/Content/Provided/Manny/Animations/AS_manny_standblock.uasset",
+      "published": "starter-project/Content/Provided/Manny/Animations/AS_manny_standblock.uasset",
+      "sha256": "105ea2f61a4d6e2ef11c3f0a08ac01880a910a80aac5fff332b5f89e62cf2af2",
+      "published_sha256": "105ea2f61a4d6e2ef11c3f0a08ac01880a910a80aac5fff332b5f89e62cf2af2"
+    },
+    {
+      "source": "project/Content/Provided/Manny/SKM_Manny.uasset",
+      "published": "starter-project/Content/Provided/Manny/SKM_Manny.uasset",
+      "sha256": "ebf8fd848542f277c7d04158b0d550d077e5e9b3c186b2e3e223b78f8a0225cb",
+      "published_sha256": "ebf8fd848542f277c7d04158b0d550d077e5e9b3c186b2e3e223b78f8a0225cb"
+    },
+    {
+      "source": "project/Content/Provided/Manny/SKM_Manny_Skeleton.uasset",
+      "published": "starter-project/Content/Provided/Manny/SKM_Manny_Skeleton.uasset",
+      "sha256": "aee8669ae59cce9273bb2a0ea73770f89440599792f28c35bbff102b2ed93a6d",
+      "published_sha256": "aee8669ae59cce9273bb2a0ea73770f89440599792f28c35bbff102b2ed93a6d"
+    },
+    {
+      "source": "project/NightSkyDuelScaffold.uproject",
+      "published": "starter-project/NightSkyDuelScaffold.uproject",
+      "sha256": "d72a97cc2223b0fb52023fdf4c13672e9406c7ef2581a07560363f90bb7f136f",
+      "published_sha256": "d72a97cc2223b0fb52023fdf4c13672e9406c7ef2581a07560363f90bb7f136f"
+    },
+    {
+      "source": "project/README.md",
+      "published": "starter-project/README.md",
+      "sha256": "b948707ccb4bb84800bb6d628fdaa376e2fec44e51dba6ab3ed6d72f7c34fb23",
+      "published_sha256": "b948707ccb4bb84800bb6d628fdaa376e2fec44e51dba6ab3ed6d72f7c34fb23"
+    },
+    {
+      "source": "project/Source/NightSkyDuelScaffold/NightSkyDuelHealthState.cpp",
+      "published": "starter-project/Source/NightSkyDuelScaffold/NightSkyDuelHealthState.cpp",
+      "sha256": "a60aa7a9f098eb181b173d836ff9e217601296d1ea18f801f65880d608201d76",
+      "published_sha256": "a60aa7a9f098eb181b173d836ff9e217601296d1ea18f801f65880d608201d76"
+    },
+    {
+      "source": "project/Source/NightSkyDuelScaffold/NightSkyDuelHealthState.h",
+      "published": "starter-project/Source/NightSkyDuelScaffold/NightSkyDuelHealthState.h",
+      "sha256": "76adeb8833ac946fd0bfa710c5b056e4797043d94eba55a9157c2597ef96c0ab",
+      "published_sha256": "76adeb8833ac946fd0bfa710c5b056e4797043d94eba55a9157c2597ef96c0ab"
+    },
+    {
+      "source": "project/Source/NightSkyDuelScaffold/NightSkyDuelScaffold.Build.cs",
+      "published": "starter-project/Source/NightSkyDuelScaffold/NightSkyDuelScaffold.Build.cs",
+      "sha256": "7fbc4512881e672e8bedc49e167cbdd02d4897bc611a6095b628bd9417a113c6",
+      "published_sha256": "7fbc4512881e672e8bedc49e167cbdd02d4897bc611a6095b628bd9417a113c6"
+    },
+    {
+      "source": "project/Source/NightSkyDuelScaffold/NightSkyDuelScaffold.cpp",
+      "published": "starter-project/Source/NightSkyDuelScaffold/NightSkyDuelScaffold.cpp",
+      "sha256": "57f77bd888b4abc9ffacc279f571deacb1ac7a6780aa9c0e04a8637d7dbc28d4",
+      "published_sha256": "57f77bd888b4abc9ffacc279f571deacb1ac7a6780aa9c0e04a8637d7dbc28d4"
+    },
+    {
+      "source": "project/Source/NightSkyDuelScaffold/NightSkyDuelScaffoldGameMode.cpp",
+      "published": "starter-project/Source/NightSkyDuelScaffold/NightSkyDuelScaffoldGameMode.cpp",
+      "sha256": "3c9cd10fd9961179f6889da0861ac803fe6f18a427846a22d05c3018eb8370ac",
+      "published_sha256": "3c9cd10fd9961179f6889da0861ac803fe6f18a427846a22d05c3018eb8370ac"
+    },
+    {
+      "source": "project/Source/NightSkyDuelScaffold/NightSkyDuelScaffoldGameMode.h",
+      "published": "starter-project/Source/NightSkyDuelScaffold/NightSkyDuelScaffoldGameMode.h",
+      "sha256": "8909e66cd5851a477db49e75fc1f11b0bbb2206e8e13aa8fa7c9c009dd59186e",
+      "published_sha256": "8909e66cd5851a477db49e75fc1f11b0bbb2206e8e13aa8fa7c9c009dd59186e"
+    },
+    {
+      "source": "project/Source/NightSkyDuelScaffold/NightSkyDuelScaffoldHUD.cpp",
+      "published": "starter-project/Source/NightSkyDuelScaffold/NightSkyDuelScaffoldHUD.cpp",
+      "sha256": "c9b0f90a2da18fda419d75bd9eaa0389f4ef932c83506651250b83fc9a9b5bb1",
+      "published_sha256": "c9b0f90a2da18fda419d75bd9eaa0389f4ef932c83506651250b83fc9a9b5bb1"
+    },
+    {
+      "source": "project/Source/NightSkyDuelScaffold/NightSkyDuelScaffoldHUD.h",
+      "published": "starter-project/Source/NightSkyDuelScaffold/NightSkyDuelScaffoldHUD.h",
+      "sha256": "e8ec12b7702f3b2f4585e0787711982ac7044029c60b9e5a1b5e79b1862a302e",
+      "published_sha256": "e8ec12b7702f3b2f4585e0787711982ac7044029c60b9e5a1b5e79b1862a302e"
+    },
+    {
+      "source": "project/Source/NightSkyDuelScaffold.Target.cs",
+      "published": "starter-project/Source/NightSkyDuelScaffold.Target.cs",
+      "sha256": "e468d10124b6697721f5975f7d7ace6f970a333fd54033c5adc5b1f5e9b1aa24",
+      "published_sha256": "e468d10124b6697721f5975f7d7ace6f970a333fd54033c5adc5b1f5e9b1aa24"
+    },
+    {
+      "source": "project/Source/NightSkyDuelScaffoldEditor.Target.cs",
+      "published": "starter-project/Source/NightSkyDuelScaffoldEditor.Target.cs",
+      "sha256": "a97cbd96bac877c41d464423300da9b74891c688882571fa5d26fd190e6db000",
+      "published_sha256": "a97cbd96bac877c41d464423300da9b74891c688882571fa5d26fd190e6db000"
+    },
+    {
+      "source": "README.md",
+      "published": "tools/INPUT_GUIDE.md",
+      
+
+"restore_edits": [
+        {
+          "start": 7,
+          "end": 8,
+          "lines": [
+            "2. `README.md`\n"
+          ]
+        },
+        {
+          "start": 10,
+          "end": 14,
+          "lines": [
+            "5. `ASSET_CATALOG.md`\n",
+            "6. `TOOLCHAIN.md`\n",
+            "7. `UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md`\n",
+            "8. `contracts/README.md`\n"
+          ]
+        },
+        {
+          "start": 23,
+          "end": 26,
+          "lines": [
+            "| Asset identity, provenance, and license facts | `ASSET_CATALOG.json` |\n",
+            "| Engine, project, runtime, and release parameters | `BENCHMARK_MANIFEST.json` and `TOOLCHAIN.md` |\n",
+            "| Public engine and executor interfaces | `UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md` and its compressed interface catalog |\n"
+          ]
+        },
+        {
+          "start": 35,
+          "end": 38,
+          "lines": [
+            "| `project/` | Answer-free Unreal project with preimported Manny art assets and final candidate root | Yes |\n",
+            "| `assets/Manny/` | Protected art-only Manny model and animation FBX reference files | No |\n",
+            "| `legal/` | Offline source notice and per-origin asset license explanation | No |\n"
+          ]
+        },
+        {
+          "start": 39,
+          "end": 40,
+          "lines": [
+            "| `tests/PublicSmoke/` | Public project, tool, transport, Reopen, and cleanup health check | No |\n"
+          ]
+        },
+        {
+          "start": 47,
+          "end": 48,
+          "lines": [
+            "Open `project/NightSkyDuelScaffold.uproject`. The starter draws an English health screen and contains no arena, gameplay controls, combat, health rules, rival cadence, KO flow, or gameplay restart. Its task-state bridge deliberately reports `provider_ready=false`.\n"
+          ]
+        },
+        {
+          "start": 49,
+          "end": 50,
+          "lines": [
+            "The final candidate may extend or replace the bridge inside `project/` so implemented gameplay publishes `provider_ready=true` with schema-valid read-only truth. This is evaluator-interoperability plumbing, does not add a gameplay rule, and must never control or mutate gameplay.\n"
+          ]
+        },
+        {
+          "start": 51,
+          "end": 52,
+          "lines": [
+            "The required `SKM_Manny` model, its Skeleton, and eight animation sequences are already available under `project/Content/Provided/Manny/` and `/Game/Provided/Manny/`. Use these preimported assets visibly as required by `ASSET-01` and `ASSET-02`; see `ASSET_CATALOG.md` for names, meanings, object paths, and dependencies. The starter contains no preassembled fighter.\n"
+          ]
+        },
+        {
+          "start": 75,
+          "end": 76,
+          "lines": [
+            "pwsh -NoProfile -File tests/AssetPayload/Test-AssetPayload.ps1 -InputRoot .\n"
+          ]
+        },
+        {
+          "start": 81,
+          "end": 82,
+          "lines": [
+            "pwsh -NoProfile -File tests/PublicSmoke/Invoke-PublicSmoke.ps1 `\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tests/AssetPayload/Test-AssetPayload.ps1",
+      "published": "self-check/AssetPayload/Test-AssetPayload.ps1",
+      "sha256": "7fbdc50b466199fba356cc13a86cb677a7acfae1b7b5ef8246d29850e67590e9",
+      "published_sha256": "ffa92b78888e9711ee7e1233f3459a9251bd12cd791f0234c76c7ec62f1c3303",
+      "restore_edits": [
+        {
+          "start": 22,
+          "end": 23,
+          "lines": [
+            "    $basePath = Join-Path $InputRoot 'assets/Manny/AS_manny_standblock.fbx'\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tests/PublicSmoke/Invoke-PublicSmoke.ps1",
+      "published": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
+      
+
+"restore_edits": [
+        {
+          "start": 35,
+          "end": 36,
+          "lines": [
+            "        [Parameter(Mandatory)][ValidateSet('release', 'project', 'executor', 'environment', 'cleanup')][string]$Domain,\n"
+          ]
+        },
+        {
+          "start": 250,
+          "end": 251,
+          "lines": [
+            "$ProjectPath = Join-Path $InputFull 'project/NightSkyDuelScaffold.uproject'\n"
+          ]
+        },
+        {
+          "start": 277,
+          "end": 278,
+          "lines": [
+            "            [pscustomobject]@{ path = [string]$benchmark.tooling.capabilities_contract; sha256 = [string]$benchmark.tooling.capabilities_contract_sha256 },\n",
+            "            [pscustomobject]@{ path = [string]$benchmark.engine.capability_validation_summary; sha256 = [string]$benchmark.tooling.validation_summary_sha256 }\n"
+          ]
+        },
+        {
+          "start": 318,
+          "end": 319,
+          "lines": [
+            "        Add-SmokeFault -Domain 'project' -Code 'source_build_failed'\n"
+          ]
+        },
+        {
+          "start": 490,
+          "end": 491,
+          "lines": [
+            "        project_file = 'project/NightSkyDuelScaffold.uproject'\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tests/PublicSmoke/README.md",
+      "published": "self-check/PublicSmoke/CONTRACT.md",
+      "sha256": "695c82d9ec7269c19f0023e6c3523917be5be2156353562a971a5b192dfa60d2",
+      "published_sha256": "a7cbde2e937341036dedd5a9b0006db420df7c5552536b600eb89ed18dc7374c",
+      "restore_edits": [
+        {
+          "start": 11,
+          "end": 12,
+          "lines": [
+            "pwsh -NoProfile -File tests/PublicSmoke/Invoke-PublicSmoke.ps1 `\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tests/PublicSmoke/schemas/public-smoke-result.schema.json",
+      "published": "self-check/PublicSmoke/schemas/public-smoke-result.schema.json",
+      
+
+"restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "  \"$id\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n"
+          ]
+        },
+        {
+          "start": 14,
+          "end": 15,
+          "lines": [
+            "    \"project\",\n"
+          ]
+        },
+        {
+          "start": 54,
+          "end": 55,
+          "lines": [
+            "    \"project\": {\n"
+          ]
+        },
+        {
+          "start": 63,
+          "end": 64,
+          "lines": [
+            "          \"const\": \"project/NightSkyDuelScaffold.uproject\"\n"
+          ]
+        },
+        {
+          "start": 163,
+          "end": 164,
+          "lines": [
+            "              \"project\",\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "TOOLCHAIN.md",
+      "published": "tools/TOOLCHAIN.md",
+      "sha256": "3dd90ee042121e0f204c5d76eef60efaed21e2921f6a927ea85d619ad57bec8e",
+      "published_sha256": "2fa1ffb2dd76342fa7309decc4d3d783d94db55dde50d6d691bba042b84fe612",
+      "restore_edits": [
+        {
+          "start": 12,
+          "end": 13,
+          "lines": [
+            "| Project | `project/NightSkyDuelScaffold.uproject` |\n"
+          ]
+        },
+        {
+          "start": 93,
+          "end": 94,
+          "lines": [
+            "pwsh -NoProfile -File tests/PublicSmoke/Invoke-PublicSmoke.ps1 `\n"
+          ]
+        },
+        {
+          "start": 114,
+          "end": 115,
+          "lines": [
+            "The required Manny skeletal model and eight animations are preimported Unreal assets under `project/Content/Provided/Manny/`. The corresponding art-only FBX reference files remain under `assets/Manny/`. Exact names, visible roles, dependencies, package paths, object paths, and hashes are in `ASSET_CATALOG.json`; the readable lookup is `ASSET_CATALOG.md`. Mandatory use is defined only by `ASSET-01` and `ASSET-02` in `GDD.md`.\n"
+          ]
+        },
+        {
+          "start": 118,
+          "end": 119,
+          "lines": [
+            "Only `project/` is writable during generation. Keep `assets/` and all other public reference files unchanged; preimported `.uasset` files are already inside `project/Content/Provided/Manny/`. Runtime evidence and model-run metadata remain outside this input.\n"
+          ]
+        }
+      ]
+    },
+    
+
+
+
+
+
+{
+      "source": "tools/Resolve-Unreal57.ps1",
+      "published": "tools/Resolve-Unreal57.ps1",
+      "sha256": "12581ab0254ec09162a8783b412a71951418e8eb9a38a6e9f137d4e9ead873c5",
+      "published_sha256": "12581ab0254ec09162a8783b412a71951418e8eb9a38a6e9f137d4e9ead873c5"
+    },
+    {
+      "source": "tools/Search-UnrealInterfaceCatalog.ps1",
+      "published": "tools/Search-UnrealInterfaceCatalog.ps1",
+      "sha256": "963b6d6b254dbd7e890218bfb8f213d4d5e8bede64ef2e13bc2833af70684446",
+      "published_sha256": "a35eaaa1fc13c0740c649c61b540c43056e0a3c6a4c90a6e7ad0fa7626519afa",
+      "restore_edits": [
+        {
+          "start": 6,
+          "end": 8,
+          "lines": [
+            "    [string]$CatalogPath = (Join-Path $PSScriptRoot '../UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz'),\n",
+            "    [string]$IndexPath = (Join-Path $PSScriptRoot '../UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json')\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tools/Test-PublicInput.ps1",
+      "published": "tools/Test-PublicInput.ps1",
+      
+
+"restore_edits": [
+        {
+          "start": 116,
+          "end": 118,
+          "lines": [
+            "    Assert-PublicInput ($benchmark.paths.project_root -ceq 'project') 'Project root must be project.'\n",
+            "    Assert-PublicInput ($benchmark.paths.project_file -ceq 'project/NightSkyDuelScaffold.uproject') 'Project file identity is incorrect.'\n"
+          ]
+        },
+        {
+          "start": 120,
+          "end": 122,
+          "lines": [
+            "    Assert-PublicInput ($benchmark.workspace.writable_roots.Count -eq 1 -and $benchmark.workspace.writable_roots[0] -ceq 'project') 'project must be the only writable root.'\n",
+            "    Assert-PublicInput (-not (@($benchmark.workspace.protected_roots) -ccontains 'project')) 'The writable project root cannot also be protected.'\n"
+          ]
+        },
+        {
+          "start": 131,
+          "end": 131,
+          "lines": [
+            "    Assert-PublicInput ($benchmark.engine.capability_validation_summary -ceq 'engine/unreal-5.7.4/validation/latest/summary.json') 'Capability validation summary path is incorrect.'\n"
+          ]
+        },
+        {
+          "start": 137,
+          "end": 138,
+          "lines": [
+            "            [string]$benchmark.tooling.capabilities_contract_sha256,\n",
+            "            [string]$benchmark.tooling.validation_summary_sha256\n"
+          ]
+        },
+        {
+          "start": 196,
+          "end": 197,
+          "lines": [
+            "        'README.md',\n"
+          ]
+        },
+        {
+          "start": 198,
+          "end": 200,
+          "lines": [
+            "        'TOOLCHAIN.md',\n",
+            "        'UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md',\n"
+          ]
+        },
+        {
+          "start": 201,
+          "end": 203,
+          "lines": [
+            "        'ASSET_CATALOG.json',\n",
+            "        'ASSET_CATALOG.md',\n"
+          ]
+        },
+        {
+          "start": 204,
+          "end": 206,
+          "lines": [
+            "        'legal/README.md',\n",
+            "        'contracts/README.md',\n"
+          ]
+        },
+        {
+          "start": 207,
+          "end": 213,
+          "lines": [
+            "        'UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json',\n",
+            "        'UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz',\n",
+            "        'tests/PublicSmoke/README.md',\n",
+            "        'tests/PublicSmoke/Invoke-PublicSmoke.ps1',\n",
+            "        'tests/PublicSmoke/schemas/public-smoke-result.schema.json',\n",
+            "        'project/NightSkyDuelScaffold.uproject'\n"
+          ]
+        },
+        {
+          "start": 218,
+          "end": 219,
+          "lines": [
+            "    $toolGuidePath = Join-Path $root 'UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md'\n"
+          ]
+        },
+        {
+          "start": 220,
+          "end": 221,
+          "lines": [
+            "    Assert-PublicInput ($benchmark.tooling.guide -ceq 'UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md') 'Tool guide path is incorrect.'\n"
+          ]
+        },
+        {
+          "start": 227,
+          "end": 228,
+          "lines": [
+            "    $uproject = Read-JsonFile -Path (Join-Path $root 'project/NightSkyDuelScaffold.uproject')\n"
+          ]
+        },
+        {
+          "start": 232,
+          "end": 233,
+          "lines": [
+            "    $projectRoot = Join-Path $root 'project'\n"
+          ]
+        },
+        {
+          "start": 283,
+          "end": 284,
+          "lines": [
+            "    $assetCatalog = Read-JsonFile -Path (Join-Path $root 'ASSET_CATALOG.json')\n"
+          ]
+        },
+        {
+          "start": 291,
+          "end": 293,
+          "lines": [
+            "    Assert-PublicInput ($assetManifest.delivery_root -ceq 'project/Content/Provided/Manny' -and $assetManifest.delivery_format -ceq 'preimported_unreal_assets_with_fbx_references') 'Asset delivery location or format is incorrect.'\n",
+            "    Assert-PublicInput ($assetManifest.reference_root -ceq 'assets/Manny' -and $assetManifest.preimported_package_root -ceq 'project/Content/Provided/Manny') 'Asset reference or package root is incorrect.'\n"
+          ]
+        },
+        {
+          "start": 308,
+          "end": 309,
+          "lines": [
+            "        $expectedPath = \"assets/Manny/$assetName.fbx\"\n"
+          ]
+        },
+        {
+          "start": 337,
+          "end": 338,
+          "lines": [
+            "    $payloadFiles = @(Get-ChildItem -LiteralPath (Join-Path $root 'assets') -File -Recurse -Force)\n"
+          ]
+        },
+        {
+          "start": 339,
+          "end": 340,
+          "lines": [
+            "    Assert-PublicInput (Test-Path -LiteralPath (Join-Path $root 'legal/MIT-NightSkyEngine.txt') -PathType Leaf) 'The upstream MIT notice is missing.'\n"
+          ]
+        },
+        {
+          "start": 377,
+          "end": 378,
+          "lines": [
+            "        'README.md',\n"
+          ]
+        },
+        {
+          "start": 380,
+          "end": 384,
+          "lines": [
+            "        'ASSET_CATALOG.md',\n",
+            "        'TOOLCHAIN.md',\n",
+            "        'UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md',\n",
+            "        'contracts/README.md'\n"
+          ]
+        }
+      ]
+    },
+    
+
+
+
+
+
+{
+      "source": "UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
+      "published": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
+      "sha256": "9121e0d1f9b7f98529b026191284bea96102e06732faf61289bf8c3b06d9c5ab",
+      "published_sha256": "4b7d2a7cde74668283bcb5c7c3880b837c312ddfd51fb5ad18a6594de9f27926",
+      "restore_edits": [
+        {
+          "start": 66,
+          "end": 67,
+          "lines": [
+            "  \"catalog_file\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz",
+      "published": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz",
+      "sha256": "8b89a6d38f2e3701de707be2dd70de2984425854d4808b5c31221c9ea69de2cb",
+      "published_sha256": "8b89a6d38f2e3701de707be2dd70de2984425854d4808b5c31221c9ea69de2cb"
+    },
+    {
+      "source": "UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md",
+      "published": "tools/TOOL_GUIDE.md",
+      "sha256": "de71db706d8036f12552f4ffcf3a57cb107b7fd5d4bbcd1d7890490470298b06",
+      "published_sha256": "68d077edc8ec2504db51ee5064293ecb9baa9e405acd3ce60df98d1b02981d42",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "This is the task's public, single-interface guide for the published Unreal benchmark surface. It documents the interfaces a scaffold may call independently; it is not a gameplay recipe, evaluator, score definition, or reference implementation. The task-specific project parameters remain in `TOOLCHAIN.md`, and gameplay acceptance remains solely in `GDD.md` Section 6.\n"
+          ]
+        },
+        {
+          "start": 39,
+          "end": 40,
+          "lines": [
+            "**Faults:** Invalid project/run/state paths, engine selection failures, stale state conflicts, non-neutral input, process/window discovery failures, foreground or first-frame timeouts, and job/watchdog initialization failures. Stable public fault codes are listed under `Start` in the capability contract.\n"
+          ]
+        },
+        {
+          "start": 47,
+          "end": 48,
+          "lines": [
+            "  -ProjectPath '<input>/project/NightSkyDuelScaffold.uproject' `\n"
+          ]
+        },
+        {
+          "start": 461,
+          "end": 462,
+          "lines": [
+            "**Parameters:** Positional target `NightSkyDuelScaffoldEditor`, platform `Win64`, configuration `Development`, project `<input>/project/NightSkyDuelScaffold.uproject`; switches `-WaitMutex` and `-NoHotReloadFromIDE`.\n"
+          ]
+        },
+        {
+          "start": 476,
+          "end": 477,
+          "lines": [
+            "  '<input>/project/NightSkyDuelScaffold.uproject' `\n"
+          ]
+        },
+        {
+          "start": 503,
+          "end": 504,
+          "lines": [
+            "  '<input>/project/NightSkyDuelScaffold.uproject' `\n"
+          ]
+        },
+        {
+          "start": 530,
+          "end": 531,
+          "lines": [
+            "  '<input>/project/NightSkyDuelScaffold.uproject' `\n"
+          ]
+        },
+        {
+          "start": 558,
+          "end": 559,
+          "lines": [
+            "  '-project=<input>/project/NightSkyDuelScaffold.uproject' `\n"
+          ]
+        },
+        {
+          "start": 571,
+          "end": 572,
+          "lines": [
+            "**Exact entry:** `tests/PublicSmoke/Invoke-PublicSmoke.ps1`.\n"
+          ]
+        },
+        {
+          "start": 586,
+          "end": 587,
+          "lines": [
+            "pwsh -NoProfile -File tests/PublicSmoke/Invoke-PublicSmoke.ps1 `\n"
+          ]
+        },
+        {
+          "start": 600,
+          "end": 601,
+          "lines": [
+            "The adjacent `UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json` and deterministic gzip member `UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz` document the installed Unreal Engine 5.7.4 public headers, reflected types and callables, console interfaces, configuration keys, plugin descriptors, UnrealBuildTool modes, and AutomationTool commands as individual portable entries. The catalog does not copy source bodies or claim that every documented interface was dynamically validated.\n"
+          ]
+        },
+        {
+          "start": 609,
+          "end": 614,
+          "lines": []
+        }
+      ]
+    }
+  ]
+}

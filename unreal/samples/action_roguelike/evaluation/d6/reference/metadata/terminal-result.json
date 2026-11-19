@@ -1,0 +1,12 @@
+{
+  "state_id": "terminal-result",
+  "label": "Terminal survival result",
+  "reference_image": "reference/terminal-result.png",
+  "sha256": "b96fc39b89e6a0efc428be6b6e93663544b327093b7ac73b36400b6f817c26b1",
+  "width": 1280,
+  "height": 720,
+  "source": "original_baseline",
+  "schema_version": "1.0",
+  "role": "fixed_reference_metadata",
+  "source_identity_sha256": "f58c977ad6b5fd15555748b0c017803e22dba03a5b67cc5b176dd1846b878cf4"
+}

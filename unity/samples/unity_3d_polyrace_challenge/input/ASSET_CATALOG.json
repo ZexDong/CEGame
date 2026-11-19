@@ -1,0 +1,174 @@
+{
+  "assets": [
+    {
+      "path": "Assets/TaskAssets/road.png",
+      "role": "road",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT"
+    },
+    {
+      "path": "Assets/TaskAssets/rail.png",
+      "role": "rail",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT"
+    },
+    {
+      "path": "Assets/TaskAssets/gate.png",
+      "role": "gate",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT"
+    },
+    {
+      "path": "Assets/TaskAssets/ring.png",
+      "role": "ring",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT"
+    },
+    {
+      "path": "Assets/TaskAssets/boost.png",
+      "role": "boost",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT"
+    },
+    {
+      "path": "Assets/TaskAssets/obstacle.png",
+      "role": "obstacle",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT"
+    },
+    {
+      "path": "Assets/TaskAssets/craft_0.obj",
+      "role": "craft 0; nose +Z; dimensions approx 1.20 x 0.45 x 2.40; origin centered",
+      "origin": "new GameCreate authored polygon mesh",
+      "license": "MIT",
+      "dependencies": []
+    },
+    {
+      "path": "Assets/TaskAssets/craft_1.obj",
+      "role": "craft 1; nose +Z; dimensions approx 1.44 x 0.49 x 2.76; origin centered",
+      "origin": "new GameCreate authored polygon mesh",
+      "license": "MIT",
+      "dependencies": []
+    },
+    {
+      "path": "Assets/TaskAssets/craft_2.obj",
+      "role": "craft 2; nose +Z; dimensions approx 1.68 x 0.53 x 3.12; origin centered",
+      "origin": "new GameCreate authored polygon mesh",
+      "license": "MIT",
+      "dependencies": []
+    },
+    {
+      "path": "Assets/TaskAssets/craft_3.obj",
+      "role": "craft 3; nose +Z; dimensions approx 1.92 x 0.57 x 3.48; origin centered",
+      "origin": "new GameCreate authored polygon mesh",
+      "license": "MIT",
+      "dependencies": []
+    },
+    {
+      "path": "Assets/Resources/UIRenderDependencies.prefab",
+      "role": "Inactive script-free uGUI/built-in font rendering dependency, not gameplay or scene composition",
+      "license": "Unity built-in engine resource dependency; no external font copied",
+      "dependencies": [
+        "UnityEngine.UI.Text",
+        "Unity built-in LegacyRuntime font"
+      ],
+      "sha256": "594ce7a299d2e58f97baab83fb4f983835d9a5726fa6a65accbede319457e137"
+    }
+  ]
+}

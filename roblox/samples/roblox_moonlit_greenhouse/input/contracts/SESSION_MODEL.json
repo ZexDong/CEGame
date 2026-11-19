@@ -1,0 +1,12 @@
+{
+  "source_type": "Original public Luau schema plus full public contract",
+  "schema_sources": [
+    "starter-project/native/project/src/shared/Schema.luau"
+  ],
+  "public_identifiers": [
+    "Locked",
+    "MG_",
+    "moonlit-greenhouse-v1"
+  ],
+  "contract": "GAME_SESSION_SPEC.md"
+}

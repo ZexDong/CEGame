@@ -1,0 +1,140 @@
+{
+  "game_name": "BoneMaze",
+  "language": "en",
+  "target_engine_identity": {
+    "version": "5.7.4",
+    "changelist": 51494982,
+    "compatible_changelist": 47537391,
+    "branch": "++UE5+Release-5.7",
+    "platform": "Windows x64",
+    "runtime": "editor_game"
+  },
+  "project_root": "starter-project",
+  "project_file": "starter-project/BoneMaze.uproject",
+  "editor_target": "BoneMazeEditor",
+  "starter_entry": "/Engine/Maps/Entry",
+  "final_entry": "Configured GameDefaultMap in starter-project/Config/DefaultEngine.ini",
+  "viewport": {
+    "accepted_client_sizes": [
+      [
+        1280,
+        720
+      ],
+      [
+        1920,
+        1080
+      ]
+    ],
+    "aspect_ratio": "16:9",
+    "dpi": "Record actual client DPI; normalized target rectangles use captured client bounds."
+  },
+  "public_authorities": {
+    "gameplay": "GDD.md Section 6",
+    "toolchain": "tools/TOOLCHAIN.md",
+    "assets": "assets/ASSET_CATALOG.json",
+    "observation": "contracts/GAME_SESSION_SPEC.md",
+    "semantic_names": "naming-tables.json",
+    "interfaces": "tools/TOOL_GUIDE.md",
+    "rights": "assets/legal/ASSET_NOTICES.md"
+  },
+  "public_smoke": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
+  
+"allowed_implementation_changes": [
+    "starter-project/**"
+  ],
+  "excluded_generated_directories": [
+    ".git",
+    ".vs",
+    "Binaries",
+    "DerivedDataCache",
+    "Intermediate",
+    "Saved",
+    "__pycache__"
+  ],
+  "required_asset_count": 134,
+  "requirements": [
+    "ENTRY-01",
+    "ENTRY-02",
+    "MAZE-01",
+    "MAZE-02",
+    "MAZE-03",
+    "MAZE-04",
+    "MAZE-05",
+    "MOVE-01",
+    "MOVE-02",
+    "MOVE-03",
+    "PORTAL-01",
+    "PORTAL-02",
+    "PORTAL-03",
+    "MONSTER-01",
+    "MONSTER-02",
+    "MONSTER-03",
+    "MONSTER-04",
+    "MONSTER-05",
+    "MONSTER-06",
+    "SPELL-01",
+    "SPELL-02",
+    "SPELL-03",
+    "KEY-01",
+    "DOOR-01",
+    "DOOR-02",
+    "DOOR-03",
+    "DOOR-04",
+    "PICKUP-01",
+    "PICKUP-02",
+    "PICKUP-03",
+    "PICKUP-04",
+    "ECON-01",
+    "ECON-02",
+    "EXIT-01",
+    "EXIT-02",
+    "LIFE-01",
+    "LIFE-02",
+    "RESET-01",
+    "RESET-02",
+    "RESET-03",
+    "RESET-04",
+    "UI-01",
+    "UI-02",
+    "UI-03",
+    "VISUAL-01",
+    "VISUAL-02",
+    "VISUAL-03",
+    "VISUAL-04",
+    "VISUAL-05",
+    "VISUAL-06",
+    "AUDIO-01",
+    "AUDIO-02",
+    "ASSET-01",
+    "ASSET-02",
+    "ASSET-03",
+    "ASSET-04",
+    "ASSET-05",
+    "ASSET-06",
+    "ASSET-07",
+    "OBSERVATION-01",
+    "QUALITY-01",
+    "QUALITY-02",
+    "QUALITY-03",
+    "QUALITY-04",
+    "QUALITY-05",
+    "QUALITY-06"
+  ],
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"specification_boundaries": "GDD.md Section 6.4; clauses belong to the 66 numbered requirements."
+}

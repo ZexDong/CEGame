@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "game": "defold_third_person_delivery_v2",
+  "checklist_revision": "v2",
+  "items": [
+    { "id": "CB-01", "applies": true, "check_ids": ["D2_ENTRY_WORLD"] },
+    { "id": "CB-02", "applies": true, "check_ids": ["D4_COMPLETE_SUCCESS_FLOW", "D4_FAILURE_FLOW"] },
+    { "id": "CB-03", "applies": true, "check_ids": ["D4_REOPEN_FRESH", "D4_EXIT_CONTROLS"] },
+    { "id": "CB-04", "applies": true, "check_ids": ["D2_THIRD_PERSON_CONTROL", "D3_MOVEMENT_COLLISION"] },
+    { "id": "CB-05", "applies": true, "check_ids": ["D5_HUD_SYNC"] },
+    { "id": "CB-06", "applies": true, "check_ids": ["D3_MOVEMENT_COLLISION"] },
+    { "id": "CB-07", "applies": true, "check_ids": ["D5_BRIEFING_START", "D5_PAUSE_CONTROLS", "D5_SUCCESS_RESULT", "D5_FAILURE_RESULT"] },
+    { "id": "CB-08", "applies": true, "check_ids": ["D5_BRIEFING_START", "D5_PAUSE_CONTROLS", "D5_SUCCESS_RESULT", "D5_FAILURE_RESULT"] },
+    { "id": "CB-09", "applies": true, "check_ids": ["D5_HUD_SYNC"] },
+    { "id": "CB-10", "applies": true, "check_ids": ["D2_TIMER_PAUSE_SYSTEM", "D2_RESULTS_RESTART_CONTENT"] },
+    { "id": "CB-11", "applies": true, "check_ids": ["D4_COMPLETE_SUCCESS_FLOW"] },
+    { "id": "CB-12", "applies": true, "check_ids": ["D4_FAILURE_FLOW", "D4_RESTART_STATES"] },
+    { "id": "CB-13", "applies": true, "check_ids": ["D4_RESTART_STATES"] },
+    { "id": "CB-14", "applies": true, "check_ids": ["D3_SUCCESS_BOUNDARY", "D4_FAILURE_FLOW"] },
+    { "id": "CB-15", "applies": true, "check_ids": ["D4_FAILURE_FLOW"] },
+    { "id": "CB-16", "applies": true, "check_ids": ["D5_BRIEFING_START"] },
+    { "id": "CB-17", "applies": true, "check_ids": [], "phase": "D6_separate_visual_review" },
+    { "id": "CB-18", "applies": true, "check_ids": ["D1_DASHBOARD_CONFORMANCE", "honesty:spot_checks"], "phase": "D1_and_dynamic_honesty" }
+  ]
+}
