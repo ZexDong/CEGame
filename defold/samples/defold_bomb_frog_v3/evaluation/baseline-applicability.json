@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "game": "defold_bomb_frog_v3",
+  "checklist_revision": "v2-draft",
+  "items": [
+    { "id": "CB-01", "applies": true, "check_ids": ["D1-04"] },
+    { "id": "CB-02", "applies": true, "check_ids": ["D1-02", "BF3_COMPLETE_CAMPAIGN_FLOW", "BF3_COMPLETE_RESOURCE_FAILURE_FLOW"] },
+    { "id": "CB-03", "applies": true, "check_ids": ["BF3_REOPEN_FROM_CHAMBER2", "BF3_NORMAL_MENU_EXIT"] },
+    { "id": "CB-04", "applies": true, "check_ids": ["BF3_GRID_MOVEMENT_LEGAL", "BF3_BOMB_PLACEMENT_EXACT", "BF3_PAUSE_RESUME_FLOW"] },
+    { "id": "CB-05", "applies": true, "check_ids": ["BF3_BOMB_BLAST_FEEDBACK", "BF3_DAMAGE_FEEDBACK_SYNC", "BF3_ARMOR_BREAK_FEEDBACK_VISIBLE"] },
+    { "id": "CB-06", "applies": true, "check_ids": ["BF3_DUPLICATE_BOMB_REJECTED", "BF3_GRID_MOVEMENT_LEGAL"] },
+    { "id": "CB-07", "applies": true, "check_ids": ["BF3_MENU_ENTRY_CONTENT", "BF3_STAGE_RESULT_CONTENT", "BF3_FAILURE_RESULT_CONTENT", "BF3_SUCCESS_RESULT_CONTENT"] },
+    { "id": "CB-08", "applies": true, "check_ids": ["BF3_MENU_READABLE", "BF3_INSTRUCTIONS_READABLE", "BF3_CHAMBER1_HUD_SYNC", "BF3_STAGE_CLEAR_READABLE", "BF3_SUCCESS_RESULT_READABLE"] },
+    { "id": "CB-09", "applies": true, "check_ids": ["BF3_CHAMBER1_HUD_SYNC", "BF3_CHAMBER2_HUD_AND_ARMOR_READABLE", "BF3_DAMAGE_FEEDBACK_SYNC", "BF3_CAMPAIGN_OBJECTIVE_SYSTEMS"] },
+    { "id": "CB-10", "applies": true, "check_ids": ["BF3_PAUSE_RESUME_FLOW", "BF3_CHAMBER2_PAUSE_RESUME", "BF3_FAILURE_RETURN_TO_MENU"] },
+    { "id": "CB-11", "applies": true, "check_ids": ["BF3_FINAL_SUCCESS_BOUNDARY", "BF3_COMPLETE_CAMPAIGN_FLOW", "BF3_SUCCESS_RESULT_READABLE"] },
+    { "id": "CB-12", "applies": true, "check_ids": ["BF3_HEALTH_LOSS_BOUNDARY", "BF3_RESOURCE_LOSS_BOUNDARY", "BF3_RESET_FROM_FAILURE", "BF3_FAILURE_RETURN_TO_MENU"] },
+    { "id": "CB-13", "applies": true, "check_ids": ["BF3_CONSECUTIVE_RESTARTS_CLEAN", "BF3_RESET_FROM_PAUSE", "BF3_RESET_FROM_STAGE_CLEAR", "BF3_RESET_FROM_CHAMBER2", "BF3_RESET_FROM_FAILURE", "BF3_RESET_FROM_SUCCESS"] },
+    { "id": "CB-14", "applies": true, "check_ids": ["BF3_LOSS_TERMINAL_FREEZE", "BF3_WIN_TERMINAL_FREEZE"] },
+    {
+      "id": "CB-15",
+      "applies": true,
+      "check_ids": ["honesty:no_input_no_terminal_transition"],
+      "reason": "Enemy patrols are allowed, but randomized stable no-input observations must not become a win or loss."
+    },
+    { "id": "CB-16", "applies": true, "check_ids": ["D1-01", "BF3_NO_DEBUG_TEXT"] },
+    { "id": "CB-17", "applies": true, "check_ids": ["D6-frozen-frame"] },
+    { "id": "CB-18", "applies": true, "check_ids": ["D1-04", "honesty:spot_checks"] }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:actionroguelike:evaluation-result:4.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "game_id",
+    "task_revision",
+    "run_id",
+    "candidate_id",
+    "candidate_identity_sha256",
+    "evaluator_revision",
+    "scorer_revision",
+    "evaluation_status",
+    "dimensions",
+    "functional_total",
+    "overall",
+    "checkpoints",
+    "candidate_failures",
+    "faults"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "4.0.0"
+    },
+    "game_id": {
+      "const": "ActionRoguelike"
+    },
+    "task_name": {
+      "const": "Rift Hunting"
+    },
+    "task_revision": {
+      "const": "2.2.0-diagnostic"
+    },
+    "engine": {
+      "const": "Unreal Engine 5.6.1"
+    },
+    "run_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_identity_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "evaluator_revision": {
+      "const": "actionroguelike-evaluator-4.1.0"
+    },
+    "scorer_revision": {
+      "enum": ["actionroguelike-canonical-scorer-4.1.0", "actionroguelike-canonical-scorer-4.1.0-source.1"]
+    },
+    "scoring_policy": { "const": "source-corroborated-1.0.0" },
+    "source_run_id": { "type": "string", "minLength": 1 },
+    "source_evidence_root": { "type": "string", "minLength": 1 },
+    "evidence_review": { "type": "object" },
+    "evidence_gaps": { "type": "array" },
+    "evaluation_status": {
+      "const": "completed"
+    },
+    "diagnostic_only": {
+      "const": true
+    },
+    "formal_freeze_performed": {
+      "const": false
+    },
+    "dimensions": {
+      "type": "object"
+    },
+    "functional_total": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 90
+    },
+    "overall": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "executable": {
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "solved": {
+      "enum": [
+        "Yes",
+        "No"
+      ]
+    },
+    "package_valid": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "formal_score_publishable": {
+      "const": false
+    },
+    "checkpoints": {
+      "type": "array",
+      "minItems": 40,
+      "maxItems": 40
+    },
+    "candidate_failures": {
+      "type": "array"
+    },
+    "faults": {
+      "type": "array",
+      "maxItems": 0
+    },
+    "budget": {
+      "type": "object"
+    },
+    "d6_evidence": {
+      "type": "string"
+    }
+  }
+}

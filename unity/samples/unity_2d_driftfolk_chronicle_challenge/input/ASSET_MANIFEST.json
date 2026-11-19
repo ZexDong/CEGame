@@ -1,0 +1,170 @@
+{
+  "schema_version": 2,
+  "benchmark_id": "unity.driftfolk_stormbound.v2",
+  "input_revision": "stormbound-docv2-v1-20260918",
+  "source": {
+    "asset_origin": "Supplied modular maritime visuals and project audio. Preserve the notices and usage boundaries in legal/."
+  },
+  "asset_contact_sheet": "ASSET_CONTACT_SHEET.png",
+  "additional_downloads_allowed": false,
+  "protected_root": "Assets/DriftfolkStarter",
+  "asset_summary": {
+    "audio_clip_count": 26,
+    "visual_runtime_png_count": 45,
+    "visual_kit_root": "Assets/DriftfolkStarter/VisualKit",
+    "visual_catalog": "Assets/DriftfolkStarter/VisualKit/ASSET_CATALOG.json",
+    "visual_import_facts": "Assets/DriftfolkStarter/VisualKit/IMPORT_FACTS.json",
+    "visual_contact_sheet": "Assets/DriftfolkStarter/VisualKit/CONTACT_SHEET.png",
+    "visual_palette": "Assets/DriftfolkStarter/VisualKit/PALETTE.png",
+    "visual_component_scope": "Isolated modular components only; no final Scene, prefab, gameplay code, screen layout, or completed island composition is supplied."
+  },
+  "files": [
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/ambience/amb_fog.ogg",
+      "role": "ambience",
+      "bytes": 85752
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/ambience/amb_island.ogg",
+      "role": "ambience",
+      "bytes": 167119
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/ambience/amb_lighthouse.ogg",
+      "role": "ambience",
+      "bytes": 158386
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/ambience/amb_rain.ogg",
+      "role": "ambience",
+      "bytes": 160938
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/ambience/amb_snowwind.ogg",
+      "role": "ambience",
+      "bytes": 159404
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/ambience/amb_storm.ogg",
+      "role": "ambience",
+      "bytes": 173810
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/ambience/amb_winter.ogg",
+      "role": "ambience",
+      "bytes": 158208
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/music/music_ending_escape.ogg",
+      "role": "music",
+      "bytes": 189658
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/music/music_ending_extinct.ogg",
+      "role": "music",
+      "bytes": 106836
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/music/music_island_calm.ogg",
+      "role": "music",
+      "bytes": 171522
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/music/music_lighthouse_calm.ogg",
+      "role": "music",
+      "bytes": 187968
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/music/music_lobby.ogg",
+      "role": "music",
+      "bytes": 172726
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/music/music_tension.ogg",
+      "role": "music",
+      "bytes": 163960
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/music/music_winter_calm.ogg",
+      "role": "music",
+      "bytes": 164980
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/sfx/autosave.wav",
+      "role": "sound_effect",
+      "bytes": 7982
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/sfx/birth.wav",
+      "role": "sound_effect",
+      "bytes": 28268
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/sfx/build_done.wav",
+      "role": "sound_effect",
+      "bytes": 12392
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/sfx/chime_relief.wav",
+      "role": "sound_effect",
+      "bytes": 28268
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/sfx/click.wav",
+      "role": "sound_effect",
+      "bytes": 7982
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/sfx/knell_soft.wav",
+      "role": "sound_effect",
+      "bytes": 12392
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/sfx/knell.wav",
+      "role": "sound_effect",
+      "bytes": 44144
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/sfx/marriage.wav",
+      "role": "sound_effect",
+      "bytes": 12392
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/sfx/popup.wav",
+      "role": "sound_effect",
+      "bytes": 5336
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/sfx/quill.wav",
+      "role": "sound_effect",
+      "bytes": 5336
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/sfx/sting_crisis.wav",
+      "role": "sound_effect",
+      "bytes": 12392
+    },
+    {
+      "path": "Assets/DriftfolkStarter/Audio/Resources/Audio/sfx/sting_slice.wav",
+      "role": "sound_effect",
+      "bytes": 5336
+    }
+  ],
+  "visual_submanifest_binding": {
+    "path": "Assets/DriftfolkStarter/VisualKit/ASSET_CATALOG.json",
+    "runtime_file_count": 45,
+    "runtime_file_entries": 45,
+    "entry_binding": "Each runtime_assets entry binds project-relative path, dimensions, bytes, semantic role, category, transparency, and import-use facts.",
+    "import_facts": {
+      "path": "Assets/DriftfolkStarter/VisualKit/IMPORT_FACTS.json",
+      "verified_file_count": 45
+    },
+    "contact_sheet": {
+      "path": "Assets/DriftfolkStarter/VisualKit/CONTACT_SHEET.png",
+      "purpose": "English inventory preview only; not a runtime screen or final composition."
+    },
+    "palette": {
+      "path": "Assets/DriftfolkStarter/VisualKit/PALETTE.png"
+    }
+  }
+}

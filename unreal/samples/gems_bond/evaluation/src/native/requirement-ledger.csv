@@ -1,0 +1,131 @@
+requirement_id,checkpoint_id,dimension,stage,question,cases,visible_review
+QUALITY-01,project,D1,static,Can the declared UE project and entry be resolved?,static,False
+QUALITY-01,engine,D1,static,Does the installed engine match the public identity?,static,False
+QUALITY-01,build,D1,static,Does a clean assessment copy compile successfully?,static,False
+QUALITY-05,build,D1,static,Does a clean assessment copy compile successfully?,static,False
+QUALITY-01,startup,D1,static,Does the normal entry produce a healthy client without input?,static,False
+QUALITY-01,observation,D1,static,Does the public read-only snapshot pass its self-check?,static,False
+QUALITY-04,observation,D1,static,Does the public read-only snapshot pass its self-check?,static,False
+SCENE-01,opening_content,D2,dynamic,"Are the crystal, deposits and assembled 3D forest actually visible?",opening,True
+SCENE-02,opening_content,D2,dynamic,"Are the crystal, deposits and assembled 3D forest actually visible?",opening,True
+VISUAL-01,opening_content,D2,dynamic,"Are the crystal, deposits and assembled 3D forest actually visible?",opening,True
+VISUAL-03,opening_content,D2,dynamic,"Are the crystal, deposits and assembled 3D forest actually visible?",opening,True
+BUILD-01,content_mine,D2,dynamic,Can a mine be built through its normal controls?,build_mine,True
+BUILD-03,content_mine,D2,dynamic,Can a mine be built through its normal controls?,build_mine,True
+VISUAL-01,content_mine,D2,dynamic,Can a mine be built through its normal controls?,build_mine,True
+BUILD-01,content_archer,D2,dynamic,Can a archer be built through its normal controls?,build_archer,True
+BUILD-03,content_archer,D2,dynamic,Can a archer be built through its normal controls?,build_archer,True
+VISUAL-01,content_archer,D2,dynamic,Can a archer be built through its normal controls?,build_archer,True
+BUILD-01,content_cannon,D2,dynamic,Can a cannon be built through its normal controls?,build_cannon,True
+BUILD-03,content_cannon,D2,dynamic,Can a cannon be built through its normal controls?,build_cannon,True
+VISUAL-01,content_cannon,D2,dynamic,Can a cannon be built through its normal controls?,build_cannon,True
+BUILD-01,content_wall,D2,dynamic,Can a wall be built through its normal controls?,build_wall,True
+BUILD-03,content_wall,D2,dynamic,Can a wall be built through its normal controls?,build_wall,True
+VISUAL-01,content_wall,D2,dynamic,Can a wall be built through its normal controls?,build_wall,True
+INSPECT-01,inspection_content,D2,dynamic,Can a player inspect and sell a structure?,sale,True
+SELL-01,inspection_content,D2,dynamic,Can a player inspect and sell a structure?,sale,True
+UPGRADE-01,tiers_archer,D2,dynamic,Can both higher archer tiers be reached and seen?,upgrade_archer_2;upgrade_archer_3,True
+VISUAL-01,tiers_archer,D2,dynamic,Can both higher archer tiers be reached and seen?,upgrade_archer_2;upgrade_archer_3,True
+UPGRADE-01,tiers_cannon,D2,dynamic,Can both higher cannon tiers be reached and seen?,upgrade_cannon_2;upgrade_cannon_3,True
+VISUAL-01,tiers_cannon,D2,dynamic,Can both higher cannon tiers be reached and seen?,upgrade_cannon_2;upgrade_cannon_3,True
+ENEMY-01,enemy_content,D2,dynamic,Do all five animated enemy species appear with their tier variants?,enemy_matrix,True
+ENEMY-02,enemy_content,D2,dynamic,Do all five animated enemy species appear with their tier variants?,enemy_matrix,True
+VISUAL-02,enemy_content,D2,dynamic,Do all five animated enemy species appear with their tier variants?,enemy_matrix,True
+ARCHER-01,weapons_content,D2,dynamic,Do both towers release visible distinct projectiles and impacts?,archer_combat;cannon_combat;review_visible_archer;review_visible_cannon,True
+ARCHER-02,weapons_content,D2,dynamic,Do both towers release visible distinct projectiles and impacts?,archer_combat;cannon_combat;review_visible_archer;review_visible_cannon,True
+CANNON-01,weapons_content,D2,dynamic,Do both towers release visible distinct projectiles and impacts?,archer_combat;cannon_combat;review_visible_archer;review_visible_cannon,True
+CANNON-02,weapons_content,D2,dynamic,Do both towers release visible distinct projectiles and impacts?,archer_combat;cannon_combat;review_visible_archer;review_visible_cannon,True
+VISUAL-04,weapons_content,D2,dynamic,Do both towers release visible distinct projectiles and impacts?,archer_combat;cannon_combat;review_visible_archer;review_visible_cannon,True
+WAVE-03,schedule_content,D2,dynamic,Do all 25 scheduled wave entries occur?,wave_1;wave_2;wave_3;wave_4;wave_5;wave_6;wave_7;wave_8;wave_9;wave_10;wave_11;wave_12;wave_13;wave_14;wave_15;wave_16;wave_17;wave_18;wave_19;wave_20;wave_21;wave_22;wave_23;wave_24;wave_25,False
+WAVE-05,endless_content,D2,dynamic,Does survival continue beyond the fixed schedule?,wave_26;wave_30,False
+ECONOMY-02,income_content,D2,dynamic,Can a living mine produce spendable income?,income,False
+SPEED-01,pause_speed_content,D2,dynamic,Can speed and pause be used in a running round?,speed;pause,False
+PAUSE-01,pause_speed_content,D2,dynamic,Can speed and pause be used in a running round?,speed;pause,False
+DEFEAT-01,defeat_content,D2,dynamic,Can normal enemy play reach a Game Over state?,lifecycle,True
+DEFEAT-02,defeat_content,D2,dynamic,Can normal enemy play reach a Game Over state?,lifecycle,True
+VISUAL-04,feedback_content,D2,dynamic,"Are spatial construction, upgrade, impact, income effects and representative event audio present?",build_archer;upgrade_archer_2;archer_combat;cannon_combat;income;audio;review_visible_archer;review_visible_cannon,True
+AUDIO-01,feedback_content,D2,dynamic,"Are spatial construction, upgrade, impact, income effects and representative event audio present?",build_archer;upgrade_archer_2;archer_combat;cannon_combat;income;audio;review_visible_archer;review_visible_cannon,True
+START-01,initial_rules,D3,dynamic,Does the initial board/economy match every public opening value?,opening,False
+SCENE-02,initial_rules,D3,dynamic,Does the initial board/economy match every public opening value?,opening,False
+SELECT-01,selection_rules,D3,dynamic,"Do selection, replacement, hover and cancellation leave gameplay untouched?",selection;input_boundaries,True
+SELECT-02,selection_rules,D3,dynamic,"Do selection, replacement, hover and cancellation leave gameplay untouched?",selection;input_boundaries,True
+SELECT-03,selection_rules,D3,dynamic,"Do selection, replacement, hover and cancellation leave gameplay untouched?",selection;input_boundaries,True
+BUILD-01,purchase_rules,D3,dynamic,"Do purchases charge once, construct once and retain build selection?",build_mine;build_archer;build_cannon;build_wall;repeat_build;input_boundaries,False
+COMBAT-01,purchase_rules,D3,dynamic,"Do purchases charge once, construct once and retain build selection?",build_mine;build_archer;build_cannon;build_wall;repeat_build;input_boundaries,False
+BUILD-02,placement_rules,D3,dynamic,"Are occupied, crystal, deposit, soil and unaffordable purchases rejected safely?",placement;exact_funds;unaffordable;enemy_placement,False
+BUILD-03,placement_rules,D3,dynamic,"Are occupied, crystal, deposit, soil and unaffordable purchases rejected safely?",placement;exact_funds;unaffordable;enemy_placement,False
+SCENE-02,placement_rules,D3,dynamic,"Are occupied, crystal, deposit, soil and unaffordable purchases rejected safely?",placement;exact_funds;unaffordable;enemy_placement,False
+ECONOMY-01,price_rules,D3,dynamic,Do per-type living counts determine current prices after build/sale/destruction?,repeat_build;sale;destruction,False
+ECONOMY-02,income_rules,D3,dynamic,Do independent mines pay only on full cycles at the current completed-wave rate?,income;income_removed;review_income_purchase,False
+INSPECT-01,inspect_rules,D3,dynamic,Does inspection leave wallet and ownership unchanged and expose current values?,sale,False
+UPGRADE-01,upgrade_rules,D3,dynamic,Do both tower upgrade transactions use the correct tier price and stats?,upgrade_archer_2;upgrade_archer_3;upgrade_cannon_2;upgrade_cannon_3;weapon_archer_2;weapon_archer_3;weapon_cannon_2;weapon_cannon_3;review_upgrade_single_click,False
+UPGRADE-02,upgrade_health,D3,dynamic,Does a damaged upgrade preserve health percentage?,upgrade_archer_2;upgrade_cannon_2,False
+UPGRADE-03,upgrade_rejection,D3,dynamic,"Are unaffordable, constructing, non-tower and maximum-tier upgrades harmless?",upgrade_reject;review_reject_unaffordable;review_reject_maximum;review_reject_construction;review_reject_mine;review_reject_wall,False
+SELL-01,refund_rules,D3,dynamic,"Does sale refund half the placement amount once, excluding upgrades?",sale;income_removed;refund_upgrade,False
+HEALTH-01,regeneration_rules,D3,dynamic,Does living health regenerate at 2/s with clamping and pause lock?,regeneration;pause,False
+HEALTH-02,destruction_rules,D3,dynamic,Does destruction remove ownership/actions/blockers without refund?,destruction;destroy_during_sell;destroy_during_upgrade,False
+WAVE-01,gate_rules,D3,dynamic,Does only the first accepted mine start the two-second gate?,gate;build_mine,False
+WAVE-02,wave_schedule_rules,D3,dynamic,"Do all compositions, tiers, edges and evenly spaced emissions follow the public table?",wave_1;wave_2;wave_3;wave_4;wave_5;wave_6;wave_7;wave_8;wave_9;wave_10;wave_11;wave_12;wave_13;wave_14;wave_15;wave_16;wave_17;wave_18;wave_19;wave_20;wave_21;wave_22;wave_23;wave_24;wave_25,False
+WAVE-03,wave_schedule_rules,D3,dynamic,"Do all compositions, tiers, edges and evenly spaced emissions follow the public table?",wave_1;wave_2;wave_3;wave_4;wave_5;wave_6;wave_7;wave_8;wave_9;wave_10;wave_11;wave_12;wave_13;wave_14;wave_15;wave_16;wave_17;wave_18;wave_19;wave_20;wave_21;wave_22;wave_23;wave_24;wave_25,False
+WAVE-04,wave_clear_rules,D3,dynamic,Does clearance wait for no unspawned/living enemies and increment once?,clear;rest,False
+WAVE-05,endless_rules,D3,dynamic,"Are endless integer counts, tiers, duration and edges correct?",wave_26;wave_30,False
+RANDOM-01,seed_rules,D3,dynamic,Do identical seeded restarts reproduce choices without changing balance?,seed,False
+QUALITY-06,seed_rules,D3,dynamic,Do identical seeded restarts reproduce choices without changing balance?,seed,False
+ENEMY-01,ground_rules,D3,dynamic,Do ground species move at public speeds and stop at living obstructions?,enemy_matrix;obstruction,False
+ENEMY-02,flight_rules,D3,dynamic,Do flyers bypass buildings and stay above ground?,enemy_matrix;flight,False
+ENEMY-03,melee_rules,D3,dynamic,Does contact apply the correct damage at no more than one hit per second?,melee;contact_slime_1;contact_slime_2;contact_slime_3;contact_skeleton_1;contact_skeleton_2;contact_skeleton_3;contact_orc_1;contact_orc_2;contact_orc_3;contact_bat_1;contact_bat_2;contact_bat_3;contact_dragon_1;contact_dragon_2;contact_dragon_3,False
+ENEMY-04,death_rules,D3,dynamic,Does a killed enemy stop attacking and award its bounty exactly once?,death;contact_slime_1;contact_slime_2;contact_slime_3;contact_skeleton_1;contact_skeleton_2;contact_skeleton_3;contact_orc_1;contact_orc_2;contact_orc_3;contact_bat_1;contact_bat_2;contact_bat_3;contact_dragon_1;contact_dragon_2;contact_dragon_3,False
+ARCHER-01,archer_targeting,D3,dynamic,Does the archer select the nearest living ground/flying target in range without idle bursts?,archer_combat;archer_flight;range;review_nearest_archer,False
+ARCHER-02,arrow_rules,D3,dynamic,Does an arrow travel before a single impact and safely expire/block?,archer_combat;projectile_block,False
+CANNON-01,cannon_targeting,D3,dynamic,Does the cannon target ground enemies and reject flyers?,cannon_combat;cannon_flight;review_nearest_cannon,False
+CANNON-02,splash_rules,D3,dynamic,Does one finite-travel cannon impact damage each in-radius ground enemy once?,cannon_combat;splash_boundary,False
+COMBAT-01,projectile_lifecycle,D3,dynamic,Do released projectiles survive source removal and retain release-time values?,projectile_sale;review_projectile_upgrade_archer;review_projectile_sale_archer;review_projectile_upgrade_cannon;review_projectile_sale_cannon,False
+COMBAT-01,cooldown_upgrade,D3,dynamic,Does an upgrade preserve an already pending cooldown?,cooldown_upgrade,False
+SPEED-01,speed_rules,D3,dynamic,Does held F apply 3x and release restore 1x?,speed;input_boundaries,False
+PAUSE-01,pause_rules,D3,dynamic,Does pause freeze every gameplay value and resume the same progress?,pause;input_boundaries,False
+DEFEAT-01,defeat_rules,D3,dynamic,Does lethal crystal damage clamp to zero and lock gameplay?,lifecycle;terminal_priority,False
+DEFEAT-02,defeat_rules,D3,dynamic,Does lethal crystal damage clamp to zero and lock gameplay?,lifecycle;terminal_priority,False
+QUALITY-02,flow,D4,dynamic,Does a normal mine-to-combat-to-defeat journey remain connected?,lifecycle,False
+QUALITY-05,flow,D4,dynamic,Does a normal mine-to-combat-to-defeat journey remain connected?,lifecycle,False
+WAVE-01,flow,D4,dynamic,Does a normal mine-to-combat-to-defeat journey remain connected?,lifecycle,False
+DEFEAT-01,flow,D4,dynamic,Does a normal mine-to-combat-to-defeat journey remain connected?,lifecycle,False
+RESTART-01,restart_preparing,D4,dynamic,Does normal R restore a fresh round from preparing without changing process?,restart_preparing,False
+START-01,restart_preparing,D4,dynamic,Does normal R restore a fresh round from preparing without changing process?,restart_preparing,False
+RESTART-01,restart_countdown,D4,dynamic,Does normal R restore a fresh round from countdown without changing process?,restart_countdown,False
+START-01,restart_countdown,D4,dynamic,Does normal R restore a fresh round from countdown without changing process?,restart_countdown,False
+RESTART-01,restart_combat,D4,dynamic,Does normal R restore a fresh round from combat without changing process?,restart_combat,False
+START-01,restart_combat,D4,dynamic,Does normal R restore a fresh round from combat without changing process?,restart_combat,False
+RESTART-01,restart_rest,D4,dynamic,Does normal R restore a fresh round from rest without changing process?,restart_rest,False
+START-01,restart_rest,D4,dynamic,Does normal R restore a fresh round from rest without changing process?,restart_rest,False
+RESTART-01,restart_paused,D4,dynamic,Does normal R restore a fresh round from paused without changing process?,restart_paused,False
+START-01,restart_paused,D4,dynamic,Does normal R restore a fresh round from paused without changing process?,restart_paused,False
+RESTART-01,restart_defeated,D4,dynamic,Does normal R restore a fresh round from defeated without changing process?,restart_defeated,False
+START-01,restart_defeated,D4,dynamic,Does normal R restore a fresh round from defeated without changing process?,restart_defeated,False
+RESTART-01,restart_inflight,D4,dynamic,"Does Restart isolate projectiles, delayed income and held inputs?",restart_inflight,False
+COMBAT-01,restart_inflight,D4,dynamic,"Does Restart isolate projectiles, delayed income and held inputs?",restart_inflight,False
+RESTART-02,reopen,D4,dynamic,Does a new process start fresh after changed progress?,reopen,False
+QUALITY-01,reopen,D4,dynamic,Does a new process start fresh after changed progress?,reopen,False
+QUALITY-06,reopen,D4,dynamic,Does a new process start fresh after changed progress?,reopen,False
+RESTART-01,repeat_round,D4,dynamic,Do repeated restarts preserve unique identities and stable opening progress?,seed,False
+QUALITY-06,repeat_round,D4,dynamic,Do repeated restarts preserve unique identities and stable opening progress?,seed,False
+UI-01,ui_build,D5,dynamic,"Are build choices, prices, selected state, valid/invalid preview and cancellation readable and actionable?",selection;build_archer;placement,True
+SELECT-01,ui_build,D5,dynamic,"Are build choices, prices, selected state, valid/invalid preview and cancellation readable and actionable?",selection;build_archer;placement,True
+SELECT-02,ui_build,D5,dynamic,"Are build choices, prices, selected state, valid/invalid preview and cancellation readable and actionable?",selection;build_archer;placement,True
+SELECT-03,ui_build,D5,dynamic,"Are build choices, prices, selected state, valid/invalid preview and cancellation readable and actionable?",selection;build_archer;placement,True
+QUALITY-03,ui_build,D5,dynamic,"Are build choices, prices, selected state, valid/invalid preview and cancellation readable and actionable?",selection;build_archer;placement,True
+INSPECT-01,ui_context,D5,dynamic,"Are details, costs, disabled upgrade and sale controls visible and operable?",sale;upgrade_reject,True
+UI-01,ui_context,D5,dynamic,"Are details, costs, disabled upgrade and sale controls visible and operable?",sale;upgrade_reject,True
+UPGRADE-03,ui_context,D5,dynamic,"Are details, costs, disabled upgrade and sale controls visible and operable?",sale;upgrade_reject,True
+UI-03,ui_feedback,D5,dynamic,Do positive/rejected actions show timely feedback without click-through?,build_archer;placement,True
+QUALITY-04,ui_feedback,D5,dynamic,Do positive/rejected actions show timely feedback without click-through?,build_archer;placement,True
+UI-02,ui_health,D5,dynamic,Do health bars agree with damage/regeneration and disappear with removed objects?,regeneration;destruction,True
+QUALITY-04,ui_health,D5,dynamic,Do health bars agree with damage/regeneration and disappear with removed objects?,regeneration;destruction,True
+UI-01,ui_lifecycle,D5,dynamic,Are pause/result controls and progress understandable and usable?,pause;lifecycle,True
+PAUSE-01,ui_lifecycle,D5,dynamic,Are pause/result controls and progress understandable and usable?,pause;lifecycle,True
+DEFEAT-01,ui_lifecycle,D5,dynamic,Are pause/result controls and progress understandable and usable?,pause;lifecycle,True
+QUALITY-03,ui_lifecycle,D5,dynamic,Are pause/result controls and progress understandable and usable?,pause;lifecycle,True
+UI-01,ui_resolutions,D5,dynamic,Are all cells and critical controls reachable at both supported resolutions?,resolution,True
+SCENE-01,ui_resolutions,D5,dynamic,Are all cells and critical controls reachable at both supported resolutions?,resolution,True
+QUALITY-03,ui_resolutions,D5,dynamic,Are all cells and critical controls reachable at both supported resolutions?,resolution,True
+AUDIO-01,audio_mute,D5,dynamic,Can background and event audio be muted and restored while gameplay and visual feedback remain usable?,audio,True
+QUALITY-04,audio_mute,D5,dynamic,Can background and event audio be muted and restored while gameplay and visual feedback remain usable?,audio,True

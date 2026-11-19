@@ -1,0 +1,27 @@
+{
+  "normal_session": {
+    "declared_case_seconds": 1790,
+    "startup_rpc_seconds": 150,
+    "reopen_allowance_seconds": 300,
+    "d6_and_capture_seconds": 500,
+    "cleanup_seconds": 25,
+    "declared_serial_worst_case_seconds": 2765,
+    "watchdog_seconds": 14000,
+    "headroom_seconds": 11235
+  },
+  "each_fixture_session": {
+    "startup_rpc_seconds": 150,
+    "setup_receipt_seconds": 5,
+    "setup_capture_seconds": 30,
+    "case_seconds": 65,
+    "cleanup_seconds": 25,
+    "declared_serial_worst_case_seconds": 275,
+    "watchdog_seconds": 360,
+    "headroom_seconds": 85
+  },
+  "each_clean_build_timeout_seconds": 900,
+  "builds": 2,
+  "fixture_sessions": 94,
+  "dynamic_trajectories": 118,
+  "over_budget_policy": "infrastructure run_invalid, never a candidate zero"
+}

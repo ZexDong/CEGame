@@ -1,0 +1,3426 @@
+{
+  "schema_version": "2.0",
+  "evaluator_version": "2.0.0",
+  "source_catalog": "src/native/checkpoint-catalog.json",
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "aggregation": "Equal native checkpoints per dimension. Six-decimal weights distribute integer micro-point remainders in fixed catalog order; this is a new serialization version. Native one-decimal diagnostic totals are retained only in run artifacts.",
+  "d6": {
+    "protocol": "historical_three_rounds",
+    "rounds": 3,
+    "states": "d6/",
+    "prompt": "Fixed prompt in d6/; unchanged bytes and reference hashes",
+    "model_and_parameters": "Native model bindings and protocol files in d6/; direct-conversation protocols require external image review with the recorded actual model identity. No credential or private endpoint is bundled.",
+    "compatibility": "Public result format 2.1 records the actual native multi-state/three-round protocol. It does not silently migrate old scores or assert equivalence with a different D6 protocol.",
+    "reference_scope": "Bounded adaptations as declared by each fixed reference manifest; not a claim of faithful upstream-game recreation."
+  },
+  "checks": [
+    {
+      "id": "D1-entry",
+      "dimension": "D1",
+      "requirement_ids": [
+        "QUALITY-01"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 5
+      },
+      "pass_condition": "Valid prescribed descriptor, target, engine and default entry",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "static",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "static",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D1-entry",
+        "dimension": "D1",
+        "stage": "static",
+        "requirements": [
+          "QUALITY-01"
+        ],
+        "question": "Valid prescribed descriptor, target, engine and default entry",
+        "case": "static",
+        "setup_method": "normal_input",
+        "max_actions": 16,
+        "max_serial_seconds": 70,
+        "pass_evidence": [
+          "engine_or_file_receipt"
+        ],
+        "score_owner": "D1-entry"
+      }
+    },
+    {
+      "id": "D1-assets",
+      "dimension": "D1",
+      "requirement_ids": [
+        "ASSET-01",
+        "ASSET-02",
+        "ASSET-03",
+        "ASSET-04",
+        "ASSET-05",
+        "ASSET-06",
+        "ASSET-07"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 5
+      },
+      "pass_condition": "Required asset packages exist; public protected files retained",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "static",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "static",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D1-assets",
+        "dimension": "D1",
+        "stage": "static",
+        "requirements": [
+          "ASSET-01",
+          "ASSET-02",
+          "ASSET-03",
+          "ASSET-04",
+          "ASSET-05",
+          "ASSET-06",
+          "ASSET-07"
+        ],
+        "question": "Required asset packages exist; public protected files retained",
+        "case": "static",
+        "setup_method": "normal_input",
+        "max_actions": 16,
+        "max_serial_seconds": 70,
+        "pass_evidence": [
+          "engine_or_file_receipt"
+        ],
+        "score_owner": "D1-assets"
+      }
+    },
+    {
+      "id": "D1-build",
+      "dimension": "D1",
+      "requirement_ids": [
+        "QUALITY-01",
+        "QUALITY-05"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 5
+      },
+      "pass_condition": "Clean Development Editor build without blocking error",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "static",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "static",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D1-build",
+        "dimension": "D1",
+        "stage": "static",
+        "requirements": [
+          "QUALITY-01",
+          "QUALITY-05"
+        ],
+        "question": "Clean Development Editor build without blocking error",
+        "case": "static",
+        "setup_method": "normal_input",
+        "max_actions": 16,
+        "max_serial_seconds": 70,
+        "pass_evidence": [
+          "engine_or_file_receipt"
+        ],
+        "score_owner": "D1-build"
+      }
+    },
+    {
+      "id": "D1-startup",
+      "dimension": "D1",
+      "requirement_ids": [
+        "QUALITY-01",
+        "QUALITY-05"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 5
+      },
+      "pass_condition": "No-input normal entry loads and produces a nonblack client",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "static",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "static",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D1-startup",
+        "dimension": "D1",
+        "stage": "static",
+        "requirements": [
+          "QUALITY-01",
+          "QUALITY-05"
+        ],
+        "question": "No-input normal entry loads and produces a nonblack client",
+        "case": "static",
+        "setup_method": "normal_input",
+        "max_actions": 16,
+        "max_serial_seconds": 70,
+        "pass_evidence": [
+          "engine_or_file_receipt"
+        ],
+        "score_owner": "D1-startup"
+      }
+    },
+    {
+      "id": "D1-observation",
+      "dimension": "D1",
+      "requirement_ids": [
+        "OBSERVATION-01"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 5
+      },
+      "pass_condition": "Fresh PID-bound public snapshot passes passive schema validation",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "static",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "static",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D1-observation",
+        "dimension": "D1",
+        "stage": "static",
+        "requirements": [
+          "OBSERVATION-01"
+        ],
+        "question": "Fresh PID-bound public snapshot passes passive schema validation",
+        "case": "static",
+        "setup_method": "normal_input",
+        "max_actions": 16,
+        "max_serial_seconds": 70,
+        "pass_evidence": [
+          "engine_or_file_receipt"
+        ],
+        "score_owner": "D1-observation"
+      }
+    },
+    {
+      "id": "D2-menu",
+      "dimension": "D2",
+      "requirement_ids": [
+        "ENTRY-01",
+        "UI-03"
+      ],
+      "max_score": 1.875,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 16
+      },
+      "pass_condition": "All required menu controls exist and each difficulty can enter play",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "modes",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-menu",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "requirements": [
+          "ENTRY-01",
+          "UI-03"
+        ],
+        "question": "All required menu controls exist and each difficulty can enter play",
+        "case": "modes",
+        "setup_method": "normal_input",
+        "max_actions": 20,
+        "max_serial_seconds": 120,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D2-menu"
+      }
+    },
+    {
+      "id": "D2-rooms",
+      "dimension": "D2",
+      "requirement_ids": [
+        "MAZE-01"
+      ],
+      "max_score": 1.875,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 16
+      },
+      "pass_condition": "All three actual room populations appear in live runs",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "modes",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-rooms",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "requirements": [
+          "MAZE-01"
+        ],
+        "question": "All three actual room populations appear in live runs",
+        "case": "modes",
+        "setup_method": "normal_input",
+        "max_actions": 20,
+        "max_serial_seconds": 120,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D2-rooms"
+      }
+    },
+    {
+      "id": "D2-roles",
+      "dimension": "D2",
+      "requirement_ids": [
+        "MAZE-03",
+        "KEY-01",
+        "EXIT-01"
+      ],
+      "max_score": 1.875,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 16
+      },
+      "pass_condition": "Five distinct role chambers and matching key/final portal content exist",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "content",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-roles",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "requirements": [
+          "MAZE-03",
+          "KEY-01",
+          "EXIT-01"
+        ],
+        "question": "Five distinct role chambers and matching key/final portal content exist",
+        "case": "content",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D2-roles"
+      }
+    },
+    {
+      "id": "D2-arrangements",
+      "dimension": "D2",
+      "requirement_ids": [
+        "MAZE-05"
+      ],
+      "max_score": 1.875,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 16
+      },
+      "pass_condition": "Twenty ordinary arrangements are visibly instantiated with different substantial geometry",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "arrangements",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-arrangements",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "requirements": [
+          "MAZE-05"
+        ],
+        "question": "Twenty ordinary arrangements are visibly instantiated with different substantial geometry",
+        "case": "arrangements",
+        "setup_method": "hybrid",
+        "max_actions": 80,
+        "max_serial_seconds": 300,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D2-arrangements"
+      }
+    },
+    {
+      "id": "D2-resources",
+      "dimension": "D2",
+      "requirement_ids": [
+        "PICKUP-01"
+      ],
+      "max_score": 1.875,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 16
+      },
+      "pass_condition": "Every difficulty supplies its minimum resources over ordinary chambers",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "modes",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-resources",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "requirements": [
+          "PICKUP-01"
+        ],
+        "question": "Every difficulty supplies its minimum resources over ordinary chambers",
+        "case": "modes",
+        "setup_method": "normal_input",
+        "max_actions": 20,
+        "max_serial_seconds": 120,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D2-resources"
+      }
+    },
+    {
+      "id": "D2-mage",
+      "dimension": "D2",
+      "requirement_ids": [
+        "MOVE-01",
+        "MOVE-03",
+        "ASSET-01",
+        "VISUAL-01"
+      ],
+      "max_score": 1.875,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 16
+      },
+      "pass_condition": "Required 3D mage and movement are present in play",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "movement",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-mage",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "requirements": [
+          "MOVE-01",
+          "MOVE-03",
+          "ASSET-01",
+          "VISUAL-01"
+        ],
+        "question": "Required 3D mage and movement are present in play",
+        "case": "movement",
+        "setup_method": "normal_input",
+        "max_actions": 16,
+        "max_serial_seconds": 70,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D2-mage"
+      }
+    },
+    {
+      "id": "D2-gates",
+      "dimension": "D2",
+      "requirement_ids": [
+        "DOOR-01",
+        "DOOR-03",
+        "ASSET-02"
+      ],
+      "max_score": 1.875,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 16
+      },
+      "pass_condition": "Three coloured gates can each be operated in play",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "gates",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-gates",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "requirements": [
+          "DOOR-01",
+          "DOOR-03",
+          "ASSET-02"
+        ],
+        "question": "Three coloured gates can each be operated in play",
+        "case": "gates",
+        "setup_method": "hybrid",
+        "max_actions": 40,
+        "max_serial_seconds": 160,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D2-gates"
+      }
+    },
+    {
+      "id": "D2-spell",
+      "dimension": "D2",
+      "requirement_ids": [
+        "SPELL-01",
+        "SPELL-02"
+      ],
+      "max_score": 1.875,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 16
+      },
+      "pass_condition": "A real Q press produces a visible reveal and casting presentation",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "spell",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-spell",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "requirements": [
+          "SPELL-01",
+          "SPELL-02"
+        ],
+        "question": "A real Q press produces a visible reveal and casting presentation",
+        "case": "spell",
+        "setup_method": "normal_input",
+        "max_actions": 16,
+        "max_serial_seconds": 70,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D2-spell"
+      }
+    },
+    {
+      "id": "D2-pickups",
+      "dimension": "D2",
+      "requirement_ids": [
+        "PICKUP-02",
+        "PICKUP-03",
+        "PICKUP-04",
+        "ECON-01",
+        "ASSET-03"
+      ],
+      "max_score": 1.875,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 16
+      },
+      "pass_condition": "Each resource and key can be touched and consumed",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "pickups",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-pickups",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "requirements": [
+          "PICKUP-02",
+          "PICKUP-03",
+          "PICKUP-04",
+          "ECON-01",
+          "ASSET-03"
+        ],
+        "question": "Each resource and key can be touched and consumed",
+        "case": "pickups",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D2-pickups"
+      }
+    },
+    {
+      "id": "D2-outcomes",
+      "dimension": "D2",
+      "requirement_ids": [
+        "EXIT-02",
+        "LIFE-01"
+      ],
+      "max_score": 1.875,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 16
+      },
+      "pass_condition": "Escape and defeat each appear after their normal trigger input",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "outcomes",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-outcomes",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "requirements": [
+          "EXIT-02",
+          "LIFE-01"
+        ],
+        "question": "Escape and defeat each appear after their normal trigger input",
+        "case": "outcomes",
+        "setup_method": "hybrid",
+        "max_actions": 40,
+        "max_serial_seconds": 140,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D2-outcomes"
+      }
+    },
+    {
+      "id": "D2-architecture",
+      "dimension": "D2",
+      "requirement_ids": [
+        "ASSET-02",
+        "VISUAL-01"
+      ],
+      "max_score": 1.875,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 16
+      },
+      "pass_condition": "Required dungeon meshes render in reachable scenes",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "arrangements",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-architecture",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "requirements": [
+          "ASSET-02",
+          "VISUAL-01"
+        ],
+        "question": "Required dungeon meshes render in reachable scenes",
+        "case": "arrangements",
+        "setup_method": "hybrid",
+        "max_actions": 80,
+        "max_serial_seconds": 300,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D2-architecture"
+      }
+    },
+    {
+      "id": "D2-animations",
+      "dimension": "D2",
+      "requirement_ids": [
+        "ASSET-01",
+        "VISUAL-04"
+      ],
+      "max_score": 1.875,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 16
+      },
+      "pass_condition": "Required skeletal clips play in their assigned gameplay events",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "presentation",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-animations",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "requirements": [
+          "ASSET-01",
+          "VISUAL-04"
+        ],
+        "question": "Required skeletal clips play in their assigned gameplay events",
+        "case": "presentation",
+        "setup_method": "hybrid",
+        "max_actions": 40,
+        "max_serial_seconds": 150,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D2-animations"
+      }
+    },
+    {
+      "id": "D2-effects",
+      "dimension": "D2",
+      "requirement_ids": [
+        "ASSET-05",
+        "VISUAL-02",
+        "VISUAL-03",
+        "VISUAL-05"
+      ],
+      "max_score": 1.875,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 16
+      },
+      "pass_condition": "Specified effect roles are instantiated by gameplay events",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "presentation",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-effects",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "requirements": [
+          "ASSET-05",
+          "VISUAL-02",
+          "VISUAL-03",
+          "VISUAL-05"
+        ],
+        "question": "Specified effect roles are instantiated by gameplay events",
+        "case": "presentation",
+        "setup_method": "hybrid",
+        "max_actions": 40,
+        "max_serial_seconds": 150,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D2-effects"
+      }
+    },
+    {
+      "id": "D2-music",
+      "dimension": "D2",
+      "requirement_ids": [
+        "AUDIO-01",
+        "ASSET-06"
+      ],
+      "max_score": 1.875,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 16
+      },
+      "pass_condition": "Supplied music plays during gameplay and respects pause/menu",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "audio",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-music",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "requirements": [
+          "AUDIO-01",
+          "ASSET-06"
+        ],
+        "question": "Supplied music plays during gameplay and respects pause/menu",
+        "case": "audio",
+        "setup_method": "hybrid",
+        "max_actions": 30,
+        "max_serial_seconds": 100,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D2-music"
+      }
+    },
+    {
+      "id": "D2-sounds",
+      "dimension": "D2",
+      "requirement_ids": [
+        "AUDIO-02",
+        "ASSET-06"
+      ],
+      "max_score": 1.875,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 16
+      },
+      "pass_condition": "Supplied event sounds are active at their mapped triggered events",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "presentation",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-sounds",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "requirements": [
+          "AUDIO-02",
+          "ASSET-06"
+        ],
+        "question": "Supplied event sounds are active at their mapped triggered events",
+        "case": "presentation",
+        "setup_method": "hybrid",
+        "max_actions": 40,
+        "max_serial_seconds": 150,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D2-sounds"
+      }
+    },
+    {
+      "id": "D2-interface_assets",
+      "dimension": "D2",
+      "requirement_ids": [
+        "ASSET-04",
+        "ASSET-07",
+        "VISUAL-06"
+      ],
+      "max_score": 1.875,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 16
+      },
+      "pass_condition": "Required icons, button states and fonts are actually drawn on runtime UI",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "interface",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-interface_assets",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "requirements": [
+          "ASSET-04",
+          "ASSET-07",
+          "VISUAL-06"
+        ],
+        "question": "Required icons, button states and fonts are actually drawn on runtime UI",
+        "case": "interface",
+        "setup_method": "normal_input",
+        "max_actions": 16,
+        "max_serial_seconds": 70,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D2-interface_assets"
+      }
+    },
+    {
+      "id": "D3-initial",
+      "dimension": "D3",
+      "requirement_ids": [
+        "ENTRY-02",
+        "MONSTER-01"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Correct fresh inventory and safe separated monster",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "initial",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-initial",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "ENTRY-02",
+          "MONSTER-01"
+        ],
+        "question": "Correct fresh inventory and safe separated monster",
+        "case": "initial",
+        "setup_method": "normal_input",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-initial"
+      }
+    },
+    {
+      "id": "D3-graph",
+      "dimension": "D3",
+      "requirement_ids": [
+        "MAZE-01",
+        "MAZE-02"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Four-neighbour reciprocal connected graph includes non-geometric links",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "modes",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-graph",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "MAZE-01",
+          "MAZE-02"
+        ],
+        "question": "Four-neighbour reciprocal connected graph includes non-geometric links",
+        "case": "modes",
+        "setup_method": "normal_input",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-graph"
+      }
+    },
+    {
+      "id": "D3-locks",
+      "dimension": "D3",
+      "requirement_ids": [
+        "MAZE-03"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "All keys can be reached without circular lock dependencies",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "modes",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-locks",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "MAZE-03"
+        ],
+        "question": "All keys can be reached without circular lock dependencies",
+        "case": "modes",
+        "setup_method": "normal_input",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-locks"
+      }
+    },
+    {
+      "id": "D3-seed",
+      "dimension": "D3",
+      "requirement_ids": [
+        "MAZE-04",
+        "QUALITY-06"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Same seed reproduces world; other seed changes it; invalid seed is rejected",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "seed",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-seed",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "MAZE-04",
+          "QUALITY-06"
+        ],
+        "question": "Same seed reproduces world; other seed changes it; invalid seed is rejected",
+        "case": "seed",
+        "setup_method": "normal_input",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-seed"
+      }
+    },
+    {
+      "id": "D3-movement",
+      "dimension": "D3",
+      "requirement_ids": [
+        "MOVE-01"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Continuous axial/diagonal motion, cancellation and release",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "movement",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-movement",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "MOVE-01"
+        ],
+        "question": "Continuous axial/diagonal motion, cancellation and release",
+        "case": "movement",
+        "setup_method": "normal_input",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-movement"
+      }
+    },
+    {
+      "id": "D3-collision",
+      "dimension": "D3",
+      "requirement_ids": [
+        "MOVE-02"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Walls, closed gates and solid props stop player motion",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "collision",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-collision",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "MOVE-02"
+        ],
+        "question": "Walls, closed gates and solid props stop player motion",
+        "case": "collision",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-collision"
+      }
+    },
+    {
+      "id": "D3-passages",
+      "dimension": "D3",
+      "requirement_ids": [
+        "PORTAL-01",
+        "PORTAL-02"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "One threshold crossing transfers once through reciprocal endpoints",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "passage",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-passages",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "PORTAL-01",
+          "PORTAL-02"
+        ],
+        "question": "One threshold crossing transfers once through reciprocal endpoints",
+        "case": "passage",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-passages"
+      }
+    },
+    {
+      "id": "D3-turns",
+      "dimension": "D3",
+      "requirement_ids": [
+        "MONSTER-02"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Only completed crossings produce a monster turn",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "spell",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-turns",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "MONSTER-02"
+        ],
+        "question": "Only completed crossings produce a monster turn",
+        "case": "spell",
+        "setup_method": "normal_input",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-turns"
+      }
+    },
+    {
+      "id": "D3-monster_step",
+      "dimension": "D3",
+      "requirement_ids": [
+        "MONSTER-03"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Each ordinary turn moves exactly one graph edge ignoring gate locks",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "monster",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-monster_step",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "MONSTER-03"
+        ],
+        "question": "Each ordinary turn moves exactly one graph edge ignoring gate locks",
+        "case": "monster",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-monster_step"
+      }
+    },
+    {
+      "id": "D3-monster_distribution",
+      "dimension": "D3",
+      "requirement_ids": [
+        "MONSTER-03",
+        "MAZE-04"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Seeded movement distribution is consistent with the specified pursuit/wander mixture",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "distribution",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-monster_distribution",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "MONSTER-03",
+          "MAZE-04"
+        ],
+        "question": "Seeded movement distribution is consistent with the specified pursuit/wander mixture",
+        "case": "distribution",
+        "setup_method": "hybrid",
+        "max_actions": 500,
+        "max_serial_seconds": 900,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-monster_distribution"
+      }
+    },
+    {
+      "id": "D3-hit",
+      "dimension": "D3",
+      "requirement_ids": [
+        "MONSTER-04"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Direct entry loses exactly one life before a monster escape",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "encounter",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-hit",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "MONSTER-04"
+        ],
+        "question": "Direct entry loses exactly one life before a monster escape",
+        "case": "encounter",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-hit"
+      }
+    },
+    {
+      "id": "D3-recovery",
+      "dimension": "D3",
+      "requirement_ids": [
+        "MONSTER-05"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Nonfatal recovery preserves progress and returns safely within two seconds",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "encounter",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-recovery",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "MONSTER-05"
+        ],
+        "question": "Nonfatal recovery preserves progress and returns safely within two seconds",
+        "case": "encounter",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-recovery"
+      }
+    },
+    {
+      "id": "D3-danger",
+      "dimension": "D3",
+      "requirement_ids": [
+        "MONSTER-06"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Nearby equals graph distance one and recomputes after settlement",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "danger",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-danger",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "MONSTER-06"
+        ],
+        "question": "Nearby equals graph distance one and recomputes after settlement",
+        "case": "danger",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-danger"
+      }
+    },
+    {
+      "id": "D3-spell_cost",
+      "dimension": "D3",
+      "requirement_ids": [
+        "SPELL-01"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "One fresh Q spends one scroll and held Q does not repeat",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "spell",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-spell_cost",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "SPELL-01"
+        ],
+        "question": "One fresh Q spends one scroll and held Q does not repeat",
+        "case": "spell",
+        "setup_method": "normal_input",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-spell_cost"
+      }
+    },
+    {
+      "id": "D3-reveal_timer",
+      "dimension": "D3",
+      "requirement_ids": [
+        "SPELL-02"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Sampled reveal refreshes and expires after three gameplay seconds",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "reveal",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-reveal_timer",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "SPELL-02"
+        ],
+        "question": "Sampled reveal refreshes and expires after three gameplay seconds",
+        "case": "reveal",
+        "setup_method": "normal_input",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-reveal_timer"
+      }
+    },
+    {
+      "id": "D3-depleted",
+      "dimension": "D3",
+      "requirement_ids": [
+        "SPELL-03"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "No-scroll and suppressed Q presses cannot cast or queue rewards",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "depleted",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-depleted",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "SPELL-03"
+        ],
+        "question": "No-scroll and suppressed Q presses cannot cast or queue rewards",
+        "case": "depleted",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-depleted"
+      }
+    },
+    {
+      "id": "D3-keys",
+      "dimension": "D3",
+      "requirement_ids": [
+        "KEY-01"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "A key grants only its own colour once and survives rooms/recovery",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "pickups",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-keys",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "KEY-01"
+        ],
+        "question": "A key grants only its own colour once and survives rooms/recovery",
+        "case": "pickups",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-keys"
+      }
+    },
+    {
+      "id": "D3-gate_range",
+      "dimension": "D3",
+      "requirement_ids": [
+        "DOOR-01"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Only nearest in-range eligible gate responds to E",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "gate_range",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-gate_range",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "DOOR-01"
+        ],
+        "question": "Only nearest in-range eligible gate responds to E",
+        "case": "gate_range",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-gate_range"
+      }
+    },
+    {
+      "id": "D3-gate_locked",
+      "dimension": "D3",
+      "requirement_ids": [
+        "DOOR-02"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Missing or wrong key rejects opening without cost or turn",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "gate_range",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-gate_locked",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "DOOR-02"
+        ],
+        "question": "Missing or wrong key rejects opening without cost or turn",
+        "case": "gate_range",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-gate_locked"
+      }
+    },
+    {
+      "id": "D3-gate_time",
+      "dimension": "D3",
+      "requirement_ids": [
+        "DOOR-03"
+      ],
+      "max_score": 0.666667,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Gate blocks through the three-second motion and ignores repeated E",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "gates",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-gate_time",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "DOOR-03"
+        ],
+        "question": "Gate blocks through the three-second motion and ignores repeated E",
+        "case": "gates",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-gate_time"
+      }
+    },
+    {
+      "id": "D3-gate_shared",
+      "dimension": "D3",
+      "requirement_ids": [
+        "DOOR-04",
+        "PORTAL-03"
+      ],
+      "max_score": 0.666666,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Both ends share opening/open state across visits",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "gates",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-gate_shared",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "DOOR-04",
+          "PORTAL-03"
+        ],
+        "question": "Both ends share opening/open state across visits",
+        "case": "gates",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-gate_shared"
+      }
+    },
+    {
+      "id": "D3-pickup_once",
+      "dimension": "D3",
+      "requirement_ids": [
+        "PICKUP-02",
+        "PORTAL-03"
+      ],
+      "max_score": 0.666666,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Each touched pickup disappears once and remains consumed on revisit",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "pickups",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-pickup_once",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "PICKUP-02",
+          "PORTAL-03"
+        ],
+        "question": "Each touched pickup disappears once and remains consumed on revisit",
+        "case": "pickups",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-pickup_once"
+      }
+    },
+    {
+      "id": "D3-scroll_uncapped",
+      "dimension": "D3",
+      "requirement_ids": [
+        "PICKUP-03"
+      ],
+      "max_score": 0.666666,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Scroll adds one above five and enables depleted casting",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "pickups",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-scroll_uncapped",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "PICKUP-03"
+        ],
+        "question": "Scroll adds one above five and enables depleted casting",
+        "case": "pickups",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-scroll_uncapped"
+      }
+    },
+    {
+      "id": "D3-heart_uncapped",
+      "dimension": "D3",
+      "requirement_ids": [
+        "PICKUP-04"
+      ],
+      "max_score": 0.666666,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Heart adds one above five with no cap",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "pickups",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-heart_uncapped",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "PICKUP-04"
+        ],
+        "question": "Heart adds one above five with no cap",
+        "case": "pickups",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-heart_uncapped"
+      }
+    },
+    {
+      "id": "D3-coin_exchange",
+      "dimension": "D3",
+      "requirement_ids": [
+        "ECON-01",
+        "ECON-02"
+      ],
+      "max_score": 0.666666,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "49 coins plus one gives zero remainder and one additional life",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "economy",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-coin_exchange",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "ECON-01",
+          "ECON-02"
+        ],
+        "question": "49 coins plus one gives zero remainder and one additional life",
+        "case": "economy",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-coin_exchange"
+      }
+    },
+    {
+      "id": "D3-exit_lock",
+      "dimension": "D3",
+      "requirement_ids": [
+        "EXIT-01"
+      ],
+      "max_score": 0.666666,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Each missing colour prevents victory and no E action wins",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "outcomes",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-exit_lock",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "EXIT-01"
+        ],
+        "question": "Each missing colour prevents victory and no E action wins",
+        "case": "outcomes",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-exit_lock"
+      }
+    },
+    {
+      "id": "D3-exit_trigger",
+      "dimension": "D3",
+      "requirement_ids": [
+        "EXIT-02"
+      ],
+      "max_score": 0.666666,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "All keys win only on a fresh physical final-portal entry",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "outcomes",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-exit_trigger",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "EXIT-02"
+        ],
+        "question": "All keys win only on a fresh physical final-portal entry",
+        "case": "outcomes",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-exit_trigger"
+      }
+    },
+    {
+      "id": "D3-fatal",
+      "dimension": "D3",
+      "requirement_ids": [
+        "LIFE-01"
+      ],
+      "max_score": 0.666666,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Last-life encounter enters defeat once at zero lives",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "outcomes",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-fatal",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "LIFE-01"
+        ],
+        "question": "Last-life encounter enters defeat once at zero lives",
+        "case": "outcomes",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-fatal"
+      }
+    },
+    {
+      "id": "D3-terminal",
+      "dimension": "D3",
+      "requirement_ids": [
+        "LIFE-02"
+      ],
+      "max_score": 0.666666,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Input, resources, world and clocks remain locked after both results",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "outcomes",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-terminal",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "LIFE-02"
+        ],
+        "question": "Input, resources, world and clocks remain locked after both results",
+        "case": "outcomes",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-terminal"
+      }
+    },
+    {
+      "id": "D3-observation_truth",
+      "dimension": "D3",
+      "requirement_ids": [
+        "OBSERVATION-01"
+      ],
+      "max_score": 0.666666,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 30
+      },
+      "pass_condition": "Observation agrees with independent native state and input/visible causal changes",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "honesty",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-observation_truth",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "requirements": [
+          "OBSERVATION-01"
+        ],
+        "question": "Observation agrees with independent native state and input/visible causal changes",
+        "case": "honesty",
+        "setup_method": "hybrid",
+        "max_actions": 60,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D3-observation_truth"
+      }
+    },
+    {
+      "id": "D4-entry",
+      "dimension": "D4",
+      "requirement_ids": [
+        "ENTRY-01",
+        "ENTRY-02",
+        "QUALITY-02"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 8
+      },
+      "pass_condition": "Menu choice reaches settled gameplay through visible input",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "modes",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D4-entry",
+        "dimension": "D4",
+        "stage": "dynamic",
+        "requirements": [
+          "ENTRY-01",
+          "ENTRY-02",
+          "QUALITY-02"
+        ],
+        "question": "Menu choice reaches settled gameplay through visible input",
+        "case": "modes",
+        "setup_method": "normal_input",
+        "max_actions": 20,
+        "max_serial_seconds": 120,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D4-entry"
+      }
+    },
+    {
+      "id": "D4-journey",
+      "dimension": "D4",
+      "requirement_ids": [
+        "EXIT-02",
+        "KEY-01",
+        "QUALITY-02",
+        "QUALITY-05"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 8
+      },
+      "pass_condition": "Normal menu-to-key-collection-to-escape journey is connected",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "journey",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D4-journey",
+        "dimension": "D4",
+        "stage": "dynamic",
+        "requirements": [
+          "EXIT-02",
+          "KEY-01",
+          "QUALITY-02",
+          "QUALITY-05"
+        ],
+        "question": "Normal menu-to-key-collection-to-escape journey is connected",
+        "case": "journey",
+        "setup_method": "normal_input",
+        "max_actions": 1600,
+        "max_serial_seconds": 1800,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D4-journey"
+      }
+    },
+    {
+      "id": "D4-failure",
+      "dimension": "D4",
+      "requirement_ids": [
+        "LIFE-01",
+        "MONSTER-04"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 8
+      },
+      "pass_condition": "Last-life passage reaches a usable defeat state",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "outcomes",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D4-failure",
+        "dimension": "D4",
+        "stage": "dynamic",
+        "requirements": [
+          "LIFE-01",
+          "MONSTER-04"
+        ],
+        "question": "Last-life passage reaches a usable defeat state",
+        "case": "outcomes",
+        "setup_method": "hybrid",
+        "max_actions": 40,
+        "max_serial_seconds": 140,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D4-failure"
+      }
+    },
+    {
+      "id": "D4-restart",
+      "dimension": "D4",
+      "requirement_ids": [
+        "RESET-01"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 8
+      },
+      "pass_condition": "Restart restores inventory/world/seed from gameplay and both outcomes",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "restart",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D4-restart",
+        "dimension": "D4",
+        "stage": "dynamic",
+        "requirements": [
+          "RESET-01"
+        ],
+        "question": "Restart restores inventory/world/seed from gameplay and both outcomes",
+        "case": "restart",
+        "setup_method": "hybrid",
+        "max_actions": 45,
+        "max_serial_seconds": 160,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D4-restart"
+      }
+    },
+    {
+      "id": "D4-cancel",
+      "dimension": "D4",
+      "requirement_ids": [
+        "RESET-02"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 8
+      },
+      "pass_condition": "Restart cancels old cast, gate, crossing and recovery consequences",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "cancel",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D4-cancel",
+        "dimension": "D4",
+        "stage": "dynamic",
+        "requirements": [
+          "RESET-02"
+        ],
+        "question": "Restart cancels old cast, gate, crossing and recovery consequences",
+        "case": "cancel",
+        "setup_method": "hybrid",
+        "max_actions": 80,
+        "max_serial_seconds": 240,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D4-cancel"
+      }
+    },
+    {
+      "id": "D4-pause",
+      "dimension": "D4",
+      "requirement_ids": [
+        "RESET-03"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 8
+      },
+      "pass_condition": "Pause/resume preserves interrupted phase and gameplay clocks",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "pause",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D4-pause",
+        "dimension": "D4",
+        "stage": "dynamic",
+        "requirements": [
+          "RESET-03"
+        ],
+        "question": "Pause/resume preserves interrupted phase and gameplay clocks",
+        "case": "pause",
+        "setup_method": "hybrid",
+        "max_actions": 50,
+        "max_serial_seconds": 160,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D4-pause"
+      }
+    },
+    {
+      "id": "D4-menu",
+      "dimension": "D4",
+      "requirement_ids": [
+        "RESET-03",
+        "RESET-02"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 8
+      },
+      "pass_condition": "Menu return discards run; new selection starts fresh",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "menu",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D4-menu",
+        "dimension": "D4",
+        "stage": "dynamic",
+        "requirements": [
+          "RESET-03",
+          "RESET-02"
+        ],
+        "question": "Menu return discards run; new selection starts fresh",
+        "case": "menu",
+        "setup_method": "normal_input",
+        "max_actions": 20,
+        "max_serial_seconds": 90,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D4-menu"
+      }
+    },
+    {
+      "id": "D4-reopen",
+      "dimension": "D4",
+      "requirement_ids": [
+        "RESET-04",
+        "QUALITY-01"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 8
+      },
+      "pass_condition": "Normal close and new-process reopen return to fresh menu",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input",
+        "case": "reopen",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D4-reopen",
+        "dimension": "D4",
+        "stage": "dynamic",
+        "requirements": [
+          "RESET-04",
+          "QUALITY-01"
+        ],
+        "question": "Normal close and new-process reopen return to fresh menu",
+        "case": "reopen",
+        "setup_method": "normal_input",
+        "max_actions": 10,
+        "max_serial_seconds": 220,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D4-reopen"
+      }
+    },
+    {
+      "id": "D5-controls",
+      "dimension": "D5",
+      "requirement_ids": [
+        "ENTRY-01",
+        "UI-03",
+        "QUALITY-03"
+      ],
+      "max_score": 1.25,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 8
+      },
+      "pass_condition": "Visible English menu/help controls respond at their drawn rectangles",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "interface",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D5-controls",
+        "dimension": "D5",
+        "stage": "dynamic",
+        "requirements": [
+          "ENTRY-01",
+          "UI-03",
+          "QUALITY-03"
+        ],
+        "question": "Visible English menu/help controls respond at their drawn rectangles",
+        "case": "interface",
+        "setup_method": "hybrid",
+        "max_actions": 65,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D5-controls"
+      }
+    },
+    {
+      "id": "D5-hud",
+      "dimension": "D5",
+      "requirement_ids": [
+        "UI-01",
+        "ASSET-04",
+        "QUALITY-04"
+      ],
+      "max_score": 1.25,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 8
+      },
+      "pass_condition": "Screen resource labels change with transactions; key icons remain visible",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "feedback",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D5-hud",
+        "dimension": "D5",
+        "stage": "dynamic",
+        "requirements": [
+          "UI-01",
+          "ASSET-04",
+          "QUALITY-04"
+        ],
+        "question": "Screen resource labels change with transactions; key icons remain visible",
+        "case": "feedback",
+        "setup_method": "hybrid",
+        "max_actions": 65,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D5-hud"
+      }
+    },
+    {
+      "id": "D5-danger",
+      "dimension": "D5",
+      "requirement_ids": [
+        "UI-02",
+        "MONSTER-06"
+      ],
+      "max_score": 1.25,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 8
+      },
+      "pass_condition": "Safe/nearby and sampled reveal feedback are distinguishable",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "feedback",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D5-danger",
+        "dimension": "D5",
+        "stage": "dynamic",
+        "requirements": [
+          "UI-02",
+          "MONSTER-06"
+        ],
+        "question": "Safe/nearby and sampled reveal feedback are distinguishable",
+        "case": "feedback",
+        "setup_method": "hybrid",
+        "max_actions": 65,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D5-danger"
+      }
+    },
+    {
+      "id": "D5-rejection",
+      "dimension": "D5",
+      "requirement_ids": [
+        "SPELL-03",
+        "DOOR-02",
+        "EXIT-01",
+        "QUALITY-04"
+      ],
+      "max_score": 1.25,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 8
+      },
+      "pass_condition": "Actual rendered rejection text names the missing resource/keys",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "feedback",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D5-rejection",
+        "dimension": "D5",
+        "stage": "dynamic",
+        "requirements": [
+          "SPELL-03",
+          "DOOR-02",
+          "EXIT-01",
+          "QUALITY-04"
+        ],
+        "question": "Actual rendered rejection text names the missing resource/keys",
+        "case": "feedback",
+        "setup_method": "hybrid",
+        "max_actions": 65,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D5-rejection"
+      }
+    },
+    {
+      "id": "D5-gate_prompt",
+      "dimension": "D5",
+      "requirement_ids": [
+        "DOOR-01",
+        "UI-03"
+      ],
+      "max_score": 1.25,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 8
+      },
+      "pass_condition": "E prompt appears for the same eligible gate and clears out of range",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "feedback",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D5-gate_prompt",
+        "dimension": "D5",
+        "stage": "dynamic",
+        "requirements": [
+          "DOOR-01",
+          "UI-03"
+        ],
+        "question": "E prompt appears for the same eligible gate and clears out of range",
+        "case": "feedback",
+        "setup_method": "hybrid",
+        "max_actions": 65,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D5-gate_prompt"
+      }
+    },
+    {
+      "id": "D5-results",
+      "dimension": "D5",
+      "requirement_ids": [
+        "EXIT-02",
+        "LIFE-01",
+        "UI-03"
+      ],
+      "max_score": 1.25,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 8
+      },
+      "pass_condition": "Both result titles and Restart/Main Menu controls are readable and usable",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "outcomes",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D5-results",
+        "dimension": "D5",
+        "stage": "dynamic",
+        "requirements": [
+          "EXIT-02",
+          "LIFE-01",
+          "UI-03"
+        ],
+        "question": "Both result titles and Restart/Main Menu controls are readable and usable",
+        "case": "outcomes",
+        "setup_method": "hybrid",
+        "max_actions": 65,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D5-results"
+      }
+    },
+    {
+      "id": "D5-resolution",
+      "dimension": "D5",
+      "requirement_ids": [
+        "UI-01",
+        "UI-03",
+        "MOVE-03"
+      ],
+      "max_score": 1.25,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 8
+      },
+      "pass_condition": "HUD/help remain readable and within 1280x720 and 1920x1080 clients",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "resolution",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D5-resolution",
+        "dimension": "D5",
+        "stage": "dynamic",
+        "requirements": [
+          "UI-01",
+          "UI-03",
+          "MOVE-03"
+        ],
+        "question": "HUD/help remain readable and within 1280x720 and 1920x1080 clients",
+        "case": "resolution",
+        "setup_method": "hybrid",
+        "max_actions": 65,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D5-resolution"
+      }
+    },
+    {
+      "id": "D5-focus",
+      "dimension": "D5",
+      "requirement_ids": [
+        "UI-03",
+        "QUALITY-03",
+        "MOVE-01"
+      ],
+      "max_score": 1.25,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 8
+      },
+      "pass_condition": "Losing focus releases movement and returning focus creates no press",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "hybrid",
+        "case": "focus",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D5-focus",
+        "dimension": "D5",
+        "stage": "dynamic",
+        "requirements": [
+          "UI-03",
+          "QUALITY-03",
+          "MOVE-01"
+        ],
+        "question": "Losing focus releases movement and returning focus creates no press",
+        "case": "focus",
+        "setup_method": "hybrid",
+        "max_actions": 65,
+        "max_serial_seconds": 180,
+        "pass_evidence": [
+          "input_receipt",
+          "continuous_state_samples",
+          "contemporaneous_client_frame"
+        ],
+        "score_owner": "D5-focus"
+      }
+    },
+    {
+      "id": "D6-chamber",
+      "dimension": "D6",
+      "requirement_ids": [
+        "VISUAL-01",
+        "VISUAL-02",
+        "VISUAL-03",
+        "VISUAL-04",
+        "VISUAL-05",
+        "VISUAL-06",
+        "ASSET-01",
+        "ASSET-02",
+        "ASSET-03",
+        "ASSET-04",
+        "ASSET-05",
+        "ASSET-06",
+        "ASSET-07"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 4
+      },
+      "pass_condition": "Apply the fixed five-criterion visual prompt to this state in each of the three frozen rounds; average the state scores.",
+      "partial_condition": "D6 uses five criteria in 0.5 increments per criterion and the frozen mean over states and rounds.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": "chamber",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "fixed_visual",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D6-chamber",
+        "dimension": "D6",
+        "requirements": [
+          "VISUAL-01",
+          "VISUAL-02",
+          "VISUAL-03",
+          "VISUAL-04",
+          "VISUAL-05",
+          "VISUAL-06",
+          "ASSET-01",
+          "ASSET-02",
+          "ASSET-03",
+          "ASSET-04",
+          "ASSET-05",
+          "ASSET-06",
+          "ASSET-07"
+        ],
+        "question": "Apply the fixed five-criterion visual prompt to this state in each of the three frozen rounds; average the state scores.",
+        "method": "fixed_visual",
+        "case": "chamber",
+        "reference_binding": {
+          "id": "chamber",
+          "label": "Initial dungeon chamber",
+          "reference": "../../input/reference/01-chamber.png",
+          "sha256": "5b09cef50fea0745ba4e7f57a8d8bd94b7c77056246f929203d7473d85a5bf0a",
+          "source": "Existing public baseline-rendered reference",
+          "capture_method": "normal player input"
+        }
+      }
+    },
+    {
+      "id": "D6-camera",
+      "dimension": "D6",
+      "requirement_ids": [
+        "VISUAL-01",
+        "VISUAL-02",
+        "VISUAL-03",
+        "VISUAL-04",
+        "VISUAL-05",
+        "VISUAL-06",
+        "ASSET-01",
+        "ASSET-02",
+        "ASSET-03",
+        "ASSET-04",
+        "ASSET-05",
+        "ASSET-06",
+        "ASSET-07"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 4
+      },
+      "pass_condition": "Apply the fixed five-criterion visual prompt to this state in each of the three frozen rounds; average the state scores.",
+      "partial_condition": "D6 uses five criteria in 0.5 increments per criterion and the frozen mean over states and rounds.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": "camera",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "fixed_visual",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D6-camera",
+        "dimension": "D6",
+        "requirements": [
+          "VISUAL-01",
+          "VISUAL-02",
+          "VISUAL-03",
+          "VISUAL-04",
+          "VISUAL-05",
+          "VISUAL-06",
+          "ASSET-01",
+          "ASSET-02",
+          "ASSET-03",
+          "ASSET-04",
+          "ASSET-05",
+          "ASSET-06",
+          "ASSET-07"
+        ],
+        "question": "Apply the fixed five-criterion visual prompt to this state in each of the three frozen rounds; average the state scores.",
+        "method": "fixed_visual",
+        "case": "camera",
+        "reference_binding": {
+          "id": "camera",
+          "label": "Exploration and floor perspective",
+          "reference": "../../input/reference/02-camera-and-floor.png",
+          "sha256": "44091fcab8eac812cba967fed9c31b4349447442dcb677ccf73d289bb526ebde",
+          "source": "Existing public baseline-rendered reference",
+          "capture_method": "normal player input"
+        }
+      }
+    },
+    {
+      "id": "D6-reveal",
+      "dimension": "D6",
+      "requirement_ids": [
+        "VISUAL-01",
+        "VISUAL-02",
+        "VISUAL-03",
+        "VISUAL-04",
+        "VISUAL-05",
+        "VISUAL-06",
+        "ASSET-01",
+        "ASSET-02",
+        "ASSET-03",
+        "ASSET-04",
+        "ASSET-05",
+        "ASSET-06",
+        "ASSET-07"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 4
+      },
+      "pass_condition": "Apply the fixed five-criterion visual prompt to this state in each of the three frozen rounds; average the state scores.",
+      "partial_condition": "D6 uses five criteria in 0.5 increments per criterion and the frozen mean over states and rounds.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": "reveal",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "fixed_visual",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D6-reveal",
+        "dimension": "D6",
+        "requirements": [
+          "VISUAL-01",
+          "VISUAL-02",
+          "VISUAL-03",
+          "VISUAL-04",
+          "VISUAL-05",
+          "VISUAL-06",
+          "ASSET-01",
+          "ASSET-02",
+          "ASSET-03",
+          "ASSET-04",
+          "ASSET-05",
+          "ASSET-06",
+          "ASSET-07"
+        ],
+        "question": "Apply the fixed five-criterion visual prompt to this state in each of the three frozen rounds; average the state scores.",
+        "method": "fixed_visual",
+        "case": "reveal",
+        "reference_binding": {
+          "id": "reveal",
+          "label": "Successful reveal spell",
+          "reference": "../../input/reference/03-reveal-spell.png",
+          "sha256": "004148e4957193bc9a020cdd9ef4c778e13d5b6e4ee15c25c506592d8d4e0a16",
+          "source": "Existing public baseline-rendered reference",
+          "capture_method": "normal player input"
+        }
+      }
+    },
+    {
+      "id": "D6-transfer",
+      "dimension": "D6",
+      "requirement_ids": [
+        "VISUAL-01",
+        "VISUAL-02",
+        "VISUAL-03",
+        "VISUAL-04",
+        "VISUAL-05",
+        "VISUAL-06",
+        "ASSET-01",
+        "ASSET-02",
+        "ASSET-03",
+        "ASSET-04",
+        "ASSET-05",
+        "ASSET-06",
+        "ASSET-07"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 4
+      },
+      "pass_condition": "Apply the fixed five-criterion visual prompt to this state in each of the three frozen rounds; average the state scores.",
+      "partial_condition": "D6 uses five criteria in 0.5 increments per criterion and the frozen mean over states and rounds.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": "transfer",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "fixed_visual",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D6-transfer",
+        "dimension": "D6",
+        "requirements": [
+          "VISUAL-01",
+          "VISUAL-02",
+          "VISUAL-03",
+          "VISUAL-04",
+          "VISUAL-05",
+          "VISUAL-06",
+          "ASSET-01",
+          "ASSET-02",
+          "ASSET-03",
+          "ASSET-04",
+          "ASSET-05",
+          "ASSET-06",
+          "ASSET-07"
+        ],
+        "question": "Apply the fixed five-criterion visual prompt to this state in each of the three frozen rounds; average the state scores.",
+        "method": "fixed_visual",
+        "case": "transfer",
+        "reference_binding": {
+          "id": "transfer",
+          "label": "Another chamber after a passage",
+          "reference": "../../input/reference/04-room-transfer.png",
+          "sha256": "ec06a09cb63e9a4defd5ba075c6c0b0b4aa3d9b158274e2247f6e543fd7da562",
+          "source": "Existing public baseline-rendered reference",
+          "capture_method": "normal player input"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "BoneMaze read-only observation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "session_id",
+    "round_id",
+    "process_id",
+    "snapshot_id",
+    "monotonic_seconds",
+    "simulation_seconds",
+    "phase",
+    "slots",
+    "entities",
+    "targets"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "bonemaze-observation-1.0.0"
+    },
+    "session_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "round_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "process_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "snapshot_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "monotonic_seconds": {
+      "type": "number",
+      "minimum": 0
+    },
+    "simulation_seconds": {
+      "type": "number",
+      "minimum": 0
+    },
+    "phase": {
+      "enum": [
+        "not_ready",
+        "menu",
+        "exploring",
+        "transition",
+        "recovering",
+        "paused",
+        "won",
+        "lost"
+      ]
+    },
+    "slots": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "lives",
+        "scrolls",
+        "coins",
+        "keys_owned",
+        "red_key",
+        "green_key",
+        "blue_key",
+        "room_x",
+        "room_y",
+        "maze_size",
+        "room_changes",
+        "monster_x",
+        "monster_y",
+        "reveal_active",
+        "danger_nearby",
+        "round_seed"
+      ],
+      "properties": {
+        "lives": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "scrolls": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "coins": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "keys_owned": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "red_key": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "green_key": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "blue_key": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "room_x": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "room_y": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "maze_size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "room_changes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "monster_x": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "monster_y": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reveal_active": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "danger_nearby": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "round_seed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4294967295
+        }
+      }
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "state",
+          "visible"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "player",
+              "monster",
+              "room",
+              "gate",
+              "pickup",
+              "exit",
+              "effect"
+            ]
+          },
+          "state": {
+            "type": "string",
+            "minLength": 1
+          },
+          "visible": {
+            "type": "boolean"
+          },
+          "cell": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 15
+            }
+          },
+          "position": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": {
+              "type": "number"
+            }
+          },
+          "local_position": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "rect": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "attributes": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "rect",
+          "visible",
+          "interactable"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "easy",
+              "medium",
+              "hard",
+              "exit_app",
+              "seed_input",
+              "resume",
+              "restart",
+              "main_menu",
+              "gate",
+              "passage",
+              "final_portal"
+            ]
+          },
+          "rect": {
+            "type": "array",
+            "minItems": 4,
+            "maxItems": 4,
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            }
+          },
+          "visible": {
+            "type": "boolean"
+          },
+          "interactable": {
+            "type": "boolean"
+          },
+          "entity_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "attributes": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "starter_health": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "input_pulses"
+      ],
+      "properties": {
+        "input_pulses": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

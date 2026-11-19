@@ -1,0 +1,414 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:vibe-gaming:unreal-public-executor:validation-summary:1.0.0",
+  "title": "Unreal public executor capability validation summary",
+  "description": "A redacted engine-level validation summary. Passing this schema does not make any capability available without dynamic evidence.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "generated_utc",
+    "engine",
+    "overall_status",
+    "formal_scoring_ready",
+    "conclusion",
+    "capabilities",
+    "faults",
+    "evidence",
+    "privacy_scan",
+    "cleanup"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "run_id": {
+      "$ref": "#/$defs/stable_id"
+    },
+    "generated_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "engine": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "version"
+      ],
+      "properties": {
+        "name": {
+          "const": "Unreal Engine"
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^5\\.7(?:\\.[0-9]+)?$"
+        }
+      }
+    },
+    "overall_status": {
+      "enum": [
+        "passed",
+        "failed",
+        "invalid",
+        "not_run"
+      ]
+    },
+    "formal_scoring_ready": {
+      "type": "boolean"
+    },
+    "conclusion": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024
+    },
+    "capabilities": {
+      "type": "array",
+      "minItems": 16,
+      "maxItems": 16,
+      "items": {
+        "$ref": "#/$defs/capability_result"
+      },
+      "$comment": "The validation command must additionally enforce that all sixteen capability names occur exactly once."
+    },
+    "faults": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/summary_fault"
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/evidence_ref"
+      }
+    },
+    "cleanup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "passed",
+        "keys_released",
+        "mouse_buttons_released",
+        "cursor_restored",
+        "process_tree_clean",
+        "details"
+      ],
+      "properties": {
+        "passed": {
+          "type": "boolean"
+        },
+        "keys_released": {
+          "type": "boolean"
+        },
+        "mouse_buttons_released": {
+          "type": "boolean"
+        },
+        "cursor_restored": {
+          "type": "boolean"
+        },
+        "process_tree_clean": {
+          "type": "boolean"
+        },
+        "details": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "overall_status": {
+            "const": "passed"
+          }
+        },
+        "required": [
+          "overall_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "formal_scoring_ready": {
+            "const": true
+          },
+          "cleanup": {
+            "properties": {
+              "passed": {
+                "const": true
+              },
+              "keys_released": {
+                "const": true
+              },
+              "mouse_buttons_released": {
+                "const": true
+              },
+              "cursor_restored": {
+                "const": true
+              },
+              "process_tree_clean": {
+                "const": true
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "stable_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "relative_path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*(/[A-Za-z0-9][A-Za-z0-9._-]*)*$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "capability_name": {
+      "enum": [
+        "Start",
+        "Stop",
+        "PressKey",
+        "HoldKey",
+        "ReleaseKey",
+        "MovePointer",
+        "MouseDown",
+        "MouseUp",
+        "Click",
+        "Drag",
+        "FindVisibleTarget",
+        "ReadState",
+        "WaitUntil",
+        "Capture",
+        "Restart",
+        "Reopen"
+      ]
+    },
+    "capability_result": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "status",
+        "attempts",
+        "successes",
+        "evidence",
+        "limitations"
+      ],
+      "properties": {
+        "name": {
+          "$ref": "#/$defs/capability_name"
+        },
+        "status": {
+          "enum": [
+            "available",
+            "unstable",
+            "unavailable",
+            "not_tested"
+          ]
+        },
+        "attempts": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "successes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "evidence": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/relative_path"
+          }
+        },
+        "limitations": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 512
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "available"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "attempts": {
+                "minimum": 3
+              },
+              "successes": {
+                "minimum": 3
+              },
+              "evidence": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "not_tested"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "attempts": {
+                "const": 0
+              },
+              "successes": {
+                "const": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    "summary_fault": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "domain",
+        "code",
+        "message",
+        "retryable",
+        "affected_capabilities",
+        "evidence"
+      ],
+      "properties": {
+        "domain": {
+          "enum": [
+            "observer",
+            "evidence",
+            "executor",
+            "environment",
+            "capability"
+          ]
+        },
+        "code": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]{0,127}$"
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 512
+        },
+        "retryable": {
+          "type": "boolean"
+        },
+        "affected_capabilities": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/capability_name"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/relative_path"
+          }
+        }
+      }
+    },
+    "evidence_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "media_type",
+        "byte_length",
+        "captured_monotonic_ms",
+        "kind",
+        "producer"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/relative_path"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "media_type": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9!#$&^_.+-]+/[A-Za-z0-9!#$&^_.+-]+$"
+        },
+        "byte_length": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "captured_monotonic_ms": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "kind": {
+          "enum": [
+            "state",
+            "wait_samples",
+            "capture",
+            "input_receipt",
+            "process",
+            "cleanup",
+            "redacted_log",
+            "report"
+          ]
+        },
+        "producer": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "version"
+          ],
+          "properties": {
+            "id": {
+              "$ref": "#/$defs/stable_id"
+            },
+            "version": {
+              "type": "string",
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._+-]{0,127}$"
+            }
+          }
+        }
+      }
+    }
+  }
+}

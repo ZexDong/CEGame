@@ -1,0 +1,608 @@
+{
+  "version": "chomp-atomic-1.0.0",
+  "public_requirements_sha256": "a91c9e43df08f4d26d17b750e3c47490c2efcf2b063e2917ed7bb69e837fb98f",
+  "cases": [
+    {
+      "id": "entry",
+      "setup_method": "normal_input",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 20,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D2-title",
+        "D4-start",
+        "D3-initial",
+        "D2-maze",
+        "D2-actors",
+        "D5-title",
+        "D5-hud"
+      ]
+    },
+    {
+      "id": "speed",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-speed",
+        "D2-movement"
+      ]
+    },
+    {
+      "id": "blocked",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 4,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 2,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Independent repeated semantic preconditions; each has its own setup receipt.",
+      "check_ids": [
+        "D3-blocked"
+      ]
+    },
+    {
+      "id": "buffer",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 3,
+      "max_actions_per_setup": 3,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-buffer"
+      ]
+    },
+    {
+      "id": "buffer_expiry",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 4,
+      "max_actions_per_setup": 4,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "The rule explicitly tests release, repetition or a pause/resume boundary.",
+      "check_ids": [
+        "D3-buffer_expiry"
+      ]
+    },
+    {
+      "id": "reverse",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 4,
+      "max_actions_per_setup": 4,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "The rule explicitly tests release, repetition or a pause/resume boundary.",
+      "check_ids": [
+        "D3-reverse"
+      ]
+    },
+    {
+      "id": "wrap",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 6,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 3,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Independent repeated semantic preconditions; each has its own setup receipt.",
+      "check_ids": [
+        "D3-wrap"
+      ]
+    },
+    {
+      "id": "dot",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 4,
+      "max_actions_per_setup": 4,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "The rule explicitly tests release, repetition or a pause/resume boundary.",
+      "check_ids": [
+        "D3-dot"
+      ]
+    },
+    {
+      "id": "power",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-power",
+        "D2-power",
+        "D5-power"
+      ]
+    },
+    {
+      "id": "refresh",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-refresh"
+      ]
+    },
+    {
+      "id": "ghost_speed",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 6,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 3,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Independent repeated semantic preconditions; each has its own setup receipt.",
+      "check_ids": [
+        "D3-ghost_speed",
+        "D2-pursuit"
+      ]
+    },
+    {
+      "id": "release",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 6,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 3,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Independent repeated semantic preconditions; each has its own setup receipt.",
+      "check_ids": [
+        "D3-release",
+        "D2-release"
+      ]
+    },
+    {
+      "id": "inactivity",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 14,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-inactivity"
+      ]
+    },
+    {
+      "id": "waves",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 16,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 8,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 52,
+      "extra_action_reason": "Independent repeated semantic preconditions; each has its own setup receipt.",
+      "check_ids": [
+        "D3-waves"
+      ]
+    },
+    {
+      "id": "red",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-red"
+      ]
+    },
+    {
+      "id": "pink",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-pink"
+      ]
+    },
+    {
+      "id": "cyan",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-cyan"
+      ]
+    },
+    {
+      "id": "orange",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 4,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 2,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Independent repeated semantic preconditions; each has its own setup receipt.",
+      "check_ids": [
+        "D3-orange"
+      ]
+    },
+    {
+      "id": "flee",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-flee"
+      ]
+    },
+    {
+      "id": "capture",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-capture",
+        "D2-capture",
+        "D5-capture"
+      ]
+    },
+    {
+      "id": "return",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 22,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-return"
+      ]
+    },
+    {
+      "id": "death",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-death",
+        "D5-death"
+      ]
+    },
+    {
+      "id": "recovery",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 12,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-recovery",
+        "D2-recovery"
+      ]
+    },
+    {
+      "id": "loss",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 12,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-loss"
+      ]
+    },
+    {
+      "id": "extra_life",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-extra_life",
+        "D2-extra_life"
+      ]
+    },
+    {
+      "id": "fruit_spawn",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 6,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 3,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Independent repeated semantic preconditions; each has its own setup receipt.",
+      "check_ids": [
+        "D3-fruit_spawn"
+      ]
+    },
+    {
+      "id": "fruit_reward",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-fruit_reward",
+        "D2-fruit",
+        "D5-fruit"
+      ]
+    },
+    {
+      "id": "fruit_expiry",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 17,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-fruit_expiry"
+      ]
+    },
+    {
+      "id": "victory",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D3-victory",
+        "D2-results",
+        "D5-results"
+      ]
+    },
+    {
+      "id": "pause",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 4,
+      "max_actions_per_setup": 4,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 25,
+      "extra_action_reason": "The rule explicitly tests release, repetition or a pause/resume boundary.",
+      "check_ids": [
+        "D3-pause",
+        "D2-pause"
+      ]
+    },
+    {
+      "id": "restart_normal",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 3,
+      "max_actions_per_setup": 3,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 18,
+      "extra_action_reason": "Normal pause or terminal preparation plus the actual Restart click and post-reset observation.",
+      "check_ids": [
+        "D4-restart_normal"
+      ]
+    },
+    {
+      "id": "restart_fright",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 3,
+      "max_actions_per_setup": 3,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 18,
+      "extra_action_reason": "Normal pause or terminal preparation plus the actual Restart click and post-reset observation.",
+      "check_ids": [
+        "D4-restart_fright"
+      ]
+    },
+    {
+      "id": "restart_return",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 3,
+      "max_actions_per_setup": 3,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 18,
+      "extra_action_reason": "Normal pause or terminal preparation plus the actual Restart click and post-reset observation.",
+      "check_ids": [
+        "D4-restart_return"
+      ]
+    },
+    {
+      "id": "restart_fruit",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 3,
+      "max_actions_per_setup": 3,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 18,
+      "extra_action_reason": "Normal pause or terminal preparation plus the actual Restart click and post-reset observation.",
+      "check_ids": [
+        "D4-restart_fruit"
+      ]
+    },
+    {
+      "id": "restart_dying",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 3,
+      "max_actions_per_setup": 3,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 18,
+      "extra_action_reason": "Normal pause or terminal preparation plus the actual Restart click and post-reset observation.",
+      "check_ids": [
+        "D4-restart_dying"
+      ]
+    },
+    {
+      "id": "restart_won",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 3,
+      "max_actions_per_setup": 3,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 18,
+      "extra_action_reason": "Normal pause or terminal preparation plus the actual Restart click and post-reset observation.",
+      "check_ids": [
+        "D4-restart_won"
+      ]
+    },
+    {
+      "id": "restart_lost",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 3,
+      "max_actions_per_setup": 3,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 18,
+      "extra_action_reason": "Normal pause or terminal preparation plus the actual Restart click and post-reset observation.",
+      "check_ids": [
+        "D4-restart_lost"
+      ]
+    },
+    {
+      "id": "menu_navigation",
+      "setup_method": "normal_input",
+      "clean_start": "normal_restart",
+      "max_actions": 12,
+      "max_actions_per_setup": 12,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 30,
+      "extra_action_reason": "Repeated Options/Back and pause/Main Menu form the lifecycle under test.",
+      "check_ids": [
+        "D4-menu",
+        "D2-menus"
+      ]
+    },
+    {
+      "id": "options",
+      "setup_method": "normal_input",
+      "clean_start": "normal_restart",
+      "max_actions": 14,
+      "max_actions_per_setup": 14,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 35,
+      "extra_action_reason": "Selectors, Revert, Back and Apply are distinct required operations.",
+      "check_ids": [
+        "D3-options",
+        "D4-options",
+        "D5-options"
+      ]
+    },
+    {
+      "id": "persistence",
+      "setup_method": "normal_input",
+      "clean_start": "normal_restart",
+      "max_actions": 12,
+      "max_actions_per_setup": 12,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 160,
+      "extra_action_reason": "The required lifecycle includes actual process close/reopen and a fresh Start.",
+      "check_ids": [
+        "D4-save",
+        "D4-reopen",
+        "D4-quit",
+        "D4-repeat"
+      ]
+    },
+    {
+      "id": "presentation",
+      "setup_method": "hybrid",
+      "clean_start": "normal_restart",
+      "max_actions": 2,
+      "max_actions_per_setup": 2,
+      "setup_repetitions": 1,
+      "action_count": "test-phase press/down/click/start/stop; release and evidence reads excluded",
+      "max_serial_seconds": 15,
+      "extra_action_reason": "Bounded normal inputs establish and observe this rule.",
+      "check_ids": [
+        "D5-camera",
+        "D5-honesty"
+      ]
+    }
+  ]
+}

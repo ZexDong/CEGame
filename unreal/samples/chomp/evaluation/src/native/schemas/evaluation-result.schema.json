@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:chomp:diagnostic-result:1.0.0",
+  "title": "Chomp completed numerical diagnostic result",
+  "type": "object",
+  "required": ["schema_version", "status", "candidate_identity", "scorer_identity", "contract_identity", "scores", "functional_total", "overall", "d6_rounds", "checkpoint_counts", "failures", "not_formal_frozen_score"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "status": {"const": "diagnostic_complete"},
+    "candidate_identity": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "scorer_identity": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "contract_identity": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "scores": {
+      "type": "object", "required": ["D1", "D2", "D3", "D4", "D5", "D6"], "additionalProperties": false,
+      "properties": {
+        "D1": {"type": "number", "minimum": 0, "maximum": 10},
+        "D2": {"type": "number", "minimum": 0, "maximum": 30},
+        "D3": {"type": "number", "minimum": 0, "maximum": 20},
+        "D4": {"type": "number", "minimum": 0, "maximum": 20},
+        "D5": {"type": "number", "minimum": 0, "maximum": 10},
+        "D6": {"type": "number", "minimum": 0, "maximum": 10}
+      }
+    },
+    "functional_total": {"type": "number", "minimum": 0, "maximum": 90},
+    "overall": {"type": "number", "minimum": 0, "maximum": 100},
+    "d6_rounds": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number", "minimum": 0, "maximum": 10}},
+    "checkpoint_counts": {"type": "object"},
+    "failures": {"type": "object", "additionalProperties": {"type": "object", "required": ["verdict", "reason", "attribution", "evidence"], "properties": {"verdict": {"enum": ["fail", "unreachable"]}, "reason": {"type": "string", "minLength": 1}, "attribution": {"const": "candidate"}, "evidence": {"type": "object"}}}},
+    "not_formal_frozen_score": {"const": true}
+  },
+  "additionalProperties": false
+}

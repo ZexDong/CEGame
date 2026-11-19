@@ -1,0 +1,8 @@
+{
+  "family": "nested",
+  "native_subdir": "evaluation",
+  "place": "DeepRelayCandidate.rbxlx",
+  "native_zip": "DeepRelayCandidate_project.zip",
+  "sample_id": "roblox_deep_relay",
+  "requirement_prefix": "DR"
+}

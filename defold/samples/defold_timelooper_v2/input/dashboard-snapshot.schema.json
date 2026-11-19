@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "defold-dashboard-snapshot.schema.json",
+  "title": "Game State Dashboard snapshot — v2-defold-20260828",
+  "type": "object",
+  "required": ["revision", "phase", "slots", "entities", "targets"],
+  "additionalProperties": false,
+  "properties": {
+    "revision": { "type": "integer", "minimum": 1 },
+    "phase": { "enum": ["not_ready", "menu", "playing", "paused", "won", "lost"] },
+    "slots": { "type": "object", "additionalProperties": { "type": "number" } },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "state", "visible"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "minLength": 1 },
+          "kind": { "type": "string", "minLength": 1 },
+          "state": { "type": "string" },
+          "visible": { "type": "boolean" },
+          "cell": { "$ref": "#/$defs/cell" },
+          "position": { "$ref": "#/$defs/vector" },
+          "size": { "$ref": "#/$defs/vector" },
+          "rect": { "$ref": "#/$defs/rect" }
+        },
+        "allOf": [
+          {
+            "not": {
+              "anyOf": [
+                { "required": ["cell", "position"] },
+                { "required": ["cell", "rect"] },
+                { "required": ["position", "rect"] }
+              ]
+            }
+          },
+          { "if": { "required": ["size"] }, "then": { "required": ["position"] } }
+        ]
+      }
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "rect", "visible", "interactable"],
+        "additionalProperties": false,
+        "properties": {
+          "kind": { "type": "string", "minLength": 1 },
+          "rect": { "$ref": "#/$defs/rect" },
+          "visible": { "type": "boolean" },
+          "interactable": { "type": "boolean" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "cell": {
+      "type": "array",
+      "items": { "type": "integer" },
+      "minItems": 2,
+      "maxItems": 3
+    },
+    "vector": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 2,
+      "maxItems": 3
+    },
+    "rect": {
+      "type": "array",
+      "items": { "type": "number" },
+      "minItems": 4,
+      "maxItems": 4,
+      "description": "[x, y, width, height] in game-view pixels, origin bottom-left"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "OmniGame.Benchmark.DungeonDuel.Trajectory.Static",
+  "rootNamespace": "OmniGame.Benchmark.DungeonDuel.Trajectory",
+  "references": [
+    "OmniGame.Benchmark.DungeonDuel.V2",
+    "Unity.InputSystem"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

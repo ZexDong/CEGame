@@ -1,0 +1,4 @@
+public_smoke_build.rbxlx
+*.rbxlx.lock
+*.log
+__pycache__/

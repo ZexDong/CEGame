@@ -1,0 +1,132 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:rollball-fixed-maze:game-state:1.0.0",
+  "title": "RollBall Fixed Maze Read-only Game State",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "process_id",
+    "snapshot_id",
+    "monotonic_ms",
+    "bridge_ready",
+    "provider_ready",
+    "first_frame",
+    "layout_id",
+    "start_cell",
+    "exit_cell",
+    "trap_cells",
+    "game_state"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "process_id": { "type": "integer", "minimum": 1 },
+    "snapshot_id": { "type": "integer", "minimum": 1 },
+    "monotonic_ms": { "type": "number", "minimum": 0 },
+    "bridge_ready": { "type": "boolean" },
+    "provider_ready": { "type": "boolean" },
+    "first_frame": { "type": "boolean" },
+    "layout_id": { "const": "rollball-fixed-maze-10x10-v2" },
+    "start_cell": { "$ref": "#/$defs/cell" },
+    "exit_cell": { "$ref": "#/$defs/cell" },
+    "trap_cells": {
+      "type": "array",
+      "minItems": 16,
+      "maxItems": 16,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/cell" }
+    },
+    "bridge_error": { "type": "string", "minLength": 1, "maxLength": 512 },
+    "game_state": {
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "#/$defs/game_state" }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "provider_ready": { "const": false } }, "required": ["provider_ready"] },
+      "then": { "properties": { "game_state": { "type": "null" } } }
+    },
+    {
+      "if": { "properties": { "provider_ready": { "const": true } }, "required": ["provider_ready"] },
+      "then": {
+        "properties": {
+          "bridge_ready": { "const": true },
+          "game_state": { "$ref": "#/$defs/game_state" }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "cell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y"],
+      "properties": {
+        "x": { "type": "integer", "minimum": 0, "maximum": 9 },
+        "y": { "type": "integer", "minimum": 0, "maximum": 9 }
+      }
+    },
+    "vector3": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "z"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "z": { "type": "number" }
+      }
+    },
+    "ball": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["world_position", "grid_cell", "linear_velocity", "angular_velocity", "active"],
+      "properties": {
+        "world_position": { "$ref": "#/$defs/vector3" },
+        "grid_cell": { "$ref": "#/$defs/cell" },
+        "linear_velocity": { "$ref": "#/$defs/vector3" },
+        "angular_velocity": { "$ref": "#/$defs/vector3" },
+        "active": { "type": "boolean" }
+      }
+    },
+    "hud": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["visible", "status_text", "trap_hits_text", "restart_text"],
+      "properties": {
+        "visible": { "type": "boolean" },
+        "status_text": {
+          "enum": ["STATUS: RUNNING", "STATUS: TRAP HIT", "STATUS: MAZE COMPLETE"]
+        },
+        "trap_hits_text": { "type": "string", "pattern": "^TRAP HITS: [0-9]+$" },
+        "restart_text": { "const": "R - RESTART" }
+      }
+    },
+    "game_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "round_id",
+        "round_index",
+        "restart_count",
+        "status",
+        "trap_hits",
+        "input_enabled",
+        "ball",
+        "hud"
+      ],
+      "properties": {
+        "round_id": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$" },
+        "round_index": { "type": "integer", "minimum": 1 },
+        "restart_count": { "type": "integer", "minimum": 0 },
+        "status": { "enum": ["running", "trap_hit", "maze_complete"] },
+        "trap_hits": { "type": "integer", "minimum": 0 },
+        "input_enabled": { "type": "boolean" },
+        "ball": { "$ref": "#/$defs/ball" },
+        "hud": { "$ref": "#/$defs/hud" }
+      }
+    }
+  }
+}

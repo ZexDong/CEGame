@@ -1,0 +1,177 @@
+{
+  "files": [
+    {
+      "path": "starter-project/SourceArt/Meshes/SM_Eye.obj",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/Meshes/SM_FruitBody.obj",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/Meshes/SM_FruitCrown.obj",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/Meshes/SM_GhostBody.obj",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/Meshes/SM_GhostHead.obj",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/Meshes/SM_Jaw.obj",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/Meshes/SM_Tooth.obj",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/Textures/T_WallEdge.png",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/UI/life-icon.svg",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/UI/T_LifeIcon.png",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Materials/M_Neon.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Materials/M_Wall.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Materials/MI_Crown.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Materials/MI_Cyan.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Materials/MI_Dot.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Materials/MI_Eye.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Materials/MI_Floor.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Materials/MI_Frightened.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Materials/MI_Fruit.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Materials/MI_Gate.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Materials/MI_Orange.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Materials/MI_Pink.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Materials/MI_Player.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Materials/MI_Red.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Meshes/SM_Eye.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Meshes/SM_FruitBody.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Meshes/SM_FruitCrown.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Meshes/SM_GhostBody.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Meshes/SM_GhostHead.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Meshes/SM_Jaw.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Meshes/SM_Tooth.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/Textures/T_WallEdge.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Art/UI/T_LifeIcon.uasset",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/Meshes/SM_Eye.obj",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/Meshes/SM_FruitBody.obj",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/Meshes/SM_FruitCrown.obj",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/Meshes/SM_GhostBody.obj",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/Meshes/SM_GhostHead.obj",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/Meshes/SM_Jaw.obj",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/Meshes/SM_Tooth.obj",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/Textures/T_WallEdge.png",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/UI/life-icon.svg",
+      "terms": "assets/legal/NOTICES.md"
+    },
+    {
+      "path": "starter-project/SourceArt/UI/T_LifeIcon.png",
+      "terms": "assets/legal/NOTICES.md"
+    }
+  ],
+  "engine_references": "Referenced from the installed licensed engine; no engine binaries or assets copied."
+}

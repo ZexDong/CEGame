@@ -1,0 +1,102 @@
+{
+  "schema_version": 2,
+  "task_id": "defold_bomb_frog_v3",
+  "coordinate_space": {
+    "name": "grid_col_row_up",
+    "dimensions": 2,
+    "origin": "bottom-left",
+    "axes": ["column increases to the right", "row increases upward"],
+    "units": "grid cells"
+  },
+  "level_width_cells": 9,
+  "level_height_cells": 7,
+  "target_rect_space": {
+    "width": 1280,
+    "height": 720,
+    "origin": "bottom-left",
+    "units": "game-view pixels"
+  },
+  "seed_entry": "not applicable; both chamber layouts and hidden-content assignments are deterministic",
+  "slots": [
+    "run_serial",
+    "chamber_index",
+    "chamber_total",
+    "chamber_width",
+    "chamber_height",
+    "stage_clear",
+    "completed_chambers",
+    "hearts",
+    "bombs_remaining",
+    "active_bomb_count",
+    "active_explosion_count",
+    "invulnerability_milliseconds",
+    "treasures_hidden",
+    "treasures_revealed",
+    "treasures_collected",
+    "treasure_total",
+    "enemies_alive",
+    "enemy_total",
+    "armored_enemies",
+    "exposed_enemies",
+    "campaign_treasures_collected",
+    "campaign_enemies_defeated",
+    "loss_reason_code"
+  ],
+  "entities": [
+    { "kind": "player", "geometry": "cell", "states": ["normal", "invulnerable"] },
+    { "kind": "solid_wall", "geometry": "cell", "states": ["solid"] },
+    { "kind": "destructible_obstacle", "geometry": "cell", "states": ["intact"] },
+    { "kind": "bomb", "geometry": "cell", "states": ["fuse_active"] },
+    { "kind": "explosion", "geometry": "cell", "states": ["active"] },
+    { "kind": "enemy", "geometry": "cell", "states": ["normal", "armored", "exposed"] },
+    { "kind": "treasure", "geometry": "cell", "states": ["revealed"] }
+  ],
+  "targets": [
+    { "kind": "menu_start_button" },
+    { "kind": "menu_instructions_button" },
+    { "kind": "menu_exit_button" },
+    { "kind": "instructions_back_button" },
+    { "kind": "pause_resume_button" },
+    { "kind": "pause_restart_button" },
+    { "kind": "pause_menu_button" },
+    { "kind": "stage_continue_button" },
+    { "kind": "stage_restart_button" },
+    { "kind": "stage_menu_button" },
+    { "kind": "result_restart_button" },
+    { "kind": "result_menu_button" }
+  ],
+  "honesty": {
+    "phase_ocr_any": {
+      "menu": ["START CAMPAIGN", "INSTRUCTIONS", "TWIN CHAMBERS", "Start game", "Instructions"],
+      "playing": ["CHAMBER", "BOMBS", "HEALTH", "TREASURE", "ENEMIES", "Room", "Bomb", "Life"],
+      "paused": ["PAUSED", "CHAMBER CLEAR", "CONTINUE", "Pause", "Room completed", "Continue"],
+      "won": ["CAMPAIGN COMPLETE", "TWIN CHAMBERS CLEARED", "Close level", "All completed"],
+      "lost": ["GAME OVER", "HEALTH EXHAUSTED", "BOMBS EXHAUSTED", "Game over", "Life exhausted", "Bombs exhausted"]
+    }
+  },
+  "controls": {
+    "movement_template": "discrete_keys_with_hold_repeat",
+    "keys": {
+      "up": ["W", "UpArrow"],
+      "down": ["S", "DownArrow"],
+      "left": ["A", "LeftArrow"],
+      "right": ["D", "RightArrow"],
+      "bomb": "Space",
+      "confirm": "Enter",
+      "pause": "Escape",
+      "restart": "R",
+      "quit": "Q"
+    },
+    "navigation": {
+      "blocking_kinds": ["solid_wall", "destructible_obstacle", "bomb", "explosion"],
+      "hazard_kinds": ["enemy", "explosion"],
+      "approach_kinds": ["solid_wall", "destructible_obstacle", "bomb", "enemy"],
+      "action_key": "bomb",
+      "action_fallback_kinds": ["enemy"],
+      "post_action_avoid_kinds": ["bomb", "explosion"],
+      "post_action_safe_distance_cells": 2,
+      "post_action_settle_kinds": ["bomb", "explosion"]
+    },
+    "mouse": "Left click activates visible menu, instruction, pause, chamber-clear, and result targets"
+  }
+}

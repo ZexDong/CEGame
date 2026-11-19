@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "evaluator_revision": "2026.09.02-noir-docv2-hard-r6",
+  "game": "unity_noir_roombreak_docv2_hard",
+  "checklist_revision": "docv2-common-baseline-20260827",
+  "items": [
+    {
+      "id": "CB-01",
+      "applies": true,
+      "check_ids": [
+        "D1_FINAL_SCENE",
+        "D2_MENU",
+        "D4_START"
+      ]
+    },
+    {
+      "id": "CB-02",
+      "applies": true,
+      "check_ids": [
+        "D1_IMPORT_COMPILE"
+      ]
+    },
+    {
+      "id": "CB-03",
+      "applies": true,
+      "check_ids": [
+        "D4_REOPEN"
+      ]
+    },
+    {
+      "id": "CB-04",
+      "applies": true,
+      "check_ids": [
+        "D4_COMPLETE_JOURNEY",
+        "D4_MIXED_SUCCESS_FLOW"
+      ]
+    },
+    {
+      "id": "CB-05",
+      "applies": true,
+      "check_ids": [
+        "D5_MOVEMENT_COMBAT",
+        "D5_DASH_FEEDBACK",
+        "D5_AUDIO_VISUAL_FEEDBACK"
+      ]
+    },
+    {
+      "id": "CB-06",
+      "applies": true,
+      "check_ids": [
+        "D3_ZERO_DASH_REJECT",
+        "D5_INPUT_REJECTION_FEEDBACK"
+      ]
+    },
+    {
+      "id": "CB-07",
+      "applies": true,
+      "check_ids": [
+        "D2_UI_STATES",
+        "D5_MENU_CONTROLS",
+        "D5_HUD"
+      ]
+    },
+    {
+      "id": "CB-08",
+      "applies": true,
+      "check_ids": [
+        "D2_SUCCESS",
+        "D5_PAUSE_SUCCESS"
+      ]
+    },
+    {
+      "id": "CB-09",
+      "applies": true,
+      "check_ids": [
+        "D5_HUD"
+      ]
+    },
+    {
+      "id": "CB-10",
+      "applies": true,
+      "check_ids": [
+        "D2_FIVE_ROOMS",
+        "D4_ROOM_PROGRESSION",
+        "D5_HUD"
+      ]
+    },
+    {
+      "id": "CB-11",
+      "applies": true,
+      "check_ids": [
+        "D3_SUCCESS_CONDITION",
+        "D4_COMPLETE_JOURNEY",
+        "D4_MIXED_SUCCESS_FLOW",
+        "D5_PAUSE_SUCCESS"
+      ]
+    },
+    {
+      "id": "CB-12",
+      "applies": true,
+      "check_ids": [
+        "D2_LETHAL_DAMAGE",
+        "D4_DEATH_RECOVERY",
+        "D5_DEATH_RESPAWN"
+      ]
+    },
+    {
+      "id": "CB-13",
+      "applies": true,
+      "check_ids": [
+        "D3_RESTART_CLEAN",
+        "D4_RESTART_ACTIVE",
+        "D4_RESTART_PAUSED_SUCCESS"
+      ]
+    },
+    {
+      "id": "CB-14",
+      "applies": true,
+      "check_ids": [
+        "D3_SUCCESS_CONDITION",
+        "D4_INPUT_LIFECYCLE_STABILITY"
+      ]
+    },
+    {
+      "id": "CB-15",
+      "applies": true,
+      "check_ids": [
+        "D3_MIXED_EXIT_LOCK",
+        "D3_ONE_PRESS_ONE_INTENT",
+        "D3_PAUSE_NO_BUFFER"
+      ]
+    },
+    {
+      "id": "CB-16",
+      "applies": true,
+      "check_ids": [
+        "D1_REAL_FRAME",
+        "D2_AV_ASSEMBLY"
+      ]
+    },
+    {
+      "id": "CB-17",
+      "applies": true,
+      "check_ids": [
+        "D4_RESTART_PAUSED_SUCCESS",
+        "D4_REOPEN"
+      ]
+    },
+    {
+      "id": "CB-18",
+      "applies": true,
+      "check_ids": [
+        "D1_DASHBOARD_CONTRACT",
+        "D1_DASHBOARD_PROBE_CROSSCHECK",
+        "D5_DASHBOARD_VISIBLE_AGREEMENT"
+      ]
+    }
+  ],
+  "policy": "Every CB-01..CB-18 is declared once. A scored leaf can support multiple baseline/GDD rows but its weight is counted exactly once from rules.json."
+}

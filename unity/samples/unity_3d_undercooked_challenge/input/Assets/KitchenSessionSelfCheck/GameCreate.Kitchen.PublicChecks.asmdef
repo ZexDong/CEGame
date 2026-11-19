@@ -1,0 +1,14 @@
+{
+  "name": "GameCreate.Kitchen.PublicChecks",
+  "rootNamespace": "GameCreate.Kitchen.PublicChecks",
+  "references": [
+    "GameCreate.Session",
+    "GameCreate.Kitchen.SessionContract",
+    "GameCreate.Session.PublicChecks"
+  ],
+  "includePlatforms": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": true
+}

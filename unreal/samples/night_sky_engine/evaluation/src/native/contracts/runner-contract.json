@@ -1,0 +1,40 @@
+{
+  "schema_version": "3.0.0",
+  "game_id": "NightSkyEngine",
+  "entry": "scripts/evaluate.py",
+  "scorer": "scripts/score.py",
+  "required_parameters": [
+    "--project",
+    "--engine",
+    "--pwsh",
+    "--output",
+    "--run-id",
+    "--candidate-id"
+  ],
+  "engine": {
+    "version": "5.7.4",
+    "changelist": 51494982
+  },
+  "platform": "Windows x64",
+  "runtime_mode": "editor_game",
+  "viewport": [
+    1280,
+    720
+  ],
+  "normal_input_only": true,
+  "observer_read_only": true,
+  "state_freshness_seconds": 2,
+  "sampling_ms": 25,
+  "output_directory_policy": "absent_or_empty",
+  "budget": "budget.json",
+  "exit_codes": {
+    "0": "Evidence collected; candidate failures may be present. This is not a score.",
+    "2": "Infrastructure invalid; score publication prohibited."
+  },
+  "verdicts": [
+    "pass",
+    "fail",
+    "unreachable"
+  ],
+  "review_required": "semantic-review.md"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "GameCreate.Stormbound.Evaluator.HostQualification",
+  "references": [
+    "GameCreate.Stormbound.Evaluator.Core"
+  ],
+  "includePlatforms": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": false
+}

@@ -1,0 +1,360 @@
+{
+  "vehicles": [
+    {
+      "id": 0,
+      "name": "Scout",
+      "max_speed": 30,
+      "acceleration": 10,
+      "steering": 4,
+      "hover_height": 1,
+      "shield": 100,
+      "collision_cost": 15,
+      "regen": 6
+    },
+    {
+      "id": 1,
+      "name": "Dart",
+      "max_speed": 35,
+      "acceleration": 12,
+      "steering": 5,
+      "hover_height": 1.2,
+      "shield": 85,
+      "collision_cost": 18,
+      "regen": 5
+    },
+    {
+      "id": 2,
+      "name": "Wasp",
+      "max_speed": 40,
+      "acceleration": 14,
+      "steering": 6,
+      "hover_height": 0.9,
+      "shield": 70,
+      "collision_cost": 20,
+      "regen": 4
+    },
+    {
+      "id": 3,
+      "name": "Arrow",
+      "max_speed": 45,
+      "acceleration": 16,
+      "steering": 7,
+      "hover_height": 0.8,
+      "shield": 60,
+      "collision_cost": 24,
+      "regen": 3
+    }
+  ],
+  "tracks": [
+    {
+      "id": 1,
+      "length": 150,
+      "time_limit": 30,
+      "ramp_start": 52.5,
+      "ramp_peak": 67.5,
+      "ramp_end": 82.5,
+      "ramp_height": 4,
+      "obstacles": [
+        {
+          "id": "obstacle_0",
+          "x": -3,
+          "z": 24.0,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "obstacle_1",
+          "x": 3,
+          "z": 42.0,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "obstacle_2",
+          "x": -3,
+          "z": 60.0,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "obstacle_3",
+          "x": 3,
+          "z": 78.0,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "obstacle_4",
+          "x": -3,
+          "z": 96.0,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "obstacle_5",
+          "x": 3,
+          "z": 114.0,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        }
+      ],
+      "rings": [
+        {
+          "id": "ring_0",
+          "x": 0,
+          "z": 18.0
+        },
+        {
+          "id": "ring_1",
+          "x": -2,
+          "z": 42.0
+        },
+        {
+          "id": "ring_2",
+          "x": 0,
+          "z": 66.0
+        },
+        {
+          "id": "ring_3",
+          "x": -2,
+          "z": 90.0
+        },
+        {
+          "id": "ring_4",
+          "x": 0,
+          "z": 114.0
+        }
+      ],
+      "gates": [
+        45.0,
+        90.0,
+        150
+      ]
+    },
+    {
+      "id": 2,
+      "length": 200,
+      "time_limit": 35,
+      "ramp_start": 70.0,
+      "ramp_peak": 90.0,
+      "ramp_end": 110.00000000000001,
+      "ramp_height": 5,
+      "obstacles": [
+        {
+          "id": "obstacle_0",
+          "x": -3,
+          "z": 32.0,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "obstacle_1",
+          "x": 3,
+          "z": 56.0,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "obstacle_2",
+          "x": -3,
+          "z": 80.0,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "obstacle_3",
+          "x": 3,
+          "z": 104.0,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "obstacle_4",
+          "x": -3,
+          "z": 128.0,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "obstacle_5",
+          "x": 3,
+          "z": 152.0,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        }
+      ],
+      "rings": [
+        {
+          "id": "ring_0",
+          "x": 0,
+          "z": 24.0
+        },
+        {
+          "id": "ring_1",
+          "x": -2,
+          "z": 56.0
+        },
+        {
+          "id": "ring_2",
+          "x": 0,
+          "z": 88.0
+        },
+        {
+          "id": "ring_3",
+          "x": -2,
+          "z": 120.0
+        },
+        {
+          "id": "ring_4",
+          "x": 0,
+          "z": 152.0
+        }
+      ],
+      "gates": [
+        60.0,
+        120.0,
+        200
+      ]
+    },
+    {
+      "id": 3,
+      "length": 240,
+      "time_limit": 40,
+      "ramp_start": 84.0,
+      "ramp_peak": 108.0,
+      "ramp_end": 132.0,
+      "ramp_height": 6,
+      "obstacles": [
+        {
+          "id": "obstacle_0",
+          "x": -3,
+          "z": 38.4,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "obstacle_1",
+          "x": 3,
+          "z": 67.2,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "obstacle_2",
+          "x": -3,
+          "z": 96.0,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "obstacle_3",
+          "x": 3,
+          "z": 124.8,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "obstacle_4",
+          "x": -3,
+          "z": 153.6,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "obstacle_5",
+          "x": 3,
+          "z": 182.4,
+          "size": [
+            1.5,
+            2,
+            2
+          ]
+        }
+      ],
+      "rings": [
+        {
+          "id": "ring_0",
+          "x": 0,
+          "z": 28.8
+        },
+        {
+          "id": "ring_1",
+          "x": -2,
+          "z": 67.2
+        },
+        {
+          "id": "ring_2",
+          "x": 0,
+          "z": 105.6
+        },
+        {
+          "id": "ring_3",
+          "x": -2,
+          "z": 144.0
+        },
+        {
+          "id": "ring_4",
+          "x": 0,
+          "z": 182.4
+        }
+      ],
+      "gates": [
+        72.0,
+        144.0,
+        240
+      ]
+    }
+  ],
+  "road_half_width": 6
+}

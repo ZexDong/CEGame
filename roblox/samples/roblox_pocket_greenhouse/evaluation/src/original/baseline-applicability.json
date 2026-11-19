@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "game": "pocket_greenhouse",
+  "checklist_revision": "v2-draft",
+  "items": [
+    {"id":"CB-01","applies":true,"check_ids":["CB-01"]},
+    {"id":"CB-02","applies":true,"check_ids":["STATIC-source-sanity"]},
+    {"id":"CB-03","applies":true,"check_ids":["REOPEN"]},
+    {"id":"CB-04","applies":true,"check_ids":["FLOW-START","PLANT-SUN"]},
+    {"id":"CB-05","applies":true,"check_ids":["WATER-SUN","WATER-SUN-SECOND","WATER-MOON","DAY-ADVANCE","PLANT-FEEDBACK","GROWTH-FEEDBACK-1","GROWTH-FEEDBACK-2"]},
+    {"id":"CB-06","applies":true,"check_ids":["NEG-NO-PLOT","NEG-HARVEST","NEG-DELIVER","CB-06-FEEDBACK"]},
+    {"id":"CB-07","applies":true,"check_ids":["UI-ENTRY","CONTENT-CONTROLS"]},
+    {"id":"CB-08","applies":true,"check_ids":["CAPTURE-Victory","CAPTURE-Failure"]},
+    {"id":"CB-09","applies":true,"check_ids":["INIT","COST-SUN","COST-MOON","DAY-ADVANCE","HARVEST-SUN"]},
+    {"id":"CB-10","applies":true,"check_ids":["CONTENT-CONTROLS"]},
+    {"id":"CB-11","applies":true,"check_ids":["WIN","VICTORY-FEEDBACK"]},
+    {"id":"CB-12","applies":true,"check_ids":["LOSE","FAILURE-FEEDBACK","RESTART"]},
+    {"id":"CB-13","applies":true,"check_ids":["RESTART","RESTART-MIDRUN","RESTART-FEEDBACK"]},
+    {"id":"CB-14","applies":true,"check_ids":["TERMINAL-LOCK","LOSS-TERMINAL-LOCK"]},
+    {"id":"CB-15","applies":true,"check_ids":["HONESTY-no-input"]},
+    {"id":"CB-16","applies":true,"check_ids":["STATIC-no-debug-ui"]},
+    {"id":"CB-17","applies":true,"check_ids":["CAPTURE-Victory","CAPTURE-Failure"]},
+    {"id":"CB-18","applies":true,"check_ids":["STATIC-dashboard","HONESTY-snapshot"]}
+  ]
+}

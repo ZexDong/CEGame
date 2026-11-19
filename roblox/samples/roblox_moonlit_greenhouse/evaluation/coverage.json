@@ -1,0 +1,45 @@
+{
+  "sample_id": "roblox_moonlit_greenhouse",
+  "document_type": "Original GDD and evaluator source index",
+  "new_evaluation_requirement": false,
+  "requirements": [
+    {
+      "requirement_id": "MG-GDD-1",
+      "obligation": "Moonlit Greenhouse Game Design Document",
+      "source_line": 1,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "MG-GDD-2",
+      "obligation": "Concept",
+      "source_line": 3,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "MG-GDD-3",
+      "obligation": "Core loop",
+      "source_line": 6,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "MG-GDD-4",
+      "obligation": "Initial and terminal states",
+      "source_line": 9,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "MG-GDD-5",
+      "obligation": "Fixed targets",
+      "source_line": 12,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "MG-GDD-6",
+      "obligation": "Feedback and space",
+      "source_line": 15,
+      "native_evaluator_sources": "src/original/"
+    }
+  ],
+  "original_coverage_files": [],
+  "existing_evaluators_preserved": true
+}

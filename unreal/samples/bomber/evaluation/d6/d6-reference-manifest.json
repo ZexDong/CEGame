@@ -1,0 +1,45 @@
+{
+  "schema_version": "3.0.0",
+  "game_id": "Bomber",
+  "task_revision": "2.0.1",
+  "evaluator_revision": "bomber-evaluator-5.0.0",
+  "protocol": "canonical_five_criteria_three_rounds",
+  "reference_source": "original_game_baseline",
+  "reference_map": "Map.Blockout",
+  "reference_opponents": "native AI",
+  "visual_mapping": "Compare active arena, explosion feedback and round-result presentation. Legacy state IDs retain candidate capture compatibility; reference AI count, chain mechanics and winner identity are not visual scoring requirements.",
+  "status": "ready",
+  "source_identity_sha256": "6af018c4bd22e97e72e541642071b68962c7c09c49cf05a6773448e89e6e00e6",
+  "reason": "One Blockout map with native AI opponents: active arena, explosion feedback and round-result presentation. Native original-game screenshots only; visual roles do not require matching winner, opponent count or chain timing.",
+  "viewport": {
+    "width": 1280,
+    "height": 720,
+    "dpi_scale": 1
+  },
+  "fixed_prompt": "FIXED_VLM_PROMPT.txt",
+  "fixed_prompt_sha256": "558b4ccffad7d13d3ae3e5c6fc5a9b36a7bba37d9be47da895c2e50bc9c5a6ee",
+  "states": [
+    {
+      "state_id": "active-duel",
+      "visual_label": "Active arena",
+      "semantic_phase": "active",
+      "reference_image": "reference/active-duel.png",
+      "sha256": "25f938ce987a1bcd6aed3f6fea8ea8ae215f849250bfdc30faca2338ea9911d6"
+    },
+    {
+      "state_id": "chain-reaction",
+      "visual_label": "Bomb explosion feedback",
+      "semantic_phase": "active",
+      "reference_image": "reference/chain-reaction.png",
+      "sha256": "91d1a7962c8dc166aa159b830705b0a4063aac11488765dd548b58b0a20aff4b"
+    },
+    {
+      "state_id": "player1-win",
+      "visual_label": "Round result screen",
+      "reference_result": "Lose",
+      "semantic_phase": "player1_win",
+      "reference_image": "reference/player1-win.png",
+      "sha256": "173c1d5bac30cf8d6caa1ee91b1f208fb4c31484302f7ddb4c483625f3b5079d"
+    }
+  ]
+}

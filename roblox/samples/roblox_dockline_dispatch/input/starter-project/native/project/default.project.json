@@ -1,0 +1,37 @@
+{
+  "name": "DocklineDispatchPublicStart",
+  "tree": {
+    "$className": "DataModel",
+    "Lighting": {
+      "$className": "Lighting",
+      "$properties": {
+        "Brightness": 2.2,
+        "ClockTime": 22
+      }
+    },
+    "ReplicatedStorage": {
+      "$className": "ReplicatedStorage",
+      "DocklineDispatchPublicSchema": {
+        "$path": "src/shared/DocklineDispatchSchema.luau"
+      }
+    },
+    "ServerScriptService": {"$className": "ServerScriptService"},
+    "StarterGui": {"$className": "StarterGui"},
+    "StarterPlayer": {
+      "$className": "StarterPlayer",
+      "$properties": {
+        "CameraMode": "Classic",
+        "CharacterWalkSpeed": 16,
+        "CharacterJumpHeight": 7.2
+      },
+      "StarterPlayerScripts": {"$className": "StarterPlayerScripts"}
+    },
+    "Workspace": {
+      "$className": "Workspace",
+      "$properties": {
+        "Gravity": 196.2,
+        "StreamingEnabled": false
+      }
+    }
+  }
+}

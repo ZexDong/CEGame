@@ -1,0 +1,454 @@
+{
+  "schema_version": 2,
+  "evaluator_protocol": "game-independent-d1-d6-v2-hybrid",
+  "evaluator_revision": "2026.09.19-driftfolk-stormbound-session-v2.1-imgui-observation",
+  "benchmark_id": "unity.driftfolk_stormbound.v2",
+  "coverage_manifest": "requirement-coverage.json",
+  "checkpoint_script": "checkpoint-script.json",
+  "baseline_applicability": "baseline-applicability.json",
+  "automatic_score_maximum": 90,
+  "dimensions": {
+    "D1": {
+      "maximum_score": 10,
+      "checks": [
+        {
+          "id": "D1_SCENE",
+          "weight": 2,
+          "requirements": [
+            "FLOW-01"
+          ]
+        },
+        {
+          "id": "D1_CAMERA",
+          "weight": 2,
+          "requirements": [
+            "PRESENT-01"
+          ]
+        },
+        {
+          "id": "D1_ACTORS",
+          "weight": 2,
+          "requirements": [
+            "FLOW-01"
+          ]
+        },
+        {
+          "id": "D1_SESSION_ENTRY",
+          "weight": 2,
+          "requirements": [
+            "SAVE-01"
+          ]
+        },
+        {
+          "id": "D1_SESSION_STATE",
+          "weight": 2,
+          "requirements": [
+            "SAVE-01"
+          ]
+        }
+      ]
+    },
+    "D2": {
+      "maximum_score": 30,
+      "checks": [
+        {
+          "id": "D2_START",
+          "weight": 2,
+          "requirements": [
+            "FLOW-01"
+          ]
+        },
+        {
+          "id": "D2_PRODUCTION",
+          "weight": 2,
+          "requirements": [
+            "WORK-01"
+          ]
+        },
+        {
+          "id": "D2_FATIGUE",
+          "weight": 2,
+          "requirements": [
+            "WORK-01"
+          ]
+        },
+        {
+          "id": "D2_NIGHT",
+          "weight": 2,
+          "requirements": [
+            "HEALTH-01"
+          ]
+        },
+        {
+          "id": "D2_MEDIC",
+          "weight": 2,
+          "requirements": [
+            "HEALTH-01"
+          ]
+        },
+        {
+          "id": "D2_WEATHER",
+          "weight": 2,
+          "requirements": [
+            "WEATHER-01"
+          ]
+        },
+        {
+          "id": "D2_BUILD",
+          "weight": 2,
+          "requirements": [
+            "BUILD-01"
+          ]
+        },
+        {
+          "id": "D2_FERRY",
+          "weight": 2,
+          "requirements": [
+            "FERRY-01"
+          ]
+        },
+        {
+          "id": "D2_ARRIVAL",
+          "weight": 2,
+          "requirements": [
+            "FERRY-02"
+          ]
+        },
+        {
+          "id": "D2_EVENT",
+          "weight": 2,
+          "requirements": [
+            "EVENT-01"
+          ]
+        },
+        {
+          "id": "D2_ESCAPE",
+          "weight": 2,
+          "requirements": [
+            "ESCAPE-01"
+          ]
+        },
+        {
+          "id": "D2_PAUSE",
+          "weight": 2,
+          "requirements": [
+            "TIME-02"
+          ]
+        },
+        {
+          "id": "D2_SPEED",
+          "weight": 2,
+          "requirements": [
+            "TIME-01"
+          ]
+        },
+        {
+          "id": "D2_SAVE_LOAD",
+          "weight": 2,
+          "requirements": [
+            "SAVE-02"
+          ]
+        },
+        {
+          "id": "D2_ENDINGS",
+          "weight": 2,
+          "requirements": [
+            "END-01"
+          ]
+        }
+      ]
+    },
+    "D3": {
+      "maximum_score": 20,
+      "checks": [
+        {
+          "id": "D3_LOCALITY",
+          "weight": 2,
+          "requirements": [
+            "WORK-01"
+          ]
+        },
+        {
+          "id": "D3_BUILD_GUARDS",
+          "weight": 2,
+          "requirements": [
+            "BUILD-01"
+          ]
+        },
+        {
+          "id": "D3_BUILD_CANCEL",
+          "weight": 2,
+          "requirements": [
+            "BUILD-02"
+          ]
+        },
+        {
+          "id": "D3_TRANSPORT_ATOMIC",
+          "weight": 2,
+          "requirements": [
+            "FERRY-01"
+          ]
+        },
+        {
+          "id": "D3_UNIQUENESS",
+          "weight": 2,
+          "requirements": [
+            "FERRY-01"
+          ]
+        },
+        {
+          "id": "D3_EVENT_ONCE",
+          "weight": 2,
+          "requirements": [
+            "EVENT-01"
+          ]
+        },
+        {
+          "id": "D3_STAGE_PAYMENT",
+          "weight": 2,
+          "requirements": [
+            "ESCAPE-01"
+          ]
+        },
+        {
+          "id": "D3_NO_DOUBLE_WORK",
+          "weight": 2,
+          "requirements": [
+            "ESCAPE-02"
+          ]
+        },
+        {
+          "id": "D3_STAGE_CANCEL",
+          "weight": 2,
+          "requirements": [
+            "ESCAPE-02"
+          ]
+        },
+        {
+          "id": "D3_DETERMINISM",
+          "weight": 2,
+          "requirements": [
+            "SAVE-02"
+          ]
+        }
+      ]
+    },
+    "D4": {
+      "maximum_score": 20,
+      "checks": [
+        {
+          "id": "D4_TERMINAL_LIFECYCLE",
+          "weight": 4,
+          "requirements": [
+            "END-01"
+          ]
+        },
+        {
+          "id": "D4_ADJACENT",
+          "weight": 4,
+          "requirements": [
+            "BUILD-01"
+          ]
+        },
+        {
+          "id": "D4_MODAL_CONTINUITY",
+          "weight": 4,
+          "requirements": [
+            "SAVE-02"
+          ]
+        },
+        {
+          "id": "D4_RESTART",
+          "weight": 4,
+          "requirements": [
+            "RESTART-01"
+          ]
+        },
+        {
+          "id": "D4_REOPEN",
+          "weight": 4,
+          "requirements": [
+            "REOPEN-01"
+          ]
+        }
+      ]
+    },
+    "D5": {
+      "maximum_score": 10,
+      "checks": [
+        {
+          "id": "D5_HUD",
+          "weight": 2,
+          "requirements": [
+            "PRESENT-01"
+          ]
+        },
+        {
+          "id": "D5_FEEDBACK",
+          "weight": 2,
+          "requirements": [
+            "PRESENT-01"
+          ]
+        },
+        {
+          "id": "D5_CONTROLS",
+          "weight": 2,
+          "requirements": [
+            "SELECT-01"
+          ]
+        },
+        {
+          "id": "D5_CHRONICLE",
+          "weight": 2,
+          "requirements": [
+            "CHRONICLE-01"
+          ]
+        },
+        {
+          "id": "D5_AUDIO",
+          "weight": 2,
+          "requirements": [
+            "AUDIO-01"
+          ]
+        }
+      ]
+    }
+  },
+  "phase_contract": {
+    "static": {
+      "expected_tests": 1,
+      "expected_test_names": [
+        "STATIC01_SceneAndCamera"
+      ],
+      "expected_check_ids": [
+        "D1_SCENE",
+        "D1_CAMERA"
+      ],
+      "check_test_bindings": {
+        "D1_SCENE": "STATIC01_SceneAndCamera",
+        "D1_CAMERA": "STATIC01_SceneAndCamera"
+      }
+    },
+    "dynamic": {
+      "expected_tests": 26,
+      "expected_test_names": [
+        "T01A_PublicEntry",
+        "T01B_PublicState",
+        "T01C_ActualActors",
+        "T02_NormalMenu",
+        "T03_ProductionLocality",
+        "T04_FatigueRest",
+        "T05_NightHealth",
+        "T06_Medic",
+        "T07_WeatherBoat",
+        "T08_BuildAndGuards",
+        "T09_BuildCancel",
+        "T10_TransportAtomic",
+        "T11_Arrival",
+        "T12_Event",
+        "T13_EscapePayment",
+        "T14_EscapeCancel",
+        "T15_PauseSpeed",
+        "T16_SaveRestore",
+        "T17_Endings",
+        "T18_Adjacent",
+        "T19_ModalContinuity",
+        "T20_Restart",
+        "T21_HUD",
+        "T22_Chronicle",
+        "T23_Audio",
+        "T99_DirtyClose"
+      ],
+      "expected_check_ids": [
+        "D1_ACTORS",
+        "D1_SESSION_ENTRY",
+        "D1_SESSION_STATE",
+        "D2_START",
+        "D2_PRODUCTION",
+        "D3_LOCALITY",
+        "D2_FATIGUE",
+        "D2_NIGHT",
+        "D2_MEDIC",
+        "D2_WEATHER",
+        "D2_BUILD",
+        "D3_BUILD_GUARDS",
+        "D3_BUILD_CANCEL",
+        "D2_FERRY",
+        "D3_TRANSPORT_ATOMIC",
+        "D3_UNIQUENESS",
+        "D2_ARRIVAL",
+        "D2_EVENT",
+        "D3_EVENT_ONCE",
+        "D2_ESCAPE",
+        "D3_STAGE_PAYMENT",
+        "D3_NO_DOUBLE_WORK",
+        "D3_STAGE_CANCEL",
+        "D2_PAUSE",
+        "D2_SPEED",
+        "D2_SAVE_LOAD",
+        "D3_DETERMINISM",
+        "D2_ENDINGS",
+        "D4_TERMINAL_LIFECYCLE",
+        "D4_ADJACENT",
+        "D4_MODAL_CONTINUITY",
+        "D4_RESTART",
+        "D5_HUD",
+        "D5_FEEDBACK",
+        "D5_CONTROLS",
+        "D5_CHRONICLE",
+        "D5_AUDIO"
+      ],
+      "check_test_bindings": {
+        "D1_ACTORS": "T01C_ActualActors",
+        "D1_SESSION_ENTRY": "T01A_PublicEntry",
+        "D1_SESSION_STATE": "T01B_PublicState",
+        "D2_START": "T02_NormalMenu",
+        "D2_PRODUCTION": "T03_ProductionLocality",
+        "D3_LOCALITY": "T03_ProductionLocality",
+        "D2_FATIGUE": "T04_FatigueRest",
+        "D2_NIGHT": "T05_NightHealth",
+        "D2_MEDIC": "T06_Medic",
+        "D2_WEATHER": "T07_WeatherBoat",
+        "D2_BUILD": "T08_BuildAndGuards",
+        "D3_BUILD_GUARDS": "T08_BuildAndGuards",
+        "D3_BUILD_CANCEL": "T09_BuildCancel",
+        "D2_FERRY": "T10_TransportAtomic",
+        "D3_TRANSPORT_ATOMIC": "T10_TransportAtomic",
+        "D3_UNIQUENESS": "T10_TransportAtomic",
+        "D2_ARRIVAL": "T11_Arrival",
+        "D2_EVENT": "T12_Event",
+        "D3_EVENT_ONCE": "T12_Event",
+        "D2_ESCAPE": "T13_EscapePayment",
+        "D3_STAGE_PAYMENT": "T13_EscapePayment",
+        "D3_NO_DOUBLE_WORK": "T13_EscapePayment",
+        "D3_STAGE_CANCEL": "T14_EscapeCancel",
+        "D2_PAUSE": "T15_PauseSpeed",
+        "D2_SPEED": "T15_PauseSpeed",
+        "D2_SAVE_LOAD": "T16_SaveRestore",
+        "D3_DETERMINISM": "T16_SaveRestore",
+        "D2_ENDINGS": "T17_Endings",
+        "D4_TERMINAL_LIFECYCLE": "T17_Endings",
+        "D4_ADJACENT": "T18_Adjacent",
+        "D4_MODAL_CONTINUITY": "T19_ModalContinuity",
+        "D4_RESTART": "T20_Restart",
+        "D5_HUD": "T21_HUD",
+        "D5_FEEDBACK": "T21_HUD",
+        "D5_CONTROLS": "T02_NormalMenu",
+        "D5_CHRONICLE": "T22_Chronicle",
+        "D5_AUDIO": "T23_Audio"
+      }
+    },
+    "fresh": {
+      "expected_tests": 1,
+      "expected_test_names": [
+        "FRESH01_ReopenAndExplicitLoad"
+      ],
+      "expected_check_ids": [
+        "D4_REOPEN"
+      ],
+      "check_test_bindings": {
+        "D4_REOPEN": "FRESH01_ReopenAndExplicitLoad"
+      }
+    }
+  }
+}

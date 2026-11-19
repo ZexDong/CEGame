@@ -1,0 +1,313 @@
+{
+  "sample_id": "unity_2d_there_are_signs_circuit",
+  "status": "legacy_mapping_not_new_coverage_qualification",
+  "source": "rules.json",
+  "mapping": [
+    {
+      "id": "D1-01_IMPORT_COMPILE_ENTRY",
+      "dimension": "D1",
+      "phase": "static",
+      "source_test_id": "STATIC01_CanonicalSceneLoadsCameraAndAdvancesFrames",
+      "gdd_ref": "section 6 requirements QUALITY-01; QUALITY-05; QUALITY-06",
+      "question": "Can the pinned Unity version import, compile, load the canonical entry, and advance frames?",
+      "diagnostic_weight": 4.0
+    },
+    {
+      "id": "D1-02_VISIBLE_STARTUP_FRAME",
+      "dimension": "D1",
+      "phase": "static",
+      "source_test_id": "STATIC02_CameraProducesAVisibleFrame",
+      "gdd_ref": "section 6 requirements QUALITY-03; VISUAL-01",
+      "question": "Does the startup smoke render a non-empty game frame without player input?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D1-03_REFERENCES_AND_SCRIPTS",
+      "dimension": "D1",
+      "phase": "static",
+      "source_test_id": "STATIC03_CanonicalSceneContainsNoMissingScripts",
+      "gdd_ref": "section 6 requirements QUALITY-01; QUALITY-05",
+      "question": "Does the canonical scene contain no missing MonoBehaviour references?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D2-01_RUNTIME_CONTENT_AND_HUD",
+      "dimension": "D2",
+      "phase": "dynamic",
+      "source_test_id": "DYN09_InitialContentAndHudAreComplete",
+      "gdd_ref": "section 6 requirements CORE-02; RULE-09; UI-01; UI-02; UI-03",
+      "question": "Are the three signs, checkpoints, gate, finish, timer, progress, status, and best-time UI all present in the running challenge?",
+      "diagnostic_weight": 8.0
+    },
+    {
+      "id": "D2-02_MENU_ENTRY_PRESENT",
+      "dimension": "D2",
+      "phase": "dynamic",
+      "source_test_id": "DYN08_MenuEntryLoadsCanonicalScene",
+      "gdd_ref": "section 6 requirements CORE-01; LEGACY-01",
+      "question": "Does the running upstream menu contain a usable SIGN CIRCUIT entry?",
+      "diagnostic_weight": 4.0
+    },
+    {
+      "id": "D2-03_CORE_CIRCUIT_CONTENT_USABLE",
+      "dimension": "D2",
+      "phase": "dynamic",
+      "source_test_id": "DYN04_StopUpRightOpensGateAndFinishes",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements CORE-03; CORE-04; RULE-02; RULE-03; RULE-04; RULE-09",
+      "question": "Can a player use the signs, ordered route milestones, closed-to-passable gate outcome, and finish at least once in runtime?",
+      "diagnostic_weight": 8.0
+    },
+    {
+      "id": "D2-04_PAUSE_AND_RESTART_CONTENT",
+      "dimension": "D2",
+      "phase": "dynamic",
+      "source_test_id": "DYN05_PauseAndUiRestartUseNativeInput",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements CONTROL-04; CONTROL-05; CONTROL-06; UI-03; LIFECYCLE-01; LIFECYCLE-02",
+      "question": "Are pause and a normal clickable restart control present and usable?",
+      "diagnostic_weight": 4.0
+    },
+    {
+      "id": "D2-05_FAILURE_CONTENT",
+      "dimension": "D2",
+      "phase": "dynamic",
+      "source_test_id": "DYN10_TimeoutFailureAndUiRestart",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements RULE-10; UI-03; LIFECYCLE-02",
+      "question": "Is the required timeout failure state present and usable in runtime?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D2-06_PERSISTENT_BEST_FEATURE",
+      "dimension": "D2",
+      "phase": "fresh",
+      "source_test_id": "FRESH01_BestTimeSurvivesFreshProcess",
+      "gdd_ref": "section 6 requirements UI-01; LIFECYCLE-03; LIFECYCLE-04",
+      "question": "Is the best-time feature still present when the game is reopened in a fresh Unity process?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D3-01_PROXIMITY_GUARD",
+      "dimension": "D3",
+      "phase": "dynamic",
+      "source_test_id": "DYN02_RemoteInteractDoesNotAdvance",
+      "gdd_ref": "section 6 requirements CONTROL-03; RULE-01",
+      "question": "Does remote interaction leave all signs, progress, gate, and terminal state unchanged?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D3-02_STATE_ORDER_PENALTY_DEBOUNCE",
+      "dimension": "D3",
+      "phase": "dynamic",
+      "source_test_id": "DYN03_WrongStateDoesNotAdvance",
+      "gdd_ref": "section 6 requirements RULE-02; RULE-03; RULE-04; RULE-05; CONTROL-03",
+      "question": "Are wrong state, wrong order, deterministic penalty, and one-entry debounce rules correct?",
+      "diagnostic_weight": 7.0
+    },
+    {
+      "id": "D3-03_SEQUENCE_GATE_FINISH_RULES",
+      "dimension": "D3",
+      "phase": "dynamic",
+      "source_test_id": "DYN04_StopUpRightOpensGateAndFinishes",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements CORE-03; CORE-04; RULE-02; RULE-03; RULE-04; RULE-08; RULE-09",
+      "question": "Do STOP-UP-RIGHT, checkpoint timing, gate opening, physical crossing, and finish conditions occur in the correct order?",
+      "diagnostic_weight": 6.0
+    },
+    {
+      "id": "D3-04_PAUSE_RULES",
+      "dimension": "D3",
+      "phase": "dynamic",
+      "source_test_id": "DYN05_PauseAndUiRestartUseNativeInput",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements CONTROL-04; LIFECYCLE-01",
+      "question": "Does pause freeze movement and countdown, and does a second Escape resume the same run?",
+      "diagnostic_weight": 2.0
+    },
+    {
+      "id": "D3-05_TIMEOUT_EXCLUSIVITY",
+      "dimension": "D3",
+      "phase": "dynamic",
+      "source_test_id": "DYN10_TimeoutFailureAndUiRestart",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements RULE-06; RULE-10",
+      "question": "Does reaching zero produce a frozen failure state without also producing success?",
+      "diagnostic_weight": 2.0
+    },
+    {
+      "id": "D3-06_NATIVE_MOVEMENT_AND_JUMP",
+      "dimension": "D3",
+      "phase": "dynamic",
+      "source_test_id": "DYN01_NativeKeyboardMovesAndJumps",
+      "gdd_ref": "section 6 requirements CONTROL-01; CONTROL-02; QUALITY-02",
+      "question": "Do normal Input System movement and jump controls produce the required player motion in the Sign Circuit challenge?",
+      "diagnostic_weight": 2.0
+    },
+    {
+      "id": "D3-07_LEGACY_LEVEL_MOVEMENT_AND_JUMP",
+      "dimension": "D3",
+      "phase": "dynamic",
+      "source_test_id": "DYN07_OriginalLevel1Plus2StillMoves",
+      "gdd_ref": "section 6 requirements LEGACY-02; QUALITY-02",
+      "question": "Do the preserved Level1+2 movement and jump controls still respond correctly through normal player input?",
+      "diagnostic_weight": 2.0
+    },
+    {
+      "id": "D4-01_MENU_TO_GAME_FLOW",
+      "dimension": "D4",
+      "phase": "dynamic",
+      "source_test_id": "DYN08_MenuEntryLoadsCanonicalScene",
+      "gdd_ref": "section 6 requirements CORE-01; LEGACY-01",
+      "question": "Does the visible normal menu route connect to the canonical challenge scene?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D4-02_COMPLETE_SUCCESS_JOURNEY",
+      "dimension": "D4",
+      "phase": "dynamic",
+      "source_test_id": "DYN04_StopUpRightOpensGateAndFinishes",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements CORE-02; CORE-03; CORE-04; RULE-07",
+      "question": "Can the player complete the whole challenge from clean start through the physical finish?",
+      "diagnostic_weight": 6.0
+    },
+    {
+      "id": "D4-03_PAUSE_RESUME_UI_RESTART",
+      "dimension": "D4",
+      "phase": "dynamic",
+      "source_test_id": "DYN05_PauseAndUiRestartUseNativeInput",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements CONTROL-04; CONTROL-06; LIFECYCLE-01; LIFECYCLE-02",
+      "question": "Do pause, resume, and the visible UI Restart return to a reusable clean run?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D4-04_KEYBOARD_RESTART_FULL_RESET",
+      "dimension": "D4",
+      "phase": "dynamic",
+      "source_test_id": "DYN06_RRestartResetsCircuit",
+      "gdd_ref": "section 6 requirements CONTROL-05; LIFECYCLE-02",
+      "question": "Does keyboard R restore player, timer, signs, checkpoints, gate, panels, time scale, and input?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D4-05_FAILURE_RETRY_FLOW",
+      "dimension": "D4",
+      "phase": "dynamic",
+      "source_test_id": "DYN10_TimeoutFailureAndUiRestart",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements CONTROL-06; RULE-10; LIFECYCLE-02",
+      "question": "Can a timeout terminal state return through the normal visible Retry/Restart route?",
+      "diagnostic_weight": 2.0
+    },
+    {
+      "id": "D4-06_FRESH_PROCESS_REOPEN",
+      "dimension": "D4",
+      "phase": "fresh",
+      "source_test_id": "FRESH01_BestTimeSurvivesFreshProcess",
+      "gdd_ref": "section 6 requirements LIFECYCLE-03; QUALITY-01",
+      "question": "Does a different Unity process reopen the scene and recover the independently verified saved value?",
+      "diagnostic_weight": 2.0
+    },
+    {
+      "id": "D4-07_SLOWER_RUN_PRESERVES_RECORD",
+      "dimension": "D4",
+      "phase": "dynamic",
+      "source_test_id": "DYN11_SlowerRunDoesNotOverwriteBestTime",
+      "gdd_ref": "section 6 requirement LIFECYCLE-04",
+      "question": "Does repeated play preserve the faster record when a later run is slower?",
+      "diagnostic_weight": 1.0
+    },
+    {
+      "id": "D5-01_INITIAL_HUD_VISIBLE_SYNCED",
+      "dimension": "D5",
+      "phase": "dynamic",
+      "source_test_id": "DYN09_InitialContentAndHudAreComplete",
+      "gdd_ref": "section 6 requirements CORE-02; UI-01",
+      "question": "Are progress, timer, status, and best-time labels visible, readable, and synchronized with the initial state?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D5-02_CORE_FEEDBACK",
+      "dimension": "D5",
+      "phase": "dynamic",
+      "source_test_id": "DYN04_StopUpRightOpensGateAndFinishes",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements CORE-03; CORE-04; RULE-04; RULE-07; UI-01; UI-02; UI-03; QUALITY-04",
+      "question": "Do sign, checkpoint, progress, gate, finish, and best-time feedback remain visibly understandable during success?",
+      "diagnostic_weight": 2.0
+    },
+    {
+      "id": "D5-03_WRONG_ACTION_FEEDBACK",
+      "dimension": "D5",
+      "phase": "dynamic",
+      "source_test_id": "DYN03_WrongStateDoesNotAdvance",
+      "gdd_ref": "section 6 requirements RULE-05; UI-02; QUALITY-04",
+      "question": "Does an invalid checkpoint entry provide visible negative feedback synchronized with its timer penalty?",
+      "diagnostic_weight": 1.0
+    },
+    {
+      "id": "D5-04_MENU_BUTTON_USABILITY",
+      "dimension": "D5",
+      "phase": "dynamic",
+      "source_test_id": "DYN08_MenuEntryLoadsCanonicalScene",
+      "gdd_ref": "section 6 requirements CORE-01; QUALITY-03",
+      "question": "Is the SIGN CIRCUIT entry visible and top-hit clickable through the active UI backend?",
+      "diagnostic_weight": 1.0
+    },
+    {
+      "id": "D5-05_PAUSE_RESTART_USABILITY",
+      "dimension": "D5",
+      "phase": "dynamic",
+      "source_test_id": "DYN05_PauseAndUiRestartUseNativeInput",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements UI-03; LIFECYCLE-01; LIFECYCLE-02",
+      "question": "Are pause feedback and the Restart button visible, reachable, and top-hit clickable through the active UI backend while gameplay is frozen?",
+      "diagnostic_weight": 1.5
+    },
+    {
+      "id": "D5-06_FAILURE_RESTART_USABILITY",
+      "dimension": "D5",
+      "phase": "dynamic",
+      "source_test_id": "DYN10_TimeoutFailureAndUiRestart",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements RULE-10; UI-03; LIFECYCLE-02",
+      "question": "Is timeout feedback visible and is Restart still top-hit operable through the active UI backend from the failure state?",
+      "diagnostic_weight": 1.5
+    },
+    {
+      "id": "D2-07_LEGACY_MENU_CONTENT_USABLE",
+      "dimension": "D2",
+      "phase": "dynamic",
+      "source_test_id": "DYN12_OriginalMenuLevelAndContinueRemainUsable",
+      "checkpoint_evidence_scene": "Assets/Scenes/Menu.unity",
+      "gdd_ref": "section 6 requirement LEGACY-01",
+      "question": "Are the original Levels entry, supplied Level1+2 choice, and Continue function still present and basically usable in runtime?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D4-08_LEGACY_MENU_LEVEL_CONTINUE_FLOW",
+      "dimension": "D4",
+      "phase": "dynamic",
+      "source_test_id": "DYN12_OriginalMenuLevelAndContinueRemainUsable",
+      "checkpoint_evidence_scene": "Assets/Scenes/Levels/Level1+2.unity",
+      "gdd_ref": "section 6 requirement LEGACY-01",
+      "question": "Can normal menu input open Levels, load the supplied Level1+2 scene, then use Continue to return to that same scene?",
+      "diagnostic_weight": 2.0
+    },
+    {
+      "id": "D5-07_LEGACY_MENU_CONTROLS_USABLE",
+      "dimension": "D5",
+      "phase": "dynamic",
+      "source_test_id": "DYN12_OriginalMenuLevelAndContinueRemainUsable",
+      "checkpoint_evidence_scene": "@non_menu_scene",
+      "gdd_ref": "section 6 requirements LEGACY-01; QUALITY-03",
+      "question": "Are Levels, the original level entry, and Continue independently visible, readable, top-hittable, and operable through real pointer down/frame/up input?",
+      "diagnostic_weight": 1.0
+    }
+  ],
+  "limitations": [
+    "Native test mappings do not establish independent per-requirement coverage."
+  ]
+}

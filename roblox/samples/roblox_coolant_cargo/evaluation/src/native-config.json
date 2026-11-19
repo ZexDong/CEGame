@@ -1,0 +1,9 @@
+{
+  "family": "flat",
+  "native_subdir": ".",
+  "place": "CoolantCargoCandidate.rbxlx",
+  "native_zip": "CoolantCargoProject.zip",
+  "zip_scope": "project",
+  "sample_id": "roblox_coolant_cargo",
+  "requirement_prefix": "CC"
+}

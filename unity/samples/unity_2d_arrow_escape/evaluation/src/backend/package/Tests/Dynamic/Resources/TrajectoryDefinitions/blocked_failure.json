@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "id": "blocked_failure",
+  "title": "Blocked real-input attempt charges once, stays put, shows feedback, and recovers",
+  "steps": [
+    {
+      "step_id": "setup.scene",
+      "operation": "load_canonical_scene",
+      "target": "scene:ArrowEscape",
+      "check_ids": [
+        "setup.scene_load",
+        "setup.probe",
+        "setup.playable"
+      ]
+    },
+    {
+      "step_id": "declared.scoring_checks",
+      "operation": "observe_visible_player_journeys",
+      "target": "running_scene",
+      "check_ids": [
+        "blocked.discover.authored",
+        "blocked.click.1.input.top_hit",
+        "blocked.state.1.outcome",
+        "blocked.state.1.player_source",
+        "blocked.state.1.occupancy",
+        "blocked.state.1.budget_delta",
+        "blocked.feedback.changed",
+        "blocked.feedback.duration",
+        "blocked.feedback.recovered",
+        "blocked.click.2.input.top_hit",
+        "blocked.repeat.no_duplicates",
+        "blocked.repeat.recovers"
+      ]
+    }
+  ]
+}

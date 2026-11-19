@@ -1,0 +1,10 @@
+{
+  "name": "GameCreate.Stormbound.PublicSmoke.PlayMode",
+  "rootNamespace": "GameCreate.Stormbound.PublicSmoke",
+  "references": [],
+  "includePlatforms": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": true
+}

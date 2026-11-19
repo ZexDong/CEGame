@@ -1,0 +1,454 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:actionroguelike:d6-run:4.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "game_id",
+    "task_revision",
+    "evaluator_revision",
+    "candidate_id",
+    "candidate_identity_sha256",
+    "protocol",
+    "status",
+    "faults",
+    "model_id",
+    "model",
+    "vlm_version",
+    "vlm_config_sha256",
+    "reference_manifest_sha256",
+    "prompt_sha256",
+    "evidence_bundle",
+    "evidence_bundle_sha256",
+    "states",
+    "rounds",
+    "score_raw",
+    "score"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "4.0.0"
+    },
+    "game_id": {
+      "const": "ActionRoguelike"
+    },
+    "task_revision": {
+      "const": "2.2.0-diagnostic"
+    },
+    "evaluator_revision": {
+      "const": "actionroguelike-evaluator-4.1.0"
+    },
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_identity_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "protocol": {
+      "const": "canonical_d6_v4"
+    },
+    "status": {
+      "enum": [
+        "completed",
+        "run_invalid"
+      ]
+    },
+    "faults": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "code",
+          "attribution",
+          "detail"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "attribution": {
+            "const": "evaluator"
+          },
+          "detail": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "model_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "model": {
+      "anyOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "version",
+            "parameters"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "version": {
+              "type": "string",
+              "minLength": 1
+            },
+            "parameters": {
+              "type": "object",
+              "minProperties": 1
+            }
+          }
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "vlm_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "vlm_config_sha256": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "reference_manifest_sha256": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "prompt_sha256": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "evidence_bundle": {
+      "const": "responses.json"
+    },
+    "evidence_bundle_sha256": {
+      "anyOf": [
+        {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "states": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "state_id",
+          "candidate_status",
+          "candidate_sha256",
+          "reference_sha256",
+          "receipt",
+          "receipt_sha256"
+        ],
+        "properties": {
+          "state_id": {
+            "type": "string"
+          },
+          "candidate_status": {
+            "enum": [
+              "healthy",
+              "missing",
+              "black_or_blank"
+            ]
+          },
+          "candidate_sha256": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "reference_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "receipt": {
+            "type": "string"
+          },
+          "receipt_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    },
+    "rounds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "round",
+          "states",
+          "score_raw",
+          "score"
+        ],
+        "properties": {
+          "round": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 3
+          },
+          "states": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 5,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "state_id",
+                "components",
+                "score_raw",
+                "score",
+                "rationale",
+                "source",
+                "reason_code",
+                "request_sha256",
+                "response_sha256"
+              ],
+              "properties": {
+                "state_id": {
+                  "type": "string",
+                  "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+                },
+                "components": {
+                  "type": "array",
+                  "minItems": 5,
+                  "maxItems": 5,
+                  "items": {
+                    "type": "number",
+                    "enum": [
+                      0,
+                      0.5,
+                      1,
+                      1.5,
+                      2
+                    ]
+                  }
+                },
+                "score_raw": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 10
+                },
+                "score": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 10
+                },
+                "rationale": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "source": {
+                  "enum": [
+                    "vlm",
+                    "automatic_zero"
+                  ]
+                },
+                "reason_code": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "request_sha256": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "response_sha256": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^[a-f0-9]{64}$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "score_raw": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10
+          },
+          "score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10
+          }
+        }
+      }
+    },
+    "score_raw": {
+      "anyOf": [
+        {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "score": {
+      "anyOf": [
+        {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "completed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "faults": {
+            "maxItems": 0
+          },
+          "model": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "version",
+              "parameters"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "version": {
+                "type": "string",
+                "minLength": 1
+              },
+              "parameters": {
+                "type": "object",
+                "minProperties": 1
+              }
+            }
+          },
+          "vlm_version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "vlm_config_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "reference_manifest_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "prompt_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "evidence_bundle_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "states": {
+            "minItems": 3,
+            "maxItems": 5
+          },
+          "rounds": {
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "score_raw": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10
+          },
+          "score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "faults": {
+            "minItems": 1
+          },
+          "score_raw": {
+            "type": "null"
+          },
+          "score": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ]
+}

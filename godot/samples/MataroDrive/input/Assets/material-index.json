@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "input_revision": "g07-g08-public-20261011-r1",
+  "path_base": "package root",
+  "runtime_root": "sp",
+  "material_mapping": "MaterialMapping-en.md",
+  
+"contact_sheet": "Assets/asset-contact-sheet.png",
+  "contact_sheet_source": "Assets/procedural-role-contact-sheet.svg",
+  "source_of_previews": "Independently authored procedural role examples; no upstream gameplay or branded media is used.",
+  "roles": [
+    {
+      "role": "player",
+      "status": "procedural",
+      "requirement": "VISUAL-01"
+    },
+    {
+      "role": "terrain",
+      "status": "procedural",
+      "requirement": "VISUAL-01"
+    },
+    {
+      "role": "sky_and_weather",
+      "status": "procedural",
+      "requirement": "VISUAL-02"
+    },
+    {
+      "role": "coin",
+      "status": "procedural",
+      "requirement": "COLLECT-01"
+    },
+    {
+      "role": "gem",
+      "status": "procedural",
+      "requirement": "COLLECT-04"
+    },
+    {
+      "role": "cone",
+      "status": "procedural",
+      "requirement": "COLLECT-05"
+    },
+    {
+      "role": "enemy",
+      "status": "procedural",
+      "requirement": "OBJECT-05"
+    },
+    {
+      "role": "boost_pad",
+      "status": "procedural",
+      "requirement": "OBJECT-01"
+    },
+    {
+      "role": "spring",
+      "status": "procedural",
+      "requirement": "OBJECT-02"
+    },
+    {
+      "role": "shield",
+      "status": "procedural",
+      "requirement": "OBJECT-03"
+    },
+    {
+      "role": "magnet",
+      "status": "procedural",
+      "requirement": "OBJECT-04"
+    },
+    {
+      "role": "moving_platform",
+      "status": "procedural",
+      "requirement": "OBJECT-06"
+    },
+    {
+      "role": "goal",
+      "status": "procedural",
+      "requirement": "STORY-02"
+    },
+    {
+      "role": "hud_menus_results",
+      "status": "procedural",
+      "requirement": "HUD-01"
+    }
+  ],
+  "files": [
+    {
+      "path": "Assets/procedural-role-contact-sheet.svg",
+      "type": "SVG",
+      "role": "procedural role examples"
+    },
+    {
+      "path": "Assets/asset-contact-sheet.png",
+      "type": "PNG",
+      "size": [
+        1280,
+        720
+      ],
+      "role": "contact sheet"
+    }
+  ],
+  "missing_roles": []
+}

@@ -1,0 +1,29 @@
+{
+  "version": "chomp-atomic-1.0.0",
+  "generation": "legacy",
+  "engine": {
+    "version": "5.7.4",
+    "changelist": 51494982,
+    "platform": "Win64",
+    "mode": "editor_game"
+  },
+  "viewport": [
+    1280,
+    720
+  ],
+  "expected_dpi": "record_actual; never change host scaling",
+  "random_seed": 1337,
+  "runtime": "engine/atomic-player/1.0",
+  "fixture": "engine/shared/state-fixture",
+  "public_observation": "input/contracts/game-state.schema.json",
+  "scoring_guide_sha256": "3e3e6cf19cbd5cda5667c44710f483fbba2ac30af7d098921acc811cf08dfdae",
+  "d6_mode": "interactive_visual_three_rounds",
+  "artifact_isolation": "clean archive/copy; candidate source never patched",
+  "exit_codes": {
+    "0": "numeric diagnostic result complete",
+    "2": "candidate failures with numeric result complete",
+    "3": "host/evaluator fault; no score published",
+    "4": "D6 dialogue responses pending; no complete score"
+  },
+  "score_source": "canonical score.py only"
+}

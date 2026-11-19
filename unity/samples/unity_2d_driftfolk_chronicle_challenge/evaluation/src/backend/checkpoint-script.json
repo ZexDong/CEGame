@@ -1,0 +1,2092 @@
+{
+  "schema_version": 2,
+  "game": "unity.driftfolk_stormbound.v2",
+  "naming_tables": "input-v2/SESSION_MODEL.json",
+  "player_runtime_min_version": "game-session/v1",
+  "controls_from_naming_tables": true,
+  "result_contract": {
+    "statuses": [
+      "PASS",
+      "FAIL_OBSERVED",
+      "BLOCKED_BY_PRODUCT",
+      "INCONCLUSIVE_EVALUATOR"
+    ],
+    "inconclusive_blocks_unique_score": true
+  },
+  "routes": [
+    {
+      "id": "T01A_PublicEntry",
+      "title": "Independent service entry; D1 state/actor obligations separately bound in rules phase contract",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        }
+      ]
+    },
+    {
+      "id": "T02_NormalMenu",
+      "title": "T02_NormalMenu",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D2_START",
+            "source": "gdd:FLOW-01",
+            "dim": "D2",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "normal lobby Start enters the exact clean world without requiring chapter entry",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D2_START_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D2_START_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "normal lobby Start enters the exact clean world without requiring chapter entry"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D5_CONTROLS",
+            "source": "gdd:SELECT-01",
+            "dim": "D5",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "visible normal player controls work from the menu and gameplay",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D5_CONTROLS_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D5_CONTROLS_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "visible normal player controls work from the menu and gameplay"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T03_ProductionLocality",
+      "title": "T03_ProductionLocality",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D2_PRODUCTION",
+            "source": "gdd:WORK-01",
+            "dim": "D2",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "normal step produces local role-specific resources with real worker state",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D2_PRODUCTION_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D2_PRODUCTION_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "normal step produces local role-specific resources with real worker state"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_LOCALITY",
+            "source": "gdd:WORK-01",
+            "dim": "D3",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "workshop, weather and morale modifiers affect only eligible local output",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D3_LOCALITY_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D3_LOCALITY_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "workshop, weather and morale modifiers affect only eligible local output"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T04_FatigueRest",
+      "title": "T04_FatigueRest",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D2_FATIGUE",
+            "source": "gdd:WORK-01",
+            "dim": "D2",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "fatigue cutoff prevents work; rest and job change restore later production",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D2_FATIGUE_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D2_FATIGUE_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "fatigue cutoff prevents work; rest and job change restore later production"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05_NightHealth",
+      "title": "T05_NightHealth",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D2_NIGHT",
+            "source": "gdd:HEALTH-01",
+            "dim": "D2",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "local food and heating consumption, shortage health/morale and pressure follow the night boundary",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D2_NIGHT_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D2_NIGHT_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "local food and heating consumption, shortage health/morale and pressure follow the night boundary"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06_Medic",
+      "title": "T06_Medic",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D2_MEDIC",
+            "source": "gdd:HEALTH-01",
+            "dim": "D2",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "local clinic medic heals correct living resident without resurrection or remote treatment",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D2_MEDIC_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D2_MEDIC_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "local clinic medic heals correct living resident without resurrection or remote treatment"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T07_WeatherBoat",
+      "title": "T07_WeatherBoat",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D2_WEATHER",
+            "source": "gdd:WEATHER-01",
+            "dim": "D2",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "weather day cycle and storm-delayed transport resume correctly",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D2_WEATHER_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D2_WEATHER_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "weather day cycle and storm-delayed transport resume correctly"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T08_BuildAndGuards",
+      "title": "T08_BuildAndGuards",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D2_BUILD",
+            "source": "gdd:BUILD-01",
+            "dim": "D2",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "normal orders pay once and local builders complete structures",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D2_BUILD_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D2_BUILD_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "normal orders pay once and local builders complete structures"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_BUILD_GUARDS",
+            "source": "gdd:BUILD-01",
+            "dim": "D3",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "prerequisite, insufficient inventory, completed and duplicate orders are atomic",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D3_BUILD_GUARDS_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D3_BUILD_GUARDS_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "prerequisite, insufficient inventory, completed and duplicate orders are atomic"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T09_BuildCancel",
+      "title": "T09_BuildCancel",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D3_BUILD_CANCEL",
+            "source": "gdd:BUILD-02",
+            "dim": "D3",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "partial construction cancellation returns only earned proportional refund once",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D3_BUILD_CANCEL_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D3_BUILD_CANCEL_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "partial construction cancellation returns only earned proportional refund once"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T10_TransportAtomic",
+      "title": "T10_TransportAtomic",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D2_FERRY",
+            "source": "gdd:FERRY-01",
+            "dim": "D2",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "normal cargo/passenger selection and dispatch atomically move real ownership",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D2_FERRY_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D2_FERRY_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "normal cargo/passenger selection and dispatch atomically move real ownership"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_TRANSPORT_ATOMIC",
+            "source": "gdd:FERRY-01",
+            "dim": "D3",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "over-budget departure changes neither inventory nor draft",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D3_TRANSPORT_ATOMIC_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D3_TRANSPORT_ATOMIC_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "over-budget departure changes neither inventory nor draft"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_UNIQUENESS",
+            "source": "gdd:FERRY-01",
+            "dim": "D3",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "actual aboard identities, cargo and land exclusion are consistent",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D3_UNIQUENESS_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D3_UNIQUENESS_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "actual aboard identities, cargo and land exclusion are consistent"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T11_Arrival",
+      "title": "T11_Arrival",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D2_ARRIVAL",
+            "source": "gdd:FERRY-02",
+            "dim": "D2",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "normal travel and overnight consumption unload remaining cargo and living passengers exactly once",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D2_ARRIVAL_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D2_ARRIVAL_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "normal travel and overnight consumption unload remaining cargo and living passengers exactly once"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T12_Event",
+      "title": "T12_Event",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D2_EVENT",
+            "source": "gdd:EVENT-01",
+            "dim": "D2",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "scheduled decision blocks time and resolves the chosen resource consequence",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D2_EVENT_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D2_EVENT_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "scheduled decision blocks time and resolves the chosen resource consequence"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_EVENT_ONCE",
+            "source": "gdd:EVENT-01",
+            "dim": "D3",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "unaffordable and invalid event input is atomic; one choice never applies twice",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D3_EVENT_ONCE_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D3_EVENT_ONCE_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "unaffordable and invalid event input is atomic; one choice never applies twice"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T13_EscapePayment",
+      "title": "T13_EscapePayment",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D2_ESCAPE",
+            "source": "gdd:ESCAPE-01",
+            "dim": "D2",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "sequential escape work uses explicit paid stages and final legal departure",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D2_ESCAPE_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D2_ESCAPE_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "sequential escape work uses explicit paid stages and final legal departure"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_STAGE_PAYMENT",
+            "source": "gdd:ESCAPE-01",
+            "dim": "D3",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "pause/resume and repeated begin do not repeat stage payment",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D3_STAGE_PAYMENT_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D3_STAGE_PAYMENT_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "pause/resume and repeated begin do not repeat stage payment"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_NO_DOUBLE_WORK",
+            "source": "gdd:ESCAPE-02",
+            "dim": "D3",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "local construction and escape never consume the same builder work twice",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D3_NO_DOUBLE_WORK_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D3_NO_DOUBLE_WORK_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "local construction and escape never consume the same builder work twice"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T14_EscapeCancel",
+      "title": "T14_EscapeCancel",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D3_STAGE_CANCEL",
+            "source": "gdd:ESCAPE-02",
+            "dim": "D3",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "stage cancellation refunds proportionally and keeps prior completed stages",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D3_STAGE_CANCEL_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D3_STAGE_CANCEL_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "stage cancellation refunds proportionally and keeps prior completed stages"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T15_PauseSpeed",
+      "title": "T15_PauseSpeed",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D2_PAUSE",
+            "source": "gdd:TIME-02",
+            "dim": "D2",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "pause freezes partial clocks and simulation; explicit paused step is exactly one period",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D2_PAUSE_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D2_PAUSE_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "pause freezes partial clocks and simulation; explicit paused step is exactly one period"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D2_SPEED",
+            "source": "gdd:TIME-01",
+            "dim": "D2",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "real-time speed changes pace without skipping event or ending boundaries",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D2_SPEED_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D2_SPEED_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "real-time speed changes pace without skipping event or ending boundaries"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T16_SaveRestore",
+      "title": "T16_SaveRestore",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D2_SAVE_LOAD",
+            "source": "gdd:SAVE-02",
+            "dim": "D2",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "normal disk Save/Load restores all semantic public state and opaque history",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D2_SAVE_LOAD_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D2_SAVE_LOAD_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "normal disk Save/Load restores all semantic public state and opaque history"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_DETERMINISM",
+            "source": "gdd:SAVE-02",
+            "dim": "D3",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "same saved state and normal inputs repeat the same complete result without duplicate listeners",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D3_DETERMINISM_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D3_DETERMINISM_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "same saved state and normal inputs repeat the same complete result without duplicate listeners"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T17_Endings",
+      "title": "T17_Endings",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D2_ENDINGS",
+            "source": "gdd:END-01",
+            "dim": "D2",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "normal final work and normal final death create distinct stable outcomes",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D2_ENDINGS_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D2_ENDINGS_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "normal final work and normal final death create distinct stable outcomes"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D4_TERMINAL_LIFECYCLE",
+            "source": "gdd:END-01",
+            "dim": "D4",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "both endings freeze all mutable inputs while restart stays reusable",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D4_TERMINAL_LIFECYCLE_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D4_TERMINAL_LIFECYCLE_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "both endings freeze all mutable inputs while restart stays reusable"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T18_Adjacent",
+      "title": "T18_Adjacent",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D4_ADJACENT",
+            "source": "gdd:BUILD-01",
+            "dim": "D4",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "normal job-to-construction-to-ferry-to-arrival steps preserve resources and prerequisites",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D4_ADJACENT_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D4_ADJACENT_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "normal job-to-construction-to-ferry-to-arrival steps preserve resources and prerequisites"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T19_ModalContinuity",
+      "title": "T19_ModalContinuity",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D4_MODAL_CONTINUITY",
+            "source": "gdd:SAVE-02",
+            "dim": "D4",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "pending decision with transit/project state survives normal Save/Load and resumes one consequence",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D4_MODAL_CONTINUITY_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D4_MODAL_CONTINUITY_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "pending decision with transit/project state survives normal Save/Load and resumes one consequence"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T20_Restart",
+      "title": "T20_Restart",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D4_RESTART",
+            "source": "gdd:RESTART-01",
+            "dim": "D4",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "restart clears active, paused, decision, paid-project and result state without save auto-load",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D4_RESTART_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D4_RESTART_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "restart clears active, paused, decision, paid-project and result state without save auto-load"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T21_HUD",
+      "title": "T21_HUD",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D5_HUD",
+            "source": "gdd:PRESENT-01",
+            "dim": "D5",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "differential real rendered state exposes both local inventories and individual status",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D5_HUD_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D5_HUD_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "differential real rendered state exposes both local inventories and individual status"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D5_FEEDBACK",
+            "source": "gdd:PRESENT-01",
+            "dim": "D5",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "selection and valid/invalid actions visibly communicate their effect without relying on fixed layout",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D5_FEEDBACK_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D5_FEEDBACK_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "selection and valid/invalid actions visibly communicate their effect without relying on fixed layout"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T22_Chronicle",
+      "title": "T22_Chronicle",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D5_CHRONICLE",
+            "source": "gdd:CHRONICLE-01",
+            "dim": "D5",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "causal ordered named record grows, scrolls and survives storage without duplicates",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D5_CHRONICLE_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D5_CHRONICLE_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "causal ordered named record grows, scrolls and survives storage without duplicates"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T23_Audio",
+      "title": "T23_Audio",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "public_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "check": {
+            "id": "D5_AUDIO",
+            "source": "gdd:AUDIO-01",
+            "dim": "D5",
+            "precondition": "A complete legal candidate-owned save is prepared and validated before normal input.",
+            "oracle": "supplied ambience and distinct action/result audio play without listener/ambience duplication",
+            "dashboard_fields": [
+              "phase",
+              "values",
+              "actors"
+            ],
+            "evidence": [
+              {
+                "id": "D5_AUDIO_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "public semantic state after normal input",
+                "independent": false
+              },
+              {
+                "id": "D5_AUDIO_ENGINE",
+                "source": "rendered_output",
+                "purpose": "real object/rendered/input-causal evidence recorded in scenario facts",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "supplied ambience and distinct action/result audio play without listener/ambience duplication"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

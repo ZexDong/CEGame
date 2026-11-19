@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "task_id": "defold_typhoon_balloon_v2",
+  "scope": "D1-D5 functional /90; every frozen GDD requirement is mapped",
+  "requirements": [
+    {
+      "requirement": "CB-01",
+      "checks": [
+        "D1.PROJECT",
+        "D1.BUILD"
+      ]
+    },
+    {
+      "requirement": "CB-02",
+      "checks": [
+        "D1.START"
+      ]
+    },
+    {
+      "requirement": "TB-CAMPAIGN-01",
+      "checks": [
+        "D2.MENU",
+        "D2.CHAPTERS",
+        "D4.CHAPTERS"
+      ]
+    },
+    {
+      "requirement": "TB-CARRY-01",
+      "checks": [
+        "D3.STARS",
+        "D4.CHAPTERS",
+        "D4.REOPEN"
+      ]
+    },
+    {
+      "requirement": "TB-CHAPTER-01",
+      "checks": [
+        "D2.CHAPTERS",
+        "D3.CHAPTERS",
+        "D4.SUCCESS"
+      ]
+    },
+    {
+      "requirement": "TB-CHECKPOINT-01",
+      "checks": [
+        "D2.CHECKPOINTS",
+        "D3.HAZARD"
+      ]
+    },
+    {
+      "requirement": "TB-CLEAN-01",
+      "checks": [
+        "D4.ORDER"
+      ]
+    },
+    {
+      "requirement": "TB-COMMIT-01",
+      "checks": [
+        "D3.CHAPTERS",
+        "D4.CHAPTERS"
+      ]
+    },
+    {
+      "requirement": "TB-FLIGHT-01",
+      "checks": [
+        "D2.FLIGHT",
+        "D3.FLIGHT"
+      ]
+    },
+    {
+      "requirement": "TB-HAZARD-01",
+      "checks": [
+        "D3.HAZARD",
+        "D4.RESPAWN",
+        "D5.FEEDBACK"
+      ]
+    },
+    {
+      "requirement": "TB-OBSERVE-01",
+      "checks": [
+        "D1.CONTRACT"
+      ]
+    },
+    {
+      "requirement": "TB-PAUSE-01",
+      "checks": [
+        "D3.PAUSE",
+        "D5.PAUSE"
+      ]
+    },
+    {
+      "requirement": "TB-PERSIST-01",
+      "checks": [
+        "D4.REOPEN",
+        "D4.RESET"
+      ]
+    },
+    {
+      "requirement": "TB-RANK-01",
+      "checks": [
+        "D3.RANK",
+        "D5.RESULT"
+      ]
+    },
+    {
+      "requirement": "TB-RESET-01",
+      "checks": [
+        "D4.RETRY",
+        "D4.RESET"
+      ]
+    },
+    {
+      "requirement": "TB-SOLID-01",
+      "checks": [
+        "D2.FLIGHT",
+        "D3.SOLID"
+      ]
+    },
+    {
+      "requirement": "TB-STAR-01",
+      "checks": [
+        "D3.STARS"
+      ]
+    },
+    {
+      "requirement": "TB-STATION-01",
+      "checks": [
+        "D2.STATIONS",
+        "D3.STATIONS",
+        "D5.FEEDBACK"
+      ]
+    },
+    {
+      "requirement": "TB-UI-01",
+      "checks": [
+        "D5.MENU",
+        "D5.HUD",
+        "D5.PAUSE",
+        "D5.FEEDBACK",
+        "D5.RESULT"
+      ]
+    },
+    {
+      "requirement": "TB-WORLD-01",
+      "checks": [
+        "D2.WORLD"
+      ]
+    },
+    {
+      "requirement": "TB-ZONE-01",
+      "checks": [
+        "D2.WORLD",
+        "D3.FLIGHT",
+        "D3.STATIONS"
+      ]
+    }
+  ]
+}

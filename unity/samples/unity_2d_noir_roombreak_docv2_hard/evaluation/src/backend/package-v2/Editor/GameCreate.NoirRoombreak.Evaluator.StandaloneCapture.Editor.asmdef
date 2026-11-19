@@ -1,0 +1,16 @@
+{
+  "name": "GameCreate.NoirRoombreak.Evaluator.StandaloneCapture.Editor",
+  "rootNamespace": "GameCreate.NoirRoombreak.Evaluator.Standalone.Editor",
+  "references": [
+    "GameCreate.NoirRoombreak.Evaluator.StandaloneCapture"
+  ],
+  "includePlatforms": ["Editor"],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

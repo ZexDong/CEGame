@@ -1,0 +1,19 @@
+{
+  "version": "4.0.0",
+  "states": [
+    "initial",
+    "navigation",
+    "reopen"
+  ],
+  "rounds": 3,
+  "selection": "Declared before candidate review; source-derived initial, short normal navigation, true-process reopen.",
+  "guide_sha256": "3e3e6cf19cbd5cda5667c44710f483fbba2ac30af7d098921acc811cf08dfdae",
+  "prompt_sha256": "b2066d4e922dd617804c69f890c8a193f9c6403e1e2db1c693987afe2da481e2",
+  "comparison_size": [
+    1920,
+    1080
+  ],
+  "missing_candidate_score": 0,
+  "model": "gpt-6-astra",
+  "formal_freeze": false
+}

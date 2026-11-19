@@ -1,0 +1,12 @@
+{
+  "name": "com.omnigame.benchmark.sign-circuit.evaluator",
+  "version": "3.0.0",
+  "displayName": "OmniGame Sign Circuit Private Evaluator",
+  "description": "Private D1 static gates and D2-D5 Unity-CLI real-input trajectories using the public read-only Sign Circuit probe, fresh-process persistence, and visual evidence.",
+  "unity": "6000.0",
+  "dependencies": {
+    "com.unity.inputsystem": "1.19.0",
+    "com.unity.test-framework": "1.6.0",
+    "com.unity.ugui": "2.0.0"
+  }
+}

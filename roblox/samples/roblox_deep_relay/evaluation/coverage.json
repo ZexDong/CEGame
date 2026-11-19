@@ -1,0 +1,135 @@
+{
+  "sample_id": "roblox_deep_relay",
+  "document_type": "Original GDD and evaluator source index",
+  "new_evaluation_requirement": false,
+  "requirements": [
+    {
+      "requirement_id": "DR-GDD-1",
+      "obligation": "Deep Relay: Lockdown Recovery Game Design Document",
+      "source_line": 1,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-2",
+      "obligation": "1. Overview",
+      "source_line": 3,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-3",
+      "obligation": "2. Player input",
+      "source_line": 11,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-4",
+      "obligation": "3. World areas",
+      "source_line": 22,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-5",
+      "obligation": "4. Complete success flow",
+      "source_line": 38,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-6",
+      "obligation": "4.1 Power tuning",
+      "source_line": 40,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-7",
+      "obligation": "4.2 Coolant balance",
+      "source_line": 49,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-8",
+      "obligation": "4.3 Authorization calibration",
+      "source_line": 60,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-9",
+      "obligation": "4.4 Core assembly",
+      "source_line": 68,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-10",
+      "obligation": "4.5 Airlock and checkpoint",
+      "source_line": 77,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-11",
+      "obligation": "4.6 Hazard corridor and final stabilization",
+      "source_line": 87,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-12",
+      "obligation": "5. HUD and feedback",
+      "source_line": 99,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-13",
+      "obligation": "6. Failure, death, restart, and Reopen",
+      "source_line": 117,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-14",
+      "obligation": "Local failures",
+      "source_line": 119,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-15",
+      "obligation": "Ordinary death",
+      "source_line": 128,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-16",
+      "obligation": "R restart",
+      "source_line": 136,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-17",
+      "obligation": "Reopen",
+      "source_line": 143,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-18",
+      "obligation": "7. World and movement constraints",
+      "source_line": 147,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-19",
+      "obligation": "8. State consistency",
+      "source_line": 160,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-20",
+      "obligation": "9. Equivalent implementations",
+      "source_line": 174,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DR-GDD-21",
+      "obligation": "10. Invalid substitutes",
+      "source_line": 180,
+      "native_evaluator_sources": "src/original/"
+    }
+  ],
+  "original_coverage_files": [],
+  "existing_evaluators_preserved": true
+}

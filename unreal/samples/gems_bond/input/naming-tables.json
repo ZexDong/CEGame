@@ -1,0 +1,187 @@
+{
+  "slots": {
+    "coins": {
+      "description": "Spendable shared wallet",
+      "requirement_id": "ECONOMY-01"
+    },
+    "crystal_health": {
+      "description": "Current crystal health",
+      "requirement_id": "START-01"
+    },
+    "crystal_max_health": {
+      "description": "Maximum crystal health",
+      "requirement_id": "HEALTH-01"
+    },
+    "wave": {
+      "description": "Upcoming or active 1-based wave; 0 in preparation; retained during pause/defeat",
+      "requirement_id": "WAVE-01"
+    },
+    "waves_cleared": {
+      "description": "Completed waves including the rest wave",
+      "requirement_id": "WAVE-04"
+    },
+    "wave_total": {
+      "description": "Scheduled enemies in the current combat wave; 0 in preparation/countdown/rest; retain on pause/defeat",
+      "requirement_id": "WAVE-03"
+    },
+    "wave_spawned": {
+      "description": "Emitted enemies in the current combat wave; 0 in preparation/countdown/rest; retain on pause/defeat",
+      "requirement_id": "WAVE-02"
+    },
+    "enemies_alive": {
+      "description": "Living emitted enemies; freeze after terminal damage/death resolution on defeat",
+      "requirement_id": "ENEMY-04"
+    },
+    "enemies_remaining": {
+      "description": "wave_total - wave_spawned + enemies_alive; retain on pause, freeze after terminal resolution on defeat",
+      "requirement_id": "WAVE-04"
+    },
+    "countdown_seconds": {
+      "description": "Remaining countdown/rest time; 0 in preparation/combat; retained during pause/defeat",
+      "requirement_id": "WAVE-01"
+    },
+    "speed_multiplier": {
+      "description": "0 while paused/defeated, otherwise 1 or 3",
+      "requirement_id": "SPEED-01"
+    },
+    "mine_count": {
+      "description": "Living player-owned mine count",
+      "requirement_id": "ECONOMY-01"
+    },
+    "archer_count": {
+      "description": "Living player-owned archer count",
+      "requirement_id": "ECONOMY-01"
+    },
+    "cannon_count": {
+      "description": "Living player-owned cannon count",
+      "requirement_id": "ECONOMY-01"
+    },
+    "wall_count": {
+      "description": "Living player-owned wall count",
+      "requirement_id": "ECONOMY-01"
+    },
+    "mine_price": {
+      "description": "Current displayed purchase price for mine",
+      "requirement_id": "ECONOMY-01"
+    },
+    "archer_price": {
+      "description": "Current displayed purchase price for archer",
+      "requirement_id": "ECONOMY-01"
+    },
+    "cannon_price": {
+      "description": "Current displayed purchase price for cannon",
+      "requirement_id": "ECONOMY-01"
+    },
+    "wall_price": {
+      "description": "Current displayed purchase price for wall",
+      "requirement_id": "ECONOMY-01"
+    }
+  },
+  "phases": [
+    "not_ready",
+    "preparing",
+    "countdown",
+    "combat",
+    "rest",
+    "paused",
+    "defeated"
+  ],
+  "entity_states": {
+    "crystal": [
+      "alive",
+      "destroyed"
+    ],
+    "deposit": [
+      "free",
+      "occupied"
+    ],
+    "mine": [
+      "constructing",
+      "alive"
+    ],
+    "archer": [
+      "constructing",
+      "idle",
+      "firing"
+    ],
+    "cannon": [
+      "constructing",
+      "idle",
+      "firing"
+    ],
+    "wall": [
+      "constructing",
+      "alive"
+    ],
+    "slime": [
+      "moving",
+      "attacking",
+      "dead"
+    ],
+    "skeleton": [
+      "moving",
+      "attacking",
+      "dead"
+    ],
+    "orc": [
+      "moving",
+      "attacking",
+      "dead"
+    ],
+    "bat": [
+      "moving",
+      "attacking",
+      "dead"
+    ],
+    "dragon": [
+      "moving",
+      "attacking",
+      "dead"
+    ],
+    "arrow": [
+      "flying"
+    ],
+    "cannonball": [
+      "flying"
+    ],
+    "feedback": [
+      "income",
+      "bounty",
+      "build",
+      "upgrade",
+      "impact",
+      "destruction",
+      "rejected"
+    ]
+  },
+  "target_kinds": [
+    "build_mine",
+    "build_archer",
+    "build_cannon",
+    "build_wall",
+    "board_cell",
+    "inspect",
+    "upgrade",
+    "sell",
+    "pause",
+    "resume",
+    "restart",
+    "exit",
+    "mute"
+  ],
+  "coordinates": {
+    "board": "20 x 20; cell [column,row], zero-based 0..19, top-left origin; integer coordinates are cell centers",
+    "position": "[column_fraction,row_fraction,height_in_cell_units]; integer ground coordinates are cell centers; off-board entry coordinates may be negative or above 19",
+    "rect": "[left,top,width,height] normalized to the actual game client; top-left origin"
+  },
+  "controls": {
+    "left_mouse": "select/confirm",
+    "right_mouse": "cancel",
+    "Escape": "cancel",
+    "F": "hold 3x / release 1x",
+    "P": "pause edge",
+    "R": "restart edge"
+  },
+  "seed_argument": "-GameSeed=<uint32>; default 50",
+  "authority": "Only maps GDD Section 6; creates no additional gameplay."
+}

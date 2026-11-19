@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "id": "hint_stability",
+  "title": "Hint is legal, free, visible, repeatable, and updates after real player state changes",
+  "steps": [
+    {
+      "step_id": "setup.scene",
+      "operation": "load_canonical_scene",
+      "target": "scene:ArrowEscape",
+      "check_ids": [
+        "setup.scene_load",
+        "setup.probe",
+        "setup.playable"
+      ]
+    },
+    {
+      "step_id": "declared.scoring_checks",
+      "operation": "observe_visible_player_journeys",
+      "target": "running_scene",
+      "check_ids": [
+        "hint.click.1.input.top_hit",
+        "hint.state.1.legal",
+        "hint.state.1.no_cost",
+        "hint.feedback.changed",
+        "hint.feedback.duration",
+        "hint.feedback.recovered",
+        "hint.repeated.no_duplicates",
+        "hint.repeated.legal_no_cost",
+        "hint.clear_exit.reached",
+        "hint.click.after_state_change.input.top_hit",
+        "hint.after_state_change.new_legal"
+      ]
+    }
+  ]
+}

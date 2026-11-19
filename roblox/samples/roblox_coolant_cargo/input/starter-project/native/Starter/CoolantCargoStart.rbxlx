@@ -1,0 +1,48 @@
+<roblox version="4">
+  <Item class="Lighting" referent="0">
+    <Properties><string name="Name">Lighting</string><float name="Brightness">2</float><float name="ClockTime">15</float><float name="EnvironmentDiffuseScale">0.35</float><float name="EnvironmentSpecularScale">0.5</float></Properties>
+  </Item>
+  <Item class="ReplicatedStorage" referent="1">
+    <Properties><string name="Name">ReplicatedStorage</string></Properties>
+    <Item class="ModuleScript" referent="2">
+      <Properties>
+        <string name="Name">CoolantCargoPublicSchema</string>
+        <string name="Source"><![CDATA[--!strict
+-- Public constants only. No gameplay or scoring logic.
+local Schema = {
+    ContractVersion = "coolant-cargo-v1",
+    Tags = {
+        CentralSpawn="CCP_CentralSpawn", Valve="CCP_Valve", EnergyRack="CCP_EnergyRack",
+        EnergyCell="CCP_EnergyCell", ChargeDock="CCP_ChargeDock", ChargeConsole="CCP_ChargeConsole",
+        CoreSocket="CCP_CoreSocket", ReactorConsole="CCP_ReactorConsole",
+        SafetyCheckpoint="CCP_SafetyCheckpoint", Hazard="CCP_Hazard", OuterDoor="CCP_OuterDoor",
+        InnerDoor="CCP_InnerDoor", AirlockZone="CCP_AirlockZone", DeconConsole="CCP_DeconConsole",
+        EvacuationZone="CCP_EvacuationZone",
+    },
+    ValveOrder = {"Intake", "Bypass", "Outlet"},
+    CellStates = {"Rack", "Carried", "Docked", "Charging", "Installed"},
+    AirlockStages = {"Locked", "OuterOpen", "Occupied", "Decontaminating", "InnerOpen"},
+    PlayerAttributes = {
+        RunId="CCP_RunId", CoolantStep="CCP_CoolantStep", NextValve="CCP_NextValve",
+        IntakeOpen="CCP_IntakeOpen", BypassOpen="CCP_BypassOpen", OutletOpen="CCP_OutletOpen",
+        CoolantReady="CCP_CoolantReady", CellState="CCP_CellState", CellCharged="CCP_CellCharged",
+        ChargeProgress="CCP_ChargeProgress", PowerReady="CCP_PowerReady", ReactorStable="CCP_ReactorStable",
+        AirlockStage="CCP_AirlockStage", Checkpoint="CCP_Checkpoint", DeathCount="CCP_DeathCount",
+        Completed="CCP_Completed", RunStart="CCP_RunStart", FinalTime="CCP_FinalTime",
+        EventSerial="CCP_EventSerial", LastEvent="CCP_LastEvent", FeedbackText="CCP_FeedbackText",
+    },
+    Geometry = {MaxHorizontalDistanceFromCentral=145, MaxTargetHeightDelta=2, MinimumWalkWidth=12, MinimumHeadroom=8},
+    Timing = {ReadyTimeout=10, ChargeMinimum=3, ChargeMaximum=6, DeconMinimum=3, DeconMaximum=6, DoorTransitionTimeout=2},
+}
+return table.freeze(Schema)]]></string>
+      </Properties>
+    </Item>
+  </Item>
+  <Item class="ServerScriptService" referent="3"><Properties><string name="Name">ServerScriptService</string></Properties></Item>
+  <Item class="StarterGui" referent="4"><Properties><string name="Name">StarterGui</string></Properties></Item>
+  <Item class="StarterPlayer" referent="5">
+    <Properties><string name="Name">StarterPlayer</string><token name="CameraMode">0</token><float name="CharacterJumpHeight">7.2</float><float name="CharacterWalkSpeed">18</float></Properties>
+    <Item class="StarterPlayerScripts" referent="6"><Properties><string name="Name">StarterPlayerScripts</string></Properties></Item>
+  </Item>
+  <Item class="Workspace" referent="7"><Properties><string name="Name">Workspace</string><float name="Gravity">196.2</float><bool name="NeedsPivotMigration">false</bool><bool name="StreamingEnabled">false</bool></Properties></Item>
+</roblox>

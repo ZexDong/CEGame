@@ -1,0 +1,15 @@
+{
+  "name": "OmniGame.SignCircuit.PublicTests.EditMode",
+  "rootNamespace": "OmniGame.Benchmark.SignCircuit.PublicTests",
+  "references": ["OmniGame.SignCircuit.Contract"],
+  "includePlatforms": ["Editor"],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": ["UNITY_INCLUDE_TESTS"],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": ["TestAssemblies"]
+}

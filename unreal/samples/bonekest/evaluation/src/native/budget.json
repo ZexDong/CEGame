@@ -1,0 +1,303 @@
+{
+  "cases": {
+    "modes": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "normal_input",
+      "checks": [
+        "D2-menu",
+        "D2-rooms",
+        "D2-resources",
+        "D3-graph",
+        "D3-locks",
+        "D4-entry"
+      ]
+    },
+    "content": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "hybrid",
+      "checks": [
+        "D2-roles"
+      ]
+    },
+    "arrangements": {
+      "max_serial_seconds": 300,
+      "max_actions": 80,
+      "setup_method": "hybrid",
+      "checks": [
+        "D2-arrangements",
+        "D2-architecture"
+      ]
+    },
+    "movement": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "normal_input",
+      "checks": [
+        "D2-mage",
+        "D3-movement"
+      ]
+    },
+    "gates": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "hybrid",
+      "checks": [
+        "D2-gates",
+        "D3-gate_time",
+        "D3-gate_shared"
+      ]
+    },
+    "spell": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "normal_input",
+      "checks": [
+        "D2-spell",
+        "D3-turns",
+        "D3-spell_cost"
+      ]
+    },
+    "pickups": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "hybrid",
+      "checks": [
+        "D2-pickups",
+        "D3-keys",
+        "D3-pickup_once",
+        "D3-scroll_uncapped",
+        "D3-heart_uncapped"
+      ]
+    },
+    "outcomes": {
+      "max_serial_seconds": 180,
+      "max_actions": 65,
+      "setup_method": "hybrid",
+      "checks": [
+        "D2-outcomes",
+        "D3-exit_lock",
+        "D3-exit_trigger",
+        "D3-fatal",
+        "D3-terminal",
+        "D4-failure",
+        "D5-results"
+      ]
+    },
+    "presentation": {
+      "max_serial_seconds": 150,
+      "max_actions": 40,
+      "setup_method": "hybrid",
+      "checks": [
+        "D2-animations",
+        "D2-effects",
+        "D2-sounds"
+      ]
+    },
+    "audio": {
+      "max_serial_seconds": 100,
+      "max_actions": 30,
+      "setup_method": "hybrid",
+      "checks": [
+        "D2-music"
+      ]
+    },
+    "interface": {
+      "max_serial_seconds": 180,
+      "max_actions": 65,
+      "setup_method": "normal_input",
+      "checks": [
+        "D2-interface_assets",
+        "D5-controls"
+      ]
+    },
+    "initial": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "normal_input",
+      "checks": [
+        "D3-initial"
+      ]
+    },
+    "seed": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "normal_input",
+      "checks": [
+        "D3-seed"
+      ]
+    },
+    "collision": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "hybrid",
+      "checks": [
+        "D3-collision"
+      ]
+    },
+    "passage": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "hybrid",
+      "checks": [
+        "D3-passages"
+      ]
+    },
+    "monster": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "hybrid",
+      "checks": [
+        "D3-monster_step"
+      ]
+    },
+    "distribution": {
+      "max_serial_seconds": 900,
+      "max_actions": 500,
+      "setup_method": "hybrid",
+      "checks": [
+        "D3-monster_distribution"
+      ]
+    },
+    "encounter": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "hybrid",
+      "checks": [
+        "D3-hit",
+        "D3-recovery"
+      ]
+    },
+    "danger": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "hybrid",
+      "checks": [
+        "D3-danger"
+      ]
+    },
+    "reveal": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "normal_input",
+      "checks": [
+        "D3-reveal_timer"
+      ]
+    },
+    "depleted": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "hybrid",
+      "checks": [
+        "D3-depleted"
+      ]
+    },
+    "gate_range": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "hybrid",
+      "checks": [
+        "D3-gate_range",
+        "D3-gate_locked"
+      ]
+    },
+    "economy": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "hybrid",
+      "checks": [
+        "D3-coin_exchange"
+      ]
+    },
+    "honesty": {
+      "max_serial_seconds": 180,
+      "max_actions": 60,
+      "setup_method": "hybrid",
+      "checks": [
+        "D3-observation_truth"
+      ]
+    },
+    "journey": {
+      "max_serial_seconds": 1800,
+      "max_actions": 1600,
+      "setup_method": "normal_input",
+      "checks": [
+        "D4-journey"
+      ]
+    },
+    "restart": {
+      "max_serial_seconds": 160,
+      "max_actions": 45,
+      "setup_method": "hybrid",
+      "checks": [
+        "D4-restart"
+      ]
+    },
+    "cancel": {
+      "max_serial_seconds": 240,
+      "max_actions": 80,
+      "setup_method": "hybrid",
+      "checks": [
+        "D4-cancel"
+      ]
+    },
+    "pause": {
+      "max_serial_seconds": 160,
+      "max_actions": 50,
+      "setup_method": "hybrid",
+      "checks": [
+        "D4-pause"
+      ]
+    },
+    "menu": {
+      "max_serial_seconds": 90,
+      "max_actions": 20,
+      "setup_method": "normal_input",
+      "checks": [
+        "D4-menu"
+      ]
+    },
+    "reopen": {
+      "max_serial_seconds": 220,
+      "max_actions": 10,
+      "setup_method": "normal_input",
+      "checks": [
+        "D4-reopen"
+      ]
+    },
+    "feedback": {
+      "max_serial_seconds": 180,
+      "max_actions": 65,
+      "setup_method": "hybrid",
+      "checks": [
+        "D5-hud",
+        "D5-danger",
+        "D5-rejection",
+        "D5-gate_prompt"
+      ]
+    },
+    "resolution": {
+      "max_serial_seconds": 180,
+      "max_actions": 65,
+      "setup_method": "hybrid",
+      "checks": [
+        "D5-resolution"
+      ]
+    },
+    "focus": {
+      "max_serial_seconds": 180,
+      "max_actions": 65,
+      "setup_method": "hybrid",
+      "checks": [
+        "D5-focus"
+      ]
+    }
+  },
+  "declared_serial_worst_case_seconds": 8860,
+  "static_budget_seconds": 600,
+  "headroom_seconds": 1200,
+  "session_watchdog_seconds": 10060,
+  "reopen_included": true,
+  "large_action_budget_reason": "Normal lifecycle journey and probability/content sampling require multiple repeated independent triggers. Setup steps are recorded separately from the action under test."
+}

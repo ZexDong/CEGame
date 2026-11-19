@@ -1,0 +1,2953 @@
+{
+  "schema_version": "2.0",
+  "coverage_status": "not_reviewed",
+  "gdd_sha256": "ae976e8121fe8df7b51899df895987b1ca3b10f13126c4e1dcc695c353827f3b",
+  "limitations": [
+    "Native requirement mapping is preserved; independent semantic coverage and targeted positive/negative/equivalent game fixtures have not been qualified."
+  ],
+  "requirements": [
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The documented default entry is launched.",
+      "check_ids": [
+        "D2-01",
+        "D3-01",
+        "D4-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "The first round is created.",
+      "check_ids": [
+        "D2-01",
+        "D3-01",
+        "D4-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.3.1",
+      "field": "Required Result",
+      "obligation": "Present exactly the fixed 11x9 layout in `starter-project/Config/BomberArenaLayout.json`, with one Player 1 at `(1,1)`, one Player 2 at `(9,1)`, all listed indestructible walls, and all fifteen listed crates.",
+      "check_ids": [
+        "D2-01",
+        "D3-01",
+        "D4-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.3.2",
+      "field": "Required Result",
+      "obligation": "The open vertical lanes below both starts extend through `y=4`, so either player can leave a first Fire 2 bomb's blast footprint.",
+      "check_ids": [
+        "D2-01",
+        "D3-01",
+        "D4-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.3.3",
+      "field": "Required Result",
+      "obligation": "Every non-wall cell can become reachable after legal crate destruction.",
+      "check_ids": [
+        "D2-01",
+        "D3-01",
+        "D4-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Do not rearrange the arena, omit or duplicate a required object, add an AI player, or start either player inside a wall/crate.",
+      "check_ids": [
+        "D2-01",
+        "D3-01",
+        "D4-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Floor, walls, crates, Player 1, and Player 2 are distinguishable in the normal shared view.",
+      "check_ids": [
+        "D2-01",
+        "D3-01",
+        "D4-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Initial launch and each clean restart create exactly one fresh copy of every listed object.",
+      "check_ids": [
+        "D2-01",
+        "D3-01",
+        "D4-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MATCH-01",
+      "obligation_id": "MATCH-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A fresh round has been created.",
+      "check_ids": [
+        "D2-02",
+        "D3-02",
+        "D4-01",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MATCH-01",
+      "obligation_id": "MATCH-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Allow the round to start without pressing `R`.",
+      "check_ids": [
+        "D2-02",
+        "D3-02",
+        "D4-01",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MATCH-01",
+      "obligation_id": "MATCH-01.3.1",
+      "field": "Required Result",
+      "obligation": "Enter a visible three-second countdown that presents `3`, then `2`, then `1`, then `GO`; each numeral remains for `0.75` through `1.25` seconds.",
+      "check_ids": [
+        "D2-02",
+        "D3-02",
+        "D4-01",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MATCH-01",
+      "obligation_id": "MATCH-01.3.2",
+      "field": "Required Result",
+      "obligation": "Both players remain at their start cells and cannot place bombs during the countdown.",
+      "check_ids": [
+        "D2-02",
+        "D3-02",
+        "D4-01",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MATCH-01",
+      "obligation_id": "MATCH-01.3.3",
+      "field": "Required Result",
+      "obligation": "After `GO`, enter the active match exactly once with `45` seconds remaining.",
+      "check_ids": [
+        "D2-02",
+        "D3-02",
+        "D4-01",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MATCH-01",
+      "obligation_id": "MATCH-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Movement, bombs, crate changes, pickups, death, or terminal results must not occur during countdown.",
+      "check_ids": [
+        "D2-02",
+        "D3-02",
+        "D4-01",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MATCH-01",
+      "obligation_id": "MATCH-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The countdown and transition to active play are clearly visible and audible or visually emphasized.",
+      "check_ids": [
+        "D2-02",
+        "D3-02",
+        "D4-01",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MATCH-01",
+      "obligation_id": "MATCH-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Restart during countdown begins a new full countdown; stale countdown events from the old round do not activate the new round early.",
+      "check_ids": [
+        "D2-02",
+        "D3-02",
+        "D4-01",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The match is active and Player 1 is alive.",
+      "check_ids": [
+        "D2-03",
+        "D3-03",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Hold/release `W`, `A`, `S`, or `D`.",
+      "check_ids": [
+        "D2-03",
+        "D3-03",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.3.1",
+      "field": "Required Result",
+      "obligation": "Player 1 moves respectively up, left, down, or right through floor cells and can turn at passages; release ends intentional movement.",
+      "check_ids": [
+        "D2-03",
+        "D3-03",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Player 1 must not move opposite the pressed direction, pass through blocked cells, continue indefinitely after release, or move Player 2.",
+      "check_ids": [
+        "D2-03",
+        "D3-03",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Player 1 position and locomotion presentation respond visibly.",
+      "check_ids": [
+        "D2-03",
+        "D3-03",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Repeated holds remain responsive; countdown and terminal behavior follow `MATCH-01` and `TERMINAL-01`.",
+      "check_ids": [
+        "D2-03",
+        "D3-03",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.1.1",
+      "field": "Preconditions",
+      "obligation": "The match is active and Player 2 is alive.",
+      "check_ids": [
+        "D2-04",
+        "D3-03",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Hold/release `Up`, `Left`, `Down`, or `Right`.",
+      "check_ids": [
+        "D2-04",
+        "D3-03",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.3.1",
+      "field": "Required Result",
+      "obligation": "Player 2 moves respectively up, left, down, or right through floor cells and can turn at passages; release ends intentional movement.",
+      "check_ids": [
+        "D2-04",
+        "D3-03",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Player 2 must not move opposite the pressed direction, pass through blocked cells, continue indefinitely after release, or move Player 1.",
+      "check_ids": [
+        "D2-04",
+        "D3-03",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Player 2 position and locomotion presentation respond visibly.",
+      "check_ids": [
+        "D2-04",
+        "D3-03",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Simultaneous Player 1 and Player 2 input remains independent; countdown and terminal behavior follow `MATCH-01` and `TERMINAL-01`.",
+      "check_ids": [
+        "D2-04",
+        "D3-03",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-01",
+      "obligation_id": "BOMB-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The match is active, the acting player is alive, and that player's `BOMBS` available value is at least one.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D3-05",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-01",
+      "obligation_id": "BOMB-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Press that player's bomb key once.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D3-05",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-01",
+      "obligation_id": "BOMB-01.3.1",
+      "field": "Required Result",
+      "obligation": "Place exactly one bomb on the acting player's current floor cell, assign ownership to that player, capture that player's current Fire value for this bomb, and decrease only that player's available bomb count by one.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D3-05",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-01",
+      "obligation_id": "BOMB-01.3.2",
+      "field": "Required Result",
+      "obligation": "A player standing on their newly placed bomb may leave its cell.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D3-05",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-01",
+      "obligation_id": "BOMB-01.3.3",
+      "field": "Required Result",
+      "obligation": "After leaving, that bomb blocks both players from entering its cell.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D3-05",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-01",
+      "obligation_id": "BOMB-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "A press must not place multiple bombs, use the other player's resource, place in another cell, or allow any player to enter a bomb cell from another cell.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D3-05",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-01",
+      "obligation_id": "BOMB-01.4.2",
+      "field": "Prohibited Result",
+      "obligation": "A rejected press at zero available bombs must not create or move a bomb.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D3-05",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-01",
+      "obligation_id": "BOMB-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The bomb is visible and uses the owner's required supplied bomb presentation; a rejected attempt shows `BOMB NOT READY` for that player.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D3-05",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-01",
+      "obligation_id": "BOMB-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "When that bomb has completed its only explosion, exactly one slot returns to its owner.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D3-05",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-01",
+      "obligation_id": "BOMB-01.6.2",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Repeated rejected presses do not stack bombs or duplicate refunds.",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D3-05",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-02",
+      "obligation_id": "BOMB-02.1.1",
+      "field": "Preconditions",
+      "obligation": "An armed bomb exists in an active match.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-02",
+      "obligation_id": "BOMB-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Let its fuse expire without a chain trigger or restart.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-02",
+      "obligation_id": "BOMB-02.3.1",
+      "field": "Required Result",
+      "obligation": "Detonate `1.80` seconds after placement with tolerance `±0.15` seconds.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-02",
+      "obligation_id": "BOMB-02.3.2",
+      "field": "Required Result",
+      "obligation": "Include the bomb cell and extend in the four cardinal directions up to its captured Fire range.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-02",
+      "obligation_id": "BOMB-02.3.3",
+      "field": "Required Result",
+      "obligation": "Show the blast for `0.35` through `0.65` seconds, then clear it.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-02",
+      "obligation_id": "BOMB-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Do not detonate immediately, extend diagonally, skip the bomb cell, exceed captured range, or leave permanent damaging blast cells.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-02",
+      "obligation_id": "BOMB-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The fuse has a perceptible armed cue and the explosion is a bright readable cross.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-02",
+      "obligation_id": "BOMB-02.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Each bomb follows the same timing.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-02",
+      "obligation_id": "BOMB-02.6.2",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Restart cancels old fuses and blast visuals.",
+      "check_ids": [
+        "D2-06",
+        "D3-06",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-03",
+      "obligation_id": "BOMB-03.1.1",
+      "field": "Preconditions",
+      "obligation": "At least two armed bombs exist and one bomb's legal blast reaches another bomb cell.",
+      "check_ids": [
+        "D2-07",
+        "D3-13",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-03",
+      "obligation_id": "BOMB-03.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "The first bomb detonates.",
+      "check_ids": [
+        "D2-07",
+        "D3-13",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-03",
+      "obligation_id": "BOMB-03.3.1",
+      "field": "Required Result",
+      "obligation": "Include the reached bomb cell, stop that incoming ray at the bomb, and trigger the reached bomb immediately without waiting for its remaining fuse.",
+      "check_ids": [
+        "D2-07",
+        "D3-13",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-03",
+      "obligation_id": "BOMB-03.3.2",
+      "field": "Required Result",
+      "obligation": "Resolve all bombs reached by the same chain exactly once, using each chained bomb's own captured Fire range and owner.",
+      "check_ids": [
+        "D2-07",
+        "D3-13",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-03",
+      "obligation_id": "BOMB-03.4.1",
+      "field": "Prohibited Result",
+      "obligation": "A chained bomb must not ignore the trigger, wait for its old fuse, detonate twice, duplicate an owner refund, or allow the incoming ray to pass through its cell before the chained bomb resolves.",
+      "check_ids": [
+        "D2-07",
+        "D3-13",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-03",
+      "obligation_id": "BOMB-03.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The chain is visibly readable as connected explosion crosses.",
+      "check_ids": [
+        "D2-07",
+        "D3-13",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-03",
+      "obligation_id": "BOMB-03.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "The entire connected chain resolves before `COMBAT-01`, `OBJECTIVE-01`, or `DRAW-01` commits a result.",
+      "check_ids": [
+        "D2-07",
+        "D3-13",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BOMB-03",
+      "obligation_id": "BOMB-03.6.2",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Unrelated bombs are not triggered.",
+      "check_ids": [
+        "D2-07",
+        "D3-13",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-01",
+      "obligation_id": "RULE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A blast ray reaches an indestructible wall.",
+      "check_ids": [
+        "D2-06",
+        "D3-07"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-01",
+      "obligation_id": "RULE-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "The explosion resolves.",
+      "check_ids": [
+        "D2-06",
+        "D3-07"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-01",
+      "obligation_id": "RULE-01.3.1",
+      "field": "Required Result",
+      "obligation": "The wall remains present and stops the ray before the wall cell; no cell beyond that wall is affected by that ray.",
+      "check_ids": [
+        "D2-06",
+        "D3-07"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-01",
+      "obligation_id": "RULE-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "A wall must not be destroyed, entered, hidden by replacement geometry, or transmit damage.",
+      "check_ids": [
+        "D2-06",
+        "D3-07"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-01",
+      "obligation_id": "RULE-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The blast terminates visibly at the wall.",
+      "check_ids": [
+        "D2-06",
+        "D3-07"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-01",
+      "obligation_id": "RULE-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "The same wall blocks later movement and explosions and is restored unchanged after restart.",
+      "check_ids": [
+        "D2-06",
+        "D3-07"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-02",
+      "obligation_id": "RULE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A blast ray reaches a present destructible crate.",
+      "check_ids": [
+        "D2-06",
+        "D3-08",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-02",
+      "obligation_id": "RULE-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "The explosion resolves.",
+      "check_ids": [
+        "D2-06",
+        "D3-08",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-02",
+      "obligation_id": "RULE-02.3.1",
+      "field": "Required Result",
+      "obligation": "Include the crate cell, destroy that crate exactly once, and stop that ray so the same explosion does not affect the next cell beyond it.",
+      "check_ids": [
+        "D2-06",
+        "D3-08",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-02",
+      "obligation_id": "RULE-02.3.2",
+      "field": "Required Result",
+      "obligation": "The cleared crate cell becomes traversable after the blast clears.",
+      "check_ids": [
+        "D2-06",
+        "D3-08",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-02",
+      "obligation_id": "RULE-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "A crate must not survive a direct blast, require multiple hits, damage a cell behind it in that ray, or be destroyed repeatedly.",
+      "check_ids": [
+        "D2-06",
+        "D3-08",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-02",
+      "obligation_id": "RULE-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The supplied crate visibly disappears or breaks and reveals readable floor or a power-up.",
+      "check_ids": [
+        "D2-06",
+        "D3-08",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RULE-02",
+      "obligation_id": "RULE-02.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "A destroyed crate remains absent for that round; restart restores it.",
+      "check_ids": [
+        "D2-06",
+        "D3-08",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-01",
+      "obligation_id": "POWERUP-01.1.1",
+      "field": "Preconditions",
+      "obligation": "One of the three designated containing crates is present.",
+      "check_ids": [
+        "D2-08",
+        "D3-09",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-01",
+      "obligation_id": "POWERUP-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "A legal blast destroys it.",
+      "check_ids": [
+        "D2-08",
+        "D3-09",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-01",
+      "obligation_id": "POWERUP-01.3.1",
+      "field": "Required Result",
+      "obligation": "Reveal exactly one supplied power-up on the same cell: Bomb at `(3,1)`, Fire at `(5,1)`, or Skate at `(3,3)`.",
+      "check_ids": [
+        "D2-08",
+        "D3-09",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-01",
+      "obligation_id": "POWERUP-01.3.2",
+      "field": "Required Result",
+      "obligation": "It remains available until collected or restart and survives the blast that reveals it.",
+      "check_ids": [
+        "D2-08",
+        "D3-09",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-01",
+      "obligation_id": "POWERUP-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Do not reveal a power-up early, duplicate it, move it to another cell, reveal one from any other crate, or destroy it with its revealing blast.",
+      "check_ids": [
+        "D2-08",
+        "D3-09",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-01",
+      "obligation_id": "POWERUP-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Bomb, Fire, and Skate are visibly distinct using their supplied meshes.",
+      "check_ids": [
+        "D2-08",
+        "D3-09",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-01",
+      "obligation_id": "POWERUP-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Restart hides all three inside their restored crates.",
+      "check_ids": [
+        "D2-08",
+        "D3-09",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-02",
+      "obligation_id": "POWERUP-02.1.1",
+      "field": "Preconditions",
+      "obligation": "The Bomb power-up is available and the entering player has bomb capacity `1`.",
+      "check_ids": [
+        "D2-08",
+        "D3-10",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-02",
+      "obligation_id": "POWERUP-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "That player enters `(3,1)` through normal movement.",
+      "check_ids": [
+        "D2-08",
+        "D3-10",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-02",
+      "obligation_id": "POWERUP-02.3.1",
+      "field": "Required Result",
+      "obligation": "Collect it once for that player only, remove the pickup, increase personal bomb capacity from `1` to `2`, and immediately make the added slot available.",
+      "check_ids": [
+        "D2-08",
+        "D3-10",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-02",
+      "obligation_id": "POWERUP-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Do not change Fire, Skate, the other player's values, or increase capacity beyond `2`.",
+      "check_ids": [
+        "D2-08",
+        "D3-10",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-02",
+      "obligation_id": "POWERUP-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "That player's HUD shows `BOMBS: <available>/2` and a temporary `BOMB UP` message.",
+      "check_ids": [
+        "D2-08",
+        "D3-10",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-02",
+      "obligation_id": "POWERUP-02.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Revisiting has no effect; restart restores both players to `1/1` and restores the hidden pickup.",
+      "check_ids": [
+        "D2-08",
+        "D3-10",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-03",
+      "obligation_id": "POWERUP-03.1.1",
+      "field": "Preconditions",
+      "obligation": "The Fire power-up is available and the entering player has Fire `2`.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-03",
+      "obligation_id": "POWERUP-03.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "That player enters `(5,1)` through normal movement.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-03",
+      "obligation_id": "POWERUP-03.3.1",
+      "field": "Required Result",
+      "obligation": "Collect it once for that player only, remove the pickup, and increase personal Fire from `2` to `3` for bombs placed afterward.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-03",
+      "obligation_id": "POWERUP-03.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Do not change bomb capacity, Skate, the other player's values, exceed Fire `3`, or retroactively change an already armed bomb's captured range.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-03",
+      "obligation_id": "POWERUP-03.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "That player's HUD shows `FIRE: 3` and a temporary `FIRE UP` message.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-03",
+      "obligation_id": "POWERUP-03.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Revisiting has no effect; restart restores Fire `2` and the hidden pickup.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-04",
+      "obligation_id": "POWERUP-04.1.1",
+      "field": "Preconditions",
+      "obligation": "The Skate power-up is available and the entering player has Skate `0`.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-04",
+      "obligation_id": "POWERUP-04.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "That player enters `(3,3)` through normal movement.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-04",
+      "obligation_id": "POWERUP-04.3.1",
+      "field": "Required Result",
+      "obligation": "Collect it once for that player only, remove the pickup, set Skate to `1`, and make subsequent held movement observably faster: after the initial immediate step, repeated cell steps use `0.10` through `0.13` seconds instead of the base `0.16` through `0.20` seconds.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-04",
+      "obligation_id": "POWERUP-04.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Do not change bomb capacity, Fire, the other player's values, exceed Skate `1`, or move while no direction is held.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-04",
+      "obligation_id": "POWERUP-04.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "That player's HUD shows `SKATE: 1`, a temporary `SKATE UP` message appears, and faster locomotion remains readable.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWERUP-04",
+      "obligation_id": "POWERUP-04.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Revisiting has no effect; restart restores Skate `0` and the hidden pickup.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D4-01",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The match is active and one or both players are alive.",
+      "check_ids": [
+        "D2-09",
+        "D3-14",
+        "D4-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "A completed direct or chained explosion transaction includes a living player's cell.",
+      "check_ids": [
+        "D2-09",
+        "D3-14",
+        "D4-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.3.1",
+      "field": "Required Result",
+      "obligation": "Mark every hit player dead exactly once, play a readable defeat response, make dead players non-blocking and unable to move, place bombs, or collect power-ups, then adjudicate the result from the set of survivors.",
+      "check_ids": [
+        "D2-09",
+        "D3-14",
+        "D4-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Contact, movement, a blocked blast, a cleared old blast, or repeated overlap after death must not kill a player.",
+      "check_ids": [
+        "D2-09",
+        "D3-14",
+        "D4-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.4.2",
+      "field": "Prohibited Result",
+      "obligation": "Result adjudication must not occur halfway through a still-connected chain.",
+      "check_ids": [
+        "D2-09",
+        "D3-14",
+        "D4-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Each death is visually clear and the HUD alive state updates.",
+      "check_ids": [
+        "D2-09",
+        "D3-14",
+        "D4-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Restart restores both players alive.",
+      "check_ids": [
+        "D2-09",
+        "D3-14",
+        "D4-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-01",
+      "obligation_id": "OBJECTIVE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "`COMBAT-01` finishes an explosion transaction with exactly one survivor.",
+      "check_ids": [
+        "D2-10",
+        "D3-14",
+        "D4-01",
+        "D4-02",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-01",
+      "obligation_id": "OBJECTIVE-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "The survivor set is evaluated.",
+      "check_ids": [
+        "D2-10",
+        "D3-14",
+        "D4-01",
+        "D4-02",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-01",
+      "obligation_id": "OBJECTIVE-01.3.1",
+      "field": "Required Result",
+      "obligation": "If Player 1 alone survives, enter `player1_win` once with exact overlay `PLAYER 1 WINS`; if Player 2 alone survives, enter `player2_win` once with exact overlay `PLAYER 2 WINS`.",
+      "check_ids": [
+        "D2-10",
+        "D3-14",
+        "D4-01",
+        "D4-02",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-01",
+      "obligation_id": "OBJECTIVE-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Do not award a win while both are alive, while no one survives, or more than once in the same round.",
+      "check_ids": [
+        "D2-10",
+        "D3-14",
+        "D4-01",
+        "D4-02",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-01",
+      "obligation_id": "OBJECTIVE-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The survivor remains identifiable and the exact winner overlay is stable.",
+      "check_ids": [
+        "D2-10",
+        "D3-14",
+        "D4-01",
+        "D4-02",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-01",
+      "obligation_id": "OBJECTIVE-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "The terminal round follows `TERMINAL-01`; `R` follows `LIFECYCLE-01`.",
+      "check_ids": [
+        "D2-10",
+        "D3-14",
+        "D4-01",
+        "D4-02",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DRAW-01",
+      "obligation_id": "DRAW-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A connected direct or chained explosion transaction begins with both players alive.",
+      "check_ids": [
+        "D2-11",
+        "D3-15",
+        "D4-03",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DRAW-01",
+      "obligation_id": "DRAW-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "That transaction hits both players before result adjudication.",
+      "check_ids": [
+        "D2-11",
+        "D3-15",
+        "D4-03",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DRAW-01",
+      "obligation_id": "DRAW-01.3.1",
+      "field": "Required Result",
+      "obligation": "Mark both dead and enter `draw` exactly once with exact overlay `DRAW`.",
+      "check_ids": [
+        "D2-11",
+        "D3-15",
+        "D4-03",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DRAW-01",
+      "obligation_id": "DRAW-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Do not choose a winner based on blast iteration order, bomb owner, or which player was processed first.",
+      "check_ids": [
+        "D2-11",
+        "D3-15",
+        "D4-03",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DRAW-01",
+      "obligation_id": "DRAW-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Both defeat responses and the stable `DRAW` overlay are visible.",
+      "check_ids": [
+        "D2-11",
+        "D3-15",
+        "D4-03",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DRAW-01",
+      "obligation_id": "DRAW-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "The terminal round follows `TERMINAL-01`; `R` follows `LIFECYCLE-01`.",
+      "check_ids": [
+        "D2-11",
+        "D3-15",
+        "D4-03",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TIMER-01",
+      "obligation_id": "TIMER-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The match is active and both players remain alive.",
+      "check_ids": [
+        "D2-11",
+        "D3-15",
+        "D4-03",
+        "D5-02",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TIMER-01",
+      "obligation_id": "TIMER-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Active match time elapses.",
+      "check_ids": [
+        "D2-11",
+        "D3-15",
+        "D4-03",
+        "D5-02",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TIMER-01",
+      "obligation_id": "TIMER-01.3.1",
+      "field": "Required Result",
+      "obligation": "Decrease the displayed timer from `45` toward `0` using real elapsed seconds.",
+      "check_ids": [
+        "D2-11",
+        "D3-15",
+        "D4-03",
+        "D5-02",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TIMER-01",
+      "obligation_id": "TIMER-01.3.2",
+      "field": "Required Result",
+      "obligation": "At `0`, enter `draw` exactly once with exact overlay `DRAW`.",
+      "check_ids": [
+        "D2-11",
+        "D3-15",
+        "D4-03",
+        "D5-02",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TIMER-01",
+      "obligation_id": "TIMER-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Countdown time must not consume the active match timer.",
+      "check_ids": [
+        "D2-11",
+        "D3-15",
+        "D4-03",
+        "D5-02",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TIMER-01",
+      "obligation_id": "TIMER-01.4.2",
+      "field": "Prohibited Result",
+      "obligation": "The timer must not run below zero, skip directly to a win, or keep gameplay active after timeout.",
+      "check_ids": [
+        "D2-11",
+        "D3-15",
+        "D4-03",
+        "D5-02",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TIMER-01",
+      "obligation_id": "TIMER-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The clock is continuously visible; the final ten seconds have a distinct visual or audible urgency cue.",
+      "check_ids": [
+        "D2-11",
+        "D3-15",
+        "D4-03",
+        "D5-02",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TIMER-01",
+      "obligation_id": "TIMER-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Restart and true reopen restore `45`.",
+      "check_ids": [
+        "D2-11",
+        "D3-15",
+        "D4-03",
+        "D5-02",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TIMER-01",
+      "obligation_id": "TIMER-01.6.2",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Terminal behavior follows `TERMINAL-01`.",
+      "check_ids": [
+        "D2-11",
+        "D3-15",
+        "D4-03",
+        "D5-02",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The round is in countdown, active, or terminal phase.",
+      "check_ids": [
+        "D2-12",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Observe the HUD before and after all resource, timer, death, restart, and result events.",
+      "check_ids": [
+        "D2-12",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.3.1",
+      "field": "Required Result",
+      "obligation": "Continuously show `TIME: <0-45>`, `ALIVE: <0-2>`, and separate Player 1 and Player 2 panels containing exact labels `BOMBS: <available>/<capacity>`, `FIRE: <2-3>`, and `SKATE: <0-1>`.",
+      "check_ids": [
+        "D2-12",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.3.2",
+      "field": "Required Result",
+      "obligation": "Values remain synchronized with gameplay truth.",
+      "check_ids": [
+        "D2-12",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Do not merge player resources, hide required values, display impossible values, drift from truth, or duplicate HUD layers after restart.",
+      "check_ids": [
+        "D2-12",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "All labels and values are readable at 1280x720.",
+      "check_ids": [
+        "D2-12",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Clean restart/reopen show Time `45`, Alive `2`, and both players at `1/1`, Fire `2`, Skate `0`.",
+      "check_ids": [
+        "D2-12",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FEEDBACK-01",
+      "obligation_id": "FEEDBACK-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The relevant action is legal or rejected.",
+      "check_ids": [
+        "D2-12",
+        "D5-02",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FEEDBACK-01",
+      "obligation_id": "FEEDBACK-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "A player moves, places or is refused a bomb, watches a fuse/chain, destroys a crate, reveals/collects a power-up, dies, wins, or draws.",
+      "check_ids": [
+        "D2-12",
+        "D5-02",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FEEDBACK-01",
+      "obligation_id": "FEEDBACK-01.3.1",
+      "field": "Required Result",
+      "obligation": "Each listed event has a distinct perceptible response; the two players and their owned bombs remain distinguishable.",
+      "check_ids": [
+        "D2-12",
+        "D5-02",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FEEDBACK-01",
+      "obligation_id": "FEEDBACK-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Critical feedback must not exist only in logs or the read-only state files.",
+      "check_ids": [
+        "D2-12",
+        "D5-02",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FEEDBACK-01",
+      "obligation_id": "FEEDBACK-01.4.2",
+      "field": "Prohibited Result",
+      "obligation": "Permanent visual effects or messages must not accumulate after repeated events.",
+      "check_ids": [
+        "D2-12",
+        "D5-02",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FEEDBACK-01",
+      "obligation_id": "FEEDBACK-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Use readable character locomotion, bomb armed cue, cross/chain blast, crate removal, supplied power-up presentation, pickup message, defeat response, urgency cue, and terminal overlay.",
+      "check_ids": [
+        "D2-12",
+        "D5-02",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FEEDBACK-01",
+      "obligation_id": "FEEDBACK-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Repeated events remain readable; restart removes all transients.",
+      "check_ids": [
+        "D2-12",
+        "D5-02",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The process is in countdown, active, or terminal phase.",
+      "check_ids": [
+        "D4-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Press `R` once.",
+      "check_ids": [
+        "D4-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.3.1",
+      "field": "Required Result",
+      "obligation": "Start a new three-second countdown with Player 1 `(1,1)`, Player 2 `(9,1)`, both alive, all fifteen crates present, all three power-ups hidden, no bombs/blasts, Time `45`, Alive `2`, and both players at `1/1`, Fire `2`, Skate `0`.",
+      "check_ids": [
+        "D4-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Do not preserve old fuses, chains, destroyed crates, pickups, deaths, results, timer progress, duplicate actors, HUD layers, or delayed callbacks.",
+      "check_ids": [
+        "D4-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Arena, players, HUD, and countdown visibly return to the clean composition.",
+      "check_ids": [
+        "D4-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Consecutive restarts remain clean after every old fuse/blast/countdown deadline would have passed.",
+      "check_ids": [
+        "D4-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Any prior in-process progress exists and the game is closed normally.",
+      "check_ids": [
+        "D1-05",
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "End the old process and launch a new one through the documented entry.",
+      "check_ids": [
+        "D1-05",
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.3.1",
+      "field": "Required Result",
+      "obligation": "Begin from the same clean countdown and initial state defined by `LIFECYCLE-01`, with a new process identity and no persistent match progress.",
+      "check_ids": [
+        "D1-05",
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Do not persist resources, destroyed crates, pickups, bombs, timer, deaths, or terminal result.",
+      "check_ids": [
+        "D1-05",
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The new process presents the same clean arena and HUD as a first launch.",
+      "check_ids": [
+        "D1-05",
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Every later true reopen repeats this reset.",
+      "check_ids": [
+        "D1-05",
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.1.1",
+      "field": "Preconditions",
+      "obligation": "`OBJECTIVE-01`, `DRAW-01`, or `TIMER-01` has committed.",
+      "check_ids": [
+        "D3-15",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Send both players' movement and bomb input without pressing `R`.",
+      "check_ids": [
+        "D3-15",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.3.1",
+      "field": "Required Result",
+      "obligation": "Keep phase, survivor/death state, resources, crates, timer, and result overlay stable.",
+      "check_ids": [
+        "D3-15",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.3.2",
+      "field": "Required Result",
+      "obligation": "Remove or harmlessly cancel any unrelated pending bomb/fuse after current visible chain feedback completes.",
+      "check_ids": [
+        "D3-15",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Post-terminal input must not move players, place/detonate new bombs, destroy crates, collect power-ups, alter the timer, or retrigger the result.",
+      "check_ids": [
+        "D3-15",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The exact terminal overlay remains visible and normal play is clearly locked.",
+      "check_ids": [
+        "D3-15",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "`R` is the only required action that leaves terminal state.",
+      "check_ids": [
+        "D3-15",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The supplied character kit is present.",
+      "check_ids": [
+        "D2-01",
+        "D5-03",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "A round starts and either player moves.",
+      "check_ids": [
+        "D2-01",
+        "D5-03",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.3.1",
+      "field": "Required Result",
+      "obligation": "Render both players with `/BlockoutMap/BlockoutMap/Characters/Mannequins/Meshes/SKM_Quinn_Simple`.",
+      "check_ids": [
+        "D2-01",
+        "D5-03",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.3.2",
+      "field": "Required Result",
+      "obligation": "Use `MI_Quinn_01` for Player 1 and `MI_Quinn_02` for Player 2.",
+      "check_ids": [
+        "D2-01",
+        "D5-03",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.3.3",
+      "field": "Required Result",
+      "obligation": "Use the supplied `MM_Manny_Idle` animation for the character presentation; movement must visibly translate and orient the animated character instead of replacing it with another model.",
+      "check_ids": [
+        "D2-01",
+        "D5-03",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Do not replace either required player with an engine primitive, different mesh, missing material, static unanimated pose for both states, or original author/community UI.",
+      "check_ids": [
+        "D2-01",
+        "D5-03",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The two supplied material variants, movement animation, and death presentation make both players readable.",
+      "check_ids": [
+        "D2-01",
+        "D5-03",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Every restart recreates the required player presentation.",
+      "check_ids": [
+        "D2-01",
+        "D5-03",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.1.1",
+      "field": "Preconditions",
+      "obligation": "The supplied arena meshes are present.",
+      "check_ids": [
+        "D2-01",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "The arena is assembled and crates are destroyed.",
+      "check_ids": [
+        "D2-01",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.3.1",
+      "field": "Required Result",
+      "obligation": "Render every indestructible wall with `SM_BlockoutMap_Wall` and every destructible crate with `SM_BlockoutMap_Box`.",
+      "check_ids": [
+        "D2-01",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Do not use engine cube primitives or replacement models for required wall/crate cells.",
+      "check_ids": [
+        "D2-01",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The supplied wall and box silhouettes are recognizable throughout normal play.",
+      "check_ids": [
+        "D2-01",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Restart restores all supplied crate visuals without duplicates.",
+      "check_ids": [
+        "D2-01",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.1.1",
+      "field": "Preconditions",
+      "obligation": "The supplied power-up meshes are present.",
+      "check_ids": [
+        "D2-01",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "The three containing crates reveal their pickups.",
+      "check_ids": [
+        "D2-01",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.3.1",
+      "field": "Required Result",
+      "obligation": "Render Bomb with `SM_BlockoutMap_Powerup_Bomb`, Fire with `SM_BlockoutMap_Powerup_Fire`, and Skate with `SM_BlockoutMap_Powerup_Skate`.",
+      "check_ids": [
+        "D2-01",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Do not swap meanings, use one mesh for all three, substitute primitives, or hide an available pickup.",
+      "check_ids": [
+        "D2-01",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Each supplied model is visible and distinguishable before collection.",
+      "check_ids": [
+        "D2-01",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Restart restores their hidden-in-crate lifecycle.",
+      "check_ids": [
+        "D2-01",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.1.1",
+      "field": "Preconditions",
+      "obligation": "The supplied bomb and marker assets are present.",
+      "check_ids": [
+        "D2-01",
+        "D5-03",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Either player places a bomb and a fresh round begins.",
+      "check_ids": [
+        "D2-01",
+        "D5-03",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.3.1",
+      "field": "Required Result",
+      "obligation": "Render bombs with `/Game/Bomber/Meshes/SM_Bomb` and supplied bomb material instances, using visibly different supplied colors for the two owners.",
+      "check_ids": [
+        "D2-01",
+        "D5-03",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.3.2",
+      "field": "Required Result",
+      "obligation": "Render `/Game/Bomber/Meshes/SM_PlayerArrowStart` with `MI_PlayerArrowStart` above Player 1 for at least `2.0` seconds after each clean round begins.",
+      "check_ids": [
+        "D2-01",
+        "D5-03",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.4.1",
+      "field": "Prohibited Result",
+      "obligation": "Do not use an engine primitive, replacement bomb, missing material, or place the marker above Player 2 instead of Player 1.",
+      "check_ids": [
+        "D2-01",
+        "D5-03",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Bomb ownership and the local Player 1 marker are immediately readable.",
+      "check_ids": [
+        "D2-01",
+        "D5-03",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "The marker returns after each restart and may fade after the required interval.",
+      "check_ids": [
+        "D2-01",
+        "D5-03",
+        "D5-06",
+        "D6-active-duel",
+        "D6-chain-reaction",
+        "D6-player1-win"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-01",
+      "obligation_id": "QUALITY-01.1.1",
+      "field": "Formal Requirement",
+      "obligation": "The project can be launched, run, exited, and launched again by following the public instructions.",
+      "check_ids": [
+        "D1-01",
+        "D1-02",
+        "D1-03",
+        "D1-04",
+        "D1-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-02",
+      "obligation_id": "QUALITY-02.1.1",
+      "field": "Formal Requirement",
+      "obligation": "The complete main flow uses normal player input and does not depend on a cheat, answer button, or direct gameplay-result invocation.",
+      "check_ids": [
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-03",
+      "obligation_id": "QUALITY-03.1.1",
+      "field": "Formal Requirement",
+      "obligation": "Critical entrances, text, controls, players, arena objects, and power-ups are visible, discoverable, readable, and operable.",
+      "check_ids": [
+        "D5-01",
+        "D5-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-04",
+      "obligation_id": "QUALITY-04.1.1",
+      "field": "Formal Requirement",
+      "obligation": "Player actions produce perceptible feedback and the interface remains consistent with true game state.",
+      "check_ids": [
+        "D1-04",
+        "D5-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-05",
+      "obligation_id": "QUALITY-05.1.1",
+      "field": "Formal Requirement",
+      "obligation": "No severe error blocks the main flow.",
+      "check_ids": [
+        "D1-01",
+        "D1-02",
+        "D1-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-06",
+      "obligation_id": "QUALITY-06.1.1",
+      "field": "Formal Requirement",
+      "obligation": "Repeated runs from the same initial conditions produce substantially stable results.",
+      "check_ids": [
+        "D4-04",
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    }
+  ],
+  "qualification_tests": [
+    "tests/test_distribution.py"
+  ],
+  "qualification_test_scope": "Distribution, evidence conversion and attribution invariants only; not gameplay semantic qualification."
+}

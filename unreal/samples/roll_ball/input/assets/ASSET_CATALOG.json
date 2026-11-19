@@ -1,0 +1,144 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "RollBall",
+  "items": [
+    {
+      "asset_id": "fixed-layout-data",
+      "relative_path": "starter-project/Config/FixedRollBallLayout.json",
+      "logical_role": "fixed maze fixture",
+      "format": "JSON",
+      "layout_id": "rollball-fixed-maze-10x10-v2",
+      "grid_width": 10,
+      "grid_height": 10,
+      "cell_size_unreal_units": 400,
+      "start_cell": {
+        "x": 0,
+        "y": 0
+      },
+      "exit_cell": {
+        "x": 9,
+        "y": 9
+      },
+      "trap_count": 16,
+      "vertical_wall_count": 67,
+      "horizontal_wall_count": 54,
+      "coordinate_origin": "bottom_left",
+      "requirement_ids": [
+        "LAYOUT-01",
+        "LAYOUT-02"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "licensing": {
+        "license_id": "MIT-RollBall",
+        "notice": "THIRD_PARTY_NOTICES.md"
+      },
+      "dependencies": [],
+      "sha256": "7588fdc31eac6d0389c7de39e0a66fbd6ec7be7836efac76d7af33133ff2b44a",
+      "byte_length": 6727
+    },
+    {
+      "asset_id": "board-floor-mesh",
+      "relative_path": "starter-project/Content/StarterContent/Architecture/Floor_400x400.uasset",
+      "unreal_object_path": "/Game/StarterContent/Architecture/Floor_400x400",
+      "logical_role": "required solid board tile mesh",
+      "format": "Unreal static mesh package",
+      "requirement_ids": [
+        "LAYOUT-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "license_id": "epic-content-terms",
+      "dependencies": [
+        "/Game/StarterContent/Materials/M_Basic_Floor"
+      ],
+      "sha256": "72573433c6e49f50cc003f425087c75c7c3b1d872733fb8a340f0a6cc5791eb4",
+      "byte_length": 15374
+    },
+    {
+      "asset_id": "board-hole-mesh",
+      "relative_path": "starter-project/Content/StarterContent/Architecture/Floor_400x400_Hole.uasset",
+      "unreal_object_path": "/Game/StarterContent/Architecture/Floor_400x400_Hole",
+      "logical_role": "required trap tile mesh with center opening",
+      "format": "Unreal static mesh package",
+      "requirement_ids": [
+        "LAYOUT-01",
+        "LAYOUT-02",
+        "HAZARD-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "license_id": "epic-content-terms",
+      "dependencies": [
+        "/Game/StarterContent/Materials/M_Basic_Floor"
+      ],
+      "sha256": "25546179fbef984745218563660972bb9a4c634ea90db82a5653d64bac185ee3",
+      "byte_length": 30318
+    },
+    {
+      "asset_id": "board-wall-mesh",
+      "relative_path": "starter-project/Content/StarterContent/Architecture/Wall_400x200.uasset",
+      "unreal_object_path": "/Game/StarterContent/Architecture/Wall_400x200",
+      "logical_role": "required fixed-board wall mesh",
+      "format": "Unreal static mesh package",
+      "requirement_ids": [
+        "LAYOUT-01",
+        "COLLISION-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "license_id": "epic-content-terms",
+      "dependencies": [
+        "/Game/StarterContent/Materials/M_Basic_Wall"
+      ],
+      "sha256": "60dce32583bedcb8be71c456418d4f3af48311672d7190495d01273147feea1c",
+      "byte_length": 14683
+    },
+    {
+      "asset_id": "ball-sphere-mesh",
+      "relative_path": "starter-project/Content/StarterContent/Shapes/Shape_Sphere.uasset",
+      "unreal_object_path": "/Game/StarterContent/Shapes/Shape_Sphere",
+      "logical_role": "required player ball mesh",
+      "format": "Unreal static mesh package",
+      "requirement_ids": [
+        "MOVEMENT-02"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "license_id": "epic-content-terms",
+      "dependencies": [
+        "/Game/StarterContent/Materials/M_Basic_Floor"
+      ],
+      "sha256": "5b6f2e72405d8a0f0b224fe7d8a30a9a24f1d2dd0179c87ed5f4017fa68e7df4",
+      "byte_length": 37887
+    },
+    {
+      "asset_id": "material-basic-floor",
+      "relative_path": "starter-project/Content/StarterContent/Materials/M_Basic_Floor.uasset",
+      "unreal_object_path": "/Game/StarterContent/Materials/M_Basic_Floor",
+      "logical_role": "default lit board floor material",
+      "format": "Unreal material package",
+      "requirement_ids": [],
+      "required": false,
+      "equivalent_replacement_allowed": true,
+      "license_id": "epic-content-terms",
+      "dependencies": [],
+      "sha256": "38e9963796183aa39c6cd4219fe60403740c902dadd223b96e37158f5b8e07f8",
+      "byte_length": 9515
+    },
+    {
+      "asset_id": "material-basic-wall",
+      "relative_path": "starter-project/Content/StarterContent/Materials/M_Basic_Wall.uasset",
+      "unreal_object_path": "/Game/StarterContent/Materials/M_Basic_Wall",
+      "logical_role": "default lit board wall material",
+      "format": "Unreal material package",
+      "requirement_ids": [],
+      "required": false,
+      "equivalent_replacement_allowed": true,
+      "license_id": "epic-content-terms",
+      "dependencies": [],
+      "sha256": "8d98628a1928336e234cf6b0c1b65a394bc7b6ba7b8ced62bc2fb9e029b45c0b",
+      "byte_length": 8910
+    }
+  ]
+}

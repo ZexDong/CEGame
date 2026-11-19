@@ -1,0 +1,408 @@
+{
+  "schema_version": 1,
+  "game": "defold_third_person_delivery_v2",
+  "script": "rules.json",
+  "rows": [
+    {
+      "source": "gdd:Main-loop-01",
+      "check_ids": [
+        "D2_ENTRY_WORLD",
+        "D5_BRIEFING_START",
+        "D4_COMPLETE_SUCCESS_FLOW"
+      ],
+      "dim": "D2,D4,D5",
+      "trajectory": "entry_movement_collision_pause_restart, cargo_delivery_success_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Main-loop-02",
+      "check_ids": [
+        "D2_THIRD_PERSON_CONTROL",
+        "D3_MOVEMENT_COLLISION",
+        "D4_COMPLETE_SUCCESS_FLOW"
+      ],
+      "dim": "D2,D3,D4",
+      "trajectory": "entry_movement_collision_pause_restart, cargo_delivery_success_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Main loop-03",
+      "check_ids": [
+        "D2_THIRD_PERSON_CONTROL",
+        "D4_COMPLETE_SUCCESS_FLOW"
+      ],
+      "dim": "D2,D4",
+      "trajectory": "entry_movement_collision_pause_restart, cargo_delivery_success_and_restart",
+      "disposition": "scored; D6 separately reviews visual framing"
+    },
+    {
+      "source": "gdd:Main-loop-04",
+      "check_ids": [
+        "D2_CARGO_SYSTEM",
+        "D3_CARGO_CONSERVATION_DELIVERY",
+        "D4_COMPLETE_SUCCESS_FLOW"
+      ],
+      "dim": "D2,D3,D4",
+      "trajectory": "cargo_delivery_success_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Rules-01",
+      "check_ids": [
+        "D2_OBSTACLE_ROUTES",
+        "D3_MOVEMENT_COLLISION"
+      ],
+      "dim": "D2,D3",
+      "trajectory": "entry_movement_collision_pause_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Rules-02",
+      "check_ids": [
+        "D2_CARGO_SYSTEM",
+        "D3_CARGO_CONSERVATION_DELIVERY"
+      ],
+      "dim": "D2,D3",
+      "trajectory": "cargo_delivery_success_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Rules-03",
+      "check_ids": [
+        "D2_TIMER_PAUSE_SYSTEM",
+        "D3_TIMER_PAUSE",
+        "D4_FAILURE_FLOW"
+      ],
+      "dim": "D2,D3,D4",
+      "trajectory": "entry_movement_collision_pause_restart, timeout_failure_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Results-01",
+      "check_ids": [
+        "D3_SUCCESS_BOUNDARY",
+        "D4_COMPLETE_SUCCESS_FLOW",
+        "D5_SUCCESS_RESULT",
+        "D2_RESULTS_RESTART_CONTENT"
+      ],
+      "dim": "D2,D3,D4,D5",
+      "trajectory": "cargo_delivery_success_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Results-02",
+      "check_ids": [
+        "D3_FAILURE_BOUNDARY",
+        "D4_FAILURE_FLOW",
+        "D5_FAILURE_RESULT",
+        "D2_RESULTS_RESTART_CONTENT"
+      ],
+      "dim": "D2,D3,D4,D5",
+      "trajectory": "timeout_failure_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Interface-01",
+      "check_ids": [
+        "D5_HUD_SYNC"
+      ],
+      "dim": "D5",
+      "trajectory": "cargo_delivery_success_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Interface-02",
+      "check_ids": [
+        "D2_TIMER_PAUSE_SYSTEM",
+        "D3_TIMER_PAUSE",
+        "D5_PAUSE_CONTROLS",
+        "D4_RESTART_STATES",
+        "D4_EXIT_CONTROLS"
+      ],
+      "dim": "D2,D3,D4,D5",
+      "trajectory": "entry_movement_collision_pause_restart, normal_exit_from_pause",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Interface-03",
+      "check_ids": [
+        "D2_RESULTS_RESTART_CONTENT",
+        "D5_SUCCESS_RESULT",
+        "D5_FAILURE_RESULT",
+        "D4_COMPLETE_SUCCESS_FLOW",
+        "D4_FAILURE_FLOW"
+      ],
+      "dim": "D2,D4,D5",
+      "trajectory": "cargo_delivery_success_and_restart, timeout_failure_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Visual-01",
+      "check_ids": [],
+      "dim": "D6",
+      "trajectory": "visual",
+      "disposition": "separate_visual_review"
+    },
+    {
+      "source": "gdd:Restart-save-01",
+      "check_ids": [
+        "D4_RESTART_STATES"
+      ],
+      "dim": "D4",
+      "trajectory": "entry_movement_collision_pause_restart, cargo_delivery_success_and_restart, timeout_failure_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Restart-save-02",
+      "check_ids": [
+        "D4_REOPEN_FRESH"
+      ],
+      "dim": "D4",
+      "trajectory": "reopen_fresh_process",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Quality-01",
+      "check_ids": [
+        "D1_PROJECT_BUILD",
+        "D1_LAUNCH_ENTRY",
+        "D4_EXIT_CONTROLS",
+        "D4_REOPEN_FRESH"
+      ],
+      "dim": "D1,D4",
+      "trajectory": "static, reopen_fresh_process, normal_exit_from_pause",
+      "disposition": "static_and_scored"
+    },
+    {
+      "source": "gdd:Quality-02",
+      "check_ids": [
+        "D2_THIRD_PERSON_CONTROL",
+        "D2_CARGO_SYSTEM",
+        "D4_COMPLETE_SUCCESS_FLOW"
+      ],
+      "dim": "D2,D4",
+      "trajectory": "entry_movement_collision_pause_restart, cargo_delivery_success_and_restart",
+      "disposition": "normal_input_only"
+    },
+    {
+      "source": "gdd:Quality-03",
+      "check_ids": [
+        "D5_BRIEFING_START",
+        "D5_PAUSE_CONTROLS",
+        "D5_SUCCESS_RESULT",
+        "D5_FAILURE_RESULT"
+      ],
+      "dim": "D5",
+      "trajectory": "all_dynamic",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Quality-04",
+      "check_ids": [
+        "D5_HUD_SYNC",
+        "D3_MOVEMENT_COLLISION",
+        "D3_CARGO_CONSERVATION_DELIVERY"
+      ],
+      "dim": "D3,D5",
+      "trajectory": "entry_movement_collision_pause_restart, cargo_delivery_success_and_restart",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Quality-05",
+      "check_ids": [
+        "D1_PROJECT_BUILD",
+        "D4_COMPLETE_SUCCESS_FLOW",
+        "D4_FAILURE_FLOW"
+      ],
+      "dim": "D1,D4",
+      "trajectory": "static, cargo_delivery_success_and_restart, timeout_failure_and_restart",
+      "disposition": "static_and_scored"
+    },
+    {
+      "source": "gdd:Quality-06",
+      "check_ids": [
+        "D4_RESTART_STATES",
+        "D4_REOPEN_FRESH",
+        "honesty:spot_checks"
+      ],
+      "dim": "D4",
+      "trajectory": "all_dynamic",
+      "disposition": "repeatability_and_honesty"
+    },
+    {
+      "source": "common-baseline:CB-01",
+      "check_ids": [
+        "D2_ENTRY_WORLD"
+      ],
+      "dim": "D2",
+      "trajectory": "entry_movement_collision_pause_restart",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-02",
+      "check_ids": [
+        "D4_COMPLETE_SUCCESS_FLOW",
+        "D4_FAILURE_FLOW"
+      ],
+      "dim": "D4",
+      "trajectory": "cargo_delivery_success_and_restart, timeout_failure_and_restart",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-03",
+      "check_ids": [
+        "D4_REOPEN_FRESH",
+        "D4_EXIT_CONTROLS"
+      ],
+      "dim": "D4",
+      "trajectory": "reopen_fresh_process, normal_exit_from_pause",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-04",
+      "check_ids": [
+        "D2_THIRD_PERSON_CONTROL",
+        "D3_MOVEMENT_COLLISION"
+      ],
+      "dim": "D2,D3",
+      "trajectory": "entry_movement_collision_pause_restart",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-05",
+      "check_ids": [
+        "D5_HUD_SYNC"
+      ],
+      "dim": "D5",
+      "trajectory": "cargo_delivery_success_and_restart",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-06",
+      "check_ids": [
+        "D3_MOVEMENT_COLLISION"
+      ],
+      "dim": "D3",
+      "trajectory": "entry_movement_collision_pause_restart",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-07",
+      "check_ids": [
+        "D5_BRIEFING_START",
+        "D5_PAUSE_CONTROLS",
+        "D5_SUCCESS_RESULT",
+        "D5_FAILURE_RESULT"
+      ],
+      "dim": "D5",
+      "trajectory": "all_dynamic",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-08",
+      "check_ids": [
+        "D5_BRIEFING_START",
+        "D5_PAUSE_CONTROLS",
+        "D5_SUCCESS_RESULT",
+        "D5_FAILURE_RESULT"
+      ],
+      "dim": "D5",
+      "trajectory": "all_dynamic",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-09",
+      "check_ids": [
+        "D5_HUD_SYNC"
+      ],
+      "dim": "D5",
+      "trajectory": "cargo_delivery_success_and_restart",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-10",
+      "check_ids": [
+        "D2_TIMER_PAUSE_SYSTEM",
+        "D2_RESULTS_RESTART_CONTENT"
+      ],
+      "dim": "D2",
+      "trajectory": "entry_movement_collision_pause_restart, cargo_delivery_success_and_restart, timeout_failure_and_restart",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-11",
+      "check_ids": [
+        "D4_COMPLETE_SUCCESS_FLOW"
+      ],
+      "dim": "D4",
+      "trajectory": "cargo_delivery_success_and_restart",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-12",
+      "check_ids": [
+        "D4_FAILURE_FLOW",
+        "D4_RESTART_STATES"
+      ],
+      "dim": "D4",
+      "trajectory": "timeout_failure_and_restart",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-13",
+      "check_ids": [
+        "D4_RESTART_STATES"
+      ],
+      "dim": "D4",
+      "trajectory": "entry_movement_collision_pause_restart, cargo_delivery_success_and_restart, timeout_failure_and_restart",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-14",
+      "check_ids": [
+        "D3_SUCCESS_BOUNDARY",
+        "D4_FAILURE_FLOW"
+      ],
+      "dim": "D3,D4",
+      "trajectory": "cargo_delivery_success_and_restart, timeout_failure_and_restart",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-15",
+      "check_ids": [
+        "D4_FAILURE_FLOW"
+      ],
+      "dim": "D4",
+      "trajectory": "timeout_failure_and_restart",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-16",
+      "check_ids": [
+        "D5_BRIEFING_START"
+      ],
+      "dim": "D5",
+      "trajectory": "entry_movement_collision_pause_restart",
+      "disposition": "covered_without_duplicate_score"
+    },
+    {
+      "source": "common-baseline:CB-17",
+      "check_ids": [],
+      "dim": "D6",
+      "trajectory": "visual",
+      "disposition": "separate_visual_review"
+    },
+    {
+      "source": "common-baseline:CB-18",
+      "check_ids": [
+        "D1_DASHBOARD_CONFORMANCE",
+        "honesty:spot_checks"
+      ],
+      "dim": "D1",
+      "trajectory": "static, all_dynamic",
+      "disposition": "static_and_honesty"
+    }
+  ],
+  "unmapped_gdd_requirements": [],
+  "note": "Unique checkpoint IDs define scored units; repeated observations are conjunctive."
+}

@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:vibe-gaming:unreal-public-executor:state-snapshot:1.0.0",
+  "title": "Unreal minimal read-only state snapshot",
+  "description": "Engine-level fixture state. It contains no game verdict or scoring semantics.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "process_token",
+    "process_id",
+    "snapshot_id",
+    "round_id",
+    "round_index",
+    "restart_count",
+    "scene",
+    "monotonic_ms",
+    "ready",
+    "first_frame",
+    "object",
+    "keyboard",
+    "pointer",
+    "hud",
+    "targets"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "process_token": { "$ref": "#/$defs/stable_id" },
+    "process_id": { "type": "integer", "minimum": 1 },
+    "snapshot_id": { "type": "integer", "minimum": 0 },
+    "round_id": { "$ref": "#/$defs/stable_id" },
+    "round_index": { "type": "integer", "minimum": 0 },
+    "restart_count": { "type": "integer", "minimum": 0 },
+    "scene": { "$ref": "#/$defs/stable_id" },
+    "monotonic_ms": { "type": "number", "minimum": 0 },
+    "ready": { "type": "boolean" },
+    "first_frame": { "type": "boolean" },
+    "object": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["object_id", "normalized_position"],
+      "properties": {
+        "object_id": { "$ref": "#/$defs/stable_id" },
+        "normalized_position": { "$ref": "#/$defs/normalized_point" }
+      }
+    },
+    "keyboard": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["keys_down", "w_down", "discrete_count", "hold_count"],
+      "properties": {
+        "keys_down": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/stable_id" }
+        },
+        "w_down": { "type": "boolean" },
+        "discrete_count": { "type": "integer", "minimum": 0 },
+        "hold_count": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "pointer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "left_down",
+        "normalized_position",
+        "press_origin",
+        "click_count",
+        "drag_count",
+        "drag_position"
+      ],
+      "properties": {
+        "left_down": { "type": "boolean" },
+        "normalized_position": { "$ref": "#/$defs/normalized_point" },
+        "press_origin": { "$ref": "#/$defs/normalized_point" },
+        "click_count": { "type": "integer", "minimum": 0 },
+        "drag_count": { "type": "integer", "minimum": 0 },
+        "drag_position": { "$ref": "#/$defs/normalized_point" }
+      }
+    },
+    "hud": {
+      "description": "Visible feedback source only; its text is never trusted as a verdict.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["revision", "feedback"],
+      "properties": {
+        "revision": { "type": "integer", "minimum": 0 },
+        "feedback": { "type": "string", "maxLength": 1024 }
+      }
+    },
+    "targets": {
+      "type": "array",
+      "maxItems": 128,
+      "items": { "$ref": "#/$defs/visible_target" }
+    }
+  },
+  "$defs": {
+    "stable_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "normalized_point": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y"],
+      "properties": {
+        "x": { "type": "number", "minimum": 0, "maximum": 1 },
+        "y": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "normalized_bounds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "width", "height"],
+      "properties": {
+        "x": { "type": "number", "minimum": 0, "maximum": 1 },
+        "y": { "type": "number", "minimum": 0, "maximum": 1 },
+        "width": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 },
+        "height": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }
+      }
+    },
+    "visible_target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target_id",
+        "object_id",
+        "visible",
+        "enabled",
+        "topmost",
+        "activation",
+        "normalized_bounds"
+      ],
+      "properties": {
+        "target_id": { "$ref": "#/$defs/stable_id" },
+        "object_id": { "$ref": "#/$defs/stable_id" },
+        "visible": { "type": "boolean" },
+        "enabled": { "type": "boolean" },
+        "topmost": { "type": "boolean" },
+        "activation": { "$ref": "#/$defs/stable_id" },
+        "normalized_bounds": { "$ref": "#/$defs/normalized_bounds" }
+      }
+    }
+  }
+}

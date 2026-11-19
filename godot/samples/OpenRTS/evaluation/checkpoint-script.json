@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "game": "open_rts_economy_production",
+  "naming_tables": "../input/sp/benchmark/naming-tables.json",
+  "controls_from_naming_tables": true,
+  "honesty_spot_checks": {
+    "mode": "review_against_captured_render_and_input_trace"
+  },
+  "trajectories": [
+    {
+      "id": "public_controls",
+      "title": "Public controls and dashboard collection",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "quick_play"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "build_command_center"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "battlefield"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "produce_worker"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "resource_target"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "build_vehicle_factory"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "battlefield"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "produce_tank"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    }
+  ]
+}

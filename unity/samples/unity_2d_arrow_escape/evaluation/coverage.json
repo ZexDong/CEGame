@@ -1,0 +1,1820 @@
+{
+  "schema_version": 3,
+  "status": "frozen",
+  "benchmark_id": "unity.arrow_escape_reconstruction.v2",
+  "input_revision": "v2.6-tool-interface-catalog-3600s-20260826",
+  "evaluator_revision": "2026.08.27-uncapped-checkpoint-r10",
+  "gdd_source": "../input/GDD.md",
+  "rules_source": "rules.json",
+  "acceptance_source_policy": "All game-specific scored sources are gdd:<requirement-id>; game-independent delivery sources are explicit common-baseline:<id>. No third scoring source is allowed.",
+  "requirements": [
+    {
+      "id": "FLOW-01",
+      "source": "gdd:FLOW-01",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D1",
+        "D2",
+        "D4",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d1.playable_entry",
+        "d1.nonempty_render",
+        "d2.tutorial_core",
+        "d4.complete_success_journey",
+        "d4.fresh_process_reopen",
+        "d5.visible_clickable_targets",
+        "d2.initial_player_surface",
+        "d5.player_surface_integrity"
+      ],
+      "trajectory_ids": [
+        "budget_terminal",
+        "canonical_success",
+        "fresh_process_reopen"
+      ],
+      "player_action_or_trigger": "Open the saved default play entry and allow stable player-loop frames.",
+      "observation": "A fresh non-terminal tutorial with visible board, arrows, budget, Hint, and Restart is usable.",
+      "evidence": [
+        "baseline candidate-compile log",
+        "Static NUnit XML and evaluator-health evidence",
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots",
+        "Fresh NUnit XML",
+        "fresh-process seed/evidence with distinct process identity"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "FLOW-02",
+      "source": "gdd:FLOW-02",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "checkpoint_ids": [
+        "d2.cardinal_motion_content",
+        "d3.motion_and_exit",
+        "d4.complete_success_journey"
+      ],
+      "trajectory_ids": [
+        "canonical_success",
+        "motion_cardinals"
+      ],
+      "player_action_or_trigger": "Complete one normal click on a clear, unlocked arrow and wait for exit.",
+      "observation": "Motion spans multiple frames, stays forward, preserves shape, and removes only after full exit.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "FLOW-03",
+      "source": "gdd:FLOW-03",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d2.terminal_content",
+        "d3.moves_priority",
+        "d4.complete_success_journey",
+        "d4.dependency_journey",
+        "d5.hud_terminal_sync"
+      ],
+      "trajectory_ids": [
+        "and_dependency",
+        "budget_terminal",
+        "canonical_success",
+        "dependency_chain"
+      ],
+      "player_action_or_trigger": "Remove every authored arrow through normal play.",
+      "observation": "Won/COMPLETED appears only after the final full exit and gameplay freezes.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "FLOW-04",
+      "source": "gdd:FLOW-04",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d2.hearts_mode",
+        "d2.terminal_content",
+        "d3.hearts_and_loss",
+        "d4.loss_flow",
+        "d5.hud_terminal_sync"
+      ],
+      "trajectory_ids": [
+        "budget_terminal",
+        "canonical_success"
+      ],
+      "player_action_or_trigger": "Spend the last budget unit without clearing the board.",
+      "observation": "Lost/FAILED appears at zero budget, budget never becomes negative, and gameplay freezes.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "CONTENT-01",
+      "source": "gdd:CONTENT-01",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D2",
+        "D4"
+      ],
+      "checkpoint_ids": [
+        "d2.tutorial_core",
+        "d2.blocked_interaction",
+        "d2.moves_mode",
+        "d4.complete_success_journey"
+      ],
+      "trajectory_ids": [
+        "blocked_failure",
+        "budget_terminal",
+        "canonical_success"
+      ],
+      "player_action_or_trigger": "Start or restart the tutorial and exercise clear and blocked choices.",
+      "observation": "Moves tutorial exposes at least three arrows, clear and blocked content, and a complete legal route.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "CONTENT-02",
+      "source": "gdd:CONTENT-02",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D2",
+        "D3",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d2.hearts_mode",
+        "d3.hearts_and_loss",
+        "d3.hint_rules",
+        "d5.hint_feedback"
+      ],
+      "trajectory_ids": [
+        "budget_terminal",
+        "hint_stability"
+      ],
+      "player_action_or_trigger": "Navigate to modes_and_hint, use Hint, clear one arrow, and attempt a blocked arrow.",
+      "observation": "Hearts content exposes a free success, a charged failure, and a legal free Hint.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "CONTENT-03",
+      "source": "gdd:CONTENT-03",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d2.dependency_chain_content",
+        "d3.dependency_timing",
+        "d4.dependency_journey",
+        "d5.badge_feedback"
+      ],
+      "trajectory_ids": [
+        "and_dependency",
+        "dependency_chain"
+      ],
+      "player_action_or_trigger": "Navigate to prerequisite_chain and play key_a, lock_b, then lock_c.",
+      "observation": "Exactly the authored three-arrow sequential chain is reachable and completable with staged badges.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "CONTENT-04",
+      "source": "gdd:CONTENT-04",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D2",
+        "D3"
+      ],
+      "checkpoint_ids": [
+        "d2.cardinal_motion_content",
+        "d3.motion_and_exit"
+      ],
+      "trajectory_ids": [
+        "motion_cardinals"
+      ],
+      "player_action_or_trigger": "In the tutorial, click reachable clear arrows in all four cardinal directions.",
+      "observation": "Up, Down, Left, and Right arrows are player-reachable and use the same exit semantics.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "CONTENT-05",
+      "source": "gdd:CONTENT-05",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "checkpoint_ids": [
+        "d2.generic_and_content",
+        "d3.and_semantics",
+        "d4.dependency_journey"
+      ],
+      "trajectory_ids": [
+        "and_dependency",
+        "dependency_chain"
+      ],
+      "player_action_or_trigger": "Navigate to modes_and_hint and complete both AND-key orders from fresh state.",
+      "observation": "and_lock stays locked after either one key, unlocks after both, and completes in both orders.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "INPUT-01",
+      "source": "gdd:INPUT-01",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D1",
+        "D3",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d1.engine_integration",
+        "d3.pointer_semantics",
+        "d5.visible_clickable_targets"
+      ],
+      "trajectory_ids": [
+        "budget_terminal",
+        "canonical_success",
+        "input_boundaries"
+      ],
+      "player_action_or_trigger": "Perform complete normal Mouse press/release clicks on each visible target type.",
+      "observation": "One same-target press/release commits exactly one intended candidate-owned action.",
+      "evidence": [
+        "baseline candidate-compile log",
+        "Static NUnit XML and evaluator-health evidence",
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "INPUT-02",
+      "source": "gdd:INPUT-02",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D3",
+        "D4"
+      ],
+      "checkpoint_ids": [
+        "d3.pointer_semantics",
+        "d3.hearts_and_loss",
+        "d4.restart_integrity"
+      ],
+      "trajectory_ids": [
+        "budget_terminal",
+        "canonical_success",
+        "input_boundaries",
+        "restart_interrupt"
+      ],
+      "player_action_or_trigger": "Perform incomplete, off-target, moving/terminal, and otherwise ignored clicks.",
+      "observation": "Ignored/boundary input leaves budget, phase, occupancy, selection, and Hint state unchanged.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "NAV-01",
+      "source": "gdd:NAV-01",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D2",
+        "D4",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d2.authored_navigation",
+        "d4.dependency_journey",
+        "d5.visible_clickable_targets"
+      ],
+      "trajectory_ids": [
+        "and_dependency",
+        "budget_terminal",
+        "canonical_success",
+        "dependency_chain"
+      ],
+      "player_action_or_trigger": "Click visible Next Level across the fixed authored cycle from required states.",
+      "observation": "Each visible click loads the next authored level fresh without stale motion, budget, Hint, or terminal state.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "RULE-01",
+      "source": "gdd:RULE-01",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D2",
+        "D3"
+      ],
+      "checkpoint_ids": [
+        "d2.blocked_interaction",
+        "d3.motion_and_exit",
+        "d3.blocking_and_cost",
+        "d3.hint_rules"
+      ],
+      "trajectory_ids": [
+        "blocked_failure",
+        "hint_stability",
+        "motion_cardinals"
+      ],
+      "player_action_or_trigger": "Select or request Hint for arrows with clear and occupied forward rays.",
+      "observation": "Only occupied cells in the forward ray block; removed arrows cease blocking; Hint selects only a legal target.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "RULE-02",
+      "source": "gdd:RULE-02",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d3.blocking_and_cost",
+        "d4.failure_recovery",
+        "d5.blocked_feedback"
+      ],
+      "trajectory_ids": [
+        "blocked_failure"
+      ],
+      "player_action_or_trigger": "Click a geometrically blocked arrow and wait through feedback recovery.",
+      "observation": "The blocked arrow remains spatially unchanged, shows bounded target-local feedback, and becomes reusable.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "RULE-03",
+      "source": "gdd:RULE-03",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D3",
+        "D4"
+      ],
+      "checkpoint_ids": [
+        "d3.blocking_and_cost",
+        "d3.moves_priority",
+        "d4.complete_success_journey",
+        "d4.restart_integrity"
+      ],
+      "trajectory_ids": [
+        "blocked_failure",
+        "budget_terminal",
+        "canonical_success",
+        "restart_interrupt"
+      ],
+      "player_action_or_trigger": "Attempt clear, blocked, and locked arrows in Moves mode.",
+      "observation": "Each clear/blocked/locked Moves attempt spends exactly one; ignored input spends none; Restart restores budget.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "RULE-04",
+      "source": "gdd:RULE-04",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D3",
+        "D4"
+      ],
+      "checkpoint_ids": [
+        "d3.hearts_and_loss",
+        "d3.dependency_timing",
+        "d4.loss_flow"
+      ],
+      "trajectory_ids": [
+        "budget_terminal",
+        "dependency_chain"
+      ],
+      "player_action_or_trigger": "Attempt successful, blocked, and locked arrows in Hearts mode.",
+      "observation": "Only blocked/locked Hearts attempts spend one; successful exits and ignored input spend none.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "RULE-05",
+      "source": "gdd:RULE-05",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D3",
+        "D4"
+      ],
+      "checkpoint_ids": [
+        "d3.moves_priority",
+        "d4.complete_success_journey"
+      ],
+      "trajectory_ids": [
+        "budget_terminal",
+        "canonical_success"
+      ],
+      "player_action_or_trigger": "Start the last legal exit when Moves becomes zero and wait for motion completion.",
+      "observation": "Zero Moves during the final legal motion resolves to success after full exit, not early loss.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "HINT-01",
+      "source": "gdd:HINT-01",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D2",
+        "D3",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d2.tutorial_core",
+        "d3.hint_rules",
+        "d5.hint_feedback",
+        "d5.visible_clickable_targets"
+      ],
+      "trajectory_ids": [
+        "budget_terminal",
+        "canonical_success",
+        "hint_stability"
+      ],
+      "player_action_or_trigger": "Click Hint before and after a legal state change.",
+      "observation": "Hint is legal, free, temporary, reusable, and reflects the latest state.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "DEPENDENCY-01",
+      "source": "gdd:DEPENDENCY-01",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D2",
+        "D3",
+        "D4"
+      ],
+      "checkpoint_ids": [
+        "d2.dependency_chain_content",
+        "d2.generic_and_content",
+        "d3.dependency_timing",
+        "d3.and_semantics",
+        "d4.dependency_journey"
+      ],
+      "trajectory_ids": [
+        "and_dependency",
+        "dependency_chain"
+      ],
+      "player_action_or_trigger": "Attempt dependents before and after each prerequisite fully exits, including both AND orders.",
+      "observation": "Locks move only after every prerequisite is fully outside and charge current-mode failure cost when premature.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "DEPENDENCY-02",
+      "source": "gdd:DEPENDENCY-02",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D2",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d2.dependency_chain_content",
+        "d5.badge_feedback"
+      ],
+      "trajectory_ids": [
+        "dependency_chain"
+      ],
+      "player_action_or_trigger": "Observe badges before, during, and after prerequisite exits and after Restart.",
+      "observation": "Lock and key badges are mutually coherent, update after full exit, and reset cleanly.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "UI-01",
+      "source": "gdd:UI-01",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D1",
+        "D2",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d1.nonempty_render",
+        "d2.tutorial_core",
+        "d2.authored_navigation",
+        "d5.visible_clickable_targets",
+        "d2.initial_player_surface",
+        "d5.player_surface_integrity"
+      ],
+      "trajectory_ids": [
+        "and_dependency",
+        "budget_terminal",
+        "canonical_success",
+        "dependency_chain"
+      ],
+      "player_action_or_trigger": "Enter each authored level and use its visible arrows and three controls at 1280x720.",
+      "observation": "Board, level, mode, budget, arrows, Hint, Restart, and Next Level are visible together and operable.",
+      "evidence": [
+        "baseline candidate-compile log",
+        "Static NUnit XML and evaluator-health evidence",
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "UI-02",
+      "source": "gdd:UI-02",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D2",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d2.terminal_content",
+        "d5.hud_terminal_sync"
+      ],
+      "trajectory_ids": [
+        "budget_terminal",
+        "canonical_success"
+      ],
+      "player_action_or_trigger": "Reach both win and loss terminal phases.",
+      "observation": "COMPLETED and FAILED are readable, mutually exclusive, persistent, and state-correct.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "UI-03",
+      "source": "gdd:UI-03",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D4",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d4.win_restart",
+        "d4.failure_recovery",
+        "d4.restart_integrity",
+        "d5.hud_terminal_sync",
+        "d5.blocked_feedback",
+        "d5.badge_feedback",
+        "d5.hint_feedback"
+      ],
+      "trajectory_ids": [
+        "blocked_failure",
+        "budget_terminal",
+        "canonical_success",
+        "dependency_chain",
+        "hint_stability",
+        "restart_interrupt"
+      ],
+      "player_action_or_trigger": "Observe the next stable visible state after clicks, exits, Hint, dependencies, Restart, win, and loss.",
+      "observation": "HUD, board, badges, Hint, feedback, and terminal label agree with the real state without stale residue.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "VISUAL-01",
+      "source": "gdd:VISUAL-01",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D6"
+      ],
+      "checkpoint_ids": [],
+      "trajectory_ids": [],
+      "player_action_or_trigger": "Compare the frozen initial_gameplay Reference and same-state Candidate capture once.",
+      "observation": "The one formal frame is a coherent original-inspired puzzle screen without severe placeholder or rendering defects.",
+      "evidence": [
+        "evaluation/visual/d6-input.json",
+        "evaluation/visual/capture-validation.json",
+        "single-round D6 result"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition.",
+      "visual_dimension": "D6",
+      "formal_state_id": "initial_gameplay"
+    },
+    {
+      "id": "RESTART-01",
+      "source": "gdd:RESTART-01",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D2",
+        "D4",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d2.restart_content",
+        "d4.win_restart",
+        "d4.restart_during_motion",
+        "d4.restart_integrity",
+        "d5.visible_clickable_targets"
+      ],
+      "trajectory_ids": [
+        "budget_terminal",
+        "canonical_success",
+        "restart_interrupt"
+      ],
+      "player_action_or_trigger": "Click Restart during active play, motion, success, and failure; repeat an input afterward.",
+      "observation": "The same authored level returns to a clean initial state within one second with no stale coroutine/listener.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "REOPEN-01",
+      "source": "gdd:REOPEN-01",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D1",
+        "D4"
+      ],
+      "checkpoint_ids": [
+        "d1.playable_entry",
+        "d4.fresh_process_reopen"
+      ],
+      "trajectory_ids": [
+        "fresh_process_reopen"
+      ],
+      "player_action_or_trigger": "Close after the dirty Dynamic seed and reopen in a distinct Unity process.",
+      "observation": "A distinct PID starts a fresh playable tutorial without prior runtime progress.",
+      "evidence": [
+        "baseline candidate-compile log",
+        "Static NUnit XML and evaluator-health evidence",
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots",
+        "Fresh NUnit XML",
+        "fresh-process seed/evidence with distinct process identity"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "ASSET-01",
+      "source": "gdd:ASSET-01",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D2",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d2.dependency_chain_content",
+        "d5.badge_feedback"
+      ],
+      "trajectory_ids": [
+        "dependency_chain"
+      ],
+      "player_action_or_trigger": "Observe dependency badges through the initial and updated key/lock states.",
+      "observation": "Supplied key art denotes key state and supplied lock art denotes locked state.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "QUALITY-01",
+      "source": "gdd:QUALITY-01",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D1",
+        "D4"
+      ],
+      "checkpoint_ids": [
+        "d1.compile_import",
+        "d1.playable_entry",
+        "d1.nonempty_render",
+        "d4.fresh_process_reopen"
+      ],
+      "trajectory_ids": [
+        "fresh_process_reopen"
+      ],
+      "player_action_or_trigger": "Import, start, play, close, and reopen through the public operating route.",
+      "observation": "Import/start/exit/reopen remain usable and expose a coherent playable entry.",
+      "evidence": [
+        "baseline candidate-compile log",
+        "Static NUnit XML and evaluator-health evidence",
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots",
+        "Fresh NUnit XML",
+        "fresh-process seed/evidence with distinct process identity"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "QUALITY-02",
+      "source": "gdd:QUALITY-02",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D1",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d1.engine_integration",
+        "d3.pointer_semantics",
+        "d4.complete_success_journey",
+        "d4.loss_flow",
+        "d5.visible_clickable_targets"
+      ],
+      "trajectory_ids": [
+        "budget_terminal",
+        "canonical_success",
+        "input_boundaries"
+      ],
+      "player_action_or_trigger": "Use only the documented normal player controls to traverse success and failure.",
+      "observation": "No answer/cheat/direct-result route replaces normal player actions and rules.",
+      "evidence": [
+        "baseline candidate-compile log",
+        "Static NUnit XML and evaluator-health evidence",
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "QUALITY-03",
+      "source": "gdd:QUALITY-03",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D1",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d1.nonempty_render",
+        "d1.engine_integration",
+        "d5.visible_clickable_targets",
+        "d5.hud_terminal_sync",
+        "d2.initial_player_surface",
+        "d5.player_surface_integrity"
+      ],
+      "trajectory_ids": [
+        "budget_terminal",
+        "canonical_success"
+      ],
+      "player_action_or_trigger": "Locate, read, and operate every state-relevant entry, label, and control.",
+      "observation": "Required player-facing targets remain visible, readable, findable, and operable where applicable.",
+      "evidence": [
+        "baseline candidate-compile log",
+        "Static NUnit XML and evaluator-health evidence",
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "QUALITY-04",
+      "source": "gdd:QUALITY-04",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D4",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d4.failure_recovery",
+        "d5.hud_terminal_sync",
+        "d5.blocked_feedback",
+        "d5.badge_feedback",
+        "d5.hint_feedback"
+      ],
+      "trajectory_ids": [
+        "blocked_failure",
+        "budget_terminal",
+        "canonical_success",
+        "dependency_chain",
+        "hint_stability"
+      ],
+      "player_action_or_trigger": "Perform accepted and rejected actions and observe the resulting feedback.",
+      "observation": "Visible feedback is perceivable, state-consistent, and free of stale responses on repetition.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "QUALITY-05",
+      "source": "gdd:QUALITY-05",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D1",
+        "D4"
+      ],
+      "checkpoint_ids": [
+        "d1.compile_import",
+        "d1.playable_entry",
+        "d1.nonempty_render",
+        "d4.complete_success_journey",
+        "d4.loss_flow",
+        "d4.dependency_journey"
+      ],
+      "trajectory_ids": [
+        "and_dependency",
+        "budget_terminal",
+        "canonical_success",
+        "dependency_chain"
+      ],
+      "player_action_or_trigger": "Traverse the required success, loss, dependency, Restart, and reopen journeys.",
+      "observation": "No severe import, rendering, input, runtime, or state error blocks the required player journeys.",
+      "evidence": [
+        "baseline candidate-compile log",
+        "Static NUnit XML and evaluator-health evidence",
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    },
+    {
+      "id": "QUALITY-06",
+      "source": "gdd:QUALITY-06",
+      "coverage_status": "covered",
+      "score_dimensions": [
+        "D3",
+        "D4"
+      ],
+      "checkpoint_ids": [
+        "d3.pointer_semantics",
+        "d4.win_restart",
+        "d4.restart_integrity",
+        "d4.fresh_process_reopen"
+      ],
+      "trajectory_ids": [
+        "canonical_success",
+        "fresh_process_reopen",
+        "input_boundaries",
+        "restart_interrupt"
+      ],
+      "player_action_or_trigger": "Repeat the same input sequence after clean Restart/reopen boundaries.",
+      "observation": "Fresh repeated conditions produce substantially stable states and outcomes without duplicate handling.",
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots",
+        "Fresh NUnit XML",
+        "fresh-process seed/evidence with distinct process identity"
+      ],
+      "scoring": "Uses only the equal-checkpoint verdicts already defined in rules.json; this coverage row adds no score or hidden condition."
+    }
+  ],
+  "common_baseline": [
+    {
+      "id": "COMMON-COMPILE-START",
+      "source": "common-baseline:COMMON-COMPILE-START",
+      "applicability": "applicable",
+      "reason": "The Unity project imports, compiles, and enters its saved player-facing scene.",
+      "score_dimensions": [
+        "D1"
+      ],
+      "checkpoint_ids": [
+        "d1.compile_import",
+        "d1.playable_entry"
+      ],
+      "trajectory_ids": [],
+      "evidence": [
+        "baseline candidate-compile log",
+        "Static NUnit XML and evaluator-health evidence"
+      ],
+      "scoring": "Uses existing rules.json checkpoint verdicts only; it does not introduce a game-specific requirement."
+    },
+    {
+      "id": "COMMON-REAL-SCENE-CAMERA",
+      "source": "common-baseline:COMMON-REAL-SCENE-CAMERA",
+      "applicability": "applicable",
+      "reason": "A real saved Scene and active Camera/overlay produce stable non-empty frames.",
+      "score_dimensions": [
+        "D1"
+      ],
+      "checkpoint_ids": [
+        "d1.playable_entry",
+        "d1.nonempty_render"
+      ],
+      "trajectory_ids": [],
+      "evidence": [
+        "baseline candidate-compile log",
+        "Static NUnit XML and evaluator-health evidence"
+      ],
+      "scoring": "Uses existing rules.json checkpoint verdicts only; it does not introduce a game-specific requirement."
+    },
+    {
+      "id": "COMMON-NORMAL-INPUT",
+      "source": "common-baseline:COMMON-NORMAL-INPUT",
+      "applicability": "applicable",
+      "reason": "Required play uses a normal Input System Mouse route and complete click boundaries.",
+      "score_dimensions": [
+        "D1",
+        "D3",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d1.engine_integration",
+        "d3.pointer_semantics",
+        "d5.visible_clickable_targets"
+      ],
+      "trajectory_ids": [
+        "budget_terminal",
+        "canonical_success",
+        "input_boundaries"
+      ],
+      "evidence": [
+        "baseline candidate-compile log",
+        "Static NUnit XML and evaluator-health evidence",
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses existing rules.json checkpoint verdicts only; it does not introduce a game-specific requirement."
+    },
+    {
+      "id": "COMMON-BASIC-HUD",
+      "source": "common-baseline:COMMON-BASIC-HUD",
+      "applicability": "applicable",
+      "reason": "Essential current-state information and controls are visible and usable.",
+      "score_dimensions": [
+        "D1",
+        "D5"
+      ],
+      "checkpoint_ids": [
+        "d1.nonempty_render",
+        "d5.hud_terminal_sync",
+        "d5.visible_clickable_targets",
+        "d2.initial_player_surface",
+        "d5.player_surface_integrity"
+      ],
+      "trajectory_ids": [
+        "budget_terminal",
+        "canonical_success"
+      ],
+      "evidence": [
+        "baseline candidate-compile log",
+        "Static NUnit XML and evaluator-health evidence",
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses existing rules.json checkpoint verdicts only; it does not introduce a game-specific requirement."
+    },
+    {
+      "id": "COMMON-VISUAL-INTEGRATION",
+      "source": "common-baseline:COMMON-VISUAL-INTEGRATION",
+      "applicability": "applicable",
+      "reason": "Severe blank/transparent/placeholder/debug rendering failure is absent at launch.",
+      "score_dimensions": [
+        "D1"
+      ],
+      "checkpoint_ids": [
+        "d1.nonempty_render"
+      ],
+      "trajectory_ids": [],
+      "evidence": [
+        "baseline candidate-compile log",
+        "Static NUnit XML and evaluator-health evidence"
+      ],
+      "scoring": "Uses existing rules.json checkpoint verdicts only; it does not introduce a game-specific requirement."
+    },
+    {
+      "id": "COMMON-RESTART-REOPEN",
+      "source": "common-baseline:COMMON-RESTART-REOPEN",
+      "applicability": "applicable",
+      "reason": "Restart and distinct-process reopen restore an understandable playable state.",
+      "score_dimensions": [
+        "D4"
+      ],
+      "checkpoint_ids": [
+        "d4.win_restart",
+        "d4.restart_during_motion",
+        "d4.restart_integrity",
+        "d4.fresh_process_reopen"
+      ],
+      "trajectory_ids": [
+        "canonical_success",
+        "fresh_process_reopen",
+        "restart_interrupt"
+      ],
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots",
+        "Fresh NUnit XML",
+        "fresh-process seed/evidence with distinct process identity"
+      ],
+      "scoring": "Uses existing rules.json checkpoint verdicts only; it does not introduce a game-specific requirement."
+    },
+    {
+      "id": "COMMON-NO-DUPLICATE-LISTENERS",
+      "source": "common-baseline:COMMON-NO-DUPLICATE-LISTENERS",
+      "applicability": "applicable",
+      "reason": "Repeated actions and Restart do not duplicate listeners or state mutation.",
+      "score_dimensions": [
+        "D3",
+        "D4"
+      ],
+      "checkpoint_ids": [
+        "d3.pointer_semantics",
+        "d4.restart_integrity"
+      ],
+      "trajectory_ids": [
+        "canonical_success",
+        "input_boundaries",
+        "restart_interrupt"
+      ],
+      "evidence": [
+        "Dynamic NUnit XML",
+        "per-trajectory JSON evidence with normal-input route and snapshots"
+      ],
+      "scoring": "Uses existing rules.json checkpoint verdicts only; it does not introduce a game-specific requirement."
+    },
+    {
+      "id": "COMMON-NO-EDITOR-DELIVERY",
+      "source": "common-baseline:COMMON-NO-EDITOR-DELIVERY",
+      "applicability": "applicable",
+      "reason": "The deliverable does not rely on an Editor-only answer path to enter gameplay.",
+      "score_dimensions": [
+        "D1"
+      ],
+      "checkpoint_ids": [
+        "d1.compile_import",
+        "d1.playable_entry"
+      ],
+      "trajectory_ids": [],
+      "evidence": [
+        "baseline candidate-compile log",
+        "Static NUnit XML and evaluator-health evidence"
+      ],
+      "scoring": "Uses existing rules.json checkpoint verdicts only; it does not introduce a game-specific requirement."
+    }
+  ],
+  "scoring_leaves": [
+    {
+      "id": "d1.compile_import",
+      "dimension": "D1",
+      "title": "The pinned Unity version imports and compiles candidate-owned assets",
+      "sources": [
+        "gdd:QUALITY-01",
+        "gdd:QUALITY-05",
+        "common-baseline:COMMON-COMPILE-START",
+        "common-baseline:COMMON-NO-EDITOR-DELIVERY"
+      ],
+      "trajectory_ids": [],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d1.playable_entry",
+      "dimension": "D1",
+      "title": "The saved main scene loads and advances normal frames",
+      "sources": [
+        "gdd:FLOW-01",
+        "gdd:REOPEN-01",
+        "gdd:QUALITY-01",
+        "gdd:QUALITY-05",
+        "common-baseline:COMMON-COMPILE-START",
+        "common-baseline:COMMON-REAL-SCENE-CAMERA",
+        "common-baseline:COMMON-NO-EDITOR-DELIVERY"
+      ],
+      "trajectory_ids": [],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d1.nonempty_render",
+      "dimension": "D1",
+      "title": "An active camera or overlay produces meaningful rendered content",
+      "sources": [
+        "gdd:FLOW-01",
+        "gdd:UI-01",
+        "gdd:QUALITY-01",
+        "gdd:QUALITY-03",
+        "gdd:QUALITY-05",
+        "common-baseline:COMMON-REAL-SCENE-CAMERA",
+        "common-baseline:COMMON-BASIC-HUD",
+        "common-baseline:COMMON-VISUAL-INTEGRATION"
+      ],
+      "trajectory_ids": [],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d1.engine_integration",
+      "dimension": "D1",
+      "title": "The scene remains renderable and compatible with a normal Input System player route without requiring one component architecture",
+      "sources": [
+        "gdd:INPUT-01",
+        "gdd:QUALITY-02",
+        "gdd:QUALITY-03",
+        "common-baseline:COMMON-NORMAL-INPUT"
+      ],
+      "trajectory_ids": [],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d2.initial_player_surface",
+      "dimension": "D2",
+      "title": "The initial player surface shows the board, level, mode, budget, Hint, Restart and Next Level together without clipping",
+      "sources": [
+        "gdd:FLOW-01",
+        "gdd:UI-01",
+        "gdd:QUALITY-03",
+        "common-baseline:COMMON-BASIC-HUD"
+      ],
+      "trajectory_ids": [
+        "canonical_success"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d2.tutorial_core",
+      "dimension": "D2",
+      "title": "Tutorial board, arrows, Hint and player click content are present and produce a basic runtime result",
+      "sources": [
+        "gdd:FLOW-01",
+        "gdd:CONTENT-01",
+        "gdd:HINT-01",
+        "gdd:UI-01"
+      ],
+      "trajectory_ids": [
+        "canonical_success"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d2.authored_navigation",
+      "dimension": "D2",
+      "title": "All required authored levels are reached through the visible Next Level control",
+      "sources": [
+        "gdd:NAV-01",
+        "gdd:UI-01"
+      ],
+      "trajectory_ids": [
+        "and_dependency",
+        "dependency_chain"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d2.cardinal_motion_content",
+      "dimension": "D2",
+      "title": "Runtime supports visible arrows leaving in all four cardinal directions",
+      "sources": [
+        "gdd:FLOW-02",
+        "gdd:CONTENT-04"
+      ],
+      "trajectory_ids": [
+        "motion_cardinals"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d2.blocked_interaction",
+      "dimension": "D2",
+      "title": "A blocked-arrow interaction exists and can be exercised by the player",
+      "sources": [
+        "gdd:CONTENT-01",
+        "gdd:RULE-01"
+      ],
+      "trajectory_ids": [
+        "blocked_failure"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d2.moves_mode",
+      "dimension": "D2",
+      "title": "Moves mode and a basic playable completion are present",
+      "sources": [
+        "gdd:CONTENT-01"
+      ],
+      "trajectory_ids": [
+        "budget_terminal"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d2.hearts_mode",
+      "dimension": "D2",
+      "title": "Hearts mode plus basic successful and failed attempt content are reachable",
+      "sources": [
+        "gdd:FLOW-04",
+        "gdd:CONTENT-02"
+      ],
+      "trajectory_ids": [
+        "budget_terminal"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d2.terminal_content",
+      "dimension": "D2",
+      "title": "Both COMPLETED and FAILED terminal content appear in reachable runtime states",
+      "sources": [
+        "gdd:FLOW-03",
+        "gdd:FLOW-04",
+        "gdd:UI-02"
+      ],
+      "trajectory_ids": [
+        "budget_terminal",
+        "canonical_success"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d2.restart_content",
+      "dimension": "D2",
+      "title": "A visible Restart action is present and starts a fresh playable run",
+      "sources": [
+        "gdd:RESTART-01"
+      ],
+      "trajectory_ids": [
+        "canonical_success"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d2.dependency_chain_content",
+      "dimension": "D2",
+      "title": "The key/lock dependency chain and badges are present and basically usable",
+      "sources": [
+        "gdd:CONTENT-03",
+        "gdd:DEPENDENCY-01",
+        "gdd:DEPENDENCY-02",
+        "gdd:ASSET-01"
+      ],
+      "trajectory_ids": [
+        "dependency_chain"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d2.generic_and_content",
+      "dimension": "D2",
+      "title": "A visible two-key dependency group is present and basically usable in either key order",
+      "sources": [
+        "gdd:CONTENT-05",
+        "gdd:DEPENDENCY-01"
+      ],
+      "trajectory_ids": [
+        "and_dependency"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d3.pointer_semantics",
+      "dimension": "D3",
+      "title": "Normal pointer input reaches the intended arrow once",
+      "sources": [
+        "gdd:INPUT-01",
+        "gdd:INPUT-02",
+        "gdd:QUALITY-02",
+        "gdd:QUALITY-06",
+        "common-baseline:COMMON-NORMAL-INPUT",
+        "common-baseline:COMMON-NO-DUPLICATE-LISTENERS"
+      ],
+      "trajectory_ids": [
+        "canonical_success",
+        "input_boundaries"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d3.motion_and_exit",
+      "dimension": "D3",
+      "title": "Movement is continuous, forward and completes only after full exit",
+      "sources": [
+        "gdd:FLOW-02",
+        "gdd:CONTENT-04",
+        "gdd:RULE-01"
+      ],
+      "trajectory_ids": [
+        "motion_cardinals"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d3.blocking_and_cost",
+      "dimension": "D3",
+      "title": "Blocked arrows remain immobile and charge exactly once",
+      "sources": [
+        "gdd:RULE-01",
+        "gdd:RULE-02",
+        "gdd:RULE-03"
+      ],
+      "trajectory_ids": [
+        "blocked_failure"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d3.moves_priority",
+      "dimension": "D3",
+      "title": "The last legal Move wins after motion instead of losing early",
+      "sources": [
+        "gdd:FLOW-03",
+        "gdd:RULE-03",
+        "gdd:RULE-05"
+      ],
+      "trajectory_ids": [
+        "budget_terminal"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d3.hearts_and_loss",
+      "dimension": "D3",
+      "title": "Hearts success/failure costs and terminal freeze are correct",
+      "sources": [
+        "gdd:FLOW-04",
+        "gdd:CONTENT-02",
+        "gdd:INPUT-02",
+        "gdd:RULE-04"
+      ],
+      "trajectory_ids": [
+        "budget_terminal"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d3.dependency_timing",
+      "dimension": "D3",
+      "title": "Locks charge correctly and unlock only after prerequisite exits",
+      "sources": [
+        "gdd:CONTENT-03",
+        "gdd:RULE-04",
+        "gdd:DEPENDENCY-01"
+      ],
+      "trajectory_ids": [
+        "dependency_chain"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d3.and_semantics",
+      "dimension": "D3",
+      "title": "AND dependencies remain locked after one prerequisite and work in both orders",
+      "sources": [
+        "gdd:CONTENT-05",
+        "gdd:DEPENDENCY-01"
+      ],
+      "trajectory_ids": [
+        "and_dependency"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d3.hint_rules",
+      "dimension": "D3",
+      "title": "Hint remains legal, free and state-aware",
+      "sources": [
+        "gdd:CONTENT-02",
+        "gdd:RULE-01",
+        "gdd:HINT-01"
+      ],
+      "trajectory_ids": [
+        "hint_stability"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d4.complete_success_journey",
+      "dimension": "D4",
+      "title": "The authored tutorial plays from entry through every arrow to Won",
+      "sources": [
+        "gdd:FLOW-01",
+        "gdd:FLOW-02",
+        "gdd:FLOW-03",
+        "gdd:CONTENT-01",
+        "gdd:RULE-03",
+        "gdd:RULE-05",
+        "gdd:QUALITY-02",
+        "gdd:QUALITY-05"
+      ],
+      "trajectory_ids": [
+        "canonical_success"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d4.win_restart",
+      "dimension": "D4",
+      "title": "Restart from the successful terminal state restores a fresh run",
+      "sources": [
+        "gdd:UI-03",
+        "gdd:RESTART-01",
+        "gdd:QUALITY-06",
+        "common-baseline:COMMON-RESTART-REOPEN"
+      ],
+      "trajectory_ids": [
+        "canonical_success"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d4.failure_recovery",
+      "dimension": "D4",
+      "title": "A blocked attempt recovers and remains reusable",
+      "sources": [
+        "gdd:RULE-02",
+        "gdd:UI-03",
+        "gdd:QUALITY-04"
+      ],
+      "trajectory_ids": [
+        "blocked_failure"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d4.loss_flow",
+      "dimension": "D4",
+      "title": "The loss journey reaches FAILED and freezes gameplay",
+      "sources": [
+        "gdd:FLOW-04",
+        "gdd:RULE-04",
+        "gdd:QUALITY-02",
+        "gdd:QUALITY-05"
+      ],
+      "trajectory_ids": [
+        "budget_terminal"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d4.dependency_journey",
+      "dimension": "D4",
+      "title": "The sequential and both-order dependency journeys each reach Won",
+      "sources": [
+        "gdd:FLOW-03",
+        "gdd:CONTENT-03",
+        "gdd:CONTENT-05",
+        "gdd:NAV-01",
+        "gdd:DEPENDENCY-01",
+        "gdd:QUALITY-05"
+      ],
+      "trajectory_ids": [
+        "and_dependency",
+        "dependency_chain"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d4.restart_during_motion",
+      "dimension": "D4",
+      "title": "Restart interrupts an in-flight arrow and immediately restores the level",
+      "sources": [
+        "gdd:RESTART-01",
+        "common-baseline:COMMON-RESTART-REOPEN"
+      ],
+      "trajectory_ids": [
+        "restart_interrupt"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d4.restart_integrity",
+      "dimension": "D4",
+      "title": "Restart leaves no stale coroutine/listener and input stays reusable",
+      "sources": [
+        "gdd:INPUT-02",
+        "gdd:RULE-03",
+        "gdd:UI-03",
+        "gdd:RESTART-01",
+        "gdd:QUALITY-06",
+        "common-baseline:COMMON-RESTART-REOPEN",
+        "common-baseline:COMMON-NO-DUPLICATE-LISTENERS"
+      ],
+      "trajectory_ids": [
+        "restart_interrupt"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d4.fresh_process_reopen",
+      "dimension": "D4",
+      "title": "A post-Dynamic dirty state is followed by a distinct Fresh Unity process that restores the authored tutorial",
+      "sources": [
+        "gdd:FLOW-01",
+        "gdd:REOPEN-01",
+        "gdd:QUALITY-01",
+        "gdd:QUALITY-06",
+        "common-baseline:COMMON-RESTART-REOPEN"
+      ],
+      "trajectory_ids": [
+        "fresh_process_reopen"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d5.player_surface_integrity",
+      "dimension": "D5",
+      "title": "Required HUD fields and controls are simultaneously readable and fully inside the 1280x720 player frame",
+      "sources": [
+        "gdd:FLOW-01",
+        "gdd:UI-01",
+        "gdd:QUALITY-03",
+        "common-baseline:COMMON-BASIC-HUD"
+      ],
+      "trajectory_ids": [
+        "canonical_success"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d5.visible_clickable_targets",
+      "dimension": "D5",
+      "title": "Visible arrows, Hint, Restart and Next Level receive one complete normal Mouse action through the candidate's own input route",
+      "sources": [
+        "gdd:FLOW-01",
+        "gdd:INPUT-01",
+        "gdd:NAV-01",
+        "gdd:HINT-01",
+        "gdd:UI-01",
+        "gdd:RESTART-01",
+        "gdd:QUALITY-02",
+        "gdd:QUALITY-03",
+        "common-baseline:COMMON-NORMAL-INPUT",
+        "common-baseline:COMMON-BASIC-HUD"
+      ],
+      "trajectory_ids": [
+        "budget_terminal",
+        "canonical_success"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d5.hud_terminal_sync",
+      "dimension": "D5",
+      "title": "COMPLETED/FAILED feedback matches the real terminal state",
+      "sources": [
+        "gdd:FLOW-03",
+        "gdd:FLOW-04",
+        "gdd:UI-02",
+        "gdd:UI-03",
+        "gdd:QUALITY-03",
+        "gdd:QUALITY-04",
+        "common-baseline:COMMON-BASIC-HUD"
+      ],
+      "trajectory_ids": [
+        "budget_terminal",
+        "canonical_success"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d5.blocked_feedback",
+      "dimension": "D5",
+      "title": "Blocked feedback is target-local, visible long enough and recovers",
+      "sources": [
+        "gdd:RULE-02",
+        "gdd:UI-03",
+        "gdd:QUALITY-04"
+      ],
+      "trajectory_ids": [
+        "blocked_failure"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d5.badge_feedback",
+      "dimension": "D5",
+      "title": "Key and lock badges visibly follow dependency state",
+      "sources": [
+        "gdd:CONTENT-03",
+        "gdd:DEPENDENCY-02",
+        "gdd:UI-03",
+        "gdd:ASSET-01",
+        "gdd:QUALITY-04"
+      ],
+      "trajectory_ids": [
+        "dependency_chain"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    },
+    {
+      "id": "d5.hint_feedback",
+      "dimension": "D5",
+      "title": "Hint highlight is visible, bounded and updates after state changes",
+      "sources": [
+        "gdd:CONTENT-02",
+        "gdd:HINT-01",
+        "gdd:UI-03",
+        "gdd:QUALITY-04"
+      ],
+      "trajectory_ids": [
+        "hint_stability"
+      ],
+      "score_weighting": "Equal checkpoint share within the dimension maximum, as frozen in rules.json."
+    }
+  ],
+  "trajectory_plan": [
+    {
+      "id": "input_boundaries",
+      "phase": "dynamic",
+      "nunit_test": "TRAJ00_InputCommitBoundaries",
+      "scored_dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "input_transport": "Unity Input System Mouse with cross-frame press and release through the candidate-owned route",
+      "observation_transport": "Read-only public probe cross-checked against visible runtime geometry/state"
+    },
+    {
+      "id": "canonical_success",
+      "phase": "dynamic",
+      "nunit_test": "TRAJ01_CanonicalHintClickWinRestart",
+      "scored_dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "input_transport": "Unity Input System Mouse with cross-frame press and release through the candidate-owned route",
+      "observation_transport": "Read-only public probe cross-checked against visible runtime geometry/state"
+    },
+    {
+      "id": "motion_cardinals",
+      "phase": "dynamic",
+      "nunit_test": "TRAJ02_MotionCardinalsFullyExit",
+      "scored_dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "input_transport": "Unity Input System Mouse with cross-frame press and release through the candidate-owned route",
+      "observation_transport": "Read-only public probe cross-checked against visible runtime geometry/state"
+    },
+    {
+      "id": "blocked_failure",
+      "phase": "dynamic",
+      "nunit_test": "TRAJ03_BlockedFailureFeedbackAndRecovery",
+      "scored_dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "input_transport": "Unity Input System Mouse with cross-frame press and release through the candidate-owned route",
+      "observation_transport": "Read-only public probe cross-checked against visible runtime geometry/state"
+    },
+    {
+      "id": "budget_terminal",
+      "phase": "dynamic",
+      "nunit_test": "TRAJ04_BudgetTerminalWinLossAndFreeze",
+      "scored_dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "input_transport": "Unity Input System Mouse with cross-frame press and release through the candidate-owned route",
+      "observation_transport": "Read-only public probe cross-checked against visible runtime geometry/state"
+    },
+    {
+      "id": "dependency_chain",
+      "phase": "dynamic",
+      "nunit_test": "TRAJ05_SequentialDependencyChain",
+      "scored_dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "input_transport": "Unity Input System Mouse with cross-frame press and release through the candidate-owned route",
+      "observation_transport": "Read-only public probe cross-checked against visible runtime geometry/state"
+    },
+    {
+      "id": "and_dependency",
+      "phase": "dynamic",
+      "nunit_test": "TRAJ06_AndDependencyBothOrders",
+      "scored_dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "input_transport": "Unity Input System Mouse with cross-frame press and release through the candidate-owned route",
+      "observation_transport": "Read-only public probe cross-checked against visible runtime geometry/state"
+    },
+    {
+      "id": "restart_interrupt",
+      "phase": "dynamic",
+      "nunit_test": "TRAJ07_RestartInterruptsMovingState",
+      "scored_dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "input_transport": "Unity Input System Mouse with cross-frame press and release through the candidate-owned route",
+      "observation_transport": "Read-only public probe cross-checked against visible runtime geometry/state"
+    },
+    {
+      "id": "hint_stability",
+      "phase": "dynamic",
+      "nunit_test": "TRAJ08_HintLegalityCostAndRecovery",
+      "scored_dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "input_transport": "Unity Input System Mouse with cross-frame press and release through the candidate-owned route",
+      "observation_transport": "Read-only public probe cross-checked against visible runtime geometry/state"
+    },
+    {
+      "id": "fresh_process_reopen",
+      "phase": "fresh_process",
+      "nunit_test": "FRESH01_ReopenAfterDirtyDynamicStateStartsFreshTutorial",
+      "scored_dimensions": [
+        "D4"
+      ],
+      "input_transport": "No mutation shortcut; reopen is performed in a distinct Unity process after a dirty Dynamic seed.",
+      "observation_transport": "Fresh-process evidence plus public read-only probe and visible targets."
+    }
+  ],
+  "visual_protocol": {
+    "dimension": "D6",
+    "protocol": "user-simplified-single-state-single-round-20260824",
+    "primary_state_id": "initial_gameplay",
+    "required_rounds": 1,
+    "model": "gpt-5.6-sol",
+    "prompt_sha256": "558b4ccffad7d13d3ae3e5c6fc5a9b36a7bba37d9be47da895c2e50bc9c5a6ee",
+    "diagnostic_states_excluded_from_formal_score": [
+      "core_interaction",
+      "late_gameplay",
+      "near_complete"
+    ]
+  },
+  "robustness_policy": {
+    "missing_or_short_collections": "Legal candidate failure; record failed/blocked checks without evaluator exception.",
+    "missing_probe": "Candidate launch/contract failure where attributable; evaluator-unsupported remains null, never a numeric zero.",
+    "timeouts": "Bounded per transition; host/evaluator timeout is infrastructure invalid, not a partial score.",
+    "candidate_mutation": "Forbidden; evaluation runs against a scratch copy and verifies the source tree remains unchanged.",
+    "input_transport": "Normal Unity Input System Mouse only; no gameplay action is invoked through the read-only probe.",
+    "probe_role": "Observation only."
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "schema_version": "2.0.0",
+  "authority": "assets/ASSET_CATALOG.json",
+  "delivery_root": "assets",
+  "delivery_format": "raw_rgba_png_and_static_art_json",
+  "asset_count": 43,
+  "policy": {
+    "all_assets_required": true,
+    "equivalent_replacement_allowed": false,
+    "source_files_protected": true,
+    "candidate_import_destination": "starter-project/Content",
+    "candidate_may_edit_imported_copies": true,
+    "original_unreal_packages_included": false,
+    "marketplace_plugins_included": false,
+    "preassembled_gameplay_included": false
+  },
+  "import_notes": [
+    "Frames run left to right, including repeated display frames.",
+    "Preserve pixel edges with nearest-neighbor filtering.",
+    "Map JSON contains only image placement and tile art; implement collision and all gameplay independently.",
+    "No ready-made importer, sprite, flipbook, tilemap, pawn, AI, trigger, HUD, or input binding is supplied.",
+    "GDD.md Section 6 defines all gameplay requirements."
+  ],
+  "assets": [
+    {
+      "id": "ART-ENEMY-ATTACK",
+      "path": "assets/files/treasure-hunters/enemy/enemy_attack_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-ENEMY-DEATH",
+      "path": "assets/files/treasure-hunters/enemy/enemy_death_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-ENEMY-FALL",
+      "path": "assets/files/treasure-hunters/enemy/enemy_fall_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-ENEMY-HIT",
+      "path": "assets/files/treasure-hunters/enemy/enemy_hit_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-ENEMY-IDLE",
+      "path": "assets/files/treasure-hunters/enemy/enemy_idle_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-ENEMY-RUN",
+      "path": "assets/files/treasure-hunters/enemy/enemy_run_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-KEY-PICKUP",
+      "path": "assets/files/treasure-hunters/objectives/key_pickup_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-KEY-IDLE",
+      "path": "assets/files/treasure-hunters/objectives/key_idle_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-CANDLE",
+      "path": "assets/files/treasure-hunters/world/candle_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-CHAIN-BIG",
+      "path": "assets/files/treasure-hunters/world/chain_big_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-CHAIN-SMALL",
+      "path": "assets/files/treasure-hunters/world/chain_small_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-DOOR-CLOSED",
+      "path": "assets/files/treasure-hunters/objectives/door_closed.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-DOOR-OPEN",
+      "path": "assets/files/treasure-hunters/objectives/door_open_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-PLAYER-ATTACK-A",
+      "path": "assets/files/treasure-hunters/player/player_attack_a_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-PLAYER-ATTACK-B",
+      "path": "assets/files/treasure-hunters/player/player_attack_b_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-PLAYER-ATTACK-C",
+      "path": "assets/files/treasure-hunters/player/player_attack_c_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-PLAYER-DEATH",
+      "path": "assets/files/treasure-hunters/player/player_death_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-PLAYER-FALL",
+      "path": "assets/files/treasure-hunters/player/player_fall_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-PLAYER-HIT",
+      "path": "assets/files/treasure-hunters/player/player_hit_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-PLAYER-IDLE",
+      "path": "assets/files/treasure-hunters/player/player_idle_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-PLAYER-JUMP",
+      "path": "assets/files/treasure-hunters/player/player_jump_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-PLAYER-LAND",
+      "path": "assets/files/treasure-hunters/player/player_land_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-PLAYER-RUN",
+      "path": "assets/files/treasure-hunters/player/player_run_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-SPRING",
+      "path": "assets/files/treasure-hunters/world/spring_strip.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-TERRAIN-BACK-WALL",
+      "path": "assets/files/treasure-hunters/world/terrain_back_wall_tiles.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-PLATFORM-TILES",
+      "path": "assets/files/treasure-hunters/world/platform_tiles.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-SPIKE",
+      "path": "assets/files/treasure-hunters/world/spike.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-HEALTH-FRAME",
+      "path": "assets/files/treasure-hunters/ui/health_frame.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-HEALTH-TRACK",
+      "path": "assets/files/treasure-hunters/ui/health_track.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-HEALTH-FILL",
+      "path": "assets/files/treasure-hunters/ui/health_fill.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-DEATH-ICON",
+      "path": "assets/files/treasure-hunters/ui/death_icon.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-BARREL-BOTTLE-DECORATION-01",
+      "path": "assets/files/treasure-hunters/world/barrel_bottle_decoration_01.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-BARREL-BOTTLE-DECORATION-02",
+      "path": "assets/files/treasure-hunters/world/barrel_bottle_decoration_02.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-BARREL-BOTTLE-DECORATION-03",
+      "path": "assets/files/treasure-hunters/world/barrel_bottle_decoration_03.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-DOOR-DECORATION-04",
+      "path": "assets/files/treasure-hunters/world/door_decoration_04.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-CHAIN-DECORATION-05",
+      "path": "assets/files/treasure-hunters/world/chain_decoration_05.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-BARREL-BOTTLE-DECORATION-06",
+      "path": "assets/files/treasure-hunters/world/barrel_bottle_decoration_06.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-CHAIN-DECORATION-07",
+      "path": "assets/files/treasure-hunters/world/chain_decoration_07.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-BARREL-BOTTLE-DECORATION-08",
+      "path": "assets/files/treasure-hunters/world/barrel_bottle_decoration_08.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-DOOR-DECORATION-09",
+      "path": "assets/files/treasure-hunters/world/door_decoration_09.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-ROOM-ART-PREVIEW",
+      "path": "assets/files/map/room-art-preview.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "ART-ROOM-REFERENCE",
+      "path": "references/room-reference.png",
+      "required": true,
+      "replacement_allowed": false
+    },
+    {
+      "id": "MAP-ROOM-LAYOUT",
+      "path": "assets/files/map/room-layout.json",
+      "required": true,
+      "replacement_allowed": false
+    }
+  ]
+}

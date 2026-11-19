@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "game_id": "Bomber",
+  "task_revision": "2.0.1",
+  "evaluator_revision": "bomber-evaluator-5.0.0",
+  "scorer_revision": "bomber-canonical-scorer-5.0.0",
+  "engine": {
+    "name": "Unreal Engine",
+    "version": "5.7.4",
+    "changelist": 51494982,
+    "platform": "Windows x64",
+    "runtime_mode": "editor_game"
+  },
+  "public_release": {
+    "manifest": "../input/BENCHMARK_MANIFEST.json",
+    "gdd": "../input/GDD.md",
+    "layout": "../input/project/Config/BomberArenaLayout.json",
+    "state_schema": "../input/contracts/game-state.schema.json"
+  },
+  "scoring": {
+    "dimensions": {
+      "D1": 10,
+      "D2": 30,
+      "D3": 20,
+      "D4": 20,
+      "D5": 10,
+      "D6": 10
+    },
+    "dynamic_checkpoint_count": 43,
+    "d6_states": [
+      "active-duel",
+      "chain-reaction",
+      "player1-win"
+    ],
+    "d6_rounds": 3
+  },
+  "robustness": {
+    "state_max_age_ms": 2000,
+    "state_poll_ms": 40,
+    "stable_sample_default": 2,
+    "capture_width": 1280,
+    "capture_height": 720,
+    "capture_min_bytes": 20000,
+    "session_timeout_ms": 60000,
+    "session_watchdog_seconds": 360,
+    "normal_input_only": true,
+    "read_only_observer": true,
+    "candidate_failures_are_numeric_zero": true,
+    "infrastructure_faults_publish_no_score": true
+  }
+}

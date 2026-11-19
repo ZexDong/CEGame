@@ -1,0 +1,11 @@
+{
+  "name": "GameCreate.Undercooked.Evaluator.Capture",
+  "references": [
+    "GameCreate.Session",
+    "GameCreate.Kitchen.SessionContract",
+    "GameCreate.Evaluation.Session",
+    "UnityEngine.ScreenCaptureModule",
+    "UnityEngine.UI"
+  ],
+  "autoReferenced": true
+}

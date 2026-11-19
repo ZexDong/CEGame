@@ -1,0 +1,14 @@
+{
+  "name": "GameCreate.Stormbound.PublicChecks",
+  "rootNamespace": "GameCreate.Stormbound.PublicChecks",
+  "references": [
+    "GameCreate.Session",
+    "GameCreate.Session.PublicChecks",
+    "GameCreate.Stormbound.SessionContract"
+  ],
+  "includePlatforms": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": true
+}

@@ -1,0 +1,328 @@
+{
+  "schema_version": "2.0.0",
+  "language": "en",
+  "delivery_roots": [
+    "starter-project/Content/Bomber",
+    "starter-project/Plugins/BlockoutMap"
+  ],
+  "asset_count": 30,
+  "policy": {
+    "only_cataloged_assets_released": true,
+    "raw_visual_assets_only": true,
+    "assembled_gameplay_assets_present": false,
+    "content_only_plugin": true,
+    "author_facing_content_present": false,
+    "credits_or_community_links_present": false,
+    "gameplay_blueprints_present": false,
+    "input_or_ai_assets_present": false,
+    "save_or_test_assets_present": false,
+    "copy_strategy": "Assets are already present at exact Unreal logical paths inside the writable project.",
+    "replacement_policy": "Every Section 6 required character, arena, power-up, bomb, and marker asset must be used in its stated role; replacement models are not allowed."
+  },
+  "catalog": "assets/ASSET_CATALOG.json",
+  "human_catalog": "assets/ASSET_CATALOG.md",
+  "coverage": "ASSET_COVERAGE.json",
+  "license_map": "assets/legal/ASSET_LICENSE_MAP.json",
+  "assets": [
+    {
+      "asset_id": "m_emissive_master",
+      "path": "starter-project/Content/Bomber/Materials/M_Emissive_Master.uasset",
+      "unreal_object_path": "/Game/Bomber/Materials/M_Emissive_Master",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-04"
+      ]
+    },
+    {
+      "asset_id": "m_bomb",
+      "path": "starter-project/Content/Bomber/Materials/MI_Bombs/M_Bomb.uasset",
+      "unreal_object_path": "/Game/Bomber/Materials/MI_Bombs/M_Bomb",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-04"
+      ]
+    },
+    {
+      "asset_id": "mi_bomb_blue",
+      "path": "starter-project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Blue.uasset",
+      "unreal_object_path": "/Game/Bomber/Materials/MI_Bombs/MI_Bomb_Blue",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-04"
+      ]
+    },
+    {
+      "asset_id": "mi_bomb_pink",
+      "path": "starter-project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Pink.uasset",
+      "unreal_object_path": "/Game/Bomber/Materials/MI_Bombs/MI_Bomb_Pink",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-04"
+      ]
+    },
+    {
+      "asset_id": "mi_bomb_silver",
+      "path": "starter-project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Silver.uasset",
+      "unreal_object_path": "/Game/Bomber/Materials/MI_Bombs/MI_Bomb_Silver",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-04"
+      ]
+    },
+    {
+      "asset_id": "mi_bomb_yellow",
+      "path": "starter-project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Yellow.uasset",
+      "unreal_object_path": "/Game/Bomber/Materials/MI_Bombs/MI_Bomb_Yellow",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-04"
+      ]
+    },
+    {
+      "asset_id": "mi_player_arrow_start",
+      "path": "starter-project/Content/Bomber/Materials/MI_PlayerArrowStart.uasset",
+      "unreal_object_path": "/Game/Bomber/Materials/MI_PlayerArrowStart",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-04"
+      ]
+    },
+    {
+      "asset_id": "sm_bomb",
+      "path": "starter-project/Content/Bomber/Meshes/SM_Bomb.uasset",
+      "unreal_object_path": "/Game/Bomber/Meshes/SM_Bomb",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-04"
+      ]
+    },
+    {
+      "asset_id": "sm_player_arrow_start",
+      "path": "starter-project/Content/Bomber/Meshes/SM_PlayerArrowStart.uasset",
+      "unreal_object_path": "/Game/Bomber/Meshes/SM_PlayerArrowStart",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-04"
+      ]
+    },
+    {
+      "asset_id": "skel_bomber",
+      "path": "starter-project/Content/Bomber/SkeletalMeshes/SKEL_Bomber.uasset",
+      "unreal_object_path": "/Game/Bomber/SkeletalMeshes/SKEL_Bomber",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-01"
+      ]
+    },
+    {
+      "asset_id": "mm_manny_idle",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Animations/MM_Manny_Idle.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Animations/MM_Manny_Idle",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-01"
+      ]
+    },
+    {
+      "asset_id": "m_mannequin",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/M_Mannequin.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Materials/M_Mannequin",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-01"
+      ]
+    },
+    {
+      "asset_id": "mi_quinn_01",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_01.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_01",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-01"
+      ]
+    },
+    {
+      "asset_id": "mi_quinn_02",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_02.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_02",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-01"
+      ]
+    },
+    {
+      "asset_id": "skm_quinn_simple",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Meshes/SKM_Quinn_Simple.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Meshes/SKM_Quinn_Simple",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-01"
+      ]
+    },
+    {
+      "asset_id": "t_manny_01_bn",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_BN.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_BN",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-01"
+      ]
+    },
+    {
+      "asset_id": "t_manny_01_d",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_D.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_D",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-01"
+      ]
+    },
+    {
+      "asset_id": "t_manny_01_mra",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-01"
+      ]
+    },
+    {
+      "asset_id": "t_quinn_01_d",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_D.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_D",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-01"
+      ]
+    },
+    {
+      "asset_id": "t_quinn_01_mra",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_MRA.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_MRA",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-01"
+      ]
+    },
+    {
+      "asset_id": "t_quinn_01_n",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_N.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_N",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-01"
+      ]
+    },
+    {
+      "asset_id": "t_quinn_02_d",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_D.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_D",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-01"
+      ]
+    },
+    {
+      "asset_id": "t_quinn_02_mra",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_MRA.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_MRA",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-01"
+      ]
+    },
+    {
+      "asset_id": "t_quinn_02_n",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_N.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_N",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-01"
+      ]
+    },
+    {
+      "asset_id": "t_ue_logo_m",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Shared/T_UE_Logo_M.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Characters/Mannequins/Textures/Shared/T_UE_Logo_M",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-01"
+      ]
+    },
+    {
+      "asset_id": "sm_blockout_map_box",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Box.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Meshes/SM_BlockoutMap_Box",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-02"
+      ]
+    },
+    {
+      "asset_id": "sm_blockout_map_powerup_bomb",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Bomb.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Bomb",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-03"
+      ]
+    },
+    {
+      "asset_id": "sm_blockout_map_powerup_fire",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Fire.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Fire",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-03"
+      ]
+    },
+    {
+      "asset_id": "sm_blockout_map_powerup_skate",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Skate.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Skate",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-03"
+      ]
+    },
+    {
+      "asset_id": "sm_blockout_map_wall",
+      "path": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Wall.uasset",
+      "unreal_object_path": "/BlockoutMap/BlockoutMap/Meshes/SM_BlockoutMap_Wall",
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "requirement_ids": [
+        "ASSET-02"
+      ]
+    }
+  ]
+}

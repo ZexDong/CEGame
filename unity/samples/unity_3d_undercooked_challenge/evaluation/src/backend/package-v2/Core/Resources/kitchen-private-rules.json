@@ -1,0 +1,271 @@
+{
+  "checks": [
+    {
+      "id": "D1_SCENE",
+      "weight": 2.0,
+      "requirements": [
+        "FLOW-01"
+      ]
+    },
+    {
+      "id": "D1_CAMERA",
+      "weight": 2.0,
+      "requirements": [
+        "CAMERA-01"
+      ]
+    },
+    {
+      "id": "D1_RUNTIME",
+      "weight": 2.0,
+      "requirements": [
+        "FLOW-01"
+      ]
+    },
+    {
+      "id": "D1_SESSION_ENTRY",
+      "weight": 2.0,
+      "requirements": [
+        "SESSION-01"
+      ]
+    },
+    {
+      "id": "D1_SESSION_STATE",
+      "weight": 2.0,
+      "requirements": [
+        "SESSION-02"
+      ]
+    },
+    {
+      "id": "D2_KITCHEN",
+      "weight": 2.5,
+      "requirements": [
+        "FLOW-01"
+      ]
+    },
+    {
+      "id": "D2_MOVE_SWITCH",
+      "weight": 2.5,
+      "requirements": [
+        "MOVE-01",
+        "SWITCH-01"
+      ]
+    },
+    {
+      "id": "D2_PICKUP",
+      "weight": 2.5,
+      "requirements": [
+        "PICKUP-01"
+      ]
+    },
+    {
+      "id": "D2_CHOP",
+      "weight": 2.5,
+      "requirements": [
+        "CHOP-01"
+      ]
+    },
+    {
+      "id": "D2_COOK",
+      "weight": 2.5,
+      "requirements": [
+        "COOK-01"
+      ]
+    },
+    {
+      "id": "D2_BURN",
+      "weight": 2.5,
+      "requirements": [
+        "BURN-01"
+      ]
+    },
+    {
+      "id": "D2_PLATE",
+      "weight": 2.5,
+      "requirements": [
+        "PLATE-01"
+      ]
+    },
+    {
+      "id": "D2_DELIVERY_ORDERS",
+      "weight": 2.5,
+      "requirements": [
+        "DELIVERY-01",
+        "ORDER-01"
+      ]
+    },
+    {
+      "id": "D2_EXPIRY",
+      "weight": 2.5,
+      "requirements": [
+        "ORDER-02"
+      ]
+    },
+    {
+      "id": "D2_PAUSE",
+      "weight": 2.5,
+      "requirements": [
+        "PAUSE-01"
+      ]
+    },
+    {
+      "id": "D2_RESULT",
+      "weight": 2.5,
+      "requirements": [
+        "FLOW-02"
+      ]
+    },
+    {
+      "id": "D2_ASSETS",
+      "weight": 2.5,
+      "requirements": [
+        "VISUAL-01",
+        "AUDIO-01"
+      ]
+    },
+    {
+      "id": "D3_SWITCH_OWNERSHIP",
+      "weight": 2.0,
+      "requirements": [
+        "SWITCH-01"
+      ]
+    },
+    {
+      "id": "D3_ITEM_UNIQUENESS",
+      "weight": 2.0,
+      "requirements": [
+        "SESSION-02"
+      ]
+    },
+    {
+      "id": "D3_RAW_REJECTION",
+      "weight": 2.0,
+      "requirements": [
+        "DELIVERY-01"
+      ]
+    },
+    {
+      "id": "D3_CHOP_TIMING",
+      "weight": 2.0,
+      "requirements": [
+        "CHOP-01"
+      ]
+    },
+    {
+      "id": "D3_COOK_RULES",
+      "weight": 2.0,
+      "requirements": [
+        "COOK-01"
+      ]
+    },
+    {
+      "id": "D3_BURN_REJECTION",
+      "weight": 2.0,
+      "requirements": [
+        "BURN-01"
+      ]
+    },
+    {
+      "id": "D3_DELIVERY_ONCE",
+      "weight": 2.0,
+      "requirements": [
+        "DELIVERY-01"
+      ]
+    },
+    {
+      "id": "D3_ORDER_RULES",
+      "weight": 2.0,
+      "requirements": [
+        "ORDER-01",
+        "ORDER-02"
+      ]
+    },
+    {
+      "id": "D3_PAUSE_FREEZE",
+      "weight": 2.0,
+      "requirements": [
+        "PAUSE-01"
+      ]
+    },
+    {
+      "id": "D3_RESET_CLEAN",
+      "weight": 2.0,
+      "requirements": [
+        "RESTART-01"
+      ]
+    },
+    {
+      "id": "D4_MENU_START",
+      "weight": 4.0,
+      "requirements": [
+        "FLOW-01"
+      ]
+    },
+    {
+      "id": "D4_ADJACENT_WORKFLOW",
+      "weight": 4.0,
+      "requirements": [
+        "PICKUP-01",
+        "CHOP-01",
+        "COOK-01",
+        "PLATE-01",
+        "DELIVERY-01"
+      ]
+    },
+    {
+      "id": "D4_RESULT",
+      "weight": 4.0,
+      "requirements": [
+        "FLOW-02"
+      ]
+    },
+    {
+      "id": "D4_RESTART",
+      "weight": 4.0,
+      "requirements": [
+        "RESTART-01"
+      ]
+    },
+    {
+      "id": "D4_REOPEN",
+      "weight": 4.0,
+      "requirements": [
+        "REOPEN-01"
+      ]
+    },
+    {
+      "id": "D5_MENU",
+      "weight": 2.0,
+      "requirements": [
+        "UI-01"
+      ]
+    },
+    {
+      "id": "D5_HUD_STATION",
+      "weight": 2.0,
+      "requirements": [
+        "UI-01"
+      ]
+    },
+    {
+      "id": "D5_ACTION",
+      "weight": 2.0,
+      "requirements": [
+        "UI-01"
+      ]
+    },
+    {
+      "id": "D5_PAUSE_RESULT",
+      "weight": 2.0,
+      "requirements": [
+        "UI-01"
+      ]
+    },
+    {
+      "id": "D5_AUDIO",
+      "weight": 2.0,
+      "requirements": [
+        "AUDIO-01"
+      ]
+    }
+  ]
+}

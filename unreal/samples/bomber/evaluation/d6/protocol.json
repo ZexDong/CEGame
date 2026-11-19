@@ -1,0 +1,26 @@
+{
+  "schema_version": "2.0.0",
+  "protocol": "canonical_five_criteria_three_rounds",
+  "guide_sha256": "3e3e6cf19cbd5cda5667c44710f483fbba2ac30af7d098921acc811cf08dfdae",
+  "prompt_sha256": "558b4ccffad7d13d3ae3e5c6fc5a9b36a7bba37d9be47da895c2e50bc9c5a6ee",
+  "reference_manifest_sha256": "b09839c14a7a6f9de525485e2cb8ae37b0d1c1b911242ecc70b9bec40d6de74f",
+  "states": [
+    "active-duel",
+    "chain-reaction",
+    "player1-win"
+  ],
+  "rounds": 3,
+  "criteria": 5,
+  "criterion_maximum": 2,
+  "criterion_increment": 0.5,
+  "calls_per_round": 3,
+  "comparison_viewport": {
+    "width": 1280,
+    "height": 720,
+    "dpi_scale": 1
+  },
+  "reference_source": "original_game_baseline",
+  "missing_candidate_score": 0,
+  "missing_reference_policy": "infrastructure_invalid_no_score",
+  "formal_freeze": false
+}

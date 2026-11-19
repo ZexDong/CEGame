@@ -1,0 +1,63 @@
+{
+  "grid_dimensions": [
+    9,
+    6
+  ],
+  "purpose": "Two-level prerequisite demonstration; coordinates are design input, not a Unity asset.",
+  "arrows": [
+    {
+      "id": "key_a",
+      "path": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "prerequisites": []
+    },
+    {
+      "id": "lock_b",
+      "path": [
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ]
+      ],
+      "prerequisites": [
+        "key_a"
+      ]
+    },
+    {
+      "id": "lock_c",
+      "path": [
+        [
+          7,
+          4
+        ],
+        [
+          6,
+          4
+        ]
+      ],
+      "prerequisites": [
+        "lock_b"
+      ]
+    }
+  ]
+}

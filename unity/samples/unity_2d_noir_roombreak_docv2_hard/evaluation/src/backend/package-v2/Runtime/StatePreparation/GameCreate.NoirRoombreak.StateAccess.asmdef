@@ -1,0 +1,11 @@
+{
+  "name": "GameCreate.NoirRoombreak.StateAccess",
+  "references": [
+    "GameCreate.Benchmark.NoirRoombreak.Contracts",
+    "GameCreate.Evaluation.PrivateStateFixtures",
+    "Unity.ugui",
+    "GameCreate.Session",
+    "GameCreate.Evaluation.Session"
+  ],
+  "autoReferenced": false
+}

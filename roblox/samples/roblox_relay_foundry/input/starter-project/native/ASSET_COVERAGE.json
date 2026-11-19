@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "roblox.relay_foundry.v1",
+  "final_composition_supplied": false,
+  "roles": [
+    {"role":"foundry_world_and_routes","status":"roblox_built_in_complete","sources":["BasePart","Enum.Material","Lighting"]},
+    {"role":"machines_docks_gate_and_zones","status":"roblox_built_in_complete","sources":["BasePart","ProximityPrompt","BillboardGui","SurfaceGui"]},
+    {"role":"player_character_death_and_respawn","status":"roblox_built_in_complete","sources":["default character","Humanoid","SpawnLocation"]},
+    {"role":"hud_feedback_and_result","status":"roblox_built_in_complete","sources":["ScreenGui","Frame","TextLabel"]},
+    {"role":"semantic_observation","status":"public_contract_supplied","sources":["CollectionService","Attributes","RelayFoundrySchema.luau"]}
+  ],
+  "missing": [],
+  "formal_visual_status": "reference_images_not_supplied"
+}
+

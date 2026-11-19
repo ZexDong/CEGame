@@ -1,0 +1,16 @@
+{
+  "slots": ["cycle","time_remaining","integrity","faults","power_pool","coolant_pool","scan_charges","purge_available","selected_bay","incident","sequence_index","event_seq","run_id"],
+  "entities": [
+    {"kind":"bay_a","states":["UnlockedUnstable","UnlockedStable","LockedStable","Faulted"]},
+    {"kind":"bay_b","states":["UnlockedUnstable","UnlockedStable","LockedStable","Faulted"]},
+    {"kind":"bay_c","states":["UnlockedUnstable","UnlockedStable","LockedStable","Faulted"]},
+    {"kind":"game","states":["menu","cycle","preview","sequence","won","lost","not_ready"]}
+  ],
+  "targets": [
+    {"kind":"start_button"},{"kind":"bay_a"},{"kind":"bay_b"},{"kind":"bay_c"},
+    {"kind":"power_minus"},{"kind":"power_plus"},{"kind":"coolant_minus"},{"kind":"coolant_plus"},
+    {"kind":"phase_left"},{"kind":"phase_right"},{"kind":"lock_button"},{"kind":"arm_button"},{"kind":"commit_button"},
+    {"kind":"scan_button"},{"kind":"purge_button"},{"kind":"sequence_a"},{"kind":"sequence_b"},
+    {"kind":"sequence_c"},{"kind":"restart_button"}
+  ]
+}

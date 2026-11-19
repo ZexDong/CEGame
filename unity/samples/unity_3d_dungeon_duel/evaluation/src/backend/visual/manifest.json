@@ -1,0 +1,51 @@
+{
+  "schema_version": 2,
+  "benchmark_id": "unity.dungeon_duel_3d.v2",
+  "dimension": "D6",
+  "reference_basis": {
+    "type": "upstream_original_game_screenshots",
+    "source": "Unity-Technologies/com.unity.multiplayer.samples.coop (Boss Room)",
+    "adaptation_note": "The benchmark is a deterministic single-player reconstruction. State pairs match semantic presentation goals rather than exact multiplayer positions: character readability, arena/Boss combat staging, and terminal focal composition."
+  },
+  "required_rounds": 3,
+  "states": [
+    {
+      "id": "initial_play",
+      "label": "initial character readability",
+      "reference_file": "reference/01_initial_play.png",
+      "candidate_file": "01_initial_play.png",
+      "reference_sha256": "5e3cb28cdc17caa5c45675730a3733fd53643ed6d8f80296f6c69450ae79c92f"
+    },
+    {
+      "id": "combat",
+      "label": "arena combat and Boss staging",
+      "reference_file": "reference/02_combat.png",
+      "candidate_file": "02_combat.png",
+      "reference_sha256": "8150d84ae9f5c032abd73d292d5adf3e1769b6349c465d8c754efa8e0e8b5562"
+    },
+    {
+      "id": "terminal",
+      "label": "terminal focal composition",
+      "reference_file": "reference/03_terminal.png",
+      "candidate_file": "03_victory.png",
+      "reference_sha256": "da0dd0583c67b4f5298354e80278e9b212f5852b59fac21fbd0f19c475cdd74a"
+    }
+  ],
+  "categories": [
+    "scene_assembly",
+    "composition_layout",
+    "scale_layering_clarity",
+    "style_color_cohesion",
+    "overall_finish"
+  ],
+  "allowed_category_scores": [
+    0,
+    0.5,
+    1.0,
+    1.5,
+    2.0
+  ],
+  "score_file_schema": "visual-score-template.json",
+  "prompt_file": "visual_prompt.txt",
+  "prompt_sha256": "5768572dde98f6568c7720ebd2022dd04f53e83711f45044434e1b17731dfb3b"
+}

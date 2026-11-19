@@ -1,0 +1,1583 @@
+{
+  "schema_version": 1,
+  "input_revision": "g07-g08-public-20261011-r1",
+  "path_base": "package root",
+  "runtime_root": "sp",
+  "material_mapping": "MaterialMapping-en.md",
+  
+"contact_sheet": "Assets/asset-contact-sheet.png",
+  "source_of_previews": "Supplied individual source images/AtlasTexture regions only; no gameplay screenshots.",
+  "roles": [
+    {
+      "role": "gobot",
+      "status": "supplied",
+      "path": "sp/assets/characters/gobot_field.png",
+      "meaning": "Robot in exploration",
+      "requirement": "ART-01",
+      "preview_region": [
+        1,
+        1,
+        16,
+        16
+      ]
+    },
+    {
+      "role": "npc",
+      "status": "supplied",
+      "path": "sp/assets/characters/character_generic.png",
+      "meaning": "Quest townsfolk",
+      "requirement": "ART-01"
+    },
+    {
+      "role": "ghost",
+      "status": "supplied",
+      "path": "sp/assets/characters/ghost.atlastex",
+      "meaning": "Grove ghost",
+      "requirement": "ART-01"
+    },
+    {
+      "role": "terrain",
+      "status": "supplied",
+      "path": "sp/assets/terrain/town_tilemap.png",
+      "meaning": "Forest and buildings",
+      "requirement": "ART-01"
+    },
+    {
+      "role": "interior",
+      "status": "supplied",
+      "path": "sp/assets/terrain/dungeon_tilemap.png",
+      "meaning": "House interior tiles",
+      "requirement": "ART-01"
+    },
+    {
+      "role": "arena",
+      "status": "supplied",
+      "path": "sp/assets/arenas/steppes.png",
+      "meaning": "Battle background",
+      "requirement": "ART-01"
+    },
+    {
+      "role": "baloo",
+      "status": "supplied",
+      "path": "sp/battlers/bear/bear.png",
+      "meaning": "Baloo battle sheet",
+      "requirement": "ART-01"
+    },
+    {
+      "role": "nutsy",
+      "status": "supplied",
+      "path": "sp/battlers/squirrel/squirrel.png",
+      "meaning": "Nutsy battle sheet",
+      "requirement": "ART-01"
+    },
+    {
+      "role": "bugcat",
+      "status": "supplied",
+      "path": "sp/battlers/bugcat/bugcat.png",
+      "meaning": "First encounter sheet",
+      "requirement": "ART-01"
+    },
+    {
+      "role": "wolf",
+      "status": "supplied",
+      "path": "sp/battlers/wolf/wolf.png",
+      "meaning": "Second encounter sheet",
+      "requirement": "ART-01"
+    },
+    {
+      "role": "coin",
+      "status": "supplied",
+      "path": "sp/assets/items/coin.atlastex",
+      "meaning": "Coin icon",
+      "requirement": "ART-01"
+    },
+    {
+      "role": "key",
+      "status": "supplied",
+      "path": "sp/assets/items/key.atlastex",
+      "meaning": "Key icon",
+      "requirement": "ART-01"
+    },
+    {
+      "role": "bomb",
+      "status": "supplied",
+      "path": "sp/assets/items/bomb.atlastex",
+      "meaning": "Bomb icon",
+      "requirement": "ART-01"
+    },
+    {
+      "role": "wand_red",
+      "status": "supplied",
+      "path": "sp/assets/items/wand_red.atlastex",
+      "meaning": "Red wand icon",
+      "requirement": "ART-01"
+    },
+    {
+      "role": "wand_blue",
+      "status": "supplied",
+      "path": "sp/assets/items/wand_blue.atlastex",
+      "meaning": "Blue wand icon",
+      "requirement": "ART-01"
+    },
+    {
+      "role": "wand_green",
+      "status": "supplied",
+      "path": "sp/assets/items/wand_green.atlastex",
+      "meaning": "Green wand icon",
+      "requirement": "ART-01"
+    },
+    {
+      "role": "pedestals",
+      "status": "procedural",
+      "meaning": "Color-coded pedestal markers",
+      "note": "Use supplied tiles/textures where useful; code-drawn equivalents allowed by ART-01."
+    },
+    {
+      "role": "route_gate",
+      "status": "procedural",
+      "meaning": "Blocked/open route indication",
+      "note": "Use supplied tiles/textures where useful; code-drawn equivalents allowed by ART-01."
+    },
+    {
+      "role": "quest_markers",
+      "status": "procedural",
+      "meaning": "Optional NPC goal markers",
+      "note": "Use supplied tiles/textures where useful; code-drawn equivalents allowed by ART-01."
+    },
+    {
+      "role": "menus",
+      "status": "procedural",
+      "meaning": "UI arrangement, labels, bars, selection outlines",
+      "note": "Use supplied tiles/textures where useful; code-drawn equivalents allowed by ART-01."
+    },
+    {
+      "role": "effects",
+      "status": "procedural",
+      "meaning": "Damage/heal and invalid-action feedback",
+      "note": "Use supplied tiles/textures where useful; code-drawn equivalents allowed by ART-01."
+    }
+  ],
+  "missing_roles": [],
+  "files": [
+    {
+      "path": "sp/assets/arenas/steppes.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        1920,
+        1080
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        1920,
+        1080
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/arenas/steppes.png.import"
+    },
+    {
+      "path": "sp/assets/characters/character_generic.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        72,
+        162
+      ],
+      "opaque_bounds": [
+        1,
+        2,
+        69,
+        159
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/characters/character_generic.png.import"
+    },
+    {
+      "path": "sp/assets/characters/character_visual.tscn",
+      "type": "PackedScene",
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/characters/default_animations/RESET.anim",
+      "type": "Animation",
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/characters/default_animations/idle_e.anim",
+      "type": "Animation",
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/characters/default_animations/idle_n.anim",
+      "type": "Animation",
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/characters/default_animations/idle_s.anim",
+      "type": "Animation",
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/characters/default_animations/idle_w.anim",
+      "type": "Animation",
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/characters/default_animations/run_e.anim",
+      "type": "Animation",
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/characters/default_animations/run_n.anim",
+      "type": "Animation",
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/characters/default_animations/run_s.anim",
+      "type": "Animation",
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/characters/default_animations/run_w.anim",
+      "type": "Animation",
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/characters/default_animations/standard_animations.res",
+      "type": "AnimationLibrary",
+      "dependencies": [
+        "uid://coj14ga1pv0gu::::res://assets/characters/default_animations/RESET.anim",
+        "uid://l1w56l8rtel::::res://assets/characters/default_animations/idle_e.anim",
+        "uid://cd0nmbhkpdvru::::res://assets/characters/default_animations/idle_n.anim",
+        "uid://7h5aqjcqvnso::::res://assets/characters/default_animations/idle_s.anim",
+        "uid://cg17f78q1jq2v::::res://assets/characters/default_animations/idle_w.anim",
+        "uid://1jo0acd33j8i::::res://assets/characters/default_animations/run_e.anim",
+        "uid://dyio153x1uoqq::::res://assets/characters/default_animations/run_n.anim",
+        "uid://c3wbd0y0a2vuw::::res://assets/characters/default_animations/run_s.anim",
+        "uid://bpmpnbkv2kqe3::::res://assets/characters/default_animations/run_w.anim"
+      ]
+    },
+    {
+      "path": "sp/assets/characters/generic.atlastex",
+      "type": "AtlasTexture",
+      "size": [
+        16,
+        16
+      ],
+      "atlas": "res://assets/characters/character_generic.png",
+      "region": [
+        1.0,
+        1.0,
+        16.0,
+        16.0
+      ],
+      "margin": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "opaque_bounds": [
+        0,
+        1,
+        16,
+        15
+      ],
+      "dependencies": [
+        "uid://doea2mk0aaedo::::res://assets/characters/character_generic.png"
+      ],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/characters/generic_character_gfx.tscn",
+      "type": "PackedScene",
+      "dependencies": [
+        "uid://caxhff6by5nqu::::res://src/field/gamepieces/animation/gamepiece_animation.tscn",
+        "uid://dmmjb8ambpwar::::res://assets/characters/default_animations/standard_animations.res",
+        "uid://doea2mk0aaedo::::res://assets/characters/character_generic.png"
+      ]
+    },
+    {
+      "path": "sp/assets/characters/ghost.atlastex",
+      "type": "AtlasTexture",
+      "size": [
+        16,
+        16
+      ],
+      "atlas": "res://assets/terrain/dungeon_tilemap.png",
+      "region": [
+        17.0,
+        170.0,
+        16.0,
+        16.0
+      ],
+      "margin": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "opaque_bounds": [
+        0,
+        1,
+        16,
+        15
+      ],
+      "dependencies": [
+        "uid://dm4h0uo6gjp22::::res://assets/terrain/dungeon_tilemap.png"
+      ],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/characters/ghost_gfx.tscn",
+      "type": "PackedScene",
+      "dependencies": [
+        "uid://caxhff6by5nqu::::res://src/field/gamepieces/animation/gamepiece_animation.tscn",
+        "uid://dopua6orsf0bs::::res://assets/characters/ghost.atlastex"
+      ]
+    },
+    {
+      "path": "sp/assets/characters/gobot.atlastex",
+      "type": "AtlasTexture",
+      "size": [
+        16,
+        16
+      ],
+      "atlas": "res://assets/characters/gobot_field.png",
+      "region": [
+        1.0,
+        1.0,
+        16.0,
+        16.0
+      ],
+      "margin": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "opaque_bounds": [
+        0,
+        2,
+        16,
+        14
+      ],
+      "dependencies": [
+        "uid://4ua1ohn2tllf::::res://assets/characters/gobot_field.png"
+      ],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/characters/gobot_field.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        72,
+        162
+      ],
+      "opaque_bounds": [
+        1,
+        3,
+        70,
+        158
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/characters/gobot_field.png.import"
+    },
+    {
+      "path": "sp/assets/characters/gobot_gfx.tscn",
+      "type": "PackedScene",
+      "dependencies": [
+        "uid://caxhff6by5nqu::::res://src/field/gamepieces/animation/gamepiece_animation.tscn",
+        "uid://dmmjb8ambpwar::::res://assets/characters/default_animations/standard_animations.res",
+        "uid://4ua1ohn2tllf::::res://assets/characters/gobot_field.png"
+      ]
+    },
+    {
+      "path": "sp/assets/characters/knight.atlastex",
+      "type": "AtlasTexture",
+      "size": [
+        16,
+        16
+      ],
+      "atlas": "res://assets/terrain/dungeon_tilemap.png",
+      "region": [
+        34.0,
+        136.0,
+        16.0,
+        16.0
+      ],
+      "margin": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "opaque_bounds": [
+        0,
+        1,
+        16,
+        15
+      ],
+      "dependencies": [
+        "uid://dm4h0uo6gjp22::::res://assets/terrain/dungeon_tilemap.png"
+      ],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/characters/knight_gfx.tscn",
+      "type": "PackedScene",
+      "dependencies": [
+        "uid://caxhff6by5nqu::::res://src/field/gamepieces/animation/gamepiece_animation.tscn",
+        "uid://ti2vhkpokeib::::res://assets/characters/knight.atlastex"
+      ]
+    },
+    {
+      "path": "sp/assets/characters/lady_gfx.tscn",
+      "type": "PackedScene",
+      "dependencies": [
+        "uid://caxhff6by5nqu::::res://src/field/gamepieces/animation/gamepiece_animation.tscn",
+        "res://assets/characters/generic.atlastex"
+      ]
+    },
+    {
+      "path": "sp/assets/characters/monk.atlastex",
+      "type": "AtlasTexture",
+      "size": [
+        16,
+        16
+      ],
+      "atlas": "res://assets/terrain/dungeon_tilemap.png",
+      "region": [
+        68.0,
+        153.0,
+        16.0,
+        16.0
+      ],
+      "margin": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "dependencies": [
+        "uid://dm4h0uo6gjp22::::res://assets/terrain/dungeon_tilemap.png"
+      ],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/characters/monk_gfx.tscn",
+      "type": "PackedScene",
+      "dependencies": [
+        "uid://caxhff6by5nqu::::res://src/field/gamepieces/animation/gamepiece_animation.tscn",
+        "uid://2kiqbt7c1s65::::res://assets/characters/monk.atlastex"
+      ]
+    },
+    {
+      "path": "sp/assets/characters/smith.atlastex",
+      "type": "AtlasTexture",
+      "size": [
+        16,
+        16
+      ],
+      "atlas": "res://assets/terrain/dungeon_tilemap.png",
+      "region": [
+        34.0,
+        119.0,
+        16.0,
+        16.0
+      ],
+      "margin": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "opaque_bounds": [
+        0,
+        1,
+        16,
+        15
+      ],
+      "dependencies": [
+        "uid://dm4h0uo6gjp22::::res://assets/terrain/dungeon_tilemap.png"
+      ],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/characters/smith_gfx.tscn",
+      "type": "PackedScene",
+      "dependencies": [
+        "uid://caxhff6by5nqu::::res://src/field/gamepieces/animation/gamepiece_animation.tscn",
+        "uid://b4py6kf410yhh::::res://assets/characters/smith.atlastex"
+      ]
+    },
+    {
+      "path": "sp/assets/characters/thief.atlastex",
+      "type": "AtlasTexture",
+      "size": [
+        16,
+        16
+      ],
+      "atlas": "res://assets/terrain/dungeon_tilemap.png",
+      "region": [
+        51.0,
+        136.0,
+        16.0,
+        16.0
+      ],
+      "margin": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "opaque_bounds": [
+        0,
+        1,
+        16,
+        15
+      ],
+      "dependencies": [
+        "uid://dm4h0uo6gjp22::::res://assets/terrain/dungeon_tilemap.png"
+      ],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/characters/wizard.atlastex",
+      "type": "AtlasTexture",
+      "size": [
+        16,
+        16
+      ],
+      "atlas": "res://assets/terrain/dungeon_tilemap.png",
+      "region": [
+        0.0,
+        119.0,
+        16.0,
+        16.0
+      ],
+      "margin": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "dependencies": [
+        "uid://dm4h0uo6gjp22::::res://assets/terrain/dungeon_tilemap.png"
+      ],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/characters/wizard_gfx.tscn",
+      "type": "PackedScene",
+      "dependencies": [
+        "uid://caxhff6by5nqu::::res://src/field/gamepieces/animation/gamepiece_animation.tscn",
+        "uid://8ry5inpldbfg::::res://assets/characters/wizard.atlastex"
+      ]
+    },
+    {
+      "path": "sp/assets/editor/icons/Contact.svg"
+    },
+    {
+      "path": "sp/assets/editor/icons/Contact.svg.import"
+    },
+    {
+      "path": "sp/assets/editor/icons/Cutscene.svg"
+    },
+    {
+      "path": "sp/assets/editor/icons/Cutscene.svg.import"
+    },
+    {
+      "path": "sp/assets/editor/icons/Gamepiece.svg"
+    },
+    {
+      "path": "sp/assets/editor/icons/Gamepiece.svg.import"
+    },
+    {
+      "path": "sp/assets/editor/icons/GamepieceAnimation.svg"
+    },
+    {
+      "path": "sp/assets/editor/icons/GamepieceAnimation.svg.import"
+    },
+    {
+      "path": "sp/assets/editor/icons/IconGamepieceController.svg"
+    },
+    {
+      "path": "sp/assets/editor/icons/IconGamepieceController.svg.import"
+    },
+    {
+      "path": "sp/assets/editor/icons/Interaction.svg"
+    },
+    {
+      "path": "sp/assets/editor/icons/Interaction.svg.import"
+    },
+    {
+      "path": "sp/assets/gui/combat/turn_bar_bg.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        1360,
+        22
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        1360,
+        22
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/gui/combat/turn_bar_bg.png.import"
+    },
+    {
+      "path": "sp/assets/gui/default.theme",
+      "type": "Theme",
+      "dependencies": [
+        "uid://cfhyd5hmym1s4::::res://assets/gui/font/Kenney Pixel.ttf"
+      ]
+    },
+    {
+      "path": "sp/assets/gui/emotes/emote__.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        16,
+        16
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/gui/emotes/emote__.png.import"
+    },
+    {
+      "path": "sp/assets/gui/emotes/emote_combat.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        16,
+        16
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/gui/emotes/emote_combat.png.import"
+    },
+    {
+      "path": "sp/assets/gui/emotes/emote_exclamations.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        16,
+        16
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/gui/emotes/emote_exclamations.png.import"
+    },
+    {
+      "path": "sp/assets/gui/emotes/emote_question.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        16,
+        16
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/gui/emotes/emote_question.png.import"
+    },
+    {
+      "path": "sp/assets/gui/font/Kenney Pixel.ttf",
+      "type": "FontFile",
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/gui/font/Kenney Pixel.ttf.import"
+    },
+    {
+      "path": "sp/assets/gui/font/SourceCodePro-Bold.ttf",
+      "type": "FontFile",
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/gui/font/SourceCodePro-Bold.ttf.import"
+    },
+    {
+      "path": "sp/assets/gui/icons/app_icon.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        64,
+        64
+      ],
+      "opaque_bounds": [
+        2,
+        14,
+        61,
+        45
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/gui/icons/app_icon.png.import"
+    },
+    {
+      "path": "sp/assets/gui/path_destination_marker.tres",
+      "type": "AtlasTexture",
+      "size": [
+        16,
+        16
+      ],
+      "atlas": "res://assets/terrain/dungeon_tilemap.png",
+      "region": [
+        0.0,
+        85.0,
+        16.0,
+        16.0
+      ],
+      "margin": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "opaque_bounds": [
+        1,
+        1,
+        14,
+        14
+      ],
+      "dependencies": [
+        "uid://dm4h0uo6gjp22::::res://assets/terrain/dungeon_tilemap.png"
+      ]
+    },
+    {
+      "path": "sp/assets/items/bomb.atlastex",
+      "type": "AtlasTexture",
+      "size": [
+        16,
+        16
+      ],
+      "atlas": "res://assets/terrain/town_tilemap.png",
+      "region": [
+        153.0,
+        136.0,
+        16.0,
+        16.0
+      ],
+      "margin": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "opaque_bounds": [
+        0,
+        1,
+        16,
+        15
+      ],
+      "dependencies": [
+        "uid://d2qfi5sncf72b::::res://assets/terrain/town_tilemap.png"
+      ],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/items/coin.atlastex",
+      "type": "AtlasTexture",
+      "size": [
+        16,
+        16
+      ],
+      "atlas": "res://assets/terrain/town_tilemap.png",
+      "region": [
+        153.0,
+        119.0,
+        16.0,
+        16.0
+      ],
+      "margin": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "opaque_bounds": [
+        3,
+        2,
+        10,
+        12
+      ],
+      "dependencies": [
+        "uid://d2qfi5sncf72b::::res://assets/terrain/town_tilemap.png"
+      ],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/items/key.atlastex",
+      "type": "AtlasTexture",
+      "size": [
+        16,
+        16
+      ],
+      "atlas": "res://assets/terrain/town_tilemap.png",
+      "region": [
+        153.0,
+        153.0,
+        16.0,
+        16.0
+      ],
+      "margin": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "opaque_bounds": [
+        0,
+        2,
+        16,
+        12
+      ],
+      "dependencies": [
+        "uid://d2qfi5sncf72b::::res://assets/terrain/town_tilemap.png"
+      ],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/items/wand_blue.atlastex",
+      "type": "AtlasTexture",
+      "size": [
+        16,
+        16
+      ],
+      "atlas": "res://assets/terrain/dungeon_tilemap.png",
+      "region": [
+        136.0,
+        170.0,
+        16.0,
+        16.0
+      ],
+      "margin": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "opaque_bounds": [
+        4,
+        2,
+        8,
+        13
+      ],
+      "dependencies": [
+        "uid://dm4h0uo6gjp22::::res://assets/terrain/dungeon_tilemap.png"
+      ],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/items/wand_green.atlastex",
+      "type": "AtlasTexture",
+      "size": [
+        16,
+        16
+      ],
+      "atlas": "res://assets/terrain/dungeon_tilemap.png",
+      "region": [
+        102.0,
+        170.0,
+        16.0,
+        16.0
+      ],
+      "margin": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "opaque_bounds": [
+        4,
+        2,
+        8,
+        13
+      ],
+      "dependencies": [
+        "uid://dm4h0uo6gjp22::::res://assets/terrain/dungeon_tilemap.png"
+      ],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/items/wand_red.atlastex",
+      "type": "AtlasTexture",
+      "size": [
+        16,
+        16
+      ],
+      "atlas": "res://assets/terrain/dungeon_tilemap.png",
+      "region": [
+        119.0,
+        170.0,
+        16.0,
+        16.0
+      ],
+      "margin": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "opaque_bounds": [
+        4,
+        2,
+        8,
+        13
+      ],
+      "dependencies": [
+        "uid://dm4h0uo6gjp22::::res://assets/terrain/dungeon_tilemap.png"
+      ],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/music/Apple Cider.mp3",
+      "type": "AudioStreamMP3",
+      "seconds": 105.629112243652,
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/music/Apple Cider.mp3.import"
+    },
+    {
+      "path": "sp/assets/music/Insect Factory.mp3",
+      "type": "AudioStreamMP3",
+      "seconds": 135.92919921875,
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/music/Insect Factory.mp3.import"
+    },
+    {
+      "path": "sp/assets/music/squashin_bugs_fixed.mp3",
+      "type": "AudioStreamMP3",
+      "seconds": 57.9353523254395,
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/music/squashin_bugs_fixed.mp3.import"
+    },
+    {
+      "path": "sp/assets/music/the_fun_run.mp3",
+      "type": "AudioStreamMP3",
+      "seconds": 72.0178527832031,
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/music/the_fun_run.mp3.import"
+    },
+    {
+      "path": "sp/assets/sfx/chop.ogg",
+      "type": "AudioStreamOggVorbis",
+      "seconds": 0.240250006318092,
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/sfx/chop.ogg.import"
+    },
+    {
+      "path": "sp/assets/sfx/confirmation_002.ogg",
+      "type": "AudioStreamOggVorbis",
+      "seconds": 0.539002239704132,
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/sfx/confirmation_002.ogg.import"
+    },
+    {
+      "path": "sp/assets/sfx/doorClose_1.ogg",
+      "type": "AudioStreamOggVorbis",
+      "seconds": 0.675041675567627,
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/sfx/doorClose_1.ogg.import"
+    },
+    {
+      "path": "sp/assets/sfx/doorClose_4.ogg",
+      "type": "AudioStreamOggVorbis",
+      "seconds": 0.603375017642975,
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/sfx/doorClose_4.ogg.import"
+    },
+    {
+      "path": "sp/assets/sfx/doorOpen_2.ogg",
+      "type": "AudioStreamOggVorbis",
+      "seconds": 1.41331255435944,
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/sfx/doorOpen_2.ogg.import"
+    },
+    {
+      "path": "sp/assets/sfx/drop_002.ogg",
+      "type": "AudioStreamOggVorbis",
+      "seconds": 0.191088438034058,
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/sfx/drop_002.ogg.import"
+    },
+    {
+      "path": "sp/assets/sfx/error_006.ogg",
+      "type": "AudioStreamOggVorbis",
+      "seconds": 0.500045359134674,
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/sfx/error_006.ogg.import"
+    },
+    {
+      "path": "sp/assets/sfx/impactWood_light_002.ogg",
+      "type": "AudioStreamOggVorbis",
+      "seconds": 0.265600919723511,
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/sfx/impactWood_light_002.ogg.import"
+    },
+    {
+      "path": "sp/assets/sfx/impactWood_light_003.ogg",
+      "type": "AudioStreamOggVorbis",
+      "seconds": 0.265600919723511,
+      "dependencies": []
+    },
+    {
+      "path": "sp/assets/sfx/impactWood_light_003.ogg.import"
+    },
+    {
+      "path": "sp/assets/terrain/dungeon_tilemap.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        203,
+        186
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        203,
+        186
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/terrain/dungeon_tilemap.png.import"
+    },
+    {
+      "path": "sp/assets/terrain/tilesets/kenney_obstacles.tres",
+      "type": "TileSet",
+      "tile_size": [
+        16,
+        16
+      ],
+      "dependencies": [
+        "uid://d2qfi5sncf72b::::res://assets/terrain/town_tilemap.png",
+        "uid://dm4h0uo6gjp22::::res://assets/terrain/dungeon_tilemap.png"
+      ]
+    },
+    {
+      "path": "sp/assets/terrain/tilesets/kenney_terrain.tres",
+      "type": "TileSet",
+      "tile_size": [
+        16,
+        16
+      ],
+      "dependencies": [
+        "uid://d2qfi5sncf72b::::res://assets/terrain/town_tilemap.png"
+      ]
+    },
+    {
+      "path": "sp/assets/terrain/town_tilemap.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        203,
+        186
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        203,
+        186
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/assets/terrain/town_tilemap.png.import"
+    },
+    {
+      "path": "sp/battlers/bear/bear.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        418,
+        370
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        418,
+        370
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/battlers/bear/bear.png.import"
+    },
+    {
+      "path": "sp/battlers/bear/bear_anim.tscn",
+      "type": "PackedScene",
+      "dependencies": [
+        "uid://badexg85lctrq::::res://src/combat/battlers/battler_anim.tscn",
+        "uid://pkp6t20skjpe::::res://battlers/bear/bear.png",
+        "uid://o2ktahx2nkki::::res://battlers/default_battler_animations.res"
+      ]
+    },
+    {
+      "path": "sp/battlers/bear/icon_punch.svg"
+    },
+    {
+      "path": "sp/battlers/bear/icon_punch.svg.import"
+    },
+    {
+      "path": "sp/battlers/bear/icon_raise.svg"
+    },
+    {
+      "path": "sp/battlers/bear/icon_raise.svg.import"
+    },
+    {
+      "path": "sp/battlers/bugcat/bugcat.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        241,
+        326
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        241,
+        326
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/battlers/bugcat/bugcat.png.import"
+    },
+    {
+      "path": "sp/battlers/bugcat/bugcat_anim.tscn",
+      "type": "PackedScene",
+      "dependencies": [
+        "uid://badexg85lctrq::::res://src/combat/battlers/battler_anim.tscn",
+        "uid://e4b6flk7roy3::::res://battlers/bugcat/bugcat.png"
+      ]
+    },
+    {
+      "path": "sp/battlers/default_battler_animations.res",
+      "type": "AnimationLibrary",
+      "dependencies": []
+    },
+    {
+      "path": "sp/battlers/squirrel/icon_arrows.svg"
+    },
+    {
+      "path": "sp/battlers/squirrel/icon_arrows.svg.import"
+    },
+    {
+      "path": "sp/battlers/squirrel/icon_first_aid.svg"
+    },
+    {
+      "path": "sp/battlers/squirrel/icon_first_aid.svg.import"
+    },
+    {
+      "path": "sp/battlers/squirrel/squirrel.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        343,
+        302
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        343,
+        302
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/battlers/squirrel/squirrel.png.import"
+    },
+    {
+      "path": "sp/battlers/squirrel/squirrel_anim.tscn",
+      "type": "PackedScene",
+      "dependencies": [
+        "uid://badexg85lctrq::::res://src/combat/battlers/battler_anim.tscn",
+        "uid://cbgfjvlm8kx4k::::res://battlers/squirrel/squirrel.png"
+      ]
+    },
+    {
+      "path": "sp/battlers/wolf/wolf.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        422,
+        470
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        422,
+        470
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/battlers/wolf/wolf.png.import"
+    },
+    {
+      "path": "sp/battlers/wolf/wolf_anim.tscn",
+      "type": "PackedScene",
+      "dependencies": [
+        "uid://badexg85lctrq::::res://src/combat/battlers/battler_anim.tscn",
+        "uid://dr8cs6liv45hd::::res://battlers/wolf/wolf.png",
+        "uid://o2ktahx2nkki::::res://battlers/default_battler_animations.res"
+      ]
+    },
+    {
+      "path": "sp/src/combat/ui/action_menu/action_description_background.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        868,
+        96
+      ],
+      "opaque_bounds": [
+        1,
+        0,
+        866,
+        96
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/src/combat/ui/action_menu/action_description_background.png.import"
+    },
+    {
+      "path": "sp/src/combat/ui/action_menu/menu_action_bg.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        334,
+        96
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        334,
+        96
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/src/combat/ui/action_menu/menu_action_bg.png.import"
+    },
+    {
+      "path": "sp/src/combat/ui/action_menu/menu_action_bg_disabled.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        334,
+        96
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        334,
+        96
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/src/combat/ui/action_menu/menu_action_bg_disabled.png.import"
+    },
+    {
+      "path": "sp/src/combat/ui/action_menu/menu_action_bg_focused.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        334,
+        96
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        334,
+        96
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/src/combat/ui/action_menu/menu_action_bg_focused.png.import"
+    },
+    {
+      "path": "sp/src/combat/ui/action_menu/menu_action_bg_pressed.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        334,
+        96
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        334,
+        96
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/src/combat/ui/action_menu/menu_action_bg_pressed.png.import"
+    },
+    {
+      "path": "sp/src/combat/ui/action_menu/menu_selection_arrow.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        134,
+        88
+      ],
+      "opaque_bounds": [
+        9,
+        5,
+        116,
+        79
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/src/combat/ui/action_menu/menu_selection_arrow.png.import"
+    },
+    {
+      "path": "sp/src/combat/ui/battler_entry/battler_hud_background.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        434,
+        152
+      ],
+      "opaque_bounds": [
+        1,
+        0,
+        433,
+        152
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/src/combat/ui/battler_entry/battler_hud_background.png.import"
+    },
+    {
+      "path": "sp/src/combat/ui/battler_entry/energy_point_bg.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        30,
+        29
+      ],
+      "opaque_bounds": [
+        0,
+        0,
+        30,
+        29
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/src/combat/ui/battler_entry/energy_point_bg.png.import"
+    },
+    {
+      "path": "sp/src/combat/ui/battler_entry/energy_point_fill.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        36,
+        35
+      ],
+      "opaque_bounds": [
+        3,
+        2,
+        30,
+        33
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/src/combat/ui/battler_entry/energy_point_fill.png.import"
+    },
+    {
+      "path": "sp/src/combat/ui/battler_entry/life_bar_bg.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        326,
+        21
+      ],
+      "opaque_bounds": [
+        0,
+        1,
+        325,
+        20
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/src/combat/ui/battler_entry/life_bar_bg.png.import"
+    },
+    {
+      "path": "sp/src/combat/ui/battler_entry/life_bar_fill.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        326,
+        21
+      ],
+      "opaque_bounds": [
+        2,
+        4,
+        321,
+        13
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/src/combat/ui/battler_entry/life_bar_fill.png.import"
+    },
+    {
+      "path": "sp/src/combat/ui/turn_bar/portrait_bg_ally.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        132,
+        136
+      ],
+      "opaque_bounds": [
+        9,
+        10,
+        114,
+        119
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/src/combat/ui/turn_bar/portrait_bg_ally.png.import"
+    },
+    {
+      "path": "sp/src/combat/ui/turn_bar/portrait_bg_enemy.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        132,
+        136
+      ],
+      "opaque_bounds": [
+        9,
+        10,
+        114,
+        119
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/src/combat/ui/turn_bar/portrait_bg_enemy.png.import"
+    },
+    {
+      "path": "sp/src/combat/ui/turn_bar/portrait_bg_player.png",
+      "type": "CompressedTexture2D",
+      "size": [
+        132,
+        136
+      ],
+      "opaque_bounds": [
+        9,
+        10,
+        114,
+        119
+      ],
+      "dependencies": [],
+      "filter": "nearest; preserve pixel aspect ratio"
+    },
+    {
+      "path": "sp/src/combat/ui/turn_bar/portrait_bg_player.png.import"
+    },
+    {
+      "path": "sp/src/combat/ui/ui_combat.theme",
+      "type": "Theme",
+      "dependencies": [
+        "uid://d12hnvq203mdg::::res://assets/gui/font/SourceCodePro-Bold.ttf"
+      ]
+    },
+    {
+      "path": "sp/src/field/gamepieces/animation/gamepiece_animation.tscn",
+      "type": "PackedScene",
+      "dependencies": []
+    }
+  ]
+}

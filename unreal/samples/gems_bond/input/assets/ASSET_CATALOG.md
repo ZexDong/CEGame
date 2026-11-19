@@ -1,0 +1,262 @@
+# Asset catalog
+
+Exact package/object paths, hashes, license notices and dependencies are in assets/ASSET_CATALOG.json.
+These are separate presentation pieces. No map, gameplay Blueprint, animation state machine, wave data asset,
+placement controller, economy implementation or result UI is included. Required use is defined only in GDD Section 6.
+All runtime visual art is already in starter-project/Content/. Structures, animated species, environment categories and the specified HUD assets require visible use.
+Individual required flags do not require every alternate clip or decorative variant; group selection follows the GDD.
+Import file paths are not included; native packages remain editable. Engine dependencies resolve from the installed engine.
+
+| Asset | Class | Exact relative path | Role / requirement | License |
+| --- | --- | --- | --- | --- |
+| asset-001 | ObjectRedirector | `starter-project/Content/Characters/Humans/Common/BodyParts_AO.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-002 | ObjectRedirector | `starter-project/Content/Characters/Humans/Common/BodyParts_MetallicSmoothness.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-003 | ObjectRedirector | `starter-project/Content/Characters/Humans/Common/BodyParts_Normal.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-004 | ObjectRedirector | `starter-project/Content/Characters/Monsters/Common/Albedo.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-005 | ObjectRedirector | `starter-project/Content/Characters/Monsters/Common/AlbedoMaskTint.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-006 | ObjectRedirector | `starter-project/Content/Characters/Monsters/Common/MaskPBR.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-007 | ObjectRedirector | `starter-project/Content/Characters/Monsters/Common/SAM.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-008 | Texture2D | `starter-project/Content/Resources/Arrow.uasset` | ui_and_feedback; UI-01, VISUAL-04 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-009 | FontFace | `starter-project/Content/Resources/Baloo-Regular.uasset` | ui_and_feedback; UI-01 | `assets/legal/BALOO_OFL.txt` |
+| asset-010 | Font | `starter-project/Content/Resources/Baloo-Regular_Font.uasset` | ui_and_feedback; UI-01 | `assets/legal/BALOO_OFL.txt` |
+| asset-011 | Texture2D | `starter-project/Content/Resources/Buildings/ArcherTower.uasset` | ui_and_feedback; UI-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-012 | StaticMesh | `starter-project/Content/Resources/Buildings/Arrow.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-013 | Material | `starter-project/Content/Resources/Buildings/Base.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-014 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_ArcherTower_Lvl_1.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-015 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_ArcherTower_Lvl_2.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-016 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_ArcherTower_Lvl_3.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-017 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_Ballista.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-018 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_Ballista_Lvl2.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-019 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_Ballista_Lvl3.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-020 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_Cannon.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-021 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_CannonTower_Lvl_1.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-022 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_CannonTower_Lvl_2.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-023 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_CannonTower_Lvl_3.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-024 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_Cannon_Lvl2.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-025 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_Cannon_Lvl3.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-026 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_Crystal.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-027 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_CrystalHolder.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-028 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_GoldMine.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-029 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_GoldMineBuilt.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-030 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_Wall_All.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-031 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_Wall_All_Side.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-032 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_Wall_Corner.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-033 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_Wall_One_Side.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-034 | StaticMesh | `starter-project/Content/Resources/Buildings/Buildings_Wall_Two_Side.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-035 | Material | `starter-project/Content/Resources/Buildings/Cannon.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-036 | Texture2D | `starter-project/Content/Resources/Buildings/CannonTower.uasset` | ui_and_feedback; UI-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-037 | Texture2D | `starter-project/Content/Resources/Buildings/ColorPalette.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-038 | Material | `starter-project/Content/Resources/Buildings/Crystal.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-039 | StaticMesh | `starter-project/Content/Resources/Buildings/Cursor.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-040 | Material | `starter-project/Content/Resources/Buildings/CursorMaterial.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-041 | Material | `starter-project/Content/Resources/Buildings/CursorMaterialRed.uasset` | structure_models_and_dependencies; VISUAL-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-042 | Texture2D | `starter-project/Content/Resources/Buildings/GoldMine.uasset` | ui_and_feedback; UI-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-043 | Texture2D | `starter-project/Content/Resources/Buildings/Wall.uasset` | ui_and_feedback; UI-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-044 | Texture2D | `starter-project/Content/Resources/Characters/Humans/Common/BodyParts_AO.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-045 | Texture2D | `starter-project/Content/Resources/Characters/Humans/Common/BodyParts_MetallicSmoothness.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-046 | Texture2D | `starter-project/Content/Resources/Characters/Humans/Common/BodyParts_Normal.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-047 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Bat/Animations/Attack01_Bat_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-048 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Bat/Animations/Attack02_Bat_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-049 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Bat/Animations/Die_Bat_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-050 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Bat/Animations/Dizzy_Bat_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-051 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Bat/Animations/FlyBWD_Bat_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-052 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Bat/Animations/FlyFWD_Bat_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-053 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Bat/Animations/FlyLeft_Bat_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-054 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Bat/Animations/FlyRight_Bat_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-055 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Bat/Animations/GetHit_Bat_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-056 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Bat/Animations/IdleBattle_Bat_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-057 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Bat/Animations/IdleNormal_Bat_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-058 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Bat/Animations/SenseSomethingRPT_Bat_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-059 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Bat/Animations/SenseSomethingST_Bat_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-060 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Bat/Animations/Taunting_Bat_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-061 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Bat/Animations/Victory_Bat_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-062 | SkeletalMesh | `starter-project/Content/Resources/Characters/Monsters/Bat/BatMesh.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-063 | PhysicsAsset | `starter-project/Content/Resources/Characters/Monsters/Bat/BatMesh_PhysicsAsset.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-064 | Skeleton | `starter-project/Content/Resources/Characters/Monsters/Bat/BatMesh_Skeleton.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-065 | Texture2D | `starter-project/Content/Resources/Characters/Monsters/Common/Albedo.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-066 | Texture2D | `starter-project/Content/Resources/Characters/Monsters/Common/AlbedoMaskTint.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-067 | MaterialInstanceConstant | `starter-project/Content/Resources/Characters/Monsters/Common/Default_Monster.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-068 | MaterialInstanceConstant | `starter-project/Content/Resources/Characters/Monsters/Common/MI_Bat1.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-069 | MaterialInstanceConstant | `starter-project/Content/Resources/Characters/Monsters/Common/MI_Bat2.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-070 | MaterialInstanceConstant | `starter-project/Content/Resources/Characters/Monsters/Common/MI_Dragon1.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-071 | MaterialInstanceConstant | `starter-project/Content/Resources/Characters/Monsters/Common/MI_Dragon2.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-072 | MaterialInstanceConstant | `starter-project/Content/Resources/Characters/Monsters/Common/MI_Orc1.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-073 | MaterialInstanceConstant | `starter-project/Content/Resources/Characters/Monsters/Common/MI_Orc2.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-074 | MaterialInstanceConstant | `starter-project/Content/Resources/Characters/Monsters/Common/MI_Skeleton1.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-075 | MaterialInstanceConstant | `starter-project/Content/Resources/Characters/Monsters/Common/MI_Skeleton2.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-076 | MaterialInstanceConstant | `starter-project/Content/Resources/Characters/Monsters/Common/MI_Skeleton3.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-077 | MaterialInstanceConstant | `starter-project/Content/Resources/Characters/Monsters/Common/MI_Slime1.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-078 | MaterialInstanceConstant | `starter-project/Content/Resources/Characters/Monsters/Common/MI_Slime2.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-079 | Texture2D | `starter-project/Content/Resources/Characters/Monsters/Common/MaskPBR.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-080 | Texture2D | `starter-project/Content/Resources/Characters/Monsters/Common/SAM.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-081 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/Attack01_Dragon_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-082 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/Attack02_Dragon_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-083 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/Die_Dragon_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-084 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/Dizzy_Dragon_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-085 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/FlyBackward_Dragon_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-086 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/FlyForward_Dragon_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-087 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/FlyLeft_Dragon_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-088 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/FlyRight_Dragon_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-089 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/GetHit_Dragon_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-090 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/IdleBattle_Dragon_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-091 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/IdleNormal_Dragon_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-092 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/SenseSomethingRPT_Dragon_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-093 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/SenseSomethingST_Dragon_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-094 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/Taunting_Dragon_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-095 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Dragon/Animations/Victory_Dragon_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-096 | SkeletalMesh | `starter-project/Content/Resources/Characters/Monsters/Dragon/DragonMesh.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-097 | PhysicsAsset | `starter-project/Content/Resources/Characters/Monsters/Dragon/DragonMesh_PhysicsAsset.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-098 | Skeleton | `starter-project/Content/Resources/Characters/Monsters/Dragon/DragonMesh_Skeleton.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-099 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Orc/Animations/Attack01_Orc_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-100 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Orc/Animations/Attack02_Orc_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-101 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Orc/Animations/Die_Orc_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-102 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Orc/Animations/Dizzy_Orc_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-103 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Orc/Animations/GetHit_Orc_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-104 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Orc/Animations/IdleBattle_Orc_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-105 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Orc/Animations/IdleNormal_Orc_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-106 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Orc/Animations/RunFWD_Orc_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-107 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Orc/Animations/SenseSomethingRPT_Orc_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-108 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Orc/Animations/SenseSomethingST_Orc_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-109 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Orc/Animations/Taunting_Orc_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-110 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Orc/Animations/Victory_Orc_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-111 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Orc/Animations/WalkBWD_Orc_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-112 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Orc/Animations/WalkFWD_Orc_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-113 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Orc/Animations/WalkLeft_Orc_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-114 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Orc/Animations/WalkRight_Orc_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-115 | SkeletalMesh | `starter-project/Content/Resources/Characters/Monsters/Orc/OrcMesh.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-116 | PhysicsAsset | `starter-project/Content/Resources/Characters/Monsters/Orc/OrcMesh_PhysicsAsset.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-117 | Skeleton | `starter-project/Content/Resources/Characters/Monsters/Orc/OrcMesh_Skeleton.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-118 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/Attack01_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-119 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/Attack02_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-120 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/DefenseGetHit_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-121 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/Defense_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-122 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/Die_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-123 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/Dizzy_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-124 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/GetHit_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-125 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/IdleBattle_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-126 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/IdleNormal_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-127 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/Run_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-128 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/SenseSomethingRT_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-129 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/SenseSomethingST_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-130 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/SentryWalkFront_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-131 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/Taunting_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-132 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/Victory_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-133 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/WalkBack_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-134 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/WalkFront_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-135 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/WalkLeft_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-136 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Skeleton/Animations/WalkRight_Skeleton_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-137 | SkeletalMesh | `starter-project/Content/Resources/Characters/Monsters/Skeleton/SkeletonMesh.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-138 | PhysicsAsset | `starter-project/Content/Resources/Characters/Monsters/Skeleton/SkeletonMesh_PhysicsAsset.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-139 | Skeleton | `starter-project/Content/Resources/Characters/Monsters/Skeleton/SkeletonMesh_Skeleton.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-140 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Slime/Animations/Attack01_Slime_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-141 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Slime/Animations/Attack02_Slime_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-142 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Slime/Animations/Die_Slime_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-143 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Slime/Animations/Dizzy_Slime_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-144 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Slime/Animations/GetHit_Slime_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-145 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Slime/Animations/IdleBattle_Slime_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-146 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Slime/Animations/IdleNormal_Slime_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-147 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Slime/Animations/Run_Slime_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-148 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Slime/Animations/SenseSomethingRoutine_Slime_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-149 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Slime/Animations/SenseSomethingStart_Slime_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-150 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Slime/Animations/Taunt_Slime_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-151 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Slime/Animations/Victory_Slime_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-152 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Slime/Animations/WalkBack_Slime_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-153 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Slime/Animations/WalkLeft_Slime_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-154 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Slime/Animations/WalkRight_Slime_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-155 | AnimSequence | `starter-project/Content/Resources/Characters/Monsters/Slime/Animations/Walk_Slime_Anim.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-156 | SkeletalMesh | `starter-project/Content/Resources/Characters/Monsters/Slime/SlimeMesh.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-157 | PhysicsAsset | `starter-project/Content/Resources/Characters/Monsters/Slime/SlimeMesh_PhysicsAsset.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-158 | Skeleton | `starter-project/Content/Resources/Characters/Monsters/Slime/SlimeMesh_Skeleton.uasset` | enemy_animation_and_dependencies; VISUAL-02 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-159 | Material | `starter-project/Content/Resources/Environment/Material/Plant.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-160 | Material | `starter-project/Content/Resources/Environment/Material/Rock_Wall.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-161 | Material | `starter-project/Content/Resources/Environment/Material/Stone.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-162 | Material | `starter-project/Content/Resources/Environment/Material/Village_Plant.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-163 | Material | `starter-project/Content/Resources/Environment/Material/Wood_Beam.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-164 | Material | `starter-project/Content/Resources/Environment/Material/Wood_Beam_3.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-165 | Material | `starter-project/Content/Resources/Environment/Material/Wood_Detail.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-166 | Material | `starter-project/Content/Resources/Environment/Material/Wood_Planks_5.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-167 | StaticMesh | `starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_bud_v1_01.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-168 | StaticMesh | `starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_bush_v1_01.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-169 | StaticMesh | `starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_bush_v1_04.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-170 | StaticMesh | `starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_bush_v2_02.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-171 | StaticMesh | `starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_bush_v2_03.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-172 | StaticMesh | `starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_bush_v2_04.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-173 | StaticMesh | `starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_bush_v2_05.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-174 | StaticMesh | `starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_bush_v3_01.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-175 | StaticMesh | `starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_flower_v1_01.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-176 | StaticMesh | `starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_flower_v1_02.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-177 | StaticMesh | `starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_PLANT_leaf_village.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-178 | StaticMesh | `starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_TREE_village_SM_ENV_TREE_village_LOD0.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-179 | StaticMesh | `starter-project/Content/Resources/Environment/Mesh/plants/SM_ENV_TREE_village_SM_ENV_TREE_village_LOD2.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-180 | StaticMesh | `starter-project/Content/Resources/Environment/Mesh/props/SM_PROP_fence_v03_02_SM_PROP_fence_v03_02.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-181 | StaticMesh | `starter-project/Content/Resources/Environment/Mesh/props/SM_PROP_fence_v03_03_SM_PROP_fence_v03_03.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-182 | StaticMesh | `starter-project/Content/Resources/Environment/Mesh/props/SM_PROP_wall_stone_small_03_SM_PROP_wall_stone_small_03.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-183 | StaticMesh | `starter-project/Content/Resources/Environment/Mesh/stones/SM_ENV_stone_06_SM_ENV_stone_06_LOD0.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-184 | LandscapeLayerInfoObject | `starter-project/Content/Resources/Environment/Terrain/Dirt_LayerInfo.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-185 | LandscapeLayerInfoObject | `starter-project/Content/Resources/Environment/Terrain/Farmland_LayerInfo.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-186 | FoliageType_InstancedStaticMesh | `starter-project/Content/Resources/Environment/Terrain/Foliage/Bush.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-187 | FoliageType_InstancedStaticMesh | `starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_10.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-188 | FoliageType_InstancedStaticMesh | `starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_2.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-189 | FoliageType_InstancedStaticMesh | `starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_3.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-190 | FoliageType_InstancedStaticMesh | `starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_4.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-191 | FoliageType_InstancedStaticMesh | `starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_5.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-192 | FoliageType_InstancedStaticMesh | `starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_6.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-193 | FoliageType_InstancedStaticMesh | `starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_7.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-194 | FoliageType_InstancedStaticMesh | `starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_8.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-195 | FoliageType_InstancedStaticMesh | `starter-project/Content/Resources/Environment/Terrain/Foliage/Bush_9.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-196 | FoliageType_InstancedStaticMesh | `starter-project/Content/Resources/Environment/Terrain/Foliage/Plant.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-197 | FoliageType_InstancedStaticMesh | `starter-project/Content/Resources/Environment/Terrain/Foliage/Rock.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-198 | FoliageType_InstancedStaticMesh | `starter-project/Content/Resources/Environment/Terrain/Foliage/Tree.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-199 | FoliageType_InstancedStaticMesh | `starter-project/Content/Resources/Environment/Terrain/Foliage/Tree_2.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-200 | LandscapeGrassType | `starter-project/Content/Resources/Environment/Terrain/Foliage/VillageGrass.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-201 | LandscapeLayerInfoObject | `starter-project/Content/Resources/Environment/Terrain/Grass_2_LayerInfo.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-202 | LandscapeLayerInfoObject | `starter-project/Content/Resources/Environment/Terrain/Grass_LayerInfo.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-203 | LandscapeLayerInfoObject | `starter-project/Content/Resources/Environment/Terrain/Gravel_LayerInfo.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-204 | LandscapeLayerInfoObject | `starter-project/Content/Resources/Environment/Terrain/Leaves_LayerInfo.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-205 | LandscapeLayerInfoObject | `starter-project/Content/Resources/Environment/Terrain/PavingStone_LayerInfo.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-206 | LandscapeLayerInfoObject | `starter-project/Content/Resources/Environment/Terrain/Sand_LayerInfo.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-207 | LandscapeLayerInfoObject | `starter-project/Content/Resources/Environment/Terrain/Stone_LayerInfo.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-208 | Material | `starter-project/Content/Resources/Environment/Terrain/Terrain_Material.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-209 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_dirt_BC.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-210 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_dirt_N.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-211 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_grass_01_BC.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-212 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_grass_02_BC.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-213 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_grass_N.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-214 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_gravel_BC.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-215 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_gravel_N.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-216 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_leaves_BC.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-217 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_leaves_N.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-218 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_sand_BC.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-219 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_ENV_TERRAIN_sand_N.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-220 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_ENV_farmfield_BC.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-221 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_ENV_farmfield_N.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-222 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_ENV_pavingstone_01_BC.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-223 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_ENV_pavingstone_01_N.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-224 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_ENV_plants_village_BC.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-225 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_ENV_stone_BC_.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-226 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_plants_BC.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-227 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_stonebrick_02.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-228 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_wood_03_BC.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-229 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_wood_06_BC.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-230 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_wood_detail_01_BC.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-231 | Texture2D | `starter-project/Content/Resources/Environment/Textures/T_wood_planks_05_BC.uasset` | forest_environment; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-232 | Texture2D | `starter-project/Content/Resources/Icon-ArrowUpgrade.uasset` | ui_and_feedback; UI-01, VISUAL-04 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-233 | Texture2D | `starter-project/Content/Resources/Icon-Coin.uasset` | ui_and_feedback; UI-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-234 | Material | `starter-project/Content/Resources/Materials/Default.uasset` | ui_and_feedback; UI-01, VISUAL-04 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-235 | Texture2D | `starter-project/Content/Resources/UI-SimpleWhiteBloc.uasset` | ui_and_feedback; UI-01, VISUAL-04 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-236 | Texture2D | `starter-project/Content/Resources/UI-SpeechBubble.uasset` | ui_and_feedback; UI-01, VISUAL-04 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-237 | Texture2D | `starter-project/Content/Resources/gradientCircle.uasset` | ui_and_feedback; UI-01, VISUAL-04 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-238 | Texture2D | `starter-project/Content/Resources/trash.uasset` | ui_and_feedback; UI-01, VISUAL-04 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-239 | SoundWave | `starter-project/Content/Sounds/RoundMusic.uasset` | background_music; AUDIO-01 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-240 | WAV | `assets/files/audio/arrow.wav` | event_audio; AUDIO-01 | `assets/legal/TASK_ASSETS_LICENSE.txt` |
+| asset-241 | WAV | `assets/files/audio/build.wav` | event_audio; AUDIO-01 | `assets/legal/TASK_ASSETS_LICENSE.txt` |
+| asset-242 | WAV | `assets/files/audio/cannon.wav` | event_audio; AUDIO-01 | `assets/legal/TASK_ASSETS_LICENSE.txt` |
+| asset-243 | WAV | `assets/files/audio/defeat.wav` | event_audio; AUDIO-01 | `assets/legal/TASK_ASSETS_LICENSE.txt` |
+| asset-244 | WAV | `assets/files/audio/explosion.wav` | event_audio; AUDIO-01 | `assets/legal/TASK_ASSETS_LICENSE.txt` |
+| asset-245 | WAV | `assets/files/audio/reject.wav` | event_audio; AUDIO-01 | `assets/legal/TASK_ASSETS_LICENSE.txt` |
+| asset-246 | WAV | `assets/files/audio/sale.wav` | event_audio; AUDIO-01 | `assets/legal/TASK_ASSETS_LICENSE.txt` |
+| asset-247 | WAV | `assets/files/audio/upgrade.wav` | event_audio; AUDIO-01 | `assets/legal/TASK_ASSETS_LICENSE.txt` |
+| asset-248 | WAV | `assets/files/audio/wave_start.wav` | event_audio; AUDIO-01 | `assets/legal/TASK_ASSETS_LICENSE.txt` |
+| asset-249 | PNG | `reference/01-opening.png` | visual_reference; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-250 | PNG | `reference/02-placement.png` | visual_reference; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |
+| asset-251 | PNG | `reference/03-combat.png` | visual_reference; SCENE-01, VISUAL-03 | `assets/legal/PRESENTATION_MIT_LICENSE.txt` |

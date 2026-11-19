@@ -1,0 +1,6 @@
+{
+  "name": "GameCreate.Stormbound.SessionContract",
+  "references": [
+    "GameCreate.Session"
+  ]
+}

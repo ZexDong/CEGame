@@ -1,0 +1,3 @@
+No third-party source code or game assets are included in this public input package.
+
+The warehouse logistics theme draws only on general genre conventions such as scanning, routing, staging and loading. It is not copied from a particular GitHub game or commercial title.

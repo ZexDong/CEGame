@@ -1,0 +1,773 @@
+{
+  "generation": "legacy",
+  "requirements": [
+    {
+      "requirement_id": "FLOW-04",
+      "source": "gdd:FLOW-04",
+      "check_ids": [
+        "D3-victory",
+        "D2-results",
+        "D4-restart_won",
+        "D5-results"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "MOVE-01",
+      "source": "gdd:MOVE-01",
+      "check_ids": [
+        "D3-speed",
+        "D3-blocked",
+        "D2-movement"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "SAVE-02",
+      "source": "gdd:SAVE-02",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D4"
+      ]
+    },
+    {
+      "requirement_id": "PAUSE-01",
+      "source": "gdd:PAUSE-01",
+      "check_ids": [
+        "D3-pause",
+        "D2-pause"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "FLOW-01",
+      "source": "gdd:FLOW-01",
+      "check_ids": [
+        "D2-title",
+        "D5-title"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "FLOW-02",
+      "source": "gdd:FLOW-02",
+      "check_ids": [
+        "D4-start",
+        "D3-initial"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "requirement_id": "MAZE-01",
+      "source": "gdd:MAZE-01",
+      "check_ids": [
+        "D2-maze"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2"
+      ]
+    },
+    {
+      "requirement_id": "MOVE-02",
+      "source": "gdd:MOVE-02",
+      "check_ids": [
+        "D3-buffer",
+        "D3-buffer_expiry",
+        "D2-movement"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "MOVE-03",
+      "source": "gdd:MOVE-03",
+      "check_ids": [
+        "D3-reverse",
+        "D2-movement"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "MOVE-04",
+      "source": "gdd:MOVE-04",
+      "check_ids": [
+        "D3-blocked",
+        "D3-wrap",
+        "D2-movement"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "DOT-01",
+      "source": "gdd:DOT-01",
+      "check_ids": [
+        "D3-dot"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "POWER-01",
+      "source": "gdd:POWER-01",
+      "check_ids": [
+        "D3-power",
+        "D2-power"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "POWER-02",
+      "source": "gdd:POWER-02",
+      "check_ids": [
+        "D3-refresh",
+        "D2-power",
+        "D4-restart_fright"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "requirement_id": "GHOST-01",
+      "source": "gdd:GHOST-01",
+      "check_ids": [
+        "D2-actors",
+        "D3-ghost_speed"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "GHOST-02",
+      "source": "gdd:GHOST-02",
+      "check_ids": [
+        "D3-release",
+        "D2-release"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "GHOST-03",
+      "source": "gdd:GHOST-03",
+      "check_ids": [
+        "D3-inactivity",
+        "D2-release"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "GHOST-04",
+      "source": "gdd:GHOST-04",
+      "check_ids": [
+        "D3-waves",
+        "D2-pursuit"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "GHOST-05",
+      "source": "gdd:GHOST-05",
+      "check_ids": [
+        "D3-red",
+        "D2-pursuit"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "GHOST-06",
+      "source": "gdd:GHOST-06",
+      "check_ids": [
+        "D3-pink",
+        "D2-pursuit"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "GHOST-07",
+      "source": "gdd:GHOST-07",
+      "check_ids": [
+        "D3-cyan",
+        "D2-pursuit"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "GHOST-08",
+      "source": "gdd:GHOST-08",
+      "check_ids": [
+        "D3-orange",
+        "D2-pursuit"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "GHOST-09",
+      "source": "gdd:GHOST-09",
+      "check_ids": [
+        "D3-flee",
+        "D2-pursuit"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "CAPTURE-01",
+      "source": "gdd:CAPTURE-01",
+      "check_ids": [
+        "D3-capture",
+        "D2-capture"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "CAPTURE-02",
+      "source": "gdd:CAPTURE-02",
+      "check_ids": [
+        "D3-return",
+        "D2-capture",
+        "D4-restart_return"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "requirement_id": "LIFE-01",
+      "source": "gdd:LIFE-01",
+      "check_ids": [
+        "D3-death",
+        "D2-recovery",
+        "D4-restart_dying",
+        "D5-death"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "LIFE-02",
+      "source": "gdd:LIFE-02",
+      "check_ids": [
+        "D3-recovery",
+        "D2-recovery"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "LIFE-03",
+      "source": "gdd:LIFE-03",
+      "check_ids": [
+        "D3-loss",
+        "D2-results",
+        "D4-restart_lost",
+        "D5-results"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "LIFE-04",
+      "source": "gdd:LIFE-04",
+      "check_ids": [
+        "D3-extra_life",
+        "D2-extra_life"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "FRUIT-01",
+      "source": "gdd:FRUIT-01",
+      "check_ids": [
+        "D3-fruit_spawn",
+        "D3-fruit_expiry",
+        "D2-fruit",
+        "D4-restart_fruit"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3",
+        "D4"
+      ]
+    },
+    {
+      "requirement_id": "FRUIT-02",
+      "source": "gdd:FRUIT-02",
+      "check_ids": [
+        "D3-fruit_reward",
+        "D3-fruit_expiry",
+        "D2-fruit",
+        "D5-fruit"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3",
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "FLOW-03",
+      "source": "gdd:FLOW-03",
+      "check_ids": [
+        "D3-victory"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "PAUSE-02",
+      "source": "gdd:PAUSE-02",
+      "check_ids": [
+        "D2-pause",
+        "D4-restart_normal",
+        "D4-restart_fright",
+        "D4-restart_return",
+        "D4-restart_fruit",
+        "D4-restart_dying",
+        "D4-restart_won",
+        "D4-restart_lost"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D4"
+      ]
+    },
+    {
+      "requirement_id": "MENU-01",
+      "source": "gdd:MENU-01",
+      "check_ids": [
+        "D4-menu",
+        "D2-menus"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D4"
+      ]
+    },
+    {
+      "requirement_id": "MENU-02",
+      "source": "gdd:MENU-02",
+      "check_ids": [
+        "D2-menus",
+        "D4-save",
+        "D4-quit"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D4"
+      ]
+    },
+    {
+      "requirement_id": "OPTIONS-01",
+      "source": "gdd:OPTIONS-01",
+      "check_ids": [
+        "D2-menus",
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3",
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "OPTIONS-02",
+      "source": "gdd:OPTIONS-02",
+      "check_ids": [
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D3",
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "OPTIONS-03",
+      "source": "gdd:OPTIONS-03",
+      "check_ids": [
+        "D4-options",
+        "D5-options"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "SAVE-01",
+      "source": "gdd:SAVE-01",
+      "check_ids": [
+        "D4-save",
+        "D5-results"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "HUD-01",
+      "source": "gdd:HUD-01",
+      "check_ids": [
+        "D5-hud"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "source": "gdd:VISUAL-01",
+      "check_ids": [
+        "D2-actors"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2"
+      ]
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "source": "gdd:VISUAL-02",
+      "check_ids": [
+        "D2-actors",
+        "D5-camera"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "source": "gdd:VISUAL-03",
+      "check_ids": [
+        "D2-actors",
+        "D5-power",
+        "D5-capture"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "source": "gdd:VISUAL-04",
+      "check_ids": [
+        "D5-camera"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "VISUAL-05",
+      "source": "gdd:VISUAL-05",
+      "check_ids": [
+        "D5-power",
+        "D5-capture",
+        "D5-fruit",
+        "D5-death"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "source": "gdd:VISUAL-06",
+      "check_ids": [
+        "D5-title",
+        "D5-options",
+        "D5-results"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "TIME-01",
+      "source": "gdd:TIME-01",
+      "check_ids": [
+        "D3-waves",
+        "D3-pause"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "OBSERVE-01",
+      "source": "gdd:OBSERVE-01",
+      "check_ids": [
+        "D1-observation",
+        "D5-honesty"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D1",
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "source": "gdd:ASSET-01",
+      "check_ids": [
+        "D2-actors"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2"
+      ]
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "source": "gdd:ASSET-02",
+      "check_ids": [
+        "D2-actors"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2"
+      ]
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "source": "gdd:ASSET-03",
+      "check_ids": [
+        "D3-fruit_reward",
+        "D2-fruit"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2",
+        "D3"
+      ]
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "source": "gdd:ASSET-04",
+      "check_ids": [
+        "D2-actors"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D2"
+      ]
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "source": "gdd:ASSET-05",
+      "check_ids": [
+        "D5-hud"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "QUALITY-01",
+      "source": "gdd:QUALITY-01",
+      "check_ids": [
+        "D1-project",
+        "D1-build",
+        "D1-startup",
+        "D4-reopen"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D1",
+        "D4"
+      ]
+    },
+    {
+      "requirement_id": "QUALITY-02",
+      "source": "gdd:QUALITY-02",
+      "check_ids": [
+        "D4-start"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D4"
+      ]
+    },
+    {
+      "requirement_id": "QUALITY-03",
+      "source": "gdd:QUALITY-03",
+      "check_ids": [
+        "D5-title"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "QUALITY-04",
+      "source": "gdd:QUALITY-04",
+      "check_ids": [
+        "D5-hud",
+        "D5-power",
+        "D5-honesty"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D5"
+      ]
+    },
+    {
+      "requirement_id": "QUALITY-05",
+      "source": "gdd:QUALITY-05",
+      "check_ids": [
+        "D1-build",
+        "D4-menu"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D1",
+        "D4"
+      ]
+    },
+    {
+      "requirement_id": "QUALITY-06",
+      "source": "gdd:QUALITY-06",
+      "check_ids": [
+        "D4-repeat"
+      ],
+      "status": "covered",
+      "dimensions": [
+        "D4"
+      ]
+    }
+  ],
+  "unmapped_gdd_requirements": [],
+  "common_baseline": "not_applicable_legacy_contract",
+  "visual_only": [
+    "D6-original-reference-comparison"
+  ]
+}

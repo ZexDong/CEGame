@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "roblox.relay_foundry.v1",
+  "scope": "Static facts about the supplied Roblox built-in authoring surface. This catalog does not prescribe final layout, coordinates, hierarchy, architecture, or a reference composition.",
+  "external_media": [],
+  "built_in_assets": [
+    {"interface":"Instance.new('Part') and other BasePart classes","semantic_role":"walkable foundry floor, machines, docks, gate, checkpoint, hazard, evacuation zone and decoration"},
+    {"interface":"Enum.Material and BasePart Color/Material","semantic_role":"distinct readable production zones and environmental styling"},
+    {"interface":"ProximityPrompt","semantic_role":"visible nearby E operations and Q machine-mode selection"},
+    {"interface":"ScreenGui, Frame, TextLabel and standard UI instances","semantic_role":"persistent HUD, recipes, state, timer, feedback and completion result"},
+    {"interface":"BillboardGui or SurfaceGui","semantic_role":"optional world labels and machine mode feedback"},
+    {"interface":"Lighting, Atmosphere and built-in effects","semantic_role":"foundry illumination and presentation"},
+    {"interface":"default Roblox character and Humanoid","semantic_role":"ordinary walking, jumping, health, death and respawn"},
+    {"interface":"CollectionService tags and Attributes","semantic_role":"public read-only semantic discovery and truthful state mirrors"}
+  ],
+  "notes": [
+    "No PNG, mesh, audio, package ID, marketplace asset, or network download is required.",
+    "Built-in assets are an intentional complete asset surface for this blockout-style task, not missing media.",
+    "The final composition remains authored work and may be styled freely within the GDD."
+  ]
+}
+

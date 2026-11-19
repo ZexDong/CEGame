@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "id": "navigation_camera",
+  "title": "Two separated native navigation targets and a following camera",
+  "steps": [
+    {
+      "step_id": "setup",
+      "operation": "load_clean_canonical_scene",
+      "target": "Navigation",
+      "check_ids": [
+        "setup.scene",
+        "setup.submission_probe",
+        "setup.submission_probe.version",
+        "setup.semantic_discovery",
+        "setup.clean_start",
+        "setup.world_target.MoveTargetA",
+        "setup.world_target.MoveTargetB",
+        "setup.world_target.DashTarget",
+        "setup.world_target.separation"
+      ]
+    },
+    {
+      "step_id": "move_a",
+      "operation": "virtual_mouse_left",
+      "target": "MoveTargetA",
+      "check_ids": [
+        "navigation.move_a.input.route",
+        "navigation.move_a.reached",
+        "navigation.move_a.distance"
+      ]
+    },
+    {
+      "step_id": "camera_a",
+      "operation": "observe_camera",
+      "target": "Player",
+      "check_ids": [
+        "navigation.camera_a.player_visible"
+      ]
+    },
+    {
+      "step_id": "move_b",
+      "operation": "virtual_mouse_left",
+      "target": "MoveTargetB",
+      "check_ids": [
+        "navigation.move_b.input.route",
+        "navigation.move_b.reached",
+        "navigation.move_b.distance"
+      ]
+    },
+    {
+      "step_id": "camera_b",
+      "operation": "observe_camera",
+      "target": "Player",
+      "check_ids": [
+        "navigation.camera_b.player_visible",
+        "navigation.camera.tracked_distance"
+      ]
+    }
+  ]
+}
+
+

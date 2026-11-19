@@ -1,0 +1,718 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "1.0.0"
+    },
+    "process_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "process_token": {
+      "type": "string",
+      "minLength": 1
+    },
+    "snapshot_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "monotonic_ms": {
+      "type": "number",
+      "minimum": 0
+    },
+    "bridge_ready": {
+      "type": "boolean"
+    },
+    "first_frame": {
+      "type": "boolean"
+    },
+    "provider_ready": {
+      "type": "boolean"
+    },
+    "game_state": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/game_state"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "process_id",
+    "process_token",
+    "snapshot_id",
+    "monotonic_ms",
+    "bridge_ready",
+    "first_frame",
+    "provider_ready",
+    "game_state"
+  ],
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:chomp:observation:1.0.0",
+  "title": "Chomp read-only observation",
+  "description": "Maps public gameplay semantics; contains no verdict or world-writing capability.",
+  "$defs": {
+    "cell": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 29
+        },
+        "y": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 27
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ]
+    },
+    "position": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "number",
+          "minimum": -0.5,
+          "maximum": 29.5
+        },
+        "y": {
+          "type": "number",
+          "minimum": -0.5,
+          "maximum": 27.5
+        }
+      },
+      "required": [
+        "x",
+        "y"
+      ]
+    },
+    "rect": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "x": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "y": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "width": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "height": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "width",
+        "height"
+      ]
+    },
+    "direction": {
+      "enum": [
+        "up",
+        "right",
+        "down",
+        "left",
+        "none"
+      ]
+    },
+    "player": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "position": {
+          "$ref": "#/$defs/position"
+        },
+        "cell": {
+          "$ref": "#/$defs/cell"
+        },
+        "heading": {
+          "$ref": "#/$defs/direction"
+        },
+        "moving": {
+          "type": "boolean"
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "screen_rect": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/rect"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "mouth_open": {
+          "type": "boolean"
+        },
+        "empowered": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "position",
+        "cell",
+        "heading",
+        "moving",
+        "visible",
+        "screen_rect",
+        "mouth_open",
+        "empowered"
+      ]
+    },
+    "ghost": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "enum": [
+            "red",
+            "cyan",
+            "pink",
+            "orange"
+          ]
+        },
+        "state": {
+          "enum": [
+            "waiting",
+            "leaving",
+            "normal",
+            "frightened",
+            "returning"
+          ]
+        },
+        "position": {
+          "$ref": "#/$defs/position"
+        },
+        "cell": {
+          "$ref": "#/$defs/cell"
+        },
+        "heading": {
+          "$ref": "#/$defs/direction"
+        },
+        "intent_cell": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/cell"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "Current target: null when waiting, R when leaving, own home when returning, pursuit/corner target when normal, selected next center when frightened."
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "screen_rect": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/rect"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "state",
+        "position",
+        "cell",
+        "heading",
+        "intent_cell",
+        "visible",
+        "screen_rect"
+      ]
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "enum": [
+            "start",
+            "options",
+            "quit",
+            "resume",
+            "restart",
+            "main_menu",
+            "back",
+            "apply",
+            "revert",
+            "window_mode_prev",
+            "window_mode_next",
+            "vsync_prev",
+            "vsync_next",
+            "graphics_prev",
+            "graphics_next",
+            "resolution_prev",
+            "resolution_next"
+          ]
+        },
+        "visible": {
+          "type": "boolean"
+        },
+        "enabled": {
+          "type": "boolean"
+        },
+        "topmost": {
+          "type": "boolean"
+        },
+        "label": {
+          "type": "string"
+        },
+        "rect": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/rect"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "visible",
+        "enabled",
+        "topmost",
+        "label",
+        "rect"
+      ]
+    },
+    "settings": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "window_mode": {
+          "enum": [
+            "windowed",
+            "fullscreen"
+          ]
+        },
+        "vsync": {
+          "type": "boolean"
+        },
+        "graphics": {
+          "enum": [
+            "low",
+            "medium",
+            "high",
+            "epic",
+            "cinematic",
+            "custom"
+          ]
+        },
+        "resolution": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "width": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "height": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "required": [
+            "width",
+            "height"
+          ]
+        }
+      },
+      "required": [
+        "window_mode",
+        "vsync",
+        "graphics",
+        "resolution"
+      ]
+    },
+    "game_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "run_id": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "description": "New identity on each Start/Restart; preserved through pause, death and recovery; null at Main Menu."
+        },
+        "phase": {
+          "enum": [
+            "menu",
+            "options",
+            "playing",
+            "paused",
+            "dying",
+            "won",
+            "lost"
+          ]
+        },
+        "options_origin": {
+          "anyOf": [
+            {
+              "enum": [
+                "menu",
+                "paused"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "seed": {
+          "type": "integer"
+        },
+        "active_seconds": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Run time in playing only; starts at 0 and survives life recovery."
+        },
+        "score": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "high_score": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "lives": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 3
+        },
+        "ordinary_consumed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "ordinary_remaining": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "energizers_remaining": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "capture_chain": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Completed captures in the current continuous frightened period; 0 before the first. Not a multiplier or reward."
+        },
+        "extra_life_progress": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Actual retained points toward LIFE-04 since its last reset; may exceed 2000 at three lives."
+        },
+        "life_index": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Completed nonfinal life recoveries in this run; starts at 0 and increments on respawn only."
+        },
+        "player": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/player"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ghosts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ghost"
+          }
+        },
+        "ordinary_cells": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/cell"
+          }
+        },
+        "energizer_cells": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/cell"
+          }
+        },
+        "fruit": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "present": {
+              "type": "boolean"
+            },
+            "cell": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/cell"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "spawned_thresholds": {
+              "type": "array",
+              "items": {
+                "enum": [
+                  70,
+                  170
+                ]
+              },
+              "description": "Spent opportunities, including skipped spawns; unique, ascending values from 70 and 170."
+            },
+            "remaining_seconds": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "present",
+            "cell",
+            "spawned_thresholds",
+            "remaining_seconds"
+          ]
+        },
+        "timers": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "wave_mode": {
+              "enum": [
+                "none",
+                "scatter",
+                "chase"
+              ]
+            },
+            "wave_index": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "wave_remaining_seconds": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "frightened_remaining_seconds": {
+              "type": "number",
+              "minimum": 0
+            },
+            "inactivity_remaining_seconds": {
+              "type": "number",
+              "minimum": 0
+            },
+            "death_remaining_seconds": {
+              "type": "number",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "wave_mode",
+            "wave_index",
+            "wave_remaining_seconds",
+            "frightened_remaining_seconds",
+            "inactivity_remaining_seconds",
+            "death_remaining_seconds"
+          ]
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/target"
+          }
+        },
+        "settings": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "applied": {
+              "$ref": "#/$defs/settings"
+            },
+            "pending": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/settings"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "applied",
+            "pending"
+          ]
+        },
+        "hud": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "score_text": {
+              "type": "string"
+            },
+            "life_icon_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "result_title": {
+              "type": "string"
+            },
+            "new_record": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "score_text",
+            "life_icon_count",
+            "result_title",
+            "new_record"
+          ]
+        },
+        "effects": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "camera_impulse_active": {
+              "type": "boolean"
+            },
+            "fruit_overlay_visible": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "camera_impulse_active",
+            "fruit_overlay_visible"
+          ]
+        },
+        "viewport": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "width": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "height": {
+              "type": "integer",
+              "minimum": 1
+            }
+          },
+          "required": [
+            "width",
+            "height"
+          ]
+        }
+      },
+      "required": [
+        "run_id",
+        "phase",
+        "options_origin",
+        "seed",
+        "active_seconds",
+        "score",
+        "high_score",
+        "lives",
+        "ordinary_consumed",
+        "ordinary_remaining",
+        "energizers_remaining",
+        "capture_chain",
+        "extra_life_progress",
+        "life_index",
+        "player",
+        "ghosts",
+        "ordinary_cells",
+        "energizer_cells",
+        "fruit",
+        "timers",
+        "targets",
+        "settings",
+        "hud",
+        "effects",
+        "viewport"
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "provider_ready": {
+            "const": false
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "game_state": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "provider_ready": {
+            "const": true
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "bridge_ready": {
+            "const": true
+          },
+          "game_state": {
+            "$ref": "#/$defs/game_state"
+          }
+        }
+      }
+    }
+  ]
+}

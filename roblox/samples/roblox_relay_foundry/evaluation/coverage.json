@@ -1,0 +1,69 @@
+{
+  "sample_id": "roblox_relay_foundry",
+  "document_type": "Original GDD and evaluator source index",
+  "new_evaluation_requirement": false,
+  "requirements": [
+    {
+      "requirement_id": "RF-GDD-1",
+      "obligation": "Relay Foundry Protocol",
+      "source_line": 1,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RF-GDD-2",
+      "obligation": "Premise and objective",
+      "source_line": 3,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RF-GDD-3",
+      "obligation": "Controls",
+      "source_line": 15,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RF-GDD-4",
+      "obligation": "Player flow",
+      "source_line": 24,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RF-GDD-5",
+      "obligation": "Rules and state",
+      "source_line": 35,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RF-GDD-6",
+      "obligation": "Core phases",
+      "source_line": 37,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RF-GDD-7",
+      "obligation": "Failure, checkpoint, and restart",
+      "source_line": 52,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RF-GDD-8",
+      "obligation": "HUD and feedback",
+      "source_line": 60,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RF-GDD-9",
+      "obligation": "World requirements",
+      "source_line": 66,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RF-GDD-10",
+      "obligation": "Equivalence and restrictions",
+      "source_line": 72,
+      "native_evaluator_sources": "src/original/"
+    }
+  ],
+  "original_coverage_files": [],
+  "existing_evaluators_preserved": true
+}

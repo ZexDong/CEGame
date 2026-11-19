@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "change_id": "actionroguelike-transport-path-clarification-2026-09-20",
+  "kind": "documentation_only_no_gameplay_or_schema_change",
+  "allowlist": [
+    "input/contracts/README.md",
+    "input/TOOLCHAIN.md",
+    "input/UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md",
+    
+"input/BENCHMARK_MANIFEST.json"
+  ],
+  "change": "Clarify that snapshot/event paths are opaque launcher argument values, with no required basename or directory. Update only affected documentation hashes and file-manifest bindings.",
+  "unchanged": ["GDD requirements", "project files", "state schemas", "engine identity", "frozen executor identity", "Gold implementation"],
+  "gold_lineage": "These files are outside input/project. No starter project or public runtime interface bytes change; no Gold gameplay delta or project synchronization is required. Gold already reads both argument values in ArenaProbePublisher.cpp.",
+  "historical_results": "Keep the original input/evaluator hashes on historical evidence. Documentation clarification does not rebind or rescore old runs."
+}

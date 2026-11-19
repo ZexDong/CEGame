@@ -1,0 +1,4 @@
+* text eol=lf
+*.fbx -text -diff
+*.uasset -text -diff
+*.gz -text -diff

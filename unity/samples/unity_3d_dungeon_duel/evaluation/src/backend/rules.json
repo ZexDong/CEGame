@@ -1,0 +1,660 @@
+{
+  "schema_version": 4,
+  "benchmark_id": "unity.dungeon_duel_3d.v2",
+  "evaluator_protocol": "game-independent-d1-d6-v2",
+  "evaluator_revision": "2026.08.27-uncapped-partial-observation-r4",
+  "maximum_score": 100,
+  "automated_maximum_score": 90,
+  "accepted_unity_exit_codes": [
+    0,
+    2,
+    6
+  ],
+  "dimensions": [
+    {
+      "id": "D1",
+      "title": "Engineering Validity & Engine Integration",
+      "maximum_score": 10,
+      "phase": "static"
+    },
+    {
+      "id": "D2",
+      "title": "Specification Fulfillment & Content Completeness",
+      "maximum_score": 30,
+      "phase": "dynamic"
+    },
+    {
+      "id": "D3",
+      "title": "Gameplay Correctness & System Behavior",
+      "maximum_score": 20,
+      "phase": "dynamic"
+    },
+    {
+      "id": "D4",
+      "title": "End-to-End Flow & Lifecycle Integrity",
+      "maximum_score": 20,
+      "phase": "dynamic"
+    },
+    {
+      "id": "D5",
+      "title": "Interface Functionality & Player Feedback",
+      "maximum_score": 10,
+      "phase": "dynamic"
+    },
+    {
+      "id": "D6",
+      "title": "Visual Assembly & Presentation Fidelity",
+      "maximum_score": 10,
+      "phase": "visual"
+    }
+  ],
+  "phases": {
+    "static": {
+      "maximum_score": 10,
+      "tests": [
+        {
+          "id": "STATIC01_ProjectStartsInAPlayableBenchmarkScene",
+          "diagnostic_weight": 4,
+          "dimension": "D1",
+          "scored_checkpoint": true,
+          "diagnostic_capability_allocations": {
+            "D1": 4
+          }
+        },
+        {
+          "id": "STATIC02_GameplayCameraRendersANonEmpty3DFrame",
+          "diagnostic_weight": 3,
+          "dimension": "D1",
+          "scored_checkpoint": true,
+          "diagnostic_capability_allocations": {
+            "D1": 3
+          }
+        },
+        {
+          "id": "STATIC03_NormalWorldAndActorInputTargetsAreDiscoverable",
+          "diagnostic_weight": 3,
+          "dimension": "D1",
+          "scored_checkpoint": true,
+          "diagnostic_capability_allocations": {
+            "D1": 3
+          }
+        }
+      ],
+      "diagnostic_weight_total": 10.0
+    },
+    "dynamic": {
+      "maximum_score": 76.7,
+      "trajectories": [
+        {
+          "id": "canonical_success",
+          "nunit_test": "TRAJ01_CanonicalMoveFightGateDashVictoryRestart",
+          "milestones": [
+            {
+              "id": "D2.required_encounter_content",
+              "title": "Required encounter content is independently discoverable in the playable runtime",
+              "capability": "D2",
+              "required_check_ids": [
+                "setup.scene",
+                "setup.submission_probe",
+                "setup.submission_probe.version",
+                "setup.semantic_discovery",
+                "setup.clean_start",
+                "setup.world_target.MoveTargetA",
+                "setup.world_target.MoveTargetB",
+                "setup.world_target.DashTarget",
+                "setup.world_target.separation",
+                "canonical.initial.playing",
+                "canonical.initial.gate_locked",
+                "canonical.initial.imps_alive",
+                "canonical.initial.boss_presented",
+                "canonical.initial.dash_ready",
+                "canonical.initial.audio.battle_loop"
+              ],
+              "diagnostic_weight": 8,
+              "scored_checkpoint": true
+            },
+            {
+              "id": "D3.core_progression_rules",
+              "title": "Imp prerequisite, Dash and Victory rules produce the required state changes",
+              "capability": "D3",
+              "required_check_ids": [
+                "canonical.imp_a.dead",
+                "canonical.after_imp_a.gate_closed",
+                "canonical.after_imp_a.gate_blocking",
+                "canonical.after_imp_a.boss_dormant",
+                "canonical.imp_b.dead",
+                "canonical.gate.open",
+                "canonical.boss.active",
+                "canonical.dash.displacement",
+                "canonical.dash.cooldown",
+                "canonical.victory.reached",
+                "canonical.terminal.freeze"
+              ],
+              "diagnostic_weight": 6,
+              "scored_checkpoint": true
+            },
+            {
+              "id": "D4.complete_success_flow",
+              "title": "Normal player input connects navigation, combat, gate, Boss and stable Victory",
+              "capability": "D4",
+              "required_check_ids": [
+                "canonical.move.input.route",
+                "canonical.move.reached",
+                "canonical.imp_a.input.route",
+                "canonical.imp_a.dead",
+                "canonical.imp_b.input.route",
+                "canonical.imp_b.dead",
+                "canonical.dash.input.route",
+                "canonical.boss.input.route",
+                "canonical.victory.reached",
+                "canonical.terminal.freeze"
+              ],
+              "diagnostic_weight": 5,
+              "scored_checkpoint": true
+            },
+            {
+              "id": "D4.victory_restart_replay",
+              "title": "Restart from Victory reconstructs a reusable encounter",
+              "capability": "D4",
+              "required_check_ids": [
+                "canonical.restart.control.visible",
+                "canonical.restart.control.top_hit",
+                "canonical.restart.input.route",
+                "canonical.restart.semantic_reloaded",
+                "canonical.restart.initial",
+                "canonical.restart.move.input.route",
+                "canonical.restart.move.reached",
+                "canonical.restart.audio.restored",
+                "canonical.restart.audio.no_duplicate"
+              ],
+              "diagnostic_weight": 1,
+              "scored_checkpoint": true
+            },
+            {
+              "id": "D5.hud_and_terminal_feedback",
+              "title": "Initial, Victory and restarted states expose visible player-facing feedback",
+              "capability": "D5",
+              "required_check_ids": [
+                "canonical.initial.feedback_surface",
+                "canonical.initial.hud_semantics",
+                "canonical.after_imp_a.hud_semantics",
+                "canonical.gate.hud_semantics",
+                "canonical.dash.hud_semantics",
+                "canonical.victory.feedback_surface",
+                "canonical.victory.hud_semantics",
+                "canonical.restart.control.visible",
+                "canonical.restart.control.top_hit",
+                "canonical.restart.feedback_surface",
+                "canonical.restart.hud_semantics",
+                "canonical.initial.audio.battle_loop",
+                "canonical.victory.audio.transition",
+                "canonical.restart.audio.restored",
+                "canonical.restart.audio.no_duplicate"
+              ],
+              "diagnostic_weight": 4,
+              "scored_checkpoint": true
+            }
+          ],
+          "diagnostic_weight": 24
+        },
+        {
+          "id": "navigation_camera",
+          "nunit_test": "TRAJ02_NavigationAndCamera",
+          "milestones": [
+            {
+              "id": "D2.navigation_camera_available",
+              "title": "Two independently discovered navigation targets and the tracking camera are usable at runtime",
+              "capability": "D2",
+              "required_check_ids": [
+                "setup.scene",
+                "setup.submission_probe",
+                "setup.submission_probe.version",
+                "setup.semantic_discovery",
+                "setup.clean_start",
+                "setup.world_target.MoveTargetA",
+                "setup.world_target.MoveTargetB",
+                "setup.world_target.DashTarget",
+                "setup.world_target.separation",
+                "navigation.move_a.input.route",
+                "navigation.move_a.reached",
+                "navigation.move_b.input.route",
+                "navigation.move_b.reached"
+              ],
+              "diagnostic_weight": 5,
+              "scored_checkpoint": true
+            },
+            {
+              "id": "D3.navigation_motion_correct",
+              "title": "Movement covers distinct meaningful distances and settles at both targets",
+              "capability": "D3",
+              "required_check_ids": [
+                "navigation.move_a.distance",
+                "navigation.move_a.reached",
+                "navigation.move_b.distance",
+                "navigation.move_b.reached"
+              ],
+              "diagnostic_weight": 2,
+              "scored_checkpoint": true
+            },
+            {
+              "id": "D5.camera_feedback_clear",
+              "title": "The camera keeps the live hero visible and follows the journey",
+              "capability": "D5",
+              "required_check_ids": [
+                "navigation.camera_a.player_visible",
+                "navigation.camera_b.player_visible",
+                "navigation.camera.tracked_distance"
+              ],
+              "diagnostic_weight": 1,
+              "scored_checkpoint": true
+            }
+          ],
+          "diagnostic_weight": 8
+        },
+        {
+          "id": "combat_loop",
+          "nunit_test": "TRAJ03_CombatLoop",
+          "milestones": [
+            {
+              "id": "D2.combat_and_ai_available",
+              "title": "Player combat, enemy death and enemy-owned threat all appear and can be used",
+              "capability": "D2",
+              "required_check_ids": [
+                "setup.scene",
+                "setup.submission_probe",
+                "setup.submission_probe.version",
+                "setup.semantic_discovery",
+                "setup.clean_start",
+                "setup.world_target.MoveTargetA",
+                "setup.world_target.MoveTargetB",
+                "setup.world_target.DashTarget",
+                "setup.world_target.separation",
+                "threat_setup.scene",
+                "threat_setup.submission_probe",
+                "threat_setup.submission_probe.version",
+                "threat_setup.semantic_discovery",
+                "threat_setup.clean_start",
+                "threat_setup.world_target.MoveTargetA",
+                "threat_setup.world_target.MoveTargetB",
+                "threat_setup.world_target.DashTarget",
+                "threat_setup.world_target.separation",
+                "combat.attack.input.route",
+                "combat.attack.damage",
+                "combat.followup.resolution",
+                "combat.imp.dead",
+                "combat.threat.approach",
+                "combat.threat.damage",
+                "combat.audio.battle_loop"
+              ],
+              "diagnostic_weight": 7,
+              "scored_checkpoint": true
+            },
+            {
+              "id": "D3.combat_rules_correct",
+              "title": "Damage, stable death, approach and non-terminal threat semantics are correct",
+              "capability": "D3",
+              "required_check_ids": [
+                "combat.initial.tuning",
+                "combat.attack.damage",
+                "combat.imp.dead",
+                "combat.imp.stable_dead",
+                "combat.threat.approach",
+                "combat.threat.damage",
+                "combat.threat.player_alive"
+              ],
+              "diagnostic_weight": 5,
+              "scored_checkpoint": true
+            },
+            {
+              "id": "D4.nonterminal_combat_continues",
+              "title": "A non-terminal enemy hit leaves a valid continuing game state",
+              "capability": "D4",
+              "required_check_ids": [
+                "combat.threat.damage",
+                "combat.threat.player_alive"
+              ],
+              "diagnostic_weight": 1,
+              "scored_checkpoint": true
+            },
+            {
+              "id": "D5.health_feedback_visible",
+              "title": "Combat damage produces a visible player-facing feedback surface",
+              "capability": "D5",
+              "required_check_ids": [
+                "combat.damage.feedback_surface",
+                "combat.damage.hud_semantics"
+              ],
+              "diagnostic_weight": 2,
+              "scored_checkpoint": true
+            }
+          ],
+          "diagnostic_weight": 15
+        },
+        {
+          "id": "dash_gate",
+          "nunit_test": "TRAJ04_DashAndGate",
+          "milestones": [
+          {
+            "id": "D2.dash_gate_boss_content",
+            "title": "Dash is usable and the physical gate/Boss encounter content is independently present at runtime",
+            "capability": "D2",
+            "required_check_ids": [
+                "setup.scene",
+                "setup.submission_probe",
+                "setup.submission_probe.version",
+                "setup.semantic_discovery",
+                "setup.clean_start",
+                "setup.world_target.MoveTargetA",
+                "setup.world_target.MoveTargetB",
+                "setup.world_target.DashTarget",
+                "setup.world_target.separation",
+                "gate_setup.scene",
+                "gate_setup.submission_probe",
+                "gate_setup.submission_probe.version",
+                "gate_setup.semantic_discovery",
+                "gate_setup.clean_start",
+                "gate_setup.world_target.MoveTargetA",
+                "gate_setup.world_target.MoveTargetB",
+                "gate_setup.world_target.DashTarget",
+              "gate_setup.world_target.separation",
+              "dash.pointer.route",
+              "dash.first.input.route",
+              "dash.first.displacement"
+            ],
+              "diagnostic_weight": 6,
+              "scored_checkpoint": true
+            },
+            {
+              "id": "D3.dash_gate_rules_correct",
+              "title": "Dash cooldown and the two-Imp gate prerequisite obey their positive and negative rules",
+              "capability": "D3",
+              "required_check_ids": [
+                "dash.first.displacement",
+                "dash.first.cooldown",
+                "dash.repeat.input.route",
+                "dash.repeat.blocked",
+                "dash.cooldown.recovered",
+                "dash.second.input.route",
+                "dash.second.displacement",
+                "gate.before.closed",
+                "gate.before.blocking",
+                "gate.before.boss_dormant",
+                "gate.final_imp.dead",
+                "gate.after.open",
+                "gate.after.nonblocking",
+                "gate.after.boss_active",
+                "dash.cooldown.hud_semantics",
+                "dash.ready.hud_semantics",
+                "gate.behind_target.discovered",
+                "gate.before.boss_unattackable",
+                "gate.before.physical_block",
+                "gate.after.crossed",
+                "gate.after.boss_damage"
+              ],
+              "diagnostic_weight": 5,
+              "scored_checkpoint": true
+            },
+            {
+              "id": "D4.gate_progression_transition",
+              "title": "The final prerequisite advances cleanly into an accessible active Boss encounter",
+              "capability": "D4",
+              "required_check_ids": [
+                "gate.before.blocking",
+                "gate.final_imp.input.route",
+                "gate.final_imp.dead",
+                "gate.after.open",
+                "gate.after.nonblocking",
+                "gate.after.boss_active",
+                "gate.before.boss_unattackable",
+                "gate.before.physical_block",
+                "gate.after.cross.input.route",
+                "gate.after.crossed",
+                "gate.after.boss_attack.input.route",
+                "gate.after.boss_damage"
+              ],
+              "diagnostic_weight": 1,
+              "scored_checkpoint": true
+            }
+          ],
+          "diagnostic_weight": 12
+        },
+        {
+          "id": "defeat_restart",
+          "nunit_test": "TRAJ05_DefeatAndRestart",
+          "milestones": [
+            {
+              "id": "D2.defeat_restart_content",
+              "title": "Enemy-caused Defeat and a complete Restart path are both available",
+              "capability": "D2",
+              "required_check_ids": [
+                "setup.scene",
+                "setup.submission_probe",
+                "setup.submission_probe.version",
+                "setup.semantic_discovery",
+                "setup.clean_start",
+                "setup.world_target.MoveTargetA",
+                "setup.world_target.MoveTargetB",
+                "setup.world_target.DashTarget",
+                "setup.world_target.separation",
+                "defeat.enemy_damage",
+                "defeat.phase",
+                "defeat.restart.input.route",
+                "defeat.restart.semantic_reloaded",
+                "defeat.restart.initial"
+              ],
+              "diagnostic_weight": 4,
+              "scored_checkpoint": true
+            },
+            {
+              "id": "D3.defeat_rules_correct",
+              "title": "Enemy damage reaches zero health and a stable Lost state at the correct time",
+              "capability": "D3",
+              "required_check_ids": [
+                "defeat.enemy_damage",
+                "defeat.player_zero",
+                "defeat.phase",
+                "defeat.terminal_stable"
+              ],
+              "diagnostic_weight": 2,
+              "scored_checkpoint": true
+            },
+            {
+              "id": "D4.defeat_restart_lifecycle",
+              "title": "Defeat stays terminal, Restart clears it, and normal movement works again",
+              "capability": "D4",
+              "required_check_ids": [
+                "defeat.terminal_stable",
+                "defeat.restart.input.route",
+                "defeat.restart.semantic_reloaded",
+                "defeat.restart.initial",
+                "defeat.restart.no_stale_terminal",
+                "defeat.restart.move.input.route",
+                "defeat.restart.move.reached"
+              ],
+              "diagnostic_weight": 4,
+              "scored_checkpoint": true
+            },
+            {
+              "id": "D5.defeat_restart_feedback",
+              "title": "Defeat and the recovered state both expose visible understandable feedback",
+              "capability": "D5",
+              "required_check_ids": [
+                "defeat.feedback_surface",
+                "defeat.hud_semantics",
+                "defeat.restart.feedback_surface",
+                "defeat.restart.hud_semantics"
+              ],
+              "diagnostic_weight": 3,
+              "scored_checkpoint": true
+            }
+          ],
+          "diagnostic_weight": 13
+        },
+        {
+          "id": "reopen_prepare",
+          "nunit_test": "TRAJ99_LeaveDirtyStateForFreshProcess",
+          "prerequisite_only": true,
+          "milestones": [
+            {
+              "id": "D4.reopen_dirty_origin",
+              "title": "Dynamic begins clean and creates real movement/cooldown dirty state",
+              "capability": "D4",
+              "required_check_ids": [
+                "reopen.prepare.initial_clean",
+                "setup.submission_probe",
+                "setup.submission_probe.version",
+                "reopen.prepare.dash.pointer.route",
+                "reopen.prepare.dash.input.route",
+                "reopen.prepare.dash.dirty"
+              ],
+              "diagnostic_weight": 0,
+              "scored_checkpoint": false
+            },
+            {
+              "id": "D4.reopen_dirty_death",
+              "title": "Dynamic leaves native enemy-death progress dirty",
+              "capability": "D4",
+              "required_check_ids": [
+                "reopen.prepare.imp.input.route",
+                "reopen.prepare.imp.dead"
+              ],
+              "diagnostic_weight": 0,
+              "scored_checkpoint": false
+            },
+            {
+              "id": "D4.reopen_process_close_origin",
+              "title": "Dirty scene remains loaded without Restart until the Dynamic process closes",
+              "capability": "D4",
+              "required_check_ids": [
+                "reopen.prepare.dirty_state",
+                "reopen.prepare.no_restart"
+              ],
+              "diagnostic_weight": 0,
+              "scored_checkpoint": false
+            }
+          ],
+          "diagnostic_weight": 0
+        }
+      ],
+      "diagnostic_weight_total": 72.0
+    },
+    "visual": {
+      "maximum_score": 10,
+      "status_without_score_file": "not_evaluated",
+      "manifest": "evaluation/visual/manifest.json",
+      "fixed_prompt": "evaluation/visual/visual_prompt.txt",
+      "required_rounds": 3,
+      "allowed_item_scores": [
+        0,
+        0.5,
+        1,
+        1.5,
+        2
+      ]
+    },
+    "fresh": {
+      "maximum_score": 3.3,
+      "test": {
+        "id": "fresh_reopen",
+        "nunit_test": "FRESH01_ReopensIntoFreshEncounter",
+        "definition": "fresh_reopen.json",
+        "capability": "D4",
+        "title": "A separate Unity process naturally reconstructs complete stable FLOW-01 after dirty Dynamic progress",
+        "required_check_ids": [
+          "setup.scene",
+          "setup.submission_probe",
+          "setup.submission_probe.version",
+          "setup.semantic_discovery",
+          "setup.clean_start",
+          "fresh.phase.playing",
+          "fresh.player.full_health",
+          "fresh.imps.two_alive",
+          "fresh.boss.dormant",
+          "fresh.gate.closed",
+          "fresh.gate.blocking",
+          "fresh.dash.ready",
+          "fresh.audio.battle_loop",
+          "fresh.hud.neutral",
+          "fresh.stable.flow01"
+        ],
+        "diagnostic_weight": 8,
+        "scored_checkpoint": true,
+        "checkpoint_id": "D4.fresh_reopen_integrity"
+      },
+      "preparation_trajectory_id": "reopen_prepare",
+      "diagnostic_weight_total": 8.0
+    }
+  },
+  "score_caps": [],
+  "capabilities": [
+    {
+      "id": "D1",
+      "title": "Engineering Validity & Engine Integration",
+      "maximum_score": 10,
+      "checkpoint_count": 3
+    },
+    {
+      "id": "D2",
+      "title": "Specification Fulfillment & Content Completeness",
+      "maximum_score": 30,
+      "checkpoint_count": 5
+    },
+    {
+      "id": "D3",
+      "title": "Gameplay Correctness & System Behavior",
+      "maximum_score": 20,
+      "checkpoint_count": 5
+    },
+    {
+      "id": "D4",
+      "title": "End-to-End Flow & Lifecycle Integrity",
+      "maximum_score": 20,
+      "checkpoint_count": 6
+    },
+    {
+      "id": "D5",
+      "title": "Interface Functionality & Player Feedback",
+      "maximum_score": 10,
+      "checkpoint_count": 4
+    }
+  ],
+  "health_prerequisites": {
+    "invalid_status": "invalid_evaluator_health",
+    "failure_kind": "evaluator_health_failure",
+    "dynamic": {
+      "required_tests": [
+        "EVALUATOR_HEALTH_Dynamic_KeyboardRouteRetainsInputActionDiagnostics",
+        "EVALUATOR_HEALTH_Dynamic_MousePhysicsRouteUsesVisibleActorSurface",
+        "EVALUATOR_HEALTH_Dynamic_NavMeshWorldRouteUsesRealPhysicsAndInput",
+        "EVALUATOR_HEALTH_Dynamic_AudioProbeMismatchIsLocalized",
+        "EVALUATOR_HEALTH_Dynamic_EvidenceSinkWritable",
+        "EVALUATOR_HEALTH_Dynamic_PresentationFailureDoesNotBlockNativeTail"
+      ],
+      "required_artifacts": [
+        "evaluator-health-dynamic.json"
+      ]
+    },
+    "fresh": {
+      "required_tests": [
+        "EVALUATOR_HEALTH_Fresh_ProcessIsolationAndEvidenceSink",
+        "EVALUATOR_HEALTH_Fresh_UiProbeLoadsInIndependentAssembly"
+      ],
+      "required_artifacts": [
+        "evaluator-health-fresh.json"
+      ]
+    }
+  },
+  "formal_scoring": {
+    "formula": "dimension_maximum * passed_scored_checkpoints / total_scored_checkpoints",
+    "checkpoint_verdicts": [
+      "pass",
+      "fail"
+    ],
+    "blocked_counts_as": "fail",
+    "legal_failed_nunit_is_evidence_envelope": true,
+    "legal_failed_nunit_does_not_zero_passed_checkpoints": true,
+    "dimension_rounding_decimals": 1,
+    "overall_rounding_decimals": 1,
+    "diagnostic_weights_affect_formal_score": false
+  }
+}

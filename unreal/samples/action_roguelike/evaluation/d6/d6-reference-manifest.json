@@ -1,0 +1,58 @@
+{
+  "schema_version": "4.0.0",
+  "game_id": "ActionRoguelike",
+  "task_revision": "2.2.0-diagnostic",
+  "evaluator_revision": "actionroguelike-evaluator-4.1.0",
+  "protocol": "canonical_d6_v4",
+  "fixed_prompt": "d6/FIXED_VLM_PROMPT.txt",
+  "fixed_prompt_sha256": "558b4ccffad7d13d3ae3e5c6fc5a9b36a7bba37d9be47da895c2e50bc9c5a6ee",
+  "states": [
+    {
+      "state_id": "active-arena",
+      "label": "Active arena",
+      "reference_image": "reference/active-arena.png",
+      "sha256": "71e726125db935e05fbee8be7ca92f8af5ed1fdbd0e05f122d77a6babc58d191",
+      "width": 1280,
+      "height": 720,
+      "source": "original_baseline",
+      "provenance": {
+        "source_identity_sha256": "f58c977ad6b5fd15555748b0c017803e22dba03a5b67cc5b176dd1846b878cf4",
+        "derived_baseline_identity_sha256": "412e69bc125e3b0ab0051629a9a4e53050f6fb566691626c60c6d02280056322",
+        "reference_metadata": "reference/metadata/active-arena.json",
+        "reference_metadata_sha256": "e3ccd2e705d37f43509df1fcb00b49920dd662894d8447a1ad7979a4f95abbd9"
+      }
+    },
+    {
+      "state_id": "black-hole-combat",
+      "label": "Black Hole combat",
+      "reference_image": "reference/black-hole-combat.png",
+      "sha256": "de4d68d8f32bc84df9704d5f6087bd42fe89b6ab32ebe0760e60dc3e9ab3ded0",
+      "width": 1280,
+      "height": 720,
+      "source": "original_baseline",
+      "provenance": {
+        "source_identity_sha256": "f58c977ad6b5fd15555748b0c017803e22dba03a5b67cc5b176dd1846b878cf4",
+        "derived_baseline_identity_sha256": "412e69bc125e3b0ab0051629a9a4e53050f6fb566691626c60c6d02280056322",
+        "reference_metadata": "reference/metadata/black-hole-combat.json",
+        "reference_metadata_sha256": "aebfdfed97eb292ba9db24dd35e71f51229d03e531219dc86f6d8ddc4d3db6fa"
+      }
+    },
+    {
+      "state_id": "terminal-result",
+      "label": "Terminal survival result",
+      "reference_image": "reference/terminal-result.png",
+      "sha256": "b96fc39b89e6a0efc428be6b6e93663544b327093b7ac73b36400b6f817c26b1",
+      "width": 1280,
+      "height": 720,
+      "source": "original_baseline",
+      "provenance": {
+        "source_identity_sha256": "f58c977ad6b5fd15555748b0c017803e22dba03a5b67cc5b176dd1846b878cf4",
+        "derived_baseline_identity_sha256": "412e69bc125e3b0ab0051629a9a4e53050f6fb566691626c60c6d02280056322",
+        "reference_metadata": "reference/metadata/terminal-result.json",
+        "reference_metadata_sha256": "ced8f4ba1b030f8e63bfa9ab11a18bdadec92106b4a50fb62e5e85d601f00801"
+      }
+    }
+  ],
+  "reference_status": "ready",
+  "reference_provenance_contract": "Fixed reference images bind their source identity, visual state, dimensions and static metadata."
+}

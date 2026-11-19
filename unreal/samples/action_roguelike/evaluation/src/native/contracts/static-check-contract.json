@@ -1,0 +1,10 @@
+{
+  "schema_version": "3.0.0",
+  "D1": [
+    { "checkpoint_id": "D1-01", "checks": ["project_exists", "descriptor_parses", "engine_association_5_6", "runtime_module_present"] },
+    { "checkpoint_id": "D1-02", "checks": ["default_map_resolves", "no_host_absolute_paths", "public_state_pair_schema_and_same_process_identity", "bounded_atomic_publication_retry"] },
+    { "checkpoint_id": "D1-03", "checks": ["development_editor_build"] },
+    { "checkpoint_id": "D1-04", "checks": ["no_input_start", "stable_non_black_capture"] },
+    { "checkpoint_id": "D1-05", "checks": ["clean_stop", "new_process_reopen", "second_non_black_capture"] }
+  ]
+}

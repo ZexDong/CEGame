@@ -1,0 +1,15 @@
+{
+  "schema_version": "2.0.0",
+  "game_id": "Bomber",
+  "task_revision": "2.0.1",
+  "dimension": "D1",
+  "checks": [
+    "project_descriptor_and_supplied_asset_integrity",
+    "development_editor_build",
+    "no_input_start_and_client_frame",
+    "public_read_only_provider_shape",
+    "true_reopen_identity"
+  ],
+  "dynamic_scoring_forbidden": true,
+  "d2_through_d5_from_static_files_forbidden": true
+}

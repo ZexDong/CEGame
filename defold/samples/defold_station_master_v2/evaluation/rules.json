@@ -1,0 +1,251 @@
+{
+  "schema_version": 1,
+  "game": "defold_station_master_v2",
+  "naming_tables": "../input/naming-tables.json",
+  "player_runtime_min_version": "0.10",
+  "controls_from_naming_tables": true,
+  "honesty_spot_checks": { "per_trajectory": 2, "mode": "random" },
+  "trajectories": [
+    {
+      "id": "entry_click_feedback_and_pause",
+      "title": "Briefing, clean shift, generator boundaries, shop rejection, and pause",
+      "clean_start": "fresh_process",
+      "steps": [
+        { "do": "start" },
+        { "do": "wait_until", "cond": "phase == menu", "timeout_s": 15, "honesty_safe": true },
+        { "do": "capture", "save_as": "BriefingFrame", "honesty_safe": true },
+        { "do": "click", "target": { "kind": "start_button" } },
+        {
+          "do": "wait_until", "cond": "phase == playing", "timeout_s": 10,
+          "check": {
+            "id": "D2_ENTRY_SHIFT", "source": "gdd:SM-START-01", "dim": "D2",
+            "assert": "phase == playing && slots.energy == 0 && slots.manual_click_count == 0 && slots.click_power == 1 && slots.passive_per_second == 0 && slots.stage == 1 && slots.stage_total == 4 && slots.time_remaining > 118 && slots.time_remaining <= 120"
+          }
+        },
+        {
+          "do": "capture", "save_as": "InitialHudFrame",
+          "check": {
+            "id": "D5_BRIEFING_HUD", "source": "gdd:SM-HUD-01", "dim": "D5",
+            "assert": "capture_nonblank(BriefingFrame) && capture_nonblank(InitialHudFrame) && ocr_contains_any(BriefingFrame,[\"START SHIFT\",\"Start the shift\"]) && ocr_contains_any(BriefingFrame,[\"CLICK\",\"Click\"]) && ocr_contains_any(BriefingFrame,[\"BUILD\",\"BUY\",\"PURCHASE\",\"Expansion\",\"Purchase\"]) && ocr_contains(BriefingFrame,\"120\") && ocr_contains(InitialHudFrame,\"PAUSE\") && ocr_contains(InitialHudFrame,\"EXPANSION QUEUE\") && ocr_contains(InitialHudFrame,\"CHARGE CORE\") && ocr_absent(InitialHudFrame,[\"GAME_STATE\",\"INPUT_EVENT\",\"UDP\",\"DEBUG\"])"
+          }
+        },
+        {
+          "check": {
+            "id": "D2_GENERATOR_SHOP", "source": "gdd:SM-SHOP-01", "dim": "D2",
+            "assert": "entity(kind=generator_control).state == idle && target(generator_button).interactable && target(base_module_card).interactable && target(solar_wing_card).interactable && target(power_booster_card).interactable && entity(kind=base_module_card).state == unaffordable && entity(kind=solar_wing_card).state == locked && entity(kind=power_booster_card).state == locked"
+          }
+        },
+        { "do": "snapshot", "save_as": "ClickBase" },
+        { "do": "click", "target": { "kind": "generator_button" } },
+        { "do": "snapshot", "save_as": "AfterOne" },
+        { "do": "snapshot", "save_as": "RapidBase" },
+        { "do": "click", "target": { "kind": "generator_button" }, "cond": "slots.manual_click_count >= RapidBase.slots.manual_click_count + 5", "timeout_s": 10 },
+        { "do": "snapshot", "save_as": "AfterRapid" },
+        { "do": "click", "target": { "kind": "base_module_card" } },
+        { "do": "click", "target": { "kind": "solar_wing_card" } },
+        {
+          "check": {
+            "id": "D3_CLICK_BOUNDARIES", "source": "gdd:SM-CLICK-01", "dim": "D3",
+            "assert": "AfterOne.slots.energy == ClickBase.slots.energy + 1 && AfterOne.slots.manual_click_count == ClickBase.slots.manual_click_count + 1 && AfterRapid.slots.energy == RapidBase.slots.energy + 5 && AfterRapid.slots.manual_click_count == RapidBase.slots.manual_click_count + 5 && slots.energy == AfterRapid.slots.energy && slots.manual_click_count == AfterRapid.slots.manual_click_count && slots.energy >= 0"
+          }
+        },
+        {
+          "do": "capture", "save_as": "RejectionFrame",
+          "check": {
+            "id": "D5_CLICK_PURCHASE_FEEDBACK", "source": "gdd:SM-CLICK-01", "dim": "D5",
+            "assert": "capture_nonblank(RejectionFrame) && ocr_contains_any(RejectionFrame,[\"LOCKED\",\"INSUFFICIENT\",\"Locked\",\"Insufficient energy\"])"
+          }
+        },
+        { "do": "click", "target": { "kind": "pause_button" } },
+        {
+          "do": "wait_until", "cond": "phase == paused", "timeout_s": 5,
+          "check": {
+            "id": "D2_TIME_PAUSE", "source": "gdd:SM-PAUSE-01", "dim": "D2",
+            "assert": "phase == paused && target(resume_button).interactable && target(restart_button).interactable && target(exit_button).interactable && !exists_target(kind=generator_button)"
+          }
+        },
+        { "do": "snapshot", "save_as": "Paused" },
+        { "do": "wait_until", "cond": "wall_clock_since(Paused) >= 1.5", "timeout_s": 3 },
+        {
+          "do": "capture", "save_as": "PauseFrame",
+          "check": {
+            "id": "D5_PAUSE_CONTROLS", "source": "gdd:SM-PAUSE-01", "dim": "D5",
+            "assert": "capture_nonblank(PauseFrame) && ocr_contains_any(PauseFrame,[\"SHIFT PAUSED\",\"Paused\"]) && ocr_contains_any(PauseFrame,[\"RESUME\",\"Continue\"]) && ocr_contains_any(PauseFrame,[\"RESTART\",\"Restart\"]) && ocr_contains_any(PauseFrame,[\"EXIT\",\"Exit\"])"
+          }
+        },
+        { "do": "click", "target": { "kind": "resume_button" } },
+        { "do": "wait_until", "cond": "phase == playing", "timeout_s": 5 },
+        { "do": "snapshot", "save_as": "Resumed" },
+        { "do": "wait_until", "cond": "slots.time_remaining < Resumed.slots.time_remaining - 0.4", "timeout_s": 3 }
+      ]
+    },
+    {
+      "id": "upgrades_success_failure_and_restarts",
+      "title": "All upgrades, passive production, success, timeout failure, and clean restarts",
+      "clean_start": "fresh_process",
+      "steps": [
+        { "do": "start" },
+        { "do": "wait_until", "cond": "phase == menu", "timeout_s": 15, "honesty_safe": true },
+        { "do": "snapshot", "save_as": "HonestyMenuStable", "honesty_safe": true },
+        { "do": "click", "target": { "kind": "start_button" } },
+        { "do": "wait_until", "cond": "phase == playing", "timeout_s": 8 },
+        { "do": "click", "target": { "kind": "base_module_card" } },
+        { "do": "click", "target": { "kind": "solar_wing_card" } },
+        { "do": "click", "target": { "kind": "generator_button" }, "cond": "slots.energy >= 10", "timeout_s": 15 },
+        { "do": "snapshot", "save_as": "BeforeBase" },
+        { "do": "click", "target": { "kind": "base_module_card" } },
+        { "do": "snapshot", "save_as": "AfterBase" },
+        { "do": "click", "target": { "kind": "base_module_card" } },
+        { "do": "snapshot", "save_as": "AfterBaseRepeat" },
+        { "do": "click", "target": { "kind": "generator_button" }, "cond": "slots.energy >= 50", "timeout_s": 30 },
+        { "do": "snapshot", "save_as": "BeforeSolar" },
+        { "do": "click", "target": { "kind": "solar_wing_card" } },
+        { "do": "snapshot", "save_as": "AfterSolar" },
+        { "do": "snapshot", "save_as": "PassiveStart" },
+        { "do": "wait_until", "cond": "slots.energy >= PassiveStart.slots.energy + 4", "timeout_s": 3 },
+        { "do": "click", "target": { "kind": "pause_button" } },
+        { "do": "wait_until", "cond": "phase == paused", "timeout_s": 5 },
+        { "do": "snapshot", "save_as": "PassivePaused" },
+        { "do": "wait_until", "cond": "wall_clock_since(PassivePaused) >= 1.3", "timeout_s": 3 },
+        { "do": "snapshot", "save_as": "PassivePausedAfterWait" },
+        { "do": "click", "target": { "kind": "resume_button" } },
+        { "do": "wait_until", "cond": "phase == playing", "timeout_s": 5 },
+        { "do": "wait_until", "cond": "slots.energy >= PassivePaused.slots.energy + 4", "timeout_s": 3 },
+        { "do": "snapshot", "save_as": "PassiveResumed" },
+        {
+          "check": {
+            "id": "D3_PASSIVE_PAUSE", "source": "gdd:SM-PASSIVE-01", "dim": "D3",
+            "assert": "AfterSolar.slots.passive_per_second == 5 && PassivePaused.slots.energy >= PassiveStart.slots.energy + 4 && PassivePausedAfterWait.slots.energy == PassivePaused.slots.energy && PassiveResumed.slots.energy >= PassivePaused.slots.energy + 4 && PassiveResumed.slots.manual_click_count == PassivePaused.slots.manual_click_count"
+          }
+        },
+        { "do": "click", "target": { "kind": "generator_button" }, "cond": "slots.energy >= 150", "timeout_s": 35 },
+        { "do": "snapshot", "save_as": "BeforeBooster" },
+        { "do": "click", "target": { "kind": "power_booster_card" } },
+        { "do": "snapshot", "save_as": "AfterBooster" },
+        {
+          "check": {
+            "id": "D3_PURCHASE_BOUNDARIES", "source": "gdd:SM-SHOP-01", "dim": "D3",
+            "assert": "AfterBase.slots.energy >= BeforeBase.slots.energy - 10 && AfterBase.slots.energy <= BeforeBase.slots.energy - 8 && AfterBase.slots.stage == 2 && AfterBaseRepeat.slots.energy == AfterBase.slots.energy && AfterBaseRepeat.slots.stage == AfterBase.slots.stage && AfterSolar.slots.energy >= BeforeSolar.slots.energy - 50 && AfterSolar.slots.energy <= BeforeSolar.slots.energy - 48 && AfterSolar.slots.stage == 3 && AfterBooster.slots.energy >= BeforeBooster.slots.energy - 150 && AfterBooster.slots.energy <= BeforeBooster.slots.energy - 148 && AfterBooster.slots.stage == 4 && AfterBooster.slots.click_power == 10 && AfterBooster.slots.passive_per_second == 5 && AfterBase.slots.manual_click_count == BeforeBase.slots.manual_click_count && AfterSolar.slots.manual_click_count == BeforeSolar.slots.manual_click_count && AfterBooster.slots.manual_click_count == BeforeBooster.slots.manual_click_count && slots.energy >= 0"
+          }
+        },
+        {
+          "check": {
+            "id": "D2_THREE_UPGRADES", "source": "gdd:SM-UPGRADE-03", "dim": "D2",
+            "assert": "entity(kind=base_module).state == installed && entity(kind=base_module).visible && entity(kind=solar_wing).state == installed && entity(kind=solar_wing).visible && entity(kind=power_booster).state == installed && entity(kind=power_booster).visible && entity(kind=base_module_card).state == purchased && entity(kind=solar_wing_card).state == purchased && entity(kind=power_booster_card).state == purchased"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_STAGE_TIMER", "source": "gdd:SM-STAGE-01", "dim": "D3",
+            "assert": "BeforeBase.slots.stage == 1 && AfterBase.slots.stage == 2 && AfterSolar.slots.stage == 3 && AfterBooster.slots.stage == 4 && slots.stage == 4 && slots.stage_total == 4 && slots.time_remaining > 0 && slots.time_remaining < 120 && PassivePausedAfterWait.slots.time_remaining == PassivePaused.slots.time_remaining"
+          }
+        },
+        {
+          "do": "capture", "save_as": "ExpandedFrame",
+          "check": {
+            "id": "D2_HUD_STATION", "source": "gdd:SM-VISUAL-01", "dim": "D2",
+            "assert": "capture_nonblank() && count(kind=station_core,state=active) == 1 && entity(station_core).visible && count(kind=base_module,state=installed) == 1 && entity(base_module).visible && count(kind=solar_wing,state=installed) == 1 && entity(solar_wing).visible && count(kind=power_booster,state=installed) == 1 && entity(power_booster).visible && ocr_contains(ExpandedFrame,\"EXPANSION QUEUE\") && ocr_contains(ExpandedFrame,\"CHARGE CORE\") && ocr_numeric_values_match([\"click_power\",\"passive_per_second\",\"stage\"])"
+          }
+        },
+        { "do": "click", "target": { "kind": "generator_button" }, "cond": "phase == won", "timeout_s": 20 },
+        { "do": "wait_until", "cond": "phase == won", "timeout_s": 5 },
+        { "do": "snapshot", "save_as": "Won" },
+        { "do": "capture", "save_as": "WinFrame" },
+        { "do": "wait_until", "cond": "wall_clock_since(Won) >= 1.2", "timeout_s": 3 },
+        {
+          "check": {
+            "id": "D4_SUCCESS_FLOW", "source": "gdd:SM-WIN-01", "dim": "D4",
+            "assert": "phase == won && BeforeBase.slots.stage == 1 && AfterBase.slots.stage == 2 && AfterSolar.slots.stage == 3 && Won.slots.stage == 4 && slots.energy >= 100 && slots.stage == 4 && count(kind=base_module,state=installed) == 1 && count(kind=solar_wing,state=installed) == 1 && count(kind=power_booster,state=installed) == 1 && slots.time_remaining == Won.slots.time_remaining && target(restart_button).interactable && target(exit_button).interactable"
+          }
+        },
+        { "do": "restart" },
+        { "do": "wait_until", "cond": "phase == menu", "timeout_s": 8 },
+        { "do": "snapshot", "save_as": "WonRestartMenu" },
+        { "do": "click", "target": { "kind": "start_button" } },
+        { "do": "wait_until", "cond": "phase == playing", "timeout_s": 8 },
+        { "do": "click", "target": { "kind": "pause_button" } },
+        { "do": "wait_until", "cond": "phase == paused", "timeout_s": 5 },
+        { "do": "restart" },
+        { "do": "wait_until", "cond": "phase == menu", "timeout_s": 8 },
+        { "do": "snapshot", "save_as": "PausedRestartMenu" },
+        { "do": "click", "target": { "kind": "start_button" } },
+        { "do": "wait_until", "cond": "phase == playing", "timeout_s": 8 },
+        { "do": "wait_until", "cond": "phase == lost", "timeout_s": 130 },
+        { "do": "snapshot", "save_as": "Lost" },
+        { "do": "capture", "save_as": "LossFrame" },
+        { "do": "wait_until", "cond": "wall_clock_since(Lost) >= 1.2", "timeout_s": 3 },
+        {
+          "check": {
+            "id": "D2_RESULTS", "source": "gdd:SM-RESULT-01", "dim": "D2",
+            "assert": "Won.phase == won && phase == lost && target(restart_button).interactable && target(exit_button).interactable"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_OUTCOME_TERMINAL", "source": "gdd:SM-LOSE-01", "dim": "D3",
+            "assert": "Won.slots.stage == 4 && Won.slots.energy >= 100 && Won.slots.time_remaining > 0 && phase == lost && slots.time_remaining == 0 && slots.stage < 4 && slots.energy == Lost.slots.energy && slots.manual_click_count == Lost.slots.manual_click_count && slots.stage == Lost.slots.stage"
+          }
+        },
+        {
+          "check": {
+            "id": "D4_FAILURE_FLOW", "source": "gdd:SM-LOSE-01", "dim": "D4",
+            "assert": "phase == lost && Lost.phase == lost && slots.time_remaining == 0 && slots.stage < 4 && slots.energy == Lost.slots.energy && target(restart_button).interactable && target(exit_button).interactable"
+          }
+        },
+        {
+          "check": {
+            "id": "D5_RESULT_CONTROLS", "source": "gdd:SM-RESULT-01", "dim": "D5",
+            "assert": "capture_nonblank(WinFrame) && capture_nonblank(LossFrame) && ocr_contains_any(WinFrame,[\"STATION ONLINE\",\"The space station is online\"]) && ocr_contains_any(LossFrame,[\"SHIFT ENDED\",\"End of shift\"]) && ocr_contains_any(WinFrame,[\"RESTART\",\"Restart\"]) && ocr_contains_any(LossFrame,[\"RESTART\",\"Restart\"]) && ocr_contains_any(WinFrame,[\"EXIT\",\"Exit\"]) && ocr_contains_any(LossFrame,[\"EXIT\",\"Exit\"])"
+          }
+        },
+        { "do": "restart" },
+        {
+          "do": "wait_until", "cond": "phase == menu", "timeout_s": 8,
+          "check": {
+            "id": "D4_RESTART", "source": "gdd:SM-RESET-01", "dim": "D4",
+            "assert": "WonRestartMenu.phase == menu && WonRestartMenu.slots.energy == 0 && PausedRestartMenu.phase == menu && PausedRestartMenu.slots.energy == 0 && phase == menu && slots.energy == 0 && slots.manual_click_count == 0 && slots.click_power == 1 && slots.passive_per_second == 0 && slots.stage == 1 && slots.time_remaining == 0 && count(kind=base_module,state=installed) == 0 && count(kind=solar_wing,state=installed) == 0 && count(kind=power_booster,state=installed) == 0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "reopen_fresh_process", "title": "Close and reopen without saved shift state", "clean_start": "fresh_process",
+      "steps": [
+        { "do": "start" },
+        { "do": "wait_until", "cond": "phase == menu", "timeout_s": 15, "honesty_safe": true },
+        { "do": "snapshot", "save_as": "HonestyMenuStable", "honesty_safe": true },
+        { "do": "click", "target": { "kind": "start_button" } },
+        { "do": "wait_until", "cond": "phase == playing", "timeout_s": 8 },
+        { "do": "click", "target": { "kind": "generator_button" }, "cond": "slots.energy >= 3", "timeout_s": 5 },
+        { "do": "reopen" },
+        {
+          "do": "wait_until", "cond": "phase == menu", "timeout_s": 15,
+          "check": {
+            "id": "D4_REOPEN", "source": "gdd:SM-LIFECYCLE-01", "dim": "D4",
+            "assert": "phase == menu && slots.energy == 0 && slots.manual_click_count == 0 && slots.click_power == 1 && slots.passive_per_second == 0 && slots.stage == 1 && slots.time_remaining == 0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "normal_exit_from_pause", "title": "Normal exit from the pause overlay", "clean_start": "fresh_process",
+      "steps": [
+        { "do": "start" },
+        { "do": "wait_until", "cond": "phase == menu", "timeout_s": 15, "honesty_safe": true },
+        { "do": "snapshot", "save_as": "HonestyMenuStable", "honesty_safe": true },
+        { "do": "click", "target": { "kind": "start_button" } },
+        { "do": "wait_until", "cond": "phase == playing", "timeout_s": 8 },
+        { "do": "click", "target": { "kind": "pause_button" } },
+        { "do": "wait_until", "cond": "phase == paused", "timeout_s": 5 },
+        { "do": "click", "target": { "kind": "exit_button" } },
+        {
+          "do": "wait_until", "cond": "process_exited", "timeout_s": 8,
+          "check": {
+            "id": "D4_EXIT", "source": "gdd:SM-LIFECYCLE-01", "dim": "D4",
+            "assert": "process_exited && process_exit_code == 0"
+          }
+        }
+      ]
+    }
+  ]
+}

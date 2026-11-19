@@ -1,0 +1,8 @@
+{
+  "name": "GameCreate.Kitchen.SessionContract",
+  "rootNamespace": "GameCreate.Kitchen",
+  "references": [
+    "GameCreate.Session"
+  ],
+  "autoReferenced": true
+}

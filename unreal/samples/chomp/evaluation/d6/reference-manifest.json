@@ -1,0 +1,50 @@
+{
+  "frozen_utc": "2026-10-27T18:57:30.524185+00:00",
+  "candidate_seen": false,
+  "state_count": 3,
+  "rounds": 3,
+  "equal_weight": true,
+  "scoring_guide_sha256": "3e3e6cf19cbd5cda5667c44710f483fbba2ac30af7d098921acc811cf08dfdae",
+  "prompt_sha256": "558b4ccffad7d13d3ae3e5c6fc5a9b36a7bba37d9be47da895c2e50bc9c5a6ee",
+  "states": [
+    {
+      "id": "title",
+      "condition": "Main menu with no active run",
+      "path": "reference/title.png",
+      "sha256": "3daf521d26385908e4338516cd2a2fdaead3666a56285477d896f9d561faa058",
+      "source": "planning/verification/runtime-02/captures/02-menu-restored.png",
+      "source_resolution": [
+        1920,
+        1080
+      ],
+      "comparison_policy": "Preserve aspect ratio; candidate at 1280x720 client pixels; no crop or quality filtering.",
+      "origin": "Preserved original game migrated to UE 5.7.4; prior real input capture; no Gold source."
+    },
+    {
+      "id": "options",
+      "condition": "Options opened from the main menu",
+      "path": "reference/options.png",
+      "sha256": "2405a3f0f567d4230d1b18a00b021213086c5beb0b36085c7e6b1a086ac190a2",
+      "source": "planning/verification/runtime-02/captures/04-options.png",
+      "source_resolution": [
+        1920,
+        1080
+      ],
+      "comparison_policy": "Preserve aspect ratio; candidate at 1280x720 client pixels; no crop or quality filtering.",
+      "origin": "Preserved original game migrated to UE 5.7.4; prior real input capture; no Gold source."
+    },
+    {
+      "id": "maze",
+      "condition": "Early live maze traversal near the player starting region",
+      "path": "reference/maze.png",
+      "sha256": "cf844344f1419d7040331242472e4bc7e809d82869868aa4874aaec16d044c3a",
+      "source": "planning/verification/runtime-01/captures/06-restarted.png",
+      "source_resolution": [
+        1920,
+        1080
+      ],
+      "comparison_policy": "Preserve aspect ratio; candidate at 1280x720 client pixels; no crop or quality filtering.",
+      "origin": "Preserved original game migrated to UE 5.7.4; prior real input capture; no Gold source."
+    }
+  ]
+}

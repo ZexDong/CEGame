@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "assets": [
+    {"id": "dockline_palette", "path": "TaskAssets/style_palette.json", "type": "data", "role": "semantic visual palette"},
+    {"id": "dockline_contact_sheet", "path": "ASSET_CONTACT_SHEET.png", "type": "image", "role": "palette and primitive-role preview"},
+    {"id": "dockline_starter_place", "path": "DocklineDispatchStart.rbxlx", "type": "Roblox place", "role": "blank starting scene"},
+    {"id": "dockline_public_schema", "path": "project/src/shared/DocklineDispatchSchema.luau", "type": "Luau module", "role": "public identifiers and constants"}
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "version": "4.0.0",
+  "source": "UE 5.7.4 derived baseline of the preserved original, not Gold",
+  "source_identity": "b91ccb5a5b11141f9be672f2d3352a87981e6331",
+  "source_engine": "5.5.4",
+  "runtime_engine": "5.7.4 CL 51494982",
+  "guide_sha256": "3e3e6cf19cbd5cda5667c44710f483fbba2ac30af7d098921acc811cf08dfdae",
+  "prompt_sha256": "b2066d4e922dd617804c69f890c8a193f9c6403e1e2db1c693987afe2da481e2",
+  "model": "gpt-6-astra",
+  "rounds": 3,
+  "states": [
+    {
+      "id": "initial",
+      "label": "Initial gameplay",
+      "reference": "reference/initial.png",
+      "sha256": "9f64b55f0ebbae1b8caa49986f53150d573adb1a913ed9ea1c80022cffa96f1a",
+      "size": [
+        1920,
+        1080
+      ],
+      "input": "Normal process entry"
+    },
+    {
+      "id": "navigation",
+      "label": "Gameplay during normal movement",
+      "reference": "reference/navigation.png",
+      "sha256": "0f3dd4b10892d122685c7bab664daedf1b61bd6337fdd7ab9652de0988521a31",
+      "size": [
+        1920,
+        1080
+      ],
+      "input": "W held for 0.3 seconds"
+    },
+    {
+      "id": "reopen",
+      "label": "Initial gameplay after reopen",
+      "reference": "reference/reopen.png",
+      "sha256": "ba645cd0ec6813be74ad56accc168336861f674421c4d60fe869aaf39a2e7442",
+      "size": [
+        1920,
+        1080
+      ],
+      "input": "Normal process entry"
+    }
+  ],
+  "note": "Source maze is procedural; D6 compares presentation and never imposes its layout or gameplay on the fixed task.",
+  "selected_before_candidate_review": true,
+  "selection": "Three source-derived visual states selected before current Gold review: initial, post-W navigation, true-process reopen."
+}

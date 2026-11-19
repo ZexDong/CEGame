@@ -1,0 +1,140 @@
+{
+  "schema_version": "4.0.0",
+  "game_id": "ActionRoguelike",
+  "task_revision": "2.2.0-diagnostic",
+  "evaluator_revision": "actionroguelike-evaluator-4.1.0",
+  "scorer_revision": "actionroguelike-canonical-scorer-4.1.0",
+  "engine": "Unreal Engine 5.6.1 CL 44394996",
+  "platform": "Windows x64",
+  "runtime_mode": "editor_game",
+  "viewport": {
+    "canonical_width": 1280,
+    "canonical_height": 720,
+    "dpi_scale": 1,
+    "client_only": true
+  },
+  "timeouts_seconds": {
+    "build": 900,
+    "start": 60,
+    "visible_frame_readiness": 30,
+    "short_condition": 15,
+    "bootstrap_state": 10,
+    "atomic_first_playable_snapshot": 30,
+    "pre_dispatch_input_lease_wait": 180,
+    "pre_dispatch_neutral_input_wait": 5,
+    "atomic_case": 15,
+    "capture_margin": 10,
+    "cleanup": 15,
+    "terminal": 3,
+    "reopen": 60,
+    "session_watchdog": 3900
+  },
+  "state_identity": {
+    "preferred": "launcher_process_token",
+    "same_process_fallback": "process-<active_unreal_session_process_id>",
+    "same_process_spellings": ["process-<pid>", "proc-<pid>", "pid<pid>"],
+    "arbitrary_token_fallback_prohibited": true,
+    "snapshot_event_token_match_required": true,
+    "round_identity_required": true
+  },
+  "state_read": {
+    "atomic_replace_retry_ms": 750,
+    "poll_ms": 40,
+    "maximum_document_bytes": 4194304,
+    "path_binding": "only_launcher_selected_snapshot_events_health_paths",
+    "scan_fallback": false,
+    "transport": "per_run_nonce_directory_and_basenames",
+    "session_context": "reset_on_start_restart_and_reopen",
+    "monotonic_sequences": true,
+    "publication_envelope_freshness_check": true,
+    "stable_samples_require_distinct_identity": true,
+    "retain_wait_samples": true,
+    "history": {
+      "round_subdirectories": true,
+      "no_fallback_after_history_fault": true,
+      "per_pair_sha256": true,
+      "root": "<events-path>.history/<launcher-token>",
+      "filename": "20-digit_global_sequence.json",
+      "pair_format": "snapshot_and_events_in_one_immutable_json",
+      "start_sequence": 0,
+      "validate_all_intermediate_pairs": true,
+      "backlog_attribution": "evaluator",
+      "cached_schema": true,
+      "rewrite_gap_foreign_rejected": true
+      ,"adapter_revision": "ar-state-history-1.2.1"
+      ,"alternate_layout": {
+        "name": "split_immutable_facts",
+        "batch_root": "<events-parent>/batches",
+        "batch_filename": "batch-<global-sequence>.json",
+        "facts_root": "<snapshot-parent>/records",
+        "fact_filename": "snapshot-<global-sequence>.json",
+        "binding": "batch evidence hash, byte length and clock; snapshot identity; exact event equality after removing only the evidence envelope",
+        "scope": "active launcher-owned transport only; no candidate-tree or old-run search"
+      }
+    }
+    ,"reopen_transport": "verified Stop plus Start with new process token and fresh channel; preserve old immutable sources"
+    ,"independent_publications": {
+      "version": "ar-independent-streams-1.0.0",
+      "recorder": "scripts/ActionRoguelikeTransportRecorder.cs",
+      "start": "before process launch",
+      "poll_ms": 5,
+      "retention": "unaltered raw snapshot/event bytes with SHA-256 and host publication time",
+      "correlation": "same active PID and round; retained event snapshot anchor; monotonic batch order; complete linked cursors; every recent event ID bound before accepting a snapshot",
+      "candidate_history_required": false,
+      "identity_observation_clock_relation": "Identity construction and observation metadata may sample the monotonic clock separately in either order; their absolute difference must remain within declared valid_for_ms. Host publication age and monotonic sequence checks also remain required.",
+      "candidate_bytes_rewritten": false,
+      "partial_snapshot_policy": "Malformed process records fail complete D1 schema validation and dependent rule checks; independently schema-valid player, object, control and UI fields remain usable. Validation views never replace raw evidence.",
+      "missing_batch_or_anchor": "run_invalid; repair collection before scoring"
+    }
+  },
+  "evidence": [
+    "transport_binding_receipt",
+    "state_provider_receipt",
+    "condition_wait_receipt",
+    "case_input_receipt",
+    "distinct_snapshot_event_samples",
+    "contemporaneous_client_capture",
+    "cleanup_receipt"
+  ],
+  "normal_player_input_only": false,
+  "observer_read_only": true,
+  "candidate_failure_dispositions": [
+    "fail",
+    "unreachable"
+  ],
+  "infrastructure_disposition": "run_invalid",
+  "completed_candidate_null_scores_prohibited": true,
+  "scope": "canonical_independent_atomic_cases_and_d6",
+  "atomic_case_contract": {
+    "path": "contracts/atomic-check-contract.json",
+    "revision": "actionroguelike-atomic-evaluator-4.1.0",
+    "module": "scripts/ActionRoguelikeAtomicChecks.ps1",
+    "checkpoint_ids": [
+      "D2-08",
+      "D2-10",
+      "D2-13",
+      "D3-03",
+      "D3-04",
+      "D3-05",
+      "D3-07",
+      "D4-02"
+    ]
+  },
+  "engine_selection": "exact_trusted_manifest_version_and_changelist",
+  "project_binding": "explicit_project_or_manifest;safe_relative_paths;unique_declared_editor_target;content_only_UnrealEditor",
+  "executor_selection": "exact_repository_relative_manifest_path_and_sha256;no_version_fallback",
+  "budget_validation": {
+    "watchdog_enforced": false,
+    "case_serial_budget_seconds": 15,
+    "per_process_start_seconds": 60,
+    "per_process_cleanup_seconds": 15,
+    "variant_count": 26,
+    "aggregate_budget_seconds": 3600,
+    "session_watchdog_seconds": 3900,
+    "note": "Per-operation input, launch, capture, waits and cleanup are bounded. The aggregate watchdog is declared and elapsed time measured; it is not a hard process supervisor."
+  },
+  "score_publication": "canonical_numeric_d1_to_d6_only_after_gold_and_untouched_health",
+  "incomplete_record": "evaluation-not-completed.json",
+  "tested_behavior": "real input or natural tick; private native precondition setup is separately receipted",
+  "fixture_contract": "contracts/atomic-check-contract.json#fixture_runtime"
+}

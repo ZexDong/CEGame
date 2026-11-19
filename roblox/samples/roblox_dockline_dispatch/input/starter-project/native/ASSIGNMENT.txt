@@ -1,0 +1,44 @@
+Task: Dockline Dispatch: Night Shift - Roblox Development
+
+Build a complete, winnable single-player Roblox game from this public package and
+its starter project, which has no gameplay implementation.
+The game must support the shared controller through the public contract.
+
+Read:
+1. GDD.md: rules, state machine, world constraints, and success flow.
+2. EVALUABILITY_CONTRACT.md: fixed tags, Attributes, navigation, and physical APIs.
+3. EVALUATION_SCHEMA.json: machine-readable protocol constants.
+4. VISUAL_SPEC.md: visual language and representative states.
+5. BENCHMARK_MANIFEST.json and ASSET_MANIFEST.json: inputs, assets, limits, scope.
+6. ROBLOX_STUDIO_TOOL_GUIDE.md: fixed single-tool interface catalog.
+7. TOOLCHAIN.md and ScaffoldTests/: task paths and scaffold checks.
+8. project/: blank Rojo starter containing public constant ModuleScripts only.
+9. legal/: licenses.
+
+Requirements:
+1. Implement in a copy of project/. Do not inspect parent/sibling directories or
+   other task artifacts.
+2. Do not request or use reference solutions, private evaluators/rules,
+   evaluation trajectories, faulty variants, reference source, or old candidates.
+3. Public tags, Attributes, events, and HUD must mirror real player/world behavior.
+4. Object names, hierarchy, scripts, orientation, decoration, and equivalent UI
+   layout are flexible.
+5. Preserve frozen strings, types, counts, uniqueness, physics, and navigation.
+6. Studio/F5 Play and lengthy dynamic self-tests are not required during
+   development. Prioritize implementation within the allotted time.
+7. Quick static checks and one Rojo build are allowed. If Play was not run, state
+   Runtime verification: NOT RUN. Do not claim an unperformed runtime check.
+8. Return complete project source, DocklineDispatchCandidate.rbxlx, BUILD_REPORT.txt,
+   DEVELOPMENT_TRACE.txt, and a project ZIP.
+9. Record build commands/results, static checks, unverified behavior, and issues.
+10. Record real development actions and tool results; do not invent play records.
+11. Preserve existing public constant string values and use the specified protocol.
+12. Choose layout and implementation independently within the public constraints.
+13. Hard development limit: 3600 seconds. Stop and return the current project at
+    the deadline; do not start a second development window.
+
+Independent evaluation performs real Play, error paths, death, R restart,
+Reopen, evidence collection, and scoring after candidate delivery.
+
+DD_NavLink is Configuration; set DD_Enabled as an Attribute, never link.Enabled.
+Do not build a scorer or guess private evaluation trajectories.

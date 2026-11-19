@@ -1,0 +1,60 @@
+{
+  "version": "gemsbond-d6-1.0.1",
+  "states_fixed_before_gold_render": true,
+  "scoring_guide": "../../../../gamecreate/GAME_INDEPENDENT_SCORING_GUIDE.md",
+  "scoring_guide_sha256": "3e3e6cf19cbd5cda5667c44710f483fbba2ac30af7d098921acc811cf08dfdae",
+  "prompt": "prompt.txt",
+  "prompt_sha256": "5768572dde98f6568c7720ebd2022dd04f53e83711f45044434e1b17731dfb3b",
+  "states": [
+    {
+      "id": "opening",
+      "label": "Initial gameplay",
+      "reference": "reference/01-opening.png",
+      "sha256": "5d1c31bb6e1d2fe9b712faf8b450c08649558f1c61dfae64fa82ddbf5142c0ec",
+      "capture_condition": "Fresh launch; no purchases.",
+      "source": "input/reference/01-opening.png",
+      "reference_dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "id": "placement",
+      "label": "Placement and construction",
+      "reference": "reference/02-placement.png",
+      "sha256": "fe022fbba89eab5306c716a511db2607cab1aea8432c13726dc854bdd67bec95",
+      "capture_condition": "One completed archer tower; build palette visible and mine selected; no purchased mine or enemies. Match the fixed reference, which already contains a tower.",
+      "source": "input/reference/02-placement.png",
+      "reference_dimensions": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "id": "combat",
+      "label": "Combat",
+      "reference": "reference/03-combat.png",
+      "sha256": "3cf2b96b8db63c7c372ac544d3c2c0760315aa7fe080ecc515c25900230c9d62",
+      "capture_condition": "Build a first mine and defenses through normal input; capture while enemies and a defense are visible.",
+      "source": "input/reference/03-combat.png",
+      "reference_dimensions": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "rounds": 3,
+  "image_order": [
+    "reference",
+    "candidate"
+  ],
+  "candidate_viewport": [
+    1920,
+    1080
+  ],
+  "backend": "direct_conversation",
+  "aggregation": "equal state mean in each round, then mean of three rounds; one decimal",
+  "candidate_missing_black_broken_or_unreachable": "zero with evidence",
+  "infrastructure_failure": "run_invalid; no score",
+  "capture_condition_correction": "The preselected reference images are unchanged. Candidate placement previously showed only a preview; corrected after direct image inspection, before completing any placement ratings."
+}

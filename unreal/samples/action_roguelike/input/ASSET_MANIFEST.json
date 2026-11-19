@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "ActionRoguelike",
+  "project_root": "starter-project",
+  "catalog": "assets/ASSET_CATALOG.json",
+  "human_catalog": "assets/ASSET_CATALOG.md",
+  "coverage": "ASSET_COVERAGE.json",
+  "license": "assets/legal/LICENSE_SCOPE.md",
+  "license_map": "assets/legal/ASSET_LICENSE_MAP.json",
+  "notices": "THIRD_PARTY_NOTICES.md",
+  "asset_count": 269,
+  "total_bytes": 199381301,
+  "all_assets_inside_project": true,
+  "source_material_only": true,
+  "assembled_target_gameplay_present": false,
+  "allowed_use": "Use exact compatible candidates listed by requirement group inside the Unreal Engine project.",
+  "prohibited_substitution": "Do not replace hard presentation assets with generated, invisible, icon-only, text-only, or primitive placeholder content.",
+  "catalog_sha256": "3766343eb4eadef3bf220b17bbf679e806dcb7e048833b3fa95226edf738acbf"
+}

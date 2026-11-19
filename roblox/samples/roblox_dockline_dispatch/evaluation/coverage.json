@@ -1,0 +1,153 @@
+{
+  "sample_id": "roblox_dockline_dispatch",
+  "document_type": "Original GDD and evaluator source index",
+  "new_evaluation_requirement": false,
+  "requirements": [
+    {
+      "requirement_id": "DD-GDD-1",
+      "obligation": "Dockline Dispatch: Night Shift Game Design Document",
+      "source_line": 1,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-2",
+      "obligation": "1. Overview",
+      "source_line": 3,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-3",
+      "obligation": "2. Player input",
+      "source_line": 11,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-4",
+      "obligation": "3. World areas",
+      "source_line": 22,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-5",
+      "obligation": "4. Fixed packages and routes",
+      "source_line": 38,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-6",
+      "obligation": "5. Shift start and scanning",
+      "source_line": 48,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-7",
+      "obligation": "6. Package-specific processing",
+      "source_line": 58,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-8",
+      "obligation": "6.1 Fragile wrapping",
+      "source_line": 60,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-9",
+      "obligation": "6.2 Cold conditioning",
+      "source_line": 66,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-10",
+      "obligation": "6.3 Secure authorization",
+      "source_line": 72,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-11",
+      "obligation": "7. Weighing and labeling",
+      "source_line": 81,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-12",
+      "obligation": "8. Conveyor routing and rejection recovery",
+      "source_line": 90,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-13",
+      "obligation": "8.1 Diverters",
+      "source_line": 92,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-14",
+      "obligation": "8.2 Correct and incorrect routes",
+      "source_line": 104,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-15",
+      "obligation": "9. Staging and pallet loading",
+      "source_line": 116,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-16",
+      "obligation": "10. Checkpoint, hazard, and death recovery",
+      "source_line": 127,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-17",
+      "obligation": "11. Truck seal and final dispatch",
+      "source_line": 139,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-18",
+      "obligation": "12. HUD and feedback",
+      "source_line": 149,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-19",
+      "obligation": "13. Failure, R, and Reopen",
+      "source_line": 169,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-20",
+      "obligation": "Local failures",
+      "source_line": 171,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-21",
+      "obligation": "R restart",
+      "source_line": 180,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-22",
+      "obligation": "Reopen",
+      "source_line": 191,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-23",
+      "obligation": "14. World and movement constraints",
+      "source_line": 195,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "DD-GDD-24",
+      "obligation": "15. Consistency and invalid substitutes",
+      "source_line": 208,
+      "native_evaluator_sources": "src/original/"
+    }
+  ],
+  "original_coverage_files": [],
+  "existing_evaluators_preserved": true
+}

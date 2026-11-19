@@ -1,0 +1,1667 @@
+{
+  "schema_version": "2.0",
+  "coverage_status": "not_reviewed",
+  "gdd_sha256": "12df8d731f92a22fa950861a92ead94fd626aab9214d604d2e853b4b90b792a3",
+  "limitations": [
+    "Native requirement mapping is preserved; independent semantic coverage and targeted positive/negative/equivalent game fixtures have not been qualified."
+  ],
+  "requirements": [
+    {
+      "requirement_id": "LAYOUT-01",
+      "obligation_id": "LAYOUT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The game enters its playable scene.",
+      "check_ids": [
+        "D2-board",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LAYOUT-01",
+      "obligation_id": "LAYOUT-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Natural scene start.",
+      "check_ids": [
+        "D2-board",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LAYOUT-01",
+      "obligation_id": "LAYOUT-01.3.1",
+      "field": "Required result",
+      "obligation": "The playable arena uses the supplied board floor and wall meshes together with the complete 10x10 cell and wall arrangement identified as `rollball-fixed-maze-10x10-v2` in the supplied fixed-layout data.",
+      "check_ids": [
+        "D2-board",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LAYOUT-01",
+      "obligation_id": "LAYOUT-01.3.2",
+      "field": "Required result",
+      "obligation": "All perimeter and internal walls in that layout are present as gameplay collision boundaries.",
+      "check_ids": [
+        "D2-board",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LAYOUT-01",
+      "obligation_id": "LAYOUT-01.4.1",
+      "field": "Prohibited result",
+      "obligation": "The arena must not procedurally regenerate, choose another seed, omit layout walls, add route-changing walls, replace the supplied board meshes, or substitute a different maze.",
+      "check_ids": [
+        "D2-board",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LAYOUT-01",
+      "obligation_id": "LAYOUT-01.5.1",
+      "field": "Player-visible feedback",
+      "obligation": "The full fixed board is visible from the normal play view and the supplied board geometry is recognizable.",
+      "check_ids": [
+        "D2-board",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LAYOUT-01",
+      "obligation_id": "LAYOUT-01.6.1",
+      "field": "Failure, repetition, restart, reopen, or other boundary",
+      "obligation": "The same layout and supplied board meshes must remain in use after trap recovery, `R` restart, and true process reopen.",
+      "check_ids": [
+        "D2-board",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LAYOUT-02",
+      "obligation_id": "LAYOUT-02.1.1",
+      "field": "Preconditions",
+      "obligation": "`LAYOUT-01` is present.",
+      "check_ids": [
+        "D2-traps",
+        "D2-exit",
+        "D3-initial",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LAYOUT-02",
+      "obligation_id": "LAYOUT-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Natural scene start.",
+      "check_ids": [
+        "D2-traps",
+        "D2-exit",
+        "D3-initial",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LAYOUT-02",
+      "obligation_id": "LAYOUT-02.3.1",
+      "field": "Required result",
+      "obligation": "The supplied trap-hole mesh is used at exactly `(4,9)`, `(6,8)`, `(0,8)`, `(8,6)`, `(0,7)`, `(3,7)`, `(6,7)`, `(1,5)`, `(4,4)`, `(7,4)`, `(6,3)`, `(1,1)`, `(8,1)`, `(9,1)`, `(6,0)`, and `(7,0)`.",
+      "check_ids": [
+        "D2-traps",
+        "D2-exit",
+        "D3-initial",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LAYOUT-02",
+      "obligation_id": "LAYOUT-02.3.2",
+      "field": "Required result",
+      "obligation": "The ball starts at the center of cell `(0,0)`, the exit occupies cell `(9,9)`, and coordinates use the supplied bottom-left origin, with `x` increasing right and `y` increasing up.",
+      "check_ids": [
+        "D2-traps",
+        "D2-exit",
+        "D3-initial",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LAYOUT-02",
+      "obligation_id": "LAYOUT-02.4.1",
+      "field": "Prohibited result",
+      "obligation": "The start, exit, or traps must not move, duplicate, disappear, change type, or lose the supplied hole geometry between runs.",
+      "check_ids": [
+        "D2-traps",
+        "D2-exit",
+        "D3-initial",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LAYOUT-02",
+      "obligation_id": "LAYOUT-02.5.1",
+      "field": "Player-visible feedback",
+      "obligation": "Start, trap openings, and exit cells are visually distinguishable.",
+      "check_ids": [
+        "D2-traps",
+        "D2-exit",
+        "D3-initial",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LAYOUT-02",
+      "obligation_id": "LAYOUT-02.6.1",
+      "field": "Failure, repetition, restart, reopen, or other boundary",
+      "obligation": "Trap recovery, restart, and reopen restore exactly these cells and the supplied trap-hole presentation.",
+      "check_ids": [
+        "D2-traps",
+        "D2-exit",
+        "D3-initial",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAMERA-01",
+      "obligation_id": "CAMERA-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The playable scene is active.",
+      "check_ids": [
+        "D5-camera",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAMERA-01",
+      "obligation_id": "CAMERA-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Natural scene start and normal movement.",
+      "check_ids": [
+        "D5-camera",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAMERA-01",
+      "obligation_id": "CAMERA-01.3.1",
+      "field": "Required result",
+      "obligation": "A stable top-down camera shows the entire 10x10 maze at once.",
+      "check_ids": [
+        "D5-camera",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAMERA-01",
+      "obligation_id": "CAMERA-01.3.2",
+      "field": "Required result",
+      "obligation": "Screen up corresponds to increasing layout `y`, and screen right corresponds to increasing layout `x`.",
+      "check_ids": [
+        "D5-camera",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAMERA-01",
+      "obligation_id": "CAMERA-01.3.3",
+      "field": "Required result",
+      "obligation": "The ball, walls, traps, and exit remain readable throughout normal play.",
+      "check_ids": [
+        "D5-camera",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAMERA-01",
+      "obligation_id": "CAMERA-01.4.1",
+      "field": "Prohibited result",
+      "obligation": "The camera must not rotate, mirror the layout, follow so closely that required cells leave the view, or become controlled by mouse movement.",
+      "check_ids": [
+        "D5-camera",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAMERA-01",
+      "obligation_id": "CAMERA-01.5.1",
+      "field": "Player-visible feedback",
+      "obligation": "The maze orientation and all gameplay-critical objects remain clear.",
+      "check_ids": [
+        "D5-camera",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAMERA-01",
+      "obligation_id": "CAMERA-01.6.1",
+      "field": "Failure, repetition, restart, reopen, or other boundary",
+      "obligation": "Camera orientation and framing remain the same after trap recovery, restart, and reopen.",
+      "check_ids": [
+        "D5-camera",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVEMENT-01",
+      "obligation_id": "MOVEMENT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Status is `RUNNING` and the ball is not in trap recovery.",
+      "check_ids": [
+        "D3-directions",
+        "D3-countersteer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVEMENT-01",
+      "obligation_id": "MOVEMENT-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Hold `W`, `A`, `S`, or `D`, then release it.",
+      "check_ids": [
+        "D3-directions",
+        "D3-countersteer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVEMENT-01",
+      "obligation_id": "MOVEMENT-01.3.1",
+      "field": "Required result",
+      "obligation": "`W` drives the ball toward increasing `y`, `S` toward decreasing `y`, `A` toward decreasing `x`, and `D` toward increasing `x`.",
+      "check_ids": [
+        "D3-directions",
+        "D3-countersteer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVEMENT-01",
+      "obligation_id": "MOVEMENT-01.3.2",
+      "field": "Required result",
+      "obligation": "Holding a key continues applying motion input; releasing it stops applying that directional input.",
+      "check_ids": [
+        "D3-directions",
+        "D3-countersteer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVEMENT-01",
+      "obligation_id": "MOVEMENT-01.3.3",
+      "field": "Required result",
+      "obligation": "Opposite and diagonal key combinations may be handled by any consistent physics implementation.",
+      "check_ids": [
+        "D3-directions",
+        "D3-countersteer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVEMENT-01",
+      "obligation_id": "MOVEMENT-01.4.1",
+      "field": "Prohibited result",
+      "obligation": "Input must not teleport the ball, directly set success, disable collisions, or work only through a debug or evaluator-only path.",
+      "check_ids": [
+        "D3-directions",
+        "D3-countersteer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVEMENT-01",
+      "obligation_id": "MOVEMENT-01.5.1",
+      "field": "Player-visible feedback",
+      "obligation": "The ball visibly accelerates in the requested direction when not blocked.",
+      "check_ids": [
+        "D3-directions",
+        "D3-countersteer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVEMENT-01",
+      "obligation_id": "MOVEMENT-01.5.2",
+      "field": "Player-visible feedback",
+      "obligation": "The motion has a deliberately slippery feel: releasing a key removes new drive but does not instantly cancel existing travel, and a direction change needs a short counter-steering interval before the ball settles into the new direction.",
+      "check_ids": [
+        "D3-directions",
+        "D3-countersteer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVEMENT-01",
+      "obligation_id": "MOVEMENT-01.6.1",
+      "field": "Failure, repetition, restart, reopen, or other boundary",
+      "obligation": "Movement input is ignored while the run is completed and while trap recovery has temporarily disabled control.",
+      "check_ids": [
+        "D3-directions",
+        "D3-countersteer"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVEMENT-02",
+      "obligation_id": "MOVEMENT-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Status is `RUNNING`.",
+      "check_ids": [
+        "D2-ball",
+        "D3-coast",
+        "D5-roll",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVEMENT-02",
+      "obligation_id": "MOVEMENT-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Apply and release movement input.",
+      "check_ids": [
+        "D2-ball",
+        "D3-coast",
+        "D5-roll",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVEMENT-02",
+      "obligation_id": "MOVEMENT-02.3.1",
+      "field": "Required result",
+      "obligation": "The supplied 3D sphere mesh is the visible player object.",
+      "check_ids": [
+        "D2-ball",
+        "D3-coast",
+        "D5-roll",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVEMENT-02",
+      "obligation_id": "MOVEMENT-02.3.2",
+      "field": "Required result",
+      "obligation": "It uses continuous physical motion: its world position changes across frames, the sphere visibly rotates around a horizontal axis as it travels, and it retains bounded momentum after input release before damping or collision slows it.",
+      "check_ids": [
+        "D2-ball",
+        "D3-coast",
+        "D5-roll",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVEMENT-02",
+      "obligation_id": "MOVEMENT-02.3.3",
+      "field": "Required result",
+      "obligation": "The player can read the ball’s three-dimensional shading and rotation from the normal camera.",
+      "check_ids": [
+        "D2-ball",
+        "D3-coast",
+        "D5-roll",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVEMENT-02",
+      "obligation_id": "MOVEMENT-02.4.1",
+      "field": "Prohibited result",
+      "obligation": "The ball must not be replaced by a 2D sprite, flat icon, primitive, unrelated mesh, cell-center teleport, instant route traversal, or visually unrotated sliding marker.",
+      "check_ids": [
+        "D2-ball",
+        "D3-coast",
+        "D5-roll",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVEMENT-02",
+      "obligation_id": "MOVEMENT-02.5.1",
+      "field": "Player-visible feedback",
+      "obligation": "Translation, three-dimensional form, and rolling rotation are all visible from the top-down camera.",
+      "check_ids": [
+        "D2-ball",
+        "D3-coast",
+        "D5-roll",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVEMENT-02",
+      "obligation_id": "MOVEMENT-02.6.1",
+      "field": "Failure, repetition, restart, reopen, or other boundary",
+      "obligation": "Repeated direction changes remain stable and controllable; restart or reset removes old linear and angular velocity.",
+      "check_ids": [
+        "D2-ball",
+        "D3-coast",
+        "D5-roll",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COLLISION-01",
+      "obligation_id": "COLLISION-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The ball is moving during `RUNNING`.",
+      "check_ids": [
+        "D3-perimeter",
+        "D3-internal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COLLISION-01",
+      "obligation_id": "COLLISION-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Drive the ball with noticeable speed into a perimeter or internal wall.",
+      "check_ids": [
+        "D3-perimeter",
+        "D3-internal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COLLISION-01",
+      "obligation_id": "COLLISION-01.3.1",
+      "field": "Required result",
+      "obligation": "The wall physically blocks the ball.",
+      "check_ids": [
+        "D3-perimeter",
+        "D3-internal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COLLISION-01",
+      "obligation_id": "COLLISION-01.3.2",
+      "field": "Required result",
+      "obligation": "On a clear non-zero-speed impact, the ball visibly bounces/rebounds away from the wall by reversing its inward motion, then remains on the playable board and can be steered normally.",
+      "check_ids": [
+        "D3-perimeter",
+        "D3-internal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COLLISION-01",
+      "obligation_id": "COLLISION-01.4.1",
+      "field": "Prohibited result",
+      "obligation": "The ball must not pass through, tunnel through, climb over, become stuck inside, or leave the playable maze through a wall during ordinary input; a meaningful-speed impact must not simply dead-stop without a visible bounce/rebound.",
+      "check_ids": [
+        "D3-perimeter",
+        "D3-internal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COLLISION-01",
+      "obligation_id": "COLLISION-01.5.1",
+      "field": "Player-visible feedback",
+      "obligation": "Contact produces a visible block and bounce/rebound; a near-zero-speed touch may settle or slide.",
+      "check_ids": [
+        "D3-perimeter",
+        "D3-internal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COLLISION-01",
+      "obligation_id": "COLLISION-01.6.1",
+      "field": "Failure, repetition, restart, reopen, or other boundary",
+      "obligation": "Repeated wall contacts and bounces/rebounds must not disable later movement or corrupt the fixed layout.",
+      "check_ids": [
+        "D3-perimeter",
+        "D3-internal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-01",
+      "obligation_id": "HAZARD-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Status is `RUNNING`; the ball has not completed the maze.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-safe-rim",
+        "D3-opening",
+        "D3-hit-lock",
+        "D3-repeat-hit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-01",
+      "obligation_id": "HAZARD-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "The ball overlaps the visible central hole/opening of any trap tile listed by `LAYOUT-02`.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-safe-rim",
+        "D3-opening",
+        "D3-hit-lock",
+        "D3-repeat-hit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-01",
+      "obligation_id": "HAZARD-01.3.1",
+      "field": "Required result",
+      "obligation": "The run immediately leaves ordinary running play and begins one trap-recovery transaction.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-safe-rim",
+        "D3-opening",
+        "D3-hit-lock",
+        "D3-repeat-hit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-01",
+      "obligation_id": "HAZARD-01.3.2",
+      "field": "Required result",
+      "obligation": "The same opening contact is counted once.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-safe-rim",
+        "D3-opening",
+        "D3-hit-lock",
+        "D3-repeat-hit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-01",
+      "obligation_id": "HAZARD-01.4.1",
+      "field": "Prohibited result",
+      "obligation": "Trap-rim or surrounding safe-floor contact must not trigger the failure response; a trap opening must not complete the maze, move a trap, regenerate the maze, create multiple counts from one uninterrupted contact, or allow continued player control during recovery.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-safe-rim",
+        "D3-opening",
+        "D3-hit-lock",
+        "D3-repeat-hit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-01",
+      "obligation_id": "HAZARD-01.5.1",
+      "field": "Player-visible feedback",
+      "obligation": "Status changes to the exact text `TRAP HIT`.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-safe-rim",
+        "D3-opening",
+        "D3-hit-lock",
+        "D3-repeat-hit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-01",
+      "obligation_id": "HAZARD-01.6.1",
+      "field": "Failure, repetition, restart, reopen, or other boundary",
+      "obligation": "Contact with non-trap floor or the safe outer rim of a trap tile must not trigger this requirement.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-safe-rim",
+        "D3-opening",
+        "D3-hit-lock",
+        "D3-repeat-hit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-01",
+      "obligation_id": "HAZARD-01.6.2",
+      "field": "Failure, repetition, restart, reopen, or other boundary",
+      "obligation": "A new opening contact after recovery may trigger it again.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-safe-rim",
+        "D3-opening",
+        "D3-hit-lock",
+        "D3-repeat-hit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-02",
+      "obligation_id": "HAZARD-02.1.1",
+      "field": "Preconditions",
+      "obligation": "`HAZARD-01` has begun.",
+      "check_ids": [
+        "D3-hit-count",
+        "D3-hit-time",
+        "D3-reset",
+        "D4-resume"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-02",
+      "obligation_id": "HAZARD-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Natural recovery sequence.",
+      "check_ids": [
+        "D3-hit-count",
+        "D3-hit-time",
+        "D3-reset",
+        "D4-resume"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-02",
+      "obligation_id": "HAZARD-02.3.1",
+      "field": "Required result",
+      "obligation": "`TRAP HIT` remains visible for at least 0.75 seconds and no longer than 2.0 seconds.",
+      "check_ids": [
+        "D3-hit-count",
+        "D3-hit-time",
+        "D3-reset",
+        "D4-resume"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-02",
+      "obligation_id": "HAZARD-02.3.2",
+      "field": "Required result",
+      "obligation": "The displayed trap-hit count increases by exactly one.",
+      "check_ids": [
+        "D3-hit-count",
+        "D3-hit-time",
+        "D3-reset",
+        "D4-resume"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-02",
+      "obligation_id": "HAZARD-02.3.3",
+      "field": "Required result",
+      "obligation": "By the end of the interval, the ball is restored to the center of `(0,0)` with zero linear and angular velocity, status returns to `RUNNING`, and normal input is enabled.",
+      "check_ids": [
+        "D3-hit-count",
+        "D3-hit-time",
+        "D3-reset",
+        "D4-resume"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-02",
+      "obligation_id": "HAZARD-02.4.1",
+      "field": "Prohibited result",
+      "obligation": "The ball must not respawn on a trap opening, preserve pre-hit velocity, change the fixed layout, reset the trap-hit count, or accept movement before recovery ends.",
+      "check_ids": [
+        "D3-hit-count",
+        "D3-hit-time",
+        "D3-reset",
+        "D4-resume"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-02",
+      "obligation_id": "HAZARD-02.5.1",
+      "field": "Player-visible feedback",
+      "obligation": "The failure text and updated count are readable, followed by the restored running view.",
+      "check_ids": [
+        "D3-hit-count",
+        "D3-hit-time",
+        "D3-reset",
+        "D4-resume"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-02",
+      "obligation_id": "HAZARD-02.6.1",
+      "field": "Failure, repetition, restart, reopen, or other boundary",
+      "obligation": "Repeated opening contacts repeat the same transaction. `R` during recovery performs `RESTART-01` and cancels the pending recovery without a later stale reset.",
+      "check_ids": [
+        "D3-hit-count",
+        "D3-hit-time",
+        "D3-reset",
+        "D4-resume"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GOAL-01",
+      "obligation_id": "GOAL-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Status is `RUNNING`; the ball has not entered trap recovery.",
+      "check_ids": [
+        "D3-goal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GOAL-01",
+      "obligation_id": "GOAL-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "The ball touches or enters the exit cell `(9,9)`.",
+      "check_ids": [
+        "D3-goal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GOAL-01",
+      "obligation_id": "GOAL-01.3.1",
+      "field": "Required result",
+      "obligation": "The run completes exactly once.",
+      "check_ids": [
+        "D3-goal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GOAL-01",
+      "obligation_id": "GOAL-01.4.1",
+      "field": "Prohibited result",
+      "obligation": "Completion must not occur from entering another cell, pressing an unrelated key, touching a trap, starting the game, or using a hidden shortcut.",
+      "check_ids": [
+        "D3-goal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GOAL-01",
+      "obligation_id": "GOAL-01.5.1",
+      "field": "Player-visible feedback",
+      "obligation": "Status changes to the exact text `MAZE COMPLETE`.",
+      "check_ids": [
+        "D3-goal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GOAL-01",
+      "obligation_id": "GOAL-01.6.1",
+      "field": "Failure, repetition, restart, reopen, or other boundary",
+      "obligation": "Further overlap with the exit during the same completed run has no additional effect.",
+      "check_ids": [
+        "D3-goal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GOAL-02",
+      "obligation_id": "GOAL-02.1.1",
+      "field": "Preconditions",
+      "obligation": "`GOAL-01` has completed the run.",
+      "check_ids": [
+        "D3-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GOAL-02",
+      "obligation_id": "GOAL-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Natural post-completion state and attempted movement input.",
+      "check_ids": [
+        "D3-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GOAL-02",
+      "obligation_id": "GOAL-02.3.1",
+      "field": "Required result",
+      "obligation": "The ball is held in a stable completed state, movement input no longer changes its position, the trap-hit count remains readable, and `MAZE COMPLETE` remains visible until `R` or process exit.",
+      "check_ids": [
+        "D3-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GOAL-02",
+      "obligation_id": "GOAL-02.4.1",
+      "field": "Prohibited result",
+      "obligation": "Traps, old momentum, timers, or movement input must not change gameplay state after completion.",
+      "check_ids": [
+        "D3-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GOAL-02",
+      "obligation_id": "GOAL-02.4.2",
+      "field": "Prohibited result",
+      "obligation": "A new maze must not be generated.",
+      "check_ids": [
+        "D3-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GOAL-02",
+      "obligation_id": "GOAL-02.5.1",
+      "field": "Player-visible feedback",
+      "obligation": "The fixed maze, ball, and persistent completion text remain visible.",
+      "check_ids": [
+        "D3-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GOAL-02",
+      "obligation_id": "GOAL-02.6.1",
+      "field": "Failure, repetition, restart, reopen, or other boundary",
+      "obligation": "`R` performs `RESTART-01`; `Esc` performs `EXIT-01`.",
+      "check_ids": [
+        "D3-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The playable scene is visible.",
+      "check_ids": [
+        "D5-running",
+        "D5-trap",
+        "D5-complete",
+        "D5-restart",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Natural state changes.",
+      "check_ids": [
+        "D5-running",
+        "D5-trap",
+        "D5-complete",
+        "D5-restart",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.3.1",
+      "field": "Required result",
+      "obligation": "A readable HUD always shows `STATUS: RUNNING`, `STATUS: TRAP HIT`, or `STATUS: MAZE COMPLETE` according to the true state, plus `TRAP HITS: <non-negative integer>` and `R - RESTART`.",
+      "check_ids": [
+        "D5-running",
+        "D5-trap",
+        "D5-complete",
+        "D5-restart",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.3.2",
+      "field": "Required result",
+      "obligation": "Updates are visible in the same frame or the next rendered frame after the authoritative state change.",
+      "check_ids": [
+        "D5-running",
+        "D5-trap",
+        "D5-complete",
+        "D5-restart",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.4.1",
+      "field": "Prohibited result",
+      "obligation": "HUD text must not contradict the real state, remain hidden, use placeholder text, or show completion before `GOAL-01`.",
+      "check_ids": [
+        "D5-running",
+        "D5-trap",
+        "D5-complete",
+        "D5-restart",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.5.1",
+      "field": "Player-visible feedback",
+      "obligation": "The exact labels and current values are visible without opening a menu.",
+      "check_ids": [
+        "D5-running",
+        "D5-trap",
+        "D5-complete",
+        "D5-restart",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.6.1",
+      "field": "Failure, repetition, restart, reopen, or other boundary",
+      "obligation": "Restart and reopen show `STATUS: RUNNING` and `TRAP HITS: 0`.",
+      "check_ids": [
+        "D5-running",
+        "D5-trap",
+        "D5-complete",
+        "D5-restart",
+        "D6-initial",
+        "D6-navigation",
+        "D6-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-01",
+      "obligation_id": "RESTART-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The game is running, recovering from a trap, or completed.",
+      "check_ids": [
+        "D4-restart-running",
+        "D4-restart-trap",
+        "D4-restart-terminal",
+        "D4-restart-repeat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-01",
+      "obligation_id": "RESTART-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Press `R` once.",
+      "check_ids": [
+        "D4-restart-running",
+        "D4-restart-trap",
+        "D4-restart-terminal",
+        "D4-restart-repeat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-01",
+      "obligation_id": "RESTART-01.3.1",
+      "field": "Required result",
+      "obligation": "A new clean run begins within 2.0 seconds on the same fixed layout.",
+      "check_ids": [
+        "D4-restart-running",
+        "D4-restart-trap",
+        "D4-restart-terminal",
+        "D4-restart-repeat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-01",
+      "obligation_id": "RESTART-01.3.2",
+      "field": "Required result",
+      "obligation": "The ball is centered at `(0,0)` with zero linear and angular velocity, status is `RUNNING`, trap hits are `0`, input is enabled, and no old recovery or completion action fires later.",
+      "check_ids": [
+        "D4-restart-running",
+        "D4-restart-trap",
+        "D4-restart-terminal",
+        "D4-restart-repeat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-01",
+      "obligation_id": "RESTART-01.4.1",
+      "field": "Prohibited result",
+      "obligation": "Restart must not generate a different layout, preserve trap hits, preserve terminal status, preserve velocity, or require process relaunch.",
+      "check_ids": [
+        "D4-restart-running",
+        "D4-restart-trap",
+        "D4-restart-terminal",
+        "D4-restart-repeat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-01",
+      "obligation_id": "RESTART-01.5.1",
+      "field": "Player-visible feedback",
+      "obligation": "The restored start state and reset HUD are visible.",
+      "check_ids": [
+        "D4-restart-running",
+        "D4-restart-trap",
+        "D4-restart-terminal",
+        "D4-restart-repeat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-01",
+      "obligation_id": "RESTART-01.6.1",
+      "field": "Failure, repetition, restart, reopen, or other boundary",
+      "obligation": "Repeated `R` presses leave one healthy current run and do not accumulate duplicate balls, traps, exits, cameras, HUDs, timers, or input bindings.",
+      "check_ids": [
+        "D4-restart-running",
+        "D4-restart-trap",
+        "D4-restart-terminal",
+        "D4-restart-repeat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "REOPEN-01",
+      "obligation_id": "REOPEN-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The process has previously been played in any state and then closed.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "REOPEN-01",
+      "obligation_id": "REOPEN-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Start a genuinely new game process.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "REOPEN-01",
+      "obligation_id": "REOPEN-01.3.1",
+      "field": "Required result",
+      "obligation": "The new process begins a fresh run using the same fixed layout, with the ball at `(0,0)`, status `RUNNING`, trap hits `0`, and normal input enabled.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "REOPEN-01",
+      "obligation_id": "REOPEN-01.4.1",
+      "field": "Prohibited result",
+      "obligation": "Gameplay progress, completion, trap-hit count, velocity, or pending recovery from the old process must not persist.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "REOPEN-01",
+      "obligation_id": "REOPEN-01.5.1",
+      "field": "Player-visible feedback",
+      "obligation": "The standard initial running view is visible.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "REOPEN-01",
+      "obligation_id": "REOPEN-01.6.1",
+      "field": "Failure, repetition, restart, reopen, or other boundary",
+      "obligation": "No gameplay save is required or allowed by this task.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-01",
+      "obligation_id": "EXIT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Any normal visible game state is active.",
+      "check_ids": [
+        "D4-exit-running",
+        "D4-exit-trap",
+        "D4-exit-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-01",
+      "obligation_id": "EXIT-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Press `Esc` once.",
+      "check_ids": [
+        "D4-exit-running",
+        "D4-exit-trap",
+        "D4-exit-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-01",
+      "obligation_id": "EXIT-01.3.1",
+      "field": "Required result",
+      "obligation": "The game requests a normal quit and closes without requiring a debug console, editor stop button, or forced process kill.",
+      "check_ids": [
+        "D4-exit-running",
+        "D4-exit-trap",
+        "D4-exit-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-01",
+      "obligation_id": "EXIT-01.4.1",
+      "field": "Prohibited result",
+      "obligation": "`Esc` must not restart, complete, or corrupt the run before exit.",
+      "check_ids": [
+        "D4-exit-running",
+        "D4-exit-trap",
+        "D4-exit-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-01",
+      "obligation_id": "EXIT-01.5.1",
+      "field": "Player-visible feedback",
+      "obligation": "The game window closes normally.",
+      "check_ids": [
+        "D4-exit-running",
+        "D4-exit-trap",
+        "D4-exit-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "EXIT-01",
+      "obligation_id": "EXIT-01.6.1",
+      "field": "Failure, repetition, restart, reopen, or other boundary",
+      "obligation": "Applies during running, trap recovery, and completion.",
+      "check_ids": [
+        "D4-exit-running",
+        "D4-exit-trap",
+        "D4-exit-terminal"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-01",
+      "obligation_id": "QUALITY-01.1.1",
+      "field": "Formal requirement",
+      "obligation": "The project starts, runs, exits, and starts again according to the public instructions.",
+      "check_ids": [
+        "D1-entry",
+        "D1-build",
+        "D1-start",
+        "D1-contract"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-02",
+      "obligation_id": "QUALITY-02.1.1",
+      "field": "Formal requirement",
+      "obligation": "The main flow uses normal player input and does not depend on an answer button, cheat entry, or direct gameplay-result shortcut.",
+      "check_ids": [
+        "D4-journey"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-03",
+      "obligation_id": "QUALITY-03.1.1",
+      "field": "Formal requirement",
+      "obligation": "Critical entries, text, and controls are visible, discoverable, readable, and operable.",
+      "check_ids": [],
+      "status": "missing",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-04",
+      "obligation_id": "QUALITY-04.1.1",
+      "field": "Formal requirement",
+      "obligation": "Player actions produce perceivable feedback, and visible feedback agrees with the real game state.",
+      "check_ids": [],
+      "status": "missing",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-05",
+      "obligation_id": "QUALITY-05.1.1",
+      "field": "Formal requirement",
+      "obligation": "No severe error blocks the main flow.",
+      "check_ids": [],
+      "status": "missing",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-06",
+      "obligation_id": "QUALITY-06.1.1",
+      "field": "Formal requirement",
+      "obligation": "Repeated runs from the same initial conditions are substantially stable.",
+      "check_ids": [],
+      "status": "missing",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    }
+  ],
+  "qualification_tests": [
+    "tests/test_distribution.py"
+  ],
+  "qualification_test_scope": "Distribution, evidence conversion and attribution invariants only; not gameplay semantic qualification."
+}

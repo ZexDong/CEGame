@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "id": "defeat_restart",
+  "title": "Enemy-caused Defeat, complete Restart, and reusable movement",
+  "steps": [
+    {
+      "step_id": "setup",
+      "operation": "load_clean_canonical_scene",
+      "target": "DefeatReady",
+      "check_ids": [
+        "setup.scene",
+        "setup.submission_probe",
+        "setup.submission_probe.version",
+        "setup.semantic_discovery",
+        "setup.clean_start",
+        "setup.world_target.MoveTargetA",
+        "setup.world_target.MoveTargetB",
+        "setup.world_target.DashTarget",
+        "setup.world_target.separation"
+      ]
+    },
+    {
+      "step_id": "defeat_engage",
+      "operation": "real_player_move",
+      "target": "enemy encounter",
+      "check_ids": [
+        "defeat.engage.resolution"
+      ]
+    },
+    {
+      "step_id": "defeat",
+      "operation": "wait_for_enemy_ai",
+      "target": "enemy -> Player",
+      "check_ids": [
+        "defeat.enemy_damage",
+        "defeat.player_zero",
+        "defeat.phase",
+        "defeat.terminal_stable",
+        "defeat.feedback_surface",
+        "defeat.hud_semantics"
+      ]
+    },
+    {
+      "step_id": "restart",
+      "operation": "virtual_keyboard_r",
+      "target": "Restart",
+      "check_ids": [
+        "defeat.restart.input.route",
+        "defeat.restart.semantic_reloaded",
+        "defeat.restart.semantic_reloaded.world_target.MoveTargetA",
+        "defeat.restart.semantic_reloaded.world_target.MoveTargetB",
+        "defeat.restart.semantic_reloaded.world_target.DashTarget",
+        "defeat.restart.semantic_reloaded.world_target.separation",
+        "defeat.restart.initial",
+        "defeat.restart.no_stale_terminal",
+        "defeat.restart.feedback_surface",
+        "defeat.restart.hud_semantics"
+      ]
+    },
+    {
+      "step_id": "move",
+      "operation": "virtual_mouse_left",
+      "target": "MoveTargetA",
+      "check_ids": [
+        "defeat.restart.move.input.route",
+        "defeat.restart.move.reached"
+      ]
+    }
+  ]
+}
+
+

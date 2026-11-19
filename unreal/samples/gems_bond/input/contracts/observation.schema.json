@@ -1,0 +1,322 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GemsBond read-only observation",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "session_id",
+    "round_id",
+    "process_id",
+    "snapshot_id",
+    "monotonic_seconds",
+    "simulation_seconds",
+    "phase",
+    "slots",
+    "entities",
+    "targets"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "gemsbond-observation-1.0.0"
+    },
+    "session_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "round_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "process_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "snapshot_id": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "monotonic_seconds": {
+      "type": "number",
+      "minimum": 0
+    },
+    "simulation_seconds": {
+      "type": "number",
+      "minimum": 0
+    },
+    "phase": {
+      "enum": [
+        "not_ready",
+        "preparing",
+        "countdown",
+        "combat",
+        "rest",
+        "paused",
+        "defeated"
+      ]
+    },
+    "slots": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "coins",
+        "crystal_health",
+        "crystal_max_health",
+        "wave",
+        "waves_cleared",
+        "wave_total",
+        "wave_spawned",
+        "enemies_alive",
+        "enemies_remaining",
+        "countdown_seconds",
+        "speed_multiplier",
+        "mine_count",
+        "archer_count",
+        "cannon_count",
+        "wall_count",
+        "mine_price",
+        "archer_price",
+        "cannon_price",
+        "wall_price"
+      ],
+      "properties": {
+        "coins": {
+          "type": "number",
+          "minimum": 0
+        },
+        "crystal_health": {
+          "type": "number",
+          "minimum": 0
+        },
+        "crystal_max_health": {
+          "type": "number",
+          "minimum": 0
+        },
+        "wave": {
+          "type": "number",
+          "minimum": 0
+        },
+        "waves_cleared": {
+          "type": "number",
+          "minimum": 0
+        },
+        "wave_total": {
+          "type": "number",
+          "minimum": 0
+        },
+        "wave_spawned": {
+          "type": "number",
+          "minimum": 0
+        },
+        "enemies_alive": {
+          "type": "number",
+          "minimum": 0
+        },
+        "enemies_remaining": {
+          "type": "number",
+          "minimum": 0
+        },
+        "countdown_seconds": {
+          "type": "number",
+          "minimum": 0
+        },
+        "speed_multiplier": {
+          "type": "number",
+          "minimum": 0
+        },
+        "mine_count": {
+          "type": "number",
+          "minimum": 0
+        },
+        "archer_count": {
+          "type": "number",
+          "minimum": 0
+        },
+        "cannon_count": {
+          "type": "number",
+          "minimum": 0
+        },
+        "wall_count": {
+          "type": "number",
+          "minimum": 0
+        },
+        "mine_price": {
+          "type": "number",
+          "minimum": 0
+        },
+        "archer_price": {
+          "type": "number",
+          "minimum": 0
+        },
+        "cannon_price": {
+          "type": "number",
+          "minimum": 0
+        },
+        "wall_price": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "state"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "crystal",
+              "deposit",
+              "mine",
+              "archer",
+              "cannon",
+              "wall",
+              "slime",
+              "skeleton",
+              "orc",
+              "bat",
+              "dragon",
+              "arrow",
+              "cannonball",
+              "feedback"
+            ]
+          },
+          "state": {
+            "type": "string"
+          },
+          "cell": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 19
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "position": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            },
+            "minItems": 3,
+            "maxItems": 3
+          },
+          "rect": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "minItems": 4,
+            "maxItems": 4
+          },
+          "health": {
+            "type": "number",
+            "minimum": 0
+          },
+          "max_health": {
+            "type": "number",
+            "minimum": 0
+          },
+          "tier": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 3
+          },
+          "attributes": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "kind",
+          "rect",
+          "visible",
+          "interactable"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "enum": [
+              "build_mine",
+              "build_archer",
+              "build_cannon",
+              "build_wall",
+              "board_cell",
+              "inspect",
+              "upgrade",
+              "sell",
+              "pause",
+              "resume",
+              "restart",
+              "exit",
+              "mute"
+            ]
+          },
+          "rect": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "minItems": 4,
+            "maxItems": 4
+          },
+          "visible": {
+            "type": "boolean"
+          },
+          "interactable": {
+            "type": "boolean"
+          },
+          "cell": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 19
+            },
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "entity_id": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "starter_health": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "input_pulses"
+      ],
+      "properties": {
+        "input_pulses": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

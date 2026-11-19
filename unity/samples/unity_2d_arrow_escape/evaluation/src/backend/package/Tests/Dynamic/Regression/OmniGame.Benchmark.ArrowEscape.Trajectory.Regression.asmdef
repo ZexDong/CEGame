@@ -1,0 +1,24 @@
+{
+  "name": "OmniGame.Benchmark.ArrowEscape.Trajectory.Regression",
+  "rootNamespace": "OmniGame.Benchmark.ArrowEscape.Trajectory",
+  "references": [
+    "OmniGame.Benchmark.ArrowEscape.Trajectory.Dynamic",
+    "OmniGame.Benchmark.ArrowEscape.V2",
+    "UnityEngine.UI",
+    "Unity.InputSystem"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

@@ -1,0 +1,646 @@
+{
+  "schema_version": 5,
+  "benchmark_id": "unity.there_are_signs.sign_circuit.v2",
+  "evaluator_protocol": "omnigame-sign-circuit-v9-cli-semantic-ui",
+  "maximum_score": 100,
+  "automatic_maximum_score": 90,
+  "dimensions": [
+    {
+      "id": "D1",
+      "maximum_score": 10,
+      "phase": "static"
+    },
+    {
+      "id": "D2",
+      "maximum_score": 30,
+      "phase": "dynamic"
+    },
+    {
+      "id": "D3",
+      "maximum_score": 20,
+      "phase": "dynamic"
+    },
+    {
+      "id": "D4",
+      "maximum_score": 20,
+      "phase": "dynamic"
+    },
+    {
+      "id": "D5",
+      "maximum_score": 10,
+      "phase": "dynamic"
+    },
+    {
+      "id": "D6",
+      "maximum_score": 10,
+      "phase": "visual"
+    }
+  ],
+  "dimension_maxima": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "scene_contract": {
+    "menu_scene": "Assets/Scenes/Menu.unity",
+    "main_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+    "regression_scene": "Assets/Scenes/Levels/Level1+2.unity",
+    "sequence": [
+      "STOP",
+      "UP",
+      "RIGHT"
+    ],
+    "semantic_discovery": {
+      "player": "the visible controllable avatar whose movement and jump outcomes respond to normal keyboard input",
+      "signs": "three ordered visible sign-state interactions corresponding to STOP, UP, and RIGHT, discovered from rendered and state outcomes rather than component types",
+      "checkpoints": "three ordered route milestones whose eligibility and acceptance or rejection are observable through visible progress, status, and timer outcomes",
+      "gate": "the route-blocking state that remains closed before the ordered sequence and becomes visibly passable after valid completion",
+      "finish": "the terminal route outcome reached beyond the passable gate and evidenced by a visible success state",
+      "hud": "real visible TMP/uGUI/UI Toolkit surfaces bound by public semantic rectangles for progress, timer, status, best time, pause, success, and failure; display language, names, hierarchy, and UI framework are not selectors",
+      "ui_clicks": "real visible labelled controls bound by public semantic action rectangles and reached through ordinary Input System pointer down/frame/up with an independent top-hit check"
+    },
+    "observation_contract": {
+      "assembly": "OmniGame.SignCircuit.Contract",
+      "publisher": "SignCircuitProbePublisher",
+      "reader": "SignCircuitProbeReader",
+      "protected_root": "Assets/BenchmarkContract",
+      "published_facts": "current scene/run hints plus five public action rectangles and seven read-only semantic UI rectangles clipped to the current Game View; rectangles only locate real runtime UI",
+      "forbidden_capabilities": "movement, interaction, checkpoint, gate, finish, pause, restart, persistence mutation, scoring verdicts, or hidden answer disclosure",
+      "acceptance_rule": "probe facts and rectangles never score alone; every credited value/control/panel must overlap independently enumerated real visible UI and close through ordinary keyboard/pointer input plus rendered, spatial, temporal, scene, process, or durable-storage evidence"
+    }
+  },
+  "expected_test_counts": {
+    "static": 3,
+    "dynamic": 13,
+    "fresh": 2
+  },
+  "phases": {
+    "static": {
+      "method": "static",
+      "dimension": "D1",
+      "tests": [
+        {
+          "id": "STATIC01_CanonicalSceneLoadsCameraAndAdvancesFrames"
+        },
+        {
+          "id": "STATIC02_CameraProducesAVisibleFrame"
+        },
+        {
+          "id": "STATIC03_CanonicalSceneContainsNoMissingScripts"
+        }
+      ]
+    },
+    "dynamic": {
+      "method": "dynamic",
+      "dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ],
+      "tests": [
+        {
+          "id": "EVALUATOR_REGRESSION_DynamicRuntimeHealth",
+          "role": "evaluator_health"
+        },
+        {
+          "id": "DYN01_NativeKeyboardMovesAndJumps",
+          "role": "native_input_prerequisite",
+          "evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity"
+        },
+        {
+          "id": "DYN02_RemoteInteractDoesNotAdvance",
+          "role": "formal",
+          "evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity"
+        },
+        {
+          "id": "DYN03_WrongStateDoesNotAdvance",
+          "role": "formal",
+          "evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity"
+        },
+        {
+          "id": "DYN04_StopUpRightOpensGateAndFinishes",
+          "role": "formal",
+          "evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+          "checkpoint_order": [
+            "D2-03_CORE_CIRCUIT_CONTENT_USABLE",
+            "D3-03_SEQUENCE_GATE_FINISH_RULES",
+            "D4-02_COMPLETE_SUCCESS_JOURNEY",
+            "D5-02_CORE_FEEDBACK"
+          ]
+        },
+        {
+          "id": "DYN05_PauseAndUiRestartUseNativeInput",
+          "role": "formal",
+          "evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+          "checkpoint_order": [
+            "D3-04_PAUSE_RULES",
+            "D2-04_PAUSE_AND_RESTART_CONTENT",
+            "D5-05_PAUSE_RESTART_USABILITY",
+            "D4-03_PAUSE_RESUME_UI_RESTART"
+          ]
+        },
+        {
+          "id": "DYN06_RRestartResetsCircuit",
+          "role": "formal",
+          "evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity"
+        },
+        {
+          "id": "DYN07_OriginalLevel1Plus2StillMoves",
+          "role": "regression_prerequisite",
+          "evidence_scene": "Assets/Scenes/Levels/Level1+2.unity"
+        },
+        {
+          "id": "DYN08_MenuEntryLoadsCanonicalScene",
+          "role": "formal",
+          "evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity"
+        },
+        {
+          "id": "DYN09_InitialContentAndHudAreComplete",
+          "role": "formal",
+          "evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity"
+        },
+        {
+          "id": "DYN10_TimeoutFailureAndUiRestart",
+          "role": "formal",
+          "evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+          "checkpoint_order": [
+            "D3-05_TIMEOUT_EXCLUSIVITY",
+            "D2-05_FAILURE_CONTENT",
+            "D5-06_FAILURE_RESTART_USABILITY",
+            "D4-05_FAILURE_RETRY_FLOW"
+          ]
+        },
+        {
+          "id": "DYN11_SlowerRunDoesNotOverwriteBestTime",
+          "role": "formal",
+          "evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity"
+        },
+        {
+          "id": "DYN12_OriginalMenuLevelAndContinueRemainUsable",
+          "role": "formal",
+          "evidence_scene": "Assets/Scenes/Levels/Level1+2.unity",
+          "checkpoint_order": [
+            "D2-07_LEGACY_MENU_CONTENT_USABLE",
+            "D5-07_LEGACY_MENU_CONTROLS_USABLE",
+            "D4-08_LEGACY_MENU_LEVEL_CONTINUE_FLOW"
+          ]
+        }
+      ]
+    },
+    "fresh": {
+      "method": "dynamic_reopen",
+      "dimensions": [
+        "D2",
+        "D4"
+      ],
+      "tests": [
+        {
+          "id": "EVALUATOR_REGRESSION_FreshProcessHealth",
+          "role": "evaluator_health"
+        },
+        {
+          "id": "FRESH01_BestTimeSurvivesFreshProcess",
+          "role": "formal",
+          "evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity"
+        }
+      ]
+    },
+    "visual": {
+      "method": "fixed_vlm_prompt",
+      "dimension": "D6",
+      "rounds": 3,
+      "states_manifest": "visual/states.json",
+      "prompt": "visual/visual_prompt.txt",
+      "model_id": "gpt-5.6-terra",
+      "prompt_sha256": "558b4ccffad7d13d3ae3e5c6fc5a9b36a7bba37d9be47da895c2e50bc9c5a6ee",
+      "states_manifest_sha256": "270ded24de964f492ec6b65f572542ca1fb5ffc4a5efad65456092917d69aec9",
+      "result_schema_version": 4,
+      "candidate_missing_black_or_broken_state_score": 0,
+      "prompt_input_preflight_required": true
+    }
+  },
+  "scoring_checks": [
+    {
+      "id": "D1-01_IMPORT_COMPILE_ENTRY",
+      "dimension": "D1",
+      "phase": "static",
+      "source_test_id": "STATIC01_CanonicalSceneLoadsCameraAndAdvancesFrames",
+      "gdd_ref": "section 6 requirements QUALITY-01; QUALITY-05; QUALITY-06",
+      "question": "Can the pinned Unity version import, compile, load the canonical entry, and advance frames?",
+      "diagnostic_weight": 4.0
+    },
+    {
+      "id": "D1-02_VISIBLE_STARTUP_FRAME",
+      "dimension": "D1",
+      "phase": "static",
+      "source_test_id": "STATIC02_CameraProducesAVisibleFrame",
+      "gdd_ref": "section 6 requirements QUALITY-03; VISUAL-01",
+      "question": "Does the startup smoke render a non-empty game frame without player input?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D1-03_REFERENCES_AND_SCRIPTS",
+      "dimension": "D1",
+      "phase": "static",
+      "source_test_id": "STATIC03_CanonicalSceneContainsNoMissingScripts",
+      "gdd_ref": "section 6 requirements QUALITY-01; QUALITY-05",
+      "question": "Does the canonical scene contain no missing MonoBehaviour references?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D2-01_RUNTIME_CONTENT_AND_HUD",
+      "dimension": "D2",
+      "phase": "dynamic",
+      "source_test_id": "DYN09_InitialContentAndHudAreComplete",
+      "gdd_ref": "section 6 requirements CORE-02; RULE-09; UI-01; UI-02; UI-03",
+      "question": "Are the three signs, checkpoints, gate, finish, timer, progress, status, and best-time UI all present in the running challenge?",
+      "diagnostic_weight": 8.0
+    },
+    {
+      "id": "D2-02_MENU_ENTRY_PRESENT",
+      "dimension": "D2",
+      "phase": "dynamic",
+      "source_test_id": "DYN08_MenuEntryLoadsCanonicalScene",
+      "gdd_ref": "section 6 requirements CORE-01; LEGACY-01",
+      "question": "Does the running upstream menu contain a usable SIGN CIRCUIT entry?",
+      "diagnostic_weight": 4.0
+    },
+    {
+      "id": "D2-03_CORE_CIRCUIT_CONTENT_USABLE",
+      "dimension": "D2",
+      "phase": "dynamic",
+      "source_test_id": "DYN04_StopUpRightOpensGateAndFinishes",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements CORE-03; CORE-04; RULE-02; RULE-03; RULE-04; RULE-09",
+      "question": "Can a player use the signs, ordered route milestones, closed-to-passable gate outcome, and finish at least once in runtime?",
+      "diagnostic_weight": 8.0
+    },
+    {
+      "id": "D2-04_PAUSE_AND_RESTART_CONTENT",
+      "dimension": "D2",
+      "phase": "dynamic",
+      "source_test_id": "DYN05_PauseAndUiRestartUseNativeInput",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements CONTROL-04; CONTROL-05; CONTROL-06; UI-03; LIFECYCLE-01; LIFECYCLE-02",
+      "question": "Are pause and a normal clickable restart control present and usable?",
+      "diagnostic_weight": 4.0
+    },
+    {
+      "id": "D2-05_FAILURE_CONTENT",
+      "dimension": "D2",
+      "phase": "dynamic",
+      "source_test_id": "DYN10_TimeoutFailureAndUiRestart",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements RULE-10; UI-03; LIFECYCLE-02",
+      "question": "Is the required timeout failure state present and usable in runtime?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D2-06_PERSISTENT_BEST_FEATURE",
+      "dimension": "D2",
+      "phase": "fresh",
+      "source_test_id": "FRESH01_BestTimeSurvivesFreshProcess",
+      "gdd_ref": "section 6 requirements UI-01; LIFECYCLE-03; LIFECYCLE-04",
+      "question": "Is the best-time feature still present when the game is reopened in a fresh Unity process?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D3-01_PROXIMITY_GUARD",
+      "dimension": "D3",
+      "phase": "dynamic",
+      "source_test_id": "DYN02_RemoteInteractDoesNotAdvance",
+      "gdd_ref": "section 6 requirements CONTROL-03; RULE-01",
+      "question": "Does remote interaction leave all signs, progress, gate, and terminal state unchanged?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D3-02_STATE_ORDER_PENALTY_DEBOUNCE",
+      "dimension": "D3",
+      "phase": "dynamic",
+      "source_test_id": "DYN03_WrongStateDoesNotAdvance",
+      "gdd_ref": "section 6 requirements RULE-02; RULE-03; RULE-04; RULE-05; CONTROL-03",
+      "question": "Are wrong state, wrong order, deterministic penalty, and one-entry debounce rules correct?",
+      "diagnostic_weight": 7.0
+    },
+    {
+      "id": "D3-03_SEQUENCE_GATE_FINISH_RULES",
+      "dimension": "D3",
+      "phase": "dynamic",
+      "source_test_id": "DYN04_StopUpRightOpensGateAndFinishes",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements CORE-03; CORE-04; RULE-02; RULE-03; RULE-04; RULE-08; RULE-09",
+      "question": "Do STOP-UP-RIGHT, checkpoint timing, gate opening, physical crossing, and finish conditions occur in the correct order?",
+      "diagnostic_weight": 6.0
+    },
+    {
+      "id": "D3-04_PAUSE_RULES",
+      "dimension": "D3",
+      "phase": "dynamic",
+      "source_test_id": "DYN05_PauseAndUiRestartUseNativeInput",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements CONTROL-04; LIFECYCLE-01",
+      "question": "Does pause freeze movement and countdown, and does a second Escape resume the same run?",
+      "diagnostic_weight": 2.0
+    },
+    {
+      "id": "D3-05_TIMEOUT_EXCLUSIVITY",
+      "dimension": "D3",
+      "phase": "dynamic",
+      "source_test_id": "DYN10_TimeoutFailureAndUiRestart",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements RULE-06; RULE-10",
+      "question": "Does reaching zero produce a frozen failure state without also producing success?",
+      "diagnostic_weight": 2.0
+    },
+    {
+      "id": "D3-06_NATIVE_MOVEMENT_AND_JUMP",
+      "dimension": "D3",
+      "phase": "dynamic",
+      "source_test_id": "DYN01_NativeKeyboardMovesAndJumps",
+      "gdd_ref": "section 6 requirements CONTROL-01; CONTROL-02; QUALITY-02",
+      "question": "Do normal Input System movement and jump controls produce the required player motion in the Sign Circuit challenge?",
+      "diagnostic_weight": 2.0
+    },
+    {
+      "id": "D3-07_LEGACY_LEVEL_MOVEMENT_AND_JUMP",
+      "dimension": "D3",
+      "phase": "dynamic",
+      "source_test_id": "DYN07_OriginalLevel1Plus2StillMoves",
+      "gdd_ref": "section 6 requirements LEGACY-02; QUALITY-02",
+      "question": "Do the preserved Level1+2 movement and jump controls still respond correctly through normal player input?",
+      "diagnostic_weight": 2.0
+    },
+    {
+      "id": "D4-01_MENU_TO_GAME_FLOW",
+      "dimension": "D4",
+      "phase": "dynamic",
+      "source_test_id": "DYN08_MenuEntryLoadsCanonicalScene",
+      "gdd_ref": "section 6 requirements CORE-01; LEGACY-01",
+      "question": "Does the visible normal menu route connect to the canonical challenge scene?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D4-02_COMPLETE_SUCCESS_JOURNEY",
+      "dimension": "D4",
+      "phase": "dynamic",
+      "source_test_id": "DYN04_StopUpRightOpensGateAndFinishes",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements CORE-02; CORE-03; CORE-04; RULE-07",
+      "question": "Can the player complete the whole challenge from clean start through the physical finish?",
+      "diagnostic_weight": 6.0
+    },
+    {
+      "id": "D4-03_PAUSE_RESUME_UI_RESTART",
+      "dimension": "D4",
+      "phase": "dynamic",
+      "source_test_id": "DYN05_PauseAndUiRestartUseNativeInput",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements CONTROL-04; CONTROL-06; LIFECYCLE-01; LIFECYCLE-02",
+      "question": "Do pause, resume, and the visible UI Restart return to a reusable clean run?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D4-04_KEYBOARD_RESTART_FULL_RESET",
+      "dimension": "D4",
+      "phase": "dynamic",
+      "source_test_id": "DYN06_RRestartResetsCircuit",
+      "gdd_ref": "section 6 requirements CONTROL-05; LIFECYCLE-02",
+      "question": "Does keyboard R restore player, timer, signs, checkpoints, gate, panels, time scale, and input?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D4-05_FAILURE_RETRY_FLOW",
+      "dimension": "D4",
+      "phase": "dynamic",
+      "source_test_id": "DYN10_TimeoutFailureAndUiRestart",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements CONTROL-06; RULE-10; LIFECYCLE-02",
+      "question": "Can a timeout terminal state return through the normal visible Retry/Restart route?",
+      "diagnostic_weight": 2.0
+    },
+    {
+      "id": "D4-06_FRESH_PROCESS_REOPEN",
+      "dimension": "D4",
+      "phase": "fresh",
+      "source_test_id": "FRESH01_BestTimeSurvivesFreshProcess",
+      "gdd_ref": "section 6 requirements LIFECYCLE-03; QUALITY-01",
+      "question": "Does a different Unity process reopen the scene and recover the independently verified saved value?",
+      "diagnostic_weight": 2.0
+    },
+    {
+      "id": "D4-07_SLOWER_RUN_PRESERVES_RECORD",
+      "dimension": "D4",
+      "phase": "dynamic",
+      "source_test_id": "DYN11_SlowerRunDoesNotOverwriteBestTime",
+      "gdd_ref": "section 6 requirement LIFECYCLE-04",
+      "question": "Does repeated play preserve the faster record when a later run is slower?",
+      "diagnostic_weight": 1.0
+    },
+    {
+      "id": "D5-01_INITIAL_HUD_VISIBLE_SYNCED",
+      "dimension": "D5",
+      "phase": "dynamic",
+      "source_test_id": "DYN09_InitialContentAndHudAreComplete",
+      "gdd_ref": "section 6 requirements CORE-02; UI-01",
+      "question": "Are progress, timer, status, and best-time labels visible, readable, and synchronized with the initial state?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D5-02_CORE_FEEDBACK",
+      "dimension": "D5",
+      "phase": "dynamic",
+      "source_test_id": "DYN04_StopUpRightOpensGateAndFinishes",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements CORE-03; CORE-04; RULE-04; RULE-07; UI-01; UI-02; UI-03; QUALITY-04",
+      "question": "Do sign, checkpoint, progress, gate, finish, and best-time feedback remain visibly understandable during success?",
+      "diagnostic_weight": 2.0
+    },
+    {
+      "id": "D5-03_WRONG_ACTION_FEEDBACK",
+      "dimension": "D5",
+      "phase": "dynamic",
+      "source_test_id": "DYN03_WrongStateDoesNotAdvance",
+      "gdd_ref": "section 6 requirements RULE-05; UI-02; QUALITY-04",
+      "question": "Does an invalid checkpoint entry provide visible negative feedback synchronized with its timer penalty?",
+      "diagnostic_weight": 1.0
+    },
+    {
+      "id": "D5-04_MENU_BUTTON_USABILITY",
+      "dimension": "D5",
+      "phase": "dynamic",
+      "source_test_id": "DYN08_MenuEntryLoadsCanonicalScene",
+      "gdd_ref": "section 6 requirements CORE-01; QUALITY-03",
+      "question": "Is the SIGN CIRCUIT entry visible and top-hit clickable through the active UI backend?",
+      "diagnostic_weight": 1.0
+    },
+    {
+      "id": "D5-05_PAUSE_RESTART_USABILITY",
+      "dimension": "D5",
+      "phase": "dynamic",
+      "source_test_id": "DYN05_PauseAndUiRestartUseNativeInput",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements UI-03; LIFECYCLE-01; LIFECYCLE-02",
+      "question": "Are pause feedback and the Restart button visible, reachable, and top-hit clickable through the active UI backend while gameplay is frozen?",
+      "diagnostic_weight": 1.5
+    },
+    {
+      "id": "D5-06_FAILURE_RESTART_USABILITY",
+      "dimension": "D5",
+      "phase": "dynamic",
+      "source_test_id": "DYN10_TimeoutFailureAndUiRestart",
+      "checkpoint_evidence_scene": "Assets/Scenes/Benchmark/SignCircuit.unity",
+      "gdd_ref": "section 6 requirements RULE-10; UI-03; LIFECYCLE-02",
+      "question": "Is timeout feedback visible and is Restart still top-hit operable through the active UI backend from the failure state?",
+      "diagnostic_weight": 1.5
+    },
+    {
+      "id": "D2-07_LEGACY_MENU_CONTENT_USABLE",
+      "dimension": "D2",
+      "phase": "dynamic",
+      "source_test_id": "DYN12_OriginalMenuLevelAndContinueRemainUsable",
+      "checkpoint_evidence_scene": "Assets/Scenes/Menu.unity",
+      "gdd_ref": "section 6 requirement LEGACY-01",
+      "question": "Are the original Levels entry, supplied Level1+2 choice, and Continue function still present and basically usable in runtime?",
+      "diagnostic_weight": 3.0
+    },
+    {
+      "id": "D4-08_LEGACY_MENU_LEVEL_CONTINUE_FLOW",
+      "dimension": "D4",
+      "phase": "dynamic",
+      "source_test_id": "DYN12_OriginalMenuLevelAndContinueRemainUsable",
+      "checkpoint_evidence_scene": "Assets/Scenes/Levels/Level1+2.unity",
+      "gdd_ref": "section 6 requirement LEGACY-01",
+      "question": "Can normal menu input open Levels, load the supplied Level1+2 scene, then use Continue to return to that same scene?",
+      "diagnostic_weight": 2.0
+    },
+    {
+      "id": "D5-07_LEGACY_MENU_CONTROLS_USABLE",
+      "dimension": "D5",
+      "phase": "dynamic",
+      "source_test_id": "DYN12_OriginalMenuLevelAndContinueRemainUsable",
+      "checkpoint_evidence_scene": "@non_menu_scene",
+      "gdd_ref": "section 6 requirements LEGACY-01; QUALITY-03",
+      "question": "Are Levels, the original level entry, and Continue independently visible, readable, top-hittable, and operable through real pointer down/frame/up input?",
+      "diagnostic_weight": 1.0
+    }
+  ],
+  "prerequisites": [
+    {
+      "id": "PREREQ_NATIVE_INPUT",
+      "source_test_id": "DYN01_NativeKeyboardMovesAndJumps",
+      "effect": "Solved=No when failed; score is not replaced by a static proxy.",
+      "gdd_ref": "section 6 requirements CONTROL-01; CONTROL-02; QUALITY-02"
+    },
+    {
+      "id": "PREREQ_UPSTREAM_REGRESSION",
+      "source_test_id": "DYN07_OriginalLevel1Plus2StillMoves",
+      "effect": "Solved=No when failed because the GDD requires preserved Level1+2 controls.",
+      "gdd_ref": "section 6 requirement LEGACY-02"
+    },
+    {
+      "id": "PREREQ_LEGACY_MENU_FLOW",
+      "source_test_id": "DYN12_OriginalMenuLevelAndContinueRemainUsable",
+      "effect": "Solved=No when failed because the GDD requires the original menu, Level1+2 entry, and Continue behavior to remain usable.",
+      "gdd_ref": "section 6 requirement LEGACY-01"
+    }
+  ],
+  "solved_requires": [
+    "EVALUATOR_REGRESSION_FreshProcessHealth",
+    "EVALUATOR_REGRESSION_DynamicRuntimeHealth",
+    "STATIC01_CanonicalSceneLoadsCameraAndAdvancesFrames",
+    "STATIC02_CameraProducesAVisibleFrame",
+    "STATIC03_CanonicalSceneContainsNoMissingScripts",
+    "DYN01_NativeKeyboardMovesAndJumps",
+    "DYN02_RemoteInteractDoesNotAdvance",
+    "DYN03_WrongStateDoesNotAdvance",
+    "DYN04_StopUpRightOpensGateAndFinishes",
+    "DYN05_PauseAndUiRestartUseNativeInput",
+    "DYN06_RRestartResetsCircuit",
+    "DYN07_OriginalLevel1Plus2StillMoves",
+    "DYN08_MenuEntryLoadsCanonicalScene",
+    "DYN09_InitialContentAndHudAreComplete",
+    "DYN10_TimeoutFailureAndUiRestart",
+    "DYN11_SlowerRunDoesNotOverwriteBestTime",
+    "FRESH01_BestTimeSurvivesFreshProcess",
+    "DYN12_OriginalMenuLevelAndContinueRemainUsable"
+  ],
+  "visual_states": [
+    {
+      "id": "01_menu",
+      "label": "Main menu / challenge entry",
+      "reference": "visual/reference/01_menu.png",
+      "candidate_evidence": "visual-01-menu.png"
+    },
+    {
+      "id": "02_initial_gameplay",
+      "label": "Initial gameplay / corridor start",
+      "reference": "visual/reference/02_initial_gameplay.png",
+      "candidate_evidence": "visual-02-initial-gameplay.png"
+    },
+    {
+      "id": "03_core_interaction",
+      "label": "Core interaction / sign and checkpoint",
+      "reference": "visual/reference/03_core_interaction.png",
+      "candidate_evidence": "visual-03-core-interaction.png"
+    }
+  ],
+  "normalization": {
+    "formula": "No baseline subtraction. D1-D5 are the sum of passed public-requirement checkpoints; D6 is the fixed three-round visual average.",
+    "starter_expected": "D1 may score because the supplied Unity project is valid; task-specific D2-D5 remain zero unless their runtime behavior exists.",
+    "gold_expected_automatic": 90,
+    "gold_expected_overall_after_visual": 100
+  },
+  "health_prerequisites": [
+    {
+      "id": "HEALTH_DYNAMIC_RUNTIME",
+      "phase": "dynamic",
+      "source_test_id": "EVALUATOR_REGRESSION_DynamicRuntimeHealth",
+      "effect": "Any missing, skipped, or failed result invalidates Dynamic scoring; D2-D5 must remain unevaluated rather than zero."
+    },
+    {
+      "id": "HEALTH_FRESH_RUNTIME",
+      "phase": "fresh",
+      "source_test_id": "EVALUATOR_REGRESSION_FreshProcessHealth",
+      "effect": "Any missing, skipped, or failed result invalidates Fresh scoring and the complete evaluation."
+    }
+  ],
+  "official_scoring": {
+    "formula": "dimension_maximum * passed_checkpoints / total_checkpoints",
+    "checkpoint_statuses": [
+      "pass",
+      "fail",
+      "blocked"
+    ],
+    "blocked_counts_as_failure": true,
+    "diagnostic_weights_affect_formal_score": false,
+    "dimension_rounding_decimals": 1
+  },
+  "evidence_contract": {
+    "directory_required_for_dynamic_and_fresh": true,
+    "one_record_per_passed_formal_test": true,
+    "failed_or_blocked_atomic_test_must_not_publish_formal_evidence": true,
+    "declared_composite_test_may_publish_bound_partial_checkpoint_evidence": true,
+    "checkpoint_statuses": [
+      "pending",
+      "active",
+      "passed"
+    ],
+    "required_fields": [
+      "test_id",
+      "generated_utc",
+      "evaluation_session_id",
+      "process_id",
+      "scene",
+      "frame"
+    ],
+    "phase_processes_must_differ": true,
+    "generated_utc_must_be_inside_phase_window": true,
+    "auxiliary_json_files": [
+      "fresh-seed.json"
+    ]
+  }
+}

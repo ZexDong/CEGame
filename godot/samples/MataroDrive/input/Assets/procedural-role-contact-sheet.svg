@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+  <rect width="1280" height="720" fill="#101720"/>
+  <text x="48" y="58" fill="#ffffff" font-family="sans-serif" font-size="30">MataroDrive procedural visual roles</text>
+  <g font-family="sans-serif" font-size="18" text-anchor="middle">
+    <g transform="translate(110 150)">
+      <rect width="220" height="150" rx="16" fill="#263647"/>
+      <path d="M25 95 L55 50 H145 L190 85 V110 H25 Z" fill="#f5a623"/>
+      <circle cx="65" cy="112" r="18" fill="#151b22"/><circle cx="160" cy="112" r="18" fill="#151b22"/>
+      <text x="110" y="140" fill="#fff">player</text>
+    </g>
+    <g transform="translate(350 150)">
+      <rect width="220" height="150" rx="16" fill="#263647"/>
+      <path d="M15 105 Q110 35 205 105 V135 H15 Z" fill="#65a66f"/>
+      <text x="110" y="140" fill="#fff">terrain</text>
+    </g>
+    <g transform="translate(590 150)">
+      <rect width="220" height="150" rx="16" fill="#263647"/>
+      <circle cx="110" cy="65" r="38" fill="#ffd54f"/><circle cx="110" cy="65" r="24" fill="#f5a623"/>
+      <text x="110" y="140" fill="#fff">coin / gem</text>
+    </g>
+    <g transform="translate(830 150)">
+      <rect width="220" height="150" rx="16" fill="#263647"/>
+      <path d="M90 25 L130 25 L112 115 L108 115 Z" fill="#ff7043"/>
+      <rect x="72" y="110" width="76" height="16" fill="#eeeeee"/>
+      <text x="110" y="145" fill="#fff">cone / enemy</text>
+    </g>
+    <g transform="translate(110 350)">
+      <rect width="220" height="150" rx="16" fill="#263647"/>
+      <path d="M25 105 L80 105 L95 65 L110 105 L185 105" fill="none" stroke="#43a6ff" stroke-width="16"/>
+      <text x="110" y="140" fill="#fff">boost</text>
+    </g>
+    <g transform="translate(350 350)">
+      <rect width="220" height="150" rx="16" fill="#263647"/>
+      <path d="M40 100 H180 M60 85 H160 M80 70 H140" stroke="#f5a623" stroke-width="12"/>
+      <text x="110" y="140" fill="#fff">spring</text>
+    </g>
+    <g transform="translate(590 350)">
+      <rect width="220" height="150" rx="16" fill="#263647"/>
+      <circle cx="110" cy="70" r="48" fill="none" stroke="#4fc3f7" stroke-width="10"/>
+      <text x="110" y="140" fill="#fff">shield / magnet</text>
+    </g>
+    <g transform="translate(830 350)">
+      <rect width="220" height="150" rx="16" fill="#263647"/>
+      <rect x="90" y="25" width="40" height="90" fill="#ffffff"/><rect x="40" y="35" width="140" height="55" fill="#e53935"/>
+      <text x="110" y="140" fill="#fff">goal</text>
+    </g>
+    <g transform="translate(350 550)">
+      <rect width="580" height="120" rx="16" fill="#263647"/>
+      <text x="290" y="48" fill="#fff">HUD / menus / results</text>
+      <text x="290" y="82" fill="#b9c7d5">Readable text, bars, cards, themes</text>
+    </g>
+  </g>
+</svg>

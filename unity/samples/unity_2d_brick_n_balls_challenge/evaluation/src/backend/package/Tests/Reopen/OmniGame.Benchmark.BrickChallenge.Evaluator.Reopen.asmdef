@@ -1,0 +1,9 @@
+{
+  "name": "OmniGame.Benchmark.BrickChallenge.Evaluator.Reopen",
+  "rootNamespace": "OmniGame.Benchmark.BrickChallenge.Evaluator.Reopen",
+  "references": ["OmniGame.Benchmark.BrickChallenge.Contracts"],
+  "includePlatforms": [],
+  "autoReferenced": true,
+  "defineConstraints": ["UNITY_INCLUDE_TESTS"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

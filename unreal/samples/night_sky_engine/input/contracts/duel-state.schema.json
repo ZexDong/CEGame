@@ -1,0 +1,242 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "contracts/duel-state.schema.json",
+  "title": "Night Sky Duel Lab Read-Only Game State",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "process_token",
+    "process_id",
+    "snapshot_id",
+    "round_id",
+    "round_index",
+    "restart_count",
+    "monotonic_ms",
+    "bridge_ready",
+    "provider_ready",
+    "game_state"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "process_token": { "$ref": "#/$defs/stable_id" },
+    "process_id": { "type": "integer", "minimum": 1 },
+    "snapshot_id": { "type": "integer", "minimum": 0 },
+    "round_id": { "$ref": "#/$defs/stable_id" },
+    "round_index": { "type": "integer", "minimum": 0 },
+    "restart_count": { "type": "integer", "minimum": 0 },
+    "monotonic_ms": { "type": "number", "minimum": 0 },
+    "bridge_ready": { "const": true },
+    "provider_ready": { "type": "boolean" },
+    "game_state": {
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "#/$defs/game_state" }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "provider_ready": { "const": true } },
+        "required": ["provider_ready"]
+      },
+      "then": { "properties": { "game_state": { "$ref": "#/$defs/game_state" } } },
+      "else": { "properties": { "game_state": { "type": "null" } } }
+    }
+  ],
+  "$defs": {
+    "stable_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]*$"
+    },
+    "normalized_position": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y"],
+      "properties": {
+        "x": { "type": "number", "minimum": 0, "maximum": 1 },
+        "y": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "normalized_bounds": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["left", "top", "right", "bottom"],
+      "properties": {
+        "left": { "type": "number", "minimum": 0, "maximum": 1 },
+        "top": { "type": "number", "minimum": 0, "maximum": 1 },
+        "right": { "type": "number", "minimum": 0, "maximum": 1 },
+        "bottom": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "fighter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "object_id",
+        "health",
+        "max_health",
+        "normalized_position",
+        "grounded",
+        "facing",
+        "action_state",
+        "visible",
+        "input_enabled"
+      ],
+      "properties": {
+        "object_id": { "$ref": "#/$defs/stable_id" },
+        "health": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "max_health": { "const": 100 },
+        "normalized_position": { "$ref": "#/$defs/normalized_position" },
+        "grounded": { "type": "boolean" },
+        "facing": { "enum": ["left", "right"] },
+        "action_state": {
+          "enum": [
+            "idle",
+            "moving",
+            "airborne",
+            "light_attack",
+            "energy_attack",
+            "blocking",
+            "telegraph",
+            "pulse",
+            "hit",
+            "knocked_out"
+          ]
+        },
+        "visible": { "type": "boolean" },
+        "input_enabled": { "type": "boolean" }
+      }
+    },
+    "combat": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bolt_ready",
+        "bolt_cooldown_remaining_ms",
+        "active_player_projectiles",
+        "telegraph_active",
+        "telegraph_remaining_ms",
+        "last_resolution",
+        "last_damage",
+        "round_time_ms"
+      ],
+      "properties": {
+        "bolt_ready": { "type": "boolean" },
+        "bolt_cooldown_remaining_ms": { "type": "number", "minimum": 0, "maximum": 1000 },
+        "active_player_projectiles": { "type": "integer", "minimum": 0, "maximum": 1 },
+        "telegraph_active": { "type": "boolean" },
+        "telegraph_remaining_ms": { "type": "number", "minimum": 0, "maximum": 750 },
+        "last_resolution": {
+          "enum": [
+            "none",
+            "player_strike_hit",
+            "player_bolt_hit",
+            "rival_pulse_hit",
+            "rival_pulse_blocked",
+            "player_strike_whiff",
+            "bolt_cooldown_rejected",
+            "player_win",
+            "rival_win",
+            "draw"
+          ]
+        },
+        "last_damage": { "type": "integer", "enum": [0, 15, 20, 25] },
+        "round_time_ms": { "type": "number", "minimum": 0 }
+      }
+    },
+    "feedback": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "hud_visible",
+        "hud_player_health",
+        "hud_rival_health",
+        "hud_bolt_state",
+        "telegraph_visible",
+        "hit_feedback_visible",
+        "guard_feedback_visible",
+        "status_text",
+        "result_visible",
+        "result_text"
+      ],
+      "properties": {
+        "hud_visible": { "type": "boolean" },
+        "hud_player_health": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "hud_rival_health": { "type": "integer", "minimum": 0, "maximum": 100 },
+        "hud_bolt_state": { "type": "string", "minLength": 1, "maxLength": 64 },
+        "telegraph_visible": { "type": "boolean" },
+        "hit_feedback_visible": { "type": "boolean" },
+        "guard_feedback_visible": { "type": "boolean" },
+        "status_text": { "type": "string", "maxLength": 128 },
+        "result_visible": { "type": "boolean" },
+        "result_text": { "enum": ["", "PLAYER WINS", "RIVAL WINS", "DRAW"] }
+      }
+    },
+    "object_counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["player_fighters", "rival_fighters", "player_projectiles"],
+      "properties": {
+        "player_fighters": { "const": 1 },
+        "rival_fighters": { "const": 1 },
+        "player_projectiles": { "type": "integer", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "visible_target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "object_id",
+        "semantic_role",
+        "present",
+        "visible",
+        "enabled",
+        "normalized_position",
+        "normalized_bounds"
+      ],
+      "properties": {
+        "object_id": { "$ref": "#/$defs/stable_id" },
+        "semantic_role": { "enum": ["player", "rival", "player_projectile"] },
+        "present": { "type": "boolean" },
+        "visible": { "type": "boolean" },
+        "enabled": { "type": "boolean" },
+        "normalized_position": {
+          "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/normalized_position" }]
+        },
+        "normalized_bounds": {
+          "oneOf": [{ "type": "null" }, { "$ref": "#/$defs/normalized_bounds" }]
+        }
+      }
+    },
+    "world": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["object_counts", "visible_targets"],
+      "properties": {
+        "object_counts": { "$ref": "#/$defs/object_counts" },
+        "visible_targets": {
+          "type": "array",
+          "maxItems": 8,
+          "items": { "$ref": "#/$defs/visible_target" }
+        }
+      }
+    },
+    "game_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["phase", "player", "rival", "combat", "feedback", "world"],
+      "properties": {
+        "phase": { "enum": ["active", "player_won", "rival_won", "draw"] },
+        "player": { "$ref": "#/$defs/fighter" },
+        "rival": { "$ref": "#/$defs/fighter" },
+        "combat": { "$ref": "#/$defs/combat" },
+        "feedback": { "$ref": "#/$defs/feedback" },
+        "world": { "$ref": "#/$defs/world" }
+      }
+    }
+  }
+}

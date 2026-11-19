@@ -1,0 +1,13 @@
+{
+  "name": "OmniGame.Benchmark.BrickChallenge.Evaluator.PlayMode",
+  "rootNamespace": "OmniGame.Benchmark.BrickChallenge.Evaluator.PlayMode",
+  "references": [
+    "OmniGame.Benchmark.BrickChallenge.Contracts",
+    "Unity.InputSystem",
+    "UnityEngine.UI"
+  ],
+  "includePlatforms": [],
+  "autoReferenced": true,
+  "defineConstraints": ["UNITY_INCLUDE_TESTS"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

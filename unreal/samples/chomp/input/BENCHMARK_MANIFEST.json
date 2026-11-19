@@ -1,0 +1,204 @@
+{
+  "task_id": "Chomp",
+  "task_name": "Chomp: Neon Maze Chase",
+  "language": "en",
+  "engine": {
+    "name": "Unreal Engine",
+    "version": "5.7.4",
+    "changelist": 51494982,
+    "compatible_changelist": 47537391,
+    "branch": "++UE5+Release-5.7",
+    "platform": "Windows x64",
+    "runtime_mode": "editor_game",
+    "explicit_plugins": [
+      "PythonScriptPlugin",
+      "EditorScriptingUtilities"
+    ],
+    "external_public_tools": "engine/unreal-5.7.4/executor/UnrealEvaluationExecutor.psm1"
+  },
+  "paths": {
+    "project_root": "starter-project",
+    "project_file": "starter-project/ChompStarter.uproject",
+    "starter_entry": "starter-project/ChompStarter.uproject",
+    "default_entry": "starter-project/ChompStarter.uproject",
+    "final_entry": "starter-project/ChompStarter.uproject",
+    "starter_map": "/Engine/Maps/Entry",
+    "final_map_source": "starter-project/Config/DefaultEngine.ini:GameDefaultMap",
+    "initial_prompt": "INITIAL_AGENT_PROMPT.md",
+    "gdd": "GDD.md",
+    "toolchain": "tools/TOOLCHAIN.md",
+    "tool_guide": "tools/TOOL_GUIDE.md",
+    "asset_manifest": "ASSET_MANIFEST.json",
+    "asset_catalog": "assets/ASSET_CATALOG.json",
+    "asset_coverage": "ASSET_COVERAGE.json",
+    "legal_map": "assets/legal/ASSET_LICENSE_MAP.json",
+    "task_state_schema": "contracts/game-state.schema.json",
+    "maze_layout": "contracts/maze-layout.json",
+    "public_smoke": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
+    "static_gate": "tools/Test-PublicInput.ps1",
+    "observation_self_check": "tools/Test-Observation.ps1"
+  },
+  "read_order": [
+    "INITIAL_AGENT_PROMPT.md",
+    "tools/INPUT_GUIDE.md",
+    "GDD.md",
+    "assets/ASSET_CATALOG.md",
+    "contracts/GAME_SESSION_SPEC.md",
+    "tools/TOOLCHAIN.md",
+    "tools/TOOL_GUIDE.md"
+  ],
+  "workspace": {
+    "writable_roots": [
+      "starter-project"
+    ],
+    "protected_roots": [
+      "All input files outside starter-project/"
+    ],
+    "evidence_root": "Externally supplied output directory outside input.",
+    "network": "offline",
+    "installation": "not permitted",
+    "external_dependencies": "Installed engine, SDK and public engine tools only."
+  },
+  "viewport": {
+    "width_px": 1280,
+    "height_px": 720,
+    "coordinate_space": "physical_client_pixels",
+    "dpi_policy": "Record actual window DPI; no host scaling changes.",
+    "windowed": true,
+    "client_capture_only": true,
+    "secondary_supported_resolution": [
+      1920,
+      1080
+    ]
+  },
+  "observation": {
+    "version": "1.0.0",
+    "argument": "-ChompStatePath=<absolute-output-file>",
+    "minimum_hz": 10,
+    "starter_hz": 20,
+    "read_only": true,
+    "gameplay_available_in_starter": false
+  },
+  "randomness": {
+    "argument": "-ChompSeed=<integer>",
+    "default": 1337,
+    "changes_difficulty": false
+  },
+  "requirements": {
+    "authority": "GDD.md Section 6 only",
+    "count": 58,
+    "ids": [
+      "FLOW-01",
+      "FLOW-02",
+      "MAZE-01",
+      "MOVE-01",
+      "MOVE-02",
+      "MOVE-03",
+      "MOVE-04",
+      "DOT-01",
+      "POWER-01",
+      "POWER-02",
+      "GHOST-01",
+      "GHOST-02",
+      "GHOST-03",
+      "GHOST-04",
+      "GHOST-05",
+      "GHOST-06",
+      "GHOST-07",
+      "GHOST-08",
+      "GHOST-09",
+      "CAPTURE-01",
+      "CAPTURE-02",
+      "LIFE-01",
+      "LIFE-02",
+      "LIFE-03",
+      "LIFE-04",
+      "FRUIT-01",
+      "FRUIT-02",
+      "FLOW-03",
+      "FLOW-04",
+      "PAUSE-01",
+      "PAUSE-02",
+      "MENU-01",
+      "MENU-02",
+      "OPTIONS-01",
+      "OPTIONS-02",
+      "OPTIONS-03",
+      "SAVE-01",
+      "SAVE-02",
+      "HUD-01",
+      "VISUAL-01",
+      "VISUAL-02",
+      "VISUAL-03",
+      "VISUAL-04",
+      "VISUAL-05",
+      "VISUAL-06",
+      "TIME-01",
+      "OBSERVE-01",
+      "ASSET-01",
+      "ASSET-02",
+      "ASSET-03",
+      "ASSET-04",
+      "ASSET-05",
+      "QUALITY-01",
+      "QUALITY-02",
+      "QUALITY-03",
+      "QUALITY-04",
+      "QUALITY-05",
+      "QUALITY-06"
+    ]
+  },
+  "art": {
+    "required_use": [
+      "ASSET-01",
+      "ASSET-02",
+      "ASSET-03",
+      "ASSET-04",
+      "ASSET-05"
+    ],
+    "runtime_root": "starter-project/Content/Art",
+    "editable_source_root": "starter-project/SourceArt",
+    "reference_source_root": "assets",
+    "usage_policy": "Visible use is mandatory; allowed transformations are defined in GDD Section 6."
+  },
+  "public_smoke": {
+    "scope": "Untouched starter only; no gameplay inputs or scoring.",
+    "exit_codes": {
+      "0": "All health checks passed",
+      "nonzero": "Health operation failed; inspect preserved receipts/logs."
+    },
+    "result_file": "public-smoke-result.json",
+    "result_required_fields": [
+      "schema_version",
+      "status",
+      "gameplay_requirements_evaluated",
+      "checks"
+    ],
+    "start_timeout_seconds": 180,
+    "state_timeout_seconds": 30,
+    "capture_timeout_seconds": 30,
+    "stop_grace_seconds": 15
+  },
+  "interface_catalog": "unreal-engine-5.7.4-cl51494982-windows-x64-editor-game-all-interface-catalog"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

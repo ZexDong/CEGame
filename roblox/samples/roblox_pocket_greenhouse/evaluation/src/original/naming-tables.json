@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "task_id": "pocket_greenhouse",
+  "coordinate_space": "Roblox game-view pixels; candidate currently reports top-left origin",
+  "seed_entry": "not applicable; the game has no random content",
+  "slots": [
+    "day", "coins", "water", "sunberry_inventory",
+    "moonleaf_inventory", "selected_plot"
+  ],
+  "entities": [
+    {"kind": "plot_1", "states": ["empty", "sunberry_stage0_dry", "sunberry_stage0_watered", "sunberry_stage1_dry", "sunberry_stage1_watered", "sunberry_ripe", "moonleaf_stage0_dry", "moonleaf_stage0_watered", "moonleaf_ripe"]},
+    {"kind": "plot_2", "states": ["empty", "sunberry_stage0_dry", "sunberry_stage0_watered", "sunberry_stage1_dry", "sunberry_stage1_watered", "sunberry_ripe", "moonleaf_stage0_dry", "moonleaf_stage0_watered", "moonleaf_ripe"]},
+    {"kind": "plot_3", "states": ["empty", "sunberry_stage0_dry", "sunberry_stage0_watered", "sunberry_stage1_dry", "sunberry_stage1_watered", "sunberry_ripe", "moonleaf_stage0_dry", "moonleaf_stage0_watered", "moonleaf_ripe"]}
+  ],
+  "targets": [
+    {"kind": "plot_1"}, {"kind": "plot_2"}, {"kind": "plot_3"},
+    {"kind": "start_button"},
+    {"kind": "plant_sunberry_button"}, {"kind": "plant_moonleaf_button"},
+    {"kind": "water_button"}, {"kind": "harvest_button"},
+    {"kind": "end_day_button"}, {"kind": "deliver_button"},
+    {"kind": "restart_button"}
+  ],
+  "controls": {"movement_template": "click_targets", "primary": "MouseButton1"}
+}

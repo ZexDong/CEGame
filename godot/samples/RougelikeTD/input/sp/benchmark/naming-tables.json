@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "task_id": "roguelike_td_twelve_wave",
+  "coordinate_space": "18x10 map grid; x right, y down; origin top-left",
+  "level_width_cells": 18,
+  "level_height_cells": 10,
+  "slots": [
+    "gold",
+    "base_hp",
+    "wave",
+    "total_waves",
+    "enemies_remaining",
+    "heroes_placed",
+    "relics_owned"
+  ],
+  "entities": [
+    {
+      "kind": "hero",
+      "states": [
+        "archer",
+        "mage",
+        "warrior"
+      ]
+    },
+    {
+      "kind": "enemy",
+      "states": [
+        "basic",
+        "runner",
+        "tank",
+        "boss"
+      ]
+    },
+    {
+      "kind": "projectile",
+      "states": [
+        "hero",
+        "burning",
+        "slowed"
+      ]
+    },
+    {
+      "kind": "portal",
+      "states": [
+        "locked",
+        "open"
+      ]
+    },
+    {
+      "kind": "base",
+      "states": [
+        "healthy",
+        "critical"
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "kind": "play_button"
+    },
+    {
+      "kind": "hero_card_archer"
+    },
+    {
+      "kind": "hero_card_mage"
+    },
+    {
+      "kind": "hero_card_warrior"
+    },
+    {
+      "kind": "reward_card_1"
+    },
+    {
+      "kind": "reward_card_2"
+    },
+    {
+      "kind": "reward_card_3"
+    },
+    {
+      "kind": "restart_button"
+    },
+    {
+      "kind": "main_menu_button"
+    }
+  ],
+  "controls": {
+    "movement_template": "visible mouse clicks",
+    "keys": {
+      "select_place_reward": "Left mouse button",
+      "optional_cancel": "Escape"
+    }
+  }
+}

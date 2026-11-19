@@ -1,0 +1,17 @@
+{
+  "catalog_revision": "2026.08.26",
+  "roles": {
+    "structure": {"color_hex": "1B2636", "material": "Metal"},
+    "floor": {"color_hex": "3B4652", "material": "Concrete"},
+    "ambient_navigation": {"color_hex": "4CA6D8", "material": "Neon"},
+    "interaction": {"color_hex": "F2B84B", "material": "Neon"},
+    "route_a": {"color_hex": "5E8BFF", "material": "SmoothPlastic"},
+    "route_b": {"color_hex": "C17BFF", "material": "SmoothPlastic"},
+    "route_c": {"color_hex": "46C7A5", "material": "SmoothPlastic"},
+    "danger": {"color_hex": "EF5350", "material": "Neon"},
+    "success": {"color_hex": "63D67A", "material": "Neon"},
+    "hud_panel": {"color_hex": "0C1320", "material": "UI background"},
+    "hud_text": {"color_hex": "EEF5FF", "material": "UI text"}
+  },
+  "note": "Semantic palette only; not a final scene, route, or answer."
+}

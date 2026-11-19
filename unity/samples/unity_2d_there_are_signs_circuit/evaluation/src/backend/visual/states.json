@@ -1,0 +1,30 @@
+{
+  "schema_version": 2,
+  "reference_source": "Frozen upstream There Are Signs assets from original@e4d16555d82745427c69a2983d0144a1ba18bdce; never derived from Gold.",
+  "states": [
+    {
+      "id": "01_menu",
+      "label": "Main menu / challenge entry",
+      "reference": "reference/01_menu.png",
+      "candidate": "visual-01-menu.png",
+      "reference_origin": "visual/reference/01_menu.png",
+      "reference_is_gold_derived": false
+    },
+    {
+      "id": "02_initial_gameplay",
+      "label": "Initial gameplay / corridor start",
+      "reference": "reference/02_initial_gameplay.png",
+      "candidate": "visual-02-initial-gameplay.png",
+      "reference_origin": "visual/reference/02_initial_gameplay.png",
+      "reference_is_gold_derived": false
+    },
+    {
+      "id": "03_core_interaction",
+      "label": "Core interaction / sign and checkpoint",
+      "reference": "reference/03_core_interaction.png",
+      "candidate": "visual-03-core-interaction.png",
+      "reference_origin": "visual/reference/03_core_interaction.png",
+      "reference_is_gold_derived": false
+    }
+  ]
+}

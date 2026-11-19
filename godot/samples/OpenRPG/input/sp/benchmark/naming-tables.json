@@ -1,0 +1,1089 @@
+{
+  "schema_version": 1,
+  "task_id": "openrpg_forest_reconstruction",
+  "contract_revision": "g07-g08-public-20261011-r1",
+  "coordinate_space": "No fixed navigation grid. Visible entities report rect [x,y,width,height] in the main logical viewport, top-left origin, x right/y down. Project world objects through the active camera. Omit off-screen entities; persistent flags remain in slots.",
+  "viewport": [
+    1920,
+    1080
+  ],
+  "position_field": "rect",
+  "phases": {
+    "not_ready": "Only while initial loading is incomplete",
+    "menu": "Optional pre-play menu",
+    "playing": "Exploration, dialogue, combat, placement, or battle victory awaiting return",
+    "paused": "Pause menu",
+    "lost": "Party defeat",
+    "won": "Final safe-grove ending"
+  },
+  "slots": [
+    "region",
+    "opening_complete",
+    "dialogue_open",
+    "opening_line",
+    "coins",
+    "key",
+    "bombs",
+    "wand_red",
+    "pedestal_red",
+    "wand_blue",
+    "pedestal_blue",
+    "wand_green",
+    "pedestal_green",
+    "quest_1_complete",
+    "quest_1_claimed",
+    "quest_2_complete",
+    "quest_2_claimed",
+    "quest_3_complete",
+    "quest_3_claimed",
+    "quest_4_complete",
+    "quest_4_claimed",
+    "trade_complete",
+    "house_open",
+    "chest_open",
+    "grove_open",
+    "bugcat_won",
+    "wolf_won",
+    "ending_complete",
+    "encounter",
+    "battle_stage",
+    "acting_party",
+    "selected_action",
+    "hp_baloo",
+    "max_hp_baloo",
+    "hp_nutsy",
+    "max_hp_nutsy"
+  ],
+  "slot_definitions": [
+    {
+      "name": "region",
+      "meaning": "0 forest, 1 house, 2 grove; during battle/outcome use 2",
+      "requirements": [
+        "WORLD-01",
+        "WORLD-02",
+        "SAVE-04"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "opening_complete",
+      "meaning": "Opening dialogue has finished (0/1)",
+      "requirements": [
+        "START-01",
+        "START-02",
+        "SAVE-04"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "dialogue_open",
+      "meaning": "A dialogue/choice is open (0/1)",
+      "requirements": [
+        "START-01",
+        "WORLD-03",
+        "GHOST-01"
+      ],
+      "starter_value": 1,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "opening_line",
+      "meaning": "1..5 while opening is visible; 0 otherwise",
+      "requirements": [
+        "START-01"
+      ],
+      "starter_value": 1,
+      "min": 0,
+      "max": 5
+    },
+    {
+      "name": "coins",
+      "meaning": "Current inventory count",
+      "requirements": [
+        "QUEST-02",
+        "QUEST-04",
+        "SAVE-01",
+        "SAVE-02"
+      ],
+      "starter_value": 0,
+      "min": 0
+    },
+    {
+      "name": "key",
+      "meaning": "Current inventory count",
+      "requirements": [
+        "QUEST-04",
+        "QUEST-05",
+        "SAVE-01",
+        "SAVE-02"
+      ],
+      "starter_value": 0,
+      "min": 0
+    },
+    {
+      "name": "bombs",
+      "meaning": "Current inventory count",
+      "requirements": [
+        "QUEST-06",
+        "BOMB-04",
+        "SAVE-01",
+        "SAVE-02"
+      ],
+      "starter_value": 0,
+      "min": 0
+    },
+    {
+      "name": "wand_red",
+      "meaning": "Held unplaced red wand (0/1)",
+      "requirements": [
+        "PUZZLE-02",
+        "PUZZLE-03",
+        "SAVE-02"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pedestal_red",
+      "meaning": "Filled red pedestal (0/1)",
+      "requirements": [
+        "PUZZLE-03",
+        "PUZZLE-05",
+        "SAVE-03"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "wand_blue",
+      "meaning": "Held unplaced blue wand (0/1)",
+      "requirements": [
+        "PUZZLE-02",
+        "PUZZLE-03",
+        "SAVE-02"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pedestal_blue",
+      "meaning": "Filled blue pedestal (0/1)",
+      "requirements": [
+        "PUZZLE-03",
+        "PUZZLE-05",
+        "SAVE-03"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "wand_green",
+      "meaning": "Held unplaced green wand (0/1)",
+      "requirements": [
+        "PUZZLE-02",
+        "PUZZLE-03",
+        "SAVE-02"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "pedestal_green",
+      "meaning": "Filled green pedestal (0/1)",
+      "requirements": [
+        "PUZZLE-03",
+        "PUZZLE-05",
+        "SAVE-03"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "quest_1_complete",
+      "meaning": "Objective for NPC 1 complete (0/1)",
+      "requirements": [
+        "QUEST-01",
+        "QUEST-02",
+        "SAVE-03"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "quest_1_claimed",
+      "meaning": "NPC 1 Coin reward claimed (0/1)",
+      "requirements": [
+        "QUEST-02",
+        "QUEST-03",
+        "SAVE-03"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "quest_2_complete",
+      "meaning": "Objective for NPC 2 complete (0/1)",
+      "requirements": [
+        "QUEST-01",
+        "QUEST-02",
+        "SAVE-03"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "quest_2_claimed",
+      "meaning": "NPC 2 Coin reward claimed (0/1)",
+      "requirements": [
+        "QUEST-02",
+        "QUEST-03",
+        "SAVE-03"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "quest_3_complete",
+      "meaning": "Objective for NPC 3 complete (0/1)",
+      "requirements": [
+        "QUEST-01",
+        "QUEST-02",
+        "SAVE-03"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "quest_3_claimed",
+      "meaning": "NPC 3 Coin reward claimed (0/1)",
+      "requirements": [
+        "QUEST-02",
+        "QUEST-03",
+        "SAVE-03"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "quest_4_complete",
+      "meaning": "Objective for NPC 4 complete (0/1)",
+      "requirements": [
+        "QUEST-01",
+        "QUEST-02",
+        "SAVE-03"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "quest_4_claimed",
+      "meaning": "NPC 4 Coin reward claimed (0/1)",
+      "requirements": [
+        "QUEST-02",
+        "QUEST-03",
+        "SAVE-03"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "trade_complete",
+      "meaning": "Committed completion flag (0/1)",
+      "requirements": [
+        "QUEST-04",
+        "SAVE-03"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "house_open",
+      "meaning": "Committed completion flag (0/1)",
+      "requirements": [
+        "QUEST-05",
+        "SAVE-03"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "chest_open",
+      "meaning": "Committed completion flag (0/1)",
+      "requirements": [
+        "QUEST-06",
+        "SAVE-03"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "grove_open",
+      "meaning": "Committed completion flag (0/1)",
+      "requirements": [
+        "PUZZLE-06",
+        "SAVE-03"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "bugcat_won",
+      "meaning": "Committed completion flag (0/1)",
+      "requirements": [
+        "COMBAT-10",
+        "GHOST-02",
+        "SAVE-05"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "wolf_won",
+      "meaning": "Committed completion flag (0/1)",
+      "requirements": [
+        "COMBAT-10",
+        "GHOST-02",
+        "SAVE-05"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "ending_complete",
+      "meaning": "Committed completion flag (0/1)",
+      "requirements": [
+        "END-01",
+        "SAVE-05"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    {
+      "name": "encounter",
+      "meaning": "0 none, 1 Bugcat, 2 Wolf; retained on that battle outcome",
+      "requirements": [
+        "COMBAT-01",
+        "COMBAT-10",
+        "COMBAT-11"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "battle_stage",
+      "meaning": "0 outside battle, 1 action menu, 2 selection/preview, 3 resolving, 4 victory, 5 defeat",
+      "requirements": [
+        "COMBAT-02",
+        "COMBAT-03",
+        "COMBAT-10",
+        "COMBAT-11"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "name": "acting_party",
+      "meaning": "0 none/enemy, 1 Baloo, 2 Nutsy",
+      "requirements": [
+        "COMBAT-02"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "name": "selected_action",
+      "meaning": "0 none, 1 Bear Arms, 2 First Aid, 3 Nutsy attack, 4 Bomb",
+      "requirements": [
+        "COMBAT-03",
+        "BOMB-02"
+      ],
+      "starter_value": 0,
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "hp_baloo",
+      "meaning": "Current HP; -1 outside battle/outcome",
+      "requirements": [
+        "COMBAT-04"
+      ],
+      "starter_value": -1,
+      "min": -1
+    },
+    {
+      "name": "max_hp_baloo",
+      "meaning": "Maximum HP; -1 outside battle/outcome",
+      "requirements": [
+        "COMBAT-04"
+      ],
+      "starter_value": -1,
+      "min": -1
+    },
+    {
+      "name": "hp_nutsy",
+      "meaning": "Current HP; -1 outside battle/outcome",
+      "requirements": [
+        "COMBAT-04"
+      ],
+      "starter_value": -1,
+      "min": -1
+    },
+    {
+      "name": "max_hp_nutsy",
+      "meaning": "Maximum HP; -1 outside battle/outcome",
+      "requirements": [
+        "COMBAT-04"
+      ],
+      "starter_value": -1,
+      "min": -1
+    }
+  ],
+  "entities": [
+    {
+      "kind": "player",
+      "meaning": "Exploration Gobot",
+      "states": [
+        "normal",
+        "dialogue_locked",
+        "paused"
+      ],
+      "requirements": [
+        "START-02",
+        "START-03",
+        "END-02"
+      ]
+    },
+    {
+      "kind": "npc_1",
+      "meaning": "Quest NPC 1; bind this index consistently, independent of displayed name",
+      "states": [
+        "available",
+        "objective_complete",
+        "rewarded"
+      ],
+      "requirements": [
+        "WORLD-03",
+        "QUEST-01",
+        "QUEST-02",
+        "QUEST-03"
+      ]
+    },
+    {
+      "kind": "quest_object_1",
+      "meaning": "Optional world goal object for NPC 1; omit when quest is dialogue-only",
+      "states": [
+        "available",
+        "completed"
+      ],
+      "requirements": [
+        "QUEST-01"
+      ]
+    },
+    {
+      "kind": "npc_2",
+      "meaning": "Quest NPC 2; bind this index consistently, independent of displayed name",
+      "states": [
+        "available",
+        "objective_complete",
+        "rewarded"
+      ],
+      "requirements": [
+        "WORLD-03",
+        "QUEST-01",
+        "QUEST-02",
+        "QUEST-03"
+      ]
+    },
+    {
+      "kind": "quest_object_2",
+      "meaning": "Optional world goal object for NPC 2; omit when quest is dialogue-only",
+      "states": [
+        "available",
+        "completed"
+      ],
+      "requirements": [
+        "QUEST-01"
+      ]
+    },
+    {
+      "kind": "npc_3",
+      "meaning": "Quest NPC 3; bind this index consistently, independent of displayed name",
+      "states": [
+        "available",
+        "objective_complete",
+        "rewarded"
+      ],
+      "requirements": [
+        "WORLD-03",
+        "QUEST-01",
+        "QUEST-02",
+        "QUEST-03"
+      ]
+    },
+    {
+      "kind": "quest_object_3",
+      "meaning": "Optional world goal object for NPC 3; omit when quest is dialogue-only",
+      "states": [
+        "available",
+        "completed"
+      ],
+      "requirements": [
+        "QUEST-01"
+      ]
+    },
+    {
+      "kind": "npc_4",
+      "meaning": "Quest NPC 4; bind this index consistently, independent of displayed name",
+      "states": [
+        "available",
+        "objective_complete",
+        "rewarded"
+      ],
+      "requirements": [
+        "WORLD-03",
+        "QUEST-01",
+        "QUEST-02",
+        "QUEST-03"
+      ]
+    },
+    {
+      "kind": "quest_object_4",
+      "meaning": "Optional world goal object for NPC 4; omit when quest is dialogue-only",
+      "states": [
+        "available",
+        "completed"
+      ],
+      "requirements": [
+        "QUEST-01"
+      ]
+    },
+    {
+      "kind": "gatekeeper",
+      "meaning": "Coin exchange speaker (may be a quest NPC role)",
+      "states": [
+        "available",
+        "traded"
+      ],
+      "requirements": [
+        "QUEST-04"
+      ]
+    },
+    {
+      "kind": "house_door",
+      "meaning": "Exterior door",
+      "states": [
+        "locked",
+        "open"
+      ],
+      "requirements": [
+        "QUEST-05"
+      ]
+    },
+    {
+      "kind": "house_exit",
+      "meaning": "Interior return entrance",
+      "states": [
+        "open"
+      ],
+      "requirements": [
+        "WORLD-02"
+      ]
+    },
+    {
+      "kind": "grove_entrance",
+      "meaning": "Route from house to grove",
+      "states": [
+        "blocked",
+        "open"
+      ],
+      "requirements": [
+        "PUZZLE-06"
+      ]
+    },
+    {
+      "kind": "grove_exit",
+      "meaning": "Return from grove to house",
+      "states": [
+        "open"
+      ],
+      "requirements": [
+        "WORLD-02"
+      ]
+    },
+    {
+      "kind": "chest",
+      "meaning": "Bomb reward chest",
+      "states": [
+        "closed",
+        "opened"
+      ],
+      "requirements": [
+        "QUEST-06"
+      ]
+    },
+    {
+      "kind": "wand_red",
+      "meaning": "Uncollected red wand; omit after pickup",
+      "states": [
+        "available"
+      ],
+      "requirements": [
+        "PUZZLE-01",
+        "PUZZLE-02"
+      ]
+    },
+    {
+      "kind": "pedestal_red",
+      "meaning": "Red pedestal",
+      "states": [
+        "empty",
+        "filled"
+      ],
+      "requirements": [
+        "PUZZLE-03",
+        "PUZZLE-04",
+        "PUZZLE-05"
+      ]
+    },
+    {
+      "kind": "wand_blue",
+      "meaning": "Uncollected blue wand; omit after pickup",
+      "states": [
+        "available"
+      ],
+      "requirements": [
+        "PUZZLE-01",
+        "PUZZLE-02"
+      ]
+    },
+    {
+      "kind": "pedestal_blue",
+      "meaning": "Blue pedestal",
+      "states": [
+        "empty",
+        "filled"
+      ],
+      "requirements": [
+        "PUZZLE-03",
+        "PUZZLE-04",
+        "PUZZLE-05"
+      ]
+    },
+    {
+      "kind": "wand_green",
+      "meaning": "Uncollected green wand; omit after pickup",
+      "states": [
+        "available"
+      ],
+      "requirements": [
+        "PUZZLE-01",
+        "PUZZLE-02"
+      ]
+    },
+    {
+      "kind": "pedestal_green",
+      "meaning": "Green pedestal",
+      "states": [
+        "empty",
+        "filled"
+      ],
+      "requirements": [
+        "PUZZLE-03",
+        "PUZZLE-04",
+        "PUZZLE-05"
+      ]
+    },
+    {
+      "kind": "ghost",
+      "meaning": "Grove ghost/final objective",
+      "states": [
+        "bugcat_pending",
+        "wolf_pending",
+        "resolution_pending",
+        "safe"
+      ],
+      "requirements": [
+        "GHOST-01",
+        "GHOST-02",
+        "END-01"
+      ]
+    },
+    {
+      "kind": "baloo",
+      "meaning": "Battle combatant; each instance has its own HP and stable ID",
+      "states": [
+        "living",
+        "downed"
+      ],
+      "requirements": [
+        "COMBAT-01",
+        "COMBAT-04",
+        "COMBAT-05"
+      ],
+      "extra_fields": {
+        "id": "unique stable string for this encounter instance",
+        "hp": "current HP >= 0",
+        "max_hp": "maximum HP > 0",
+        "selected": "boolean preview/target selection state",
+        "acting": "boolean current actor"
+      }
+    },
+    {
+      "kind": "nutsy",
+      "meaning": "Battle combatant; each instance has its own HP and stable ID",
+      "states": [
+        "living",
+        "downed"
+      ],
+      "requirements": [
+        "COMBAT-01",
+        "COMBAT-04",
+        "COMBAT-05"
+      ],
+      "extra_fields": {
+        "id": "unique stable string for this encounter instance",
+        "hp": "current HP >= 0",
+        "max_hp": "maximum HP > 0",
+        "selected": "boolean preview/target selection state",
+        "acting": "boolean current actor"
+      }
+    },
+    {
+      "kind": "enemy_bugcat",
+      "meaning": "Battle combatant; each instance has its own HP and stable ID",
+      "states": [
+        "living",
+        "downed"
+      ],
+      "requirements": [
+        "COMBAT-01",
+        "COMBAT-04",
+        "COMBAT-05"
+      ],
+      "extra_fields": {
+        "id": "unique stable string for this encounter instance",
+        "hp": "current HP >= 0",
+        "max_hp": "maximum HP > 0",
+        "selected": "boolean preview/target selection state",
+        "acting": "boolean current actor"
+      }
+    },
+    {
+      "kind": "enemy_wolf",
+      "meaning": "Battle combatant; each instance has its own HP and stable ID",
+      "states": [
+        "living",
+        "downed"
+      ],
+      "requirements": [
+        "COMBAT-01",
+        "COMBAT-04",
+        "COMBAT-05"
+      ],
+      "extra_fields": {
+        "id": "unique stable string for this encounter instance",
+        "hp": "current HP >= 0",
+        "max_hp": "maximum HP > 0",
+        "selected": "boolean preview/target selection state",
+        "acting": "boolean current actor"
+      }
+    }
+  ],
+  "targets": [
+    {
+      "kind": "dialogue_continue",
+      "meaning": "Visible dialogue continuation surface",
+      "requirements": [
+        "START-01",
+        "WORLD-03"
+      ]
+    },
+    {
+      "kind": "dialogue_choice",
+      "meaning": "Dialogue choice; stable id distinguishes several options",
+      "requirements": [
+        "QUEST-01",
+        "GHOST-01"
+      ]
+    },
+    {
+      "kind": "encounter_accept",
+      "meaning": "Accept the offered encounter",
+      "requirements": [
+        "GHOST-01"
+      ]
+    },
+    {
+      "kind": "cancel_button",
+      "meaning": "Cancel dialogue/placement/action selection",
+      "requirements": [
+        "WORLD-03",
+        "PUZZLE-03",
+        "COMBAT-03"
+      ]
+    },
+    {
+      "kind": "place_red",
+      "meaning": "Choose Red wand",
+      "requirements": [
+        "PUZZLE-03",
+        "PUZZLE-04"
+      ]
+    },
+    {
+      "kind": "place_blue",
+      "meaning": "Choose Blue wand",
+      "requirements": [
+        "PUZZLE-03",
+        "PUZZLE-04"
+      ]
+    },
+    {
+      "kind": "place_green",
+      "meaning": "Choose Green wand",
+      "requirements": [
+        "PUZZLE-03",
+        "PUZZLE-04"
+      ]
+    },
+    {
+      "kind": "placement_confirm",
+      "meaning": "Confirm chosen placement",
+      "requirements": [
+        "PUZZLE-03",
+        "PUZZLE-04"
+      ]
+    },
+    {
+      "kind": "bear_arms_action",
+      "meaning": "Select Bear Arms",
+      "requirements": [
+        "COMBAT-06"
+      ]
+    },
+    {
+      "kind": "first_aid_action",
+      "meaning": "Select First Aid",
+      "requirements": [
+        "COMBAT-07"
+      ]
+    },
+    {
+      "kind": "nutsy_attack_action",
+      "meaning": "Select Nutsy offensive action",
+      "requirements": [
+        "COMBAT-08"
+      ]
+    },
+    {
+      "kind": "bomb_action",
+      "meaning": "Select Bomb",
+      "requirements": [
+        "BOMB-01"
+      ]
+    },
+    {
+      "kind": "combatant_target",
+      "meaning": "Select a combatant; id matches its entity id",
+      "requirements": [
+        "COMBAT-03",
+        "COMBAT-05"
+      ]
+    },
+    {
+      "kind": "action_confirm",
+      "meaning": "Confirm pending battle action",
+      "requirements": [
+        "COMBAT-03",
+        "BOMB-03"
+      ]
+    },
+    {
+      "kind": "victory_continue",
+      "meaning": "Return from victory to exploration",
+      "requirements": [
+        "COMBAT-10"
+      ]
+    },
+    {
+      "kind": "retry_button",
+      "meaning": "Retry encounter after defeat",
+      "requirements": [
+        "COMBAT-11",
+        "COMBAT-12"
+      ]
+    },
+    {
+      "kind": "restart_button",
+      "meaning": "New Game / full restart",
+      "requirements": [
+        "SAVE-07"
+      ]
+    },
+    {
+      "kind": "resume_button",
+      "meaning": "Resume paused state",
+      "requirements": [
+        "END-02"
+      ]
+    },
+    {
+      "kind": "quit_button",
+      "meaning": "Quit normally",
+      "requirements": [
+        "END-03"
+      ]
+    },
+    {
+      "kind": "focus_action",
+      "meaning": "Select Focus",
+      "requirements": [
+        "COMBAT-14"
+      ]
+    }
+  ],
+  "controls": {
+    "movement_template": "continuous_keys via Godot InputMap",
+    "keys": {
+      "up": [
+        "W",
+        "UpArrow"
+      ],
+      "down": [
+        "S",
+        "DownArrow"
+      ],
+      "left": [
+        "A",
+        "LeftArrow"
+      ],
+      "right": [
+        "D",
+        "RightArrow"
+      ],
+      "interact": [
+        "E",
+        "Space"
+      ],
+      "confirm": [
+        "Enter",
+        "Space"
+      ],
+      "dialogue_advance": [
+        "Enter",
+        "Space",
+        "LeftClick"
+      ],
+      "cancel_pause": [
+        "Escape"
+      ]
+    },
+    "mouse": "Left click visible choices, actions, targets, confirmations, and lifecycle controls; no drag, chord, or timing-sensitive input required."
+  },
+  "reporting_rules": [
+    "All slots are present in every settled snapshot; enums and sentinel values follow slot_definitions.",
+    "Entities describe only currently visible objects. An opaque opening/overlay may leave entities empty.",
+    "Each visible entity has a nonempty id stable within its lifetime; repeated kinds use different ids. NPC indices stay bound across save/reopen.",
+    "All targets have id, rect, visible and interactable. IDs distinguish repeated dialogue choices and match combatant entity ids for combatant_target.",
+    "Report required controls when present. Invisible controls may be omitted. Disabled Bomb remains visible and non-interactable at zero.",
+    "Rectangles describe the visible viewport-clipped portion. A hidden, disabled, or modal-covered control is not interactable.",
+    "Battle HP/selection/acting fields describe real combatants, not synthetic results.",
+    "Snapshot has process_id (current OS PID); revision starts afresh per process and increases whenever reported data changes.",
+    "The skeleton reports only the forest starter. Future systems remain implementation work; do not fabricate entities or completed progress."
+  ]
+}

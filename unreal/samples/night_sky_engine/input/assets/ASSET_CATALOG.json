@@ -1,0 +1,331 @@
+{
+  "schema_version": "1.0.0",
+  "authority_scope": "released_asset_identity_provenance_license_and_import_facts",
+  "assets": [
+    {
+      "id": "SKM_Manny",
+      "original_name": "SKM_Manny",
+      "display_name": "Manny skeletal fighter model",
+      "kind": "skeletal_mesh",
+      "path": "assets/files/Manny/SKM_Manny.fbx",
+      "format": "fbx_7_3_ascii",
+      "purpose": "Both visible fighter bodies",
+      "requirement_ids": [
+        "ASSET-01",
+        "CONTENT-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "byte_length": 13663793,
+      "sha256": "34001bf4ddf69eac6eef4ea4d90f0add931bdacd91f876b1fafd34e62dddaf5d",
+      "license_ids": [
+        "epic_mannequin_terms"
+      ],
+      "license_notice": "assets/legal/LICENSE_SCOPE.md",
+      "dependencies": [],
+      "import_facts": {
+        "asset_type": "SkeletalMesh",
+        "skeleton": "Skeleton package: /Game/Provided/Manny/SKM_Manny_Skeleton.SKM_Manny_Skeleton.",
+        "materials": "Mesh material slots only; no source material graph or texture dependency. Colors may be authored in the candidate.",
+        "content_directory": "starter-project/Content/Provided/Manny",
+        "object_path": "/Game/Provided/Manny/SKM_Manny.SKM_Manny"
+      },
+      "preimported": true,
+      "preimported_package": "/Game/Provided/Manny/SKM_Manny",
+      "preimported_object_path": "/Game/Provided/Manny/SKM_Manny.SKM_Manny"
+    },
+    {
+      "id": "AS_manny_stand",
+      "original_name": "AS_manny_stand",
+      "display_name": "Standing idle",
+      "kind": "animation_sequence",
+      "path": "assets/files/Manny/AS_manny_stand.fbx",
+      "format": "fbx_7_3_ascii",
+      "purpose": "Idle presentation",
+      "requirement_ids": [
+        "ASSET-02",
+        "INPUT-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "byte_length": 3834719,
+      "sha256": "2acd00c676622c153cf47a55ab409600f3461bf8bf92d05ee72dd324c1a95b11",
+      "license_ids": [
+        "nightskyengine_mit",
+        "epic_mannequin_terms"
+      ],
+      "license_notice": "assets/legal/LICENSE_SCOPE.md",
+      "dependencies": [
+        "SKM_Manny"
+      ],
+      "import_facts": {
+        "asset_type": "AnimSequence",
+        "skeleton": "Uses /Game/Provided/Manny/SKM_Manny_Skeleton.SKM_Manny_Skeleton.",
+        "materials": "No material or texture dependency.",
+        "authored_duration_seconds": 1.5,
+        "content_directory": "starter-project/Content/Provided/Manny/Animations",
+        "object_path": "/Game/Provided/Manny/Animations/AS_manny_stand.AS_manny_stand"
+      },
+      "preimported": true,
+      "preimported_package": "/Game/Provided/Manny/Animations/AS_manny_stand",
+      "preimported_object_path": "/Game/Provided/Manny/Animations/AS_manny_stand.AS_manny_stand"
+    },
+    {
+      "id": "AS_manny_fwalk",
+      "original_name": "AS_manny_fwalk",
+      "display_name": "Forward walk",
+      "kind": "animation_sequence",
+      "path": "assets/files/Manny/AS_manny_fwalk.fbx",
+      "format": "fbx_7_3_ascii",
+      "purpose": "Player movement toward the rival",
+      "requirement_ids": [
+        "ASSET-02",
+        "INPUT-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "byte_length": 2690563,
+      "sha256": "f3b57f49da16137007ac964a7e5009577077b3b928656a2a27e038112ae66e88",
+      "license_ids": [
+        "nightskyengine_mit",
+        "epic_mannequin_terms"
+      ],
+      "license_notice": "assets/legal/LICENSE_SCOPE.md",
+      "dependencies": [
+        "SKM_Manny"
+      ],
+      "import_facts": {
+        "asset_type": "AnimSequence",
+        "skeleton": "Uses /Game/Provided/Manny/SKM_Manny_Skeleton.SKM_Manny_Skeleton.",
+        "materials": "No material or texture dependency.",
+        "authored_duration_seconds": 0.8333333134651184,
+        "content_directory": "starter-project/Content/Provided/Manny/Animations",
+        "object_path": "/Game/Provided/Manny/Animations/AS_manny_fwalk.AS_manny_fwalk"
+      },
+      "preimported": true,
+      "preimported_package": "/Game/Provided/Manny/Animations/AS_manny_fwalk",
+      "preimported_object_path": "/Game/Provided/Manny/Animations/AS_manny_fwalk.AS_manny_fwalk"
+    },
+    {
+      "id": "AS_manny_bwalk",
+      "original_name": "AS_manny_bwalk",
+      "display_name": "Backward walk",
+      "kind": "animation_sequence",
+      "path": "assets/files/Manny/AS_manny_bwalk.fbx",
+      "format": "fbx_7_3_ascii",
+      "purpose": "Player movement away from the rival",
+      "requirement_ids": [
+        "ASSET-02",
+        "INPUT-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "byte_length": 2689395,
+      "sha256": "f60cfe188fe4aa1eed946bd830d982091ab70b3f76ea63c267065670a5141d87",
+      "license_ids": [
+        "nightskyengine_mit",
+        "epic_mannequin_terms"
+      ],
+      "license_notice": "assets/legal/LICENSE_SCOPE.md",
+      "dependencies": [
+        "SKM_Manny"
+      ],
+      "import_facts": {
+        "asset_type": "AnimSequence",
+        "skeleton": "Uses /Game/Provided/Manny/SKM_Manny_Skeleton.SKM_Manny_Skeleton.",
+        "materials": "No material or texture dependency.",
+        "authored_duration_seconds": 0.8333333134651184,
+        "content_directory": "starter-project/Content/Provided/Manny/Animations",
+        "object_path": "/Game/Provided/Manny/Animations/AS_manny_bwalk.AS_manny_bwalk"
+      },
+      "preimported": true,
+      "preimported_package": "/Game/Provided/Manny/Animations/AS_manny_bwalk",
+      "preimported_object_path": "/Game/Provided/Manny/Animations/AS_manny_bwalk.AS_manny_bwalk"
+    },
+    {
+      "id": "AS_manny_jump",
+      "original_name": "AS_manny_jump",
+      "display_name": "Jump",
+      "kind": "animation_sequence",
+      "path": "assets/files/Manny/AS_manny_jump.fbx",
+      "format": "fbx_7_3_ascii",
+      "purpose": "Player jump presentation",
+      "requirement_ids": [
+        "ASSET-02",
+        "INPUT-02"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "byte_length": 2748741,
+      "sha256": "3b089fb7e7f184499d231b9cecc8d5194cf898745a6613e5c7ec72de6045a5d0",
+      "license_ids": [
+        "nightskyengine_mit",
+        "epic_mannequin_terms"
+      ],
+      "license_notice": "assets/legal/LICENSE_SCOPE.md",
+      "dependencies": [
+        "SKM_Manny"
+      ],
+      "import_facts": {
+        "asset_type": "AnimSequence",
+        "skeleton": "Uses /Game/Provided/Manny/SKM_Manny_Skeleton.SKM_Manny_Skeleton.",
+        "materials": "No material or texture dependency.",
+        "authored_duration_seconds": 0.8666666746139526,
+        "content_directory": "starter-project/Content/Provided/Manny/Animations",
+        "object_path": "/Game/Provided/Manny/Animations/AS_manny_jump.AS_manny_jump"
+      },
+      "preimported": true,
+      "preimported_package": "/Game/Provided/Manny/Animations/AS_manny_jump",
+      "preimported_object_path": "/Game/Provided/Manny/Animations/AS_manny_jump.AS_manny_jump"
+    },
+    {
+      "id": "AS_manny_5a",
+      "original_name": "AS_manny_5a",
+      "display_name": "Standing close strike",
+      "kind": "animation_sequence",
+      "path": "assets/files/Manny/AS_manny_5a.fbx",
+      "format": "fbx_7_3_ascii",
+      "purpose": "Player close-strike presentation; original 5a basename retained",
+      "requirement_ids": [
+        "ASSET-02",
+        "COMBAT-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "byte_length": 1829964,
+      "sha256": "395cf56281cab43036bc2a6b140b4ea686de4f20b25cf8ace30b70036eedc5ae",
+      "license_ids": [
+        "nightskyengine_mit",
+        "epic_mannequin_terms"
+      ],
+      "license_notice": "assets/legal/LICENSE_SCOPE.md",
+      "dependencies": [
+        "SKM_Manny"
+      ],
+      "import_facts": {
+        "asset_type": "AnimSequence",
+        "skeleton": "Uses /Game/Provided/Manny/SKM_Manny_Skeleton.SKM_Manny_Skeleton.",
+        "materials": "No material or texture dependency.",
+        "authored_duration_seconds": 0.3333333432674408,
+        "content_directory": "starter-project/Content/Provided/Manny/Animations",
+        "object_path": "/Game/Provided/Manny/Animations/AS_manny_5a.AS_manny_5a"
+      },
+      "preimported": true,
+      "preimported_package": "/Game/Provided/Manny/Animations/AS_manny_5a",
+      "preimported_object_path": "/Game/Provided/Manny/Animations/AS_manny_5a.AS_manny_5a"
+    },
+    {
+      "id": "AS_manny_fireball",
+      "original_name": "AS_manny_fireball",
+      "display_name": "Projectile-casting motion",
+      "kind": "animation_sequence",
+      "path": "assets/files/Manny/AS_manny_fireball.fbx",
+      "format": "fbx_7_3_ascii",
+      "purpose": "Player energy-bolt casting presentation",
+      "requirement_ids": [
+        "ASSET-02",
+        "COMBAT-02"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "byte_length": 2550042,
+      "sha256": "0e1f38ad36dbcb3eb5a57f0320523fdd46b68a32ffe5d4b94f61ef6e0ecb86bf",
+      "license_ids": [
+        "nightskyengine_mit",
+        "epic_mannequin_terms"
+      ],
+      "license_notice": "assets/legal/LICENSE_SCOPE.md",
+      "dependencies": [
+        "SKM_Manny"
+      ],
+      "import_facts": {
+        "asset_type": "AnimSequence",
+        "skeleton": "Uses /Game/Provided/Manny/SKM_Manny_Skeleton.SKM_Manny_Skeleton.",
+        "materials": "No material or texture dependency.",
+        "authored_duration_seconds": 0.75,
+        "content_directory": "starter-project/Content/Provided/Manny/Animations",
+        "object_path": "/Game/Provided/Manny/Animations/AS_manny_fireball.AS_manny_fireball"
+      },
+      "preimported": true,
+      "preimported_package": "/Game/Provided/Manny/Animations/AS_manny_fireball",
+      "preimported_object_path": "/Game/Provided/Manny/Animations/AS_manny_fireball.AS_manny_fireball"
+    },
+    {
+      "id": "AS_manny_standblock",
+      "original_name": "AS_manny_standblock",
+      "display_name": "Standing guard",
+      "kind": "animation_sequence",
+      "path": "assets/files/Manny/AS_manny_standblock.fbx",
+      "format": "fbx_7_3_ascii",
+      "purpose": "Player standing-block presentation",
+      "requirement_ids": [
+        "ASSET-02",
+        "DEFENSE-02"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "byte_length": 1687416,
+      "sha256": "f4fbd37be4a5185fc0fbe966fac650ba7cba29f74c4db4217640edf1cef2bb62",
+      "license_ids": [
+        "nightskyengine_mit",
+        "epic_mannequin_terms"
+      ],
+      "license_notice": "assets/legal/LICENSE_SCOPE.md",
+      "dependencies": [
+        "SKM_Manny"
+      ],
+      "import_facts": {
+        "asset_type": "AnimSequence",
+        "skeleton": "Uses /Game/Provided/Manny/SKM_Manny_Skeleton.SKM_Manny_Skeleton.",
+        "materials": "No material or texture dependency.",
+        "authored_duration_seconds": 0.25,
+        "content_directory": "starter-project/Content/Provided/Manny/Animations",
+        "object_path": "/Game/Provided/Manny/Animations/AS_manny_standblock.AS_manny_standblock"
+      },
+      "preimported": true,
+      "preimported_package": "/Game/Provided/Manny/Animations/AS_manny_standblock",
+      "preimported_object_path": "/Game/Provided/Manny/Animations/AS_manny_standblock.AS_manny_standblock"
+    },
+    {
+      "id": "AS_manny_hitstun",
+      "original_name": "AS_manny_hitstun",
+      "display_name": "Hit reaction",
+      "kind": "animation_sequence",
+      "path": "assets/files/Manny/AS_manny_hitstun.fbx",
+      "format": "fbx_7_3_ascii",
+      "purpose": "Either fighter receiving a hit",
+      "requirement_ids": [
+        "ASSET-02",
+        "COMBAT-01",
+        "COMBAT-02",
+        "DEFENSE-01"
+      ],
+      "required": true,
+      "equivalent_replacement_allowed": false,
+      "byte_length": 1801444,
+      "sha256": "8e639233333c1a166bf3dc670347077d651f8dca54fbe9ebbe6ed65f35eea4ac",
+      "license_ids": [
+        "nightskyengine_mit",
+        "epic_mannequin_terms"
+      ],
+      "license_notice": "assets/legal/LICENSE_SCOPE.md",
+      "dependencies": [
+        "SKM_Manny"
+      ],
+      "import_facts": {
+        "asset_type": "AnimSequence",
+        "skeleton": "Uses /Game/Provided/Manny/SKM_Manny_Skeleton.SKM_Manny_Skeleton.",
+        "materials": "No material or texture dependency.",
+        "authored_duration_seconds": 0.3166666626930237,
+        "content_directory": "starter-project/Content/Provided/Manny/Animations",
+        "object_path": "/Game/Provided/Manny/Animations/AS_manny_hitstun.AS_manny_hitstun"
+      },
+      "preimported": true,
+      "preimported_package": "/Game/Provided/Manny/Animations/AS_manny_hitstun",
+      "preimported_object_path": "/Game/Provided/Manny/Animations/AS_manny_hitstun.AS_manny_hitstun"
+    }
+  ],
+  "description": "Provided Manny skeletal mesh and animation assets with protected FBX reference files.",
+  "package_root": "starter-project/Content/Provided/Manny",
+  "reference_root": "assets/files/Manny"
+}

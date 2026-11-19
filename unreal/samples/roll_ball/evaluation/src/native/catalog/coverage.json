@@ -1,0 +1,159 @@
+{
+  "gdd_sha256": "f2da09a78df9a03f3ec3a36c69716ec89d021ff5390ae85f5f161ada709d0259",
+  "requirements": [
+    {
+      "id": "CAMERA-01",
+      "checks": [
+        "D5-camera"
+      ]
+    },
+    {
+      "id": "COLLISION-01",
+      "checks": [
+        "D3-perimeter",
+        "D3-internal"
+      ]
+    },
+    {
+      "id": "EXIT-01",
+      "checks": [
+        "D4-exit-running",
+        "D4-exit-trap",
+        "D4-exit-terminal"
+      ]
+    },
+    {
+      "id": "GOAL-01",
+      "checks": [
+        "D3-goal"
+      ]
+    },
+    {
+      "id": "GOAL-02",
+      "checks": [
+        "D3-terminal"
+      ]
+    },
+    {
+      "id": "HAZARD-01",
+      "checks": [
+        "D2-recovery",
+        "D3-safe-rim",
+        "D3-opening",
+        "D3-hit-lock",
+        "D3-repeat-hit"
+      ]
+    },
+    {
+      "id": "HAZARD-02",
+      "checks": [
+        "D3-hit-count",
+        "D3-hit-time",
+        "D3-reset",
+        "D4-resume"
+      ]
+    },
+    {
+      "id": "LAYOUT-01",
+      "checks": [
+        "D2-board"
+      ]
+    },
+    {
+      "id": "LAYOUT-02",
+      "checks": [
+        "D2-traps",
+        "D2-exit",
+        "D3-initial"
+      ]
+    },
+    {
+      "id": "MOVEMENT-01",
+      "checks": [
+        "D3-directions",
+        "D3-countersteer"
+      ]
+    },
+    {
+      "id": "MOVEMENT-02",
+      "checks": [
+        "D2-ball",
+        "D3-coast",
+        "D5-roll"
+      ]
+    },
+    {
+      "id": "QUALITY-01",
+      "checks": [
+        "D1-entry",
+        "D1-build",
+        "D1-start",
+        "D1-contract"
+      ]
+    },
+    {
+      "id": "QUALITY-02",
+      "checks": [
+        "D4-journey"
+      ]
+    },
+    {
+      "id": "QUALITY-03",
+      "checks": [
+        "D5-running",
+        "D5-trap",
+        "D5-complete",
+        "D5-restart"
+      ]
+    },
+    {
+      "id": "QUALITY-04",
+      "checks": [
+        "D5-running",
+        "D5-trap",
+        "D5-roll"
+      ]
+    },
+    {
+      "id": "QUALITY-05",
+      "checks": [
+        "D1-build",
+        "D1-start",
+        "D4-journey"
+      ]
+    },
+    {
+      "id": "QUALITY-06",
+      "checks": [
+        "D3-repeat-hit",
+        "D4-restart-repeat",
+        "D4-reopen"
+      ]
+    },
+    {
+      "id": "REOPEN-01",
+      "checks": [
+        "D4-reopen"
+      ]
+    },
+    {
+      "id": "RESTART-01",
+      "checks": [
+        "D4-restart-running",
+        "D4-restart-trap",
+        "D4-restart-terminal",
+        "D4-restart-repeat"
+      ]
+    },
+    {
+      "id": "UI-01",
+      "checks": [
+        "D5-running",
+        "D5-trap",
+        "D5-complete",
+        "D5-restart"
+      ]
+    }
+  ],
+  "unmapped_gdd_requirements": []
+}

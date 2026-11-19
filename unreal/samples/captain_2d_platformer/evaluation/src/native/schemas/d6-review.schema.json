@@ -1,0 +1,124 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "D6 three-round evidence, independently revalidated by score.py",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "status",
+    "raw_sha256",
+    "manifest_sha256",
+    "prompt_sha256",
+    "model_requested",
+    "rounds"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "2.0.0"
+    },
+    "status": {
+      "const": "completed"
+    },
+    "raw_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "manifest_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "prompt_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "model_requested": {
+      "type": "string",
+      "minLength": 1
+    },
+    "rounds": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "number",
+          "states"
+        ],
+        "properties": {
+          "number": {
+            "enum": [
+              1,
+              2,
+              3
+            ]
+          },
+          "states": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "status",
+                "criteria",
+                "reason",
+                "reference_sha256",
+                "candidate_sha256"
+              ],
+              "properties": {
+                "id": {
+                  "enum": [
+                    "initial",
+                    "sword",
+                    "airborne"
+                  ]
+                },
+                "status": {
+                  "enum": [
+                    "compared",
+                    "candidate_missing",
+                    "candidate_black"
+                  ]
+                },
+                "criteria": {
+                  "type": "array",
+                  "minItems": 5,
+                  "maxItems": 5,
+                  "items": {
+                    "enum": [
+                      0,
+                      0.5,
+                      1,
+                      1.5,
+                      2
+                    ]
+                  }
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "reference_sha256": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "candidate_sha256": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "pattern": "^[0-9a-f]{64}$"
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

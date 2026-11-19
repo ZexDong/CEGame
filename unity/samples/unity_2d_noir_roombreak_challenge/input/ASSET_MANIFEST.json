@@ -1,0 +1,309 @@
+{
+  "schema_version": 1,
+  "source": "Supplied media from Ruan-h/Noir-Platformer-Unity6 commit dfd7250955fc259b4925f5fef0c4836278b15df9, mechanically serialized by Unity 6000.0.80f1 where applicable.",
+  "protected_root": "Assets/TaskAssets",
+  "notes": [
+    "Original gameplay scripts and original answer Scenes are intentionally excluded.",
+    "Source prefabs can contain missing upstream script references and are media references, not runnable answers.",
+    "ASSET_CONTACT_SHEET.png is supplied with the initial request as the visual inventory; ASSET_CATALOG.md and ASSET_CATALOG.json provide exact source paths and import and visible-bounds facts.",
+    "Several character textures have extreme transparent padding, and the opaque Vulto JPG frames are character references rather than backgrounds.",
+    "The catalog records which prefab script references are intentionally omitted upstream gameplay scripts versus pinned package or engine components.",
+    "The supplied Player, Anda, Obser, room, effect, and audio media must be recognizable in the actual runtime presentation."
+  ],
+  "files": [
+    {
+      "path": "Assets/TaskAssets/NoirSource/Animation/Player.controller",
+      "role": "animation controller",
+      "bytes": 2912
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Animation/Player/Idle.anim",
+      "role": "animation clip",
+      "bytes": 1345
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Animation/Player/Walking.anim",
+      "role": "animation clip",
+      "bytes": 1863
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Audio/Enemy/AlertSound.wav",
+      "role": "audio clip",
+      "bytes": 13149
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Audio/Enemy/Dash.wav",
+      "role": "audio clip",
+      "bytes": 95162
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Audio/Enemy/laserShoot.wav",
+      "role": "audio clip",
+      "bytes": 10103
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Audio/Player/Attack.wav",
+      "role": "audio clip",
+      "bytes": 161092
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Audio/Player/Dash.wav",
+      "role": "audio clip",
+      "bytes": 34808
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Audio/Player/Jump.wav",
+      "role": "audio clip",
+      "bytes": 19402
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Audio/Player/Kill.wav",
+      "role": "audio clip",
+      "bytes": 16920
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Audio/Player/PlayerDeath.wav",
+      "role": "audio clip",
+      "bytes": 49328
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/DefaultVolumeProfile.asset",
+      "role": "Unity source asset",
+      "bytes": 19524
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Fonts/LiberationSans.ttf",
+      "role": "font",
+      "bytes": 350200
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/InputSystem_Actions.inputactions",
+      "role": "input action source asset",
+      "bytes": 42061
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/materials/BackstabSparks.mat",
+      "role": "material",
+      "bytes": 2670
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/materials/LaserAura.mat",
+      "role": "material",
+      "bytes": 2598
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/materials/LaserAuraMaterial.mat",
+      "role": "material",
+      "bytes": 2434
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/materials/LaserMaterial.mat",
+      "role": "material",
+      "bytes": 2420
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/materials/PlayerMaterial.physicsMaterial2D",
+      "role": "supplied source file",
+      "bytes": 342
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/materials/RenderConeMaterial.mat",
+      "role": "material",
+      "bytes": 2296
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/materials/WhiteGlowMaterial.mat",
+      "role": "material",
+      "bytes": 3104
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/Enemies/Anda.prefab",
+      "role": "source prefab",
+      "bytes": 16259
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/Enemies/Obser.prefab",
+      "role": "source prefab",
+      "bytes": 20588
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/GameManager/GameManager.prefab",
+      "role": "source prefab",
+      "bytes": 1478
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/GameManager/Global Light 2D.prefab",
+      "role": "source prefab",
+      "bytes": 2625
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/GameManager/Global Volume.prefab",
+      "role": "source prefab",
+      "bytes": 1555
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/GameManager/Main Camera.prefab",
+      "role": "source prefab",
+      "bytes": 3777
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/GameManager/Player.prefab",
+      "role": "source prefab",
+      "bytes": 382759
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/LevelDesing/Checkpoint.prefab",
+      "role": "source prefab",
+      "bytes": 4037
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/LevelDesing/Grid.prefab",
+      "role": "source prefab",
+      "bytes": 41335
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Prefabs/VFX/VFX.prefab",
+      "role": "source prefab",
+      "bytes": 246121
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Settings/Lit2DSceneTemplate.scenetemplate",
+      "role": "supplied source file",
+      "bytes": 3942880
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Settings/Renderer2D.asset",
+      "role": "Unity source asset",
+      "bytes": 3698
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Settings/Scenes/URP2DSceneTemplate.unity",
+      "role": "supplied source file",
+      "bytes": 10231
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Settings/UniversalRP.asset",
+      "role": "Unity source asset",
+      "bytes": 4393
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Anda/AndaDead.png",
+      "role": "sprite or texture",
+      "bytes": 193
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Anda/AndaIdle.png",
+      "role": "sprite or texture",
+      "bytes": 232
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Player/BackAttack.png",
+      "role": "sprite or texture",
+      "bytes": 234
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Player/Idle.png",
+      "role": "sprite or texture",
+      "bytes": 228
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Tile/Ground.png",
+      "role": "sprite or texture",
+      "bytes": 2097
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Tile/Obstacle.png",
+      "role": "sprite or texture",
+      "bytes": 2097
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Tile/TilePalette/Ground.asset",
+      "role": "Unity source asset",
+      "bytes": 816
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Tile/TilePalette/GroundPalette.prefab",
+      "role": "source prefab",
+      "bytes": 5937
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Tile/TilePalette/Obstacle.asset",
+      "role": "Unity source asset",
+      "bytes": 842
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Tile/TilePalette/ObstaclePallete/ObstaclePalette.prefab",
+      "role": "source prefab",
+      "bytes": 5961
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vig/Vigia.png",
+      "role": "sprite or texture",
+      "bytes": 224
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle1.jpg",
+      "role": "sprite or texture",
+      "bytes": 2816
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle2.jpg",
+      "role": "sprite or texture",
+      "bytes": 2718
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle3.jpg",
+      "role": "sprite or texture",
+      "bytes": 2725
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle4.jpg",
+      "role": "sprite or texture",
+      "bytes": 2651
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle5.jpg",
+      "role": "sprite or texture",
+      "bytes": 2722
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/Idle/VultoIdle6.jpg",
+      "role": "sprite or texture",
+      "bytes": 2738
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/VultoDownAttack.jpg",
+      "role": "sprite or texture",
+      "bytes": 2724
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/VultoLaunchSword.jpg",
+      "role": "sprite or texture",
+      "bytes": 2600
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/VultoStun.jpg",
+      "role": "sprite or texture",
+      "bytes": 2145
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/Sprites/Vulto/VultoSword.jpg",
+      "role": "sprite or texture",
+      "bytes": 1242
+    },
+    {
+      "path": "Assets/TaskAssets/NoirSource/UniversalRenderPipelineGlobalSettings.asset",
+      "role": "Unity source asset",
+      "bytes": 21403
+    },
+    {
+      "path": "Assets/TaskAssets/README.md",
+      "role": "protected source-media guidance",
+      "bytes": 627
+    }
+  ],
+  "catalog": "ASSET_CATALOG.json",
+  "catalog_markdown": "ASSET_CATALOG.md",
+  "contact_sheet": "ASSET_CONTACT_SHEET.png"
+}
+

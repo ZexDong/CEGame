@@ -1,0 +1,316 @@
+{
+  "contract_version": "tide-lock-v1",
+  "workspace_attributes": {
+    "TL_ContractVersion": {
+      "type": "string",
+      "required_value": "tide-lock-v1"
+    },
+    "TL_Ready": {
+      "type": "boolean",
+      "required_value": true
+    }
+  },
+  "telemetry_remote": {
+    "name": "TL_PublicTelemetry",
+    "class": "RemoteEvent",
+    "direction": "server_to_client_only"
+  },
+  "tags": {
+    "TL_GameStateRoot": {
+      "count": 1,
+      "class": "Model",
+      "ids": [
+        "GameState"
+      ]
+    },
+    "TL_CentralSpawn": {
+      "count": 1,
+      "class": "BasePart",
+      "ids": [
+        "CentralSpawn"
+      ]
+    },
+    "TL_OrderDisplay": {
+      "count": 1,
+      "class": "BasePart",
+      "ids": [
+        "OrderDisplay"
+      ]
+    },
+    "TL_RoutingNode": {
+      "count": 3,
+      "class": "BasePart",
+      "ids": [
+        "Routing.Delta",
+        "Routing.Nova",
+        "Routing.Echo"
+      ]
+    },
+    "TL_PressurePump": {
+      "count": 2,
+      "class": "BasePart",
+      "ids": [
+        "Pump.Port",
+        "Pump.Starboard"
+      ]
+    },
+    "TL_CoreRack": {
+      "count": 1,
+      "class": "BasePart",
+      "ids": [
+        "Core.Rack"
+      ]
+    },
+    "TL_CarryCore": {
+      "count": 1,
+      "class": "BasePart",
+      "ids": [
+        "Core.Item"
+      ]
+    },
+    "TL_CoreSocket": {
+      "count": 1,
+      "class": "BasePart",
+      "ids": [
+        "Core.Socket"
+      ]
+    },
+    "TL_TransferCheckpoint": {
+      "count": 1,
+      "class": "BasePart",
+      "ids": [
+        "Checkpoint.Transfer"
+      ]
+    },
+    "TL_Hazard": {
+      "count": 3,
+      "class": "BasePart",
+      "ids": [
+        "Hazard.ArcA",
+        "Hazard.ArcB",
+        "Hazard.ArcC"
+      ]
+    },
+    "TL_TransferWaypoint": {
+      "count": 4,
+      "class": "BasePart",
+      "ids": [
+        "Waypoint.0",
+        "Waypoint.1",
+        "Waypoint.2",
+        "Waypoint.3"
+      ]
+    },
+    "TL_FinalLever": {
+      "count": 2,
+      "class": "BasePart",
+      "ids": [
+        "Final.Left",
+        "Final.Right"
+      ]
+    },
+    "TL_FinalConsole": {
+      "count": 1,
+      "class": "BasePart",
+      "ids": [
+        "Final.Console"
+      ]
+    },
+    "TL_ApproachPoint": {
+      "count": 10,
+      "class": "BasePart"
+    }
+  },
+  "player_gui_tags": {
+    "TL_HUDRoot": {
+      "count_per_player_gui": 1,
+      "class": "GuiObject"
+    },
+    "TL_HUDField": {
+      "minimum_count_per_player_gui": 10,
+      "class": "TextLabel_or_TextButton"
+    },
+    "TL_FailureOverlay": {
+      "count_per_player_gui": 1,
+      "class": "GuiObject"
+    },
+    "TL_CompletionOverlay": {
+      "count_per_player_gui": 1,
+      "class": "GuiObject"
+    },
+    "TL_RetryButton": {
+      "count_per_player_gui": 1,
+      "class": "TextButton_or_ImageButton"
+    }
+  },
+  "approach_target_ids": [
+    "Routing.Delta",
+    "Routing.Nova",
+    "Routing.Echo",
+    "Pump.Port",
+    "Pump.Starboard",
+    "Core.Rack",
+    "Core.Socket",
+    "Final.Left",
+    "Final.Right",
+    "Final.Console"
+  ],
+  "prompt": {
+    "key": "E",
+    "activation_distance_range": [
+      6,
+      12
+    ],
+    "maximum_hold_duration": 0.4,
+    "requires_line_of_sight": false
+  },
+  "routing_ids": [
+    "Delta",
+    "Nova",
+    "Echo"
+  ],
+  "pump_ids": [
+    "Port",
+    "Starboard"
+  ],
+  "hazard_ids": [
+    "ArcA",
+    "ArcB",
+    "ArcC"
+  ],
+  "player_attributes": {
+    "TL_RunId": "number",
+    "TL_RunState": "string",
+    "TL_RoutingComplete": "boolean",
+    "TL_RoutingProgress": "number",
+    "TL_RoutingNext": "string",
+    "TL_PressureComplete": "boolean",
+    "TL_PumpPortState": "string",
+    "TL_PumpStarboardState": "string",
+    "TL_CoreTransferComplete": "boolean",
+    "TL_CarryingCore": "boolean",
+    "TL_Checkpoint": "string",
+    "TL_FinalStage": "string",
+    "TL_CompletionState": "string",
+    "TL_DeathCount": "number",
+    "TL_RetryCount": "number",
+    "TL_RunStart": "number",
+    "TL_FinalTime": "number",
+    "TL_EventSerial": "number",
+    "TL_LastEvent": "string",
+    "TL_EventDetail": "string",
+    "TL_FeedbackText": "string"
+  },
+  "enums": {
+    "run_state": [
+      "Active",
+      "Failed",
+      "Completed"
+    ],
+    "routing_next": [
+      "Delta",
+      "Nova",
+      "Echo",
+      "Complete"
+    ],
+    "pump_state": [
+      "Idle",
+      "Running",
+      "Rejected",
+      "Locked"
+    ],
+    "checkpoint": [
+      "Central",
+      "Transfer"
+    ],
+    "core_state": [
+      "AtRack",
+      "Carried",
+      "Installed"
+    ],
+    "hazard_state": [
+      "Inactive",
+      "Active"
+    ],
+    "final_stage": [
+      "Locked",
+      "Ready",
+      "LeftArmed",
+      "DualArmed",
+      "Failed",
+      "Completed"
+    ],
+    "completion_state": [
+      "InProgress",
+      "Failed",
+      "Completed"
+    ]
+  },
+  "events": [
+    "RunStarted",
+    "Restarted",
+    "RoutingAccepted",
+    "RoutingWrongOrder",
+    "RoutingAlreadyActive",
+    "RoutingCompleted",
+    "PumpStarted",
+    "PumpLocked",
+    "PumpRejected",
+    "PumpAlreadyLocked",
+    "PressureCompleted",
+    "CheckpointActivated",
+    "CorePickedUp",
+    "CorePickupRejected",
+    "CoreSocketRejected",
+    "CoreInstalled",
+    "HazardTouched",
+    "PlayerDied",
+    "RespawnedTransfer",
+    "FinalNotReady",
+    "FinalWrongLever",
+    "FinalAlreadyArmed",
+    "FinalLeftArmed",
+    "FinalDualArmed",
+    "FinalTimeout",
+    "RetryAccepted",
+    "Completed"
+  ],
+  "hud_roles": [
+    "Objective",
+    "Timer",
+    "Feedback",
+    "RoutingStatus",
+    "RoutingOrder",
+    "PressureStatus",
+    "GaugePort",
+    "GaugeStarboard",
+    "CoreStatus",
+    "FinalStatus"
+  ],
+  "geometry": {
+    "max_horizontal_distance_from_central": 180,
+    "minimum_walk_width": 10,
+    "minimum_headroom": 8,
+    "maximum_approach_height_delta": 2,
+    "approach_arrival_radius": 3,
+    "central_restart_radius": 24,
+    "transfer_respawn_radius": 18,
+    "final_minimum_time_margin_seconds": 3
+  },
+  "timing": {
+    "ready_timeout_seconds": 12,
+    "minimum_feedback_visible_seconds": 1.5,
+    "pump_cycle_seconds": 8,
+    "pump_cycle_tolerance_seconds": 0.8,
+    "pump_safe_min": 40,
+    "pump_safe_max": 60,
+    "pump_reject_reset_seconds": 1,
+    "minimum_hazard_phase_seconds": 2.5,
+    "hazard_death_timeout_seconds": 0.75,
+    "core_return_timeout_seconds": 2,
+    "left_to_right_window_seconds": 10,
+    "right_to_console_window_seconds": 8,
+    "window_input_replication_tolerance_seconds": 0.25,
+    "restart_timeout_seconds": 2
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "com.gamecreate.benchmark.noir-roombreak.evaluator",
+  "version": "1.0.0",
+  "displayName": "Noir Roombreak Challenge Evaluator",
+  "unity": "6000.0",
+  "dependencies": {
+    "com.unity.inputsystem": "1.19.0",
+    "com.unity.test-framework": "1.6.0",
+    "com.unity.ugui": "2.0.0"
+  }
+}

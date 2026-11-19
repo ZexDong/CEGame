@@ -24,8 +24,14 @@
       "path": "unreal",
       "catalog": "unreal/catalog.json",
       "task_count": 8
+    },
+    {
+      "id": "defold",
+      "path": "defold",
+      "catalog": "defold/catalog.json",
+      "task_count": 8
     }
   ],
-  "task_count": 37,
-  "game_count_note": "37 task packages, 36 distinct games; Unity Noir Hard is an alternate task."
+  "task_count": 45,
+  "game_count_note": "45 task packages, 44 distinct games; Unity Noir Hard is an alternate task."
 }

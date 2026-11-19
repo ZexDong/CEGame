@@ -1,0 +1,401 @@
+{
+  "version": "4.0.0",
+  "generation": "legacy",
+  "source": "../input/GDD.md Section 6",
+  "gdd_sha256": "f2da09a78df9a03f3ec3a36c69716ec89d021ff5390ae85f5f161ada709d0259",
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "checkpoints": [
+    {
+      "id": "D1-entry",
+      "dimension": "D1",
+      "requirement": "QUALITY-01",
+      "stage": "static",
+      "assertion": "Project descriptor and public fixed content are loadable.",
+      "trajectory": "entry",
+      "visible_review_required": false
+    },
+    {
+      "id": "D1-build",
+      "dimension": "D1",
+      "requirement": "QUALITY-01",
+      "stage": "static",
+      "assertion": "The candidate source or content project imports/builds with the bound engine.",
+      "trajectory": "build",
+      "visible_review_required": false
+    },
+    {
+      "id": "D1-start",
+      "dimension": "D1",
+      "requirement": "QUALITY-01",
+      "stage": "static",
+      "assertion": "The normal entry produces a live rendered window without player input.",
+      "trajectory": "static-start",
+      "visible_review_required": false
+    },
+    {
+      "id": "D1-contract",
+      "dimension": "D1",
+      "requirement": "QUALITY-01",
+      "stage": "static",
+      "assertion": "The public read-only provider publishes valid, progressing, truthful snapshots.",
+      "trajectory": "static-start",
+      "visible_review_required": false
+    },
+    {
+      "id": "D2-board",
+      "dimension": "D2",
+      "requirement": "LAYOUT-01",
+      "stage": "dynamic",
+      "assertion": "All fixed wall and floor meshes are assembled in the playable board.",
+      "trajectory": "entry",
+      "visible_review_required": true
+    },
+    {
+      "id": "D2-traps",
+      "dimension": "D2",
+      "requirement": "LAYOUT-02",
+      "stage": "dynamic",
+      "assertion": "Exactly sixteen supplied opening meshes occupy the public trap cells.",
+      "trajectory": "entry",
+      "visible_review_required": true
+    },
+    {
+      "id": "D2-ball",
+      "dimension": "D2",
+      "requirement": "MOVEMENT-02",
+      "stage": "dynamic",
+      "assertion": "The supplied sphere is the actual visible, movable player.",
+      "trajectory": "direction-W",
+      "visible_review_required": true
+    },
+    {
+      "id": "D2-exit",
+      "dimension": "D2",
+      "requirement": "LAYOUT-02",
+      "stage": "dynamic",
+      "assertion": "Start and exit are present and distinguishable at their prescribed cells.",
+      "trajectory": "entry",
+      "visible_review_required": true
+    },
+    {
+      "id": "D2-recovery",
+      "dimension": "D2",
+      "requirement": "HAZARD-01",
+      "stage": "dynamic",
+      "assertion": "A real opening contact can invoke a failure response.",
+      "trajectory": "trap",
+      "visible_review_required": true
+    },
+    {
+      "id": "D3-initial",
+      "dimension": "D3",
+      "requirement": "LAYOUT-02",
+      "stage": "dynamic",
+      "assertion": "Initial play starts at the prescribed center in running state.",
+      "trajectory": "entry",
+      "visible_review_required": true
+    },
+    {
+      "id": "D3-directions",
+      "dimension": "D3",
+      "requirement": "MOVEMENT-01",
+      "stage": "dynamic",
+      "assertion": "Each of W A S D drives in its public screen direction.",
+      "trajectory": "directions",
+      "visible_review_required": true
+    },
+    {
+      "id": "D3-coast",
+      "dimension": "D3",
+      "requirement": "MOVEMENT-02",
+      "stage": "dynamic",
+      "assertion": "Translation is continuous and motion continues after release before slowing.",
+      "trajectory": "direction-W",
+      "visible_review_required": true
+    },
+    {
+      "id": "D3-countersteer",
+      "dimension": "D3",
+      "requirement": "MOVEMENT-01",
+      "stage": "dynamic",
+      "assertion": "A reversal first counter-steers existing momentum instead of instantly reversing it.",
+      "trajectory": "countersteer",
+      "visible_review_required": true
+    },
+    {
+      "id": "D3-perimeter",
+      "dimension": "D3",
+      "requirement": "COLLISION-01",
+      "stage": "dynamic",
+      "assertion": "A meaningful perimeter impact blocks and visibly rebounds, retaining later control.",
+      "trajectory": "perimeter",
+      "visible_review_required": true
+    },
+    {
+      "id": "D3-internal",
+      "dimension": "D3",
+      "requirement": "COLLISION-01",
+      "stage": "dynamic",
+      "assertion": "A meaningful internal-wall impact blocks and visibly rebounds, retaining later control.",
+      "trajectory": "internal",
+      "visible_review_required": true
+    },
+    {
+      "id": "D3-safe-rim",
+      "dimension": "D3",
+      "requirement": "HAZARD-01",
+      "stage": "dynamic",
+      "assertion": "Safe floor and a visibly clear trap rim do not trigger a hit.",
+      "trajectory": "rim",
+      "visible_review_required": true
+    },
+    {
+      "id": "D3-opening",
+      "dimension": "D3",
+      "requirement": "HAZARD-01",
+      "stage": "dynamic",
+      "assertion": "The visible opening, rather than the entire trap cell, initiates recovery.",
+      "trajectory": "trap",
+      "visible_review_required": true
+    },
+    {
+      "id": "D3-hit-count",
+      "dimension": "D3",
+      "requirement": "HAZARD-02",
+      "stage": "dynamic",
+      "assertion": "An uninterrupted contact increments the existing count exactly once.",
+      "trajectory": "trap",
+      "visible_review_required": true
+    },
+    {
+      "id": "D3-hit-time",
+      "dimension": "D3",
+      "requirement": "HAZARD-02",
+      "stage": "dynamic",
+      "assertion": "Trap feedback lasts within the publicly specified 0.75 to 2.0 second interval.",
+      "trajectory": "trap",
+      "visible_review_required": true
+    },
+    {
+      "id": "D3-hit-lock",
+      "dimension": "D3",
+      "requirement": "HAZARD-01",
+      "stage": "dynamic",
+      "assertion": "Normal movement input has no control during recovery; passive falling is allowed.",
+      "trajectory": "trap",
+      "visible_review_required": true
+    },
+    {
+      "id": "D3-reset",
+      "dimension": "D3",
+      "requirement": "HAZARD-02",
+      "stage": "dynamic",
+      "assertion": "Natural recovery restores the start center and removes old linear/angular velocity.",
+      "trajectory": "trap",
+      "visible_review_required": true
+    },
+    {
+      "id": "D3-repeat-hit",
+      "dimension": "D3",
+      "requirement": "HAZARD-01",
+      "stage": "dynamic",
+      "assertion": "A separate later opening contact starts another single transaction.",
+      "trajectory": "repeat-trap",
+      "visible_review_required": true
+    },
+    {
+      "id": "D3-goal",
+      "dimension": "D3",
+      "requirement": "GOAL-01",
+      "stage": "dynamic",
+      "assertion": "Only visible exit contact completes, once; earlier route cells remain running.",
+      "trajectory": "journey",
+      "visible_review_required": true
+    },
+    {
+      "id": "D3-terminal",
+      "dimension": "D3",
+      "requirement": "GOAL-02",
+      "stage": "dynamic",
+      "assertion": "Completed state, ball and hit count remain stable through ordinary movement attempts.",
+      "trajectory": "journey",
+      "visible_review_required": true
+    },
+    {
+      "id": "D4-journey",
+      "dimension": "D4",
+      "requirement": "QUALITY-02",
+      "stage": "dynamic",
+      "assertion": "A complete normal-input journey connects entry, navigation and exit.",
+      "trajectory": "journey",
+      "visible_review_required": true
+    },
+    {
+      "id": "D4-resume",
+      "dimension": "D4",
+      "requirement": "HAZARD-02",
+      "stage": "dynamic",
+      "assertion": "After natural trap recovery, ordinary steering works again.",
+      "trajectory": "trap",
+      "visible_review_required": true
+    },
+    {
+      "id": "D4-restart-running",
+      "dimension": "D4",
+      "requirement": "RESTART-01",
+      "stage": "dynamic",
+      "assertion": "R during running restores the same clean run within two seconds.",
+      "trajectory": "restart-running",
+      "visible_review_required": true
+    },
+    {
+      "id": "D4-restart-trap",
+      "dimension": "D4",
+      "requirement": "RESTART-01",
+      "stage": "dynamic",
+      "assertion": "R during recovery restores a clean run and cancels later stale recovery.",
+      "trajectory": "restart-trap",
+      "visible_review_required": true
+    },
+    {
+      "id": "D4-restart-terminal",
+      "dimension": "D4",
+      "requirement": "RESTART-01",
+      "stage": "dynamic",
+      "assertion": "R after completion restores a clean, controllable run.",
+      "trajectory": "restart-terminal",
+      "visible_review_required": true
+    },
+    {
+      "id": "D4-restart-repeat",
+      "dimension": "D4",
+      "requirement": "RESTART-01",
+      "stage": "dynamic",
+      "assertion": "Repeated individual R presses leave one healthy current run without duplicates.",
+      "trajectory": "restart-repeat",
+      "visible_review_required": true
+    },
+    {
+      "id": "D4-reopen",
+      "dimension": "D4",
+      "requirement": "REOPEN-01",
+      "stage": "dynamic",
+      "assertion": "After prior play and process closure, a genuinely new process starts fresh.",
+      "trajectory": "reopen",
+      "visible_review_required": true
+    },
+    {
+      "id": "D4-exit-running",
+      "dimension": "D4",
+      "requirement": "EXIT-01",
+      "stage": "dynamic",
+      "assertion": "Esc during running closes normally.",
+      "trajectory": "exit-running",
+      "visible_review_required": true
+    },
+    {
+      "id": "D4-exit-trap",
+      "dimension": "D4",
+      "requirement": "EXIT-01",
+      "stage": "dynamic",
+      "assertion": "Esc during recovery closes normally.",
+      "trajectory": "exit-trap",
+      "visible_review_required": true
+    },
+    {
+      "id": "D4-exit-terminal",
+      "dimension": "D4",
+      "requirement": "EXIT-01",
+      "stage": "dynamic",
+      "assertion": "Esc after completion closes normally.",
+      "trajectory": "exit-terminal",
+      "visible_review_required": true
+    },
+    {
+      "id": "D5-running",
+      "dimension": "D5",
+      "requirement": "UI-01",
+      "stage": "dynamic",
+      "assertion": "Running HUD is visibly readable and agrees with current state.",
+      "trajectory": "entry",
+      "visible_review_required": true
+    },
+    {
+      "id": "D5-trap",
+      "dimension": "D5",
+      "requirement": "UI-01",
+      "stage": "dynamic",
+      "assertion": "Trap feedback and its updated count are visibly readable and agree with state.",
+      "trajectory": "trap",
+      "visible_review_required": true
+    },
+    {
+      "id": "D5-complete",
+      "dimension": "D5",
+      "requirement": "UI-01",
+      "stage": "dynamic",
+      "assertion": "Completion feedback persists visibly and agrees with state.",
+      "trajectory": "journey",
+      "visible_review_required": true
+    },
+    {
+      "id": "D5-restart",
+      "dimension": "D5",
+      "requirement": "UI-01",
+      "stage": "dynamic",
+      "assertion": "R - RESTART remains discoverable and the reset HUD shows zero hits.",
+      "trajectory": "restart-running",
+      "visible_review_required": true
+    },
+    {
+      "id": "D5-camera",
+      "dimension": "D5",
+      "requirement": "CAMERA-01",
+      "stage": "dynamic",
+      "assertion": "Full-board framing, orientation and readability survive movement, mouse motion and lifecycle changes.",
+      "trajectory": "camera",
+      "visible_review_required": true
+    },
+    {
+      "id": "D5-roll",
+      "dimension": "D5",
+      "requirement": "MOVEMENT-02",
+      "stage": "dynamic",
+      "assertion": "Volume, shading and horizontal-axis rolling rotation are visible.",
+      "trajectory": "direction-W",
+      "visible_review_required": true
+    }
+  ],
+  "support_requirements": {
+    "QUALITY-03": [
+      "D5-running",
+      "D5-trap",
+      "D5-complete",
+      "D5-restart"
+    ],
+    "QUALITY-04": [
+      "D5-running",
+      "D5-trap",
+      "D5-roll"
+    ],
+    "QUALITY-05": [
+      "D1-build",
+      "D1-start",
+      "D4-journey"
+    ],
+    "QUALITY-06": [
+      "D3-repeat-hit",
+      "D4-restart-repeat",
+      "D4-reopen"
+    ]
+  },
+  "formula": "dimension maximum * passed checkpoints / all checkpoints",
+  "incomplete_review_policy": "No published score until evidence uncertainty is resolved; never silently fail a control strategy."
+}

@@ -1,0 +1,61 @@
+{
+  "schema_version": "2.0.0",
+  "language": "en",
+  "gdd": "GDD.md",
+  "requirements": [
+    {
+      "requirement_id": "ASSET-01",
+      "asset_ids": [
+        "skel_bomber",
+        "mm_manny_idle",
+        "m_mannequin",
+        "mi_quinn_01",
+        "mi_quinn_02",
+        "skm_quinn_simple",
+        "t_manny_01_bn",
+        "t_manny_01_d",
+        "t_manny_01_mra",
+        "t_quinn_01_d",
+        "t_quinn_01_mra",
+        "t_quinn_01_n",
+        "t_quinn_02_d",
+        "t_quinn_02_mra",
+        "t_quinn_02_n",
+        "t_ue_logo_m"
+      ],
+      "replacement_allowed": false
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "asset_ids": [
+        "sm_blockout_map_box",
+        "sm_blockout_map_wall"
+      ],
+      "replacement_allowed": false
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "asset_ids": [
+        "sm_blockout_map_powerup_bomb",
+        "sm_blockout_map_powerup_fire",
+        "sm_blockout_map_powerup_skate"
+      ],
+      "replacement_allowed": false
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "asset_ids": [
+        "m_emissive_master",
+        "m_bomb",
+        "mi_bomb_blue",
+        "mi_bomb_pink",
+        "mi_bomb_silver",
+        "mi_bomb_yellow",
+        "mi_player_arrow_start",
+        "sm_bomb",
+        "sm_player_arrow_start"
+      ],
+      "replacement_allowed": false
+    }
+  ]
+}

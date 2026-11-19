@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "task_id": "roblox.deep_relay.v2",
+  "network_download_required": false,
+  "external_art_assets_required": false,
+  "provided_assets": [
+    {"path": "TaskAssets/style_palette.json", "purpose": "Semantic color and material suggestions", "editable": false},
+    {"path": "ASSET_CONTACT_SHEET.png", "purpose": "Non-solution palette and primitive-role preview", "editable": false},
+    {"path": "VISUAL_DIRECTION.md", "purpose": "Public visual constraints", "editable": false},
+    {"path": "project/", "purpose": "Blank Rojo starter and public Schema", "editable_in_candidate_copy": true},
+    {"path": "DeepRelayStart.rbxlx", "purpose": "Blank Studio starter Place", "editable_in_candidate_copy": true}
+  ],
+  "restrictions": {
+    "reference_is_final_layout": false,
+    "gold_visuals_included": false,
+    "third_party_assets_must_be_redistributable": true,
+    "final_scene_must_be_authored_by_candidate": true
+  }
+}

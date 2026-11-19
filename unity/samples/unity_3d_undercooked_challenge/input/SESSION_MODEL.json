@@ -1,0 +1,707 @@
+{
+  "contract": "game-session/v1",
+  "contentVersion": "undercooked-session-v2-20260909",
+  "entries": [
+    "kitchen"
+  ],
+  "phases": [
+    "menu",
+    "playing",
+    "paused",
+    "result"
+  ],
+  "operationTimeoutSeconds": 10,
+  "requiredLandmarks": [
+    "chef-1-spawn",
+    "chef-2-spawn",
+    "open-floor",
+    "tomato-crate-approach",
+    "counter-approach",
+    "chopping-board-approach",
+    "pot-approach",
+    "plate-rack-approach",
+    "delivery-approach",
+    "trash-approach"
+  ],
+  "values": [
+    {
+      "name": "score",
+      "minimum": -100000,
+      "maximum": 1000000,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "shift_remaining",
+      "minimum": 0,
+      "maximum": 120,
+      "integer": false,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "active_chef",
+      "minimum": 1,
+      "maximum": 2,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "order_spawn_remaining",
+      "minimum": 0,
+      "maximum": 120,
+      "integer": false,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "next_item_id",
+      "minimum": 1,
+      "maximum": 1000000000,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "next_order_id",
+      "minimum": 1,
+      "maximum": 1000000000,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "delivered_orders",
+      "minimum": 0,
+      "maximum": 1000000,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "expired_orders",
+      "minimum": 0,
+      "maximum": 1000000,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "chop_seconds",
+      "minimum": 1,
+      "maximum": 120,
+      "integer": false,
+      "editable": false,
+      "meaning": "Actual configured duration in gameplay seconds."
+    },
+    {
+      "name": "cook_seconds",
+      "minimum": 4,
+      "maximum": 8,
+      "integer": false,
+      "editable": false,
+      "meaning": "Actual configured duration in gameplay seconds."
+    },
+    {
+      "name": "burn_seconds",
+      "minimum": 5,
+      "maximum": 120,
+      "integer": false,
+      "editable": false,
+      "meaning": "Actual configured duration in gameplay seconds."
+    },
+    {
+      "name": "order_lifetime",
+      "minimum": 25,
+      "maximum": 120,
+      "integer": false,
+      "editable": false,
+      "meaning": "Actual configured duration in gameplay seconds."
+    },
+    {
+      "name": "order_interval",
+      "minimum": 1,
+      "maximum": 120,
+      "integer": false,
+      "editable": false,
+      "meaning": "Actual configured duration in gameplay seconds."
+    },
+    {
+      "name": "floor_origin_x",
+      "minimum": -1000000,
+      "maximum": 1000000,
+      "integer": false,
+      "editable": false,
+      "meaning": "Truthful world-space control/floor geometry, not visual renderer bounds."
+    },
+    {
+      "name": "floor_origin_y",
+      "minimum": -1000000,
+      "maximum": 1000000,
+      "integer": false,
+      "editable": false,
+      "meaning": "Truthful world-space control/floor geometry, not visual renderer bounds."
+    },
+    {
+      "name": "floor_origin_z",
+      "minimum": -1000000,
+      "maximum": 1000000,
+      "integer": false,
+      "editable": false,
+      "meaning": "Truthful world-space control/floor geometry, not visual renderer bounds."
+    },
+    {
+      "name": "floor_normal_x",
+      "minimum": -1,
+      "maximum": 1,
+      "integer": false,
+      "editable": false,
+      "meaning": "Truthful world-space control/floor geometry, not visual renderer bounds."
+    },
+    {
+      "name": "floor_normal_y",
+      "minimum": -1,
+      "maximum": 1,
+      "integer": false,
+      "editable": false,
+      "meaning": "Truthful world-space control/floor geometry, not visual renderer bounds."
+    },
+    {
+      "name": "floor_normal_z",
+      "minimum": -1,
+      "maximum": 1,
+      "integer": false,
+      "editable": false,
+      "meaning": "Truthful world-space control/floor geometry, not visual renderer bounds."
+    },
+    {
+      "name": "move_right_x",
+      "minimum": -1,
+      "maximum": 1,
+      "integer": false,
+      "editable": false,
+      "meaning": "Truthful world-space control/floor geometry, not visual renderer bounds."
+    },
+    {
+      "name": "move_right_y",
+      "minimum": -1,
+      "maximum": 1,
+      "integer": false,
+      "editable": false,
+      "meaning": "Truthful world-space control/floor geometry, not visual renderer bounds."
+    },
+    {
+      "name": "move_right_z",
+      "minimum": -1,
+      "maximum": 1,
+      "integer": false,
+      "editable": false,
+      "meaning": "Truthful world-space control/floor geometry, not visual renderer bounds."
+    },
+    {
+      "name": "move_forward_x",
+      "minimum": -1,
+      "maximum": 1,
+      "integer": false,
+      "editable": false,
+      "meaning": "Truthful world-space control/floor geometry, not visual renderer bounds."
+    },
+    {
+      "name": "move_forward_y",
+      "minimum": -1,
+      "maximum": 1,
+      "integer": false,
+      "editable": false,
+      "meaning": "Truthful world-space control/floor geometry, not visual renderer bounds."
+    },
+    {
+      "name": "move_forward_z",
+      "minimum": -1,
+      "maximum": 1,
+      "integer": false,
+      "editable": false,
+      "meaning": "Truthful world-space control/floor geometry, not visual renderer bounds."
+    },
+    {
+      "name": "order_1_id",
+      "minimum": 0,
+      "maximum": 999999999,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "order_1_remaining",
+      "minimum": 0,
+      "maximum": 120,
+      "integer": false,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "order_1_initial",
+      "minimum": 0,
+      "maximum": 120,
+      "integer": false,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "order_2_id",
+      "minimum": 0,
+      "maximum": 999999999,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "order_2_remaining",
+      "minimum": 0,
+      "maximum": 120,
+      "integer": false,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "order_2_initial",
+      "minimum": 0,
+      "maximum": 120,
+      "integer": false,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "order_3_id",
+      "minimum": 0,
+      "maximum": 999999999,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "order_3_remaining",
+      "minimum": 0,
+      "maximum": 120,
+      "integer": false,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "order_3_initial",
+      "minimum": 0,
+      "maximum": 120,
+      "integer": false,
+      "editable": true,
+      "meaning": ""
+    }
+  ],
+  "actorKinds": [
+    {
+      "kind": "chef",
+      "states": [
+        "normal"
+      ],
+      "poseEditable": true,
+      "stateEditable": false,
+      "values": [
+        {
+          "name": "held_id",
+          "minimum": 0,
+          "maximum": 999999999,
+          "integer": true,
+          "editable": true,
+          "meaning": ""
+        },
+        {
+          "name": "held_kind",
+          "minimum": 0,
+          "maximum": 4,
+          "integer": true,
+          "editable": true,
+          "meaning": ""
+        },
+        {
+          "name": "heading_degrees",
+          "minimum": 0,
+          "maximum": 360,
+          "integer": false,
+          "editable": true,
+          "meaning": ""
+        }
+      ]
+    },
+    {
+      "kind": "tomato_crate",
+      "states": [
+        "normal"
+      ],
+      "poseEditable": false,
+      "stateEditable": false,
+      "values": [
+        {
+          "name": "interaction_distance",
+          "minimum": 0.0001,
+          "maximum": 1000000,
+          "integer": false,
+          "editable": false,
+          "meaning": "Maximum accepted chef-root to station-root distance for normal interaction; does not describe renderer extent."
+        },
+        {
+          "name": "approach_heading_degrees",
+          "minimum": 0,
+          "maximum": 360,
+          "integer": false,
+          "editable": false,
+          "meaning": "Valid chef heading at this station approach landmark, measured from move_forward toward move_right around floor_normal."
+        }
+      ]
+    },
+    {
+      "kind": "counter",
+      "states": [
+        "normal"
+      ],
+      "poseEditable": false,
+      "stateEditable": false,
+      "values": [
+        {
+          "name": "interaction_distance",
+          "minimum": 0.0001,
+          "maximum": 1000000,
+          "integer": false,
+          "editable": false,
+          "meaning": "Maximum accepted chef-root to station-root distance for normal interaction; does not describe renderer extent."
+        },
+        {
+          "name": "approach_heading_degrees",
+          "minimum": 0,
+          "maximum": 360,
+          "integer": false,
+          "editable": false,
+          "meaning": "Valid chef heading at this station approach landmark, measured from move_forward toward move_right around floor_normal."
+        },
+        {
+          "name": "item_id",
+          "minimum": 0,
+          "maximum": 999999999,
+          "integer": true,
+          "editable": true,
+          "meaning": ""
+        },
+        {
+          "name": "item_kind",
+          "minimum": 0,
+          "maximum": 6,
+          "integer": true,
+          "editable": true,
+          "meaning": ""
+        }
+      ]
+    },
+    {
+      "kind": "chopping_board",
+      "states": [
+        "normal"
+      ],
+      "poseEditable": false,
+      "stateEditable": false,
+      "values": [
+        {
+          "name": "interaction_distance",
+          "minimum": 0.0001,
+          "maximum": 1000000,
+          "integer": false,
+          "editable": false,
+          "meaning": "Maximum accepted chef-root to station-root distance for normal interaction; does not describe renderer extent."
+        },
+        {
+          "name": "approach_heading_degrees",
+          "minimum": 0,
+          "maximum": 360,
+          "integer": false,
+          "editable": false,
+          "meaning": "Valid chef heading at this station approach landmark, measured from move_forward toward move_right around floor_normal."
+        },
+        {
+          "name": "item_id",
+          "minimum": 0,
+          "maximum": 999999999,
+          "integer": true,
+          "editable": true,
+          "meaning": ""
+        },
+        {
+          "name": "item_kind",
+          "minimum": 0,
+          "maximum": 6,
+          "integer": true,
+          "editable": true,
+          "meaning": ""
+        },
+        {
+          "name": "chop_elapsed",
+          "minimum": 0,
+          "maximum": 120,
+          "integer": false,
+          "editable": true,
+          "meaning": ""
+        }
+      ]
+    },
+    {
+      "kind": "pot",
+      "states": [
+        "normal"
+      ],
+      "poseEditable": false,
+      "stateEditable": false,
+      "values": [
+        {
+          "name": "interaction_distance",
+          "minimum": 0.0001,
+          "maximum": 1000000,
+          "integer": false,
+          "editable": false,
+          "meaning": "Maximum accepted chef-root to station-root distance for normal interaction; does not describe renderer extent."
+        },
+        {
+          "name": "approach_heading_degrees",
+          "minimum": 0,
+          "maximum": 360,
+          "integer": false,
+          "editable": false,
+          "meaning": "Valid chef heading at this station approach landmark, measured from move_forward toward move_right around floor_normal."
+        },
+        {
+          "name": "item_id",
+          "minimum": 0,
+          "maximum": 999999999,
+          "integer": true,
+          "editable": true,
+          "meaning": ""
+        },
+        {
+          "name": "item_kind",
+          "minimum": 0,
+          "maximum": 6,
+          "integer": true,
+          "editable": true,
+          "meaning": ""
+        },
+        {
+          "name": "ingredient_1_id",
+          "minimum": 0,
+          "maximum": 999999999,
+          "integer": true,
+          "editable": true,
+          "meaning": ""
+        },
+        {
+          "name": "ingredient_2_id",
+          "minimum": 0,
+          "maximum": 999999999,
+          "integer": true,
+          "editable": true,
+          "meaning": ""
+        },
+        {
+          "name": "ingredient_3_id",
+          "minimum": 0,
+          "maximum": 999999999,
+          "integer": true,
+          "editable": true,
+          "meaning": ""
+        },
+        {
+          "name": "cook_elapsed",
+          "minimum": 0,
+          "maximum": 8,
+          "integer": false,
+          "editable": true,
+          "meaning": ""
+        },
+        {
+          "name": "burn_elapsed",
+          "minimum": 0,
+          "maximum": 120,
+          "integer": false,
+          "editable": true,
+          "meaning": ""
+        }
+      ]
+    },
+    {
+      "kind": "plate_rack",
+      "states": [
+        "normal"
+      ],
+      "poseEditable": false,
+      "stateEditable": false,
+      "values": [
+        {
+          "name": "interaction_distance",
+          "minimum": 0.0001,
+          "maximum": 1000000,
+          "integer": false,
+          "editable": false,
+          "meaning": "Maximum accepted chef-root to station-root distance for normal interaction; does not describe renderer extent."
+        },
+        {
+          "name": "approach_heading_degrees",
+          "minimum": 0,
+          "maximum": 360,
+          "integer": false,
+          "editable": false,
+          "meaning": "Valid chef heading at this station approach landmark, measured from move_forward toward move_right around floor_normal."
+        }
+      ]
+    },
+    {
+      "kind": "delivery",
+      "states": [
+        "normal"
+      ],
+      "poseEditable": false,
+      "stateEditable": false,
+      "values": [
+        {
+          "name": "interaction_distance",
+          "minimum": 0.0001,
+          "maximum": 1000000,
+          "integer": false,
+          "editable": false,
+          "meaning": "Maximum accepted chef-root to station-root distance for normal interaction; does not describe renderer extent."
+        },
+        {
+          "name": "approach_heading_degrees",
+          "minimum": 0,
+          "maximum": 360,
+          "integer": false,
+          "editable": false,
+          "meaning": "Valid chef heading at this station approach landmark, measured from move_forward toward move_right around floor_normal."
+        }
+      ]
+    },
+    {
+      "kind": "trash",
+      "states": [
+        "normal"
+      ],
+      "poseEditable": false,
+      "stateEditable": false,
+      "values": [
+        {
+          "name": "interaction_distance",
+          "minimum": 0.0001,
+          "maximum": 1000000,
+          "integer": false,
+          "editable": false,
+          "meaning": "Maximum accepted chef-root to station-root distance for normal interaction; does not describe renderer extent."
+        },
+        {
+          "name": "approach_heading_degrees",
+          "minimum": 0,
+          "maximum": 360,
+          "integer": false,
+          "editable": false,
+          "meaning": "Valid chef heading at this station approach landmark, measured from move_forward toward move_right around floor_normal."
+        }
+      ]
+    }
+  ],
+  "actorIdentities": [
+    {
+      "id": "chef-1",
+      "kind": "chef"
+    },
+    {
+      "id": "chef-2",
+      "kind": "chef"
+    },
+    {
+      "id": "tomato-crate",
+      "kind": "tomato_crate"
+    },
+    {
+      "id": "counter",
+      "kind": "counter"
+    },
+    {
+      "id": "chopping-board",
+      "kind": "chopping_board"
+    },
+    {
+      "id": "pot",
+      "kind": "pot"
+    },
+    {
+      "id": "plate-rack",
+      "kind": "plate_rack"
+    },
+    {
+      "id": "delivery",
+      "kind": "delivery"
+    },
+    {
+      "id": "trash",
+      "kind": "trash"
+    }
+  ],
+  "itemKinds": {
+    "0": "empty",
+    "1": "raw tomato",
+    "2": "chopped tomato",
+    "3": "clean plate",
+    "4": "plated tomato soup",
+    "5": "cooked soup in pot",
+    "6": "burnt soup in pot"
+  },
+  "semanticRules": [
+    {
+      "id": "SESSION-01",
+      "rule": "Implement exactly one active GameCreate.Session.IGameSession in the saved final scene. This is the only required game-state observation service. No separate Dashboard or task-specific Probe is required. OpenEntry(\"kitchen\", seed) commits the normal fresh active shift described by FLOW-01, suspended until ResumeSimulation; normal menu Start works independently."
+    },
+    {
+      "id": "SESSION-02",
+      "rule": "This file is the sole authority for kitchen-specific save fields, IDs, ranges and relations. GAME_SESSION_SPEC.md is the authority for common service behavior. The numeric values sets are exact, including actor values; no extra named numeric values are allowed. Extra implementation data belongs in opaqueData. All actors use entryId kitchen, state normal and facing 1; 3D chef orientation is heading_degrees. Unknown, duplicate or missing required identities are rejected. Menu may contain any subset of these actor records, and absent records may have present=false; every non-menu state contains all nine records, present=true."
+    },
+    {
+      "id": "SESSION-03",
+      "rule": "Captures completely describe both chefs, held food, counter, chopping board, pot contents and timing, all orders, shift timing, next IDs, and additional transient state through opaqueData. All top-level fields except readonly duration/geometry values and all actor numeric fields marked editable may be legally edited together. phase, seed and chef poses may be edited; entryId stays kitchen. Preserve readonly values, station poses and unrelated opaqueData when deriving a save. Legal edits take precedence over conflicting cached opaque data. Input latches and pending callbacks cannot apply stale actions after restore."
+    },
+    {
+      "id": "SESSION-04",
+      "rule": "Every live physical item has a positive integer identity. held_id=0 if and only if held_kind=0; item_id=0 if and only if item_kind=0. Across both chefs, counter, chopping board, pot output and the three pot ingredient slots, every positive identity occurs exactly once. An item retains its identity while moving between holders or being chopped. A transformation combining or consuming food may retire identities or allocate one new identity. next_item_id is strictly greater than every live identity. Restore accepts legal caller-created item identities and their declared ownership; no object may simultaneously be held and stored, duplicated between chefs, or present in two locations. Food is represented by its container state and visible presentation; independent food GameObjects are not a required architecture."
+    },
+    {
+      "id": "SESSION-05",
+      "rule": "Chefs and the counter may contain only empty, raw tomato, chopped tomato, clean plate or plated soup. The chopping board may contain only empty, raw tomato or chopped tomato: empty means chop_elapsed=0; raw means 0<=chop_elapsed<chop_seconds; chopped means chop_elapsed=chop_seconds. Ordinary movement and interaction still use the game rules after restoration."
+    },
+    {
+      "id": "SESSION-06",
+      "rule": "Pot ingredient slots represent chopped tomatoes only and are compact: positive slots precede zero slots. An empty/filling/cooking pot has item_id=0,item_kind=0,burn_elapsed=0. With fewer than three ingredient IDs cook_elapsed=0; with three IDs 0<=cook_elapsed<cook_seconds. Completed soup has item_kind=5,positive item_id,no ingredient IDs,cook_elapsed=cook_seconds and 0<=burn_elapsed<burn_seconds. Burnt soup has item_kind=6,positive item_id,no ingredient IDs,cook_elapsed=cook_seconds,burn_elapsed=burn_seconds. No other pot combination is legal. Cooking and burning durations report the actual configured rules, not the current elapsed time."
+    },
+    {
+      "id": "SESSION-07",
+      "rule": "Order slots 1 through 3 are oldest-first and compact. A zero order ID means remaining=initial=0. A live order has a unique positive ID, 25<=initial<=order_lifetime and 0<remaining<=initial; active IDs strictly increase by slot and next_order_id is greater than every live order ID. Every order is tomato soup. Expired orders are absent rather than retained with negative or zero time. order_spawn_remaining is the gameplay time until the next order opportunity, between zero and order_interval; a full queue may hold that value at zero until space exists."
+    },
+    {
+      "id": "SESSION-08",
+      "rule": "Playing and paused phases require 0<shift_remaining<=120. Result requires shift_remaining=0. Menu is a clean pre-shift state: score=0,shift_remaining=120,active_chef=1,delivered_orders=expired_orders=0,empty order slots and clean containers for any present actor records. Result score and all simulation state remain stable without player Restart. Paused saves preserve their gameplay state; releasing service suspension must not unpause them."
+    },
+    {
+      "id": "SESSION-09",
+      "rule": "ResolveActor returns the unique real gameplay root GameObject for each present declared chef/station and null for unknown/absent IDs. Capture actor positions equal these real root transforms. Station roots, poses and numeric geometry are not independently editable. Descriptions always use id kitchen and report actual worldBounds enclosing the kitchen. floor_origin lies in the standing-chef-root plane; floor_normal, move_right (D/right), and move_forward (W/up) are unit perpendicular world vectors. Their meaning is the actual movement controls, independent of world-axis convention. Chef headings are measured in that plane from move_forward toward move_right. Legal edited chef positions remain on this plane, inside actual world bounds and on walkable unoccupied space."
+    },
+    {
+      "id": "SESSION-10",
+      "rule": "Each required landmark appears once. Spawn landmarks are the actual standing chef-root start positions; open-floor is a genuine unobstructed standing position with space for normal movement. Each station-approach landmark is a valid standing chef-root position on the walkable floor from which normal E/F can address that station at its published approach_heading_degrees. It must be reachable through the kitchen, not inside a solid or another chef. It describes this game layout, not an alternate interaction rule. Its bounds describe the local valid standing region. Interaction distance is the real maximum accepted root distance; rendering dimensions, transparent margins and decorative meshes are not interaction or collision truth."
+    },
+    {
+      "id": "SESSION-11",
+      "rule": "Malformed shape/version/identity/numeric values and invalid cross-field relations are immediately and atomically rejected before writes. Legal entry/restore requests finish within operationTimeoutSeconds across real Unity frames. Completion leaves gameplay suspended while reads and rendering continue. Capture is detached and side-effect-free. Restoration reproduces all visible and playable state, actual objects, timing and subsequent normal input. The optional public checks and KitchenSessionRules validation utility cover only their declared service behaviors, not complete gameplay."
+    }
+  ]
+}

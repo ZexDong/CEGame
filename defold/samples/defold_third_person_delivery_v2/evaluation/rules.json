@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "game": "defold_third_person_delivery_v2",
+  "naming_tables": "../input/naming-tables.json",
+  "player_runtime_min_version": "0.5",
+  "controls_from_naming_tables": true,
+  "honesty_spot_checks": { "per_trajectory": 2, "mode": "random" },
+  "trajectories": [
+    {
+      "id": "entry_movement_collision_pause_restart",
+      "title": "Mission entrance, Continuous movement, Collision boundary, Pause and pause restart",
+      "clean_start": "fresh_process",
+      "steps": [
+        { "do": "start" },
+        { "do": "wait_until", "cond": "phase == menu", "timeout_s": 15, "honesty_safe": true },
+        { "do": "snapshot", "save_as": "BriefingReady", "honesty_safe": true },
+        { "do": "wait_until", "cond": "wall_clock_since(BriefingReady) >= 0.4", "timeout_s": 2 },
+        { "do": "capture", "save_as": "BriefingFrame", "check": { "id": "D5_BRIEFING_START", "source": "gdd:Main-loop-01", "dim": "D5", "assert": "capture_nonblank(BriefingFrame) && ocr_contains_any(BriefingFrame,[\"Start the shift\",\"START\"]) && ocr_contains(BriefingFrame,\"3\") && ocr_absent(BriefingFrame,[\"GAME_STATE\",\"INPUT_EVENT\",\"UDP\",\"DEBUG\"])" } },
+        { "do": "click", "target": { "kind": "start_button" }, "cond": "phase == playing", "timeout_s": 8 },
+        { "do": "wait_until", "cond": "phase == playing", "timeout_s": 8, "check": { "id": "D2_ENTRY_WORLD", "source": "gdd:Main-loop-01", "dim": "D2", "assert": "phase == playing && slots.cargo_total == 3 && slots.carried_count == 0 && slots.delivered_count == 0 && slots.time_remaining > 88 && slots.time_remaining <= 90 && count(kind=player) == 1 && entity(player).visible && count(kind=cargo,state=world) == 3 && count(kind=delivery_zone,state=active) == 1 && entity(delivery_zone).visible" } },
+        { "do": "snapshot", "save_as": "MoveBase" },
+        { "do": "hold", "key": "up", "seconds": 0.8 },
+        { "do": "wait_until", "cond": "entity(kind=player).state == idle", "timeout_s": 2 },
+        { "do": "snapshot", "save_as": "MoveReleased", "check": { "id": "D2_THIRD_PERSON_CONTROL", "source": "gdd:Main-loop-02", "dim": "D2", "assert": "phase == playing && distance_xz(entity(kind=player).position,MoveBase.entity(kind=player).position) > 0.2 && entity(kind=player).state == idle" } },
+        { "do": "hold", "key": "right", "seconds": 0.8 },
+        { "do": "wait_until", "cond": "entity(kind=player).state == idle", "timeout_s": 2 },
+        { "do": "move_toward", "target": { "kind": "obstacle" }, "cond": "surface_distance_xz(entity(kind=player),selected_target) <= 0.35", "timeout_s": 3, "check": { "id": "D2_OBSTACLE_ROUTES", "source": "gdd:Rules-01", "dim": "D2", "assert": "count(kind=obstacle,state=tree) >= 1 && count(kind=obstacle,state=rock) >= 1 && count(kind=obstacle,state=fence) >= 1 && count(kind=obstacle) >= 3 && surface_distance_xz(entity(kind=player),selected_target) <= 0.35" } },
+        { "do": "snapshot", "save_as": "CollisionContact", "check": { "id": "D3_MOVEMENT_COLLISION", "source": "gdd:Rules-01", "dim": "D3", "assert": "distance_xz(MoveReleased.entity(kind=player).position,MoveBase.entity(kind=player).position) > 0.2 && entity(kind=player).state == idle && !aabb_overlap_xz(entity(kind=player),selected_target) && surface_distance_xz(entity(kind=player),selected_target) <= 0.25" } },
+        { "do": "press", "key": "pause", "cond": "phase == paused", "timeout_s": 5, "check": { "id": "D2_TIMER_PAUSE_SYSTEM", "source": "gdd:Interface-02", "dim": "D2", "assert": "phase == paused && target(resume_button).visible && target(resume_button).interactable && target(restart_button).visible && target(restart_button).interactable && target(exit_button).visible && target(exit_button).interactable" } },
+        { "do": "snapshot", "save_as": "Paused" },
+        { "do": "hold", "key": "up", "seconds": 0.8 },
+        { "do": "wait_until", "cond": "wall_clock_since(Paused) >= 1.2", "timeout_s": 3 },
+        { "do": "snapshot", "save_as": "PausedAfterInput", "check": { "id": "D3_TIMER_PAUSE", "source": "gdd:Rules-03", "dim": "D3", "assert": "phase == paused && approx(slots.time_remaining,Paused.slots.time_remaining,0.05) && approx_vec3(entity(kind=player).position,Paused.entity(kind=player).position,0.01) && slots.carried_count == Paused.slots.carried_count && slots.delivered_count == Paused.slots.delivered_count" } },
+        { "do": "capture", "save_as": "PauseFrame", "check": { "id": "D5_PAUSE_CONTROLS", "source": "gdd:Interface-02", "dim": "D5", "assert": "capture_nonblank(PauseFrame) && ocr_contains_any(PauseFrame,[\"Shift suspension\",\"Paused\",\"PAUSED\"]) && ocr_contains_any(PauseFrame,[\"Continue\",\"RESUME\"]) && ocr_contains_any(PauseFrame,[\"Exit the game\",\"EXIT\"])" } },
+        { "do": "press", "key": "pause", "cond": "phase == playing && slots.time_remaining < Paused.slots.time_remaining - 0.2", "timeout_s": 5 },
+        { "do": "press", "key": "pause", "cond": "phase == paused", "timeout_s": 5 },
+        { "do": "click", "target": { "kind": "restart_button" }, "cond": "phase == playing && slots.time_remaining > 88", "timeout_s": 8 },
+        { "do": "wait_until", "cond": "phase == playing && slots.time_remaining > 88", "timeout_s": 8, "check": { "id": "D4_RESTART_STATES", "source": "gdd:Restart-save-01", "dim": "D4", "assert": "phase == playing && slots.time_remaining > 88 && slots.time_remaining <= 90 && slots.carried_count == 0 && slots.delivered_count == 0 && slots.cargo_total == 3 && count(kind=cargo,state=world) == 3" } }
+      ]
+    },
+    {
+      "id": "cargo_delivery_success_and_restart",
+      "title": "Dynamic search for three goods, Batch delivery, Success and reopening",
+      "clean_start": "fresh_process",
+      "steps": [
+        { "do": "start" },
+        { "do": "wait_until", "cond": "phase == menu", "timeout_s": 15, "honesty_safe": true },
+        { "do": "snapshot", "save_as": "HonestyMenuStable", "honesty_safe": true },
+        { "do": "click", "target": { "kind": "start_button" }, "cond": "phase == playing", "timeout_s": 8 },
+        { "do": "wait_until", "cond": "phase == playing", "timeout_s": 8 },
+        { "do": "move_toward", "target": { "kind": "cargo", "state": "world" }, "cond": "slots.carried_count >= 1", "timeout_s": 35 },
+        { "do": "move_toward", "target": { "kind": "cargo", "state": "world" }, "cond": "slots.carried_count >= 2", "timeout_s": 35, "check": { "id": "D2_CARGO_SYSTEM", "source": "gdd:Main-loop-04", "dim": "D2", "assert": "phase == playing && slots.cargo_total == 3 && slots.carried_count == 2 && slots.delivered_count == 0 && count(kind=cargo,state=world) == 1 && count(kind=cargo,state=carried) == 2" } },
+        { "do": "capture", "save_as": "CarryingFrame", "check": { "id": "D5_HUD_SYNC", "source": "gdd:Interface-01", "dim": "D5", "assert": "capture_nonblank(CarryingFrame) && ocr_contains_any(CarryingFrame,[\"Carrying\",\"CARRIED\"]) && ocr_contains_any(CarryingFrame,[\"Delivered\",\"DELIVERED\"]) && ocr_contains_any(CarryingFrame,[\"Remaining time\",\"TIME\"])" } },
+        { "do": "move_toward", "target": { "kind": "delivery_zone", "state": "active" }, "cond": "slots.delivered_count >= 2", "timeout_s": 35, "check": { "id": "D3_CARGO_CONSERVATION_DELIVERY", "source": "gdd:Rules-02", "dim": "D3", "assert": "phase == playing && slots.delivered_count == 2 && slots.carried_count == 0 && count(kind=cargo,state=world) == 1 && count(kind=cargo,state=carried) == 0 && count(kind=cargo,state=delivered) == 2 && count(kind=cargo) == 3" } },
+        { "do": "move_toward", "target": { "kind": "cargo", "state": "world" }, "cond": "slots.carried_count >= 1", "timeout_s": 40 },
+        { "do": "move_toward", "target": { "kind": "delivery_zone", "state": "active" }, "cond": "phase == won", "timeout_s": 40, "check": { "id": "D3_SUCCESS_BOUNDARY", "source": "gdd:Results-01", "dim": "D3", "assert": "phase == won && slots.delivered_count == 3 && slots.carried_count == 0 && slots.cargo_total == 3 && count(kind=cargo,state=delivered) == 3 && slots.time_remaining > 0" } },
+        { "do": "snapshot", "save_as": "Won" },
+        { "do": "hold", "key": "up", "seconds": 0.8 },
+        { "do": "wait_until", "cond": "wall_clock_since(Won) >= 1.2", "timeout_s": 3, "check": { "id": "D4_COMPLETE_SUCCESS_FLOW", "source": "gdd:Results-01", "dim": "D4", "assert": "phase == won && slots.delivered_count == slots.cargo_total && approx(slots.time_remaining,Won.slots.time_remaining,0.05) && approx_vec3(entity(kind=player).position,Won.entity(kind=player).position,0.01) && target(restart_button).interactable && target(exit_button).interactable" } },
+        { "check": { "id": "D2_RESULTS_RESTART_CONTENT", "source": "gdd:Interface-03", "dim": "D2", "assert": "phase == won && target(restart_button).visible && target(restart_button).interactable && target(exit_button).visible && target(exit_button).interactable" } },
+        { "do": "capture", "save_as": "SuccessFrame", "check": { "id": "D5_SUCCESS_RESULT", "source": "gdd:Results-01", "dim": "D5", "assert": "capture_nonblank(SuccessFrame) && ocr_contains_any(SuccessFrame,[\"Transportation completed\",\"DELIVERY COMPLETE\"]) && ocr_contains_any(SuccessFrame,[\"3 / 3\",\"3/3\"]) && ocr_contains_any(SuccessFrame,[\"Restart\",\"RESTART\"]) && ocr_contains_any(SuccessFrame,[\"Exit the game\",\"EXIT\"])" } },
+        { "do": "click", "target": { "kind": "restart_button" }, "cond": "phase == playing && slots.time_remaining > 88", "timeout_s": 8 },
+        { "do": "wait_until", "cond": "phase == playing && slots.time_remaining > 88", "timeout_s": 8, "check": { "id": "D4_RESTART_STATES", "source": "gdd:Restart-save-01", "dim": "D4", "assert": "phase == playing && slots.time_remaining > 88 && slots.time_remaining <= 90 && slots.carried_count == 0 && slots.delivered_count == 0 && slots.cargo_total == 3 && count(kind=cargo,state=world) == 3" } }
+      ]
+    },
+    {
+      "id": "timeout_failure_and_restart",
+      "title": "Real timeout, Failed freeze and failed restart",
+      "clean_start": "fresh_process",
+      "steps": [
+        { "do": "start" },
+        { "do": "wait_until", "cond": "phase == menu", "timeout_s": 15, "honesty_safe": true },
+        { "do": "snapshot", "save_as": "HonestyMenuStable", "honesty_safe": true },
+        { "do": "click", "target": { "kind": "start_button" }, "cond": "phase == playing", "timeout_s": 8 },
+        { "do": "wait_until", "cond": "phase == playing", "timeout_s": 8 },
+        { "do": "wait_until", "cond": "phase == lost", "timeout_s": 100, "check": { "id": "D3_FAILURE_BOUNDARY", "source": "gdd:Results-02", "dim": "D3", "assert": "phase == lost && slots.time_remaining == 0 && slots.delivered_count < slots.cargo_total && slots.carried_count + slots.delivered_count <= slots.cargo_total" } },
+        { "do": "snapshot", "save_as": "Lost" },
+        { "do": "hold", "key": "down", "seconds": 0.8 },
+        { "do": "wait_until", "cond": "wall_clock_since(Lost) >= 1.2", "timeout_s": 3, "check": { "id": "D4_FAILURE_FLOW", "source": "gdd:Results-02", "dim": "D4", "assert": "phase == lost && slots.time_remaining == 0 && slots.delivered_count < slots.cargo_total && approx_vec3(entity(kind=player).position,Lost.entity(kind=player).position,0.01) && target(restart_button).interactable && target(exit_button).interactable" } },
+        { "do": "capture", "save_as": "FailureFrame", "check": { "id": "D5_FAILURE_RESULT", "source": "gdd:Results-02", "dim": "D5", "assert": "capture_nonblank(FailureFrame) && ocr_contains_any(FailureFrame,[\"End of shift\",\"SHIFT ENDED\"]) && ocr_contains_any(FailureFrame,[\"Final progress\",\"FINAL\"]) && ocr_contains_any(FailureFrame,[\"Restart\",\"RESTART\"]) && ocr_contains_any(FailureFrame,[\"Exit the game\",\"EXIT\"])" } },
+        { "do": "click", "target": { "kind": "restart_button" }, "cond": "phase == playing && slots.time_remaining > 88", "timeout_s": 8 },
+        { "do": "wait_until", "cond": "phase == playing && slots.time_remaining > 88", "timeout_s": 8, "check": { "id": "D2_RESULTS_RESTART_CONTENT", "source": "gdd:Interface-03", "dim": "D2", "assert": "Lost.phase == lost && phase == playing && slots.time_remaining > 88 && slots.time_remaining <= 90 && slots.carried_count == 0 && slots.delivered_count == 0 && count(kind=cargo,state=world) == 3" } },
+        { "do": "snapshot", "save_as": "LossRestartPlaying", "check": { "id": "D4_RESTART_STATES", "source": "gdd:Restart-save-01", "dim": "D4", "assert": "phase == playing && slots.time_remaining > 88 && slots.time_remaining <= 90 && slots.carried_count == 0 && slots.delivered_count == 0 && slots.cargo_total == 3 && count(kind=cargo,state=world) == 3" } }
+      ]
+    },
+    {
+      "id": "reopen_fresh_process",
+      "title": "Close within the Bureau and reopen without continuing",
+      "clean_start": "fresh_process",
+      "steps": [
+        { "do": "start" },
+        { "do": "wait_until", "cond": "phase == menu", "timeout_s": 15, "honesty_safe": true },
+        { "do": "snapshot", "save_as": "HonestyMenuStable", "honesty_safe": true },
+        { "do": "click", "target": { "kind": "start_button" }, "cond": "phase == playing", "timeout_s": 8 },
+        { "do": "wait_until", "cond": "phase == playing", "timeout_s": 8 },
+        { "do": "hold", "key": "left", "seconds": 0.7 },
+        { "do": "reopen" },
+        { "do": "wait_until", "cond": "phase == menu", "timeout_s": 15, "check": { "id": "D4_REOPEN_FRESH", "source": "gdd:Restart-save-02", "dim": "D4", "assert": "phase == menu && slots.time_remaining == 0 && slots.carried_count == 0 && slots.delivered_count == 0 && slots.cargo_total == 3 && count(kind=cargo,state=world) == 3" } }
+      ]
+    },
+    {
+      "id": "normal_exit_from_pause",
+      "title": "Normal exit of the paused layer",
+      "clean_start": "fresh_process",
+      "steps": [
+        { "do": "start" },
+        { "do": "wait_until", "cond": "phase == menu", "timeout_s": 15, "honesty_safe": true },
+        { "do": "snapshot", "save_as": "HonestyMenuStable", "honesty_safe": true },
+        { "do": "click", "target": { "kind": "start_button" }, "cond": "phase == playing", "timeout_s": 8 },
+        { "do": "wait_until", "cond": "phase == playing", "timeout_s": 8 },
+        { "do": "press", "key": "pause" },
+        { "do": "wait_until", "cond": "phase == paused", "timeout_s": 5 },
+        { "do": "click", "target": { "kind": "exit_button" }, "cond": "process_exited", "timeout_s": 8 },
+        { "do": "wait_until", "cond": "process_exited", "timeout_s": 8, "check": { "id": "D4_EXIT_CONTROLS", "source": "gdd:Quality-01", "dim": "D4", "assert": "process_exited && process_exit_code == 0" } }
+      ]
+    }
+  ]
+}

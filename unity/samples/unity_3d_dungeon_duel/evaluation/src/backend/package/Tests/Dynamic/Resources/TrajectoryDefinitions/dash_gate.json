@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "id": "dash_gate",
+  "title": "Dash behavior and native closed/open Boss-gate behavior",
+  "steps": [
+    {
+      "step_id": "setup",
+      "operation": "load_clean_canonical_scene",
+      "target": "Dash",
+      "check_ids": [
+        "setup.scene",
+        "setup.submission_probe",
+        "setup.submission_probe.version",
+        "setup.semantic_discovery",
+        "setup.clean_start",
+        "setup.world_target.MoveTargetA",
+        "setup.world_target.MoveTargetB",
+        "setup.world_target.DashTarget",
+        "setup.world_target.separation"
+      ]
+    },
+    {
+      "step_id": "dash_pointer",
+      "operation": "virtual_mouse_move",
+      "target": "DashTarget",
+      "check_ids": [
+        "dash.pointer.route"
+      ]
+    },
+    {
+      "step_id": "dash_one",
+      "operation": "virtual_keyboard_2",
+      "target": "DashTarget",
+      "check_ids": [
+        "dash.first.input.route",
+        "dash.first.displacement",
+        "dash.first.cooldown",
+        "dash.cooldown.hud_semantics"
+      ]
+    },
+    {
+      "step_id": "dash_repeat",
+      "operation": "virtual_keyboard_2",
+      "target": "DashTarget",
+      "check_ids": [
+        "dash.repeat.input.route",
+        "dash.repeat.blocked"
+      ]
+    },
+    {
+      "step_id": "dash_recover",
+      "operation": "wait_then_virtual_keyboard_2",
+      "target": "DashTarget",
+      "check_ids": [
+        "dash.cooldown.recovered",
+        "dash.ready.hud_semantics",
+        "dash.second.input.route",
+        "dash.second.displacement"
+      ]
+    },
+    {
+      "step_id": "gate_setup",
+      "operation": "reload_clean_canonical_scene",
+      "target": "GateUnlock",
+      "check_ids": [
+        "gate_setup.scene",
+        "gate_setup.submission_probe",
+        "gate_setup.submission_probe.version",
+        "gate_setup.semantic_discovery",
+        "gate_setup.clean_start",
+        "gate_setup.world_target.MoveTargetA",
+        "gate_setup.world_target.MoveTargetB",
+        "gate_setup.world_target.DashTarget",
+        "gate_setup.world_target.separation",
+        "gate.before.closed",
+        "gate.before.blocking",
+        "gate.before.boss_dormant",
+        "gate.before.hud_semantics",
+        "gate.behind_target.discovered"
+      ]
+    },
+    {
+      "step_id": "gate_prepare",
+      "operation": "real_player_input",
+      "target": "ImpA",
+      "check_ids": [
+        "gate.prepare.approach.input.route",
+        "gate.prepare.first_imp.resolution",
+        "gate.prepare.first_imp.dead"
+      ]
+    },
+    {
+      "step_id": "gate_stage",
+      "operation": "conditional_normal_input_gate_approach",
+      "target": "camera-visible real ground on the player side",
+      "check_ids": [
+        "gate.stage.hop1.input.route",
+        "gate.stage.hop1.progress",
+        "gate.stage.hop2.input.route",
+        "gate.stage.hop2.progress",
+        "gate.stage.hop3.input.route",
+        "gate.stage.hop3.progress"
+      ]
+    },
+    {
+      "step_id": "gate_locked_boss",
+      "operation": "virtual_mouse_right",
+      "target": "Boss",
+      "check_ids": [
+        "gate.locked_boss.input.route",
+        "gate.before.boss_unattackable"
+      ]
+    },
+    {
+      "step_id": "gate_block_probe",
+      "operation": "virtual_mouse_left",
+      "target": "behind gate",
+      "check_ids": [
+        "gate.blocked_move.input.route",
+        "gate.before.physical_block"
+      ]
+    },
+    {
+      "step_id": "gate_unlock",
+      "operation": "virtual_mouse_right",
+      "target": "ImpB",
+      "check_ids": [
+        "gate.final_imp.input.route",
+        "gate.final_imp.dead",
+        "gate.after.open",
+        "gate.after.nonblocking",
+        "gate.after.boss_active",
+        "gate.after.hud_semantics"
+      ]
+    },
+    {
+      "step_id": "gate_cross",
+      "operation": "virtual_mouse_left",
+      "target": "Boss side",
+      "check_ids": [
+        "gate.after.target.discovered",
+        "gate.after.cross.input.route",
+        "gate.after.crossed"
+      ]
+    },
+    {
+      "step_id": "gate_boss_attack",
+      "operation": "virtual_mouse_right",
+      "target": "Boss",
+      "check_ids": [
+        "gate.after.boss_attack.input.route",
+        "gate.after.boss_damage"
+      ]
+    }
+  ]
+}
+
+

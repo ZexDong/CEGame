@@ -1,0 +1,407 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "Captain2DPlatformer",
+  "task_name": "Captain's Key Run",
+  "task_revision": "2.0.0",
+  "release_revision": "captain2d-single-room-2026-09-08-ue5.7.4-input-2.0.0",
+  "language": "en",
+  "generated_utc": "2026-09-14T06:44:46.8710025Z",
+  "engine": {
+    "name": "Unreal Engine",
+    "version": "5.7.4",
+    "compiler_toolset_version": "14.44.35207",
+    "compiler_version": "19.44.35228",
+    "platform": "Windows x64",
+    "runtime_mode": "editor_game",
+    "tool_contract_version": "1.0.0",
+    "executor_module": "engine/unreal-5.7.4/executor/UnrealEvaluationExecutor.psm1",
+    "executor_native_interop": "engine/unreal-5.7.4/executor/Private/WindowsEvaluationNative.cs",
+    "executor_native_interop_version": "1.1.0",
+    "observer_module": "engine/unreal-5.7.4/observer/UnrealEvaluationObserver.psm1",
+    "operation_result_schema": "engine/unreal-5.7.4/executor/schemas/operation-result.schema.json",
+    "changelist": 51494982
+  },
+  "paths": {
+    "project_root": "starter-project",
+    "project_file": "starter-project/Captain2DScaffold.uproject",
+    "starter_entry": "starter-project/Captain2DScaffold.uproject",
+    "default_entry": "starter-project/Captain2DScaffold.uproject",
+    "final_entry": "starter-project/Captain2DScaffold.uproject",
+    "starter_map": "/Engine/Maps/Entry",
+    "default_map_at_release": "/Engine/Maps/Entry",
+    "final_map_source": "starter-project/Config/DefaultEngine.ini: GameDefaultMap",
+    "task_state_schema": "contracts/game-state.schema.json",
+    "initial_prompt": "INITIAL_AGENT_PROMPT.md",
+    "gdd": "GDD.md",
+    "toolchain": "tools/TOOLCHAIN.md",
+    "tool_guide": "tools/TOOL_GUIDE.md",
+    "asset_manifest": "ASSET_MANIFEST.json",
+    "asset_catalog_json": "assets/ASSET_CATALOG.json",
+    "asset_catalog_human": "assets/ASSET_CATALOG.md",
+    "asset_coverage": "ASSET_COVERAGE.json",
+    "license_map": "assets/legal/ASSET_LICENSE_MAP.json",
+    "public_smoke": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
+    "public_smoke_schema": "self-check/PublicSmoke/schemas/public-smoke-result.schema.json",
+    "tool_catalog_index": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
+    "tool_catalog_archive": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz",
+    "tool_catalog_search": "tools/Search-UnrealInterfaceCatalog.ps1",
+    "static_gate": "tools/Test-PublicInput.ps1",
+    "room_layout": "assets/files/map/room-layout.json",
+    "room_art_preview": "assets/files/map/room-art-preview.png",
+    "room_reference": "references/room-reference.png",
+    "room_layout_guide": "assets/files/map/README.md",
+    "engine_resolver": "tools/Resolve-Unreal57.ps1"
+  },
+  "viewport": {
+    "width_px": 1280,
+    "height_px": 720,
+    "dpi_scale": 1.0,
+    "windowed": true,
+    "client_capture_only": true,
+    "runtime_arguments": [
+      "-ForceRes"
+    ]
+  },
+  "read_order": [
+    "INITIAL_AGENT_PROMPT.md",
+    "tools/INPUT_GUIDE.md",
+    "GDD.md",
+    "ASSET_MANIFEST.json",
+    "assets/ASSET_CATALOG.md",
+    "tools/TOOLCHAIN.md",
+    "tools/TOOL_GUIDE.md",
+    "contracts/GAME_SESSION_SPEC.md"
+  ],
+  "workspace": {
+    "writable_roots": [
+      "starter-project"
+    ],
+    "protected_roots": [
+      "INITIAL_AGENT_PROMPT.md",
+      "tools/INPUT_GUIDE.md",
+      "GDD.md",
+      "BENCHMARK_MANIFEST.json",
+      
+"tools/TOOLCHAIN.md",
+      "tools/TOOL_GUIDE.md",
+      "ASSET_MANIFEST.json",
+      "assets/ASSET_CATALOG.json",
+      "assets/ASSET_CATALOG.md",
+      "ASSET_COVERAGE.json",
+      "assets",
+      "assets/legal",
+      "contracts",
+      "self-check",
+      "tools",
+      "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
+      "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz",
+      "references"
+    ],
+    "evidence_root_policy": "Runtime state, captures, receipts, logs, packages, usage, trajectories, and evaluator evidence must be outside this input copy."
+  },
+  "policy": {
+    "network": "disabled",
+    "installation": "prohibited",
+    "external_dependencies": "prohibited_except_launcher_engine_and_public_benchmark_tools",
+    "plugins": {
+      "allowed": [
+        "Paper2D"
+      ],
+      "forbidden_dependencies": [
+        "PaperZD",
+        "TypewriterPlugin"
+      ]
+    },
+    "normal_player_input_only": true,
+    "observer_read_only": true,
+    "no_answer_path": true,
+    "no_cheat_path": true,
+    "no_private_evaluator_material": true,
+    "english_only_public_input": true,
+    "privacy_no_host_paths_or_credentials": true,
+    "generated_output_exclusions": [
+      "Binaries/",
+      "DerivedDataCache/",
+      "Intermediate/",
+      "Saved/",
+      ".vs/",
+      ".idea/",
+      "logs/",
+      "captures/",
+      "packages/",
+      "usage/",
+      "trajectory/",
+      "evaluation/"
+    ]
+  },
+  "english_only": {
+    "text_scan_required": true,
+    "binary_metadata_scan_required": true,
+    "opaque_identifier_allowlist": []
+  },
+  "starter_boundary": {
+    "strategy": "clean_blank_forward_build",
+    "target_gameplay_present": false,
+    "assembled_unreal_gameplay_assets_present": false,
+    "gameplay_input_mappings_present": false,
+    "answer_or_cheat_entry_present": false,
+    "runtime_expected_view": "English health screen stating that gameplay is not implemented.",
+    "task_bridge_expected_view": "bridge_ready=true, provider_ready=false, game_state=null",
+    "static_map_art_data_present": true,
+    "map_collision_present": false,
+    "preassembled_importer_present": false
+  },
+  "observation": {
+    "engine_state_schema": "engine/unreal-5.7.4/executor/schemas/state-snapshot.schema.json",
+    "task_state_schema": "contracts/game-state.schema.json",
+    "task_state_transport_argument": "-EvalGameStatePath=<run-root>/state/game-state.json",
+    "separate_from_engine_state": true,
+    "final_candidate_provider_required": true,
+    "starter_provider_status": "provider_ready=false_and_game_state=null",
+    "consumer_boundary": "Read-only snapshots and contemporaneous client captures; no gameplay mutation, result calls, or fixture loading.",
+    "task_contract_version": "2.0.0"
+  },
+  "public_smoke": {
+    "entry": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
+    "result_schema": "self-check/PublicSmoke/schemas/public-smoke-result.schema.json",
+    "result_path": "<run-root>/public-smoke-result.json",
+    "exit_codes": {
+      "0": "all_public_health_assertions_passed",
+      "1": "release_or_project_assertion_failed",
+      "2": "smoke_infrastructure_or_cleanup_blocked_a_valid_verdict"
+    },
+    "gameplay_requirements_evaluated": false,
+    "minimum_assertions": [
+      "package_identity",
+      "source_build",
+      "initial_start",
+      "initial_engine_state",
+      "initial_task_state",
+      "initial_capture",
+      "reopen_identity",
+      "reopen_state",
+      "reopen_capture",
+      "final_cleanup"
+    ]
+  },
+  "tooling": {
+    "guide": "tools/TOOL_GUIDE.md",
+    "guide_sha256": "9eebd26ced937d6d737fa35cc9c8aa23016fccafa842f32e0136332f2d705d54",
+    "capabilities_contract": "engine/unreal-5.7.4/CAPABILITIES.md",
+    "capabilities_contract_sha256": "452b66dda0c5ba90bf46957c2108695edfdf9b7d406aa482ae98ca5a549f7b8a",
+    "executor_sha256": "614d34ac683267dd86be056a1c8c06ce1b23d0688675360bd606537b20622265",
+    "executor_native_interop_sha256": "f30294711d13bcf44037154b5d8dc0225151b36d95372923078d8db5807a8661",
+    "observer_sha256": "d29a51a6b3a91288714e0a2fa7e7285a5e85d60ececa4f59dbd4f7bf78a979bd",
+    "operation_result_schema_sha256": "bc252f4125cb32748ab14372a87a250db0298838f617db0ac9f5f13681cd38b3",
+    "state_snapshot_schema_sha256": "f1fc29f44643ebefee500bcb98f38224df115ec36adb43fa921db5ac3951f55c",
+    "supported_interface_count": 16,
+    "validation_scope": "Executable tool identities are fixed; host capability health is measured by a fresh public smoke, not inherited from a previous host.",
+    "complete_engine_and_plugin_interface_catalog_status": "complete_source_and_descriptor_catalog_generated",
+    "complete_catalog_index": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
+    "complete_catalog_index_sha256": "bd1b60f121dc840a67bdc9dfccab11bcd0b9221ea1fd23a3fa411bd758197c1e",
+    "complete_catalog_archive": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz",
+    "complete_catalog_archive_sha256": "750f1bd26572c5f4d3e5c2afe7fce14d5d7c76aad4ee806151ced72924a6dfd0",
+    "complete_catalog_entry_count": 546387
+  },
+  "assets": {
+    "manifest": "ASSET_MANIFEST.json",
+    "catalog_json": "assets/ASSET_CATALOG.json",
+    "catalog_human": "assets/ASSET_CATALOG.md",
+    "coverage": "ASSET_COVERAGE.json",
+    "license_map": "assets/legal/ASSET_LICENSE_MAP.json",
+    "offline_license": "assets/legal/CC0-1.0.txt",
+    "asset_count": 43,
+    "all_required": true,
+    "equivalent_replacement_allowed": false,
+    "license_basis": "Per-file CC0 or requester authorization; see the license map."
+  },
+  
+
+
+
+
+
+
+
+
+
+"artifacts": [
+    {
+      "path": "INITIAL_AGENT_PROMPT.md",
+      "byte_length": 3772,
+      "sha256": "9116dc25951425d7fcc69d70cbdb10c4dfafd1080d9ffe9afbad43127758d5d2"
+    },
+    {
+      "path": "tools/INPUT_GUIDE.md",
+      "byte_length": 6910,
+      "sha256": "568b35129d202c99a122807e9dccb9ccfa1e9299d073d2f94d53baa5c39560ea"
+    },
+    {
+      "path": "tools/TOOLCHAIN.md",
+      "byte_length": 8322,
+      "sha256": "55481ee728b29043053a5f8d1a6560ff4da1a685398b0b60f6f46bc046f16015"
+    },
+    {
+      "path": "tools/TOOL_GUIDE.md",
+      "byte_length": 33301,
+      "sha256": "9eebd26ced937d6d737fa35cc9c8aa23016fccafa842f32e0136332f2d705d54"
+    },
+    {
+      "path": "contracts/GAME_SESSION_SPEC.md",
+      "byte_length": 3610,
+      "sha256": "9a4bc1f7a2b517a701230174a6b17f3b51e62961ea1fabf69b7a88eee91a77ef"
+    },
+    {
+      "path": "self-check/PublicSmoke/CONTRACT.md",
+      "byte_length": 3174,
+      "sha256": "470e726f2ab6de9e062283bc59a1a68ef923affae45c89f60f9089729bbdb3a9"
+    },
+    {
+      "path": "starter-project/Captain2DScaffold.uproject",
+      "byte_length": 388,
+      "sha256": "e5cc16ed0f79441ef64186a0c0625ad017b51a8eca3da464c70fbfc2b0488f48"
+    },
+    {
+      "path": "GDD.md",
+      "byte_length": 23501,
+      "sha256": "9bc8c292ceb6c81b1c2b6fb4d6bf8ee8cfb1dda0fb4d35b1992ad1a276e9821a"
+    },
+    {
+      "path": "ASSET_MANIFEST.json",
+      "byte_length": 8732,
+      "sha256": "bc57e80b12118334a43bc376b5fff44a9f6b57a685f743d5c69edda080558312"
+    },
+    {
+      "path": "assets/ASSET_CATALOG.json",
+      "byte_length": 38253,
+      "sha256": "55d6800ff044d234b7157741ce19a60eb79e180c096ca4dbc224641d6328d80a"
+    },
+    {
+      "path": "assets/ASSET_CATALOG.md",
+      "byte_length": 5627,
+      "sha256": "78ca0ea5f675366ef9eafe0b211cb3570590c5c56f18ea57b95034da5ef58c89"
+    },
+    {
+      "path": "ASSET_COVERAGE.json",
+      "byte_length": 2673,
+      "sha256": "cfda0d08ccfd7a4e53ec52534b8e6812c6b663b6722c62814a4ffe5e99c8a657"
+    },
+    {
+      "path": "assets/legal/ASSET_LICENSE_MAP.json",
+      "byte_length": 4032,
+      "sha256": "9ad5bbb24f360a3f0a8ef54afe1f477c685841db65c4efdecffff0f92e2321cc"
+    },
+    {
+      "path": "assets/legal/CC0-1.0.txt",
+      "byte_length": 7048,
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "path": "contracts/game-state.schema.json",
+      "byte_length": 12201,
+      "sha256": "6b8a01746cbaf6310646c5be75171d8eebc804f8303e45b7e02298f60a22d60d"
+    },
+    {
+      "path": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
+      "byte_length": 26334,
+      "sha256": "21e24442efef28e91bc4e1e27de0dbcf084948ab0926277f2ce61d632580b491"
+    },
+    {
+      "path": "self-check/PublicSmoke/schemas/public-smoke-result.schema.json",
+      "byte_length": 4488,
+      "sha256": "6eb9f47be292311378cbe97e882f0cffcc73d78258653747947759098b0dc7b7"
+    },
+    {
+      "path": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
+      "byte_length": 3040,
+      "sha256": "bd1b60f121dc840a67bdc9dfccab11bcd0b9221ea1fd23a3fa411bd758197c1e"
+    },
+    {
+      "path": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz",
+      "byte_length": 36429495,
+      "sha256": "750f1bd26572c5f4d3e5c2afe7fce14d5d7c76aad4ee806151ced72924a6dfd0"
+    },
+    {
+      "path": "tools/Search-UnrealInterfaceCatalog.ps1",
+      "byte_length": 2060,
+      "sha256": "a35eaaa1fc13c0740c649c61b540c43056e0a3c6a4c90a6e7ad0fa7626519afa"
+    },
+    {
+      "path": "tools/Test-PublicInput.ps1",
+      "byte_length": 30809,
+      "sha256": "64bfae9c2d2467c1cec773f4989338b162eaabbb0cc59c5540f645c4de086a3b"
+    },
+    
+
+
+
+
+
+
+
+
+
+{
+      "path": "assets/files/map/README.md",
+      "byte_length": 2302,
+      "sha256": "9892d50a52868acbae38bb615619ea1e0a3f998678baf81b47ccc08a733efc6b"
+    },
+    {
+      "path": "assets/files/map/room-layout.json",
+      "byte_length": 124357,
+      "sha256": "c58fd553a7dfdd1a0473ee974e86cd79f4819221a31e0d1338f5d04437e760b3"
+    },
+    {
+      "path": "assets/files/map/room-art-preview.png",
+      "byte_length": 27877,
+      "sha256": "2ee7cc8017a7e8ca13bb96367ee3833a89cd9422498d883793c76405147b4239"
+    },
+    {
+      "path": "references/room-reference.png",
+      "byte_length": 58023,
+      "sha256": "9c3d279f733dce61ddab3c614f453810a25c7da9aae596853162c3e929fbaaea"
+    },
+    {
+      "path": "tools/Resolve-Unreal57.ps1",
+      "byte_length": 2723,
+      "sha256": "12581ab0254ec09162a8783b412a71951418e8eb9a38a6e9f137d4e9ead873c5"
+    }
+  ],
+  "release_boundary": {
+    "does_not_include": [
+      "original source snapshot",
+      "private compatibility baseline",
+      "private reference implementation",
+      "private evaluator or scoring rules",
+      "private trajectories or historical results",
+      "Marketplace plugin payloads",
+      "host-local evidence or generated build output"
+    ],
+    "gdd_acceptance_authority": "GDD.md#6-numbered-requirements-sole-acceptance-authority",
+    "diagnostic_only": true,
+    "formal_freeze_performed": false
+  },
+  "risk_gate": {
+    "required": [
+      "english_only_text",
+      "privacy_and_secret_scan",
+      "license_presence",
+      "no_answer_boundary",
+      "manifest_and_reference_resolution",
+      "asset_catalog_consistency",
+      "complete_interface_catalog_identity",
+      "source_starter_build_render_reopen_cleanup"
+    ],
+    "selected": [
+      "static_room_layout_and_dependency_audit",
+      "png_metadata_scan",
+      "visual_reference_numbering_review",
+      "source_art_frame_pixel_comparison"
+    ],
+    "skipped_with_reason": {
+      "unreal_binary_asset_deep_scan": "No Unreal binary asset is delivered; only clean PNG and static art JSON are supplied.",
+      "cook_package": "The delivered starter contains no project content packages or imported gameplay assets. Editor build and bounded runtime smoke cover the changed starter; packaging the final game is implementation work.",
+      "gameplay_evaluation": "This input-only revision supplies requirements and clean materials; no gameplay implementation is included."
+    }
+  }
+}

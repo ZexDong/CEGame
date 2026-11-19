@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "input_revision": "g07-public-contract-v6-20260906-strategy-targets",
+  "public_contract_status": "published_input_contract",
+  "benchmark_id": "godot_2d_ape_tower_defense_fixed_v2",
+  "track": "reconstruction",
+  "engine": "Godot",
+  "engine_version": "4.7.1.stable.official.a13da4feb",
+  "project_root": "sp",
+  "viewport": [
+    1152,
+    648
+  ],
+  "entry_scene": "res://Starter/Main.tscn",
+  "public_spec": "GDD-en.md",
+  "public_toolchain": "TOOLCHAIN-en.md",
+  "initial_prompt": "INITIAL_AGENT_PROMPT-en.md",
+  "tool_guide": "GODOT_BENCHMARK_TOOL_GUIDE.md",
+  "dashboard_spec": "DASHBOARD_SPEC.md",
+  "common_baseline": "COMMON_BASELINE.md",
+  "public_path_reference": "Asserts/path_reference.json",
+  "asset_manifest": "Asserts/MANIFEST.json",
+  "material_root": "Asserts",
+  
+"legal_root": "legal",
+  "dashboard": "sp/benchmark/dashboard.gd",
+  "dashboard_self_check": "sp/benchmark/dashboard_self_check.gd",
+  "naming_tables": "sp/benchmark/naming-tables.json",
+  "public_smoke": "sp/benchmark/public_smoke.gd",
+  "baseline": {
+    "kind": "presentation_initialization",
+    "playable": false,
+    "target_feature_present": false
+  },
+  "network_allowed": false,
+  "external_path_access_allowed": false
+}

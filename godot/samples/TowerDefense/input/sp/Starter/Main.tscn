@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://Starter/starter.gd" type="Script" id="1_starter"]
+[ext_resource path="res://benchmark/dashboard.gd" type="Script" id="2_dashboard"]
+
+[node name="ApeTowerDefenseFixedV2Starter" type="Node2D"]
+script = ExtResource("1_starter")
+
+[node name="BenchmarkDashboard" type="Node" parent="."]
+script = ExtResource("2_dashboard")

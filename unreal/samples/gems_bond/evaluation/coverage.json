@@ -1,0 +1,5916 @@
+{
+  "schema_version": "2.0",
+  "coverage_status": "not_reviewed",
+  "gdd_sha256": "b08c231dd34f18e902dfad5bae0a99fdf249d5e53fed0f3f9d57825320a1c175",
+  "limitations": [
+    "Native requirement mapping is preserved; independent semantic coverage and targeted positive/negative/equivalent game fixtures have not been qualified."
+  ],
+  "requirements": [
+    {
+      "requirement_id": "START-01",
+      "obligation_id": "START-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Fresh launch or Restart",
+      "check_ids": [
+        "initial_rules",
+        "restart_preparing",
+        "restart_countdown",
+        "restart_combat",
+        "restart_rest",
+        "restart_paused",
+        "restart_defeated",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "START-01",
+      "obligation_id": "START-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Enter play",
+      "check_ids": [
+        "initial_rules",
+        "restart_preparing",
+        "restart_countdown",
+        "restart_combat",
+        "restart_rest",
+        "restart_paused",
+        "restart_defeated",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "START-01",
+      "obligation_id": "START-01.3.1",
+      "field": "Required result",
+      "obligation": "Begin with 170 coins, an intact 500-health crystal, four unoccupied gold deposits, zero defenses and zero completed waves.",
+      "check_ids": [
+        "initial_rules",
+        "restart_preparing",
+        "restart_countdown",
+        "restart_combat",
+        "restart_rest",
+        "restart_paused",
+        "restart_defeated",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "START-01",
+      "obligation_id": "START-01.3.2",
+      "field": "Required result",
+      "obligation": "No enemy or projectile exists.",
+      "check_ids": [
+        "initial_rules",
+        "restart_preparing",
+        "restart_countdown",
+        "restart_combat",
+        "restart_rest",
+        "restart_paused",
+        "restart_defeated",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "START-01",
+      "obligation_id": "START-01.3.3",
+      "field": "Required result",
+      "obligation": "Speed is 1x.",
+      "check_ids": [
+        "initial_rules",
+        "restart_preparing",
+        "restart_countdown",
+        "restart_combat",
+        "restart_rest",
+        "restart_paused",
+        "restart_defeated",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "START-01",
+      "obligation_id": "START-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No carried-over income, purchases, damage or selection.",
+      "check_ids": [
+        "initial_rules",
+        "restart_preparing",
+        "restart_countdown",
+        "restart_combat",
+        "restart_rest",
+        "restart_paused",
+        "restart_defeated",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "START-01",
+      "obligation_id": "START-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The coin counter and instruction to build a mine are visible.",
+      "check_ids": [
+        "initial_rules",
+        "restart_preparing",
+        "restart_countdown",
+        "restart_combat",
+        "restart_rest",
+        "restart_paused",
+        "restart_defeated",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "START-01",
+      "obligation_id": "START-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Reopen has the same fresh progress state.",
+      "check_ids": [
+        "initial_rules",
+        "restart_preparing",
+        "restart_countdown",
+        "restart_combat",
+        "restart_rest",
+        "restart_paused",
+        "restart_defeated",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "START-01",
+      "obligation_id": "START-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.4.",
+      "check_ids": [
+        "initial_rules",
+        "restart_preparing",
+        "restart_countdown",
+        "restart_combat",
+        "restart_rest",
+        "restart_paused",
+        "restart_defeated",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-01",
+      "obligation_id": "SCENE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Round visible",
+      "check_ids": [
+        "opening_content",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-01",
+      "obligation_id": "SCENE-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "View the field",
+      "check_ids": [
+        "opening_content",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-01",
+      "obligation_id": "SCENE-01.3.1",
+      "field": "Required result",
+      "obligation": "Present a fixed elevated three-quarter 3D view of a square brown clearing surrounded by bright green grass, conifers, bushes, flowers, scattered stones and a left-side dirt approach.",
+      "check_ids": [
+        "opening_content",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-01",
+      "obligation_id": "SCENE-01.3.2",
+      "field": "Required result",
+      "obligation": "Keep the entire build area and crystal visible at 1280 x 720 and 1920 x 1080.",
+      "check_ids": [
+        "opening_content",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-01",
+      "obligation_id": "SCENE-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No flat diagram, unlit graybox, empty background, clipped board or camera needed to find a legal build cell.",
+      "check_ids": [
+        "opening_content",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-01",
+      "obligation_id": "SCENE-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Use bright directional daylight, soft cast shadows and saturated green/brown terrain.",
+      "check_ids": [
+        "opening_content",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-01",
+      "obligation_id": "SCENE-01.5.2",
+      "field": "Visible feedback",
+      "obligation": "The camera reveals both the tops and sides of structures, with the pink-red crystal prominent near the center of the clearing.",
+      "check_ids": [
+        "opening_content",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-01",
+      "obligation_id": "SCENE-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "The build sidebar remains separate from actionable world space.",
+      "check_ids": [
+        "opening_content",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-01",
+      "obligation_id": "SCENE-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.9.",
+      "check_ids": [
+        "opening_content",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-02",
+      "obligation_id": "SCENE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "New round",
+      "check_ids": [
+        "opening_content",
+        "initial_rules",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-02",
+      "obligation_id": "SCENE-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Inspect or place on the clearing",
+      "check_ids": [
+        "opening_content",
+        "initial_rules",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-02",
+      "obligation_id": "SCENE-02.3.1",
+      "field": "Required result",
+      "obligation": "Use a 20 x 20 square logical build grid with zero-based (column, row) coordinates from 0 through 19, rows increasing toward the bottom of the screen and columns to the right.",
+      "check_ids": [
+        "opening_content",
+        "initial_rules",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-02",
+      "obligation_id": "SCENE-02.3.2",
+      "field": "Required result",
+      "obligation": "The crystal occupies (10,10).",
+      "check_ids": [
+        "opening_content",
+        "initial_rules",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-02",
+      "obligation_id": "SCENE-02.3.3",
+      "field": "Required result",
+      "obligation": "Gold deposits occupy (4,3), (12,8), (6,13), (17,17).",
+      "check_ids": [
+        "opening_content",
+        "initial_rules",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-02",
+      "obligation_id": "SCENE-02.3.4",
+      "field": "Required result",
+      "obligation": "One cell is 200 world-distance units for the balance values below.",
+      "check_ids": [
+        "opening_content",
+        "initial_rules",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-02",
+      "obligation_id": "SCENE-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No placements outside this clearing, on the crystal or on scenery.",
+      "check_ids": [
+        "opening_content",
+        "initial_rules",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-02",
+      "obligation_id": "SCENE-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "The grid may be subtle or only shown during placement; the hovered cell is unambiguous.",
+      "check_ids": [
+        "opening_content",
+        "initial_rules",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-02",
+      "obligation_id": "SCENE-02.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Coordinates specify player-facing board layout, not an engine-axis convention.",
+      "check_ids": [
+        "opening_content",
+        "initial_rules",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SCENE-02",
+      "obligation_id": "SCENE-02.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.5.",
+      "check_ids": [
+        "opening_content",
+        "initial_rules",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-01",
+      "obligation_id": "SELECT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Preparation, countdown, combat or rest",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-01",
+      "obligation_id": "SELECT-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Left-click a build icon",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-01",
+      "obligation_id": "SELECT-01.3.1",
+      "field": "Required result",
+      "obligation": "Select exactly one of Mine, Archer Tower, Cannon Tower or Wall.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-01",
+      "obligation_id": "SELECT-01.3.2",
+      "field": "Required result",
+      "obligation": "Show its name, current price and selection highlight.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-01",
+      "obligation_id": "SELECT-01.3.3",
+      "field": "Required result",
+      "obligation": "Selecting a different type replaces the prior selection.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-01",
+      "obligation_id": "SELECT-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "Selection alone spends no coins and creates no building.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-01",
+      "obligation_id": "SELECT-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Distinct icons in a vertically arranged left build panel.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-01",
+      "obligation_id": "SELECT-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Controls work during combat without pausing the world.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-01",
+      "obligation_id": "SELECT-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.4.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-02",
+      "obligation_id": "SELECT-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A build type is selected",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-02",
+      "obligation_id": "SELECT-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Move the pointer over the board",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-02",
+      "obligation_id": "SELECT-02.3.1",
+      "field": "Required result",
+      "obligation": "Show a snapped translucent model preview at the hovered cell, with green for legal and red for illegal placement.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-02",
+      "obligation_id": "SELECT-02.3.2",
+      "field": "Required result",
+      "obligation": "Towers also show their attack-radius preview.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-02",
+      "obligation_id": "SELECT-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "Preview objects cannot block, attack, produce income, take damage or count as buildings.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-02",
+      "obligation_id": "SELECT-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Preview follows the pointer and displays the actual footprint.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-02",
+      "obligation_id": "SELECT-02.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Leaving the board or hovering UI hides the world preview; colors have an additional outline or readable validity cue.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-02",
+      "obligation_id": "SELECT-02.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.4.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-03",
+      "obligation_id": "SELECT-03.1.1",
+      "field": "Preconditions",
+      "obligation": "Placement preview or building details open",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-03",
+      "obligation_id": "SELECT-03.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Right-click or press Escape",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-03",
+      "obligation_id": "SELECT-03.3.1",
+      "field": "Required result",
+      "obligation": "Cancel the current selection and close its preview/details.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-03",
+      "obligation_id": "SELECT-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No purchase, sale, damage, refund or pause is caused by cancel.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-03",
+      "obligation_id": "SELECT-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "Selection highlight, range ring and preview disappear.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-03",
+      "obligation_id": "SELECT-03.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Repeated cancel is harmless",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-03",
+      "obligation_id": "SELECT-03.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Escape on a clean play view is a no-op.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELECT-03",
+      "obligation_id": "SELECT-03.6.3",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.4.",
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-01",
+      "obligation_id": "BUILD-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A selected defense has an empty legal cell and sufficient coins",
+      "check_ids": [
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "purchase_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-01",
+      "obligation_id": "BUILD-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Left-click that cell",
+      "check_ids": [
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "purchase_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-01",
+      "obligation_id": "BUILD-01.3.1",
+      "field": "Required result",
+      "obligation": "Create one level-1 building, deduct its displayed current price exactly once, and begin a short rise/pop construction animation lasting 0.15-0.6 simulation seconds.",
+      "check_ids": [
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "purchase_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-01",
+      "obligation_id": "BUILD-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No duplicate building or second charge from a held button.",
+      "check_ids": [
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "purchase_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-01",
+      "obligation_id": "BUILD-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The solid model replaces the preview, coins update and a build cue plays.",
+      "check_ids": [
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "purchase_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-01",
+      "obligation_id": "BUILD-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "The selected build type remains available for repeated placements.",
+      "check_ids": [
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "purchase_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-01",
+      "obligation_id": "BUILD-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.5, 6.2.7.",
+      "check_ids": [
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "purchase_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-02",
+      "obligation_id": "BUILD-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Any placement restriction fails",
+      "check_ids": [
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-02",
+      "obligation_id": "BUILD-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Left-click an occupied, reserved, out-of-bounds or unaffordable cell",
+      "check_ids": [
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-02",
+      "obligation_id": "BUILD-02.3.1",
+      "field": "Required result",
+      "obligation": "Reject the purchase while keeping coins, ownership and prices unchanged.",
+      "check_ids": [
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-02",
+      "obligation_id": "BUILD-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No overlap stacking, partial purchase or negative balance.",
+      "check_ids": [
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-02",
+      "obligation_id": "BUILD-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Show a visible placement or affordability reason within 0.2 real seconds.",
+      "check_ids": [
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-02",
+      "obligation_id": "BUILD-02.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Exactly enough coins permits a valid purchase; holding or repeatedly clicking an illegal cell cannot charge.",
+      "check_ids": [
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-02",
+      "obligation_id": "BUILD-02.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.5, 6.2.7.",
+      "check_ids": [
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-03",
+      "obligation_id": "BUILD-03.1.1",
+      "field": "Preconditions",
+      "obligation": "Mine selected",
+      "check_ids": [
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-03",
+      "obligation_id": "BUILD-03.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Left-click a gold deposit",
+      "check_ids": [
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-03",
+      "obligation_id": "BUILD-03.3.1",
+      "field": "Required result",
+      "obligation": "Only an unoccupied deposit permits a mine.",
+      "check_ids": [
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-03",
+      "obligation_id": "BUILD-03.3.2",
+      "field": "Required result",
+      "obligation": "Replace its exposed rock silhouette with the built mine while preserving its board location.",
+      "check_ids": [
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-03",
+      "obligation_id": "BUILD-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No mine on ordinary soil, second mine on one deposit or unrelated defense on an exposed deposit.",
+      "check_ids": [
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-03",
+      "obligation_id": "BUILD-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "The construction changes the deposit silhouette.",
+      "check_ids": [
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-03",
+      "obligation_id": "BUILD-03.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Selling or destroying the mine exposes its deposit again.",
+      "check_ids": [
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "BUILD-03",
+      "obligation_id": "BUILD-03.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.5, 6.2.7.",
+      "check_ids": [
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "placement_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-01",
+      "obligation_id": "ECONOMY-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Any active round",
+      "check_ids": [
+        "price_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-01",
+      "obligation_id": "ECONOMY-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Build, sell or lose a building",
+      "check_ids": [
+        "price_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-01",
+      "obligation_id": "ECONOMY-01.3.1",
+      "field": "Required result",
+      "obligation": "Current price equals base price plus increment times the number of currently living player-owned buildings of that type: Mine 0 + 600 each",
+      "check_ids": [
+        "price_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-01",
+      "obligation_id": "ECONOMY-01.3.2",
+      "field": "Required result",
+      "obligation": "Archer 20 + 15 each",
+      "check_ids": [
+        "price_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-01",
+      "obligation_id": "ECONOMY-01.3.3",
+      "field": "Required result",
+      "obligation": "Cannon 25 + 20 each",
+      "check_ids": [
+        "price_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-01",
+      "obligation_id": "ECONOMY-01.3.4",
+      "field": "Required result",
+      "obligation": "Wall 5 + 2 each.",
+      "check_ids": [
+        "price_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-01",
+      "obligation_id": "ECONOMY-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No cross-type price changes or price below its base.",
+      "check_ids": [
+        "price_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-01",
+      "obligation_id": "ECONOMY-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Build-panel prices update immediately after the ownership change.",
+      "check_ids": [
+        "price_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-01",
+      "obligation_id": "ECONOMY-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Upgrading does not add a building to the count.",
+      "check_ids": [
+        "price_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-01",
+      "obligation_id": "ECONOMY-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.7.",
+      "check_ids": [
+        "price_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-02",
+      "obligation_id": "ECONOMY-02.1.1",
+      "field": "Preconditions",
+      "obligation": "An intact mine exists",
+      "check_ids": [
+        "income_content",
+        "income_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-02",
+      "obligation_id": "ECONOMY-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Every 10 simulation seconds of that mine's life",
+      "check_ids": [
+        "income_content",
+        "income_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-02",
+      "obligation_id": "ECONOMY-02.3.1",
+      "field": "Required result",
+      "obligation": "Credit 25 + 8 times completed-wave count coins to the shared wallet.",
+      "check_ids": [
+        "income_content",
+        "income_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-02",
+      "obligation_id": "ECONOMY-02.3.2",
+      "field": "Required result",
+      "obligation": "Each mine has its own cycle; the first payout is after a full interval.",
+      "check_ids": [
+        "income_content",
+        "income_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-02",
+      "obligation_id": "ECONOMY-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No idle income before a mine exists, double payout or payout after the mine is removed.",
+      "check_ids": [
+        "income_content",
+        "income_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-02",
+      "obligation_id": "ECONOMY-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Gold-colored floating +amount text rises above the mine and the wallet updates.",
+      "check_ids": [
+        "income_content",
+        "income_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-02",
+      "obligation_id": "ECONOMY-02.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "The current completed-wave count at payout determines the amount; pausing freezes the cycle.",
+      "check_ids": [
+        "income_content",
+        "income_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ECONOMY-02",
+      "obligation_id": "ECONOMY-02.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.6, 6.2.7, 6.2.8.",
+      "check_ids": [
+        "income_content",
+        "income_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INSPECT-01",
+      "obligation_id": "INSPECT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A built structure is visible",
+      "check_ids": [
+        "inspection_content",
+        "inspect_rules",
+        "ui_context"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INSPECT-01",
+      "obligation_id": "INSPECT-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Left-click it while no build type is selected",
+      "check_ids": [
+        "inspection_content",
+        "inspect_rules",
+        "ui_context"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INSPECT-01",
+      "obligation_id": "INSPECT-01.3.1",
+      "field": "Required result",
+      "obligation": "Open contextual details with type, level, current/max health, refund amount and, for towers, damage, cooldown, range and the next upgrade price or maximum-level state.",
+      "check_ids": [
+        "inspection_content",
+        "inspect_rules",
+        "ui_context"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INSPECT-01",
+      "obligation_id": "INSPECT-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "The inspection click must not build, sell or upgrade.",
+      "check_ids": [
+        "inspection_content",
+        "inspect_rules",
+        "ui_context"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INSPECT-01",
+      "obligation_id": "INSPECT-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Place the readable detail card near the selected structure without hiding critical controls; show a tower range ring.",
+      "check_ids": [
+        "inspection_content",
+        "inspect_rules",
+        "ui_context"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INSPECT-01",
+      "obligation_id": "INSPECT-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Selecting another building replaces the card; clicking empty ground clears it.",
+      "check_ids": [
+        "inspection_content",
+        "inspect_rules",
+        "ui_context"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INSPECT-01",
+      "obligation_id": "INSPECT-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.7.",
+      "check_ids": [
+        "inspection_content",
+        "inspect_rules",
+        "ui_context"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-01",
+      "obligation_id": "UPGRADE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A fully constructed level-1 or level-2 tower is selected and coins cover its upgrade",
+      "check_ids": [
+        "tiers_archer",
+        "tiers_cannon",
+        "upgrade_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-01",
+      "obligation_id": "UPGRADE-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Left-click Upgrade",
+      "check_ids": [
+        "tiers_archer",
+        "tiers_cannon",
+        "upgrade_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-01",
+      "obligation_id": "UPGRADE-01.3.1",
+      "field": "Required result",
+      "obligation": "Pay 200 to reach level 2 or 600 to reach level 3; apply the corresponding balance row immediately.",
+      "check_ids": [
+        "tiers_archer",
+        "tiers_cannon",
+        "upgrade_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-01",
+      "obligation_id": "UPGRADE-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No skipped level, free upgrade or duplicate charge from one click.",
+      "check_ids": [
+        "tiers_archer",
+        "tiers_cannon",
+        "upgrade_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-01",
+      "obligation_id": "UPGRADE-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Change both tower body and weapon to their distinct tier meshes, play an upgrade effect and update details.",
+      "check_ids": [
+        "tiers_archer",
+        "tiers_cannon",
+        "upgrade_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-01",
+      "obligation_id": "UPGRADE-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Levels are displayed as 1, 2 and 3.",
+      "check_ids": [
+        "tiers_archer",
+        "tiers_cannon",
+        "upgrade_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-01",
+      "obligation_id": "UPGRADE-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.7, 6.2.8.",
+      "check_ids": [
+        "tiers_archer",
+        "tiers_cannon",
+        "upgrade_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-02",
+      "obligation_id": "UPGRADE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A tower is damaged",
+      "check_ids": [
+        "upgrade_health"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-02",
+      "obligation_id": "UPGRADE-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Complete a legal upgrade",
+      "check_ids": [
+        "upgrade_health"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-02",
+      "obligation_id": "UPGRADE-02.3.1",
+      "field": "Required result",
+      "obligation": "Preserve health percentage: new health = old health / old maximum times new maximum.",
+      "check_ids": [
+        "upgrade_health"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-02",
+      "obligation_id": "UPGRADE-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No unconditional full heal and no health above the new maximum.",
+      "check_ids": [
+        "upgrade_health"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-02",
+      "obligation_id": "UPGRADE-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Health bar and detail values reflect the new amount.",
+      "check_ids": [
+        "upgrade_health"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-02",
+      "obligation_id": "UPGRADE-02.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Fractional health is valid; displayed numbers may round without altering the underlying value.",
+      "check_ids": [
+        "upgrade_health"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-02",
+      "obligation_id": "UPGRADE-02.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.7.",
+      "check_ids": [
+        "upgrade_health"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-03",
+      "obligation_id": "UPGRADE-03.1.1",
+      "field": "Preconditions",
+      "obligation": "Insufficient coins, maximum tower tier, construction in progress, or a mine/wall",
+      "check_ids": [
+        "upgrade_rejection",
+        "ui_context"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-03",
+      "obligation_id": "UPGRADE-03.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Attempt Upgrade",
+      "check_ids": [
+        "upgrade_rejection",
+        "ui_context"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-03",
+      "obligation_id": "UPGRADE-03.3.1",
+      "field": "Required result",
+      "obligation": "Leave balance, tier, models, health and timers unchanged.",
+      "check_ids": [
+        "upgrade_rejection",
+        "ui_context"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-03",
+      "obligation_id": "UPGRADE-03.3.2",
+      "field": "Required result",
+      "obligation": "Mines and walls have no upgrades.",
+      "check_ids": [
+        "upgrade_rejection",
+        "ui_context"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-03",
+      "obligation_id": "UPGRADE-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No invisible or unaffordable upgrade and no tier above 3.",
+      "check_ids": [
+        "upgrade_rejection",
+        "ui_context"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-03",
+      "obligation_id": "UPGRADE-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "Unavailable controls are disabled or explain the reason.",
+      "check_ids": [
+        "upgrade_rejection",
+        "ui_context"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-03",
+      "obligation_id": "UPGRADE-03.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Repeated rejection remains safe.",
+      "check_ids": [
+        "upgrade_rejection",
+        "ui_context"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UPGRADE-03",
+      "obligation_id": "UPGRADE-03.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.7.",
+      "check_ids": [
+        "upgrade_rejection",
+        "ui_context"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELL-01",
+      "obligation_id": "SELL-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A player-owned structure is selected",
+      "check_ids": [
+        "inspection_content",
+        "refund_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELL-01",
+      "obligation_id": "SELL-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Left-click Sell",
+      "check_ids": [
+        "inspection_content",
+        "refund_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELL-01",
+      "obligation_id": "SELL-01.3.1",
+      "field": "Required result",
+      "obligation": "Remove it once and refund floor(50% of the amount paid to place that object).",
+      "check_ids": [
+        "inspection_content",
+        "refund_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELL-01",
+      "obligation_id": "SELL-01.3.2",
+      "field": "Required result",
+      "obligation": "Upgrades are not refunded.",
+      "check_ids": [
+        "inspection_content",
+        "refund_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELL-01",
+      "obligation_id": "SELL-01.3.3",
+      "field": "Required result",
+      "obligation": "Recompute current build prices.",
+      "check_ids": [
+        "inspection_content",
+        "refund_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELL-01",
+      "obligation_id": "SELL-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No refund for the crystal, an exposed deposit, enemies, already removed structures or their upgrades.",
+      "check_ids": [
+        "inspection_content",
+        "refund_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELL-01",
+      "obligation_id": "SELL-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Show the refund before sale; close details and remove its health bar and range ring after sale.",
+      "check_ids": [
+        "inspection_content",
+        "refund_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELL-01",
+      "obligation_id": "SELL-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "The first free mine refunds zero.",
+      "check_ids": [
+        "inspection_content",
+        "refund_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELL-01",
+      "obligation_id": "SELL-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "A refunded mine leaves a reusable deposit.",
+      "check_ids": [
+        "inspection_content",
+        "refund_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SELL-01",
+      "obligation_id": "SELL-01.6.3",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.7, 6.2.8.",
+      "check_ids": [
+        "inspection_content",
+        "refund_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-01",
+      "obligation_id": "HEALTH-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A living owned building or crystal has missing health",
+      "check_ids": [
+        "regeneration_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-01",
+      "obligation_id": "HEALTH-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Simulation advances",
+      "check_ids": [
+        "regeneration_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-01",
+      "obligation_id": "HEALTH-01.3.1",
+      "field": "Required result",
+      "obligation": "Regenerate 2 health per simulation second, clamped to that object's maximum.",
+      "check_ids": [
+        "regeneration_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-01",
+      "obligation_id": "HEALTH-01.3.2",
+      "field": "Required result",
+      "obligation": "Walls have 450 health, mines 1500, and the crystal 500.",
+      "check_ids": [
+        "regeneration_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-01",
+      "obligation_id": "HEALTH-01.3.3",
+      "field": "Required result",
+      "obligation": "Tower maxima are in the table below.",
+      "check_ids": [
+        "regeneration_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-01",
+      "obligation_id": "HEALTH-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No regeneration after destruction or during pause/defeat; no overheal.",
+      "check_ids": [
+        "regeneration_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-01",
+      "obligation_id": "HEALTH-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "World-space health bars truthfully track damage and regeneration.",
+      "check_ids": [
+        "regeneration_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-01",
+      "obligation_id": "HEALTH-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Health can be fractional.",
+      "check_ids": [
+        "regeneration_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-01",
+      "obligation_id": "HEALTH-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Regeneration does not restore a removed object.",
+      "check_ids": [
+        "regeneration_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-01",
+      "obligation_id": "HEALTH-01.6.3",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.6, 6.2.7, 6.2.8.",
+      "check_ids": [
+        "regeneration_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-02",
+      "obligation_id": "HEALTH-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A non-crystal structure reaches zero health",
+      "check_ids": [
+        "destruction_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-02",
+      "obligation_id": "HEALTH-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Enemy damage resolves",
+      "check_ids": [
+        "destruction_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-02",
+      "obligation_id": "HEALTH-02.3.1",
+      "field": "Required result",
+      "obligation": "Remove its gameplay presence, ownership count, collision and active actions; restore the deposit if it was a mine.",
+      "check_ids": [
+        "destruction_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-02",
+      "obligation_id": "HEALTH-02.3.2",
+      "field": "Required result",
+      "obligation": "Give no sale refund.",
+      "check_ids": [
+        "destruction_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-02",
+      "obligation_id": "HEALTH-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No lingering invisible blocker, stale attacker target, income payout or newly released tower shot after removal.",
+      "check_ids": [
+        "destruction_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-02",
+      "obligation_id": "HEALTH-02.4.2",
+      "field": "Forbidden result",
+      "obligation": "Already airborne projectiles follow COMBAT-01.",
+      "check_ids": [
+        "destruction_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-02",
+      "obligation_id": "HEALTH-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Play a destruction effect and clear any details for that object.",
+      "check_ids": [
+        "destruction_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-02",
+      "obligation_id": "HEALTH-02.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Its former attackers can continue toward the crystal or another obstruction.",
+      "check_ids": [
+        "destruction_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HEALTH-02",
+      "obligation_id": "HEALTH-02.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.7, 6.2.8.",
+      "check_ids": [
+        "destruction_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-01",
+      "obligation_id": "WAVE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "No mine has yet been built in a new round",
+      "check_ids": [
+        "gate_rules",
+        "flow"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-01",
+      "obligation_id": "WAVE-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Wait or place non-mine defenses",
+      "check_ids": [
+        "gate_rules",
+        "flow"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-01",
+      "obligation_id": "WAVE-01.3.1",
+      "field": "Required result",
+      "obligation": "Remain in preparation indefinitely with no enemies and no wave countdown progress.",
+      "check_ids": [
+        "gate_rules",
+        "flow"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-01",
+      "obligation_id": "WAVE-01.3.2",
+      "field": "Required result",
+      "obligation": "Building the first mine starts a 2-second countdown to wave 1.",
+      "check_ids": [
+        "gate_rules",
+        "flow"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-01",
+      "obligation_id": "WAVE-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No wave starts merely from time, selecting Mine or an invalid mine placement.",
+      "check_ids": [
+        "gate_rules",
+        "flow"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-01",
+      "obligation_id": "WAVE-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Replace the mine instruction with a visible upcoming-wave countdown.",
+      "check_ids": [
+        "gate_rules",
+        "flow"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-01",
+      "obligation_id": "WAVE-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "After the first valid mine starts the round, later mine loss does not return to the initial waiting gate.",
+      "check_ids": [
+        "gate_rules",
+        "flow"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-01",
+      "obligation_id": "WAVE-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.4, 6.2.6.",
+      "check_ids": [
+        "gate_rules",
+        "flow"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-02",
+      "obligation_id": "WAVE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "The round is counting down",
+      "check_ids": [
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-02",
+      "obligation_id": "WAVE-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Countdown expires",
+      "check_ids": [
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-02",
+      "obligation_id": "WAVE-02.3.1",
+      "field": "Required result",
+      "obligation": "Start the next wave, play one horn cue and emit exactly its scheduled enemies at evenly spaced times across its spawn duration.",
+      "check_ids": [
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-02",
+      "obligation_id": "WAVE-02.3.2",
+      "field": "Required result",
+      "obligation": "Enemies enter from its enabled grass edges and move into view.",
+      "check_ids": [
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-02",
+      "obligation_id": "WAVE-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No overspawn, skipped groups or pre-countdown spawn.",
+      "check_ids": [
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-02",
+      "obligation_id": "WAVE-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Show current wave and remaining enemies.",
+      "check_ids": [
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-02",
+      "obligation_id": "WAVE-02.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "For N enemies over T simulation seconds, emission k occurs at k times T/N, for k from 1 to N.",
+      "check_ids": [
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-02",
+      "obligation_id": "WAVE-02.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "The first occurs at T/N and the last at T.",
+      "check_ids": [
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-02",
+      "obligation_id": "WAVE-02.6.3",
+      "field": "Edges and lifecycle",
+      "obligation": "The single enemy of wave 24 enters at 0.1 seconds; rest has no emissions.",
+      "check_ids": [
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-02",
+      "obligation_id": "WAVE-02.6.4",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.4, 6.2.6.",
+      "check_ids": [
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-03",
+      "obligation_id": "WAVE-03.1.1",
+      "field": "Preconditions",
+      "obligation": "A scheduled wave starts",
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-03",
+      "obligation_id": "WAVE-03.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Run that wave",
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-03",
+      "obligation_id": "WAVE-03.3.1",
+      "field": "Required result",
+      "obligation": "Use all 25 wave compositions, enemy tiers, spawn durations and enabled sides in Section 6.2.3.",
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-03",
+      "obligation_id": "WAVE-03.3.2",
+      "field": "Required result",
+      "obligation": "North, South, West and East refer to the corresponding screen edges.",
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-03",
+      "obligation_id": "WAVE-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No shortened substitute campaign, omitted flying species, replaced boss wave or reduced enemy counts.",
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-03",
+      "obligation_id": "WAVE-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "Enemy species and tiers visibly differ.",
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-03",
+      "obligation_id": "WAVE-03.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Wave 11 is an 8-second rest with no enemies, then counts as cleared.",
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-03",
+      "obligation_id": "WAVE-03.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Tier labels in the tables are 1-based.",
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-03",
+      "obligation_id": "WAVE-03.6.3",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.4, 6.2.6.",
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-04",
+      "obligation_id": "WAVE-04.1.1",
+      "field": "Preconditions",
+      "obligation": "A combat wave is in progress",
+      "check_ids": [
+        "wave_clear_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-04",
+      "obligation_id": "WAVE-04.2.1",
+      "field": "Player action or trigger",
+      "obligation": "The final scheduled enemy dies",
+      "check_ids": [
+        "wave_clear_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-04",
+      "obligation_id": "WAVE-04.3.1",
+      "field": "Required result",
+      "obligation": "Clear the wave only after every scheduled enemy has spawned and no living enemy remains.",
+      "check_ids": [
+        "wave_clear_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-04",
+      "obligation_id": "WAVE-04.3.2",
+      "field": "Required result",
+      "obligation": "Increment completed waves once and begin a fresh 2-second inter-wave countdown.",
+      "check_ids": [
+        "wave_clear_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-04",
+      "obligation_id": "WAVE-04.4.1",
+      "field": "Forbidden result",
+      "obligation": "No clear while enemies remain unspawned, no duplicate completed-wave increment or next-wave overlap.",
+      "check_ids": [
+        "wave_clear_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-04",
+      "obligation_id": "WAVE-04.5.1",
+      "field": "Visible feedback",
+      "obligation": "The HUD changes from combat to the next countdown.",
+      "check_ids": [
+        "wave_clear_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-04",
+      "obligation_id": "WAVE-04.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "The rest wave uses its own duration.",
+      "check_ids": [
+        "wave_clear_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-04",
+      "obligation_id": "WAVE-04.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "A defeat on the same update takes priority over wave clearance.",
+      "check_ids": [
+        "wave_clear_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-04",
+      "obligation_id": "WAVE-04.6.3",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.4, 6.2.6, 6.2.8.",
+      "check_ids": [
+        "wave_clear_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-05",
+      "obligation_id": "WAVE-05.1.1",
+      "field": "Preconditions",
+      "obligation": "Wave 25 has been cleared",
+      "check_ids": [
+        "endless_content",
+        "endless_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-05",
+      "obligation_id": "WAVE-05.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Continue survival",
+      "check_ids": [
+        "endless_content",
+        "endless_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-05",
+      "obligation_id": "WAVE-05.3.1",
+      "field": "Required result",
+      "obligation": "Continue indefinitely using wave 25's composition.",
+      "check_ids": [
+        "endless_content",
+        "endless_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-05",
+      "obligation_id": "WAVE-05.3.2",
+      "field": "Required result",
+      "obligation": "For wave w > 25, each group has floor(base_count times (1 + 0.2 times (w - 25)) + 0.5) members, all at tier 3.",
+      "check_ids": [
+        "endless_content",
+        "endless_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-05",
+      "obligation_id": "WAVE-05.3.3",
+      "field": "Required result",
+      "obligation": "Preserve its spawn duration and four-side attacks.",
+      "check_ids": [
+        "endless_content",
+        "endless_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-05",
+      "obligation_id": "WAVE-05.4.1",
+      "field": "Forbidden result",
+      "obligation": "No victory screen or automatic reset after the fixed schedule.",
+      "check_ids": [
+        "endless_content",
+        "endless_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-05",
+      "obligation_id": "WAVE-05.5.1",
+      "field": "Visible feedback",
+      "obligation": "Wave count and survival progress keep increasing.",
+      "check_ids": [
+        "endless_content",
+        "endless_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-05",
+      "obligation_id": "WAVE-05.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Calculate remaining count from the actual integer group counts; no fractional or negative remaining enemies.",
+      "check_ids": [
+        "endless_content",
+        "endless_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "WAVE-05",
+      "obligation_id": "WAVE-05.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.4, 6.2.6.",
+      "check_ids": [
+        "endless_content",
+        "endless_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RANDOM-01",
+      "obligation_id": "RANDOM-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Fresh launch with the same configured seed",
+      "check_ids": [
+        "seed_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RANDOM-01",
+      "obligation_id": "RANDOM-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Repeat the same timed player inputs",
+      "check_ids": [
+        "seed_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RANDOM-01",
+      "obligation_id": "RANDOM-01.3.1",
+      "field": "Required result",
+      "obligation": "Generate the same wave group ordering and spawn locations.",
+      "check_ids": [
+        "seed_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RANDOM-01",
+      "obligation_id": "RANDOM-01.3.2",
+      "field": "Required result",
+      "obligation": "Default seed is 50; another nonnegative 32-bit seed may alter ordering/locations but not counts, stats, prices or the board.",
+      "check_ids": [
+        "seed_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RANDOM-01",
+      "obligation_id": "RANDOM-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No deterministic seed that changes the rules or disables ordinary play.",
+      "check_ids": [
+        "seed_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RANDOM-01",
+      "obligation_id": "RANDOM-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "All spawned enemies remain legible and enter via enabled edges.",
+      "check_ids": [
+        "seed_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RANDOM-01",
+      "obligation_id": "RANDOM-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "No exact random-number algorithm or exact coordinate sequence is required across different implementations.",
+      "check_ids": [
+        "seed_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RANDOM-01",
+      "obligation_id": "RANDOM-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.6.",
+      "check_ids": [
+        "seed_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Slime, Skeleton or Orc spawned",
+      "check_ids": [
+        "enemy_content",
+        "ground_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Simulation advances",
+      "check_ids": [
+        "enemy_content",
+        "ground_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.3.1",
+      "field": "Required result",
+      "obligation": "Ground enemies travel toward the crystal; if a living structure obstructs their advance, stop and attack it until it is removed, then resume.",
+      "check_ids": [
+        "enemy_content",
+        "ground_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.3.2",
+      "field": "Required result",
+      "obligation": "Use the species/tier stats in Section 6.2.2.",
+      "check_ids": [
+        "enemy_content",
+        "ground_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No movement through living walls/defenses, attacking removed targets or off-map stationary mobs that prevent clearance.",
+      "check_ids": [
+        "enemy_content",
+        "ground_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Ground walk/run, attack and death animations communicate their state.",
+      "check_ids": [
+        "enemy_content",
+        "ground_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Contact with the crystal causes attacks rather than instant deletion or single-use damage.",
+      "check_ids": [
+        "enemy_content",
+        "ground_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.5.",
+      "check_ids": [
+        "enemy_content",
+        "ground_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Bat or Dragon spawned",
+      "check_ids": [
+        "enemy_content",
+        "flight_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Simulation advances",
+      "check_ids": [
+        "enemy_content",
+        "flight_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.3.1",
+      "field": "Required result",
+      "obligation": "Fly visibly above the ground toward the crystal, ignoring mines, walls and towers as movement blockers.",
+      "check_ids": [
+        "enemy_content",
+        "flight_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.3.2",
+      "field": "Required result",
+      "obligation": "Attack the crystal when in contact.",
+      "check_ids": [
+        "enemy_content",
+        "flight_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.3.3",
+      "field": "Required result",
+      "obligation": "Use Section 6.2.2 stats.",
+      "check_ids": [
+        "enemy_content",
+        "flight_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No landing merely to bypass targeting rules; a cannon cannot damage either flying species.",
+      "check_ids": [
+        "enemy_content",
+        "flight_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Flying silhouettes, wing motion and height distinguish them from ground enemies.",
+      "check_ids": [
+        "enemy_content",
+        "flight_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Their movement and attacks stop during pause/defeat; dead flyers cannot attack.",
+      "check_ids": [
+        "enemy_content",
+        "flight_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.5.",
+      "check_ids": [
+        "enemy_content",
+        "flight_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-03",
+      "obligation_id": "ENEMY-03.1.1",
+      "field": "Preconditions",
+      "obligation": "A living enemy is in contact with its target",
+      "check_ids": [
+        "melee_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-03",
+      "obligation_id": "ENEMY-03.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Reach an attack interval",
+      "check_ids": [
+        "melee_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-03",
+      "obligation_id": "ENEMY-03.3.1",
+      "field": "Required result",
+      "obligation": "Apply its damage immediately on first contact, then no more than once per 1.0 simulation second while contact remains.",
+      "check_ids": [
+        "melee_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-03",
+      "obligation_id": "ENEMY-03.3.2",
+      "field": "Required result",
+      "obligation": "Switching targets or briefly leaving contact cannot bypass this per-enemy interval.",
+      "check_ids": [
+        "melee_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-03",
+      "obligation_id": "ENEMY-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No frame-rate-scaled repeated hits, damage before contact, or attack by a dead enemy.",
+      "check_ids": [
+        "melee_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-03",
+      "obligation_id": "ENEMY-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "Animate the attack and update the affected health bar.",
+      "check_ids": [
+        "melee_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-03",
+      "obligation_id": "ENEMY-03.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Switching targets does not multiply the attack rate; targets reaching zero resolve their removal.",
+      "check_ids": [
+        "melee_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-03",
+      "obligation_id": "ENEMY-03.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.5, 6.2.6, 6.2.8.",
+      "check_ids": [
+        "melee_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-04",
+      "obligation_id": "ENEMY-04.1.1",
+      "field": "Preconditions",
+      "obligation": "An enemy reaches zero health",
+      "check_ids": [
+        "death_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-04",
+      "obligation_id": "ENEMY-04.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Resolve death",
+      "check_ids": [
+        "death_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-04",
+      "obligation_id": "ENEMY-04.3.1",
+      "field": "Required result",
+      "obligation": "Award its tier's bounty once unless defeat has priority at that same simulation time.",
+      "check_ids": [
+        "death_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-04",
+      "obligation_id": "ENEMY-04.3.2",
+      "field": "Required result",
+      "obligation": "Decrement the living/remaining count once, stop its attack and targetability immediately, then remove the corpse after its visible death animation.",
+      "check_ids": [
+        "death_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-04",
+      "obligation_id": "ENEMY-04.4.1",
+      "field": "Forbidden result",
+      "obligation": "No repeated bounty from splash, multiple projectiles or animation completion.",
+      "check_ids": [
+        "death_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-04",
+      "obligation_id": "ENEMY-04.5.1",
+      "field": "Visible feedback",
+      "obligation": "Show death motion and gold-colored +bounty text.",
+      "check_ids": [
+        "death_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-04",
+      "obligation_id": "ENEMY-04.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "A corpse may finish visually but cannot delay a wave that has no living enemies.",
+      "check_ids": [
+        "death_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-04",
+      "obligation_id": "ENEMY-04.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.8.",
+      "check_ids": [
+        "death_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ARCHER-01",
+      "obligation_id": "ARCHER-01.1.1",
+      "field": "Preconditions",
+      "obligation": "An intact archer tower has an eligible enemy within 1000 ground-plane distance units (5 cells)",
+      "check_ids": [
+        "weapons_content",
+        "archer_targeting"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ARCHER-01",
+      "obligation_id": "ARCHER-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Its weapon is ready",
+      "check_ids": [
+        "weapons_content",
+        "archer_targeting"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ARCHER-01",
+      "obligation_id": "ARCHER-01.3.1",
+      "field": "Required result",
+      "obligation": "Automatically aim at the nearest living ground or flying enemy and release a visible arrow.",
+      "check_ids": [
+        "weapons_content",
+        "archer_targeting"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ARCHER-01",
+      "obligation_id": "ARCHER-01.3.2",
+      "field": "Required result",
+      "obligation": "Use the tier damage and cooldown table.",
+      "check_ids": [
+        "weapons_content",
+        "archer_targeting"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ARCHER-01",
+      "obligation_id": "ARCHER-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No shot at dead, nonexistent or out-of-range targets; no firing before construction completes.",
+      "check_ids": [
+        "weapons_content",
+        "archer_targeting"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ARCHER-01",
+      "obligation_id": "ARCHER-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The ballista turns toward its target and shows a firing/recoil motion.",
+      "check_ids": [
+        "weapons_content",
+        "archer_targeting"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ARCHER-01",
+      "obligation_id": "ARCHER-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "A tied nearest enemy may be selected by any stable rule; idle readiness must not accumulate a burst.",
+      "check_ids": [
+        "weapons_content",
+        "archer_targeting"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ARCHER-01",
+      "obligation_id": "ARCHER-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.5, 6.2.6.",
+      "check_ids": [
+        "weapons_content",
+        "archer_targeting"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ARCHER-02",
+      "obligation_id": "ARCHER-02.1.1",
+      "field": "Preconditions",
+      "obligation": "An arrow has been released",
+      "check_ids": [
+        "weapons_content",
+        "arrow_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ARCHER-02",
+      "obligation_id": "ARCHER-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "The projectile travels and collides",
+      "check_ids": [
+        "weapons_content",
+        "arrow_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ARCHER-02",
+      "obligation_id": "ARCHER-02.3.1",
+      "field": "Required result",
+      "obligation": "Use visibly finite travel at 3000 distance units per simulation second.",
+      "check_ids": [
+        "weapons_content",
+        "arrow_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ARCHER-02",
+      "obligation_id": "ARCHER-02.3.2",
+      "field": "Required result",
+      "obligation": "Apply the tier's damage once on contact with one eligible living enemy and consume the projectile.",
+      "check_ids": [
+        "weapons_content",
+        "arrow_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ARCHER-02",
+      "obligation_id": "ARCHER-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No damage at release, through unrelated geometry, or more than one single-target hit.",
+      "check_ids": [
+        "weapons_content",
+        "arrow_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ARCHER-02",
+      "obligation_id": "ARCHER-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "The arrow path and impact can be seen; the health change follows impact.",
+      "check_ids": [
+        "weapons_content",
+        "arrow_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ARCHER-02",
+      "obligation_id": "ARCHER-02.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Leading a moving target is allowed; a miss expires safely within 4 simulation seconds.",
+      "check_ids": [
+        "weapons_content",
+        "arrow_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ARCHER-02",
+      "obligation_id": "ARCHER-02.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.5, 6.2.7.",
+      "check_ids": [
+        "weapons_content",
+        "arrow_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CANNON-01",
+      "obligation_id": "CANNON-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A fully constructed intact cannon tower has a living ground enemy within 1000 ground-plane units",
+      "check_ids": [
+        "weapons_content",
+        "cannon_targeting"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CANNON-01",
+      "obligation_id": "CANNON-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Its weapon is ready",
+      "check_ids": [
+        "weapons_content",
+        "cannon_targeting"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CANNON-01",
+      "obligation_id": "CANNON-01.3.1",
+      "field": "Required result",
+      "obligation": "Aim at the nearest eligible ground target and release a visible cannonball using the tier damage/cooldown table.",
+      "check_ids": [
+        "weapons_content",
+        "cannon_targeting"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CANNON-01",
+      "obligation_id": "CANNON-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No targeting a Bat or Dragon, off-range enemy or corpse.",
+      "check_ids": [
+        "weapons_content",
+        "cannon_targeting"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CANNON-01",
+      "obligation_id": "CANNON-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The cannon barrel aims and recoils; its projectile is visually distinct from an arrow.",
+      "check_ids": [
+        "weapons_content",
+        "cannon_targeting"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CANNON-01",
+      "obligation_id": "CANNON-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "No burst from accumulated idle cooldown.",
+      "check_ids": [
+        "weapons_content",
+        "cannon_targeting"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CANNON-01",
+      "obligation_id": "CANNON-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.5, 6.2.6.",
+      "check_ids": [
+        "weapons_content",
+        "cannon_targeting"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CANNON-02",
+      "obligation_id": "CANNON-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A cannonball is in flight",
+      "check_ids": [
+        "weapons_content",
+        "splash_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CANNON-02",
+      "obligation_id": "CANNON-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "It first hits ground, a blocking structure or an eligible ground target",
+      "check_ids": [
+        "weapons_content",
+        "splash_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CANNON-02",
+      "obligation_id": "CANNON-02.3.1",
+      "field": "Required result",
+      "obligation": "Explode once at the impact point.",
+      "check_ids": [
+        "weapons_content",
+        "splash_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CANNON-02",
+      "obligation_id": "CANNON-02.3.2",
+      "field": "Required result",
+      "obligation": "Damage each living ground enemy within the tier radius once; leave enemies outside the radius and all flying enemies unchanged.",
+      "check_ids": [
+        "weapons_content",
+        "splash_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CANNON-02",
+      "obligation_id": "CANNON-02.3.3",
+      "field": "Required result",
+      "obligation": "Use finite travel at 3000 units per simulation second.",
+      "check_ids": [
+        "weapons_content",
+        "splash_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CANNON-02",
+      "obligation_id": "CANNON-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No repeated explosion from one impact, pre-impact damage or doubled direct-hit damage.",
+      "check_ids": [
+        "weapons_content",
+        "splash_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CANNON-02",
+      "obligation_id": "CANNON-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Show a colored burst, expanding shock ring/smoke and an explosion cue.",
+      "check_ids": [
+        "weapons_content",
+        "splash_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CANNON-02",
+      "obligation_id": "CANNON-02.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "The radius is measured in the ground plane; an enemy exactly on its boundary is included.",
+      "check_ids": [
+        "weapons_content",
+        "splash_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CANNON-02",
+      "obligation_id": "CANNON-02.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Misses expire within 4 seconds.",
+      "check_ids": [
+        "weapons_content",
+        "splash_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CANNON-02",
+      "obligation_id": "CANNON-02.6.3",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.5, 6.2.7.",
+      "check_ids": [
+        "weapons_content",
+        "splash_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Any concurrent damage, sale, construction or wave event",
+      "check_ids": [
+        "purchase_rules",
+        "projectile_lifecycle",
+        "cooldown_upgrade",
+        "restart_inflight"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Resolve the event",
+      "check_ids": [
+        "purchase_rules",
+        "projectile_lifecycle",
+        "cooldown_upgrade",
+        "restart_inflight"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.3.1",
+      "field": "Required result",
+      "obligation": "Keep ownership, wallet, health, enemy counts and targets consistent.",
+      "check_ids": [
+        "purchase_rules",
+        "projectile_lifecycle",
+        "cooldown_upgrade",
+        "restart_inflight"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.3.2",
+      "field": "Required result",
+      "obligation": "Projectiles already released continue after their tower is sold or destroyed, retaining release-time damage and splash radius.",
+      "check_ids": [
+        "purchase_rules",
+        "projectile_lifecycle",
+        "cooldown_upgrade",
+        "restart_inflight"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No double death award, damage to a reused identity, negative enemy counts or lost enemies from an invalid target.",
+      "check_ids": [
+        "purchase_rules",
+        "projectile_lifecycle",
+        "cooldown_upgrade",
+        "restart_inflight"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Visible objects and HUD remain consistent.",
+      "check_ids": [
+        "purchase_rules",
+        "projectile_lifecycle",
+        "cooldown_upgrade",
+        "restart_inflight"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Upgrades preserve any remaining current cooldown.",
+      "check_ids": [
+        "purchase_rules",
+        "projectile_lifecycle",
+        "cooldown_upgrade",
+        "restart_inflight"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "The next shot uses the new tier and starts that tier's cooldown.",
+      "check_ids": [
+        "purchase_rules",
+        "projectile_lifecycle",
+        "cooldown_upgrade",
+        "restart_inflight"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.6.3",
+      "field": "Edges and lifecycle",
+      "obligation": "Times mean simulation time unless labeled real.",
+      "check_ids": [
+        "purchase_rules",
+        "projectile_lifecycle",
+        "cooldown_upgrade",
+        "restart_inflight"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.6.4",
+      "field": "Edges and lifecycle",
+      "obligation": "Isolated event timing tolerance is 0.15 seconds without cumulative rate drift; movement/range tolerance is 2% of specified distance.",
+      "check_ids": [
+        "purchase_rules",
+        "projectile_lifecycle",
+        "cooldown_upgrade",
+        "restart_inflight"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.6.5",
+      "field": "Edges and lifecycle",
+      "obligation": "Currency, counts, damage and tiers are exact.",
+      "check_ids": [
+        "purchase_rules",
+        "projectile_lifecycle",
+        "cooldown_upgrade",
+        "restart_inflight"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.6.6",
+      "field": "Edges and lifecycle",
+      "obligation": "The tolerance does not permit damage before visible impact or skipping phase boundaries.",
+      "check_ids": [
+        "purchase_rules",
+        "projectile_lifecycle",
+        "cooldown_upgrade",
+        "restart_inflight"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.6.7",
+      "field": "Edges and lifecycle",
+      "obligation": "Real-time UI limits keep their stated bounds.",
+      "check_ids": [
+        "purchase_rules",
+        "projectile_lifecycle",
+        "cooldown_upgrade",
+        "restart_inflight"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.6.8",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.6, 6.2.7, 6.2.8.",
+      "check_ids": [
+        "purchase_rules",
+        "projectile_lifecycle",
+        "cooldown_upgrade",
+        "restart_inflight"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPEED-01",
+      "obligation_id": "SPEED-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Preparation, countdown, combat or rest",
+      "check_ids": [
+        "pause_speed_content",
+        "speed_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPEED-01",
+      "obligation_id": "SPEED-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Hold F, then release it",
+      "check_ids": [
+        "pause_speed_content",
+        "speed_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPEED-01",
+      "obligation_id": "SPEED-01.3.1",
+      "field": "Required result",
+      "obligation": "While F is held, advance game simulation at 3x; return to 1x on release.",
+      "check_ids": [
+        "pause_speed_content",
+        "speed_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPEED-01",
+      "obligation_id": "SPEED-01.3.2",
+      "field": "Required result",
+      "obligation": "Movement, wave timers, weapons, regeneration, income and effects share the multiplier.",
+      "check_ids": [
+        "pause_speed_content",
+        "speed_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPEED-01",
+      "obligation_id": "SPEED-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No permanent speed change from key repeat, separate accelerated income, or acceleration of UI input.",
+      "check_ids": [
+        "pause_speed_content",
+        "speed_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPEED-01",
+      "obligation_id": "SPEED-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Display the active speed clearly.",
+      "check_ids": [
+        "pause_speed_content",
+        "speed_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPEED-01",
+      "obligation_id": "SPEED-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Pause, defeat, focus loss and Restart release the fast-forward state.",
+      "check_ids": [
+        "pause_speed_content",
+        "speed_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SPEED-01",
+      "obligation_id": "SPEED-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.4.",
+      "check_ids": [
+        "pause_speed_content",
+        "speed_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-01",
+      "obligation_id": "PAUSE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A living active round",
+      "check_ids": [
+        "pause_speed_content",
+        "pause_rules",
+        "ui_lifecycle"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-01",
+      "obligation_id": "PAUSE-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Press P or use the Pause/Resume control",
+      "check_ids": [
+        "pause_speed_content",
+        "pause_rules",
+        "ui_lifecycle"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-01",
+      "obligation_id": "PAUSE-01.3.1",
+      "field": "Required result",
+      "obligation": "Toggle a pause that freezes simulation and preserves all current progress.",
+      "check_ids": [
+        "pause_speed_content",
+        "pause_rules",
+        "ui_lifecycle"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-01",
+      "obligation_id": "PAUSE-01.3.2",
+      "field": "Required result",
+      "obligation": "Resume continues the same state.",
+      "check_ids": [
+        "pause_speed_content",
+        "pause_rules",
+        "ui_lifecycle"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-01",
+      "obligation_id": "PAUSE-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No income, movement, spawning, cooldown, damage or regeneration while paused; no build, upgrade or sale.",
+      "check_ids": [
+        "pause_speed_content",
+        "pause_rules",
+        "ui_lifecycle"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-01",
+      "obligation_id": "PAUSE-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "A readable pause overlay and Resume/Restart controls remain operable.",
+      "check_ids": [
+        "pause_speed_content",
+        "pause_rules",
+        "ui_lifecycle"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-01",
+      "obligation_id": "PAUSE-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Restart and exiting remain possible while paused; holding P does not repeatedly toggle.",
+      "check_ids": [
+        "pause_speed_content",
+        "pause_rules",
+        "ui_lifecycle"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-01",
+      "obligation_id": "PAUSE-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.4, 6.2.8.",
+      "check_ids": [
+        "pause_speed_content",
+        "pause_rules",
+        "ui_lifecycle"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFEAT-01",
+      "obligation_id": "DEFEAT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The crystal reaches zero health",
+      "check_ids": [
+        "defeat_content",
+        "defeat_rules",
+        "flow",
+        "ui_lifecycle"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFEAT-01",
+      "obligation_id": "DEFEAT-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Resolve lethal damage",
+      "check_ids": [
+        "defeat_content",
+        "defeat_rules",
+        "flow",
+        "ui_lifecycle"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFEAT-01",
+      "obligation_id": "DEFEAT-01.3.1",
+      "field": "Required result",
+      "obligation": "Enter defeat once, clamp crystal health to zero and stop gameplay simulation.",
+      "check_ids": [
+        "defeat_content",
+        "defeat_rules",
+        "flow",
+        "ui_lifecycle"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFEAT-01",
+      "obligation_id": "DEFEAT-01.3.2",
+      "field": "Required result",
+      "obligation": "Display Game Over, completed waves and the wave reached.",
+      "check_ids": [
+        "defeat_content",
+        "defeat_rules",
+        "flow",
+        "ui_lifecycle"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFEAT-01",
+      "obligation_id": "DEFEAT-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No false victory, negative crystal health or later wave start.",
+      "check_ids": [
+        "defeat_content",
+        "defeat_rules",
+        "flow",
+        "ui_lifecycle"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFEAT-01",
+      "obligation_id": "DEFEAT-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Show a prominent result panel over the field and crystal destruction feedback.",
+      "check_ids": [
+        "defeat_content",
+        "defeat_rules",
+        "flow",
+        "ui_lifecycle"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFEAT-01",
+      "obligation_id": "DEFEAT-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Defeat has priority over simultaneous final-enemy death.",
+      "check_ids": [
+        "defeat_content",
+        "defeat_rules",
+        "flow",
+        "ui_lifecycle"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFEAT-01",
+      "obligation_id": "DEFEAT-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.4, 6.2.8.",
+      "check_ids": [
+        "defeat_content",
+        "defeat_rules",
+        "flow",
+        "ui_lifecycle"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFEAT-02",
+      "obligation_id": "DEFEAT-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Game Over visible",
+      "check_ids": [
+        "defeat_content",
+        "defeat_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFEAT-02",
+      "obligation_id": "DEFEAT-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Wait or attempt gameplay inputs",
+      "check_ids": [
+        "defeat_content",
+        "defeat_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFEAT-02",
+      "obligation_id": "DEFEAT-02.3.1",
+      "field": "Required result",
+      "obligation": "Keep wallet, wave progress, surviving gameplay entities and timers fixed after terminal damage/death resolution; disable building, upgrade, sale, attack and speed controls.",
+      "check_ids": [
+        "defeat_content",
+        "defeat_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFEAT-02",
+      "obligation_id": "DEFEAT-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No in-flight projectile, delayed gameplay event or mine payout changes the result.",
+      "check_ids": [
+        "defeat_content",
+        "defeat_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFEAT-02",
+      "obligation_id": "DEFEAT-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Restart and Exit remain visible and usable.",
+      "check_ids": [
+        "defeat_content",
+        "defeat_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFEAT-02",
+      "obligation_id": "DEFEAT-02.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Repeated clicks do not create extra panels or reset progress.",
+      "check_ids": [
+        "defeat_content",
+        "defeat_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DEFEAT-02",
+      "obligation_id": "DEFEAT-02.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.4, 6.2.8.",
+      "check_ids": [
+        "defeat_content",
+        "defeat_rules"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-01",
+      "obligation_id": "RESTART-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Preparation, countdown, combat, rest, pause or defeat",
+      "check_ids": [
+        "restart_preparing",
+        "restart_countdown",
+        "restart_combat",
+        "restart_rest",
+        "restart_paused",
+        "restart_defeated",
+        "restart_inflight",
+        "repeat_round",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-01",
+      "obligation_id": "RESTART-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Press R or click Restart",
+      "check_ids": [
+        "restart_preparing",
+        "restart_countdown",
+        "restart_combat",
+        "restart_rest",
+        "restart_paused",
+        "restart_defeated",
+        "restart_inflight",
+        "repeat_round",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-01",
+      "obligation_id": "RESTART-01.3.1",
+      "field": "Required result",
+      "obligation": "Start a fresh round matching START-01 without restarting the process.",
+      "check_ids": [
+        "restart_preparing",
+        "restart_countdown",
+        "restart_combat",
+        "restart_rest",
+        "restart_paused",
+        "restart_defeated",
+        "restart_inflight",
+        "repeat_round",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-01",
+      "obligation_id": "RESTART-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No old buildings, enemies, corpses, projectiles, feedback text, selection, timer or queued input affecting the new round.",
+      "check_ids": [
+        "restart_preparing",
+        "restart_countdown",
+        "restart_combat",
+        "restart_rest",
+        "restart_paused",
+        "restart_defeated",
+        "restart_inflight",
+        "repeat_round",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-01",
+      "obligation_id": "RESTART-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The fresh board and mine instruction reappear within 1 real second.",
+      "check_ids": [
+        "restart_preparing",
+        "restart_countdown",
+        "restart_combat",
+        "restart_rest",
+        "restart_paused",
+        "restart_defeated",
+        "restart_inflight",
+        "repeat_round",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-01",
+      "obligation_id": "RESTART-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Repeated Restart, including during a projectile flight or payout boundary, still creates exactly one clean round.",
+      "check_ids": [
+        "restart_preparing",
+        "restart_countdown",
+        "restart_combat",
+        "restart_rest",
+        "restart_paused",
+        "restart_defeated",
+        "restart_inflight",
+        "repeat_round",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-01",
+      "obligation_id": "RESTART-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.4, 6.2.8.",
+      "check_ids": [
+        "restart_preparing",
+        "restart_countdown",
+        "restart_combat",
+        "restart_rest",
+        "restart_paused",
+        "restart_defeated",
+        "restart_inflight",
+        "repeat_round",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-02",
+      "obligation_id": "RESTART-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Any round has changed progress",
+      "check_ids": [
+        "reopen",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-02",
+      "obligation_id": "RESTART-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Close the process and launch again",
+      "check_ids": [
+        "reopen",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-02",
+      "obligation_id": "RESTART-02.3.1",
+      "field": "Required result",
+      "obligation": "Start from START-01 with no persisted run progress.",
+      "check_ids": [
+        "reopen",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-02",
+      "obligation_id": "RESTART-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No recovered coins, purchased towers, lost crystal health, wave number or fast-forward state.",
+      "check_ids": [
+        "reopen",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-02",
+      "obligation_id": "RESTART-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "The opening screen matches a first launch.",
+      "check_ids": [
+        "reopen",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-02",
+      "obligation_id": "RESTART-02.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Saving preferences is optional; it must not change required game progress.",
+      "check_ids": [
+        "reopen",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "RESTART-02",
+      "obligation_id": "RESTART-02.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.8.",
+      "check_ids": [
+        "reopen",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Any playable state",
+      "check_ids": [
+        "ui_build",
+        "ui_context",
+        "ui_lifecycle",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "View the HUD",
+      "check_ids": [
+        "ui_build",
+        "ui_context",
+        "ui_lifecycle",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.3.1",
+      "field": "Required result",
+      "obligation": "Show coins at top left, build choices on the left, current wave/countdown and survival progress near the top, and accessible Pause/Restart/Exit controls.",
+      "check_ids": [
+        "ui_build",
+        "ui_context",
+        "ui_lifecycle",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.3.2",
+      "field": "Required result",
+      "obligation": "All visible counters reflect actual state within 0.2 real seconds.",
+      "check_ids": [
+        "ui_build",
+        "ui_context",
+        "ui_lifecycle",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.3.3",
+      "field": "Required result",
+      "obligation": "Use the supplied Baloo font for HUD text, Icon-Coin for currency, and GoldMine, ArcherTower, CannonTower and Wall textures for their build choices.",
+      "check_ids": [
+        "ui_build",
+        "ui_context",
+        "ui_lifecycle",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No obscured text, placeholder counters, replacement font/build icons or click-through from UI into world placement.",
+      "check_ids": [
+        "ui_build",
+        "ui_context",
+        "ui_lifecycle",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Use large rounded light text with a dark outline/shadow, dark translucent panels, gold coin imagery and distinct selected/disabled states.",
+      "check_ids": [
+        "ui_build",
+        "ui_context",
+        "ui_lifecycle",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Health and detail cards remain readable at both supported resolutions; font size, icon framing, tint and panel layout may be adjusted.",
+      "check_ids": [
+        "ui_build",
+        "ui_context",
+        "ui_lifecycle",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-01",
+      "obligation_id": "UI-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.4, 6.2.9.",
+      "check_ids": [
+        "ui_build",
+        "ui_context",
+        "ui_lifecycle",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-02",
+      "obligation_id": "UI-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A building or enemy has changed health",
+      "check_ids": [
+        "ui_health"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-02",
+      "obligation_id": "UI-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "View the field or selected object",
+      "check_ids": [
+        "ui_health"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-02",
+      "obligation_id": "UI-02.3.1",
+      "field": "Required result",
+      "obligation": "Render proportional world-space health bars for damaged enemies/structures and the crystal; keep values consistent with their current and maximum health.",
+      "check_ids": [
+        "ui_health"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-02",
+      "obligation_id": "UI-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No health bars attached to removed/reused objects or health bars presenting one object's health as another's.",
+      "check_ids": [
+        "ui_health"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-02",
+      "obligation_id": "UI-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "A filled/empty contrast makes loss and regeneration visible.",
+      "check_ids": [
+        "ui_health"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-02",
+      "obligation_id": "UI-02.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Full-health bars may be hidden until hover/selection, except the living crystal's health bar stays visible.",
+      "check_ids": [
+        "ui_health"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-02",
+      "obligation_id": "UI-02.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.9.",
+      "check_ids": [
+        "ui_health"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-03",
+      "obligation_id": "UI-03.1.1",
+      "field": "Preconditions",
+      "obligation": "A legal or illegal player action occurs",
+      "check_ids": [
+        "ui_feedback"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-03",
+      "obligation_id": "UI-03.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Observe its immediate response",
+      "check_ids": [
+        "ui_feedback"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-03",
+      "obligation_id": "UI-03.3.1",
+      "field": "Required result",
+      "obligation": "Use a distinct positive cue for build/upgrade/sale and a readable reason for invalid placement, insufficient money or unavailable upgrade.",
+      "check_ids": [
+        "ui_feedback"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-03",
+      "obligation_id": "UI-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No invisible rejection, stuck tooltip or feedback obscuring subsequent inputs.",
+      "check_ids": [
+        "ui_feedback"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-03",
+      "obligation_id": "UI-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "Temporary text/effects clear; hover never spends coins.",
+      "check_ids": [
+        "ui_feedback"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-03",
+      "obligation_id": "UI-03.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Action feedback arrives within 0.2 real seconds; a UI click never also acts on the board beneath it.",
+      "check_ids": [
+        "ui_feedback"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "UI-03",
+      "obligation_id": "UI-03.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.9.",
+      "check_ids": [
+        "ui_feedback"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The field is assembled",
+      "check_ids": [
+        "opening_content",
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "tiers_archer",
+        "tiers_cannon",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Observe the scene",
+      "check_ids": [
+        "opening_content",
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "tiers_archer",
+        "tiers_cannon",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.3.1",
+      "field": "Required result",
+      "obligation": "Use the supplied crystal/pedestal, mine/deposit, archer bodies/ballistae, cannon bodies/barrels and wall models as the primary visible structures.",
+      "check_ids": [
+        "opening_content",
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "tiers_archer",
+        "tiers_cannon",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.3.2",
+      "field": "Required result",
+      "obligation": "Preserve all three tower tiers and their distinct silhouettes, materials and proportions.",
+      "check_ids": [
+        "opening_content",
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "tiers_archer",
+        "tiers_cannon",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No replacing these required models with cubes, sprites, text or identical tier skins.",
+      "check_ids": [
+        "opening_content",
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "tiers_archer",
+        "tiers_cannon",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The floating/spinning pink-red gem remains the focal point; structures sit on the ground and cast coherent shadows.",
+      "check_ids": [
+        "opening_content",
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "tiers_archer",
+        "tiers_cannon",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Material tuning, instancing, reorganization and equivalent visual effects are allowed; these are presentation assets, not prebuilt gameplay.",
+      "check_ids": [
+        "opening_content",
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "tiers_archer",
+        "tiers_cannon",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.9.",
+      "check_ids": [
+        "opening_content",
+        "content_mine",
+        "content_archer",
+        "content_cannon",
+        "content_wall",
+        "tiers_archer",
+        "tiers_cannon",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Enemies are present",
+      "check_ids": [
+        "enemy_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Run their movement, attack and death states",
+      "check_ids": [
+        "enemy_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.3.1",
+      "field": "Required result",
+      "obligation": "Use the supplied Slime, Skeleton, Orc, Bat and Dragon meshes, skeletons and suitable animation clips.",
+      "check_ids": [
+        "enemy_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.3.2",
+      "field": "Required result",
+      "obligation": "Preserve green slime, bone skeleton, bulky orc and winged bat/dragon identity; tiers use the supplied material/scale variation from Section 6.2.2.",
+      "check_ids": [
+        "enemy_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No static sliding enemies, T-poses, mismatched skeletons or missing materials.",
+      "check_ids": [
+        "enemy_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Locomotion, attack and death remain visually legible in a crowded wave.",
+      "check_ids": [
+        "enemy_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Equivalent blends and animation timing are allowed if they preserve the specified rules.",
+      "check_ids": [
+        "enemy_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.9.",
+      "check_ids": [
+        "enemy_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.1.1",
+      "field": "Preconditions",
+      "obligation": "A round is rendered",
+      "check_ids": [
+        "opening_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.2.1",
+      "field": "Player action or trigger",
+      "obligation": "View opening, placement and combat",
+      "check_ids": [
+        "opening_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.3.1",
+      "field": "Required result",
+      "obligation": "Assemble the supplied ground/grass textures, trees, bushes, flowers, stones and fence assets into the scene described by SCENE-01.",
+      "check_ids": [
+        "opening_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.3.2",
+      "field": "Required result",
+      "obligation": "Retain a generous green border around the central dirt field and layered vegetation.",
+      "check_ids": [
+        "opening_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No raw-asset gallery, featureless plane, giant background props blocking play or missing environment.",
+      "check_ids": [
+        "opening_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "Place tall conifers along the outer edges, with lower shrubs, flower patches and stones between them and the clearing.",
+      "check_ids": [
+        "opening_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.5.2",
+      "field": "Visible feedback",
+      "obligation": "Keep the central build cells unobstructed and the left dirt approach readable; vegetation must provide foreground and background depth.",
+      "check_ids": [
+        "opening_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Exact decorative instance counts/coordinates are free.",
+      "check_ids": [
+        "opening_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Assemble the environment from pieces; no finished map is supplied.",
+      "check_ids": [
+        "opening_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.6.3",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.9.",
+      "check_ids": [
+        "opening_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.1.1",
+      "field": "Preconditions",
+      "obligation": "Construction, firing, impact, income or upgrade occurs",
+      "check_ids": [
+        "weapons_content",
+        "feedback_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Observe its presentation",
+      "check_ids": [
+        "weapons_content",
+        "feedback_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.3.1",
+      "field": "Required result",
+      "obligation": "Provide construction rise/pop, weapon aim/recoil, arrows/cannonballs, impact flashes, cannon shock/smoke, upgrade glow, floating gold text and a pulsing placement/range cue.",
+      "check_ids": [
+        "weapons_content",
+        "feedback_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.4.1",
+      "field": "Forbidden result",
+      "obligation": "No full-screen flash replacing spatial effects, permanent particles or decorative effects used as false hit confirmation.",
+      "check_ids": [
+        "weapons_content",
+        "feedback_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.5.1",
+      "field": "Visible feedback",
+      "obligation": "Effects occur at the correct world object and remain readable above the field.",
+      "check_ids": [
+        "weapons_content",
+        "feedback_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Create these effects using the provided textures/materials or equivalent legal effects; game logic remains independent of their implementation.",
+      "check_ids": [
+        "weapons_content",
+        "feedback_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.8, 6.2.9.",
+      "check_ids": [
+        "weapons_content",
+        "feedback_content",
+        "D6-opening",
+        "D6-placement",
+        "D6-combat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-01",
+      "obligation_id": "AUDIO-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Normal play with audio enabled",
+      "check_ids": [
+        "feedback_content",
+        "audio_mute"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-01",
+      "obligation_id": "AUDIO-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Perform a gameplay action and use the audio toggle",
+      "check_ids": [
+        "feedback_content",
+        "audio_mute"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-01",
+      "obligation_id": "AUDIO-01.3.1",
+      "field": "Required result",
+      "obligation": "Provide background music and audible event feedback.",
+      "check_ids": [
+        "feedback_content",
+        "audio_mute"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-01",
+      "obligation_id": "AUDIO-01.3.2",
+      "field": "Required result",
+      "obligation": "Supplied music and event-cue files are available.",
+      "check_ids": [
+        "feedback_content",
+        "audio_mute"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-01",
+      "obligation_id": "AUDIO-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "Muting must not disable gameplay or its visual feedback.",
+      "check_ids": [
+        "feedback_content",
+        "audio_mute"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-01",
+      "obligation_id": "AUDIO-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The player can mute and restore audio while continuing to play.",
+      "check_ids": [
+        "feedback_content",
+        "audio_mute"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-01",
+      "obligation_id": "AUDIO-01.6.1",
+      "field": "Edges and lifecycle",
+      "obligation": "Equivalent legally clear audio is permitted; exact cue waveforms, individual event coverage and onset latency are not acceptance criteria.",
+      "check_ids": [
+        "feedback_content",
+        "audio_mute"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "AUDIO-01",
+      "obligation_id": "AUDIO-01.6.2",
+      "field": "Edges and lifecycle",
+      "obligation": "Boundaries: 6.2.9.",
+      "check_ids": [
+        "feedback_content",
+        "audio_mute"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-01",
+      "obligation_id": "QUALITY-01.1.1",
+      "field": "Requirement",
+      "obligation": "The project can start, run, exit and start again using the public instructions.",
+      "check_ids": [
+        "project",
+        "engine",
+        "build",
+        "startup",
+        "observation",
+        "reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-02",
+      "obligation_id": "QUALITY-02.1.1",
+      "field": "Requirement",
+      "obligation": "The main flow uses normal player input, without answer buttons, cheat entries or direct result shortcuts.",
+      "check_ids": [
+        "flow"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-03",
+      "obligation_id": "QUALITY-03.1.1",
+      "field": "Requirement",
+      "obligation": "Key entry points, text and controls are visible, discoverable, readable and operable.",
+      "check_ids": [
+        "ui_build",
+        "ui_lifecycle",
+        "ui_resolutions"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-04",
+      "obligation_id": "QUALITY-04.1.1",
+      "field": "Requirement",
+      "obligation": "Player actions have perceptible feedback that agrees with the real game state.",
+      "check_ids": [
+        "observation",
+        "ui_feedback",
+        "ui_health",
+        "audio_mute"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-05",
+      "obligation_id": "QUALITY-05.1.1",
+      "field": "Requirement",
+      "obligation": "No severe error blocks the main flow.",
+      "check_ids": [
+        "build",
+        "flow"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-06",
+      "obligation_id": "QUALITY-06.1.1",
+      "field": "Requirement",
+      "obligation": "Repeated runs under the same initial conditions are substantially stable.",
+      "check_ids": [
+        "seed_rules",
+        "reopen",
+        "repeat_round"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    }
+  ],
+  "qualification_tests": [
+    "tests/test_distribution.py"
+  ],
+  "qualification_test_scope": "Distribution, evidence conversion and attribution invariants only; not gameplay semantic qualification."
+}

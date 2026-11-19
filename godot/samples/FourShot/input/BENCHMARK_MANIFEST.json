@@ -1,0 +1,34 @@
+{
+  "schema_version": 2,
+  "input_revision": "g07-movement-direction-click-fire-v6-20260909",
+  "public_contract_status": "published_input_contract",
+  "benchmark_id": "godot.four_shot_five_stage_challenge.v1",
+  "engine": "Godot",
+  "engine_version": "4.7.1.stable.official.a13da4feb",
+  "project_root": "sp",
+  "entry_scene": "res://main.tscn",
+  "viewport": [
+    1280,
+    720
+  ],
+  "public_spec": "GDD-en.md",
+  "public_toolchain": "TOOLCHAIN-en.md",
+  "initial_prompt": "INITIAL_AGENT_PROMPT-en.md",
+  "tool_guide": "GODOT_BENCHMARK_TOOL_GUIDE.md",
+  "dashboard_spec": "DASHBOARD_SPEC.md",
+  "common_baseline": "COMMON_BASELINE.md",
+  "material_root": "Asserts",
+  
+"legal_root": "legal",
+  "dashboard": "sp/benchmark/dashboard.gd",
+  "dashboard_self_check": "sp/benchmark/dashboard_self_check.gd",
+  "naming_tables": "sp/benchmark/naming-tables.json",
+  "public_smoke": "sp/benchmark/public_smoke.gd",
+  "baseline": {
+    "kind": "minimal_initialization",
+    "playable": false,
+    "target_feature_present": false
+  },
+  "network_allowed": false,
+  "external_path_access_allowed": false
+}

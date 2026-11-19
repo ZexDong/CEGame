@@ -1,0 +1,5 @@
+Review each named visual requirement using the public GDD and supplied assets.
+Use actual rendered gameplay captures from the current collection. Cite image paths.
+Judge composition, object identity, UI readability, feedback and consistency separately.
+Absent evidence is inconclusive; an observed candidate defect is fail.
+Do not infer visual quality from dashboard values, source code or supplied asset counts.

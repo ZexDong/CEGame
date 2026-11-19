@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "defold-dashboard-naming-tables.schema.json",
+  "title": "Per-task Dashboard naming tables — v2-defold-20260828",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "task_id",
+    "coordinate_space",
+    "target_rect_space",
+    "seed_entry",
+    "slots",
+    "entities",
+    "targets",
+    "controls"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": 2 },
+    "task_id": { "type": "string", "minLength": 1 },
+    "coordinate_space": {
+      "type": "object",
+      "required": ["name", "dimensions", "origin", "axes", "units"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "dimensions": { "enum": [2, 3] },
+        "origin": { "type": "string", "minLength": 1 },
+        "axes": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "minItems": 2,
+          "maxItems": 3
+        },
+        "units": { "type": "string", "minLength": 1 }
+      }
+    },
+    "level_width_cells": { "type": "integer", "minimum": 1 },
+    "level_height_cells": { "type": "integer", "minimum": 1 },
+    "level_depth_cells": { "type": "integer", "minimum": 1 },
+    "target_rect_space": {
+      "type": "object",
+      "required": ["width", "height", "origin", "units"],
+      "additionalProperties": false,
+      "properties": {
+        "width": { "type": "number", "exclusiveMinimum": 0 },
+        "height": { "type": "number", "exclusiveMinimum": 0 },
+        "origin": { "const": "bottom-left" },
+        "units": { "const": "game-view pixels" }
+      }
+    },
+    "seed_entry": { "type": "string", "minLength": 1 },
+    "slots": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind", "geometry", "states"],
+        "additionalProperties": false,
+        "properties": {
+          "kind": { "type": "string", "minLength": 1 },
+          "geometry": { "enum": ["cell", "position", "rect", "none"] },
+          "states": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["kind"],
+        "additionalProperties": false,
+        "properties": { "kind": { "type": "string", "minLength": 1 } }
+      }
+    },
+    "honesty": {
+      "type": "object",
+      "required": ["phase_ocr_any"],
+      "additionalProperties": false,
+      "properties": {
+        "phase_ocr_any": {
+          "type": "object",
+          "minProperties": 1,
+          "propertyNames": {
+            "enum": ["menu", "playing", "paused", "won", "lost"]
+          },
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "controls": {
+      "type": "object",
+      "required": ["movement_template"],
+      "properties": {
+        "movement_template": { "type": "string", "minLength": 1 },
+        "keys": { "type": "object" },
+        "pointer": { "type": "string" },
+        "mouse": { "type": "string" }
+      },
+      "additionalProperties": true
+    }
+  }
+}

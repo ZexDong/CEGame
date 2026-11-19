@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "unity.brick_n_balls_challenge.v1",
+  "gdd_source": "../input/GDD.md#6-numbered-requirements-sole-acceptance-source",
+  "scope": "All task-specific GDD requirements mapped to D1-D5 evaluator leaves and retained evidence. Common engine-quality requirements are handled by the evaluator health gates.",
+  "coverage_status": "complete",
+  "calibration_status_source": "reference/calibration/calibration-summary.json",
+  "requirements": [
+    {
+      "gdd_requirement": "LOOP-01",
+      "tests": [
+        "D2_MenuStartAndOriginalInitialContent_15",
+        "D5_MenuHudAndSharedTerminalAreReadableAndUsable_4"
+      ],
+      "evidence": ["playmode.xml", "candidate-screenshots/menu.png", "candidate-screenshots/initial_gameplay.png"]
+    },
+    {
+      "gdd_requirement": "LOOP-02",
+      "tests": [
+        "D2_CompleteClickLaunchesVisibleMovingBall_15",
+        "D3_OneFullClickConsumesExactlyOneBall_4",
+        "D3_InvalidPointerRoutesDoNotLaunchOrScore_4",
+        "D5_SixSuppliedAudioRolesPlayFromNormalActions_3"
+      ],
+      "evidence": ["playmode.xml", "candidate-screenshots/brick_hit.png"]
+    },
+    {
+      "gdd_requirement": "RULE-01",
+      "tests": [
+        "D2_CompleteClickLaunchesVisibleMovingBall_15",
+        "D3_BallsReboundFromSideAndTopBoundaries_2",
+        "D3_BallLeavingBelowLauncherIsRemoved_2",
+        "D5_SixSuppliedAudioRolesPlayFromNormalActions_3"
+      ],
+      "evidence": ["playmode.xml"]
+    },
+    {
+      "gdd_requirement": "RULE-02",
+      "tests": [
+        "D3_OneContactChangesOnlyOneBrickByExactlyOneHealth_4",
+        "D3_EachDamageAddsExactlyOneScore_4",
+        "D5_SuppliedVisualAssetsAndButtonStatesAreUsed_3",
+        "D5_SixSuppliedAudioRolesPlayFromNormalActions_3"
+      ],
+      "evidence": ["playmode.xml", "candidate-screenshots/brick_hit.png"]
+    },
+    {
+      "gdd_requirement": "RULE-03",
+      "tests": [
+        "D2_MenuStartAndOriginalInitialContent_15",
+        "D3_OneFullClickConsumesExactlyOneBall_4",
+        "D3_EachDamageAddsExactlyOneScore_4",
+        "D3_InvalidPointerRoutesDoNotLaunchOrScore_4",
+        "D3_BallsReboundFromSideAndTopBoundaries_2",
+        "D5_MenuHudAndSharedTerminalAreReadableAndUsable_4"
+      ],
+      "evidence": ["playmode.xml", "candidate-screenshots/initial_gameplay.png"]
+    },
+    {
+      "gdd_requirement": "FLOW-01",
+      "tests": [
+        "D4_NormalInputCanClearFieldIntoSharedResult_5",
+        "D5_MenuHudAndSharedTerminalAreReadableAndUsable_4"
+      ],
+      "evidence": ["playmode.xml"]
+    },
+    {
+      "gdd_requirement": "FLOW-02",
+      "tests": [
+        "D4_NormalInputCanExhaustBallsIntoSharedResult_5",
+        "D5_MenuHudAndSharedTerminalAreReadableAndUsable_4",
+        "D5_SixSuppliedAudioRolesPlayFromNormalActions_3"
+      ],
+      "evidence": ["playmode.xml"]
+    },
+    {
+      "gdd_requirement": "LIFE-01",
+      "tests": ["D4_DirtyRunRestartIsCleanAndAcceptsExactlyOneInput_5"],
+      "evidence": ["playmode.xml"]
+    },
+    {
+      "gdd_requirement": "LIFE-02",
+      "tests": [
+        "D4_WriteDirtyReopenReceipt_5",
+        "D4_DistinctProcessReopenStartsAtCleanMenu_5"
+      ],
+      "evidence": ["reopen-dirty.json", "reopen.xml", "evaluation-session.json"]
+    },
+    {
+      "gdd_requirement": "UI-01",
+      "tests": [
+        "D2_MenuStartAndOriginalInitialContent_15",
+        "D5_MenuHudAndSharedTerminalAreReadableAndUsable_4",
+        "D5_SuppliedVisualAssetsAndButtonStatesAreUsed_3"
+      ],
+      "evidence": ["playmode.xml", "candidate-screenshots/menu.png", "candidate-screenshots/initial_gameplay.png", "candidate-screenshots/brick_hit.png"]
+    },
+    {
+      "gdd_requirement": "ART-01",
+      "tests": [
+        "D1_CompilableProbeImplementationAndMedia_5",
+        "D5_SuppliedVisualAssetsAndButtonStatesAreUsed_3",
+        "D5_SixSuppliedAudioRolesPlayFromNormalActions_3"
+      ],
+      "evidence": ["editmode.xml", "playmode.xml", "candidate-screenshots/menu.png", "candidate-screenshots/initial_gameplay.png", "candidate-screenshots/brick_hit.png"]
+    }
+  ]
+}

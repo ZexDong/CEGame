@@ -1,0 +1,28 @@
+{
+  "reviewer_model": "gpt5.6sol",
+  "parameter_mode": "platform_defaults",
+  "manual_parameter_overrides": {},
+  "prompt": "prompt.txt",
+  "five_visual_aspects": [
+    "scene coherence and composition",
+    "material/lighting polish",
+    "gameplay readability",
+    "HUD legibility",
+    "visual feedback"
+  ],
+  "candidate_images_per_round": 4,
+  "complete_review_rounds": 3,
+  "round_score_decimal_places": 1,
+  "final_score_decimal_places": 1,
+  "aggregation": "Original TideLock method: round each review score to one decimal, then average three rounds and round the mean to one decimal.",
+  "max_score": 10,
+  "reference_image": {
+    "path": "reference-image.png",
+    "sha256": "3d4df519c5392eebb973c3841605d1917b120e120d1137a358fb787f144e9482",
+    "source": "User-provided and approved corresponding game screenshot",
+    "role": "Bounded scene/style reference; not asserted to be Gold"
+  },
+  "game_specific_capture": "Use this game original native capture/navigation code; do not substitute TideLock-specific object identifiers.",
+  "original_prompt_sha256": "f4090a4f69223f9f6deb9452c0ce942ecb266a4e53a7b1d4e4308cad963eb76a",
+  "native_capture_source": "src/original/"
+}

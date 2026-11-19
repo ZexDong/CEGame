@@ -1,0 +1,852 @@
+{
+  "schema_version": "2.1",
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "method": "engine_collection_and_requirement_level_review",
+  "checks": [
+    {
+      "id": "D1-01",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-01"
+      ],
+      "description": "Project imports without an engine failure",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-02",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-02"
+      ],
+      "description": "Configured main scene runs",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-03",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-03"
+      ],
+      "description": "No candidate parse, script or resource loading errors",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-04",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-04"
+      ],
+      "description": "Live dashboard snapshots are available",
+      "max_score": 2.0
+    },
+    {
+      "id": "D1-05",
+      "dimension": "D1",
+      "requirement_ids": [
+        "delivery:D1-05"
+      ],
+      "description": "Public dashboard shape and required numeric slots",
+      "max_score": 2.0
+    },
+    {
+      "id": "entry_001",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:ENTRY-01"
+      ],
+      "description": "Launch a new process | Load the public save and show a usable Main Menu with Play, Levels, Endless, Hill Climb, Garage, Settings, and Trophies | Resume a half-finished run or show an unresponsive placeholder | All seven mode buttons are visible and clickable",
+      "max_score": 3.0
+    },
+    {
+      "id": "entry_002",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:ENTRY-02"
+      ],
+      "description": "Click Play | Start a clean story run at Level 1 with run cash `0`, combo `1`, and no active power-up | Resume an unfinished level or carry run cash/combo | Level 1 appears with its story/intro state",
+      "max_score": 3.0
+    },
+    {
+      "id": "entry_003",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:ENTRY-03"
+      ],
+      "description": "Click any non-Play mode | Open that mode without altering the saved profile except through its explicit actions | Reset unrelated profile fields | The selected mode screen is immediately usable",
+      "max_score": 3.0
+    },
+    {
+      "id": "entry_004",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:LEVELSELECT-01"
+      ],
+      "description": "Open Levels | Show exactly 15 visible level buttons with earned-star indicators | Hide levels, show the wrong star count, or start a level from a non-button area | Saved stars and level numbers are readable",
+      "max_score": 3.0
+    },
+    {
+      "id": "entry_005",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:LEVELSELECT-02"
+      ],
+      "description": "Click a visible level button | Start a clean run at that level with run cash/combo reset and profile progress preserved | Start another level or erase saved stars | Selected level loads and HUD shows its number",
+      "max_score": 3.0
+    },
+    {
+      "id": "entry_006",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:GARAGE-01"
+      ],
+      "description": "Open Garage | Show current cash and six named car colors | Hide affordability/ownership, show fewer than six, or lose the menu path | Six car controls and cash are readable",
+      "max_score": 3.0
+    },
+    {
+      "id": "entry_007",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:GARAGE-02"
+      ],
+      "description": "Six car prices | Amber `0`, Crimson `30`, Azure `50`, Emerald `70`, Violet `90`, Graphite `120`; Amber is owned on a clean profile | Use different prices or start with another car owned | Locked cars show their price",
+      "max_score": 3.0
+    },
+    {
+      "id": "entry_008",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:GARAGE-03"
+      ],
+      "description": "Click an owned car | Equip it and persist the selection | Charge again or allow an unowned car | Selected marker/car color changes",
+      "max_score": 3.0
+    },
+    {
+      "id": "entry_009",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:GARAGE-04"
+      ],
+      "description": "Click an unowned affordable car | Deduct its exact cost, mark it owned, equip it, and persist | Deduct twice or equip without ownership | Cash decreases and the car becomes selected",
+      "max_score": 3.0
+    },
+    {
+      "id": "entry_010",
+      "dimension": "D2",
+      "requirement_ids": [
+        "gdd:GARAGE-05"
+      ],
+      "description": "Select an unaffordable unowned car | Preserve cash, ownership and equipped car and show insufficient cash | Charge or equip the car | Price and rejection remain readable",
+      "max_score": 3.0
+    },
+    {
+      "id": "entry_011",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-01"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-01",
+      "max_score": 0.666667
+    },
+    {
+      "id": "entry_012",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-07"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-07",
+      "max_score": 0.454545
+    },
+    {
+      "id": "entry_013",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-08"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-08",
+      "max_score": 0.454545
+    },
+    {
+      "id": "entry_014",
+      "dimension": "D3",
+      "requirement_ids": [
+        "common-baseline:CB-15"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-15",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_001",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PLAYER-01"
+      ],
+      "description": "Hold Left/A or Right/D | Story and playable modes | Move horizontally while held",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_002",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PLAYER-02"
+      ],
+      "description": "Press Space or Up | On the ground | Jump",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_003",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PLAYER-03"
+      ],
+      "description": "Drive onto a slope or moving platform | Follow the supporting surface and keep the car attached while the surface moves | Fall through a valid platform or remain on a removed platform | Car position and tilt match the surface",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_004",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PLAYER-04"
+      ],
+      "description": "Fall below the safe story-level area | Respawn at the current level spawn unless a shield/power-up rule applies | Reset the whole level or keep falling forever | Car returns to spawn while remaining run cash is preserved",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_005",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:PLAYER-05"
+      ],
+      "description": "Moving car is visible | Animate wheels/facing and camera follow without making collisions disagree with the visible car | Display movement opposite to actual motion | Input direction and visible direction agree",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_006",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COLLECT-01"
+      ],
+      "description": "Collect a coin | Add the current combo value to run cash, then increase combo by one up to `9` and restart a `2.0`-second combo window | Award zero, exceed x9, or leave the coin collected twice | Floating `+value` feedback and HUD update",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_007",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COLLECT-02"
+      ],
+      "description": "No coin is collected for `2.0` seconds | Reset combo to `1` | Keep combo indefinitely or reset while still collecting within the window | Combo indicator returns to x1",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_008",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COLLECT-03"
+      ],
+      "description": "Land after continuous air time greater than `0.6` seconds | Award `floor(air_time * 12)` cash in addition to landing feedback | Award for short hops or penalize a valid landing | An `AIR` bonus appears and run cash updates",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_009",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COLLECT-04"
+      ],
+      "description": "Collect a gem | Add exactly `5` run cash and increment the profile gem count once | Award repeatedly or update the wrong profile field | Gem popup and persistent gem count update",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_010",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:COLLECT-05"
+      ],
+      "description": "A cone is hit | Break the combo, reduce run cash by `1` with a floor of zero, and launch the cone away unless a shield absorbs the hit | Trigger a full level reset, subtract repeatedly, or allow negative cash | Bump feedback, cone flight, and cash/combo update",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_011",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:OBJECT-01"
+      ],
+      "description": "Touch a boost pad | Apply a forward boost at `760` units/s for `0.85` seconds and show speed feedback | Stack unlimited boosts forever or fail to accelerate | Speed lines, exhaust, and camera response",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_012",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:OBJECT-02"
+      ],
+      "description": "Touch a spring | Apply an upward launch velocity of `-1150` units/s | Treat it as a normal jump or fail to leave the ground | Strong trampoline launch and stretch feedback",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_013",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:OBJECT-03"
+      ],
+      "description": "Collect a shield, then touch an enemy or cone | Collecting grants one shield; the next enemy/cone contact consumes it and prevents that contact's penalty; collecting again refreshes one shield without stacking | Consume without preventing the hit, retain the shield after use, or protect against falling | Shield appearance and disappearance and safe collision are visible",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_014",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:OBJECT-04"
+      ],
+      "description": "Collect a magnet | Pull nearby coins for `6.0` seconds and show a countdown | Pull unrelated objects, persist past six seconds, or fail to pull any in range | Magnet visual/countdown and coin movement",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_015",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:OBJECT-05"
+      ],
+      "description": "Touch a patrolling enemy without shield | Break the combo and respawn the car at the current level start | End the story level, erase banked profile cash, or apply repeated hits | Crash feedback and respawn",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_016",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:OBJECT-06"
+      ],
+      "description": "Ride a moving platform | Move the car with the platform while contact is valid | Leave the car behind, duplicate the platform, or create a gap in its valid path | Car remains attached and visible",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_017",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:OBJECT-07"
+      ],
+      "description": "Trigger a one-shot object more than once | Apply its effect only once per activation/contact where the object is consumed or disabled | Repeat indefinitely from a single overlap | Object animation/removal matches the applied effect",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_018",
+      "dimension": "D3",
+      "requirement_ids": [
+        "gdd:DISTANCE-01"
+      ],
+      "description": "Endless or Hill Climb advances | Report nonnegative maximum forward travel from the run start in metres, with 100 world units equal to one metre | Increase distance merely by jumping or reduce recorded distance | Current distance and best record use the same unit",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_019",
+      "dimension": "D3",
+      "requirement_ids": [
+        "common-baseline:CB-04"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-04",
+      "max_score": 0.952381
+    },
+    {
+      "id": "core_020",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-05"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-05",
+      "max_score": 0.454545
+    },
+    {
+      "id": "core_021",
+      "dimension": "D3",
+      "requirement_ids": [
+        "common-baseline:CB-06"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-06",
+      "max_score": 0.95238
+    },
+    {
+      "id": "core_022",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-09"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-09",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_001",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:STORY-01"
+      ],
+      "description": "Play begins | Load Level 1, then advance consecutively through all 15 levels | Skip levels, repeat Level 1, or exceed Level 15 | HUD shows Level `N/15`",
+      "max_score": 0.666667
+    },
+    {
+      "id": "success_002",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:STORY-02"
+      ],
+      "description": "Player reaches the level goal | Stop player control, resolve the level exactly once, and show a Level Complete panel or final Victory | Award twice, let the car pass through, or leave the level active | Goal contact and result panel are obvious",
+      "max_score": 0.666667
+    },
+    {
+      "id": "success_003",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:STORY-03"
+      ],
+      "description": "A story intro is active | Pause player physics and show title/body text with a Drive/Continue control | Let the car move or auto-dismiss the panel without player input | Story panel remains until continued",
+      "max_score": 0.666667
+    },
+    {
+      "id": "success_004",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:STORY-04"
+      ],
+      "description": "Level 1–14 is completed | Bank the level cash, record stars/completion, and show Level Complete with Next Level and Main Menu | Advance without recording or show final Victory before Level 15 | Level result names the earned stars and cash",
+      "max_score": 0.666667
+    },
+    {
+      "id": "success_005",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:STORY-05"
+      ],
+      "description": "Level 15 is completed | Bank the final cash/progress and show Victory with the final summary | Start Level 16 or show Level Complete | Final success screen remains until restart/menu",
+      "max_score": 0.666667
+    },
+    {
+      "id": "success_006",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:STORY-06"
+      ],
+      "description": "Click Restart from Victory | Start a clean story run at Level 1 | Restore completed-level position in the run | Level 1 intro appears",
+      "max_score": 0.666667
+    },
+    {
+      "id": "success_007",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:TROPHY-01"
+      ],
+      "description": "Open Trophies | Show completed levels/15, total stars/45, best distance, owned cars/6, gems, and lifetime cash | Display stale or invented values | Summary matches saved profile",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_008",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:TROPHY-02"
+      ],
+      "description": "Achievement conditions | Unlock First Sale at 1 completed level, Big Spender at 2 owned cars, Full Garage at 6 owned cars, Star Collector at 10 total best stars, Long Hauler at 250 metres best distance, Combo Master at x7 maximum combo, Gem Hunter at 15 lifetime gems, and The Legend at 15 distinct completed levels; show one notification per newly unlocked achievement | Unlock twice, lose unlocked state, or use another threshold | Trophies list and toast update",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_009",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:TROPHY-03"
+      ],
+      "description": "Return from Trophies | Preserve unlocked achievements and return to Main Menu | Reset progress | Menu appears with profile unchanged",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_010",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:HUD-01"
+      ],
+      "description": "Story level active | Show run cash, combo when above x1, current level/15, and active shield/magnet state | Show stale or conflicting values | Values update with the true state",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_011",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:HUD-02"
+      ],
+      "description": "Endless or Hill Climb active | Show current distance and best distance | Show level/15 or omit distance | Distance updates continuously",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_012",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:HUD-03"
+      ],
+      "description": "Left-click Pause/Resume | Story levels | Pause or resume",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_013",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:HUD-04"
+      ],
+      "description": "Left-click visible result controls | Results | Next Level, Retry, or Main Menu",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_014",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:VISUAL-01"
+      ],
+      "description": "Story level visible | Use runtime-drawn or independently cleared terrain, car, hazards, and scenery with readable contrast | Use the upstream logo/audio or missing-resource placeholders | The scene reads as a coherent car platformer",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_015",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:VISUAL-02"
+      ],
+      "description": "Themes appear across levels | Include day, dusk, night, sunset, dawn, rain and snow atmosphere families across the fifteen levels; the level-to-theme assignment is free | Use one flat undifferentiated background for all levels or let weather obscure gameplay | Level theme changes remain recognizable",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_016",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:VISUAL-03"
+      ],
+      "description": "Car, coin, gem, cone, enemy, boost, spring, shield, magnet, and goal appear | Make each gameplay role visually distinct from the others | Reuse one indistinguishable marker for multiple roles | Players can identify object roles and feedback",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_017",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:VISUAL-04"
+      ],
+      "description": "Any screen is open | Keep menu text, HUD, and result controls readable and inside `1280x720` | Crop, hide, or cover required controls | No broken text/layout at the fixed viewport",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_018",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:QUALITY-01"
+      ],
+      "description": "Use the complete profile lifecycle | Remain stable across all modes, purchase/settings paths, results, restart, and Reopen | Crash, freeze, dead-end, or corrupt profile | All required screens remain reachable",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_019",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:QUALITY-02"
+      ],
+      "description": "Use normal keyboard/mouse input | Reach every required control through visible UI or documented keys | Require hidden keys, internal calls, or debug menu | Inputs produce immediate feedback",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_020",
+      "dimension": "D5",
+      "requirement_ids": [
+        "gdd:QUALITY-03"
+      ],
+      "description": "A result/pause panel is visible | Stop underlying gameplay except documented Retry/Menu/Resume controls | Let the old run continue or respond to unrelated input | State remains stable until the player chooses",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_021",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-02"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-02",
+      "max_score": 0.666667
+    },
+    {
+      "id": "success_022",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-10"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-10",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_023",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-11"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-11",
+      "max_score": 0.666667
+    },
+    {
+      "id": "success_024",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-16"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-16",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_025",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-17"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-17",
+      "max_score": 0.454545
+    },
+    {
+      "id": "success_026",
+      "dimension": "D5",
+      "requirement_ids": [
+        "common-baseline:CB-18"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-18",
+      "max_score": 0.454555
+    },
+    {
+      "id": "failure_001",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:ENDLESS-01"
+      ],
+      "description": "Enter Endless | Auto-drive right, generate ground ahead, and remove safe ground behind | Require holding a movement key, run out of terrain, or generate gaps before the safe opening section | Car continuously advances and distance grows",
+      "max_score": 0.666667
+    },
+    {
+      "id": "failure_002",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:ENDLESS-02"
+      ],
+      "description": "Encounter a gap or cone | Falling below the safe line ends the run; cones follow `COLLECT-05` | Auto-respawn after falling or ignore cones | Failure state or bump feedback is clear",
+      "max_score": 0.666667
+    },
+    {
+      "id": "failure_003",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:ENDLESS-03"
+      ],
+      "description": "Run ends | Record the distance, bank run cash, and show Distance, Best, Retry, and Main Menu | Continue simulation or reset the profile | Game Over panel stays until an action",
+      "max_score": 0.666667
+    },
+    {
+      "id": "failure_004",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:ENDLESS-04"
+      ],
+      "description": "Click Retry | Start a clean Endless run with profile state preserved | Resume the old run or reset profile records | Distance returns to zero and terrain regenerates",
+      "max_score": 0.666667
+    },
+    {
+      "id": "failure_005",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:HILL-01"
+      ],
+      "description": "Enter Hill Climb | Auto-drive right over generated rolling hills with occasional jumpable gaps | Use flat Endless terrain, block the route, or require movement input | Car follows visible hills and distance grows",
+      "max_score": 0.666667
+    },
+    {
+      "id": "failure_006",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:HILL-02"
+      ],
+      "description": "Fall into a gap or below the safe line | End the run | Auto-respawn or continue below the world | Game Over appears",
+      "max_score": 0.666667
+    },
+    {
+      "id": "failure_007",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:HILL-03"
+      ],
+      "description": "Run ends | Record distance using the shared best-distance rule, bank cash, and show Retry and Main Menu | Lose earned cash or continue simulation | Result panel shows distance/best",
+      "max_score": 0.666667
+    },
+    {
+      "id": "failure_008",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:HILL-04"
+      ],
+      "description": "Click Retry | Start a clean Hill Climb run with profile preserved | Resume old terrain or reset the profile | New hills and distance-zero HUD",
+      "max_score": 0.666667
+    },
+    {
+      "id": "failure_009",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-12"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-12",
+      "max_score": 0.666667
+    },
+    {
+      "id": "failure_010",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-14"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-14",
+      "max_score": 0.666667
+    },
+    {
+      "id": "lifecycle_001",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:PROGRESS-01"
+      ],
+      "description": "Complete any level or endless run | Bank run cash into total profile cash and lifetime earned cash; never bank a negative value | Lose earned cash, duplicate the award, or add negative cash | Garage and result totals update",
+      "max_score": 0.666667
+    },
+    {
+      "id": "lifecycle_002",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:PROGRESS-02"
+      ],
+      "description": "Complete a story level | Mark it complete exactly once and preserve its best star rating | Regress a higher old rating or mark another level | Level select shows completed/stars",
+      "max_score": 0.666667
+    },
+    {
+      "id": "lifecycle_003",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:PROGRESS-03"
+      ],
+      "description": "Complete a level with level cash `0–6`, `7–13`, or `14+` | Award `1`, `2`, or `3` stars respectively, keeping only the best result | Award fewer than one, more than three, or overwrite a better score | Result panel paints the exact star count",
+      "max_score": 0.666667
+    },
+    {
+      "id": "lifecycle_004",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:PROGRESS-04"
+      ],
+      "description": "End Endless or Hill Climb | Update the shared best distance only when the new distance is greater | Reduce the record or save the current distance when lower | Result and Trophies show the best value",
+      "max_score": 0.666667
+    },
+    {
+      "id": "lifecycle_005",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:PROGRESS-05"
+      ],
+      "description": "Close the process and reopen | Restore stars, total/lifetime cash, owned/equipped car, completed levels, max combo, gems, achievements, best distance, and audio preferences from the profile save defined in TOOLCHAIN-en.md | Restore an unfinished level/run or lose any listed profile field | Menu, Garage, Settings, Levels, and Trophies match the saved profile",
+      "max_score": 0.666667
+    },
+    {
+      "id": "lifecycle_006",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:SETTINGS-01"
+      ],
+      "description": "Open Settings | Show Music and Sound On/Off states matching the loaded profile | Reset preferences on entry or display the opposite state | Two toggles are visible",
+      "max_score": 0.666667
+    },
+    {
+      "id": "lifecycle_007",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:SETTINGS-02"
+      ],
+      "description": "Toggle Music or Sound | Flip only that preference, apply it immediately, and persist it | Change the other setting or fail after Reopen | Button label and audio behavior update",
+      "max_score": 0.666667
+    },
+    {
+      "id": "lifecycle_008",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:SETTINGS-03"
+      ],
+      "description": "Return from Settings | Preserve all profile values and return to Main Menu | Start/restart gameplay | Menu appears with preferences retained",
+      "max_score": 0.666667
+    },
+    {
+      "id": "lifecycle_009",
+      "dimension": "D4",
+      "requirement_ids": [
+        "gdd:PROFILE-01"
+      ],
+      "description": "No valid saved profile exists | Start with zero cash, lifetime cash, gems, distance record, stars and completed levels; Amber owned/equipped, maximum combo 1, no achievements, and Music/Sound enabled | Load partial invalid progress | Menu and profile screens show these defaults",
+      "max_score": 0.666667
+    },
+    {
+      "id": "lifecycle_010",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-03"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-03",
+      "max_score": 0.666667
+    },
+    {
+      "id": "lifecycle_011",
+      "dimension": "D4",
+      "requirement_ids": [
+        "common-baseline:CB-13"
+      ],
+      "description": "Review the complete public requirement common-baseline:CB-13",
+      "max_score": 0.666657
+    },
+    {
+      "id": "D6-01",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:composition"
+      ],
+      "description": "Overall composition and task visual identity",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-02",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:objects"
+      ],
+      "description": "Required objects, character and asset identity",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-03",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:ui"
+      ],
+      "description": "UI readability and information hierarchy",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-04",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:feedback"
+      ],
+      "description": "State transitions and visual feedback",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-05",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:consistency"
+      ],
+      "description": "Visual consistency across gameplay and result states",
+      "max_score": 2.0
+    }
+  ],
+  "d6_protocol": "d6/protocol.json"
+}

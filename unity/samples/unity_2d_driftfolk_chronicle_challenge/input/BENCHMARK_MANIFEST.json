@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "unity.driftfolk_stormbound.v2",
+  "input_revision": "stormbound-docv2-v1-20260918",
+  "input_version": "stormbound-docv2-v1-20260918",
+  "gdd_revision": "stormbound-docv2-v1-20260918",
+  "content_version": "driftfolk-stormbound-v2-20260918",
+  "common_tool_guide_id": "unity-common-tool-guide-2026.08.26-base-interfaces",
+  "engine": {
+    "name": "Unity",
+    "version": "6000.0.80f1",
+    "revision": "2dfd32957da2",
+    "editor_executable": "D:/game/engine/unity/6000.0.80f1/Editor/Unity.exe"
+  },
+  "unity_editor": "6000.0.80f1",
+  "unity_editor_executable": "D:\\game\\engine\\unity\\6000.0.80f1\\Editor\\Unity.exe",
+  "unity_cli": "1.0.0-beta.3",
+  "unity_cli_executable": "D:\\game\\engine\\shared-tools\\unity\\cli\\1.0.0-beta.3\\unity.exe",
+  "target_resolution": [
+    1280,
+    720
+  ],
+  "runtime_ui": "implementation-neutral visible runtime UI",
+  "active_input_handler": "Input System Package only",
+  "task_scope": "complete_game",
+  "human_specification": "GDD.md",
+  "agent_entry_prompt": "INITIAL_AGENT_PROMPT.md",
+  "toolchain": "TOOLCHAIN.md",
+  "asset_manifest": "ASSET_MANIFEST.json",
+  "asset_catalog": "Assets/DriftfolkStarter/VisualKit/ASSET_CATALOG.json",
+  "asset_catalog_markdown": "ASSET_CATALOG.md",
+  "asset_import_facts": "Assets/DriftfolkStarter/VisualKit/IMPORT_FACTS.json",
+  "asset_contact_sheet": "ASSET_CONTACT_SHEET.png",
+  "license_path": "legal/LICENSE",
+  "public_documents": [
+    "README.md",
+    "INITIAL_AGENT_PROMPT.md",
+    "GDD.md",
+    "TOOLCHAIN.md",
+    "ASSET_MANIFEST.json",
+    "ASSET_CATALOG.md",
+    "ASSET_CONTACT_SHEET.png",
+    "GAME_SESSION_SPEC.md",
+    "SESSION_MODEL.json",
+    "COMMON_BASELINE.md",
+    "UNITY_BENCHMARK_TOOL_GUIDE.md"
+  ],
+  "language_policy": {
+    "agent_visible_documents": "English only",
+    "translations_in_input": false
+  },
+  "network_required": false,
+  "starter_scene": "Assets/DriftfolkStarter/Scenes/DriftfolkStarter.unity",
+  "required_final_scene": "Assets/DriftfolkChallenge/Scenes/DriftfolkChronicle.unity",
+  "starter_gameplay_present": false,
+  "writable_paths": [
+    "Assets/DriftfolkChallenge.meta",
+    "Assets/DriftfolkChallenge/**",
+    "Assets/_Project.meta",
+    "Assets/_Project/**",
+    "ProjectSettings/EditorBuildSettings.asset",
+    "ProjectSettings/ProjectSettings.asset",
+    "Logs/**",
+    "Builds/**"
+  ],
+  "protected_paths": [
+    "Assets/DriftfolkStarter/**",
+    "Assets/InputSystem/**",
+    "Assets/Tests/**",
+    "Assets/SessionSelfCheck/**",
+    "Assets/StormboundSessionContract/**",
+    "Assets/StormboundSessionSelfCheck/**",
+    "Assets/Resources/session-model.json",
+    "Packages/**",
+    "GDD.md",
+    "TOOLCHAIN.md",
+    "README.md",
+    "INITIAL_AGENT_PROMPT.md",
+    "ASSET_MANIFEST.json",
+    "ASSET_CATALOG.md",
+    "ASSET_CONTACT_SHEET.png",
+    "BENCHMARK_MANIFEST.json",
+    "UNITY_BENCHMARK_TOOL_GUIDE.md",
+    "GAME_SESSION_SPEC.md",
+    "COMMON_BASELINE.md",
+    "SESSION_MODEL.json",
+    "legal/**",
+    "Packages/com.gamecreate.game-session/**"
+  ],
+  "runtime_save_exception": {
+    "api_path": "Application.persistentDataPath",
+    "purpose": "runtime-created Save/Load data only",
+    "agent_host_access": false
+  },
+  "public_session_required": true,
+  "session_contract": "GameCreate.Session.IGameSession",
+  "session_contract_version": "game-session/v1",
+  "session_spec": "GAME_SESSION_SPEC.md",
+  "session_model": "SESSION_MODEL.json",
+  "runtime_session_model": "Assets/Resources/session-model.json",
+  "common_baseline": "COMMON_BASELINE.md",
+  "dashboard_enabled": false,
+  "session_self_check_filter": "GameCreate.Session.PublicChecks",
+  "public_editmode_filter": "GameCreate.Stormbound.PublicSmoke.StormboundPublicEditModeSmoke",
+  "public_playmode_filter": "GameCreate.Stormbound.PublicSmoke.StormboundPublicPlayModeSmoke",
+  "public_test_suites": [
+    {
+      "mode": "EditMode",
+      "filter": "GameCreate.Stormbound.PublicSmoke.StormboundPublicEditModeSmoke",
+      "assembly": "Assets/Tests/Editor/GameCreate.DriftfolkChronicle.PublicSmoke.Editor.asmdef",
+      "expected_tests": 3,
+      "scope": "entry_import_only"
+    },
+    {
+      "mode": "PlayMode",
+      "filter": "GameCreate.Stormbound.PublicSmoke.StormboundPublicPlayModeSmoke",
+      "assembly": "Assets/Tests/PlayMode/GameCreate.DriftfolkChronicle.PublicSmoke.PlayMode.asmdef",
+      "expected_tests": 1,
+      "scope": "entry_real_frames_only"
+    },
+    {
+      "mode": "PlayMode",
+      "filter": "GameCreate.Session.PublicChecks",
+      "assembly": "Assets/SessionSelfCheck/GameCreate.Session.PublicChecks.asmdef",
+      "expected_tests": 4,
+      "scope": "post_implementation_basic_service"
+    },
+    {
+      "mode": "PlayMode",
+      "filter": "GameCreate.Stormbound.PublicChecks",
+      "assembly": "Assets/StormboundSessionSelfCheck/GameCreate.Stormbound.PublicChecks.asmdef",
+      "expected_tests": 4,
+      "scope": "post_implementation_public_state_development_aid"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "Coolant Cargo Protocol public visual palette",
+  "colors": {
+    "background": "#17212B",
+    "structure": "#334553",
+    "coolant": "#24D6C8",
+    "energy": "#F2B84B",
+    "hazard": "#E6534B",
+    "complete": "#55D66B",
+    "primary_text": "#F3F7FA"
+  },
+  "materials": ["Metal", "SmoothPlastic", "Neon", "Glass"],
+  "required_state_accents": {
+    "inactive": "structure",
+    "coolant_active": "coolant",
+    "charging_or_charged": "energy",
+    "hazard": "hazard",
+    "completed": "complete"
+  },
+  "external_asset_ids_required": false
+}

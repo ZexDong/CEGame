@@ -1,0 +1,2692 @@
+{
+  "version": "1.0",
+  "purpose": "Reconstruct frozen native input bindings in an isolated run; the public input uses the template layout.",
+  "files": [
+    {
+      "source": "ARENA_LAYOUT.md",
+      "published": "ARENA_LAYOUT.md",
+      "sha256": "7ae8131bda7caaeb38ca1447b901cebba6596fc9971c12e9bbd07398e62640f5",
+      "published_sha256": "fd00b5da61f9855ee296b94c9accf26f09888b177d32fde8c81a77ab867fa8eb",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "`project/Config/BomberArenaLayout.json` is the authoritative machine-readable layout referenced by `CONTENT-01` and the crate/power-up requirements in `GDD.md`.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ASSET_CATALOG.json",
+      "published": "assets/ASSET_CATALOG.json",
+      "sha256": "5a65af271cf5cd17e18d6ed231975e3022b289ff07a2ec8d44f5a6f91208e2b9",
+      "published_sha256": "aab22572f07babe42ed96fe8ebcacd5af3afbc1b2de2a3ed94dfa47ddce49173",
+      "restore_edits": [
+        {
+          "start": 21,
+          "end": 22,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/M_Emissive_Master.uasset\",\n"
+          ]
+        },
+        {
+          "start": 38,
+          "end": 39,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 47,
+          "end": 48,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_Bombs/M_Bomb.uasset\",\n"
+          ]
+        },
+        {
+          "start": 66,
+          "end": 67,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 75,
+          "end": 76,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Blue.uasset\",\n"
+          ]
+        },
+        {
+          "start": 95,
+          "end": 96,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 104,
+          "end": 105,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Pink.uasset\",\n"
+          ]
+        },
+        {
+          "start": 124,
+          "end": 125,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 133,
+          "end": 134,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Silver.uasset\",\n"
+          ]
+        },
+        {
+          "start": 153,
+          "end": 154,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 162,
+          "end": 163,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Yellow.uasset\",\n"
+          ]
+        },
+        {
+          "start": 182,
+          "end": 183,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 191,
+          "end": 192,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_PlayerArrowStart.uasset\",\n"
+          ]
+        },
+        {
+          "start": 210,
+          "end": 211,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 219,
+          "end": 220,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Meshes/SM_Bomb.uasset\",\n"
+          ]
+        },
+        {
+          "start": 239,
+          "end": 240,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 248,
+          "end": 249,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Meshes/SM_PlayerArrowStart.uasset\",\n"
+          ]
+        },
+        {
+          "start": 268,
+          "end": 269,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 277,
+          "end": 278,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/SkeletalMeshes/SKEL_Bomber.uasset\",\n"
+          ]
+        },
+        {
+          "start": 294,
+          "end": 295,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 303,
+          "end": 304,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Animations/MM_Manny_Idle.uasset\",\n"
+          ]
+        },
+        {
+          "start": 331,
+          "end": 332,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 340,
+          "end": 341,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/M_Mannequin.uasset\",\n"
+          ]
+        },
+        {
+          "start": 365,
+          "end": 366,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 374,
+          "end": 375,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_01.uasset\",\n"
+          ]
+        },
+        {
+          "start": 396,
+          "end": 397,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 405,
+          "end": 406,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_02.uasset\",\n"
+          ]
+        },
+        {
+          "start": 427,
+          "end": 428,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 436,
+          "end": 437,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Meshes/SKM_Quinn_Simple.uasset\",\n"
+          ]
+        },
+        {
+          "start": 458,
+          "end": 459,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 467,
+          "end": 468,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_BN.uasset\",\n"
+          ]
+        },
+        {
+          "start": 484,
+          "end": 485,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 493,
+          "end": 494,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_D.uasset\",\n"
+          ]
+        },
+        {
+          "start": 510,
+          "end": 511,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 519,
+          "end": 520,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA.uasset\",\n"
+          ]
+        },
+        {
+          "start": 536,
+          "end": 537,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 545,
+          "end": 546,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_D.uasset\",\n"
+          ]
+        },
+        {
+          "start": 562,
+          "end": 563,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 571,
+          "end": 572,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_MRA.uasset\",\n"
+          ]
+        },
+        {
+          "start": 588,
+          "end": 589,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 597,
+          "end": 598,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_N.uasset\",\n"
+          ]
+        },
+        {
+          "start": 614,
+          "end": 615,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 623,
+          "end": 624,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_D.uasset\",\n"
+          ]
+        },
+        {
+          "start": 640,
+          "end": 641,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 649,
+          "end": 650,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_MRA.uasset\",\n"
+          ]
+        },
+        {
+          "start": 666,
+          "end": 667,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 675,
+          "end": 676,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_N.uasset\",\n"
+          ]
+        },
+        {
+          "start": 692,
+          "end": 693,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 701,
+          "end": 702,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Shared/T_UE_Logo_M.uasset\",\n"
+          ]
+        },
+        {
+          "start": 718,
+          "end": 719,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 727,
+          "end": 728,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Box.uasset\",\n"
+          ]
+        },
+        {
+          "start": 747,
+          "end": 748,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 756,
+          "end": 757,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Bomb.uasset\",\n"
+          ]
+        },
+        {
+          "start": 777,
+          "end": 778,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 786,
+          "end": 787,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Fire.uasset\",\n"
+          ]
+        },
+        {
+          "start": 807,
+          "end": 808,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 816,
+          "end": 817,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Skate.uasset\",\n"
+          ]
+        },
+        {
+          "start": 837,
+          "end": 838,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        },
+        {
+          "start": 846,
+          "end": 847,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Wall.uasset\",\n"
+          ]
+        },
+        {
+          "start": 866,
+          "end": 867,
+          "lines": [
+            "        \"license_file\": \"legal/MIT-Bomber-assets.txt\"\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ASSET_CATALOG.md",
+      "published": "assets/ASSET_CATALOG.md",
+      "sha256": "f2c98f4cf69456d3a7e8dd5b573449d84f14024db85ed1cb00619e3b8e8fccca",
+      "published_sha256": "ea8fc9728dc139509f0b90da8dcd860aabd0dff12b44c5b81435930f02c67ddd",
+      "restore_edits": [
+        {
+          "start": 20,
+          "end": 21,
+          "lines": [
+            "All parent materials, textures, the skeleton, and other exact dependencies are listed in `ASSET_CATALOG.json` with byte lengths and SHA-256 hashes.\r\n"
+          ]
+        },
+        {
+          "start": 28,
+          "end": 29,
+          "lines": [
+            "All released upstream assets are mapped to the included MIT notice under `legal/`. The notice is legal material and must not be displayed as in-game author/community UI.\r\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ASSET_COVERAGE.json",
+      "published": "ASSET_COVERAGE.json",
+      "sha256": "f467cb804cdcec1a90592182d5acdf256b954cfb365f3e589870d7e8bf4a3e0e",
+      "published_sha256": "f467cb804cdcec1a90592182d5acdf256b954cfb365f3e589870d7e8bf4a3e0e"
+    },
+    {
+      "source": "ASSET_MANIFEST.json",
+      "published": "ASSET_MANIFEST.json",
+      "sha256": "1f47ebc4bf43fa645d906909363eca7846fb0022906da5040de4ace761540c22",
+      "published_sha256": "b12e97da0a45f54ba8c9e17aa21dd1dbc7be437d04880a882d67b5649c79759b",
+      "restore_edits": [
+        {
+          "start": 4,
+          "end": 6,
+          "lines": [
+            "    \"project/Content/Bomber\",\r\n",
+            "    \"project/Plugins/BlockoutMap\"\r\n"
+          ]
+        },
+        {
+          "start": 21,
+          "end": 23,
+          "lines": [
+            "  \"catalog\": \"ASSET_CATALOG.json\",\r\n",
+            "  \"human_catalog\": \"ASSET_CATALOG.md\",\r\n"
+          ]
+        },
+        {
+          "start": 24,
+          "end": 25,
+          "lines": [
+            "  \"license_map\": \"legal/ASSET_LICENSE_MAP.json\",\r\n"
+          ]
+        },
+        {
+          "start": 28,
+          "end": 29,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/M_Emissive_Master.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 38,
+          "end": 39,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_Bombs/M_Bomb.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 48,
+          "end": 49,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Blue.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 58,
+          "end": 59,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Pink.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 68,
+          "end": 69,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Silver.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 78,
+          "end": 79,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Yellow.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 88,
+          "end": 89,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_PlayerArrowStart.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 98,
+          "end": 99,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Meshes/SM_Bomb.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 108,
+          "end": 109,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Meshes/SM_PlayerArrowStart.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 118,
+          "end": 119,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/SkeletalMeshes/SKEL_Bomber.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 128,
+          "end": 129,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Animations/MM_Manny_Idle.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 138,
+          "end": 139,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/M_Mannequin.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 148,
+          "end": 149,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_01.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 158,
+          "end": 159,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_02.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 168,
+          "end": 169,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Meshes/SKM_Quinn_Simple.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 178,
+          "end": 179,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_BN.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 188,
+          "end": 189,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_D.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 198,
+          "end": 199,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 208,
+          "end": 209,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_D.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 218,
+          "end": 219,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_MRA.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 228,
+          "end": 229,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_N.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 238,
+          "end": 239,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_D.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 248,
+          "end": 249,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_MRA.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 258,
+          "end": 259,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_N.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 268,
+          "end": 269,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Shared/T_UE_Logo_M.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 278,
+          "end": 279,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Box.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 288,
+          "end": 289,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Bomb.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 298,
+          "end": 299,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Fire.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 308,
+          "end": 309,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Skate.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 318,
+          "end": 319,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Wall.uasset\",\r\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "BENCHMARK_MANIFEST.json",
+      "published": "BENCHMARK_MANIFEST.json",
+      
+
+"restore_edits": [
+        {
+          "start": 21,
+          "end": 22,
+          "lines": [
+            "    \"operation_result_schema\": \"engine/unreal-5.7.4/executor/schemas/operation-result.schema.json\",\n",
+            "    \"capability_validation_summary\": \"engine/unreal-5.7.4/validation/latest/summary.json\"\n"
+          ]
+        },
+        {
+          "start": 24,
+          "end": 29,
+          "lines": [
+            "    \"project_root\": \"project\",\n",
+            "    \"project_file\": \"project/BomberStarter.uproject\",\n",
+            "    \"starter_entry\": \"project/BomberStarter.uproject\",\n",
+            "    \"default_entry\": \"project/BomberStarter.uproject\",\n",
+            "    \"final_entry\": \"project/BomberStarter.uproject\",\n"
+          ]
+        },
+        {
+          "start": 31,
+          "end": 33,
+          "lines": [
+            "    \"final_map_source\": \"project/Config/DefaultEngine.ini: GameDefaultMap\",\n",
+            "    \"fixed_layout\": \"project/Config/BomberArenaLayout.json\",\n"
+          ]
+        },
+        {
+          "start": 37,
+          "end": 41,
+          "lines": [
+            "    \"toolchain\": \"TOOLCHAIN.md\",\n",
+            "    \"tool_guide\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "    \"tool_catalog_index\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
+            "    \"tool_catalog_archive\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        },
+        {
+          "start": 43,
+          "end": 45,
+          "lines": [
+            "    \"asset_catalog_json\": \"ASSET_CATALOG.json\",\n",
+            "    \"asset_catalog_human\": \"ASSET_CATALOG.md\",\n"
+          ]
+        },
+        {
+          "start": 46,
+          "end": 47,
+          "lines": [
+            "    \"license_map\": \"legal/ASSET_LICENSE_MAP.json\",\n"
+          ]
+        },
+        {
+          "start": 48,
+          "end": 50,
+          "lines": [
+            "    \"public_smoke\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
+            "    \"public_smoke_schema\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n"
+          ]
+        },
+        {
+          "start": 62,
+          "end": 63,
+          "lines": [
+            "    \"README.md\",\n"
+          ]
+        },
+        {
+          "start": 66,
+          "end": 70,
+          "lines": [
+            "    \"ASSET_CATALOG.md\",\n",
+            "    \"TOOLCHAIN.md\",\n",
+            "    \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "    \"contracts/README.md\"\n"
+          ]
+        },
+        {
+          "start": 73,
+          "end": 74,
+          "lines": [
+            "      \"project\"\n"
+          ]
+        },
+        {
+          "start": 77,
+          "end": 78,
+          "lines": [
+            "      \"README.md\",\n"
+          ]
+        },
+        {
+          "start": 82,
+          "end": 86,
+          "lines": [
+            "\"TOOLCHAIN.md\",\n",
+            "      \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "      \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
+            "      \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        },
+        {
+          "start": 87,
+          "end": 89,
+          "lines": [
+            "      \"ASSET_CATALOG.json\",\n",
+            "      \"ASSET_CATALOG.md\",\n"
+          ]
+        },
+        {
+          "start": 91,
+          "end": 92,
+          "lines": [
+            "      \"legal\",\n"
+          ]
+        },
+        {
+          "start": 93,
+          "end": 94,
+          "lines": [
+            "      \"tests\",\n"
+          ]
+        },
+        {
+          "start": 189,
+          "end": 191,
+          "lines": [
+            "    \"entry\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
+            "    \"result_schema\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n"
+          ]
+        },
+        {
+          "start": 212,
+          "end": 214,
+          "lines": [
+            "    \"guide\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "    \"guide_sha256\": \"b50349fc1a369bfac34c79da242461d447a06472b5ab20075a65978681923382\",\n"
+          ]
+        },
+        {
+          "start": 215,
+          "end": 216,
+          "lines": [
+            "    \"capabilities_contract_sha256\": \"9007a3a623ce2c24e8a14c8f69764db31b146c9b5c5019704ab034c803cc2412\",\n"
+          ]
+        },
+        {
+          "start": 222,
+          "end": 223,
+          "lines": [
+            "    \"validation_scope\": \"Windows x64, Unreal Engine 5.7.4 CL 51494982, editor_game; three independent dynamic validations per validated benchmark interface.\",\n"
+          ]
+        },
+        {
+          "start": 224,
+          "end": 227,
+          "lines": [
+            "    \"complete_catalog_index\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
+            "    \"complete_catalog_index_sha256\": \"44fca8ffb2231ff5f1147673d671823f46068ce369aafae2eff68c13c6d711f0\",\n",
+            "    \"complete_catalog_archive\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        },
+        {
+          "start": 232,
+          "end": 234,
+          "lines": [
+            "    \"catalog_json\": \"ASSET_CATALOG.json\",\n",
+            "    \"catalog_human\": \"ASSET_CATALOG.md\",\n"
+          ]
+        },
+        {
+          "start": 235,
+          "end": 237,
+          "lines": [
+            "    \"license_map\": \"legal/ASSET_LICENSE_MAP.json\",\n",
+            "    \"offline_license\": \"legal/MIT-Bomber-assets.txt\",\n"
+          ]
+        },
+        {
+          "start": 245,
+          "end": 247,
+          "lines": [
+            "\n",
+            "\n"
+          ]
+        },
+        {
+          "start": 255,
+          "end": 257,
+          "lines": [
+            "      \"byte_length\": 1692,\n",
+            "      \"sha256\": \"63aadcdd5eff0ef35a0c334c4ce5fe7f79e0206d26606dff6b7b9c58e0c9c8c3\"\n"
+          ]
+        },
+        {
+          "start": 259,
+          "end": 262,
+          "lines": [
+            "      \"path\": \"README.md\",\n",
+            "      \"byte_length\": 4182,\n",
+            "      \"sha256\": \"3583a636d26cb2656ee54be18195fd2c30197475de9ad068a1369ced4f170f17\"\n"
+          ]
+        },
+        {
+          "start": 265,
+          "end": 267,
+          "lines": [
+            "      \"byte_length\": 28563,\n",
+            "      \"sha256\": \"bdeba96ea306dcfec214b2b4c2ddcd1fa7469f71f36ff0a04e4ef33d343669d4\"\n"
+          ]
+        },
+        {
+          "start": 270,
+          "end": 272,
+          "lines": [
+            "      \"byte_length\": 933,\n",
+            "      \"sha256\": \"7ae8131bda7caaeb38ca1447b901cebba6596fc9971c12e9bbd07398e62640f5\"\n"
+          ]
+        },
+        {
+          "start": 274,
+          "end": 277,
+          "lines": [
+            "      \"path\": \"TOOLCHAIN.md\",\n",
+            "      \"byte_length\": 4271,\n",
+            "      \"sha256\": \"a588bd3cd2461de8634f97d90f44c76799b5268c0cba33fbfc037fd3941c0106\"\n"
+          ]
+        },
+        {
+          "start": 279,
+          "end": 282,
+          "lines": [
+            "      \"path\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "      \"byte_length\": 10079,\n",
+            "      \"sha256\": \"b50349fc1a369bfac34c79da242461d447a06472b5ab20075a65978681923382\"\n"
+          ]
+        },
+        {
+          "start": 285,
+          "end": 287,
+          "lines": [
+            "      \"byte_length\": 12400,\n",
+            "      \"sha256\": \"1f47ebc4bf43fa645d906909363eca7846fb0022906da5040de4ace761540c22\"\n"
+          ]
+        },
+        {
+          "start": 289,
+          "end": 292,
+          "lines": [
+            "      \"path\": \"ASSET_CATALOG.json\",\n",
+            "      \"byte_length\": 41251,\n",
+            "      \"sha256\": \"5a65af271cf5cd17e18d6ed231975e3022b289ff07a2ec8d44f5a6f91208e2b9\"\n"
+          ]
+        },
+        {
+          "start": 294,
+          "end": 297,
+          "lines": [
+            "      \"path\": \"ASSET_CATALOG.md\",\n",
+            "      \"byte_length\": 2448,\n",
+            "      \"sha256\": \"f2c98f4cf69456d3a7e8dd5b573449d84f14024db85ed1cb00619e3b8e8fccca\"\n"
+          ]
+        },
+        {
+          "start": 305,
+          "end": 307,
+          "lines": [
+            "      \"byte_length\": 676,\n",
+            "      \"sha256\": \"cdff6a91a7eafe8e0c56f9c7db4606776198380b7dec6c5c84bf34a197c522cc\"\n"
+          ]
+        },
+        {
+          "start": 309,
+          "end": 310,
+          "lines": [
+            "      \"path\": \"legal/README.md\",\n"
+          ]
+        },
+        {
+          "start": 314,
+          "end": 317,
+          "lines": [
+            "      \"path\": \"legal/ASSET_LICENSE_MAP.json\",\n",
+            "      \"byte_length\": 7831,\n",
+            "      \"sha256\": \"99b482a44edcdf969bab8172ed548c696d0a79275c542934d0be6f2d7fda5ec6\"\n"
+          ]
+        },
+        {
+          "start": 319,
+          "end": 320,
+          "lines": [
+            "      \"path\": \"legal/MIT-Bomber-assets.txt\",\n"
+          ]
+        },
+        {
+          "start": 324,
+          "end": 325,
+          "lines": [
+            "      \"path\": \"contracts/README.md\",\n"
+          ]
+        },
+        {
+          "start": 334,
+          "end": 335,
+          "lines": [
+            "      \"path\": \"project/BomberStarter.uproject\",\n"
+          ]
+        },
+        {
+          "start": 339,
+          "end": 340,
+          "lines": [
+            "      \"path\": \"project/README.md\",\n"
+          ]
+        },
+        {
+          "start": 344,
+          "end": 345,
+          "lines": [
+            "      \"path\": \"project/Config/BomberArenaLayout.json\",\n"
+          ]
+        },
+        {
+          "start": 349,
+          "end": 350,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/BlockoutMap.uplugin\",\n"
+          ]
+        },
+        {
+          "start": 354,
+          "end": 357,
+          "lines": [
+            "      \"path\": \"tests/PublicSmoke/README.md\",\n",
+            "      \"byte_length\": 3177,\n",
+            "      \"sha256\": \"ddc5ac484526fa622785e20c7edcc15fd3721a332b462c4e93eb4422cdaed3ce\"\n"
+          ]
+        },
+        {
+          "start": 359,
+          "end": 362,
+          "lines": [
+            "      \"path\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
+            "      \"byte_length\": 26343,\n",
+            "      \"sha256\": \"bc5f9fc7d4e9e9450b95164cdeb4090bd3aac7629e133289583d53df320ca156\"\n"
+          ]
+        },
+        {
+          "start": 364,
+          "end": 367,
+          "lines": [
+            "      \"path\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n",
+            "      \"byte_length\": 4457,\n",
+            "      \"sha256\": \"4f0d5622527a67f4531986730fcc61a2cf77654a09eb5f1fa80d8f521f6b3c98\"\n"
+          ]
+        },
+        {
+          "start": 370,
+          "end": 372,
+          "lines": [
+            "      \"byte_length\": 2034,\n",
+            "      \"sha256\": \"0b7143a5fd33e3390aa4f0a7fd5b50e928e754c1443cf7c740025572cef809c8\"\n"
+          ]
+        },
+        {
+          "start": 375,
+          "end": 377,
+          "lines": [
+            "      \"byte_length\": 15813,\n",
+            "      \"sha256\": \"aeb87f1b45b7ebd68a9502e002489e6839fd54946edaa973c3cbe5268170fb51\"\n"
+          ]
+        },
+        {
+          "start": 389,
+          "end": 392,
+          "lines": [
+            "      \"path\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
+            "      \"byte_length\": 3026,\n",
+            "      \"sha256\": \"44fca8ffb2231ff5f1147673d671823f46068ce369aafae2eff68c13c6d711f0\"\n"
+          ]
+        },
+        {
+          "start": 394,
+          "end": 395,
+          "lines": [
+            "      \"path\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "contracts/game-state.schema.json",
+      "published": "contracts/game-state.schema.json",
+      "sha256": "09c1dbe2bd60e6a7cc3daa793c93e79e922957cb5c2737a283faaf8cfb4ff291",
+      "published_sha256": "09c1dbe2bd60e6a7cc3daa793c93e79e922957cb5c2737a283faaf8cfb4ff291"
+    },
+    {
+      "source": "contracts/README.md",
+      "published": "contracts/GAME_SESSION_SPEC.md",
+      "sha256": "1f66d8e9199e18804424914e347f4b887bf4d45d7296ad6f5b5128848fc90f31",
+      "published_sha256": "1f66d8e9199e18804424914e347f4b887bf4d45d7296ad6f5b5128848fc90f31"
+    },
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+      "source": "GDD.md",
+      "published": "GDD.md",
+      "sha256": "bdeba96ea306dcfec214b2b4c2ddcd1fa7469f71f36ff0a04e4ef33d343669d4",
+      "published_sha256": "ae976e8121fe8df7b51899df895987b1ca3b10f13126c4e1dcc695c353827f3b",
+      "restore_edits": [
+        {
+          "start": 32,
+          "end": 33,
+          "lines": [
+            "| Project entry | `project/BomberStarter.uproject` opens a non-gameplay English health screen. | `QUALITY-01` |\n"
+          ]
+        },
+        {
+          "start": 34,
+          "end": 35,
+          "lines": [
+            "| Arena data | `project/Config/BomberArenaLayout.json` supplies the fixed 11x9 layout, two starts, fifteen crates, and three power-up contents. | `CONTENT-01`, `POWERUP-01` |\n"
+          ]
+        },
+        {
+          "start": 91,
+          "end": 92,
+          "lines": [
+            "| `CONTENT-01` | The documented default entry is launched. | The first round is created. | Present exactly the fixed 11x9 layout in `project/Config/BomberArenaLayout.json`, with one Player 1 at `(1,1)`, one Player 2 at `(9,1)`, all listed indestructible walls, and all fifteen listed crates. The open vertical lanes below both starts extend through `y=4`, so either player can leave a first Fire 2 bomb's blast footprint. Every non-wall cell can become reachable after legal crate destruction. | Do not rearrange the arena, omit or duplicate a required object, add an AI player, or start either player inside a wall/crate. | Floor, walls, crates, Player 1, and Player 2 are distinguishable in the normal shared view. | Initial launch and each clean restart create exactly one fresh copy of every listed object. |\n"
+          ]
+        },
+        {
+          "start": 183,
+          "end": 184,
+          "lines": [
+            "`ASSET_MANIFEST.json` and `ASSET_CATALOG.json` are the path and hash authorities. The required visible roles are:\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "INITIAL_AGENT_PROMPT.md",
+      "published": "INITIAL_AGENT_PROMPT.md",
+      "sha256": "63aadcdd5eff0ef35a0c334c4ce5fe7f79e0206d26606dff6b7b9c58e0c9c8c3",
+      "published_sha256": "d5c2079a6318a486a3d0d7d6762f78f5c7bb11aa2c122d5993dbd219c36b9dce",
+      "restore_edits": [
+        {
+          "start": 6,
+          "end": 7,
+          "lines": [
+            "Read, in order: `README.md`, `GDD.md`, `ARENA_LAYOUT.md`, `ASSET_MANIFEST.json`, `ASSET_CATALOG.md`, `TOOLCHAIN.md`, `UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md`, and `contracts/README.md`.\n"
+          ]
+        },
+        {
+          "start": 12,
+          "end": 13,
+          "lines": [
+            "- The only writable root is `project/`.\n"
+          ]
+        },
+        {
+          "start": 28,
+          "end": 29,
+          "lines": [
+            "Leave the completed candidate at `project/BomberStarter.uproject` and report only checks actually run, their real results, incomplete/unverified requirement IDs, and known player-facing limitations.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "legal/ASSET_LICENSE_MAP.json",
+      "published": "assets/legal/ASSET_LICENSE_MAP.json",
+      "sha256": "99b482a44edcdf969bab8172ed548c696d0a79275c542934d0be6f2d7fda5ec6",
+      "published_sha256": "8460fe3b08ecf2a65cbc5de4739081ac419eec0ed0c7f0db3a64a9723587f649",
+      "restore_edits": [
+        {
+          "start": 3,
+          "end": 4,
+          "lines": [
+            "  \"notice\": \"legal/MIT-Bomber-assets.txt\",\r\n"
+          ]
+        },
+        {
+          "start": 6,
+          "end": 7,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/M_Emissive_Master.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 11,
+          "end": 12,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_Bombs/M_Bomb.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 16,
+          "end": 17,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Blue.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 21,
+          "end": 22,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Pink.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 26,
+          "end": 27,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Silver.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 31,
+          "end": 32,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Yellow.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 36,
+          "end": 37,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Materials/MI_PlayerArrowStart.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 41,
+          "end": 42,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Meshes/SM_Bomb.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 46,
+          "end": 47,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/Meshes/SM_PlayerArrowStart.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 51,
+          "end": 52,
+          "lines": [
+            "      \"path\": \"project/Content/Bomber/SkeletalMeshes/SKEL_Bomber.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 56,
+          "end": 57,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Animations/MM_Manny_Idle.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 61,
+          "end": 62,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/M_Mannequin.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 66,
+          "end": 67,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_01.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 71,
+          "end": 72,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_02.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 76,
+          "end": 77,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Meshes/SKM_Quinn_Simple.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 81,
+          "end": 82,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_BN.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 86,
+          "end": 87,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_D.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 91,
+          "end": 92,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 96,
+          "end": 97,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_D.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 101,
+          "end": 102,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_MRA.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 106,
+          "end": 107,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_N.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 111,
+          "end": 112,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_D.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 116,
+          "end": 117,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_MRA.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 121,
+          "end": 122,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_N.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 126,
+          "end": 127,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Shared/T_UE_Logo_M.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 131,
+          "end": 132,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Box.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 136,
+          "end": 137,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Bomb.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 141,
+          "end": 142,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Fire.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 146,
+          "end": 147,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Skate.uasset\",\r\n"
+          ]
+        },
+        {
+          "start": 151,
+          "end": 152,
+          "lines": [
+            "      \"path\": \"project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Wall.uasset\",\r\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "legal/MIT-Bomber-assets.txt",
+      "published": "assets/legal/MIT-Bomber-assets.txt",
+      "sha256": "7a84f91ddd985a77e80d2b3276def099edc0fd0ae4a7ead1666f94375444c9f3",
+      "published_sha256": "7a84f91ddd985a77e80d2b3276def099edc0fd0ae4a7ead1666f94375444c9f3"
+    },
+    {
+      "source": "legal/README.md",
+      "published": "assets/legal/LICENSE_SCOPE.md",
+      "sha256": "4a5cb296aa97fbdee8c79dfe7906f234b454b764145630a18c4ec3bc8e3d3f15",
+      "published_sha256": "4a5cb296aa97fbdee8c79dfe7906f234b454b764145630a18c4ec3bc8e3d3f15"
+    },
+    {
+      "source": "project/.gitignore",
+      "published": "starter-project/.gitignore",
+      "sha256": "c9f9c3ca36a93d27bafb30e4c26e948be0a300f289cfe53f532a632ce22a0455",
+      "published_sha256": "c9f9c3ca36a93d27bafb30e4c26e948be0a300f289cfe53f532a632ce22a0455"
+    },
+    {
+      "source": "project/BomberStarter.uproject",
+      "published": "starter-project/BomberStarter.uproject",
+      "sha256": "625bf0aad43c06ad99ad7f2d62e20a349b4fec353febfb87605238982c3ff3de",
+      "published_sha256": "625bf0aad43c06ad99ad7f2d62e20a349b4fec353febfb87605238982c3ff3de"
+    },
+    {
+      "source": "project/Config/BomberArenaLayout.json",
+      "published": "starter-project/Config/BomberArenaLayout.json",
+      "sha256": "e908c49975ee92e7195acd3da49f220639bfd7952a00de39fd907a0252480351",
+      "published_sha256": "e908c49975ee92e7195acd3da49f220639bfd7952a00de39fd907a0252480351"
+    },
+    {
+      "source": "project/Config/DefaultEngine.ini",
+      "published": "starter-project/Config/DefaultEngine.ini",
+      "sha256": "1a4c715f25340133fd51375c8b6bf9d9e7fb75947cb37d00db9ac03dac023a54",
+      "published_sha256": "1a4c715f25340133fd51375c8b6bf9d9e7fb75947cb37d00db9ac03dac023a54"
+    },
+    {
+      "source": "project/Config/DefaultGame.ini",
+      "published": "starter-project/Config/DefaultGame.ini",
+      "sha256": "acf51b433f0eba2ff31cf5d8ff13bf0ad76b15957843694c145ea4b982d67d40",
+      "published_sha256": "acf51b433f0eba2ff31cf5d8ff13bf0ad76b15957843694c145ea4b982d67d40"
+    },
+    {
+      "source": "project/Config/DefaultGameUserSettings.ini",
+      "published": "starter-project/Config/DefaultGameUserSettings.ini",
+      "sha256": "df57875a4a7998d56d0cb5e9bccb60597a79a0f00c8176828db261d5a59f140d",
+      "published_sha256": "df57875a4a7998d56d0cb5e9bccb60597a79a0f00c8176828db261d5a59f140d"
+    },
+    {
+      "source": "project/Config/DefaultInput.ini",
+      "published": "starter-project/Config/DefaultInput.ini",
+      "sha256": "4d28e52122422f06d865ecef88e532948f7ef05d090d73075af0a1188bf0a562",
+      "published_sha256": "4d28e52122422f06d865ecef88e532948f7ef05d090d73075af0a1188bf0a562"
+    },
+    {
+      "source": "project/Content/Bomber/Materials/M_Emissive_Master.uasset",
+      "published": "starter-project/Content/Bomber/Materials/M_Emissive_Master.uasset",
+      "sha256": "0699c486ebbd7f7eb8ed75205f1cb72871bf85be5f609b470cb15852df7b37f7",
+      "published_sha256": "0699c486ebbd7f7eb8ed75205f1cb72871bf85be5f609b470cb15852df7b37f7"
+    },
+    {
+      "source": "project/Content/Bomber/Materials/MI_Bombs/M_Bomb.uasset",
+      "published": "starter-project/Content/Bomber/Materials/MI_Bombs/M_Bomb.uasset",
+      "sha256": "aa37b30f9e2d23c9e4830d7c4bbfb755471992b4412a22f053f24f07a446247a",
+      "published_sha256": "aa37b30f9e2d23c9e4830d7c4bbfb755471992b4412a22f053f24f07a446247a"
+    },
+    {
+      "source": "project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Blue.uasset",
+      "published": "starter-project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Blue.uasset",
+      "sha256": "21d8f5ee29dc2409ab26cdce26481cf4eccc76a8e56231d71efe535c3d9a3354",
+      "published_sha256": "21d8f5ee29dc2409ab26cdce26481cf4eccc76a8e56231d71efe535c3d9a3354"
+    },
+    {
+      "source": "project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Pink.uasset",
+      "published": "starter-project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Pink.uasset",
+      "sha256": "8ed55f76144e4ea67be36b0b8bcf7e6ef6b7a3c5c1f13a6c00c5476a9b52c916",
+      "published_sha256": "8ed55f76144e4ea67be36b0b8bcf7e6ef6b7a3c5c1f13a6c00c5476a9b52c916"
+    },
+    {
+      "source": "project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Silver.uasset",
+      "published": "starter-project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Silver.uasset",
+      "sha256": "f2822e38849cb341cbd7ada507bc3363aee0f7309a550d34b2cad0d4308265dc",
+      "published_sha256": "f2822e38849cb341cbd7ada507bc3363aee0f7309a550d34b2cad0d4308265dc"
+    },
+    {
+      "source": "project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Yellow.uasset",
+      "published": "starter-project/Content/Bomber/Materials/MI_Bombs/MI_Bomb_Yellow.uasset",
+      "sha256": "1dd0f1fd9a2c0f23cd2a45e97ca7aebfc15533ab4505fcf1a70b8f8034123348",
+      "published_sha256": "1dd0f1fd9a2c0f23cd2a45e97ca7aebfc15533ab4505fcf1a70b8f8034123348"
+    },
+    {
+      "source": "project/Content/Bomber/Materials/MI_PlayerArrowStart.uasset",
+      "published": "starter-project/Content/Bomber/Materials/MI_PlayerArrowStart.uasset",
+      "sha256": "be24335ca312bba837ed3986eba3e6d96ab6d6acfc966cfca06452d213ee7a30",
+      "published_sha256": "be24335ca312bba837ed3986eba3e6d96ab6d6acfc966cfca06452d213ee7a30"
+    },
+    {
+      "source": "project/Content/Bomber/Meshes/SM_Bomb.uasset",
+      "published": "starter-project/Content/Bomber/Meshes/SM_Bomb.uasset",
+      "sha256": "fc377d4340379a3a7cbcf74018fdcb8524b4926987d4f89f4f0d33463864f8a6",
+      "published_sha256": "fc377d4340379a3a7cbcf74018fdcb8524b4926987d4f89f4f0d33463864f8a6"
+    },
+    {
+      "source": "project/Content/Bomber/Meshes/SM_PlayerArrowStart.uasset",
+      "published": "starter-project/Content/Bomber/Meshes/SM_PlayerArrowStart.uasset",
+      "sha256": "1114d30c106ec306a4c1d41c584b7748cca564feafdc607798627292aa0e98c4",
+      "published_sha256": "1114d30c106ec306a4c1d41c584b7748cca564feafdc607798627292aa0e98c4"
+    },
+    {
+      "source": "project/Content/Bomber/SkeletalMeshes/SKEL_Bomber.uasset",
+      "published": "starter-project/Content/Bomber/SkeletalMeshes/SKEL_Bomber.uasset",
+      "sha256": "83ab3d681834911e811bf52802292d2d918052a70cb8fcbaeb5ac8f10758a16f",
+      "published_sha256": "83ab3d681834911e811bf52802292d2d918052a70cb8fcbaeb5ac8f10758a16f"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/BlockoutMap.uplugin",
+      "published": "starter-project/Plugins/BlockoutMap/BlockoutMap.uplugin",
+      "sha256": "e83201e92a4f0837b6d987791657317956e2335e48edf243e7bd3a939324c06e",
+      "published_sha256": "e83201e92a4f0837b6d987791657317956e2335e48edf243e7bd3a939324c06e"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Animations/MM_Manny_Idle.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Animations/MM_Manny_Idle.uasset",
+      "sha256": "1cbd9e9120bde2ec5f1bc82fa335679ad21a3842012a26cddb94d2d2539ea228",
+      "published_sha256": "1cbd9e9120bde2ec5f1bc82fa335679ad21a3842012a26cddb94d2d2539ea228"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/M_Mannequin.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/M_Mannequin.uasset",
+      "sha256": "e227093116da12734443c381fb402ae0c508a0015108a4533239a16c682a97d4",
+      "published_sha256": "e227093116da12734443c381fb402ae0c508a0015108a4533239a16c682a97d4"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_01.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_01.uasset",
+      "sha256": "0eb7e33313e3ac3ed5dd4c3f3c89750a18ddf29271e00f8ef703039a35d03a4d",
+      "published_sha256": "0eb7e33313e3ac3ed5dd4c3f3c89750a18ddf29271e00f8ef703039a35d03a4d"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_02.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Materials/Quinn/MI_Quinn_02.uasset",
+      "sha256": "0d674fc327b3d5dddd847061b1c88423eedb8274a20045d3aba6817cd49ce64d",
+      "published_sha256": "0d674fc327b3d5dddd847061b1c88423eedb8274a20045d3aba6817cd49ce64d"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Meshes/SKM_Quinn_Simple.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Meshes/SKM_Quinn_Simple.uasset",
+      "sha256": "ca3aef7d6fc4f05ea3bec05647e7b756b00f64fa8001a590721a53a31705e867",
+      "published_sha256": "ca3aef7d6fc4f05ea3bec05647e7b756b00f64fa8001a590721a53a31705e867"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_BN.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_BN.uasset",
+      "sha256": "e79c94da260884dbbf7003b896f291de5acaa5c1f2cf0a75143044ff90c13ad8",
+      "published_sha256": "e79c94da260884dbbf7003b896f291de5acaa5c1f2cf0a75143044ff90c13ad8"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_D.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_D.uasset",
+      "sha256": "0724df9913f29c30f0fce811d6d95cff8f28261574d6c11e96567170964f4b90",
+      "published_sha256": "0724df9913f29c30f0fce811d6d95cff8f28261574d6c11e96567170964f4b90"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Manny/T_Manny_01_MRA.uasset",
+      "sha256": "69da36dd1fe8c3128a2fd02998ee89ebe29f9217002464f8341597c3e9cb86ca",
+      "published_sha256": "69da36dd1fe8c3128a2fd02998ee89ebe29f9217002464f8341597c3e9cb86ca"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_D.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_D.uasset",
+      "sha256": "60d91a481e0ecccfdcb5a576583b9199622375edcd347f0f4e6495330ef3b821",
+      "published_sha256": "60d91a481e0ecccfdcb5a576583b9199622375edcd347f0f4e6495330ef3b821"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_MRA.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_MRA.uasset",
+      "sha256": "f94755b1a0afb76df0e01311f876a795b1a34be67c110515869f2aa13d96dad1",
+      "published_sha256": "f94755b1a0afb76df0e01311f876a795b1a34be67c110515869f2aa13d96dad1"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_N.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_01_N.uasset",
+      "sha256": "cb7effad1e88bc1c5271b8dfbeb6116c7605d1abf163c572611d137028b452b7",
+      "published_sha256": "cb7effad1e88bc1c5271b8dfbeb6116c7605d1abf163c572611d137028b452b7"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_D.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_D.uasset",
+      "sha256": "ba6db8596e76d378c9153b86dd36b1ac3db5acce5a7c32294cf1c642c2182df0",
+      "published_sha256": "ba6db8596e76d378c9153b86dd36b1ac3db5acce5a7c32294cf1c642c2182df0"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_MRA.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_MRA.uasset",
+      "sha256": "4f4d4974d5911c9c3e198539e985adfca3352d0c99c5fa491f17071685d0119a",
+      "published_sha256": "4f4d4974d5911c9c3e198539e985adfca3352d0c99c5fa491f17071685d0119a"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_N.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Quinn/T_Quinn_02_N.uasset",
+      "sha256": "6634c1c525eddc9d52bc40fe1ef24593d9df8bf9afcab7dcb577ce551448c112",
+      "published_sha256": "6634c1c525eddc9d52bc40fe1ef24593d9df8bf9afcab7dcb577ce551448c112"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Shared/T_UE_Logo_M.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Characters/Mannequins/Textures/Shared/T_UE_Logo_M.uasset",
+      "sha256": "8a7854ccb25b7649b5d440384aadb97dfe9969b45049805c1a960ee1b4d3f060",
+      "published_sha256": "8a7854ccb25b7649b5d440384aadb97dfe9969b45049805c1a960ee1b4d3f060"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Box.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Box.uasset",
+      "sha256": "6fccd03f76f5ef66ce9bf94cd8853143020f5fe302667cbff2456dae4fa459c0",
+      "published_sha256": "6fccd03f76f5ef66ce9bf94cd8853143020f5fe302667cbff2456dae4fa459c0"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Bomb.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Bomb.uasset",
+      "sha256": "dca67735633706d502dc188a3e09069f1e454176038034963b66336f0ddc7778",
+      "published_sha256": "dca67735633706d502dc188a3e09069f1e454176038034963b66336f0ddc7778"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Fire.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Fire.uasset",
+      "sha256": "5a6fe3ed6bfcc559da865d84b18087139b7b741061a34f6b4aaa7dfc50150edc",
+      "published_sha256": "5a6fe3ed6bfcc559da865d84b18087139b7b741061a34f6b4aaa7dfc50150edc"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Skate.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Powerup_Skate.uasset",
+      "sha256": "57b311161ed4567890e9841a682bb88612d410cbfdee14d72daa69c20cfb7650",
+      "published_sha256": "57b311161ed4567890e9841a682bb88612d410cbfdee14d72daa69c20cfb7650"
+    },
+    {
+      "source": "project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Wall.uasset",
+      "published": "starter-project/Plugins/BlockoutMap/Content/BlockoutMap/Meshes/SM_BlockoutMap_Wall.uasset",
+      "sha256": "c999547b2076ab67ef392bc84e16c9e3cca09ab87eb61c2d38383a954f0041a9",
+      "published_sha256": "c999547b2076ab67ef392bc84e16c9e3cca09ab87eb61c2d38383a954f0041a9"
+    },
+    {
+      "source": "project/README.md",
+      "published": "starter-project/README.md",
+      "sha256": "2b9f54bce4bf696561c2cd86a59e1f70442c0b12866d17908e1c33c88de7bf0d",
+      "published_sha256": "2b9f54bce4bf696561c2cd86a59e1f70442c0b12866d17908e1c33c88de7bf0d"
+    },
+    {
+      "source": "project/Source/BomberStarter/BomberStarter.Build.cs",
+      "published": "starter-project/Source/BomberStarter/BomberStarter.Build.cs",
+      "sha256": "5acf95844b2f6b04bb6bddb0ae81daf7e5f7fbf961be8227558356bbe28ec185",
+      "published_sha256": "5acf95844b2f6b04bb6bddb0ae81daf7e5f7fbf961be8227558356bbe28ec185"
+    },
+    {
+      "source": "project/Source/BomberStarter/BomberStarter.cpp",
+      "published": "starter-project/Source/BomberStarter/BomberStarter.cpp",
+      "sha256": "ef9d7b37eb9f48d78f1dd82132dba5660487fa1fd9d3ab7ece6df2313f1801ef",
+      "published_sha256": "ef9d7b37eb9f48d78f1dd82132dba5660487fa1fd9d3ab7ece6df2313f1801ef"
+    },
+    {
+      "source": "project/Source/BomberStarter/BomberStarterGameMode.cpp",
+      "published": "starter-project/Source/BomberStarter/BomberStarterGameMode.cpp",
+      "sha256": "55bc49254f05f1673854047b166e9e05393f0ec2285828cda4360c96eb5a5c87",
+      "published_sha256": "55bc49254f05f1673854047b166e9e05393f0ec2285828cda4360c96eb5a5c87"
+    },
+    {
+      "source": "project/Source/BomberStarter/BomberStarterGameMode.h",
+      "published": "starter-project/Source/BomberStarter/BomberStarterGameMode.h",
+      "sha256": "9ca6897f66be503eecc0318218f1315ab30aa8f6e82522e364a9e11ecb04f6dd",
+      "published_sha256": "9ca6897f66be503eecc0318218f1315ab30aa8f6e82522e364a9e11ecb04f6dd"
+    },
+    {
+      "source": "project/Source/BomberStarter/BomberStarterHealthState.cpp",
+      "published": "starter-project/Source/BomberStarter/BomberStarterHealthState.cpp",
+      "sha256": "624c5899e5ccd03d43b630f9e2b6cbc20cfdc18134c5953d5da7544a0525f705",
+      "published_sha256": "624c5899e5ccd03d43b630f9e2b6cbc20cfdc18134c5953d5da7544a0525f705"
+    },
+    {
+      "source": "project/Source/BomberStarter/BomberStarterHealthState.h",
+      "published": "starter-project/Source/BomberStarter/BomberStarterHealthState.h",
+      "sha256": "023df9fdf14b9268fc31512f207976443c7d1af7ab9ccfa19a222086cc5b4b57",
+      "published_sha256": "023df9fdf14b9268fc31512f207976443c7d1af7ab9ccfa19a222086cc5b4b57"
+    },
+    {
+      "source": "project/Source/BomberStarter/BomberStarterHUD.cpp",
+      "published": "starter-project/Source/BomberStarter/BomberStarterHUD.cpp",
+      "sha256": "69c393fbfe947825056f978378f19786e691bf58122450ef8767498b1653e5bc",
+      "published_sha256": "69c393fbfe947825056f978378f19786e691bf58122450ef8767498b1653e5bc"
+    },
+    {
+      "source": "project/Source/BomberStarter/BomberStarterHUD.h",
+      "published": "starter-project/Source/BomberStarter/BomberStarterHUD.h",
+      "sha256": "e24dff2637564264033daa15b0a5f47221bc97a24dec1387cf137fa69b60e11b",
+      "published_sha256": "e24dff2637564264033daa15b0a5f47221bc97a24dec1387cf137fa69b60e11b"
+    },
+    {
+      "source": "project/Source/BomberStarter.Target.cs",
+      "published": "starter-project/Source/BomberStarter.Target.cs",
+      "sha256": "5ab13229d85524746933f0e0bbb9e2ea275c932be064ba0ec87b25c6b44131dc",
+      "published_sha256": "5ab13229d85524746933f0e0bbb9e2ea275c932be064ba0ec87b25c6b44131dc"
+    },
+    {
+      "source": "project/Source/BomberStarterEditor.Target.cs",
+      "published": "starter-project/Source/BomberStarterEditor.Target.cs",
+      "sha256": "de18a0f57ab3d08b8236c2279f9100f2dead73cca21a7fa972c68d94fc582069",
+      "published_sha256": "de18a0f57ab3d08b8236c2279f9100f2dead73cca21a7fa972c68d94fc582069"
+    },
+    {
+      "source": "README.md",
+      "published": "tools/INPUT_GUIDE.md",
+      
+
+"restore_edits": [
+        {
+          "start": 9,
+          "end": 10,
+          "lines": [
+            "2. `README.md`\n"
+          ]
+        },
+        {
+          "start": 12,
+          "end": 16,
+          "lines": [
+            "5. `ASSET_MANIFEST.json`, then `ASSET_CATALOG.md`\n",
+            "6. `TOOLCHAIN.md`\n",
+            "7. `UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md`\n",
+            "8. `contracts/README.md`\n"
+          ]
+        },
+        {
+          "start": 24,
+          "end": 26,
+          "lines": [
+            "| Fixed cell layout and crate contents | `project/Config/BomberArenaLayout.json` |\n",
+            "| Asset paths, hashes, provenance, and dependencies | `ASSET_CATALOG.json` |\n"
+          ]
+        },
+        {
+          "start": 27,
+          "end": 28,
+          "lines": [
+            "| Engine, entry, paths, and release policy | `BENCHMARK_MANIFEST.json` and `TOOLCHAIN.md` |\n"
+          ]
+        },
+        {
+          "start": 37,
+          "end": 39,
+          "lines": [
+            "| `project/` | Answer-free Unreal project, clean asset kit, and candidate root | Yes |\n",
+            "| `legal/` | Offline license text and per-file mapping | No |\n"
+          ]
+        },
+        {
+          "start": 40,
+          "end": 41,
+          "lines": [
+            "| `tests/PublicSmoke/` | Public build/run/reopen/cleanup health check | No |\n"
+          ]
+        },
+        {
+          "start": 48,
+          "end": 49,
+          "lines": [
+            "Open `project/BomberStarter.uproject`. The starter renders a stable English health screen and publishes `provider_ready=false` with `game_state=null`. It contains no playable player, grid arena, bomb, explosion, crate, power-up, duel HUD, countdown, timer, result, or gameplay restart.\n"
+          ]
+        },
+        {
+          "start": 70,
+          "end": 71,
+          "lines": [
+            "pwsh -NoProfile -File tests/PublicSmoke/Invoke-PublicSmoke.ps1 `\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tests/PublicSmoke/Invoke-PublicSmoke.ps1",
+      "published": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
+      
+
+"restore_edits": [
+        {
+          "start": 34,
+          "end": 35,
+          "lines": [
+            "        [Parameter(Mandatory)][ValidateSet('release', 'project', 'executor', 'environment', 'cleanup')][string]$Domain,\n"
+          ]
+        },
+        {
+          "start": 227,
+          "end": 228,
+          "lines": [
+            "$ProjectPath = Join-Path $InputFull 'project/BomberStarter.uproject'\n"
+          ]
+        },
+        {
+          "start": 254,
+          "end": 255,
+          "lines": [
+            "            [pscustomobject]@{ path = [string]$benchmark.tooling.capabilities_contract; sha256 = [string]$benchmark.tooling.capabilities_contract_sha256 },\n",
+            "            [pscustomobject]@{ path = [string]$benchmark.engine.capability_validation_summary; sha256 = [string]$benchmark.tooling.validation_summary_sha256 }\n"
+          ]
+        },
+        {
+          "start": 295,
+          "end": 296,
+          "lines": [
+            "        Add-SmokeFault -Domain 'project' -Code 'source_build_failed'\n"
+          ]
+        },
+        {
+          "start": 467,
+          "end": 468,
+          "lines": [
+            "        project_file = 'project/BomberStarter.uproject'\n"
+          ]
+        },
+        {
+          "start": 487,
+          "end": 490,
+          "lines": [
+            "\r\n",
+            "\r\n",
+            "\r\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tests/PublicSmoke/README.md",
+      "published": "self-check/PublicSmoke/CONTRACT.md",
+      "sha256": "ddc5ac484526fa622785e20c7edcc15fd3721a332b462c4e93eb4422cdaed3ce",
+      "published_sha256": "99836c1617fb2aa64906a9bdb8f5b331069f26d9dc19fb144cb6ee51c233135c",
+      "restore_edits": [
+        {
+          "start": 11,
+          "end": 12,
+          "lines": [
+            "pwsh -NoProfile -File tests/PublicSmoke/Invoke-PublicSmoke.ps1 `\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tests/PublicSmoke/schemas/public-smoke-result.schema.json",
+      "published": "self-check/PublicSmoke/schemas/public-smoke-result.schema.json",
+      
+
+"restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "  \"$id\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n"
+          ]
+        },
+        {
+          "start": 14,
+          "end": 15,
+          "lines": [
+            "    \"project\",\n"
+          ]
+        },
+        {
+          "start": 54,
+          "end": 55,
+          "lines": [
+            "    \"project\": {\n"
+          ]
+        },
+        {
+          "start": 63,
+          "end": 64,
+          "lines": [
+            "          \"const\": \"project/BomberStarter.uproject\"\n"
+          ]
+        },
+        {
+          "start": 163,
+          "end": 164,
+          "lines": [
+            "              \"project\",\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "THIRD_PARTY_NOTICES.md",
+      "published": "THIRD_PARTY_NOTICES.md",
+      "sha256": "cdff6a91a7eafe8e0c56f9c7db4606776198380b7dec6c5c84bf34a197c522cc",
+      "published_sha256": "c63492ff26d5331042b01ccb210fc5559029d79f2d6c45831f5917cc07958ffc",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "The public package contains a limited visual asset subset derived from the upstream Bomber project under the MIT License. The required notice is preserved offline at `legal/MIT-Bomber-assets.txt` and mapped per released asset in `legal/ASSET_LICENSE_MAP.json`.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "TOOLCHAIN.md",
+      "published": "tools/TOOLCHAIN.md",
+      "sha256": "a588bd3cd2461de8634f97d90f44c76799b5268c0cba33fbfc037fd3941c0106",
+      "published_sha256": "4c8328d3e54683bf87b1adc4fb08484786bf6cc541a5360139c8a09cc1b474d6",
+      "restore_edits": [
+        {
+          "start": 11,
+          "end": 13,
+          "lines": [
+            "| Project root | `project/` |\n",
+            "| Project file | `project/BomberStarter.uproject` |\n"
+          ]
+        },
+        {
+          "start": 14,
+          "end": 16,
+          "lines": [
+            "| Fixed layout | `project/Config/BomberArenaLayout.json` |\n",
+            "| Content-only asset plugin | `project/Plugins/BlockoutMap/BlockoutMap.uplugin` |\n"
+          ]
+        },
+        {
+          "start": 26,
+          "end": 27,
+          "lines": [
+            "& <engine-root>/Engine/Binaries/Win64/UnrealEditor.exe project/BomberStarter.uproject -NoSplash -NoP4\n"
+          ]
+        },
+        {
+          "start": 28,
+          "end": 29,
+          "lines": [
+            "& <engine-root>/Engine/Build/BatchFiles/Build.bat BomberStarterEditor Win64 Development project/BomberStarter.uproject -WaitMutex -NoHotReloadFromIDE\n"
+          ]
+        },
+        {
+          "start": 30,
+          "end": 31,
+          "lines": [
+            "& <engine-root>/Engine/Binaries/Win64/UnrealEditor.exe project/BomberStarter.uproject -game -windowed -ResX=1280 -ResY=720 -NoSplash -NoP4\n"
+          ]
+        },
+        {
+          "start": 49,
+          "end": 50,
+          "lines": [
+            "Exact hashes and dependencies are in `ASSET_CATALOG.json`. Primary logical paths are:\n"
+          ]
+        },
+        {
+          "start": 74,
+          "end": 76,
+          "lines": [
+            "- Writable: `project/`\n",
+            "- Protected: everything outside `project/`\n"
+          ]
+        },
+        {
+          "start": 80,
+          "end": 81,
+          "lines": [
+            "Use `UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md` and the compressed interface catalog for individual engine interfaces. Query examples:\n"
+          ]
+        },
+        {
+          "start": 93,
+          "end": 94,
+          "lines": [
+            "Public runtime smoke is documented in `tests/PublicSmoke/README.md`; it resolves UE 5.7.4 automatically when `-EngineRoot` is omitted and validates starter health only.\n"
+          ]
+        }
+      ]
+    },
+    
+
+
+
+
+
+{
+      "source": "tools/Resolve-Unreal57.ps1",
+      "published": "tools/Resolve-Unreal57.ps1",
+      "sha256": "12581ab0254ec09162a8783b412a71951418e8eb9a38a6e9f137d4e9ead873c5",
+      "published_sha256": "12581ab0254ec09162a8783b412a71951418e8eb9a38a6e9f137d4e9ead873c5"
+    },
+    {
+      "source": "tools/Search-UnrealInterfaceCatalog.ps1",
+      "published": "tools/Search-UnrealInterfaceCatalog.ps1",
+      "sha256": "0b7143a5fd33e3390aa4f0a7fd5b50e928e754c1443cf7c740025572cef809c8",
+      "published_sha256": "254116a13888bdf044f04f2d8da2ce8bf005342ef5cc2d6a7b2db9cd9564095b",
+      "restore_edits": [
+        {
+          "start": 6,
+          "end": 8,
+          "lines": [
+            "    [string]$CatalogPath = (Join-Path $PSScriptRoot '../UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz'),\n",
+            "    [string]$IndexPath = (Join-Path $PSScriptRoot '../UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json')\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tools/Test-PublicInput.ps1",
+      "published": "tools/Test-PublicInput.ps1",
+      
+
+"restore_edits": [
+        {
+          "start": 50,
+          "end": 55,
+          "lines": [
+            "    Assert-PublicInput ($benchmark.paths.project_file -ceq 'project/BomberStarter.uproject') 'Project file identity is incorrect.'\n",
+            "    Assert-PublicInput ($benchmark.paths.fixed_layout -ceq 'project/Config/BomberArenaLayout.json') 'Fixed layout identity is incorrect.'\n",
+            "    Assert-PublicInput ($benchmark.paths.tool_catalog_index -ceq 'UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json') 'Catalog index path is incorrect.'\n",
+            "    Assert-PublicInput ($benchmark.paths.tool_catalog_archive -ceq 'UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz') 'Catalog archive path is incorrect.'\n",
+            "    Assert-PublicInput ($benchmark.workspace.writable_roots.Count -eq 1 -and $benchmark.workspace.writable_roots[0] -ceq 'project') 'project must be the only writable root.'\n"
+          ]
+        },
+        {
+          "start": 97,
+          "end": 99,
+          "lines": [
+            "    $catalogIndexPath = Join-Path $root 'UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json'\n",
+            "    $catalogArchivePath = Join-Path $root 'UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz'\n"
+          ]
+        },
+        {
+          "start": 108,
+          "end": 109,
+          "lines": [
+            "    $uproject = Read-JsonFile (Join-Path $root 'project/BomberStarter.uproject')\n"
+          ]
+        },
+        {
+          "start": 112,
+          "end": 113,
+          "lines": [
+            "    $pluginDescriptor = Read-JsonFile (Join-Path $root 'project/Plugins/BlockoutMap/BlockoutMap.uplugin')\n"
+          ]
+        },
+        {
+          "start": 128,
+          "end": 129,
+          "lines": [
+            "    $sourceRoot = Join-Path $root 'project'\n"
+          ]
+        },
+        {
+          "start": 138,
+          "end": 139,
+          "lines": [
+            "    $assetAllowlist = @($assetManifest.assets | ForEach-Object { ([string]$_.path).Substring('project/'.Length) } | Sort-Object)\n"
+          ]
+        },
+        {
+          "start": 147,
+          "end": 148,
+          "lines": [
+            "    $inputConfig = Get-Content (Join-Path $root 'project/Config/DefaultInput.ini') -Raw -Encoding UTF8\n"
+          ]
+        },
+        {
+          "start": 155,
+          "end": 156,
+          "lines": [
+            "    $assetCatalog = Read-JsonFile (Join-Path $root 'ASSET_CATALOG.json')\n"
+          ]
+        },
+        {
+          "start": 187,
+          "end": 188,
+          "lines": [
+            "            Assert-PublicInput (@(Get-ChildItem $path -File -Recurse -ErrorAction SilentlyContinue).Count -eq 0) \"Generated directory contains released files: project/$generated\"\n"
+          ]
+        },
+        {
+          "start": 207,
+          "end": 208,
+          "lines": [
+            "    $requiredReadOrder = @('INITIAL_AGENT_PROMPT.md','README.md','GDD.md','ARENA_LAYOUT.md','ASSET_MANIFEST.json','ASSET_CATALOG.md','TOOLCHAIN.md','UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md','contracts/README.md')\n"
+          ]
+        }
+      ]
+    },
+    
+
+
+
+
+
+{
+      "source": "UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
+      "published": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
+      "sha256": "44fca8ffb2231ff5f1147673d671823f46068ce369aafae2eff68c13c6d711f0",
+      "published_sha256": "bd1b60f121dc840a67bdc9dfccab11bcd0b9221ea1fd23a3fa411bd758197c1e",
+      "restore_edits": [
+        {
+          "start": 66,
+          "end": 67,
+          "lines": [
+            "  \"catalog_file\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz",
+      "published": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz",
+      "sha256": "750f1bd26572c5f4d3e5c2afe7fce14d5d7c76aad4ee806151ced72924a6dfd0",
+      "published_sha256": "750f1bd26572c5f4d3e5c2afe7fce14d5d7c76aad4ee806151ced72924a6dfd0"
+    },
+    {
+      "source": "UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md",
+      "published": "tools/TOOL_GUIDE.md",
+      "sha256": "b50349fc1a369bfac34c79da242461d447a06472b5ab20075a65978681923382",
+      "published_sha256": "c780825aab0e60a7dce3924b258e7a9570de1031abacb5466569da7674662c20",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "This is the task's public, single-interface guide for the published Unreal benchmark surface. It documents interfaces that a candidate or launcher may call independently; it is not a gameplay recipe, evaluator, score definition, or reference implementation. Task-specific paths remain in `TOOLCHAIN.md`, and gameplay acceptance remains solely in `GDD.md` Section 6.\n"
+          ]
+        },
+        {
+          "start": 22,
+          "end": 23,
+          "lines": [
+            "The adjacent `UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json` and `UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz` form the version-bound all-interface catalog. It contains 546,387 independently addressable records extracted from 74,084 UE 5.7.4 source/header files, engine config defaults, reflection macros, console registrations, UBT/UAT commands, and every installed engine plugin descriptor and module.\n"
+          ]
+        },
+        {
+          "start": 56,
+          "end": 57,
+          "lines": [
+            "  -ProjectPath '<input>/project/BomberStarter.uproject' `\n"
+          ]
+        },
+        {
+          "start": 196,
+          "end": 201,
+          "lines": []
+        }
+      ]
+    }
+  ]
+}

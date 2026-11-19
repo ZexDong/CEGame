@@ -1,0 +1,10 @@
+{
+  "build_seconds": 600,
+  "launch_seconds": 120,
+  "case_setup_seconds": 18,
+  "case_count": 41,
+  "declared_serial_worst_case_seconds": 2414,
+  "evidence_margin_seconds": 600,
+  "session_watchdog_seconds": 3014,
+  "timeout_policy": "Candidate bounded behavior timeout is zero; exhausted host or authored budget is run_invalid."
+}

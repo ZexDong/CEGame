@@ -1,0 +1,1658 @@
+{
+  "schema_version": "2.0",
+  "evaluator_version": "2.0.0",
+  "source_catalog": "src/native/catalog/checkpoints.json",
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "aggregation": "Equal native checkpoints per dimension. Six-decimal weights distribute integer micro-point remainders in fixed catalog order; this is a new serialization version. Native one-decimal diagnostic totals are retained only in run artifacts.",
+  "d6": {
+    "protocol": "historical_three_rounds",
+    "rounds": 3,
+    "states": "d6/",
+    "prompt": "Fixed prompt in d6/; unchanged bytes and reference hashes",
+    "model_and_parameters": "Native model bindings and protocol files in d6/; direct-conversation protocols require external image review with the recorded actual model identity. No credential or private endpoint is bundled.",
+    "compatibility": "Public result format 2.1 records the actual native multi-state/three-round protocol. It does not silently migrate old scores or assert equivalence with a different D6 protocol.",
+    "reference_scope": "Bounded adaptations as declared by each fixed reference manifest; not a claim of faithful upstream-game recreation."
+  },
+  "checks": [
+    {
+      "id": "D1-01",
+      "dimension": "D1",
+      "requirement_ids": [
+        "QUALITY-01"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 4
+      },
+      "pass_condition": "Project descriptor is valid and recognized by the specified Unreal toolchain.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "static",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D1-01",
+        "dimension": "D1",
+        "stage": "static",
+        "source_ids": [
+          "QUALITY-01"
+        ],
+        "summary": "Project descriptor is valid and recognized by the specified Unreal toolchain.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D1-02",
+      "dimension": "D1",
+      "requirement_ids": [
+        "QUALITY-01",
+        "QUALITY-05"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 4
+      },
+      "pass_condition": "The Unreal Engine 5.7.4 editor target builds without a blocking error.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "static",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D1-02",
+        "dimension": "D1",
+        "stage": "static",
+        "source_ids": [
+          "QUALITY-01",
+          "QUALITY-05"
+        ],
+        "summary": "The Unreal Engine 5.7.4 editor target builds without a blocking error.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D1-03",
+      "dimension": "D1",
+      "requirement_ids": [
+        "QUALITY-01",
+        "QUALITY-05",
+        "CONTENT-01"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 4
+      },
+      "pass_condition": "The candidate starts from the documented entry and produces a healthy rendered client frame.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "static",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D1-03",
+        "dimension": "D1",
+        "stage": "static",
+        "source_ids": [
+          "QUALITY-01",
+          "QUALITY-05",
+          "CONTENT-01"
+        ],
+        "summary": "The candidate starts from the documented entry and produces a healthy rendered client frame.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D1-04",
+      "dimension": "D1",
+      "requirement_ids": [
+        "QUALITY-01"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 4
+      },
+      "pass_condition": "No-input startup publishes a current, schema-valid public bridge bound to this process.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "static",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D1-04",
+        "dimension": "D1",
+        "stage": "static",
+        "source_ids": [
+          "QUALITY-01"
+        ],
+        "summary": "No-input startup publishes a current, schema-valid public bridge bound to this process.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D2-01",
+      "dimension": "D2",
+      "requirement_ids": [
+        "CONTENT-01",
+        "RULE-02"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 12
+      },
+      "pass_condition": "The direct-entry arena, exactly two fighters, floor, bounds, HUD, and controls are present at runtime.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-01",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "source_ids": [
+          "CONTENT-01",
+          "RULE-02"
+        ],
+        "summary": "The direct-entry arena, exactly two fighters, floor, bounds, HUD, and controls are present at runtime.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D2-02",
+      "dimension": "D2",
+      "requirement_ids": [
+        "INPUT-01"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 12
+      },
+      "pass_condition": "Horizontal movement is present and usable.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-02",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "source_ids": [
+          "INPUT-01"
+        ],
+        "summary": "Horizontal movement is present and usable.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D2-03",
+      "dimension": "D2",
+      "requirement_ids": [
+        "INPUT-02"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 12
+      },
+      "pass_condition": "A grounded jump is present and usable.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-03",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "source_ids": [
+          "INPUT-02"
+        ],
+        "summary": "A grounded jump is present and usable.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D2-04",
+      "dimension": "D2",
+      "requirement_ids": [
+        "COMBAT-01"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 12
+      },
+      "pass_condition": "The close strike is present and produces a basic hit or miss result.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-04",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "source_ids": [
+          "COMBAT-01"
+        ],
+        "summary": "The close strike is present and produces a basic hit or miss result.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D2-05",
+      "dimension": "D2",
+      "requirement_ids": [
+        "COMBAT-02",
+        "COMBAT-03"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 12
+      },
+      "pass_condition": "The energy bolt, readiness state, and cooldown rejection are present.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-05",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "source_ids": [
+          "COMBAT-02",
+          "COMBAT-03"
+        ],
+        "summary": "The energy bolt, readiness state, and cooldown rejection are present.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D2-06",
+      "dimension": "D2",
+      "requirement_ids": [
+        "DEFENSE-01"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 12
+      },
+      "pass_condition": "The rival telegraph and pulse cadence are present.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-06",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "source_ids": [
+          "DEFENSE-01"
+        ],
+        "summary": "The rival telegraph and pulse cadence are present.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D2-07",
+      "dimension": "D2",
+      "requirement_ids": [
+        "DEFENSE-02"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 12
+      },
+      "pass_condition": "The held block and guard resolution are present.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-07",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "source_ids": [
+          "DEFENSE-02"
+        ],
+        "summary": "The held block and guard resolution are present.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D2-08",
+      "dimension": "D2",
+      "requirement_ids": [
+        "TERMINAL-01",
+        "TERMINAL-02"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 12
+      },
+      "pass_condition": "Runtime win and loss outcomes plus terminal lock are present.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-08",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "source_ids": [
+          "TERMINAL-01",
+          "TERMINAL-02"
+        ],
+        "summary": "Runtime win and loss outcomes plus terminal lock are present.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D2-09",
+      "dimension": "D2",
+      "requirement_ids": [
+        "LIFECYCLE-01",
+        "LIFECYCLE-02"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 12
+      },
+      "pass_condition": "In-process restart and fresh-process reopen are present.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-09",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "source_ids": [
+          "LIFECYCLE-01",
+          "LIFECYCLE-02"
+        ],
+        "summary": "In-process restart and fresh-process reopen are present.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D2-10",
+      "dimension": "D2",
+      "requirement_ids": [
+        "INTERFACE-01",
+        "INTERFACE-02"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 12
+      },
+      "pass_condition": "Health, bolt, telegraph, hit, guard, rejection, and result feedback are present.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-10",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "source_ids": [
+          "INTERFACE-01",
+          "INTERFACE-02"
+        ],
+        "summary": "Health, bolt, telegraph, hit, guard, rejection, and result feedback are present.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D2-11",
+      "dimension": "D2",
+      "requirement_ids": [
+        "ASSET-01"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 12
+      },
+      "pass_condition": "Both visible fighters use the supplied Manny body with distinct color treatment.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-11",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "source_ids": [
+          "ASSET-01"
+        ],
+        "summary": "Both visible fighters use the supplied Manny body with distinct color treatment.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D2-12",
+      "dimension": "D2",
+      "requirement_ids": [
+        "ASSET-02"
+      ],
+      "max_score": 2.5,
+      "exact_weight": {
+        "numerator": 30,
+        "denominator": 12
+      },
+      "pass_condition": "All eight supplied clips visibly play for their required roles during normal gameplay.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D2-12",
+        "dimension": "D2",
+        "stage": "dynamic",
+        "source_ids": [
+          "ASSET-02"
+        ],
+        "summary": "All eight supplied clips visibly play for their required roles during normal gameplay.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D3-01",
+      "dimension": "D3",
+      "requirement_ids": [
+        "INPUT-01"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 10
+      },
+      "pass_condition": "Movement remains bounded, stops after release, reverses correctly, and keeps the player facing the rival.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-01",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "source_ids": [
+          "INPUT-01"
+        ],
+        "summary": "Movement remains bounded, stops after release, reverses correctly, and keeps the player facing the rival.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D3-02",
+      "dimension": "D3",
+      "requirement_ids": [
+        "INPUT-02"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 10
+      },
+      "pass_condition": "Jump becomes airborne once, rejects an airborne second jump, and lands grounded.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-02",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "source_ids": [
+          "INPUT-02"
+        ],
+        "summary": "Jump becomes airborne once, rejects an airborne second jump, and lands grounded.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D3-03",
+      "dimension": "D3",
+      "requirement_ids": [
+        "COMBAT-01"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 10
+      },
+      "pass_condition": "A close strike deals exactly 25 once in range, deals zero out of range, and never underflows health.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-03",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "source_ids": [
+          "COMBAT-01"
+        ],
+        "summary": "A close strike deals exactly 25 once in range, deals zero out of range, and never underflows health.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D3-04",
+      "dimension": "D3",
+      "requirement_ids": [
+        "COMBAT-02"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 10
+      },
+      "pass_condition": "A bolt deals exactly 15 once, enforces one active projectile, and honors the 1.0-second cooldown.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-04",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "source_ids": [
+          "COMBAT-02"
+        ],
+        "summary": "A bolt deals exactly 15 once, enforces one active projectile, and honors the 1.0-second cooldown.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D3-05",
+      "dimension": "D3",
+      "requirement_ids": [
+        "COMBAT-03"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 10
+      },
+      "pass_condition": "Whiffs and cooldown rejections preserve health and object counts and do not extend cooldown.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-05",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "source_ids": [
+          "COMBAT-03"
+        ],
+        "summary": "Whiffs and cooldown rejections preserve health and object counts and do not extend cooldown.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D3-06",
+      "dimension": "D3",
+      "requirement_ids": [
+        "DEFENSE-01",
+        "RULE-02"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 10
+      },
+      "pass_condition": "The stationary rival starts each telegraph after 3.0 seconds, resolves after 0.75 seconds, and deals exactly 20 once.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-06",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "source_ids": [
+          "DEFENSE-01",
+          "RULE-02"
+        ],
+        "summary": "The stationary rival starts each telegraph after 3.0 seconds, resolves after 0.75 seconds, and deals exactly 20 once.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D3-07",
+      "dimension": "D3",
+      "requirement_ids": [
+        "DEFENSE-02"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 10
+      },
+      "pass_condition": "Block held through impact deals zero damage, resolves one guard, ends on release, and has no forbidden side effects.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-07",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "source_ids": [
+          "DEFENSE-02"
+        ],
+        "summary": "Block held through impact deals zero damage, resolves one guard, ends on release, and has no forbidden side effects.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D3-08",
+      "dimension": "D3",
+      "requirement_ids": [
+        "RULE-01",
+        "RULE-02",
+        "QUALITY-06"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 10
+      },
+      "pass_condition": "Health, fighter counts, projectile counts, positions, synchronized HUD truth, and repeated-run stability remain deterministic.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-08",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "source_ids": [
+          "RULE-01",
+          "RULE-02",
+          "QUALITY-06"
+        ],
+        "summary": "Health, fighter counts, projectile counts, positions, synchronized HUD truth, and repeated-run stability remain deterministic.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D3-09",
+      "dimension": "D3",
+      "requirement_ids": [
+        "TERMINAL-01"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 10
+      },
+      "pass_condition": "KO resolves exactly one health-consistent PLAYER WINS, RIVAL WINS, or DRAW result.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-09",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "source_ids": [
+          "TERMINAL-01"
+        ],
+        "summary": "KO resolves exactly one health-consistent PLAYER WINS, RIVAL WINS, or DRAW result.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D3-10",
+      "dimension": "D3",
+      "requirement_ids": [
+        "TERMINAL-02"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 10
+      },
+      "pass_condition": "Terminal state ignores gameplay input, cancels pulses/projectiles, and remains stable beyond 3.5 seconds.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D3-10",
+        "dimension": "D3",
+        "stage": "dynamic",
+        "source_ids": [
+          "TERMINAL-02"
+        ],
+        "summary": "Terminal state ignores gameplay input, cancels pulses/projectiles, and remains stable beyond 3.5 seconds.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D4-01",
+      "dimension": "D4",
+      "requirement_ids": [
+        "CONTENT-01",
+        "QUALITY-02"
+      ],
+      "max_score": 4.0,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 5
+      },
+      "pass_condition": "A normal-input player journey begins directly in a playable active round.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D4-01",
+        "dimension": "D4",
+        "stage": "dynamic",
+        "source_ids": [
+          "CONTENT-01",
+          "QUALITY-02"
+        ],
+        "summary": "A normal-input player journey begins directly in a playable active round.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D4-02",
+      "dimension": "D4",
+      "requirement_ids": [
+        "COMBAT-01",
+        "COMBAT-02",
+        "TERMINAL-01"
+      ],
+      "max_score": 4.0,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 5
+      },
+      "pass_condition": "A normal-input journey can reach a player win.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D4-02",
+        "dimension": "D4",
+        "stage": "dynamic",
+        "source_ids": [
+          "COMBAT-01",
+          "COMBAT-02",
+          "TERMINAL-01"
+        ],
+        "summary": "A normal-input journey can reach a player win.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D4-03",
+      "dimension": "D4",
+      "requirement_ids": [
+        "DEFENSE-01",
+        "TERMINAL-01"
+      ],
+      "max_score": 4.0,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 5
+      },
+      "pass_condition": "Natural unblocked pulses can reach a rival win.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D4-03",
+        "dimension": "D4",
+        "stage": "dynamic",
+        "source_ids": [
+          "DEFENSE-01",
+          "TERMINAL-01"
+        ],
+        "summary": "Natural unblocked pulses can reach a rival win.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D4-04",
+      "dimension": "D4",
+      "requirement_ids": [
+        "LIFECYCLE-01"
+      ],
+      "max_score": 4.0,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 5
+      },
+      "pass_condition": "Restart creates a new round identity and restores every specified fresh-round field.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D4-04",
+        "dimension": "D4",
+        "stage": "dynamic",
+        "source_ids": [
+          "LIFECYCLE-01"
+        ],
+        "summary": "Restart creates a new round identity and restores every specified fresh-round field.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D4-05",
+      "dimension": "D4",
+      "requirement_ids": [
+        "LIFECYCLE-02"
+      ],
+      "max_score": 4.0,
+      "exact_weight": {
+        "numerator": 20,
+        "denominator": 5
+      },
+      "pass_condition": "Reopen creates a new process identity with no retained duel progress.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D4-05",
+        "dimension": "D4",
+        "stage": "dynamic",
+        "source_ids": [
+          "LIFECYCLE-02"
+        ],
+        "summary": "Reopen creates a new process identity with no retained duel progress.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D5-01",
+      "dimension": "D5",
+      "requirement_ids": [
+        "CONTENT-01",
+        "INTERFACE-01",
+        "QUALITY-03"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 5
+      },
+      "pass_condition": "The controls, fighter labels, health values, bars, and bolt state are visible and readable in a 1280 x 720 client capture.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D5-01",
+        "dimension": "D5",
+        "stage": "dynamic",
+        "source_ids": [
+          "CONTENT-01",
+          "INTERFACE-01",
+          "QUALITY-03"
+        ],
+        "summary": "The controls, fighter labels, health values, bars, and bolt state are visible and readable in a 1280 x 720 client capture.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D5-02",
+      "dimension": "D5",
+      "requirement_ids": [
+        "INPUT-01",
+        "INPUT-02",
+        "QUALITY-04"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 5
+      },
+      "pass_condition": "Movement, airborne displacement, landing, and idle recovery produce perceptible synchronized changes.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D5-02",
+        "dimension": "D5",
+        "stage": "dynamic",
+        "source_ids": [
+          "INPUT-01",
+          "INPUT-02",
+          "QUALITY-04"
+        ],
+        "summary": "Movement, airborne displacement, landing, and idle recovery produce perceptible synchronized changes.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D5-03",
+      "dimension": "D5",
+      "requirement_ids": [
+        "COMBAT-01",
+        "COMBAT-02",
+        "COMBAT-03",
+        "INTERFACE-02"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 5
+      },
+      "pass_condition": "Strike, bolt, hit, WHIFF, and COOLDOWN feedback are visible and truthful.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D5-03",
+        "dimension": "D5",
+        "stage": "dynamic",
+        "source_ids": [
+          "COMBAT-01",
+          "COMBAT-02",
+          "COMBAT-03",
+          "INTERFACE-02"
+        ],
+        "summary": "Strike, bolt, hit, WHIFF, and COOLDOWN feedback are visible and truthful.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D5-04",
+      "dimension": "D5",
+      "requirement_ids": [
+        "DEFENSE-01",
+        "DEFENSE-02",
+        "INTERFACE-02"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 5
+      },
+      "pass_condition": "Telegraph, block pose, guard flash, and BLOCKED feedback are visible and truthful.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D5-04",
+        "dimension": "D5",
+        "stage": "dynamic",
+        "source_ids": [
+          "DEFENSE-01",
+          "DEFENSE-02",
+          "INTERFACE-02"
+        ],
+        "summary": "Telegraph, block pose, guard flash, and BLOCKED feedback are visible and truthful.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D5-05",
+      "dimension": "D5",
+      "requirement_ids": [
+        "TERMINAL-01",
+        "TERMINAL-02",
+        "LIFECYCLE-01"
+      ],
+      "max_score": 2.0,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 5
+      },
+      "pass_condition": "Result banners persist and restart visibly restores the fresh arena and HUD.",
+      "partial_condition": "No partial credit; the native checkpoint is binary.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": null,
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "dynamic",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D5-05",
+        "dimension": "D5",
+        "stage": "dynamic",
+        "source_ids": [
+          "TERMINAL-01",
+          "TERMINAL-02",
+          "LIFECYCLE-01"
+        ],
+        "summary": "Result banners persist and restart visibly restores the fresh arena and HUD.",
+        "verdict_values": [
+          "pass",
+          "fail",
+          "unreachable"
+        ]
+      }
+    },
+    {
+      "id": "D6-initial_duel",
+      "dimension": "D6",
+      "requirement_ids": [
+        "ASSET-01",
+        "ASSET-02"
+      ],
+      "max_score": 3.333334,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 3
+      },
+      "pass_condition": "Apply the fixed five-criterion visual prompt to this state in each of the three frozen rounds; average the state scores.",
+      "partial_condition": "D6 uses five criteria in 0.5 increments per criterion and the frozen mean over states and rounds.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": "initial_duel",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "fixed_visual",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D6-initial_duel",
+        "dimension": "D6",
+        "requirements": [
+          "ASSET-01",
+          "ASSET-02"
+        ],
+        "question": "Apply the fixed five-criterion visual prompt to this state in each of the three frozen rounds; average the state scores.",
+        "method": "fixed_visual",
+        "case": "initial_duel",
+        "reference_binding": {
+          "id": "initial_duel",
+          "label": "Initial playable duel",
+          "reference": "reference/initial_duel.png",
+          "sha256": "ca52e3ceddc0ca5ee39f8eb713ac0552dc1e48a01c5986b2b185a584be046875",
+          "raw_source_sha256": "bf3d164737abcd0918f6a8d9f55a6da3c1b0644378534c090242d92270da7d68",
+          "candidate_capture": "d6-initial",
+          "capture_case": "visual-initial"
+        }
+      }
+    },
+    {
+      "id": "D6-engaged_duel",
+      "dimension": "D6",
+      "requirement_ids": [
+        "ASSET-01",
+        "ASSET-02"
+      ],
+      "max_score": 3.333333,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 3
+      },
+      "pass_condition": "Apply the fixed five-criterion visual prompt to this state in each of the three frozen rounds; average the state scores.",
+      "partial_condition": "D6 uses five criteria in 0.5 increments per criterion and the frozen mean over states and rounds.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": "engaged_duel",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "fixed_visual",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D6-engaged_duel",
+        "dimension": "D6",
+        "requirements": [
+          "ASSET-01",
+          "ASSET-02"
+        ],
+        "question": "Apply the fixed five-criterion visual prompt to this state in each of the three frozen rounds; average the state scores.",
+        "method": "fixed_visual",
+        "case": "engaged_duel",
+        "reference_binding": {
+          "id": "engaged_duel",
+          "label": "Fighters after moving into close range",
+          "reference": "reference/engaged_duel.png",
+          "sha256": "f5700ae6bfb4bb162634b64f5a28c043ce919a62963921bcb8b1afd5c54ef7c7",
+          "raw_source_sha256": "5aba607670f1cfc3472bd37bf105015a086f7043fd6ba5f1931280d4df69915b",
+          "candidate_capture": "d6-close",
+          "capture_case": "visual-close"
+        }
+      }
+    },
+    {
+      "id": "D6-jump_takeoff",
+      "dimension": "D6",
+      "requirement_ids": [
+        "ASSET-01",
+        "ASSET-02"
+      ],
+      "max_score": 3.333333,
+      "exact_weight": {
+        "numerator": 10,
+        "denominator": 3
+      },
+      "pass_condition": "Apply the fixed five-criterion visual prompt to this state in each of the three frozen rounds; average the state scores.",
+      "partial_condition": "D6 uses five criteria in 0.5 increments per criterion and the frozen mean over states and rounds.",
+      "legal_preconditions": {
+        "setup_method": "normal_input_or_versioned_private_fixture",
+        "case": "jump_takeoff",
+        "contract": "src/native",
+        "restriction": "Preconditions only; never set a scored outcome."
+      },
+      "observation": "fixed_visual",
+      "interface_dependencies": [
+        "../input/contracts/GAME_SESSION_SPEC.md",
+        "../input/contracts/SESSION_MODEL.json"
+      ],
+      "attribution": "Actual failed observation is candidate failure. Missing author adapters, environment evidence, review or provider output is not a candidate zero.",
+      "native_definition": {
+        "id": "D6-jump_takeoff",
+        "dimension": "D6",
+        "requirements": [
+          "ASSET-01",
+          "ASSET-02"
+        ],
+        "question": "Apply the fixed five-criterion visual prompt to this state in each of the three frozen rounds; average the state scores.",
+        "method": "fixed_visual",
+        "case": "jump_takeoff",
+        "reference_binding": {
+          "id": "jump_takeoff",
+          "label": "Player jump take-off",
+          "reference": "reference/jump_takeoff.png",
+          "sha256": "96c67e751c4441a0e918f7d1daf576b9a518b386f4ab80d5681a0c4fd583ea88",
+          "raw_source_sha256": "fb12e85d853b4f753277e2594f6ca00d3fd53c8eba5745257bb933ec4f7de66a",
+          "candidate_capture": "d6-jump",
+          "capture_case": "visual-jump"
+        }
+      }
+    }
+  ]
+}

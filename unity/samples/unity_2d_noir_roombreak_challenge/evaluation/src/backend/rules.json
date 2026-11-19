@@ -1,0 +1,542 @@
+{
+  "schema_version": 2,
+  "status": "frozen",
+  "evaluator_protocol": "game-independent-d1-d6-v2",
+  "evaluator_revision": "2026.08.24-v1-template-conformant",
+  "benchmark_id": "unity.noir_roombreak_challenge.v1",
+  "coverage_manifest": "requirement-coverage.json",
+  "automatic_score_maximum": 90.0,
+  "dimensions": {
+    "D1": {
+      "maximum_score": 10.0,
+      "checks": [
+        {
+          "id": "D1_IMPORT_COMPILE",
+          "weight": 3.0,
+          "requirements": [
+            "COMMON-BASELINE"
+          ]
+        },
+        {
+          "id": "D1_FINAL_SCENE",
+          "weight": 2.5,
+          "requirements": [
+            "COMMON-BASELINE",
+            "FLOW-01",
+            "CAMERA-01"
+          ]
+        },
+        {
+          "id": "D1_RUNTIME_PROBE",
+          "weight": 2.5,
+          "requirements": [
+            "COMMON-BASELINE"
+          ]
+        },
+        {
+          "id": "D1_REAL_FRAME",
+          "weight": 2.0,
+          "requirements": [
+            "COMMON-BASELINE",
+            "FLOW-01",
+            "AV-01"
+          ]
+        }
+      ]
+    },
+    "D2": {
+      "maximum_score": 30.0,
+      "checks": [
+        {
+          "id": "D2_MENU",
+          "weight": 2.0,
+          "requirements": [
+            "FLOW-01"
+          ]
+        },
+        {
+          "id": "D2_FIVE_ROOMS",
+          "weight": 2.0,
+          "requirements": [
+            "WORLD-01"
+          ]
+        },
+        {
+          "id": "D2_MOVE_JUMP",
+          "weight": 2.0,
+          "requirements": [
+            "MOVE-01"
+          ]
+        },
+        {
+          "id": "D2_BACKSTAB",
+          "weight": 2.0,
+          "requirements": [
+            "COMBAT-01"
+          ]
+        },
+        {
+          "id": "D2_DASH",
+          "weight": 2.0,
+          "requirements": [
+            "DASH-01"
+          ]
+        },
+        {
+          "id": "D2_ANDA",
+          "weight": 2.0,
+          "requirements": [
+            "ANDA-01"
+          ]
+        },
+        {
+          "id": "D2_OBSER",
+          "weight": 2.0,
+          "requirements": [
+            "OBSER-01"
+          ]
+        },
+        {
+          "id": "D2_LETHAL_DAMAGE",
+          "weight": 2.0,
+          "requirements": [
+            "DAMAGE-01"
+          ]
+        },
+        {
+          "id": "D2_SOFT_RESPAWN",
+          "weight": 2.0,
+          "requirements": [
+            "RESPAWN-01"
+          ]
+        },
+        {
+          "id": "D2_GLOBAL_RESPAWN",
+          "weight": 2.0,
+          "requirements": [
+            "RESPAWN-01"
+          ]
+        },
+        {
+          "id": "D2_ROOM_CAMERA",
+          "weight": 2.0,
+          "requirements": [
+            "CAMERA-01"
+          ]
+        },
+        {
+          "id": "D2_PAUSE",
+          "weight": 2.0,
+          "requirements": [
+            "PAUSE-01"
+          ]
+        },
+        {
+          "id": "D2_SUCCESS",
+          "weight": 2.0,
+          "requirements": [
+            "SUCCESS-01"
+          ]
+        },
+        {
+          "id": "D2_UI_STATES",
+          "weight": 2.0,
+          "requirements": [
+            "UI-01"
+          ]
+        },
+        {
+          "id": "D2_AV_ASSEMBLY",
+          "weight": 2.0,
+          "requirements": [
+            "AV-01"
+          ]
+        }
+      ]
+    },
+    "D3": {
+      "maximum_score": 20.0,
+      "checks": [
+        {
+          "id": "D3_INITIAL_STATE",
+          "weight": 1.25,
+          "requirements": [
+            "FLOW-01"
+          ]
+        },
+        {
+          "id": "D3_MOVE_COLLISION",
+          "weight": 1.25,
+          "requirements": [
+            "MOVE-01"
+          ]
+        },
+        {
+          "id": "D3_BACKSTAB_BOUNDARY",
+          "weight": 1.25,
+          "requirements": [
+            "COMBAT-01"
+          ]
+        },
+        {
+          "id": "D3_BACKSTAB_CHARGE",
+          "weight": 1.25,
+          "requirements": [
+            "COMBAT-01",
+            "DASH-01"
+          ]
+        },
+        {
+          "id": "D3_DASH_COST",
+          "weight": 1.25,
+          "requirements": [
+            "DASH-01"
+          ]
+        },
+        {
+          "id": "D3_ZERO_DASH_REJECT",
+          "weight": 1.25,
+          "requirements": [
+            "DASH-01"
+          ]
+        },
+        {
+          "id": "D3_DASH_INVULNERABILITY",
+          "weight": 1.25,
+          "requirements": [
+            "DASH-01",
+            "DAMAGE-01"
+          ]
+        },
+        {
+          "id": "D3_ANDA_TRANSITIONS",
+          "weight": 1.25,
+          "requirements": [
+            "ANDA-01"
+          ]
+        },
+        {
+          "id": "D3_OBSER_WARNING_ORDER",
+          "weight": 1.25,
+          "requirements": [
+            "OBSER-01"
+          ]
+        },
+        {
+          "id": "D3_ONE_HIT_DEATH",
+          "weight": 1.25,
+          "requirements": [
+            "DAMAGE-01"
+          ]
+        },
+        {
+          "id": "D3_SOFT_RESPAWN_RULES",
+          "weight": 1.25,
+          "requirements": [
+            "RESPAWN-01"
+          ]
+        },
+        {
+          "id": "D3_GLOBAL_RESPAWN_RULES",
+          "weight": 1.25,
+          "requirements": [
+            "RESPAWN-01"
+          ]
+        },
+        {
+          "id": "D3_CAMERA_BOUNDARY",
+          "weight": 1.25,
+          "requirements": [
+            "CAMERA-01"
+          ]
+        },
+        {
+          "id": "D3_PAUSE_FREEZE",
+          "weight": 1.25,
+          "requirements": [
+            "PAUSE-01"
+          ]
+        },
+        {
+          "id": "D3_SUCCESS_CONDITION",
+          "weight": 1.25,
+          "requirements": [
+            "SUCCESS-01"
+          ]
+        },
+        {
+          "id": "D3_RESTART_CLEAN",
+          "weight": 1.25,
+          "requirements": [
+            "RESTART-01"
+          ]
+        }
+      ]
+    },
+    "D4": {
+      "maximum_score": 20.0,
+      "checks": [
+        {
+          "id": "D4_START",
+          "weight": 2.0,
+          "requirements": [
+            "FLOW-01"
+          ]
+        },
+        {
+          "id": "D4_ROOM_PROGRESSION",
+          "weight": 3.0,
+          "requirements": [
+            "WORLD-01",
+            "CAMERA-01"
+          ]
+        },
+        {
+          "id": "D4_COMPLETE_JOURNEY",
+          "weight": 4.0,
+          "requirements": [
+            "FLOW-01",
+            "WORLD-01",
+            "COMBAT-01",
+            "DASH-01",
+            "SUCCESS-01"
+          ]
+        },
+        {
+          "id": "D4_DEATH_RECOVERY",
+          "weight": 2.5,
+          "requirements": [
+            "DAMAGE-01",
+            "RESPAWN-01"
+          ]
+        },
+        {
+          "id": "D4_PAUSE_RESUME",
+          "weight": 2.0,
+          "requirements": [
+            "PAUSE-01"
+          ]
+        },
+        {
+          "id": "D4_RESTART_ACTIVE",
+          "weight": 1.5,
+          "requirements": [
+            "RESTART-01"
+          ]
+        },
+        {
+          "id": "D4_RESTART_PAUSED_SUCCESS",
+          "weight": 1.5,
+          "requirements": [
+            "RESTART-01",
+            "PAUSE-01",
+            "SUCCESS-01"
+          ]
+        },
+        {
+          "id": "D4_REOPEN",
+          "weight": 3.5,
+          "requirements": [
+            "REOPEN-01"
+          ]
+        }
+      ]
+    },
+    "D5": {
+      "maximum_score": 10.0,
+      "checks": [
+        {
+          "id": "D5_MENU_CONTROLS",
+          "weight": 1.0,
+          "requirements": [
+            "FLOW-01",
+            "UI-01"
+          ]
+        },
+        {
+          "id": "D5_HUD",
+          "weight": 1.5,
+          "requirements": [
+            "UI-01",
+            "DASH-01",
+            "RESPAWN-01"
+          ]
+        },
+        {
+          "id": "D5_MOVEMENT_COMBAT",
+          "weight": 1.0,
+          "requirements": [
+            "MOVE-01",
+            "COMBAT-01"
+          ]
+        },
+        {
+          "id": "D5_DASH_FEEDBACK",
+          "weight": 1.0,
+          "requirements": [
+            "DASH-01"
+          ]
+        },
+        {
+          "id": "D5_ENEMY_WARNINGS",
+          "weight": 1.5,
+          "requirements": [
+            "ANDA-01",
+            "OBSER-01"
+          ]
+        },
+        {
+          "id": "D5_DEATH_RESPAWN",
+          "weight": 1.5,
+          "requirements": [
+            "DAMAGE-01",
+            "RESPAWN-01"
+          ]
+        },
+        {
+          "id": "D5_PAUSE_SUCCESS",
+          "weight": 1.0,
+          "requirements": [
+            "PAUSE-01",
+            "SUCCESS-01",
+            "RESTART-01"
+          ]
+        },
+        {
+          "id": "D5_AUDIO_VISUAL_FEEDBACK",
+          "weight": 1.5,
+          "requirements": [
+            "AV-01",
+            "UI-01"
+          ]
+        }
+      ]
+    },
+    "D6": {
+      "maximum_score": 10.0,
+      "status": "per_run_manual_single_state_single_round",
+      "requirements": [
+        "AV-01"
+      ]
+    }
+  },
+  "phase_contract": {
+    "static": {
+      "assembly": "GameCreate.NoirRoombreak.Evaluator.Static",
+      "expected_tests": 1,
+      "expected_test_names": [
+        "STATIC01_LoadCompileCameraAndRuntimeEntry"
+      ],
+      "expected_trajectory_ids": [
+        "STATIC01"
+      ],
+      "expected_check_ids": [
+        "D1_IMPORT_COMPILE",
+        "D1_FINAL_SCENE",
+        "D1_RUNTIME_PROBE",
+        "D1_REAL_FRAME"
+      ]
+    },
+    "dynamic": {
+      "assembly": "GameCreate.NoirRoombreak.Evaluator.Dynamic",
+      "expected_tests": 6,
+      "expected_test_names": [
+        "TRAJ01_MenuStartMovementAndHud",
+        "TRAJ02_AndaAndBackstab",
+        "TRAJ03_DashDamageAndBoundaries",
+        "TRAJ04_ObserCameraAndPause",
+        "TRAJ05_SoftAndGlobalRespawn",
+        "TRAJ06_CompleteJourneyResultRestartAndDirtyClose"
+      ],
+      "expected_trajectory_ids": [
+        "TRAJ01",
+        "TRAJ02",
+        "TRAJ03",
+        "TRAJ04",
+        "TRAJ05",
+        "TRAJ06"
+      ],
+      "expected_check_ids": [
+        "D2_MENU",
+        "D2_MOVE_JUMP",
+        "D2_UI_STATES",
+        "D2_AV_ASSEMBLY",
+        "D3_INITIAL_STATE",
+        "D3_MOVE_COLLISION",
+        "D4_START",
+        "D5_MENU_CONTROLS",
+        "D5_HUD",
+        "D5_AUDIO_VISUAL_FEEDBACK",
+        "D2_BACKSTAB",
+        "D2_ANDA",
+        "D3_BACKSTAB_BOUNDARY",
+        "D3_BACKSTAB_CHARGE",
+        "D3_ANDA_TRANSITIONS",
+        "D5_MOVEMENT_COMBAT",
+        "D2_DASH",
+        "D2_LETHAL_DAMAGE",
+        "D3_DASH_COST",
+        "D3_ZERO_DASH_REJECT",
+        "D3_DASH_INVULNERABILITY",
+        "D3_ONE_HIT_DEATH",
+        "D5_DASH_FEEDBACK",
+        "D2_OBSER",
+        "D2_ROOM_CAMERA",
+        "D2_PAUSE",
+        "D3_OBSER_WARNING_ORDER",
+        "D3_CAMERA_BOUNDARY",
+        "D3_PAUSE_FREEZE",
+        "D4_PAUSE_RESUME",
+        "D5_ENEMY_WARNINGS",
+        "D2_SOFT_RESPAWN",
+        "D2_GLOBAL_RESPAWN",
+        "D3_SOFT_RESPAWN_RULES",
+        "D3_GLOBAL_RESPAWN_RULES",
+        "D4_DEATH_RECOVERY",
+        "D5_DEATH_RESPAWN",
+        "D2_FIVE_ROOMS",
+        "D2_SUCCESS",
+        "D3_SUCCESS_CONDITION",
+        "D3_RESTART_CLEAN",
+        "D4_ROOM_PROGRESSION",
+        "D4_COMPLETE_JOURNEY",
+        "D4_RESTART_ACTIVE",
+        "D4_RESTART_PAUSED_SUCCESS",
+        "D5_PAUSE_SUCCESS"
+      ]
+    },
+    "fresh": {
+      "assembly": "GameCreate.NoirRoombreak.Evaluator.Fresh",
+      "expected_tests": 1,
+      "expected_test_names": [
+        "FRESH01_NewProcessStartsAtCleanMenu"
+      ],
+      "expected_trajectory_ids": [
+        "FRESH01"
+      ],
+      "expected_check_ids": [
+        "D4_REOPEN"
+      ]
+    }
+  },
+  "common_baseline": {
+    "id": "COMMON-BASELINE",
+    "definition": "Game-independent deliverability baseline: the Unity project imports/compiles, preserves the published observation contract and asset catalog, loads its declared entry, exposes usable observation, advances real frames, and presents a non-empty player-facing frame without severe startup integration failure.",
+    "scope": [
+      "compile",
+      "declared entry launch",
+      "public contract and asset catalog availability",
+      "read-only observation availability",
+      "real frame and basic deliverable quality"
+    ]
+  },
+  "non_behavior_policy": {
+    "candidate_validity_and_scoring_exclusions": [
+      "license or licence metadata",
+      "credit or attribution text",
+      "SHA-256 or other content-hash equality"
+    ],
+    "asset_evidence": "Runtime references are recognized through public ASSET_CATALOG paths and observable assembly/playback, not license, credit, attribution, or content hashes.",
+    "evaluator_integrity_note": "Hashes may remain in receipts solely to diagnose evaluator/source immutability; they are not candidate gameplay checks and contribute no score."
+  }
+}

@@ -1,0 +1,2 @@
+# Shared existing visual-capture dependency; native gameplay/scoring uses Python standard library.
+Pillow==11.3.0

@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "status": "evaluated",
+  "protocol": "user-simplified-single-state-single-round-20260824",
+  "required_rounds": 1,
+  "primary_state_id": "initial_gameplay",
+  "model_id": "gpt-5.6-sol",
+  "prompt": {
+    "path": "visual_prompt.txt",
+    "sha256": "558b4ccffad7d13d3ae3e5c6fc5a9b36a7bba37d9be47da895c2e50bc9c5a6ee"
+  },
+  "states": [
+    {
+      "id": "initial_gameplay",
+      "reference": {
+        "path": "reference/initial_gameplay.png",
+        "sha256": "7f73e96333ca1791eb070f48b357d83afeb854d553267652fd3d0dbaefbcd71e"
+      },
+      "candidate": {
+        "path": "<candidate>/initial_gameplay.png",
+        "sha256": "<sha256>"
+      },
+      "rounds": [
+        {
+          "round_index": 1,
+          "model_id": "gpt-5.6-sol",
+          "raw_response": {
+            "path": "responses/initial_gameplay-round-1.txt",
+            "sha256": "<sha256>"
+          },
+          "parsed": {
+            "scene_assembly": null,
+            "composition_layout": null,
+            "scale_layer_clarity": null,
+            "style_color": null,
+            "overall_finish": null,
+            "total": null
+          }
+        }
+      ]
+    }
+  ]
+}

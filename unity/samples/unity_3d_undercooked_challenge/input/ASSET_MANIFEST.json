@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "source_license": "MIT",
+  "source_license_path": "legal/MIT-License.txt",
+  "included_scope": "Upstream first-party kitchen art, audio, materials, shaders, Input Actions, and benchmark-owned empty starter files",
+  "excluded_scope": [
+    "Assets/3rdParty/Lean/**",
+    "upstream gameplay scripts",
+    "upstream game scenes",
+    "Asset Store example media and prefabs"
+  ],
+  "asset_catalog": "ASSET_CATALOG.json",
+  "contact_sheet": "ASSET_CONTACT_SHEET.png",
+  "primary_roles": {
+    "characters": "Assets/UndercookedStarter/Art/FBX/Chef.fbx and authored animation clips",
+    "ingredients": "Assets/UndercookedStarter/Art/FBX/Tomato_Raw.fbx, Tomato_Chopped.fbx and supplied textures",
+    "stations": "Countertop, ingredient crate, chopping board, cooking pot, hob, plate, delivery and trash models",
+    "environment": "Floor/wall models, materials, textures and shaders",
+    "audio": "Assets/UndercookedStarter/Audio/**",
+    "input": "Assets/InputSystem/UndercookedBenchmark.inputactions"
+  },
+  "source_author": "Dalton Lima",
+  "asset_coverage": "ASSET_COVERAGE.json"
+}

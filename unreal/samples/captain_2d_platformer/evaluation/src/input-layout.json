@@ -1,0 +1,2955 @@
+{
+  "version": "1.0",
+  "purpose": "Reconstruct frozen native input bindings in an isolated run; the public input uses the template layout.",
+  "files": [
+    {
+      "source": ".gitattributes",
+      "published": ".gitattributes",
+      "sha256": "cebc7b7ea75719d2c719190a3fd372f96e2e83444a652be2a83c2d051bf6aaea",
+      "published_sha256": "cebc7b7ea75719d2c719190a3fd372f96e2e83444a652be2a83c2d051bf6aaea"
+    },
+    {
+      "source": "ASSET_CATALOG.json",
+      "published": "assets/ASSET_CATALOG.json",
+      "sha256": "2e686f1d8aca5da8778c84a16522b812ee9fb8bcc33a2e5594ece5fdcb58cc05",
+      "published_sha256": "55d6800ff044d234b7157741ce19a60eb79e180c096ca4dbc224641d6328d80a",
+      "restore_edits": [
+        {
+          "start": 6,
+          "end": 7,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/enemy/enemy_attack_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 37,
+          "end": 38,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/enemy/enemy_death_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 67,
+          "end": 68,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/enemy/enemy_fall_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 97,
+          "end": 98,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/enemy/enemy_hit_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 127,
+          "end": 128,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/enemy/enemy_idle_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 157,
+          "end": 158,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/enemy/enemy_run_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 188,
+          "end": 189,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/objectives/key_pickup_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 218,
+          "end": 219,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/objectives/key_idle_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 248,
+          "end": 249,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/candle_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 278,
+          "end": 279,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/chain_big_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 308,
+          "end": 309,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/chain_small_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 338,
+          "end": 339,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/objectives/door_closed.png\",\n"
+          ]
+        },
+        {
+          "start": 368,
+          "end": 369,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/objectives/door_open_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 398,
+          "end": 399,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_attack_a_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 429,
+          "end": 430,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_attack_b_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 460,
+          "end": 461,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_attack_c_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 491,
+          "end": 492,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_death_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 521,
+          "end": 522,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_fall_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 551,
+          "end": 552,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_hit_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 581,
+          "end": 582,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_idle_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 611,
+          "end": 612,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_jump_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 641,
+          "end": 642,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_land_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 671,
+          "end": 672,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_run_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 701,
+          "end": 702,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/spring_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 732,
+          "end": 733,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/terrain_back_wall_tiles.png\",\n"
+          ]
+        },
+        {
+          "start": 762,
+          "end": 763,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/platform_tiles.png\",\n"
+          ]
+        },
+        {
+          "start": 791,
+          "end": 792,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/spike.png\",\n"
+          ]
+        },
+        {
+          "start": 820,
+          "end": 821,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/ui/health_frame.png\",\n"
+          ]
+        },
+        {
+          "start": 849,
+          "end": 850,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/ui/health_track.png\",\n"
+          ]
+        },
+        {
+          "start": 878,
+          "end": 879,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/ui/health_fill.png\",\n"
+          ]
+        },
+        {
+          "start": 907,
+          "end": 908,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/ui/death_icon.png\",\n"
+          ]
+        },
+        {
+          "start": 936,
+          "end": 937,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/barrel_bottle_decoration_01.png\",\n"
+          ]
+        },
+        {
+          "start": 965,
+          "end": 966,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/barrel_bottle_decoration_02.png\",\n"
+          ]
+        },
+        {
+          "start": 994,
+          "end": 995,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/barrel_bottle_decoration_03.png\",\n"
+          ]
+        },
+        {
+          "start": 1023,
+          "end": 1024,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/door_decoration_04.png\",\n"
+          ]
+        },
+        {
+          "start": 1052,
+          "end": 1053,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/chain_decoration_05.png\",\n"
+          ]
+        },
+        {
+          "start": 1081,
+          "end": 1082,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/barrel_bottle_decoration_06.png\",\n"
+          ]
+        },
+        {
+          "start": 1110,
+          "end": 1111,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/chain_decoration_07.png\",\n"
+          ]
+        },
+        {
+          "start": 1139,
+          "end": 1140,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/barrel_bottle_decoration_08.png\",\n"
+          ]
+        },
+        {
+          "start": 1168,
+          "end": 1169,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/door_decoration_09.png\",\n"
+          ]
+        },
+        {
+          "start": 1197,
+          "end": 1198,
+          "lines": [
+            "      \"path\": \"assets/map/room-art-preview.png\",\n"
+          ]
+        },
+        {
+          "start": 1256,
+          "end": 1257,
+          "lines": [
+            "      \"path\": \"assets/map/room-layout.json\",\n"
+          ]
+        },
+        {
+          "start": 1264,
+          "end": 1266,
+          "lines": [
+            "      \"byte_length\": 124249,\n",
+            "      \"sha256\": \"a9b62a521fb2df3f30ab460c992edfc2c8649e73ee515c4e571865dd5ccf9519\",\n"
+          ]
+        },
+        {
+          "start": 1267,
+          "end": 1277,
+          "lines": [
+            "        \"assets/treasure-hunters/world/terrain_back_wall_tiles.png\",\n",
+            "        \"assets/treasure-hunters/world/barrel_bottle_decoration_01.png\",\n",
+            "        \"assets/treasure-hunters/world/barrel_bottle_decoration_02.png\",\n",
+            "        \"assets/treasure-hunters/world/barrel_bottle_decoration_03.png\",\n",
+            "        \"assets/treasure-hunters/world/barrel_bottle_decoration_06.png\",\n",
+            "        \"assets/treasure-hunters/world/barrel_bottle_decoration_08.png\",\n",
+            "        \"assets/treasure-hunters/world/chain_decoration_05.png\",\n",
+            "        \"assets/treasure-hunters/world/chain_decoration_07.png\",\n",
+            "        \"assets/treasure-hunters/world/door_decoration_04.png\",\n",
+            "        \"assets/treasure-hunters/world/door_decoration_09.png\"\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ASSET_CATALOG.md",
+      "published": "assets/ASSET_CATALOG.md",
+      "sha256": "eaff75dd9b09e9ca507c72353c77da9064e604a8e52f7027a43faf57df5865e9",
+      "published_sha256": "78ca0ea5f675366ef9eafe0b211cb3570590c5c56f18ea57b95034da5ef58c89",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "Every required file is listed below. Import and assemble it inside `project/`; keep source files unchanged. `ASSET_CATALOG.json` records hashes, dimensions, dependencies and source animation timing. Timing describes the supplied art, without prescribing an animation implementation.\n"
+          ]
+        },
+        {
+          "start": 8,
+          "end": 49,
+          "lines": [
+            "| Enemy Attack | `assets/treasure-hunters/enemy/enemy_attack_strip.png` | 5 / 34 x 28 | ASSET-04, ENEMY-02 |\n",
+            "| Enemy Death | `assets/treasure-hunters/enemy/enemy_death_strip.png` | 4 / 34 x 28 | ASSET-04 |\n",
+            "| Enemy Fall | `assets/treasure-hunters/enemy/enemy_fall_strip.png` | 1 / 34 x 28 | ASSET-04 |\n",
+            "| Enemy Hit | `assets/treasure-hunters/enemy/enemy_hit_strip.png` | 2 / 34 x 28 | ASSET-04 |\n",
+            "| Enemy Idle | `assets/treasure-hunters/enemy/enemy_idle_strip.png` | 11 / 34 x 28 | ASSET-04 |\n",
+            "| Enemy Run | `assets/treasure-hunters/enemy/enemy_run_strip.png` | 6 / 34 x 28 | ASSET-04, ENEMY-01 |\n",
+            "| Key Pickup | `assets/treasure-hunters/objectives/key_pickup_strip.png` | 4 / 24 x 24 | ASSET-02 |\n",
+            "| Key Idle | `assets/treasure-hunters/objectives/key_idle_strip.png` | 8 / 24 x 24 | ASSET-02 |\n",
+            "| Candle | `assets/treasure-hunters/world/candle_strip.png` | 6 / 32 x 32 | ASSET-03 |\n",
+            "| Chain Big | `assets/treasure-hunters/world/chain_big_strip.png` | 9 / 32 x 64 | ASSET-03 |\n",
+            "| Chain Small | `assets/treasure-hunters/world/chain_small_strip.png` | 8 / 32 x 32 | ASSET-03 |\n",
+            "| Door Closed | `assets/treasure-hunters/objectives/door_closed.png` | 1 / 64 x 64 | ASSET-02 |\n",
+            "| Door Open | `assets/treasure-hunters/objectives/door_open_strip.png` | 5 / 64 x 64 | ASSET-02 |\n",
+            "| Player Attack A | `assets/treasure-hunters/player/player_attack_a_strip.png` | 3 / 64 x 40 | ASSET-01, COMBAT-01 |\n",
+            "| Player Attack B | `assets/treasure-hunters/player/player_attack_b_strip.png` | 3 / 64 x 40 | ASSET-01, COMBAT-01 |\n",
+            "| Player Attack C | `assets/treasure-hunters/player/player_attack_c_strip.png` | 3 / 64 x 40 | ASSET-01, COMBAT-01 |\n",
+            "| Player Death | `assets/treasure-hunters/player/player_death_strip.png` | 4 / 64 x 40 | ASSET-01 |\n",
+            "| Player Fall | `assets/treasure-hunters/player/player_fall_strip.png` | 1 / 64 x 40 | ASSET-01 |\n",
+            "| Player Hit | `assets/treasure-hunters/player/player_hit_strip.png` | 4 / 64 x 40 | ASSET-01 |\n",
+            "| Player Idle | `assets/treasure-hunters/player/player_idle_strip.png` | 5 / 64 x 40 | ASSET-01 |\n",
+            "| Player Jump | `assets/treasure-hunters/player/player_jump_strip.png` | 3 / 64 x 40 | ASSET-01 |\n",
+            "| Player Land | `assets/treasure-hunters/player/player_land_strip.png` | 2 / 64 x 40 | ASSET-01 |\n",
+            "| Player Run | `assets/treasure-hunters/player/player_run_strip.png` | 6 / 64 x 40 | ASSET-01 |\n",
+            "| Spring | `assets/treasure-hunters/world/spring_strip.png` | 8 / 22 x 16 | ASSET-03, TRAVERSAL-01 |\n",
+            "| Terrain Back Wall | `assets/treasure-hunters/world/terrain_back_wall_tiles.png` | 1 / 608 x 416 | ASSET-03, CONTENT-01 |\n",
+            "| Platform Tiles | `assets/treasure-hunters/world/platform_tiles.png` | 1 / 192 x 128 | ASSET-03 |\n",
+            "| Spike | `assets/treasure-hunters/world/spike.png` | 1 / 32 x 32 | ASSET-03 |\n",
+            "| Health Frame | `assets/treasure-hunters/ui/health_frame.png` | 1 / 32 x 32 | ASSET-05 |\n",
+            "| Health Track | `assets/treasure-hunters/ui/health_track.png` | 1 / 32 x 32 | ASSET-05 |\n",
+            "| Health Fill | `assets/treasure-hunters/ui/health_fill.png` | 1 / 32 x 2 | ASSET-05 |\n",
+            "| Death Icon | `assets/treasure-hunters/ui/death_icon.png` | 1 / 24 x 28 | ASSET-05 |\n",
+            "| Barrel Bottle Decoration 01 | `assets/treasure-hunters/world/barrel_bottle_decoration_01.png` | 1 / 32 x 32 | ASSET-03 |\n",
+            "| Barrel Bottle Decoration 02 | `assets/treasure-hunters/world/barrel_bottle_decoration_02.png` | 1 / 32 x 32 | ASSET-03 |\n",
+            "| Barrel Bottle Decoration 03 | `assets/treasure-hunters/world/barrel_bottle_decoration_03.png` | 1 / 32 x 32 | ASSET-03 |\n",
+            "| Door Decoration 04 | `assets/treasure-hunters/world/door_decoration_04.png` | 1 / 32 x 32 | ASSET-03 |\n",
+            "| Chain Decoration 05 | `assets/treasure-hunters/world/chain_decoration_05.png` | 1 / 32 x 32 | ASSET-03 |\n",
+            "| Barrel Bottle Decoration 06 | `assets/treasure-hunters/world/barrel_bottle_decoration_06.png` | 1 / 32 x 32 | ASSET-03 |\n",
+            "| Chain Decoration 07 | `assets/treasure-hunters/world/chain_decoration_07.png` | 1 / 32 x 64 | ASSET-03 |\n",
+            "| Barrel Bottle Decoration 08 | `assets/treasure-hunters/world/barrel_bottle_decoration_08.png` | 1 / 32 x 32 | ASSET-03 |\n",
+            "| Door Decoration 09 | `assets/treasure-hunters/world/door_decoration_09.png` | 1 / 64 x 64 | ASSET-03 |\n",
+            "| Room Art Preview | `assets/map/room-art-preview.png` | 1 / 864 x 640 | CONTENT-01 |\n"
+          ]
+        },
+        {
+          "start": 50,
+          "end": 51,
+          "lines": [
+            "| Room Static Art Layout | `assets/map/room-layout.json` | Data /  x  | CONTENT-01, ASSET-03 |\n"
+          ]
+        },
+        {
+          "start": 52,
+          "end": 53,
+          "lines": [
+            "All art must remain recognizable; replacement artwork and a flattened screenshot used as the playable room are disallowed by `ASSET-01` through `ASSET-05`. Import mechanics, collision, animation assembly and object behavior remain implementation work. Legal bases are recorded separately in `legal/ASSET_LICENSE_MAP.json`.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "ASSET_COVERAGE.json",
+      "published": "ASSET_COVERAGE.json",
+      "sha256": "cfda0d08ccfd7a4e53ec52534b8e6812c6b663b6722c62814a4ffe5e99c8a657",
+      "published_sha256": "cfda0d08ccfd7a4e53ec52534b8e6812c6b663b6722c62814a4ffe5e99c8a657"
+    },
+    {
+      "source": "ASSET_MANIFEST.json",
+      "published": "ASSET_MANIFEST.json",
+      "sha256": "76f469803318eab9a4f1b1ee1f741337ca7f2d15e10d5f424592a7d95e4d3d45",
+      "published_sha256": "bc57e80b12118334a43bc376b5fff44a9f6b57a685f743d5c69edda080558312",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "  \"authority\": \"ASSET_CATALOG.json\",\n"
+          ]
+        },
+        {
+          "start": 10,
+          "end": 11,
+          "lines": [
+            "    \"candidate_import_destination\": \"project/Content\",\n"
+          ]
+        },
+        {
+          "start": 26,
+          "end": 27,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/enemy/enemy_attack_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 32,
+          "end": 33,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/enemy/enemy_death_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 38,
+          "end": 39,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/enemy/enemy_fall_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 44,
+          "end": 45,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/enemy/enemy_hit_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 50,
+          "end": 51,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/enemy/enemy_idle_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 56,
+          "end": 57,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/enemy/enemy_run_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 62,
+          "end": 63,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/objectives/key_pickup_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 68,
+          "end": 69,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/objectives/key_idle_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 74,
+          "end": 75,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/candle_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 80,
+          "end": 81,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/chain_big_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 86,
+          "end": 87,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/chain_small_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 92,
+          "end": 93,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/objectives/door_closed.png\",\n"
+          ]
+        },
+        {
+          "start": 98,
+          "end": 99,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/objectives/door_open_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 104,
+          "end": 105,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_attack_a_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 110,
+          "end": 111,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_attack_b_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 116,
+          "end": 117,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_attack_c_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 122,
+          "end": 123,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_death_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 128,
+          "end": 129,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_fall_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 134,
+          "end": 135,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_hit_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 140,
+          "end": 141,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_idle_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 146,
+          "end": 147,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_jump_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 152,
+          "end": 153,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_land_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 158,
+          "end": 159,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/player/player_run_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 164,
+          "end": 165,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/spring_strip.png\",\n"
+          ]
+        },
+        {
+          "start": 170,
+          "end": 171,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/terrain_back_wall_tiles.png\",\n"
+          ]
+        },
+        {
+          "start": 176,
+          "end": 177,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/platform_tiles.png\",\n"
+          ]
+        },
+        {
+          "start": 182,
+          "end": 183,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/spike.png\",\n"
+          ]
+        },
+        {
+          "start": 188,
+          "end": 189,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/ui/health_frame.png\",\n"
+          ]
+        },
+        {
+          "start": 194,
+          "end": 195,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/ui/health_track.png\",\n"
+          ]
+        },
+        {
+          "start": 200,
+          "end": 201,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/ui/health_fill.png\",\n"
+          ]
+        },
+        {
+          "start": 206,
+          "end": 207,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/ui/death_icon.png\",\n"
+          ]
+        },
+        {
+          "start": 212,
+          "end": 213,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/barrel_bottle_decoration_01.png\",\n"
+          ]
+        },
+        {
+          "start": 218,
+          "end": 219,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/barrel_bottle_decoration_02.png\",\n"
+          ]
+        },
+        {
+          "start": 224,
+          "end": 225,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/barrel_bottle_decoration_03.png\",\n"
+          ]
+        },
+        {
+          "start": 230,
+          "end": 231,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/door_decoration_04.png\",\n"
+          ]
+        },
+        {
+          "start": 236,
+          "end": 237,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/chain_decoration_05.png\",\n"
+          ]
+        },
+        {
+          "start": 242,
+          "end": 243,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/barrel_bottle_decoration_06.png\",\n"
+          ]
+        },
+        {
+          "start": 248,
+          "end": 249,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/chain_decoration_07.png\",\n"
+          ]
+        },
+        {
+          "start": 254,
+          "end": 255,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/barrel_bottle_decoration_08.png\",\n"
+          ]
+        },
+        {
+          "start": 260,
+          "end": 261,
+          "lines": [
+            "      \"path\": \"assets/treasure-hunters/world/door_decoration_09.png\",\n"
+          ]
+        },
+        {
+          "start": 266,
+          "end": 267,
+          "lines": [
+            "      \"path\": \"assets/map/room-art-preview.png\",\n"
+          ]
+        },
+        {
+          "start": 278,
+          "end": 279,
+          "lines": [
+            "      \"path\": \"assets/map/room-layout.json\",\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "assets/map/README.md",
+      "published": "assets/files/map/README.md",
+      "sha256": "1e46a00911bced0770a0004fdd42a415c224d290e5ba7c2c97d2cd4a4ad438eb",
+      "published_sha256": "9892d50a52868acbae38bb615619ea1e0a3f998678baf81b47ccc08a733efc6b",
+      "restore_edits": [
+        {
+          "start": 12,
+          "end": 13,
+          "lines": [
+            "All paths in the JSON are relative to the public input root. Keep this source material unchanged and work on imported or copied material inside `project/`. No importer or generated engine asset is included.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "assets/map/room-art-preview.png",
+      "published": "assets/files/map/room-art-preview.png",
+      "sha256": "2ee7cc8017a7e8ca13bb96367ee3833a89cd9422498d883793c76405147b4239",
+      "published_sha256": "2ee7cc8017a7e8ca13bb96367ee3833a89cd9422498d883793c76405147b4239"
+    },
+    {
+      "source": "assets/map/room-layout.json",
+      "published": "assets/files/map/room-layout.json",
+      "sha256": "a9b62a521fb2df3f30ab460c992edfc2c8649e73ee515c4e571865dd5ccf9519",
+      "published_sha256": "c58fd553a7dfdd1a0473ee974e86cd79f4819221a31e0d1338f5d04437e760b3",
+      "restore_edits": [
+        {
+          "start": 10,
+          "end": 11,
+          "lines": [
+            "  \"tileset_image\": \"assets/treasure-hunters/world/terrain_back_wall_tiles.png\",\n"
+          ]
+        },
+        {
+          "start": 5408,
+          "end": 5409,
+          "lines": [
+            "      \"image\": \"assets/treasure-hunters/world/barrel_bottle_decoration_01.png\",\n"
+          ]
+        },
+        {
+          "start": 5421,
+          "end": 5422,
+          "lines": [
+            "      \"image\": \"assets/treasure-hunters/world/barrel_bottle_decoration_02.png\",\n"
+          ]
+        },
+        {
+          "start": 5434,
+          "end": 5435,
+          "lines": [
+            "      \"image\": \"assets/treasure-hunters/world/barrel_bottle_decoration_03.png\",\n"
+          ]
+        },
+        {
+          "start": 5447,
+          "end": 5448,
+          "lines": [
+            "      \"image\": \"assets/treasure-hunters/world/door_decoration_04.png\",\n"
+          ]
+        },
+        {
+          "start": 5460,
+          "end": 5461,
+          "lines": [
+            "      \"image\": \"assets/treasure-hunters/world/chain_decoration_05.png\",\n"
+          ]
+        },
+        {
+          "start": 5473,
+          "end": 5474,
+          "lines": [
+            "      \"image\": \"assets/treasure-hunters/world/barrel_bottle_decoration_06.png\",\n"
+          ]
+        },
+        {
+          "start": 5486,
+          "end": 5487,
+          "lines": [
+            "      \"image\": \"assets/treasure-hunters/world/barrel_bottle_decoration_06.png\",\n"
+          ]
+        },
+        {
+          "start": 5499,
+          "end": 5500,
+          "lines": [
+            "      \"image\": \"assets/treasure-hunters/world/barrel_bottle_decoration_06.png\",\n"
+          ]
+        },
+        {
+          "start": 5512,
+          "end": 5513,
+          "lines": [
+            "      \"image\": \"assets/treasure-hunters/world/chain_decoration_07.png\",\n"
+          ]
+        },
+        {
+          "start": 5525,
+          "end": 5526,
+          "lines": [
+            "      \"image\": \"assets/treasure-hunters/world/barrel_bottle_decoration_01.png\",\n"
+          ]
+        },
+        {
+          "start": 5538,
+          "end": 5539,
+          "lines": [
+            "      \"image\": \"assets/treasure-hunters/world/barrel_bottle_decoration_01.png\",\n"
+          ]
+        },
+        {
+          "start": 5551,
+          "end": 5552,
+          "lines": [
+            "      \"image\": \"assets/treasure-hunters/world/barrel_bottle_decoration_01.png\",\n"
+          ]
+        },
+        {
+          "start": 5564,
+          "end": 5565,
+          "lines": [
+            "      \"image\": \"assets/treasure-hunters/world/barrel_bottle_decoration_03.png\",\n"
+          ]
+        },
+        {
+          "start": 5577,
+          "end": 5578,
+          "lines": [
+            "      \"image\": \"assets/treasure-hunters/world/barrel_bottle_decoration_02.png\",\n"
+          ]
+        },
+        {
+          "start": 5590,
+          "end": 5591,
+          "lines": [
+            "      \"image\": \"assets/treasure-hunters/world/barrel_bottle_decoration_08.png\",\n"
+          ]
+        },
+        {
+          "start": 5603,
+          "end": 5604,
+          "lines": [
+            "      \"image\": \"assets/treasure-hunters/world/barrel_bottle_decoration_03.png\",\n"
+          ]
+        },
+        {
+          "start": 5616,
+          "end": 5617,
+          "lines": [
+            "      \"image\": \"assets/treasure-hunters/world/door_decoration_09.png\",\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "assets/treasure-hunters/enemy/enemy_attack_strip.png",
+      "published": "assets/files/treasure-hunters/enemy/enemy_attack_strip.png",
+      "sha256": "06afc7e49df021b3c285a322d886030a67044652a9ab234224648b17846c300c",
+      "published_sha256": "06afc7e49df021b3c285a322d886030a67044652a9ab234224648b17846c300c"
+    },
+    {
+      "source": "assets/treasure-hunters/enemy/enemy_death_strip.png",
+      "published": "assets/files/treasure-hunters/enemy/enemy_death_strip.png",
+      "sha256": "3bdfc6fe511c1e16d0ce992cfae1ff5bc589eb7d7b88be7534d404fc777a809d",
+      "published_sha256": "3bdfc6fe511c1e16d0ce992cfae1ff5bc589eb7d7b88be7534d404fc777a809d"
+    },
+    {
+      "source": "assets/treasure-hunters/enemy/enemy_fall_strip.png",
+      "published": "assets/files/treasure-hunters/enemy/enemy_fall_strip.png",
+      "sha256": "0834ad3e32905ef28de94b78f2fc6ab319fa72c13faa88db77ca214b880569d4",
+      "published_sha256": "0834ad3e32905ef28de94b78f2fc6ab319fa72c13faa88db77ca214b880569d4"
+    },
+    {
+      "source": "assets/treasure-hunters/enemy/enemy_hit_strip.png",
+      "published": "assets/files/treasure-hunters/enemy/enemy_hit_strip.png",
+      "sha256": "b3280f625c52c1434fed89bb05e1be80b4bb1e34250da399831c117374b5daa4",
+      "published_sha256": "b3280f625c52c1434fed89bb05e1be80b4bb1e34250da399831c117374b5daa4"
+    },
+    {
+      "source": "assets/treasure-hunters/enemy/enemy_idle_strip.png",
+      "published": "assets/files/treasure-hunters/enemy/enemy_idle_strip.png",
+      "sha256": "4e93e3c3051152c3d4b8d28ebd24d2205304ac159cee0ff011177345e6588ee7",
+      "published_sha256": "4e93e3c3051152c3d4b8d28ebd24d2205304ac159cee0ff011177345e6588ee7"
+    },
+    {
+      "source": "assets/treasure-hunters/enemy/enemy_run_strip.png",
+      "published": "assets/files/treasure-hunters/enemy/enemy_run_strip.png",
+      "sha256": "f43c7a566ed8ab6a14581edc63f7e87e2b08426529a370d049251d5abe87407c",
+      "published_sha256": "f43c7a566ed8ab6a14581edc63f7e87e2b08426529a370d049251d5abe87407c"
+    },
+    {
+      "source": "assets/treasure-hunters/objectives/door_closed.png",
+      "published": "assets/files/treasure-hunters/objectives/door_closed.png",
+      "sha256": "2e791ea4c25b0042e21ac6c6f0a61f3da651b371be0d811204e3139a6b5e04e6",
+      "published_sha256": "2e791ea4c25b0042e21ac6c6f0a61f3da651b371be0d811204e3139a6b5e04e6"
+    },
+    {
+      "source": "assets/treasure-hunters/objectives/door_open_strip.png",
+      "published": "assets/files/treasure-hunters/objectives/door_open_strip.png",
+      "sha256": "672eb56c2e7f6c66005bbe2d84bbbcf4fb86273a1d1051bb351a8185a26012de",
+      "published_sha256": "672eb56c2e7f6c66005bbe2d84bbbcf4fb86273a1d1051bb351a8185a26012de"
+    },
+    {
+      "source": "assets/treasure-hunters/objectives/key_idle_strip.png",
+      "published": "assets/files/treasure-hunters/objectives/key_idle_strip.png",
+      "sha256": "2fff5d0f9a6148fed4c5fd95dfd11fcf95ab080204da753c1faa51766acc40af",
+      "published_sha256": "2fff5d0f9a6148fed4c5fd95dfd11fcf95ab080204da753c1faa51766acc40af"
+    },
+    {
+      "source": "assets/treasure-hunters/objectives/key_pickup_strip.png",
+      "published": "assets/files/treasure-hunters/objectives/key_pickup_strip.png",
+      "sha256": "f9ff68aba736cc22ab7cd3c9e71ec3dd90f0f08e2f04df1cf215ee3763a4462f",
+      "published_sha256": "f9ff68aba736cc22ab7cd3c9e71ec3dd90f0f08e2f04df1cf215ee3763a4462f"
+    },
+    {
+      "source": "assets/treasure-hunters/player/player_attack_a_strip.png",
+      "published": "assets/files/treasure-hunters/player/player_attack_a_strip.png",
+      "sha256": "e744fe1cd6bbc35cedba345a9b695bd7a512d2d85c281594f2e43aa87f58a55f",
+      "published_sha256": "e744fe1cd6bbc35cedba345a9b695bd7a512d2d85c281594f2e43aa87f58a55f"
+    },
+    {
+      "source": "assets/treasure-hunters/player/player_attack_b_strip.png",
+      "published": "assets/files/treasure-hunters/player/player_attack_b_strip.png",
+      "sha256": "4c100b05104be80b53e743c9567f418718addedcca4f9993624dcab09e8d18b0",
+      "published_sha256": "4c100b05104be80b53e743c9567f418718addedcca4f9993624dcab09e8d18b0"
+    },
+    {
+      "source": "assets/treasure-hunters/player/player_attack_c_strip.png",
+      "published": "assets/files/treasure-hunters/player/player_attack_c_strip.png",
+      "sha256": "08fc572dfe88ecca13c5bc560bea1412cdb740dd128079074c5bb53fe7b6c36b",
+      "published_sha256": "08fc572dfe88ecca13c5bc560bea1412cdb740dd128079074c5bb53fe7b6c36b"
+    },
+    {
+      "source": "assets/treasure-hunters/player/player_death_strip.png",
+      "published": "assets/files/treasure-hunters/player/player_death_strip.png",
+      "sha256": "9bb5c351cf1fe9d9b00da95624bca7fbba97edd16a679a525db763a4a60e49be",
+      "published_sha256": "9bb5c351cf1fe9d9b00da95624bca7fbba97edd16a679a525db763a4a60e49be"
+    },
+    {
+      "source": "assets/treasure-hunters/player/player_fall_strip.png",
+      "published": "assets/files/treasure-hunters/player/player_fall_strip.png",
+      "sha256": "64c76e57721a54f3488d94dab1618a6efc646447d493c8a4b019abeaf4f7d026",
+      "published_sha256": "64c76e57721a54f3488d94dab1618a6efc646447d493c8a4b019abeaf4f7d026"
+    },
+    {
+      "source": "assets/treasure-hunters/player/player_hit_strip.png",
+      "published": "assets/files/treasure-hunters/player/player_hit_strip.png",
+      "sha256": "53346b17b68682725459a654fedec4b878aff7f04008597fc2f6ac1f93dda1f7",
+      "published_sha256": "53346b17b68682725459a654fedec4b878aff7f04008597fc2f6ac1f93dda1f7"
+    },
+    {
+      "source": "assets/treasure-hunters/player/player_idle_strip.png",
+      "published": "assets/files/treasure-hunters/player/player_idle_strip.png",
+      "sha256": "999096893b46864dda246bf330e2fbd9c15e0dd370f8cbb97edd472404021732",
+      "published_sha256": "999096893b46864dda246bf330e2fbd9c15e0dd370f8cbb97edd472404021732"
+    },
+    {
+      "source": "assets/treasure-hunters/player/player_jump_strip.png",
+      "published": "assets/files/treasure-hunters/player/player_jump_strip.png",
+      "sha256": "40e7f5d512b7f3f3e5b4546cc724089a99e0865834f386fa76928de713a6546b",
+      "published_sha256": "40e7f5d512b7f3f3e5b4546cc724089a99e0865834f386fa76928de713a6546b"
+    },
+    {
+      "source": "assets/treasure-hunters/player/player_land_strip.png",
+      "published": "assets/files/treasure-hunters/player/player_land_strip.png",
+      "sha256": "79732ec8431e4f73ceae02127be414b8dfe94650b273600aac2a907782350f22",
+      "published_sha256": "79732ec8431e4f73ceae02127be414b8dfe94650b273600aac2a907782350f22"
+    },
+    {
+      "source": "assets/treasure-hunters/player/player_run_strip.png",
+      "published": "assets/files/treasure-hunters/player/player_run_strip.png",
+      "sha256": "2a6c2bb0f5b3af0dec113cd1a7b36b2ae3b17f59ba32c01a05569f8ac27b34f2",
+      "published_sha256": "2a6c2bb0f5b3af0dec113cd1a7b36b2ae3b17f59ba32c01a05569f8ac27b34f2"
+    },
+    {
+      "source": "assets/treasure-hunters/ui/death_icon.png",
+      "published": "assets/files/treasure-hunters/ui/death_icon.png",
+      "sha256": "0312c00715f7cff49880697e8334db078e261706c418267d32354d5415431990",
+      "published_sha256": "0312c00715f7cff49880697e8334db078e261706c418267d32354d5415431990"
+    },
+    {
+      "source": "assets/treasure-hunters/ui/health_fill.png",
+      "published": "assets/files/treasure-hunters/ui/health_fill.png",
+      "sha256": "c960af505b186906cd64b7b6c57845cb93fa119e9ad95382f17fcda26cd15e6b",
+      "published_sha256": "c960af505b186906cd64b7b6c57845cb93fa119e9ad95382f17fcda26cd15e6b"
+    },
+    {
+      "source": "assets/treasure-hunters/ui/health_frame.png",
+      "published": "assets/files/treasure-hunters/ui/health_frame.png",
+      "sha256": "0d1ddcd721ae9d98c4b8ae485e313d6d379a6ab1a828d9d1893fbef2a9752970",
+      "published_sha256": "0d1ddcd721ae9d98c4b8ae485e313d6d379a6ab1a828d9d1893fbef2a9752970"
+    },
+    {
+      "source": "assets/treasure-hunters/ui/health_track.png",
+      "published": "assets/files/treasure-hunters/ui/health_track.png",
+      "sha256": "017f1e097a6ae043723c4411b41b7f554450e78934a8c1059f08ae979220a827",
+      "published_sha256": "017f1e097a6ae043723c4411b41b7f554450e78934a8c1059f08ae979220a827"
+    },
+    {
+      "source": "assets/treasure-hunters/world/barrel_bottle_decoration_01.png",
+      "published": "assets/files/treasure-hunters/world/barrel_bottle_decoration_01.png",
+      "sha256": "e88bb578acb73c35b3c84b8d81b4f41727f5d45025d9f47e5a886d5a1c5d2709",
+      "published_sha256": "e88bb578acb73c35b3c84b8d81b4f41727f5d45025d9f47e5a886d5a1c5d2709"
+    },
+    {
+      "source": "assets/treasure-hunters/world/barrel_bottle_decoration_02.png",
+      "published": "assets/files/treasure-hunters/world/barrel_bottle_decoration_02.png",
+      "sha256": "06f5115d43821b05c4f5a6f9d606bf846aaf60d4cb943eb8896cab1eaff386a0",
+      "published_sha256": "06f5115d43821b05c4f5a6f9d606bf846aaf60d4cb943eb8896cab1eaff386a0"
+    },
+    {
+      "source": "assets/treasure-hunters/world/barrel_bottle_decoration_03.png",
+      "published": "assets/files/treasure-hunters/world/barrel_bottle_decoration_03.png",
+      "sha256": "d8134302e7604c8dfad83e306cb2b27523359c60907ff7b88bf1895601302190",
+      "published_sha256": "d8134302e7604c8dfad83e306cb2b27523359c60907ff7b88bf1895601302190"
+    },
+    {
+      "source": "assets/treasure-hunters/world/barrel_bottle_decoration_06.png",
+      "published": "assets/files/treasure-hunters/world/barrel_bottle_decoration_06.png",
+      "sha256": "ce84fbec1be3895f13b983cbd87c0e827253677a68b4746949070c38a498926f",
+      "published_sha256": "ce84fbec1be3895f13b983cbd87c0e827253677a68b4746949070c38a498926f"
+    },
+    {
+      "source": "assets/treasure-hunters/world/barrel_bottle_decoration_08.png",
+      "published": "assets/files/treasure-hunters/world/barrel_bottle_decoration_08.png",
+      "sha256": "a355d200cfd5a77062df22d7056237e248b37c5908407e2a88d59414880bc96c",
+      "published_sha256": "a355d200cfd5a77062df22d7056237e248b37c5908407e2a88d59414880bc96c"
+    },
+    {
+      "source": "assets/treasure-hunters/world/candle_strip.png",
+      "published": "assets/files/treasure-hunters/world/candle_strip.png",
+      "sha256": "24dc962270b981382e78e9107129f5b63671b9a5eeeddc6e5492cdc8376da660",
+      "published_sha256": "24dc962270b981382e78e9107129f5b63671b9a5eeeddc6e5492cdc8376da660"
+    },
+    {
+      "source": "assets/treasure-hunters/world/chain_big_strip.png",
+      "published": "assets/files/treasure-hunters/world/chain_big_strip.png",
+      "sha256": "2174d93eb0c08b840308ae7cc8914ce9ecbd597b0db165e70f484a11d80611c6",
+      "published_sha256": "2174d93eb0c08b840308ae7cc8914ce9ecbd597b0db165e70f484a11d80611c6"
+    },
+    {
+      "source": "assets/treasure-hunters/world/chain_decoration_05.png",
+      "published": "assets/files/treasure-hunters/world/chain_decoration_05.png",
+      "sha256": "05786208d1ed112330764a2f6197d8749bbb33234ab195199851204717e53ca9",
+      "published_sha256": "05786208d1ed112330764a2f6197d8749bbb33234ab195199851204717e53ca9"
+    },
+    {
+      "source": "assets/treasure-hunters/world/chain_decoration_07.png",
+      "published": "assets/files/treasure-hunters/world/chain_decoration_07.png",
+      "sha256": "b6bfe08feb3a180ccc394deb135962eea320c8b67ad49a3df1c6b7a6b93e9095",
+      "published_sha256": "b6bfe08feb3a180ccc394deb135962eea320c8b67ad49a3df1c6b7a6b93e9095"
+    },
+    {
+      "source": "assets/treasure-hunters/world/chain_small_strip.png",
+      "published": "assets/files/treasure-hunters/world/chain_small_strip.png",
+      "sha256": "078ba486c57e67f998cf1b44eb3008ed2c1067d88e4365c6bedb0f327dcf458c",
+      "published_sha256": "078ba486c57e67f998cf1b44eb3008ed2c1067d88e4365c6bedb0f327dcf458c"
+    },
+    {
+      "source": "assets/treasure-hunters/world/door_decoration_04.png",
+      "published": "assets/files/treasure-hunters/world/door_decoration_04.png",
+      "sha256": "9216e2dbdf5e5902eb3328ef5df3abb77ab7521f71aaf177ca69946e09f9cd27",
+      "published_sha256": "9216e2dbdf5e5902eb3328ef5df3abb77ab7521f71aaf177ca69946e09f9cd27"
+    },
+    {
+      "source": "assets/treasure-hunters/world/door_decoration_09.png",
+      "published": "assets/files/treasure-hunters/world/door_decoration_09.png",
+      "sha256": "ef01a328f4ab69532c17b6334c91287b1f2fa0ce87fc39d3b12c8a42d0a3b5e6",
+      "published_sha256": "ef01a328f4ab69532c17b6334c91287b1f2fa0ce87fc39d3b12c8a42d0a3b5e6"
+    },
+    {
+      "source": "assets/treasure-hunters/world/platform_tiles.png",
+      "published": "assets/files/treasure-hunters/world/platform_tiles.png",
+      "sha256": "95b23bddcb2da97089d45babf75d33e8cd43e0d300ec3e5c0955df27c14db289",
+      "published_sha256": "95b23bddcb2da97089d45babf75d33e8cd43e0d300ec3e5c0955df27c14db289"
+    },
+    {
+      "source": "assets/treasure-hunters/world/spike.png",
+      "published": "assets/files/treasure-hunters/world/spike.png",
+      "sha256": "1002e16e482ed30ad151ce5bcc8079121caf61e220c3d1f7ff58efc1b105812b",
+      "published_sha256": "1002e16e482ed30ad151ce5bcc8079121caf61e220c3d1f7ff58efc1b105812b"
+    },
+    {
+      "source": "assets/treasure-hunters/world/spring_strip.png",
+      "published": "assets/files/treasure-hunters/world/spring_strip.png",
+      "sha256": "f654a87be4f9acfa708cf945f34e095e87682ef15a1fb008fbea5db8f7604b23",
+      "published_sha256": "f654a87be4f9acfa708cf945f34e095e87682ef15a1fb008fbea5db8f7604b23"
+    },
+    {
+      "source": "assets/treasure-hunters/world/terrain_back_wall_tiles.png",
+      "published": "assets/files/treasure-hunters/world/terrain_back_wall_tiles.png",
+      "sha256": "835c4c8b89a0c76afca9caf4cef7b08b6e0098af017f6455a6ecb214ce66e059",
+      "published_sha256": "835c4c8b89a0c76afca9caf4cef7b08b6e0098af017f6455a6ecb214ce66e059"
+    },
+    {
+      "source": "BENCHMARK_MANIFEST.json",
+      "published": "BENCHMARK_MANIFEST.json",
+      
+
+"restore_edits": [
+        {
+          "start": 21,
+          "end": 21,
+          "lines": [
+            "    \"capability_validation_summary\": \"engine/unreal-5.7.4/validation/latest/summary.json\",\n"
+          ]
+        },
+        {
+          "start": 24,
+          "end": 29,
+          "lines": [
+            "    \"project_root\": \"project\",\n",
+            "    \"project_file\": \"project/Captain2DScaffold.uproject\",\n",
+            "    \"starter_entry\": \"project/Captain2DScaffold.uproject\",\n",
+            "    \"default_entry\": \"project/Captain2DScaffold.uproject\",\n",
+            "    \"final_entry\": \"project/Captain2DScaffold.uproject\",\n"
+          ]
+        },
+        {
+          "start": 31,
+          "end": 32,
+          "lines": [
+            "    \"final_map_source\": \"project/Config/DefaultEngine.ini: GameDefaultMap\",\n"
+          ]
+        },
+        {
+          "start": 35,
+          "end": 37,
+          "lines": [
+            "    \"toolchain\": \"TOOLCHAIN.md\",\n",
+            "    \"tool_guide\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n"
+          ]
+        },
+        {
+          "start": 38,
+          "end": 40,
+          "lines": [
+            "    \"asset_catalog_json\": \"ASSET_CATALOG.json\",\n",
+            "    \"asset_catalog_human\": \"ASSET_CATALOG.md\",\n"
+          ]
+        },
+        {
+          "start": 41,
+          "end": 46,
+          "lines": [
+            "    \"license_map\": \"legal/ASSET_LICENSE_MAP.json\",\n",
+            "    \"public_smoke\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
+            "    \"public_smoke_schema\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n",
+            "    \"tool_catalog_index\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
+            "    \"tool_catalog_archive\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        },
+        {
+          "start": 48,
+          "end": 50,
+          "lines": [
+            "    \"room_layout\": \"assets/map/room-layout.json\",\n",
+            "    \"room_art_preview\": \"assets/map/room-art-preview.png\",\n"
+          ]
+        },
+        {
+          "start": 51,
+          "end": 52,
+          "lines": [
+            "    \"room_layout_guide\": \"assets/map/README.md\",\n"
+          ]
+        },
+        {
+          "start": 66,
+          "end": 67,
+          "lines": [
+            "    \"README.md\",\n"
+          ]
+        },
+        {
+          "start": 69,
+          "end": 73,
+          "lines": [
+            "    \"ASSET_CATALOG.md\",\n",
+            "    \"TOOLCHAIN.md\",\n",
+            "    \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "    \"contracts/README.md\"\n"
+          ]
+        },
+        {
+          "start": 76,
+          "end": 77,
+          "lines": [
+            "      \"project\"\n"
+          ]
+        },
+        {
+          "start": 80,
+          "end": 81,
+          "lines": [
+            "      \"README.md\",\n"
+          ]
+        },
+        {
+          "start": 84,
+          "end": 86,
+          "lines": [
+            "\"TOOLCHAIN.md\",\n",
+            "      \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n"
+          ]
+        },
+        {
+          "start": 87,
+          "end": 89,
+          "lines": [
+            "      \"ASSET_CATALOG.json\",\n",
+            "      \"ASSET_CATALOG.md\",\n"
+          ]
+        },
+        {
+          "start": 91,
+          "end": 92,
+          "lines": [
+            "      \"legal\",\n"
+          ]
+        },
+        {
+          "start": 93,
+          "end": 94,
+          "lines": [
+            "      \"tests\",\n"
+          ]
+        },
+        {
+          "start": 95,
+          "end": 97,
+          "lines": [
+            "      \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
+            "      \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        },
+        {
+          "start": 164,
+          "end": 166,
+          "lines": [
+            "    \"entry\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
+            "    \"result_schema\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n"
+          ]
+        },
+        {
+          "start": 187,
+          "end": 189,
+          "lines": [
+            "    \"guide\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "    \"guide_sha256\": \"8f7b97f467070883c94b5a218a663c0943b62f0633b4bf424e9a78c56cc00d28\",\n"
+          ]
+        },
+        {
+          "start": 190,
+          "end": 191,
+          "lines": [
+            "    \"capabilities_contract_sha256\": \"9007a3a623ce2c24e8a14c8f69764db31b146c9b5c5019704ab034c803cc2412\",\n"
+          ]
+        },
+        {
+          "start": 197,
+          "end": 198,
+          "lines": [
+            "    \"validation_scope\": \"UE 5.7.4 CL 51494982 Windows x64 editor_game; benchmark interface evidence is bound to the published capability validation identity. Source starter build/render/reopen evidence is specific to this revision.\",\n"
+          ]
+        },
+        {
+          "start": 199,
+          "end": 202,
+          "lines": [
+            "    \"complete_catalog_index\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
+            "    \"complete_catalog_index_sha256\": \"44fca8ffb2231ff5f1147673d671823f46068ce369aafae2eff68c13c6d711f0\",\n",
+            "    \"complete_catalog_archive\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        },
+        {
+          "start": 207,
+          "end": 209,
+          "lines": [
+            "    \"catalog_json\": \"ASSET_CATALOG.json\",\n",
+            "    \"catalog_human\": \"ASSET_CATALOG.md\",\n"
+          ]
+        },
+        {
+          "start": 210,
+          "end": 212,
+          "lines": [
+            "    \"license_map\": \"legal/ASSET_LICENSE_MAP.json\",\n",
+            "    \"offline_license\": \"legal/CC0-1.0.txt\",\n"
+          ]
+        },
+        {
+          "start": 220,
+          "end": 222,
+          "lines": [
+            "\n",
+            "\n"
+          ]
+        },
+        {
+          "start": 230,
+          "end": 232,
+          "lines": [
+            "      \"byte_length\": 3715,\n",
+            "      \"sha256\": \"7dcc9fa4e61749bba1687a04df053346a283954d8c7658a42798b18cab27b4de\"\n"
+          ]
+        },
+        {
+          "start": 234,
+          "end": 237,
+          "lines": [
+            "      \"path\": \"README.md\",\n",
+            "      \"byte_length\": 6797,\n",
+            "      \"sha256\": \"4f349ef67a04668c08b9747583b06c92ad30587c675a7af3f9b0b46215e7ead8\"\n"
+          ]
+        },
+        {
+          "start": 239,
+          "end": 242,
+          "lines": [
+            "      \"path\": \"TOOLCHAIN.md\",\n",
+            "      \"byte_length\": 8229,\n",
+            "      \"sha256\": \"873eee0849bdf5e6364ecab40cd8febf20c37bec75f6609c24e7c15b3e14ad33\"\n"
+          ]
+        },
+        {
+          "start": 244,
+          "end": 247,
+          "lines": [
+            "      \"path\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "      \"byte_length\": 32887,\n",
+            "      \"sha256\": \"8f7b97f467070883c94b5a218a663c0943b62f0633b4bf424e9a78c56cc00d28\"\n"
+          ]
+        },
+        {
+          "start": 249,
+          "end": 250,
+          "lines": [
+            "      \"path\": \"contracts/README.md\",\n"
+          ]
+        },
+        {
+          "start": 254,
+          "end": 257,
+          "lines": [
+            "      \"path\": \"tests/PublicSmoke/README.md\",\n",
+            "      \"byte_length\": 3169,\n",
+            "      \"sha256\": \"29baaa4f6ea57935b42c8dd98ad117271a43165ef06624d45d9119877b6e80d8\"\n"
+          ]
+        },
+        {
+          "start": 259,
+          "end": 260,
+          "lines": [
+            "      \"path\": \"project/Captain2DScaffold.uproject\",\n"
+          ]
+        },
+        {
+          "start": 265,
+          "end": 267,
+          "lines": [
+            "      \"byte_length\": 23411,\n",
+            "      \"sha256\": \"b519586f2f1e7b2649cfb9635a9728834f3c24437d1095a87caf3cf22ee87103\"\n"
+          ]
+        },
+        {
+          "start": 270,
+          "end": 272,
+          "lines": [
+            "      \"byte_length\": 8465,\n",
+            "      \"sha256\": \"76f469803318eab9a4f1b1ee1f741337ca7f2d15e10d5f424592a7d95e4d3d45\"\n"
+          ]
+        },
+        {
+          "start": 274,
+          "end": 277,
+          "lines": [
+            "      \"path\": \"ASSET_CATALOG.json\",\n",
+            "      \"byte_length\": 37941,\n",
+            "      \"sha256\": \"2e686f1d8aca5da8778c84a16522b812ee9fb8bcc33a2e5594ece5fdcb58cc05\"\n"
+          ]
+        },
+        {
+          "start": 279,
+          "end": 282,
+          "lines": [
+            "      \"path\": \"ASSET_CATALOG.md\",\n",
+            "      \"byte_length\": 5353,\n",
+            "      \"sha256\": \"eaff75dd9b09e9ca507c72353c77da9064e604a8e52f7027a43faf57df5865e9\"\n"
+          ]
+        },
+        {
+          "start": 289,
+          "end": 292,
+          "lines": [
+            "      \"path\": \"legal/ASSET_LICENSE_MAP.json\",\n",
+            "      \"byte_length\": 3773,\n",
+            "      \"sha256\": \"59fb5ac08c07049905966b1115b4cbf1b1d92ad537e76df8d3b519cf12669145\"\n"
+          ]
+        },
+        {
+          "start": 294,
+          "end": 295,
+          "lines": [
+            "      \"path\": \"legal/CC0-1.0.txt\",\n"
+          ]
+        },
+        {
+          "start": 304,
+          "end": 307,
+          "lines": [
+            "      \"path\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
+            "      \"byte_length\": 26463,\n",
+            "      \"sha256\": \"0765fa7725ab61cd685f9b90149920ea5882e3b2d33f0b0f21784493447d2922\"\n"
+          ]
+        },
+        {
+          "start": 309,
+          "end": 312,
+          "lines": [
+            "      \"path\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n",
+            "      \"byte_length\": 4451,\n",
+            "      \"sha256\": \"3f5d4c4221200fe6e78b87f45a1a4ee8669e2f47ca476153a6968f3f7ef89b6a\"\n"
+          ]
+        },
+        {
+          "start": 314,
+          "end": 317,
+          "lines": [
+            "      \"path\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
+            "      \"byte_length\": 3026,\n",
+            "      \"sha256\": \"44fca8ffb2231ff5f1147673d671823f46068ce369aafae2eff68c13c6d711f0\"\n"
+          ]
+        },
+        {
+          "start": 319,
+          "end": 320,
+          "lines": [
+            "      \"path\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        },
+        {
+          "start": 325,
+          "end": 327,
+          "lines": [
+            "      \"byte_length\": 2032,\n",
+            "      \"sha256\": \"963b6d6b254dbd7e890218bfb8f213d4d5e8bede64ef2e13bc2833af70684446\"\n"
+          ]
+        },
+        {
+          "start": 330,
+          "end": 332,
+          "lines": [
+            "      \"byte_length\": 30837,\n",
+            "      \"sha256\": \"9af9bc7ba2a6d94cbf9be50962b69f45a1cf37aeca7b978e7adeb6d585e2e879\"\n"
+          ]
+        },
+        {
+          "start": 344,
+          "end": 347,
+          "lines": [
+            "      \"path\": \"assets/map/README.md\",\n",
+            "      \"byte_length\": 2294,\n",
+            "      \"sha256\": \"1e46a00911bced0770a0004fdd42a415c224d290e5ba7c2c97d2cd4a4ad438eb\"\n"
+          ]
+        },
+        {
+          "start": 349,
+          "end": 352,
+          "lines": [
+            "      \"path\": \"assets/map/room-layout.json\",\n",
+            "      \"byte_length\": 124249,\n",
+            "      \"sha256\": \"a9b62a521fb2df3f30ab460c992edfc2c8649e73ee515c4e571865dd5ccf9519\"\n"
+          ]
+        },
+        {
+          "start": 354,
+          "end": 355,
+          "lines": [
+            "      \"path\": \"assets/map/room-art-preview.png\",\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "contracts/game-state.schema.json",
+      "published": "contracts/game-state.schema.json",
+      "sha256": "6b8a01746cbaf6310646c5be75171d8eebc804f8303e45b7e02298f60a22d60d",
+      "published_sha256": "6b8a01746cbaf6310646c5be75171d8eebc804f8303e45b7e02298f60a22d60d"
+    },
+    {
+      "source": "contracts/README.md",
+      "published": "contracts/GAME_SESSION_SPEC.md",
+      "sha256": "9a4bc1f7a2b517a701230174a6b17f3b51e62961ea1fabf69b7a88eee91a77ef",
+      "published_sha256": "9a4bc1f7a2b517a701230174a6b17f3b51e62961ea1fabf69b7a88eee91a77ef"
+    },
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+      "source": "GDD.md",
+      "published": "GDD.md",
+      "sha256": "b519586f2f1e7b2649cfb9635a9728834f3c24437d1095a87caf3cf22ee87103",
+      "published_sha256": "9bc8c292ceb6c81b1c2b6fb4d6bf8ee8cfb1dda0fb4d35b1992ad1a276e9821a",
+      "restore_edits": [
+        {
+          "start": 139,
+          "end": 145,
+          "lines": [
+            "| `CONTENT-01`, `ASSET-03` | `assets/map/room-layout.json`, `assets/map/room-art-preview.png` | Required original static room art data; implement collision and live actors separately. |\n",
+            "| `ASSET-01` | Exact files under `assets/treasure-hunters/player/`, enumerated in `ASSET_CATALOG.json` | Required captain idle/run/jump/fall/land/sword/hit/death art; no replacement. |\n",
+            "| `ASSET-02` | Exact files under `assets/treasure-hunters/objectives/`, enumerated in `ASSET_CATALOG.json` | Required key/pickup/door art; no replacement. |\n",
+            "| `ASSET-03` | Exact files under `assets/treasure-hunters/world/`, enumerated in `ASSET_CATALOG.json` | Required original tiles, platforms, spikes, spring and decor; no replacement. |\n",
+            "| `ASSET-04` | Exact files under `assets/treasure-hunters/enemy/`, enumerated in `ASSET_CATALOG.json` | Required green pig art; no replacement. |\n",
+            "| `ASSET-05` | Exact files under `assets/treasure-hunters/ui/`, enumerated in `ASSET_CATALOG.json` | Required health/skull UI art, with key art above; no replacement. |\n"
+          ]
+        },
+        {
+          "start": 146,
+          "end": 147,
+          "lines": [
+            "Every file, frame size, timing fact, dependency and hash is individually listed in `ASSET_CATALOG.json` and its readable companion. `assets/map/README.md` explains the static data format. These are clean presentation materials: no Unreal map package, imported sprite, flipbook, actor, Blueprint, collision, AI, input mapping or importer is supplied.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "INITIAL_AGENT_PROMPT.md",
+      "published": "INITIAL_AGENT_PROMPT.md",
+      "sha256": "7dcc9fa4e61749bba1687a04df053346a283954d8c7658a42798b18cab27b4de",
+      "published_sha256": "9116dc25951425d7fcc69d70cbdb10c4dfafd1080d9ffe9afbad43127758d5d2",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "Implement the player-facing results in `GDD.md` using the answer-free Unreal project under `project/`. This public input defines the task and its engineering boundaries; it does not prescribe a model, generation framework, or implementation architecture.\n"
+          ]
+        },
+        {
+          "start": 9,
+          "end": 10,
+          "lines": [
+            "2. `README.md`\n"
+          ]
+        },
+        {
+          "start": 12,
+          "end": 16,
+          "lines": [
+            "5. `ASSET_CATALOG.md`\n",
+            "6. `TOOLCHAIN.md`\n",
+            "7. `UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md`\n",
+            "8. `contracts/README.md`\n"
+          ]
+        },
+        {
+          "start": 21,
+          "end": 22,
+          "lines": [
+            "- Start from `project/Captain2DScaffold.uproject`.\n"
+          ]
+        },
+        {
+          "start": 23,
+          "end": 25,
+          "lines": [
+            "- `project/` is the only writable root in this public input.\n",
+            "- All other public files are protected. You may read them and copy required source assets into `project/`, but do not modify or delete them.\n"
+          ]
+        },
+        {
+          "start": 48,
+          "end": 49,
+          "lines": [
+            "Leave the best runnable candidate in `project/` and report:\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "legal/ASSET_LICENSE_MAP.json",
+      "published": "assets/legal/ASSET_LICENSE_MAP.json",
+      "sha256": "59fb5ac08c07049905966b1115b4cbf1b1d92ad537e76df8d3b519cf12669145",
+      "published_sha256": "9ad5bbb24f360a3f0a8ef54afe1f477c685841db65c4efdecffff0f92e2321cc",
+      "restore_edits": [
+        {
+          "start": 17,
+          "end": 18,
+          "lines": [
+            "      \"license_file\": \"legal/CC0-1.0.txt\",\n"
+          ]
+        },
+        {
+          "start": 19,
+          "end": 59,
+          "lines": [
+            "        \"assets/treasure-hunters/enemy/enemy_attack_strip.png\",\n",
+            "        \"assets/treasure-hunters/enemy/enemy_death_strip.png\",\n",
+            "        \"assets/treasure-hunters/enemy/enemy_fall_strip.png\",\n",
+            "        \"assets/treasure-hunters/enemy/enemy_hit_strip.png\",\n",
+            "        \"assets/treasure-hunters/enemy/enemy_idle_strip.png\",\n",
+            "        \"assets/treasure-hunters/enemy/enemy_run_strip.png\",\n",
+            "        \"assets/treasure-hunters/objectives/key_pickup_strip.png\",\n",
+            "        \"assets/treasure-hunters/objectives/key_idle_strip.png\",\n",
+            "        \"assets/treasure-hunters/world/candle_strip.png\",\n",
+            "        \"assets/treasure-hunters/world/chain_big_strip.png\",\n",
+            "        \"assets/treasure-hunters/world/chain_small_strip.png\",\n",
+            "        \"assets/treasure-hunters/objectives/door_closed.png\",\n",
+            "        \"assets/treasure-hunters/objectives/door_open_strip.png\",\n",
+            "        \"assets/treasure-hunters/player/player_attack_a_strip.png\",\n",
+            "        \"assets/treasure-hunters/player/player_attack_b_strip.png\",\n",
+            "        \"assets/treasure-hunters/player/player_attack_c_strip.png\",\n",
+            "        \"assets/treasure-hunters/player/player_death_strip.png\",\n",
+            "        \"assets/treasure-hunters/player/player_fall_strip.png\",\n",
+            "        \"assets/treasure-hunters/player/player_hit_strip.png\",\n",
+            "        \"assets/treasure-hunters/player/player_idle_strip.png\",\n",
+            "        \"assets/treasure-hunters/player/player_jump_strip.png\",\n",
+            "        \"assets/treasure-hunters/player/player_land_strip.png\",\n",
+            "        \"assets/treasure-hunters/player/player_run_strip.png\",\n",
+            "        \"assets/treasure-hunters/world/spring_strip.png\",\n",
+            "        \"assets/treasure-hunters/world/terrain_back_wall_tiles.png\",\n",
+            "        \"assets/treasure-hunters/world/platform_tiles.png\",\n",
+            "        \"assets/treasure-hunters/world/spike.png\",\n",
+            "        \"assets/treasure-hunters/ui/health_frame.png\",\n",
+            "        \"assets/treasure-hunters/ui/health_track.png\",\n",
+            "        \"assets/treasure-hunters/ui/health_fill.png\",\n",
+            "        \"assets/treasure-hunters/ui/death_icon.png\",\n",
+            "        \"assets/treasure-hunters/world/barrel_bottle_decoration_01.png\",\n",
+            "        \"assets/treasure-hunters/world/barrel_bottle_decoration_02.png\",\n",
+            "        \"assets/treasure-hunters/world/barrel_bottle_decoration_03.png\",\n",
+            "        \"assets/treasure-hunters/world/door_decoration_04.png\",\n",
+            "        \"assets/treasure-hunters/world/chain_decoration_05.png\",\n",
+            "        \"assets/treasure-hunters/world/barrel_bottle_decoration_06.png\",\n",
+            "        \"assets/treasure-hunters/world/chain_decoration_07.png\",\n",
+            "        \"assets/treasure-hunters/world/barrel_bottle_decoration_08.png\",\n",
+            "        \"assets/treasure-hunters/world/door_decoration_09.png\"\n"
+          ]
+        },
+        {
+          "start": 65,
+          "end": 66,
+          "lines": [
+            "        \"assets/map/room-art-preview.png\",\n"
+          ]
+        },
+        {
+          "start": 67,
+          "end": 68,
+          "lines": [
+            "        \"assets/map/room-layout.json\"\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "legal/CC0-1.0.txt",
+      "published": "assets/legal/CC0-1.0.txt",
+      "sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "published_sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+    },
+    {
+      "source": "legal/README.md",
+      "published": "assets/legal/LICENSE_SCOPE.md",
+      "sha256": "4aeb60ced7af4be4b61d86e1e4ac3711c2232c64048ac192a48e750935d29be7",
+      "published_sha256": "4aeb60ced7af4be4b61d86e1e4ac3711c2232c64048ac192a48e750935d29be7"
+    },
+    {
+      "source": "project/.gitignore",
+      "published": "starter-project/.gitignore",
+      "sha256": "ef5883f1a331d73daa036d6fada910fdb324df2f5c538b6dd331c199ec7de4ef",
+      "published_sha256": "ef5883f1a331d73daa036d6fada910fdb324df2f5c538b6dd331c199ec7de4ef"
+    },
+    {
+      "source": "project/Captain2DScaffold.uproject",
+      "published": "starter-project/Captain2DScaffold.uproject",
+      "sha256": "e5cc16ed0f79441ef64186a0c0625ad017b51a8eca3da464c70fbfc2b0488f48",
+      "published_sha256": "e5cc16ed0f79441ef64186a0c0625ad017b51a8eca3da464c70fbfc2b0488f48"
+    },
+    {
+      "source": "project/Config/DefaultEngine.ini",
+      "published": "starter-project/Config/DefaultEngine.ini",
+      "sha256": "ed539f9a5a25524bc592592d52324d7c0ccab0ee8b55c307a6f88cc290ff377a",
+      "published_sha256": "ed539f9a5a25524bc592592d52324d7c0ccab0ee8b55c307a6f88cc290ff377a"
+    },
+    {
+      "source": "project/Config/DefaultGame.ini",
+      "published": "starter-project/Config/DefaultGame.ini",
+      "sha256": "f7d4209f74b9280b9dc657681a11e261b4ea49ca4a43db70c700fe4c3a52c437",
+      "published_sha256": "f7d4209f74b9280b9dc657681a11e261b4ea49ca4a43db70c700fe4c3a52c437"
+    },
+    {
+      "source": "project/Config/DefaultGameUserSettings.ini",
+      "published": "starter-project/Config/DefaultGameUserSettings.ini",
+      "sha256": "df57875a4a7998d56d0cb5e9bccb60597a79a0f00c8176828db261d5a59f140d",
+      "published_sha256": "df57875a4a7998d56d0cb5e9bccb60597a79a0f00c8176828db261d5a59f140d"
+    },
+    {
+      "source": "project/Config/DefaultInput.ini",
+      "published": "starter-project/Config/DefaultInput.ini",
+      "sha256": "4d28e52122422f06d865ecef88e532948f7ef05d090d73075af0a1188bf0a562",
+      "published_sha256": "4d28e52122422f06d865ecef88e532948f7ef05d090d73075af0a1188bf0a562"
+    },
+    {
+      "source": "project/README.md",
+      "published": "starter-project/README.md",
+      "sha256": "1a790702a68329a4760c6bbc7768cfcf682e1467963de18d827c5830838c2ad4",
+      "published_sha256": "1a790702a68329a4760c6bbc7768cfcf682e1467963de18d827c5830838c2ad4"
+    },
+    {
+      "source": "project/Source/Captain2DScaffold/Captain2DHealthState.cpp",
+      "published": "starter-project/Source/Captain2DScaffold/Captain2DHealthState.cpp",
+      "sha256": "2bd96cbcd2ddb108d54d85ed6f15dbd4c0f6a88609755200b40b7b4e3b774af7",
+      "published_sha256": "2bd96cbcd2ddb108d54d85ed6f15dbd4c0f6a88609755200b40b7b4e3b774af7"
+    },
+    {
+      "source": "project/Source/Captain2DScaffold/Captain2DHealthState.h",
+      "published": "starter-project/Source/Captain2DScaffold/Captain2DHealthState.h",
+      "sha256": "22b83255d3651d444c7cc1c0f432a4d52fa3d3a607b7d55f31dbbbdd1d35e26c",
+      "published_sha256": "22b83255d3651d444c7cc1c0f432a4d52fa3d3a607b7d55f31dbbbdd1d35e26c"
+    },
+    {
+      "source": "project/Source/Captain2DScaffold/Captain2DScaffold.Build.cs",
+      "published": "starter-project/Source/Captain2DScaffold/Captain2DScaffold.Build.cs",
+      "sha256": "c5df209cf5b8da17c092484279ef134ea2aa96b5e34a62548f16d8d90574f0f1",
+      "published_sha256": "c5df209cf5b8da17c092484279ef134ea2aa96b5e34a62548f16d8d90574f0f1"
+    },
+    {
+      "source": "project/Source/Captain2DScaffold/Captain2DScaffold.cpp",
+      "published": "starter-project/Source/Captain2DScaffold/Captain2DScaffold.cpp",
+      "sha256": "9a6e00434e35d391541e59676677b72aabba263ea320b13fe0d7174e9309822f",
+      "published_sha256": "9a6e00434e35d391541e59676677b72aabba263ea320b13fe0d7174e9309822f"
+    },
+    {
+      "source": "project/Source/Captain2DScaffold/Captain2DScaffoldGameMode.cpp",
+      "published": "starter-project/Source/Captain2DScaffold/Captain2DScaffoldGameMode.cpp",
+      "sha256": "704d20800c9b0266c32f17c60a3cfc2e93b5080e31b6c3ab92225f1637d72bad",
+      "published_sha256": "704d20800c9b0266c32f17c60a3cfc2e93b5080e31b6c3ab92225f1637d72bad"
+    },
+    {
+      "source": "project/Source/Captain2DScaffold/Captain2DScaffoldGameMode.h",
+      "published": "starter-project/Source/Captain2DScaffold/Captain2DScaffoldGameMode.h",
+      "sha256": "9cc614f73a2fd270d83ed9fcfa39d75375769e1c928726c60f84226a07499de9",
+      "published_sha256": "9cc614f73a2fd270d83ed9fcfa39d75375769e1c928726c60f84226a07499de9"
+    },
+    {
+      "source": "project/Source/Captain2DScaffold/Captain2DScaffoldHUD.cpp",
+      "published": "starter-project/Source/Captain2DScaffold/Captain2DScaffoldHUD.cpp",
+      "sha256": "14bfed02db21008ded0438434568c5d34b4dc447ca26f72996097f3e4fc8410e",
+      "published_sha256": "14bfed02db21008ded0438434568c5d34b4dc447ca26f72996097f3e4fc8410e"
+    },
+    {
+      "source": "project/Source/Captain2DScaffold/Captain2DScaffoldHUD.h",
+      "published": "starter-project/Source/Captain2DScaffold/Captain2DScaffoldHUD.h",
+      "sha256": "6c999971eba2e3e4e86ac8d34c2124803820434a29e8338079aefdba0078eb4f",
+      "published_sha256": "6c999971eba2e3e4e86ac8d34c2124803820434a29e8338079aefdba0078eb4f"
+    },
+    {
+      "source": "project/Source/Captain2DScaffold.Target.cs",
+      "published": "starter-project/Source/Captain2DScaffold.Target.cs",
+      "sha256": "5437cc3df1a31cc27144ba7880648f47d65f7c0483b8b498c648bf0ea6b75d0f",
+      "published_sha256": "5437cc3df1a31cc27144ba7880648f47d65f7c0483b8b498c648bf0ea6b75d0f"
+    },
+    {
+      "source": "project/Source/Captain2DScaffoldEditor.Target.cs",
+      "published": "starter-project/Source/Captain2DScaffoldEditor.Target.cs",
+      "sha256": "7ffcd6a545f1d3cb9e19433bc099bb7a25ddf7111aeebe74479aec505dcfdde7",
+      "published_sha256": "7ffcd6a545f1d3cb9e19433bc099bb7a25ddf7111aeebe74479aec505dcfdde7"
+    },
+    {
+      "source": "README.md",
+      "published": "tools/INPUT_GUIDE.md",
+      
+
+"restore_edits": [
+        {
+          "start": 9,
+          "end": 10,
+          "lines": [
+            "2. `README.md` — package map and authority boundaries.\n"
+          ]
+        },
+        {
+          "start": 11,
+          "end": 15,
+          "lines": [
+            "4. `ASSET_MANIFEST.json`, then `ASSET_CATALOG.md` — required art and exact asset facts.\n",
+            "5. `TOOLCHAIN.md` — task-specific engine, entry, path, and environment parameters.\n",
+            "6. `UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md` — validated interfaces and navigation to the complete interface catalog.\n",
+            "7. `contracts/README.md` — implementation-independent read-only state transport.\n"
+          ]
+        },
+        {
+          "start": 23,
+          "end": 24,
+          "lines": [
+            "| Asset identity, dimensions, hashes, provenance, and license | `ASSET_CATALOG.json` |\n"
+          ]
+        },
+        {
+          "start": 25,
+          "end": 28,
+          "lines": [
+            "| Task paths, engine parameters, and release policy | `BENCHMARK_MANIFEST.json` and `TOOLCHAIN.md` |\n",
+            "| Validated public benchmark interfaces | `UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md` |\n",
+            "| Complete UE 5.7.4 and installed-plugin interface inventory | `UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json` and `UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz` |\n"
+          ]
+        },
+        {
+          "start": 37,
+          "end": 40,
+          "lines": [
+            "| `project/` | Source-only answer-free Unreal project and final candidate root | Yes |\n",
+            "| `assets/` | Original sprite sheets and static map art data to import or process inside the project | No |\n",
+            "| `legal/` | Offline license text and per-file license mapping | No |\n"
+          ]
+        },
+        {
+          "start": 41,
+          "end": 42,
+          "lines": [
+            "| `tests/PublicSmoke/` | Public project, tool, transport, reopen, and cleanup health check | No |\n"
+          ]
+        },
+        {
+          "start": 45,
+          "end": 46,
+          "lines": [
+            "`references/room-reference.png` is a room composition design illustration showing the captain, pig and traversal objects. GDD ENEMY-01 defines the pig's patrol boundaries using room landmarks. `assets/map/room-layout.json` preserves the original static art placement; see `assets/map/README.md` for its data format. This is a single-room reconstruction. All required source art must be used; no preassembled gameplay or importer is supplied.\n"
+          ]
+        },
+        {
+          "start": 47,
+          "end": 48,
+          "lines": [
+            "Only `project/` is part of the candidate implementation surface. Build products, runtime state, captures, receipts, logs, packages, and evaluation evidence belong in a run directory outside this input copy.\n"
+          ]
+        },
+        {
+          "start": 53,
+          "end": 54,
+          "lines": [
+            "Open `project/Captain2DScaffold.uproject`. The starter renders a stable English health screen and deliberately contains no player pawn, movement, key, exit, hazard, completion flow, or gameplay restart. Its task-state bridge reports `provider_ready=false` and `game_state=null`.\n"
+          ]
+        },
+        {
+          "start": 55,
+          "end": 56,
+          "lines": [
+            "The final candidate must retain or equivalently replace the read-only bridge inside `project/` so implemented gameplay publishes `provider_ready=true` and schema-valid authoritative truth. This is evaluator-interoperability plumbing, not a gameplay requirement, and it must never control or mutate gameplay.\n"
+          ]
+        },
+        {
+          "start": 82,
+          "end": 83,
+          "lines": [
+            "pwsh -NoProfile -File tests/PublicSmoke/Invoke-PublicSmoke.ps1 `\n"
+          ]
+        },
+        {
+          "start": 89,
+          "end": 90,
+          "lines": [
+            "Public smoke checks an unmodified release copy: package identity, source build, a real rendered starter frame, the engine-health snapshot, the answer-free task bridge, a true new-process reopen, and final cleanup. It does not test or certify any gameplay requirement. After implementing the game, use the build/run entries in `TOOLCHAIN.md` and the task-state schema to check your candidate; do not rewrite protected release manifests to make an edited project pass the starter identity gate.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "references/room-reference.png",
+      "published": "references/room-reference.png",
+      "sha256": "9c3d279f733dce61ddab3c614f453810a25c7da9aae596853162c3e929fbaaea",
+      "published_sha256": "9c3d279f733dce61ddab3c614f453810a25c7da9aae596853162c3e929fbaaea"
+    },
+    {
+      "source": "tests/PublicSmoke/Invoke-PublicSmoke.ps1",
+      "published": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
+      
+
+"restore_edits": [
+        {
+          "start": 34,
+          "end": 35,
+          "lines": [
+            "        [Parameter(Mandatory)][ValidateSet('release', 'project', 'executor', 'environment', 'cleanup')][string]$Domain,\n"
+          ]
+        },
+        {
+          "start": 232,
+          "end": 233,
+          "lines": [
+            "$ProjectPath = Join-Path $InputFull 'project/Captain2DScaffold.uproject'\n"
+          ]
+        },
+        {
+          "start": 259,
+          "end": 260,
+          "lines": [
+            "            [pscustomobject]@{ path = [string]$benchmark.tooling.capabilities_contract; sha256 = [string]$benchmark.tooling.capabilities_contract_sha256 },\n",
+            "            [pscustomobject]@{ path = [string]$benchmark.engine.capability_validation_summary; sha256 = [string]$benchmark.tooling.validation_summary_sha256 }\n"
+          ]
+        },
+        {
+          "start": 300,
+          "end": 301,
+          "lines": [
+            "        Add-SmokeFault -Domain 'project' -Code 'source_build_failed'\n"
+          ]
+        },
+        {
+          "start": 472,
+          "end": 473,
+          "lines": [
+            "        project_file = 'project/Captain2DScaffold.uproject'\n"
+          ]
+        },
+        {
+          "start": 491,
+          "end": 492,
+          "lines": [
+            "exit $ExitCode\r\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tests/PublicSmoke/README.md",
+      "published": "self-check/PublicSmoke/CONTRACT.md",
+      "sha256": "29baaa4f6ea57935b42c8dd98ad117271a43165ef06624d45d9119877b6e80d8",
+      "published_sha256": "470e726f2ab6de9e062283bc59a1a68ef923affae45c89f60f9089729bbdb3a9",
+      "restore_edits": [
+        {
+          "start": 11,
+          "end": 12,
+          "lines": [
+            "pwsh -NoProfile -File tests/PublicSmoke/Invoke-PublicSmoke.ps1 `\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tests/PublicSmoke/schemas/public-smoke-result.schema.json",
+      "published": "self-check/PublicSmoke/schemas/public-smoke-result.schema.json",
+      
+
+"restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "  \"$id\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n"
+          ]
+        },
+        {
+          "start": 14,
+          "end": 15,
+          "lines": [
+            "    \"project\",\n"
+          ]
+        },
+        {
+          "start": 54,
+          "end": 55,
+          "lines": [
+            "    \"project\": {\n"
+          ]
+        },
+        {
+          "start": 63,
+          "end": 64,
+          "lines": [
+            "          \"const\": \"project/Captain2DScaffold.uproject\"\n"
+          ]
+        },
+        {
+          "start": 163,
+          "end": 164,
+          "lines": [
+            "              \"project\",\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "TOOLCHAIN.md",
+      "published": "tools/TOOLCHAIN.md",
+      "sha256": "873eee0849bdf5e6364ecab40cd8febf20c37bec75f6609c24e7c15b3e14ad33",
+      "published_sha256": "55481ee728b29043053a5f8d1a6560ff4da1a685398b0b60f6f46bc046f16015",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "This file is authoritative for task-specific engine, project, path, and environment parameters. `UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md` documents the validated public benchmark interfaces and links the complete static interface catalog. `GDD.md` Section 6 remains the sole gameplay acceptance authority.\n"
+          ]
+        },
+        {
+          "start": 12,
+          "end": 16,
+          "lines": [
+            "| Project root | `project/` |\n",
+            "| Project file | `project/Captain2DScaffold.uproject` |\n",
+            "| Starter/default map | `/Engine/Maps/Entry` through `project/Config/DefaultEngine.ini` |\n",
+            "| Final entry | `project/Captain2DScaffold.uproject` using its configured default map |\n"
+          ]
+        },
+        {
+          "start": 45,
+          "end": 47,
+          "lines": [
+            "- `UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json`\n",
+            "- `UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz`\n"
+          ]
+        },
+        {
+          "start": 113,
+          "end": 114,
+          "lines": [
+            "pwsh -NoProfile -File tests/PublicSmoke/Invoke-PublicSmoke.ps1 `\n"
+          ]
+        },
+        {
+          "start": 120,
+          "end": 121,
+          "lines": [
+            "The run root must be new or empty and outside the public input. Exit code `0` means all public health assertions passed. Exit code `1` means a release or project assertion failed. Exit code `2` means the smoke could not produce a valid verdict because its parameters, tools, environment, or cleanup contract were unhealthy. The result file is `<run-root>/public-smoke-result.json` and follows `tests/PublicSmoke/schemas/public-smoke-result.schema.json`.\n"
+          ]
+        },
+        {
+          "start": 124,
+          "end": 125,
+          "lines": [
+            "Source sprite sheets are under `assets/treasure-hunters/`; original static art layout data is under `assets/map/`, with the room composition design reference under `references/`. The JSON tile/decoration format is documented in `assets/map/README.md`. Import, slicing, collision construction, animation assembly and gameplay binding are implementation work. Required use, exact dimensions, frame facts, and hashes are in `ASSET_MANIFEST.json` and `ASSET_CATALOG.json`. Copy or import them into `project/Content/`; do not edit the protected source files.\n"
+          ]
+        },
+        {
+          "start": 126,
+          "end": 127,
+          "lines": [
+            "Only `project/` is writable within this public input. Build and runtime tools may create generated project directories, but final delivery must exclude generated output. Runtime evidence and evaluation material remain outside the input copy.\n"
+          ]
+        }
+      ]
+    },
+    
+
+
+
+
+
+{
+      "source": "tools/Resolve-Unreal57.ps1",
+      "published": "tools/Resolve-Unreal57.ps1",
+      "sha256": "12581ab0254ec09162a8783b412a71951418e8eb9a38a6e9f137d4e9ead873c5",
+      "published_sha256": "12581ab0254ec09162a8783b412a71951418e8eb9a38a6e9f137d4e9ead873c5"
+    },
+    {
+      "source": "tools/Search-UnrealInterfaceCatalog.ps1",
+      "published": "tools/Search-UnrealInterfaceCatalog.ps1",
+      "sha256": "963b6d6b254dbd7e890218bfb8f213d4d5e8bede64ef2e13bc2833af70684446",
+      "published_sha256": "a35eaaa1fc13c0740c649c61b540c43056e0a3c6a4c90a6e7ad0fa7626519afa",
+      "restore_edits": [
+        {
+          "start": 6,
+          "end": 8,
+          "lines": [
+            "    [string]$CatalogPath = (Join-Path $PSScriptRoot '../UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz'),\n",
+            "    [string]$IndexPath = (Join-Path $PSScriptRoot '../UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json')\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "tools/Test-PublicInput.ps1",
+      "published": "tools/Test-PublicInput.ps1",
+      
+
+"restore_edits": [
+        {
+          "start": 112,
+          "end": 116,
+          "lines": [
+            "    Assert-PublicInput ($benchmark.paths.project_root -ceq 'project') 'Project root must be project.'\n",
+            "    Assert-PublicInput ($benchmark.paths.project_file -ceq 'project/Captain2DScaffold.uproject') 'Project file identity is incorrect.'\n",
+            "    Assert-PublicInput ($benchmark.paths.tool_catalog_index -ceq 'UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json') 'Interface-catalog index path is incorrect.'\n",
+            "    Assert-PublicInput ($benchmark.paths.tool_catalog_archive -ceq 'UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz') 'Interface-catalog archive path is incorrect.'\n"
+          ]
+        },
+        {
+          "start": 117,
+          "end": 119,
+          "lines": [
+            "    Assert-PublicInput ($benchmark.workspace.writable_roots.Count -eq 1 -and $benchmark.workspace.writable_roots[0] -ceq 'project') 'project must be the only writable root.'\n",
+            "    Assert-PublicInput (-not (@($benchmark.workspace.protected_roots) -ccontains 'project')) 'The writable project root cannot also be protected.'\n"
+          ]
+        },
+        {
+          "start": 130,
+          "end": 130,
+          "lines": [
+            "    Assert-PublicInput ($benchmark.engine.capability_validation_summary -ceq 'engine/unreal-5.7.4/validation/latest/summary.json') 'Capability validation summary path is incorrect.'\n"
+          ]
+        },
+        {
+          "start": 136,
+          "end": 137,
+          "lines": [
+            "            [string]$benchmark.tooling.capabilities_contract_sha256,\n",
+            "            [string]$benchmark.tooling.validation_summary_sha256\n"
+          ]
+        },
+        {
+          "start": 195,
+          "end": 196,
+          "lines": [
+            "        'README.md',\n"
+          ]
+        },
+        {
+          "start": 197,
+          "end": 201,
+          "lines": [
+            "        'TOOLCHAIN.md',\n",
+            "        'UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md',\n",
+            "        'UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json',\n",
+            "        'UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz',\n"
+          ]
+        },
+        {
+          "start": 202,
+          "end": 204,
+          "lines": [
+            "        'ASSET_CATALOG.json',\n",
+            "        'ASSET_CATALOG.md',\n"
+          ]
+        },
+        {
+          "start": 205,
+          "end": 208,
+          "lines": [
+            "        'legal/ASSET_LICENSE_MAP.json',\n",
+            "        'legal/CC0-1.0.txt',\n",
+            "        'contracts/README.md',\n"
+          ]
+        },
+        {
+          "start": 209,
+          "end": 212,
+          "lines": [
+            "        'tests/PublicSmoke/README.md',\n",
+            "        'tests/PublicSmoke/Invoke-PublicSmoke.ps1',\n",
+            "        'tests/PublicSmoke/schemas/public-smoke-result.schema.json',\n"
+          ]
+        },
+        {
+          "start": 214,
+          "end": 215,
+          "lines": [
+            "        'project/Captain2DScaffold.uproject'\n"
+          ]
+        },
+        {
+          "start": 220,
+          "end": 221,
+          "lines": [
+            "    $toolGuidePath = Join-Path $root 'UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md'\n"
+          ]
+        },
+        {
+          "start": 222,
+          "end": 223,
+          "lines": [
+            "    Assert-PublicInput ($benchmark.tooling.guide -ceq 'UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md') 'Tool guide path is incorrect.'\n"
+          ]
+        },
+        {
+          "start": 225,
+          "end": 227,
+          "lines": [
+            "    $catalogIndexPath = Join-Path $root 'UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json'\n",
+            "    $catalogArchivePath = Join-Path $root 'UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz'\n"
+          ]
+        },
+        {
+          "start": 247,
+          "end": 248,
+          "lines": [
+            "    $uproject = Read-JsonFile -Path (Join-Path $root 'project/Captain2DScaffold.uproject')\n"
+          ]
+        },
+        {
+          "start": 252,
+          "end": 253,
+          "lines": [
+            "    $projectRoot = Join-Path $root 'project'\n"
+          ]
+        },
+        {
+          "start": 285,
+          "end": 286,
+          "lines": [
+            "    $assetCatalog = Read-JsonFile -Path (Join-Path $root 'ASSET_CATALOG.json')\n"
+          ]
+        },
+        {
+          "start": 314,
+          "end": 315,
+          "lines": [
+            "    $licenses = Read-JsonFile -Path (Join-Path $root 'legal/ASSET_LICENSE_MAP.json')\n"
+          ]
+        },
+        {
+          "start": 342,
+          "end": 343,
+          "lines": [
+            "    $layout = Read-JsonFile -Path (Join-Path $root 'assets/map/room-layout.json')\n"
+          ]
+        },
+        {
+          "start": 367,
+          "end": 368,
+          "lines": [
+            "    foreach ($publicDocument in @('GDD.md','README.md','INITIAL_AGENT_PROMPT.md','ASSET_CATALOG.md','assets/map/README.md')) {\n"
+          ]
+        },
+        {
+          "start": 408,
+          "end": 409,
+          "lines": [
+            "        'README.md',\n"
+          ]
+        },
+        {
+          "start": 411,
+          "end": 415,
+          "lines": [
+            "        'ASSET_CATALOG.md',\n",
+            "        'TOOLCHAIN.md',\n",
+            "        'UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md',\n",
+            "        'contracts/README.md'\n"
+          ]
+        }
+      ]
+    },
+    
+
+
+
+
+
+{
+      "source": "UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
+      "published": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
+      "sha256": "44fca8ffb2231ff5f1147673d671823f46068ce369aafae2eff68c13c6d711f0",
+      "published_sha256": "bd1b60f121dc840a67bdc9dfccab11bcd0b9221ea1fd23a3fa411bd758197c1e",
+      "restore_edits": [
+        {
+          "start": 66,
+          "end": 67,
+          "lines": [
+            "  \"catalog_file\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
+          ]
+        }
+      ]
+    },
+    {
+      "source": "UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz",
+      "published": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz",
+      "sha256": "750f1bd26572c5f4d3e5c2afe7fce14d5d7c76aad4ee806151ced72924a6dfd0",
+      "published_sha256": "750f1bd26572c5f4d3e5c2afe7fce14d5d7c76aad4ee806151ced72924a6dfd0"
+    },
+    {
+      "source": "UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md",
+      "published": "tools/TOOL_GUIDE.md",
+      "sha256": "8f7b97f467070883c94b5a218a663c0943b62f0633b4bf424e9a78c56cc00d28",
+      "published_sha256": "9eebd26ced937d6d737fa35cc9c8aa23016fccafa842f32e0136332f2d705d54",
+      "restore_edits": [
+        {
+          "start": 2,
+          "end": 3,
+          "lines": [
+            "This public guide documents individual validated benchmark interfaces for Unreal Engine 5.7.4 and points to the complete engine-and-plugin interface catalog. It is not a gameplay recipe, evaluator, score definition, task pipeline, or reference implementation. Task-specific paths remain in `TOOLCHAIN.md`, and gameplay acceptance remains solely in `GDD.md` Section 6.\n"
+          ]
+        },
+        {
+          "start": 23,
+          "end": 24,
+          "lines": [
+            "The adjacent `UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json` and `UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz` form the version-bound all-interface catalog for Unreal Engine 5.7.4 changelist 51494982 on Windows x64 in `editor_game` mode.\n"
+          ]
+        },
+        {
+          "start": 57,
+          "end": 58,
+          "lines": [
+            "**Faults:** Invalid project/run/state paths, engine selection failures, stale state conflicts, non-neutral input, process/window discovery failures, foreground or first-frame timeouts, and job/watchdog initialization failures. Stable public fault codes are listed under `Start` in the capability contract.\n"
+          ]
+        },
+        {
+          "start": 65,
+          "end": 66,
+          "lines": [
+            "  -ProjectPath '<input>/project/Captain2DScaffold.uproject' `\n"
+          ]
+        },
+        {
+          "start": 479,
+          "end": 480,
+          "lines": [
+            "**Parameters:** Positional target `Captain2DScaffoldEditor`, platform `Win64`, configuration `Development`, project `<input>/project/Captain2DScaffold.uproject`; compiler selector `-CompilerVersion=14.44.35207`; switches `-WaitMutex` and `-NoHotReloadFromIDE`.\n"
+          ]
+        },
+        {
+          "start": 494,
+          "end": 495,
+          "lines": [
+            "  '<input>/project/Captain2DScaffold.uproject' `\n"
+          ]
+        },
+        {
+          "start": 521,
+          "end": 522,
+          "lines": [
+            "  '<input>/project/Captain2DScaffold.uproject' `\n"
+          ]
+        },
+        {
+          "start": 548,
+          "end": 549,
+          "lines": [
+            "  '<input>/project/Captain2DScaffold.uproject' `\n"
+          ]
+        },
+        {
+          "start": 576,
+          "end": 577,
+          "lines": [
+            "  '-project=<input>/project/Captain2DScaffold.uproject' `\n"
+          ]
+        },
+        {
+          "start": 590,
+          "end": 591,
+          "lines": [
+            "**Exact entry:** `tests/PublicSmoke/Invoke-PublicSmoke.ps1`.\n"
+          ]
+        },
+        {
+          "start": 605,
+          "end": 606,
+          "lines": [
+            "pwsh -NoProfile -File tests/PublicSmoke/Invoke-PublicSmoke.ps1 `\n"
+          ]
+        },
+        {
+          "start": 616,
+          "end": 621,
+          "lines": []
+        }
+      ]
+    }
+  ]
+}

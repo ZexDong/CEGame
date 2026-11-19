@@ -1,0 +1,81 @@
+{
+  "task_id": "unreal.gemsbond",
+  "language": "en",
+  "target_engine_identity": {
+    "version": "5.7.4",
+    "changelist": 51494982,
+    "compatible_changelist": 47537391,
+    "branch": "++UE5+Release-5.7",
+    "platform": "Windows x64",
+    "runtime": "editor_game"
+  },
+  "project_root": "starter-project",
+  "project_file": "starter-project/GemsBondStarter.uproject",
+  "editor_target": "GemsBondStarterEditor",
+  "starter_entry": "/Engine/Maps/Entry",
+  "final_entry": "Configured GameDefaultMap in starter-project/Config/DefaultEngine.ini",
+  "viewport": {
+    "accepted_client_sizes": [
+      [
+        1280,
+        720
+      ],
+      [
+        1920,
+        1080
+      ]
+    ],
+    "aspect_ratio": "16:9",
+    "dpi": "Recorded per session; normalized coordinates use the client area."
+  },
+  "initial_prompt": "INITIAL_AGENT_PROMPT.md",
+  "read_order": [
+    "tools/INPUT_GUIDE.md",
+    "INITIAL_AGENT_PROMPT.md",
+    "GDD.md",
+    "tools/TOOLCHAIN.md",
+    "assets/ASSET_CATALOG.md",
+    "contracts/GAME_SESSION_SPEC.md",
+    "tools/TOOL_GUIDE.md"
+  ],
+  "writable_roots": [
+    "starter-project"
+  ],
+  "protected_roots": [
+    "all files outside project"
+  ],
+  "network_policy": "Offline task; use only the supplied input and installed engine/toolchain. Do not consult external repositories or sibling directories.",
+  "installation_policy": "Use installed toolchain; no additional installation required.",
+  "workspace_policy": "Work only from this input and the installed engine/toolchain.",
+  "observation": {
+    "contract": "contracts/GAME_SESSION_SPEC.md",
+    "schema": "contracts/observation.schema.json",
+    "naming": "naming-tables.json",
+    "self_check": "tools/check_observation.py",
+    "read_only": true
+  },
+  "public_smoke": {
+    "entry": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
+    "result_schema": "self-check/PublicSmoke/result.schema.json",
+    "success_exit_code": 0,
+    "failure_exit_code": 1,
+    "evidence": "Caller-selected empty RunRoot outside input"
+  },
+  "public_integrity_check": "tools/Test-PublicInput.ps1",
+  "tool_catalog": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

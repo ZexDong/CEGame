@@ -1,0 +1,17 @@
+[bootstrap]
+main_collection = /main/main.collectionc
+
+[display]
+width = 1136
+height = 640
+
+[project]
+title = Third Person Delivery Starter
+version = 0.1.0
+write_log = 1
+
+[engine]
+run_while_iconified = 1
+
+[input]
+game_binding = /main/game.input_bindingc

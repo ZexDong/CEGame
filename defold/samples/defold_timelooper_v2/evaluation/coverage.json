@@ -1,0 +1,552 @@
+{
+  "schema_version": 2,
+  "game": "defold_timelooper_v2",
+  "gdd": "../input/GDD.md",
+  "common_baseline": "../input/COMMON_BASELINE.md",
+  "checkpoint_script": "rules.json",
+  "scoring_compatibility": {
+    "source": "defold_timelooper v1 D1-D5 rules",
+    "dimension_maxima": {
+      "D1": 10,
+      "D2": 30,
+      "D3": 20,
+      "D4": 20,
+      "D5": 10
+    },
+    "checkpoint_counts": {
+      "D1": 4,
+      "D2": 6,
+      "D3": 8,
+      "D4": 6,
+      "D5": 6
+    },
+    "rule": "Each unique script check ID is pass/fail. A dimension score is its maximum multiplied by passed checks divided by unique checks in that dimension. Repeated observations are conjunctive evidence, not extra weight. The private core-loop cap is applied only after raw dimension scoring and is reported explicitly."
+  },
+  "static_checks": [
+    {
+      "id": "D1-01",
+      "title": "Defold project entry, input binding, delivery hygiene, and public Dashboard files are recognizable"
+    },
+    {
+      "id": "D1-02",
+      "title": "Bob resolves and builds the project without errors"
+    },
+    {
+      "id": "D1-03",
+      "title": "A runnable macOS debug bundle is produced"
+    },
+    {
+      "id": "D1-04",
+      "title": "The bundle reaches its menu without player input and emits a conformant Dashboard snapshot"
+    }
+  ],
+  "dynamic_checks": {
+    "D2": [
+      {
+        "id": "D2-01",
+        "title": "The running level contains the required multi-height geometry and objects"
+      },
+      {
+        "id": "D2-02",
+        "title": "Movement, jumping, pause, restart, and menu input are dynamically available"
+      },
+      {
+        "id": "D2-03",
+        "title": "A real history-replaying echo appears during play"
+      },
+      {
+        "id": "D2-04",
+        "title": "Five collectible gems and gated exit progression are present"
+      },
+      {
+        "id": "D2-05",
+        "title": "The pressure button and controlled collidable door are usable"
+      },
+      {
+        "id": "D2-06",
+        "title": "Menu, gameplay, pause, failure, success, retry, and reopen states are reachable"
+      }
+    ],
+    "D3": [
+      {
+        "id": "D3-01",
+        "title": "Tap, hold, release, jump, gravity, and platform landing behave correctly"
+      },
+      {
+        "id": "D3-02",
+        "title": "Gems collect once and only all five activate the current-player exit"
+      },
+      {
+        "id": "D3-03",
+        "title": "Echo timing, replay progression, and player-collision failure are correct"
+      },
+      {
+        "id": "D3-04",
+        "title": "Button occupancy and door collision state stay synchronized"
+      },
+      {
+        "id": "D3-05",
+        "title": "Visible spike contact causes terminal failure without phantom collision"
+      }
+    ],
+    "D4": [
+      {
+        "id": "D4-01",
+        "title": "A normal adaptive player journey reaches success through the required echo-door flow"
+      },
+      {
+        "id": "D4-02",
+        "title": "Spike and echo failures reach usable result flows"
+      },
+      {
+        "id": "D4-03",
+        "title": "Restart and result retry restore every transient gameplay state"
+      },
+      {
+        "id": "D4-04",
+        "title": "Pause freezes the world and a newly opened process returns to the menu"
+      }
+    ],
+    "D5": [
+      {
+        "id": "D5-01",
+        "title": "The live main menu is visible and contains readable text",
+        "method": "window capture plus narrow OCR"
+      },
+      {
+        "id": "D5-02",
+        "title": "The live gameplay HUD and controls are visible and readable",
+        "method": "window capture plus narrow OCR and Dashboard cross-check"
+      },
+      {
+        "id": "D5-03",
+        "title": "Gem, echo, button, door, and exit feedback matches real state",
+        "method": "window captures plus Dashboard cross-check"
+      },
+      {
+        "id": "D5-04",
+        "title": "The pause overlay is visible and readable while the background is frozen",
+        "method": "window capture plus narrow OCR and Dashboard cross-check"
+      },
+      {
+        "id": "D5-05",
+        "title": "Failure and success result interfaces are visible, readable, and operable",
+        "method": "window captures plus narrow OCR and Dashboard cross-check"
+      }
+    ]
+  },
+  "coverage": [
+    {
+      "source": "gdd:TL-Menu-01",
+      "check_ids": [
+        "D2-06",
+        "D4-02",
+        "D4-03",
+        "D5-01",
+        "D5-05"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:TL-Move-01",
+      "check_ids": [
+        "D2-02",
+        "D3-01"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:TL-level-01",
+      "check_ids": [
+        "D2-01",
+        "D4-01"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:TL-level-02",
+      "check_ids": [
+        "D2-01",
+        "D4-01",
+        "D6-frozen-frame"
+      ],
+      "disposition": "scored_and_visual"
+    },
+    {
+      "source": "gdd:TL-gems-01",
+      "check_ids": [
+        "D2-04",
+        "D3-02"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:TL-gems-02",
+      "check_ids": [
+        "D5-02",
+        "D5-03",
+        "D6-frozen-frame"
+      ],
+      "disposition": "scored_and_visual"
+    },
+    {
+      "source": "gdd:TL-Echo-01",
+      "check_ids": [
+        "D2-03",
+        "D3-03",
+        "D4-01"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:TL-Echo-02",
+      "check_ids": [
+        "D2-03",
+        "D3-03",
+        "D5-03"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:TL-Echo-03",
+      "check_ids": [
+        "D3-03",
+        "D4-02"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:TL-Organization-01",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D4-01"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:TL-Organization-02",
+      "check_ids": [
+        "D2-05",
+        "D3-04",
+        "D4-01"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:TL-Danger-01",
+      "check_ids": [
+        "D3-05",
+        "D4-02",
+        "D5-03"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:TL-Exit-01",
+      "check_ids": [
+        "D2-04",
+        "D3-02",
+        "D4-01",
+        "D5-03"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:TL-Pause-01",
+      "check_ids": [
+        "D2-02",
+        "D3-01",
+        "D4-04",
+        "D5-04"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:TL-Restart-01",
+      "check_ids": [
+        "D2-06",
+        "D4-03",
+        "D4-04"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:TL-Interface-01",
+      "check_ids": [
+        "D5-01",
+        "D5-02",
+        "D5-03",
+        "D5-04",
+        "D5-05"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:TL-Layout-01",
+      "check_ids": [
+        "D5-01",
+        "D5-02",
+        "D5-04",
+        "D5-05",
+        "D6-frozen-frame"
+      ],
+      "disposition": "scored_and_visual"
+    },
+    {
+      "source": "gdd:TL-Layout-02",
+      "check_ids": [
+        "D5-01",
+        "D5-04",
+        "D5-05",
+        "D6-frozen-frame"
+      ],
+      "disposition": "scored_and_visual"
+    },
+    {
+      "source": "gdd:TL-Visual-01",
+      "check_ids": [
+        "D6-frozen-frame"
+      ],
+      "disposition": "visual_d6"
+    },
+    {
+      "source": "gdd:TL-Materials-01",
+      "check_ids": [
+        "D6-frozen-frame"
+      ],
+      "disposition": "visual_d6"
+    },
+    {
+      "source": "gdd:TL-Feedback-01",
+      "check_ids": [
+        "D1-04",
+        "D2-01",
+        "honesty:spot_checks"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:TL-Feedback-02",
+      "check_ids": [
+        "D2-03",
+        "D2-04",
+        "D2-05",
+        "D3-03",
+        "D3-04",
+        "honesty:spot_checks"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Quality-01",
+      "check_ids": [
+        "D1-01",
+        "D1-02",
+        "D1-03",
+        "D1-04",
+        "D4-04"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Quality-02",
+      "check_ids": [
+        "D2-02",
+        "D3-01",
+        "D4-01",
+        "D4-02"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Quality-03",
+      "check_ids": [
+        "D5-01",
+        "D5-02",
+        "D5-03",
+        "D5-04",
+        "D5-05"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Quality-04",
+      "check_ids": [
+        "D5-02",
+        "D5-03",
+        "D5-04",
+        "D5-05"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Quality-05",
+      "check_ids": [
+        "D1-02",
+        "D1-04"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:Quality-06",
+      "check_ids": [
+        "D4-01"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-01",
+      "check_ids": [
+        "D1-04"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-02",
+      "check_ids": [
+        "D1-02",
+        "D4-01",
+        "D4-02"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-03",
+      "check_ids": [
+        "D4-04"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-04",
+      "check_ids": [
+        "D2-02",
+        "D3-01"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-05",
+      "check_ids": [
+        "D5-01",
+        "D5-02",
+        "D5-03",
+        "D5-04",
+        "D5-05"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-06",
+      "check_ids": [
+        "D3-01"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-07",
+      "check_ids": [
+        "D2-06",
+        "D5-01",
+        "D5-05"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-08",
+      "check_ids": [
+        "D5-01",
+        "D5-02",
+        "D5-03",
+        "D5-04",
+        "D5-05"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-09",
+      "check_ids": [
+        "D3-02",
+        "D3-05",
+        "D5-02",
+        "D5-05"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-10",
+      "check_ids": [
+        "D4-04",
+        "D5-04"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-11",
+      "check_ids": [
+        "D3-02",
+        "D4-01",
+        "D5-05"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-12",
+      "check_ids": [
+        "D3-03",
+        "D3-05",
+        "D4-02",
+        "D4-03",
+        "D5-05"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-13",
+      "check_ids": [
+        "D4-03"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-14",
+      "check_ids": [
+        "D4-01",
+        "D4-02"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-15",
+      "check_ids": [
+        "honesty:no_input_no_terminal_transition"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-16",
+      "check_ids": [
+        "D1-01"
+      ],
+      "disposition": "scored"
+    },
+    {
+      "source": "common-baseline:CB-17",
+      "check_ids": [
+        "D6-frozen-frame"
+      ],
+      "disposition": "visual_d6"
+    },
+    {
+      "source": "common-baseline:CB-18",
+      "check_ids": [
+        "D1-04",
+        "honesty:spot_checks"
+      ],
+      "disposition": "scored"
+    }
+  ],
+  "unmapped_gdd_requirements": [],
+  "unmapped_common_baseline_items": []
+}

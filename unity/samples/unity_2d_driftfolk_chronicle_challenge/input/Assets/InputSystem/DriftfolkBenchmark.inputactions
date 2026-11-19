@@ -1,0 +1,42 @@
+{
+  "name": "DriftfolkBenchmark",
+  "maps": [
+    {
+      "name": "Player",
+      "id": "d79db740-6dc6-4517-9964-0998e236b3d5",
+      "actions": [
+        {"name":"Start","type":"Button","id":"09c5f0af-acde-45f4-bb26-d787fe3c8499","expectedControlType":"Button"},
+        {"name":"Pause","type":"Button","id":"e5d96d9d-f7ca-4f35-aa10-35606970fd14","expectedControlType":"Button"},
+        {"name":"Speed1","type":"Button","id":"4e1228b2-89bf-451c-903c-416d82bfbddd","expectedControlType":"Button"},
+        {"name":"Speed4","type":"Button","id":"5bc9a662-991b-4f3b-95d7-fefedb8bb80a","expectedControlType":"Button"},
+        {"name":"Speed16","type":"Button","id":"0f0acdd7-e9db-4819-ab7e-490f9722d184","expectedControlType":"Button"},
+        {"name":"Choice1","type":"Button","id":"ef887cbf-500c-4706-8327-b779158d9f01","expectedControlType":"Button"},
+        {"name":"Choice2","type":"Button","id":"d478bc33-4888-4501-98df-0c6f151a36c4","expectedControlType":"Button"},
+        {"name":"Choice3","type":"Button","id":"1f78a99a-2467-4447-9cbd-b982a660f793","expectedControlType":"Button"},
+        {"name":"Choice4","type":"Button","id":"31fca5ee-7437-476b-b97d-3a0d0af28314","expectedControlType":"Button"},
+        {"name":"Save","type":"Button","id":"c866a803-4777-413a-a38c-4019f84b8476","expectedControlType":"Button"},
+        {"name":"Load","type":"Button","id":"e9faf4ef-d4c8-4e49-948f-d8198f9bb88e","expectedControlType":"Button"},
+        {"name":"Restart","type":"Button","id":"ff9cc9ba-d7c6-4370-9325-4f69a2f51c11","expectedControlType":"Button"}
+      ],
+      "bindings": [
+        {"id":"dd5b6a49-0824-436c-9ea4-d7d8588336b1","path":"<Keyboard>/enter","action":"Start"},
+        {"id":"4b3aca3e-f578-468e-8b4b-105185100833","path":"<Keyboard>/escape","action":"Pause"},
+        {"id":"6b6be8cc-4449-437c-b7f3-3dd5ec76df44","path":"<Keyboard>/1","action":"Speed1"},
+        {"id":"f28ea3c2-1293-43b0-a487-fcb9b5746cb5","path":"<Keyboard>/4","action":"Speed4"},
+        {"id":"ae550931-dbb2-4ee8-8c92-b1469b83a2fc","path":"<Keyboard>/6","action":"Speed16"},
+        {"id":"f95168b7-ac66-46d1-8d34-796cdb942292","path":"<Keyboard>/1","action":"Choice1"},
+        {"id":"169d8834-207d-4604-a61a-10ac4a6fdce7","path":"<Keyboard>/2","action":"Choice2"},
+        {"id":"d28d48c7-e8ef-4211-9c3d-eece11adfcaa","path":"<Keyboard>/3","action":"Choice3"},
+        {"id":"e24e7fc1-d79a-42f2-8916-e40ec0ac6f4f","path":"<Keyboard>/4","action":"Choice4"},
+        {"name":"Ctrl+S","id":"5c3d50c4-19dc-4685-8e9d-35c621adce0b","path":"OneModifier","interactions":"Press","processors":"","groups":"Keyboard&Mouse","action":"Save","isComposite":true,"isPartOfComposite":false},
+        {"name":"modifier","id":"b8925098-138f-4cb7-a074-320d613444f6","path":"<Keyboard>/ctrl","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Save","isComposite":false,"isPartOfComposite":true},
+        {"name":"binding","id":"26492aae-7702-4509-b0af-414730e2b760","path":"<Keyboard>/s","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Save","isComposite":false,"isPartOfComposite":true},
+        {"name":"Ctrl+L","id":"72b77909-0be0-40ff-8530-9001a5a4fbfd","path":"OneModifier","interactions":"Press","processors":"","groups":"Keyboard&Mouse","action":"Load","isComposite":true,"isPartOfComposite":false},
+        {"name":"modifier","id":"2e69fbb0-75ec-405d-8ba9-d669957ef8f4","path":"<Keyboard>/ctrl","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Load","isComposite":false,"isPartOfComposite":true},
+        {"name":"binding","id":"bc530554-a440-4ef4-8b5c-aac7ef8ad45a","path":"<Keyboard>/l","interactions":"","processors":"","groups":"Keyboard&Mouse","action":"Load","isComposite":false,"isPartOfComposite":true},
+        {"id":"cf6b6140-98f7-4183-9f34-0efdf98bd674","path":"<Keyboard>/r","action":"Restart"}
+      ]
+    }
+  ],
+  "controlSchemes": []
+}

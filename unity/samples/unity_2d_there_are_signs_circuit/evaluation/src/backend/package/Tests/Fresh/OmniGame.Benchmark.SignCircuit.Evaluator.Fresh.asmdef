@@ -1,0 +1,24 @@
+{
+  "name": "OmniGame.Benchmark.SignCircuit.Evaluator.Fresh",
+  "rootNamespace": "OmniGame.Benchmark.SignCircuit.Evaluator",
+  "references": [
+    "UnityEngine.UI",
+    "Unity.TextMeshPro",
+    "OmniGame.Benchmark.SignCircuit.Evaluator.Dynamic",
+    "OmniGame.SignCircuit.Contract"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "unity.brick_n_balls_challenge.v1",
+  "input_version": "v1.4-tool-guide-v5-20260825",
+  "gdd_revision": "v1.1-player-goals-only-20260825",
+  "common_tool_guide_id": "unity-common-tool-guide-v5-20260825",
+  "unity_editor": "6000.0.80f1",
+  "unity_cli": "1.0.0-beta.3",
+  "entry_scene": "Assets/Scenes/BrickChallenge.unity",
+  "target_resolution": [
+    1280,
+    720
+  ],
+  "public_contract": "OmniGame.Benchmark.BrickChallenge.Contracts.IBrickChallengeProbe",
+  "contract_version": "2026.08.23-v4",
+  "asset_manifest": "ASSET_MANIFEST.json",
+  "public_editmode_filter": "OmniGame.Benchmark.BrickChallenge.PublicSmoke.EditMode",
+  "public_playmode_filter": "OmniGame.Benchmark.BrickChallenge.PublicSmoke.PlayMode",
+  "writable_paths": [
+    "Assets/BrickChallenge/**",
+    "Assets/Scenes/BrickChallenge.unity",
+    "ProjectSettings/EditorBuildSettings.asset",
+    "ProjectSettings/ProjectSettings.asset"
+  ],
+  "protected_paths": [
+    "Assets/TaskAssets/**",
+    "Assets/PublicSmoke/**",
+    "Packages/com.omnigame.benchmark.brick-challenge.contracts/**",
+    "GDD.md",
+    "README.md",
+    "INITIAL_AGENT_PROMPT.md",
+    "TOOLCHAIN.md",
+    "UNITY_BENCHMARK_TOOL_GUIDE.md",
+    "BENCHMARK_MANIFEST.json",
+    "ASSET_MANIFEST.json",
+    "legal/**"
+  ],
+  "network_required": false,
+  "submission_profile": "repository-local Unity project using normal New Input System player input"
+}

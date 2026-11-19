@@ -1,0 +1,30 @@
+{
+  "schema_version": "deep-relay-budget-v1",
+  "sessions": [
+    {
+      "id": "formal_success_recovery",
+      "dynamic_trajectory_count": 1,
+      "declared_dynamic_trajectory_steps": 58,
+      "fixed_declared_seconds": 72,
+      "adaptive_timeout_seconds": 888,
+      "declared_serial_worst_case_seconds": 960,
+      "evaluator_render_evidence_margin_seconds": 120,
+      "hard_watchdog_seconds": 1200,
+      "watchdog_headroom_seconds": 240,
+      "contains_reopen_boundary": false
+    },
+    {
+      "id": "clean_reopen",
+      "dynamic_trajectory_count": 1,
+      "declared_dynamic_trajectory_steps": 4,
+      "fixed_declared_seconds": 18,
+      "adaptive_timeout_seconds": 27,
+      "declared_serial_worst_case_seconds": 45,
+      "evaluator_render_evidence_margin_seconds": 30,
+      "hard_watchdog_seconds": 120,
+      "watchdog_headroom_seconds": 75,
+      "contains_reopen_boundary": true
+    }
+  ],
+  "invariant": "hard_watchdog_seconds >= declared_serial_worst_case_seconds + evaluator_render_evidence_margin_seconds"
+}

@@ -1,0 +1,14 @@
+{
+  "catalog_revision": "2026.08.26",
+  "roles": {
+    "structure": {"color_hex": "182235", "material": "Metal"},
+    "walkable_floor": {"color_hex": "34445A", "material": "DiamondPlate"},
+    "normal_signal": {"color_hex": "3ED6D0", "material": "Neon"},
+    "interaction": {"color_hex": "F2B84B", "material": "Neon"},
+    "danger": {"color_hex": "EF5350", "material": "Neon"},
+    "success": {"color_hex": "5ED47A", "material": "Neon"},
+    "hud_panel": {"color_hex": "0B1220", "material": "UI background"},
+    "hud_text": {"color_hex": "EAF4FF", "material": "UI text"}
+  },
+  "note": "Semantic palette only; not a final scene, route, or answer."
+}

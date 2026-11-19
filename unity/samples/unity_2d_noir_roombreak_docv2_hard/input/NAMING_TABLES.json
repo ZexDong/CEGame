@@ -1,0 +1,105 @@
+{
+  "schema_version": 1,
+  "task_id": "unity.noir_roombreak_challenge.v1",
+  "contract_version": "game-state-dashboard/v2",
+  "coordinate_space": "game-view pixels, origin bottom-left, x right, y up; enemy and player cell values are rounded screen positions",
+  "slots": [
+    "room_index",
+    "room_count",
+    "bonds",
+    "maximum_bonds",
+    "dash_charges",
+    "maximum_dash_charges",
+    "player_alive",
+    "player_grounded",
+    "player_dashing",
+    "player_invulnerable",
+    "anda_chasing",
+    "obser_lock_visible",
+    "obser_laser_visible",
+    "defeated_enemy_count",
+    "soft_respawn_count",
+    "global_respawn_count",
+    "last_respawn_kind",
+    "state_sequence"
+  ],
+  "entities": [
+    {
+      "kind": "player",
+      "states": [
+        "dead",
+        "grounded",
+        "airborne",
+        "dashing",
+        "invulnerable"
+      ]
+    },
+    {
+      "kind": "anda",
+      "states": [
+        "idle",
+        "patrol",
+        "alert",
+        "chase",
+        "defeated"
+      ]
+    },
+    {
+      "kind": "obser",
+      "states": [
+        "idle",
+        "patrol",
+        "locking",
+        "firing",
+        "defeated"
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "kind": "start_button"
+    },
+    {
+      "kind": "pause_resume_control"
+    },
+    {
+      "kind": "success_return_control"
+    },
+    {
+      "kind": "restart_button"
+    }
+  ],
+  "controls": {
+    "movement_template": "continuous_keys",
+    "keys": {
+      "left": "A",
+      "right": "D",
+      "jump": "Space",
+      "backstab": "C",
+      "dash": "Z",
+      "pause": "Escape",
+      "restart": "R"
+    },
+    "pointer": [
+      "start_button",
+      "pause_resume_control",
+      "success_return_control",
+      "restart_button"
+    ]
+  },
+  "phase_values": [
+    "not_ready",
+    "menu",
+    "playing",
+    "paused",
+    "won",
+    "lost"
+  ],
+  "notes": [
+    "The primary dashboard implements Benchmark.Dashboard.IGameStateDashboard from the supplied standard skeleton.",
+    "The legacy INoirRoombreakProbe is a migration-specialist compatibility sidecar, not the primary dashboard.",
+    "All evaluated actions use normal New Input System keyboard or pointer input.",
+    "Target rectangles report the real clickable area; invisible phase-specific targets remain present with visible=false and interactable=false.",
+    "Dashboard state is read-only and is cross-checked against the rendered game and input effects."
+  ]
+}

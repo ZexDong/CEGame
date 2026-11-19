@@ -1,0 +1,7 @@
+{
+  "name": "com.gamecreate.evaluation.private-state-fixtures",
+  "version": "1.0.0",
+  "displayName": "Private evaluation state preparation",
+  "description": "Evaluator-owned state preparation. Never ship in model Input or candidate submissions.",
+  "unity": "6000.0"
+}

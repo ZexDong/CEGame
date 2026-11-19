@@ -1,0 +1,17 @@
+{
+  "schema_version": "3.0.0",
+  "stage": "static",
+  "checkpoints": [
+    "D1-01",
+    "D1-02",
+    "D1-03",
+    "D1-04"
+  ],
+  "normal_player_input": false,
+  "reopen_dimension": "D4",
+  "forbidden_methods": [
+    "VLM",
+    "source-image comparison",
+    "file presence as dynamic credit"
+  ]
+}

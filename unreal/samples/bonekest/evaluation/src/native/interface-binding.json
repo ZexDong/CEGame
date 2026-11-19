@@ -1,0 +1,58 @@
+{
+  "engine": "UE 5.7.4 CL 51494982",
+  "public_full_catalog": "input/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
+  "source_of_task_rules": "input/GDD.md",
+  "runtime": "engine/observation-player/1.1",
+  "interfaces": [
+    {
+      "id": "build",
+      "interface": "Build.bat / UnrealBuildTool"
+    },
+    {
+      "id": "launch",
+      "interface": "Start-UnrealEvaluationSession"
+    },
+    {
+      "id": "keyboard",
+      "interface": "Invoke-UnrealPressKey / Start-UnrealKeyHold / Stop-UnrealKeyHold"
+    },
+    {
+      "id": "pointer",
+      "interface": "Move-UnrealPointer / Start-UnrealMouseHold / Stop-UnrealMouseHold / Invoke-UnrealClick"
+    },
+    {
+      "id": "observation",
+      "interface": "Player.state / Player.wait, atomic public JSON"
+    },
+    {
+      "id": "capture",
+      "interface": "Save-UnrealClientCapture"
+    },
+    {
+      "id": "close_reopen",
+      "interface": "Player.reopen: normal Stop then Start, new PID"
+    },
+    {
+      "id": "fixture_transport",
+      "interface": "StateFixture nonce/PID/sequence apply receipt"
+    },
+    {
+      "id": "native_visual_audio",
+      "interface": "NativeEvidence / PrivateRender forwarded actual draw calls"
+    },
+    {
+      "id": "ds_fixture_precursors",
+      "interface": "DsHarnessAdapter separately reviewed semantic mapping"
+    },
+    {
+      "id": "d6",
+      "interface": "Interactive image-pair review and canonical parser"
+    },
+    {
+      "id": "candidate_exit_cleanup",
+      "interface": "completed_exit_cleanup raw receipt interpretation"
+    }
+  ],
+  "no_gold_architecture_requirement": true,
+  "limits": "Only separately reviewed adapters may bridge private implementation details. Unknown mapping is evaluator authoring failure, never candidate zero."
+}

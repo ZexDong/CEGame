@@ -1,0 +1,219 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:vibe-gaming:unreal-public-executor:operation-result:1.0.0",
+  "title": "Unreal public executor operation result",
+  "description": "Separates input dispatch, feedback observation, target visibility, executor/host faults, and unsupported capabilities. It contains no game score.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "operation",
+    "status",
+    "observer_monotonic_ms",
+    "input_dispatched",
+    "feedback_observed",
+    "target_visible",
+    "executor_fault",
+    "environment_fault",
+    "unsupported",
+    "result",
+    "fault",
+    "evidence"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "operation": {
+      "enum": [
+        "ResolveEngine",
+        "Start",
+        "Stop",
+        "PressKey",
+        "HoldKey",
+        "ReleaseKey",
+        "MovePointer",
+        "MouseDown",
+        "MouseUp",
+        "Click",
+        "Drag",
+        "FindVisibleTarget",
+        "ReadState",
+        "WaitUntil",
+        "Capture",
+        "Restart",
+        "Reopen",
+        "NativeSmoke"
+      ]
+    },
+    "status": {
+      "enum": ["ok", "timeout", "executor_fault", "environment_fault", "unsupported"]
+    },
+    "observer_monotonic_ms": { "type": "integer", "minimum": 0 },
+    "input_dispatched": { "type": "boolean" },
+    "feedback_observed": { "type": ["boolean", "null"] },
+    "target_visible": { "type": ["boolean", "null"] },
+    "executor_fault": { "type": "boolean" },
+    "environment_fault": { "type": "boolean" },
+    "unsupported": { "type": "boolean" },
+    "result": { "type": ["object", "null"] },
+    "fault": {
+      "oneOf": [
+        { "$ref": "#/$defs/fault" },
+        { "type": "null" }
+      ]
+    },
+    "evidence": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/evidence_ref" }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "status": { "const": "ok" } },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "executor_fault": { "const": false },
+          "environment_fault": { "const": false },
+          "unsupported": { "const": false },
+          "fault": { "type": "null" }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "status": { "const": "executor_fault" } },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "executor_fault": { "const": true },
+          "environment_fault": { "const": false },
+          "unsupported": { "const": false },
+          "fault": {
+            "allOf": [
+              { "$ref": "#/$defs/fault" },
+              {
+                "properties": {
+                  "domain": { "enum": ["observer", "evidence", "executor"] }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "status": { "const": "environment_fault" } },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "executor_fault": { "const": false },
+          "environment_fault": { "const": true },
+          "unsupported": { "const": false },
+          "fault": {
+            "allOf": [
+              { "$ref": "#/$defs/fault" },
+              { "properties": { "domain": { "const": "environment" } } }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "status": { "const": "unsupported" } },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "executor_fault": { "const": false },
+          "environment_fault": { "const": false },
+          "unsupported": { "const": true },
+          "fault": {
+            "allOf": [
+              { "$ref": "#/$defs/fault" },
+              { "properties": { "domain": { "const": "capability" } } }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": { "status": { "const": "timeout" } },
+        "required": ["status"]
+      },
+      "then": {
+        "properties": {
+          "executor_fault": { "const": false },
+          "environment_fault": { "const": false },
+          "unsupported": { "const": false }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "relative_path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*(/[A-Za-z0-9][A-Za-z0-9._-]*)*$"
+    },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "fault": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["domain", "code", "message", "retryable", "evidence_paths", "details"],
+      "properties": {
+        "domain": { "enum": ["observer", "evidence", "executor", "environment", "capability"] },
+        "code": { "type": "string", "pattern": "^[a-z][a-z0-9_]{0,127}$" },
+        "message": { "type": "string", "minLength": 1, "maxLength": 512 },
+        "retryable": { "type": "boolean" },
+        "evidence_paths": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/relative_path" }
+        },
+        "details": { "type": ["object", "null"] }
+      }
+    },
+    "evidence_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "media_type",
+        "byte_length",
+        "captured_monotonic_ms",
+        "kind",
+        "producer"
+      ],
+      "properties": {
+        "path": { "$ref": "#/$defs/relative_path" },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "media_type": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9!#$&^_.+-]+/[A-Za-z0-9!#$&^_.+-]+$"
+        },
+        "byte_length": { "type": "integer", "minimum": 0 },
+        "captured_monotonic_ms": { "type": "integer", "minimum": 0 },
+        "kind": { "enum": ["state", "wait_samples", "capture", "input_receipt", "process", "cleanup", "redacted_log", "report"] },
+        "producer": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "version"],
+          "properties": {
+            "id": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$" },
+            "version": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._+-]{0,127}$" }
+          }
+        }
+      }
+    }
+  }
+}

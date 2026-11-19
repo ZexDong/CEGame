@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "unity.undercooked_kitchen_shift.v2",
+  "input_revision": "v2.6-docv2-session-gate-20260912",
+  "gdd_revision": "v2.6-docv2-session-gate-20260912",
+  "common_tool_guide_id": "unity-common-tool-guide-2026.08.26-base-interfaces",
+  "engine": {
+    "name": "Unity",
+    "version": "6000.0.80f1",
+    "revision": "2dfd32957da2",
+    "editor_executable": "D:/game/engine/unity/6000.0.80f1/Editor/Unity.exe"
+  },
+  "unity_cli": "1.0.0-beta.3",
+  "target_resolution": [
+    1280,
+    720
+  ],
+  "task_scope": "complete_game",
+  "human_specification": "GDD.md",
+  "agent_entry_prompt": "INITIAL_AGENT_PROMPT.md",
+  "toolchain": "TOOLCHAIN.md",
+  "asset_manifest": "ASSET_MANIFEST.json",
+  "asset_catalog": "ASSET_CATALOG.json",
+  "asset_contact_sheet": "ASSET_CONTACT_SHEET.png",
+  "asset_catalog_markdown": "ASSET_CATALOG.md",
+  "license_path": "legal/MIT-License.txt",
+  "public_documents": [
+    "README.md",
+    "INITIAL_AGENT_PROMPT.md",
+    "GDD.md",
+    "TOOLCHAIN.md",
+    "ASSET_MANIFEST.json",
+    "ASSET_CATALOG.json",
+    "ASSET_CATALOG.md",
+    "ASSET_CONTACT_SHEET.png",
+    "GAME_SESSION_SPEC.md",
+    "SESSION_MODEL.json",
+    "COMMON_BASELINE.md",
+    "UNITY_BENCHMARK_TOOL_GUIDE.md",
+    "ASSET_COVERAGE.json"
+  ],
+  "language_policy": {
+    "agent_visible_documents": "English only",
+    "translations_in_input": false
+  },
+  "network_required": false,
+  "input_version": "v2.6-docv2-session-gate-20260912",
+  "unity_editor": "6000.0.80f1",
+  "unity_editor_executable": "D:\\game\\engine\\unity\\6000.0.80f1\\Editor\\Unity.exe",
+  "unity_cli_executable": "D:\\game\\engine\\shared-tools\\unity\\cli\\1.0.0-beta.3\\unity.exe",
+  "starter_scene": "Assets/UndercookedStarter/Scenes/KitchenStarter.unity",
+  "required_final_scene": "Assets/UndercookedChallenge/Scenes/UndercookedKitchen.unity",
+  "starter_gameplay_present": false,
+  "writable_paths": [
+    "Assets/UndercookedChallenge/**",
+    "ProjectSettings/EditorBuildSettings.asset",
+    "ProjectSettings/ProjectSettings.asset",
+    "Logs/**",
+    "Builds/**"
+  ],
+  "protected_paths": [
+    "Assets/UndercookedStarter/**",
+    "Assets/InputSystem/**",
+    "Assets/Tests/**",
+    "Assets/SessionSelfCheck/**",
+    "Assets/KitchenSessionContract/**",
+    "Assets/Resources/session-model.json",
+    "Packages/**",
+    "GDD.md",
+    "TOOLCHAIN.md",
+    "README.md",
+    "INITIAL_AGENT_PROMPT.md",
+    "ASSET_MANIFEST.json",
+    "ASSET_CATALOG.json",
+    "ASSET_CATALOG.md",
+    "ASSET_CONTACT_SHEET.png",
+    "BENCHMARK_MANIFEST.json",
+    "UNITY_BENCHMARK_TOOL_GUIDE.md",
+    "GAME_SESSION_SPEC.md",
+    "COMMON_BASELINE.md",
+    "SESSION_MODEL.json",
+    "legal/**",
+    "ASSET_COVERAGE.json",
+    "Assets/KitchenSessionSelfCheck/**",
+    "Packages/com.gamecreate.game-session/**"
+  ],
+  "public_session_required": true,
+  "session_model": "SESSION_MODEL.json",
+  "runtime_session_model": "Assets/Resources/session-model.json",
+  "common_baseline": "COMMON_BASELINE.md",
+  "dashboard_enabled": false,
+  "session_self_check_filter": "GameCreate.Session.PublicChecks",
+  "public_editmode_filter": "GameCreate.Undercooked.PublicSmoke.Editor",
+  "public_playmode_filter": "GameCreate.Undercooked.PublicSmoke.PlayMode",
+  "public_test_suites": [
+    {
+      "mode": "EditMode",
+      "filter": "GameCreate.Undercooked.PublicSmoke.Editor",
+      "assembly": "Assets/Tests/Editor/GameCreate.Undercooked.PublicSmoke.Editor.asmdef",
+      "expected_tests": 3,
+      "scope": "entry_import_only"
+    },
+    {
+      "mode": "PlayMode",
+      "filter": "GameCreate.Undercooked.PublicSmoke.PlayMode",
+      "assembly": "Assets/Tests/PlayMode/GameCreate.Undercooked.PublicSmoke.PlayMode.asmdef",
+      "expected_tests": 1,
+      "scope": "entry_real_frames_only"
+    },
+    {
+      "mode": "PlayMode",
+      "filter": "GameCreate.Session.PublicChecks",
+      "assembly": "Assets/SessionSelfCheck/GameCreate.Session.PublicChecks.asmdef",
+      "expected_tests": 4,
+      "scope": "post_implementation_basic_service"
+    },
+    {
+      "mode": "PlayMode",
+      "filter": "GameCreate.Kitchen.PublicChecks",
+      "assembly": "Assets/KitchenSessionSelfCheck/GameCreate.Kitchen.PublicChecks.asmdef",
+      "expected_tests": 3,
+      "scope": "post_implementation_kitchen_state_development_aid"
+    }
+  ],
+  "asset_coverage": "ASSET_COVERAGE.json",
+  "session_contract": "GameCreate.Session.IGameSession",
+  "session_contract_version": "game-session/v1",
+  "session_spec": "GAME_SESSION_SPEC.md"
+}

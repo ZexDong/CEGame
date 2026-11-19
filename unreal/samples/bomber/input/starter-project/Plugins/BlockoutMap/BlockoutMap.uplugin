@@ -1,0 +1,11 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0.0",
+  "FriendlyName": "Bomber Clean Blockout Assets",
+  "Description": "Content-only clean character, arena, and power-up assets from the preserved Bomber source.",
+  "Category": "Content",
+  "CanContainContent": true,
+  "EnabledByDefault": true,
+  "Installed": false
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "fixture_version": "ar-private-fixture-2.0.0",
+  "scoring_semantics": "Retain the 4.1.0 checkpoints, thresholds and weights; version setup independently.",
+  "engine": {
+    "version": "ue-fixture-capabilities-1.0.0",
+    "source_root": "engine/shared/unreal-fixture",
+    "path_base": "repository_root",
+    "input_and_capture": "Existing exact-patch UnrealEvaluationExecutor binding from the public benchmark manifest",
+    "candidate_headers_allowed": false,
+    "game_state_writes_allowed": false
+  },
+  "game": {
+    "native": "fixture/AREvaluationFixture.cpp",
+    "recipes": "scripts/ActionRoguelikeFixtureRuntime.ps1",
+    "tick_source": "FWorldDelegates::OnWorldPreActorTick",
+    "semantic_fields": ["health", "credits", "teleport_acquired", "remaining_seconds"],
+    "candidate_class_names_allowed": false
+  },
+  "candidate": {
+    "profiles": "adapters/source-bindings.json",
+    "analyzer": "scripts/analyze_fixture_adapter.py",
+    "template": "fixture/ARCandidateAdapter.cpp.in",
+    "generated_scope": "private staged project only",
+    "identity": "SHA-256 of reviewed profile plus actual candidate source hashes",
+    "requires": ["unique source-supported mapping", "instrumented build", "before-state receipt", "native readback", "fresh independent observation"],
+    "failure_attribution": "evaluator/run_invalid",
+    "candidate_tick_patch_required": false,
+    "hidden_candidate_hook_required": false
+    ,"owned_prop_storage": "An audited array mapping may remove only the storage entries of props already destroyed by the engine at requested observed positions. Count/readback and the subsequent independent empty-field snapshot must confirm setup. No absorption/result event is generated."
+  },
+  "forbidden": ["write public input", "write original candidate", "call tested gameplay result", "write observer state", "write verdict"],
+  "health": {
+    "entrypoint": "scripts/Invoke-ActionRoguelikeFixtureHealth.ps1",
+    "scope": "Adapter and engine capability authoring; not complete D1-D6 scoring health",
+    "previous_fixture_receipts_reusable_for_v2": false
+  }
+}

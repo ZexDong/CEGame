@@ -1,0 +1,125 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Captain2D canonical diagnostic result",
+  "oneOf": [
+    {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "status",
+        "formal_frozen",
+        "run_id",
+        "scores",
+        "checkpoints",
+        "d6_rounds",
+        "candidate_identity_sha256",
+        "raw_sha256",
+        "review_sha256",
+        "d6_sha256",
+        "scorer_sha256"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "2.0.0"
+        },
+        "status": {
+          "const": "diagnostic_complete"
+        },
+        "formal_frozen": {
+          "const": false
+        },
+        "scores": {
+          "type": "object",
+          "required": [
+            "D1",
+            "D2",
+            "D3",
+            "D4",
+            "D5",
+            "D6",
+            "functional_total",
+            "Overall"
+          ],
+          "properties": {
+            "D1": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "D2": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 30
+            },
+            "D3": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 20
+            },
+            "D4": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 20
+            },
+            "D5": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "D6": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 10
+            },
+            "functional_total": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 90
+            },
+            "Overall": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "additionalProperties": false
+        },
+        "checkpoints": {
+          "type": "array",
+          "minItems": 41,
+          "maxItems": 41
+        },
+        "d6_rounds": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10
+          }
+        }
+      }
+    },
+    {
+      "type": "object",
+      "required": [
+        "status",
+        "fault",
+        "score_publication_allowed"
+      ],
+      "properties": {
+        "status": {
+          "const": "evaluation_incomplete"
+        },
+        "score_publication_allowed": {
+          "const": false
+        },
+        "fault": {
+          "type": "object"
+        },
+        "scores": false
+      }
+    }
+  ]
+}

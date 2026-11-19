@@ -1,0 +1,36 @@
+{
+  "native_rules": {
+    "dimensions": {
+      "D1": {
+        "max_score": 10
+      },
+      "D2": {
+        "max_score": 30
+      },
+      "D3": {
+        "max_score": 20
+      },
+      "D4": {
+        "max_score": 20
+      },
+      "D5": {
+        "max_score": 10
+      },
+      "D6": {
+        "max_score": 10
+      }
+    },
+    "authoritative_rules_source": "src/original/evaluate.py and checkpoint-script.json"
+  },
+  "native_source": "src/original/",
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "D6_protocol": "d6/protocol.json",
+  "scoring_logic_modified": false
+}

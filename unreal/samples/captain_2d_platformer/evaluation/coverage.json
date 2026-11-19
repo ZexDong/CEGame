@@ -1,0 +1,2841 @@
+{
+  "schema_version": "2.0",
+  "coverage_status": "not_reviewed",
+  "gdd_sha256": "9bc8c292ceb6c81b1c2b6fb4d6bf8ee8cfb1dda0fb4d35b1992ad1a276e9821a",
+  "limitations": [
+    "Native requirement mapping is preserved; independent semantic coverage and targeted positive/negative/equivalent game fixtures have not been qualified."
+  ],
+  "requirements": [
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Fresh launch or restart.",
+      "check_ids": [
+        "D2-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Begin play.",
+      "check_ids": [
+        "D2-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.3.1",
+      "field": "Required Result",
+      "obligation": "Reconstruct the supplied room art layout, preserving its tile arrangement, wall boundaries, platform widths, gaps, heights, central hollow masonry column, short lower divider, and decoration composition.",
+      "check_ids": [
+        "D2-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.3.2",
+      "field": "Required Result",
+      "obligation": "Use the room composition reference for the environment and object arrangement.",
+      "check_ids": [
+        "D2-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.3.3",
+      "field": "Required Result",
+      "obligation": "Uniform scaling is allowed; the topology and relative placements are fixed.",
+      "check_ids": [
+        "D2-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No redesigned route, added shortcut, rearranged terrain, or flat screenshot standing in for the world.",
+      "check_ids": [
+        "D2-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Readable side-view pixel-art room with the captain, route and objects distinct.",
+      "check_ids": [
+        "D2-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-01",
+      "obligation_id": "CONTENT-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "The same room is restored on every retry.",
+      "check_ids": [
+        "D2-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-02",
+      "obligation_id": "CONTENT-02.1.1",
+      "field": "Preconditions",
+      "obligation": "An active fresh attempt.",
+      "check_ids": [
+        "D2-01",
+        "D3-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-02",
+      "obligation_id": "CONTENT-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Observe and traverse the room.",
+      "check_ids": [
+        "D2-01",
+        "D3-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-02",
+      "obligation_id": "CONTENT-02.3.1",
+      "field": "Required Result",
+      "obligation": "Start the captain on the lower-left floor by the decorative doorway.",
+      "check_ids": [
+        "D2-01",
+        "D3-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-02",
+      "obligation_id": "CONTENT-02.3.2",
+      "field": "Required Result",
+      "obligation": "Place one collectible key in the central open gap, one functional closed exit on the upper-left shelf, one spring at the lower-right end, three alternating one-way ledges in the right shaft, and two fixed spike groups: downward under the upper-right overhang and rightward on the lower-right face of the hollow column.",
+      "check_ids": [
+        "D2-01",
+        "D3-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-02",
+      "obligation_id": "CONTENT-02.3.3",
+      "field": "Required Result",
+      "obligation": "Preserve the positions and orientations shown in the reference.",
+      "check_ids": [
+        "D2-01",
+        "D3-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-02",
+      "obligation_id": "CONTENT-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No missing or additional key, exit, spring, spike group or one-way ledge.",
+      "check_ids": [
+        "D2-01",
+        "D3-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-02",
+      "obligation_id": "CONTENT-02.4.2",
+      "field": "Prohibited Result",
+      "obligation": "Decorative doors, barrels, bottles and chains do not become objectives or movable obstacles.",
+      "check_ids": [
+        "D2-01",
+        "D3-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-02",
+      "obligation_id": "CONTENT-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The silhouettes, positions and facing of the functional objects match the reference.",
+      "check_ids": [
+        "D2-01",
+        "D3-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-02",
+      "obligation_id": "CONTENT-02.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "The captain starts beside the lower-left decorative doorway.",
+      "check_ids": [
+        "D2-01",
+        "D3-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CONTENT-02",
+      "obligation_id": "CONTENT-02.6.2",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "The lower-left doorway is decorative.",
+      "check_ids": [
+        "D2-01",
+        "D3-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Alive, active, and not executing a sword swing.",
+      "check_ids": [
+        "D2-02",
+        "D3-02",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Hold A or D; release it.",
+      "check_ids": [
+        "D2-02",
+        "D3-02",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.3.1",
+      "field": "Required Result",
+      "obligation": "Move left/right and face that direction; stop intentional movement after release.",
+      "check_ids": [
+        "D2-02",
+        "D3-02",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.3.2",
+      "field": "Required Result",
+      "obligation": "Preserve the source movement scale: maximum horizontal speed 250 art pixels/second, with responsive acceleration and airborne steering.",
+      "check_ids": [
+        "D2-02",
+        "D3-02",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.3.3",
+      "field": "Required Result",
+      "obligation": "A uniform scene scale must scale distances and speeds together.",
+      "check_ids": [
+        "D2-02",
+        "D3-02",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No reversed controls, drift after release, or walking through solid room boundaries.",
+      "check_ids": [
+        "D2-02",
+        "D3-02",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Idle and run animations change with actual movement and facing.",
+      "check_ids": [
+        "D2-02",
+        "D3-02",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-01",
+      "obligation_id": "INPUT-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Movement resumes after attacks and nonfatal hit feedback; repeated input remains responsive.",
+      "check_ids": [
+        "D2-02",
+        "D3-02",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Alive in the active room.",
+      "check_ids": [
+        "D2-02",
+        "D3-03",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Press Space while grounded; steer while airborne; land.",
+      "check_ids": [
+        "D2-02",
+        "D3-03",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.3.1",
+      "field": "Required Result",
+      "obligation": "Perform a grounded jump, rising then falling under gravity, and land on a valid surface.",
+      "check_ids": [
+        "D2-02",
+        "D3-03",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.3.2",
+      "field": "Required Result",
+      "obligation": "Preserve the source jump height and timing (initial upward speed 370 art pixels/second, gravity 980 art pixels/second squared).",
+      "check_ids": [
+        "D2-02",
+        "D3-03",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.3.3",
+      "field": "Required Result",
+      "obligation": "Show jump, fall and landing states.",
+      "check_ids": [
+        "D2-02",
+        "D3-03",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No air jump, flight, ceiling penetration or missed landing through a solid floor.",
+      "check_ids": [
+        "D2-02",
+        "D3-03",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The captain uses distinct ascent, descent and brief landing art.",
+      "check_ids": [
+        "D2-02",
+        "D3-03",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "A new jump is possible after landing.",
+      "check_ids": [
+        "D2-02",
+        "D3-03",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INPUT-02",
+      "obligation_id": "INPUT-02.6.2",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Holding Space must not grant unlimited ascent.",
+      "check_ids": [
+        "D2-02",
+        "D3-03",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Alive in the active room.",
+      "check_ids": [
+        "D2-03",
+        "D3-04",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Press Z, facing a nearby enemy, or swing into empty space.",
+      "check_ids": [
+        "D2-03",
+        "D3-04",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.3.1",
+      "field": "Required Result",
+      "obligation": "Play a sword swing in the current facing direction, choosing among the three supplied source swing variants without a fixed combo order.",
+      "check_ids": [
+        "D2-03",
+        "D3-04",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.3.2",
+      "field": "Required Result",
+      "obligation": "Suppress horizontal walking and additional swing starts while that swing is active; then restore control.",
+      "check_ids": [
+        "D2-03",
+        "D3-04",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.3.3",
+      "field": "Required Result",
+      "obligation": "A connected strike applies one source damage value, 25 or 45, to the enemy at the visible sword impact.",
+      "check_ids": [
+        "D2-03",
+        "D3-04",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No damage outside sword reach or through masonry; a miss causes no damage.",
+      "check_ids": [
+        "D2-03",
+        "D3-04",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.4.2",
+      "field": "Prohibited Result",
+      "obligation": "Repeated input must not stack hits for one swing.",
+      "check_ids": [
+        "D2-03",
+        "D3-04",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Visible sword motion; a connected hit produces enemy hit feedback.",
+      "check_ids": [
+        "D2-03",
+        "D3-04",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Successive completed swings work.",
+      "check_ids": [
+        "D2-03",
+        "D3-04",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "COMBAT-01",
+      "obligation_id": "COMBAT-01.6.2",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Swing variation and damage may vary within the stated source choices; no extra attack ability or reward is introduced.",
+      "check_ids": [
+        "D2-03",
+        "D3-04",
+        "D5-02"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TRAVERSAL-01",
+      "obligation_id": "TRAVERSAL-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Alive and able to reach the lower-right spring.",
+      "check_ids": [
+        "D2-05",
+        "D3-07",
+        "D5-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TRAVERSAL-01",
+      "obligation_id": "TRAVERSAL-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Contact the spring from the playable floor.",
+      "check_ids": [
+        "D2-05",
+        "D3-07",
+        "D5-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TRAVERSAL-01",
+      "obligation_id": "TRAVERSAL-01.3.1",
+      "field": "Required Result",
+      "obligation": "The spring visibly compresses/extends, then launches the captain upward with the source boost of 500 art pixels/second, replacing downward speed while preserving horizontal steering.",
+      "check_ids": [
+        "D2-05",
+        "D3-07",
+        "D5-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TRAVERSAL-01",
+      "obligation_id": "TRAVERSAL-01.3.2",
+      "field": "Required Result",
+      "obligation": "The boost makes the right-shaft ascent usable.",
+      "check_ids": [
+        "D2-05",
+        "D3-07",
+        "D5-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TRAVERSAL-01",
+      "obligation_id": "TRAVERSAL-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No spring damage, teleport, permanent flight, or launch from a distant position.",
+      "check_ids": [
+        "D2-05",
+        "D3-07",
+        "D5-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TRAVERSAL-01",
+      "obligation_id": "TRAVERSAL-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The supplied spring animation and a visibly higher ascent than an ordinary jump.",
+      "check_ids": [
+        "D2-05",
+        "D3-07",
+        "D5-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TRAVERSAL-01",
+      "obligation_id": "TRAVERSAL-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "The spring returns to its resting state and can be used again after a distinct contact.",
+      "check_ids": [
+        "D2-05",
+        "D3-07",
+        "D5-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TRAVERSAL-02",
+      "obligation_id": "TRAVERSAL-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Alive near any of the three right-shaft ledges.",
+      "check_ids": [
+        "D2-06",
+        "D3-08",
+        "D5-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TRAVERSAL-02",
+      "obligation_id": "TRAVERSAL-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Jump upward through a ledge; fall onto its top.",
+      "check_ids": [
+        "D2-06",
+        "D3-08",
+        "D5-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TRAVERSAL-02",
+      "obligation_id": "TRAVERSAL-02.3.1",
+      "field": "Required Result",
+      "obligation": "Allow passage upward from below and support a landing from above.",
+      "check_ids": [
+        "D2-06",
+        "D3-08",
+        "D5-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TRAVERSAL-02",
+      "obligation_id": "TRAVERSAL-02.3.2",
+      "field": "Required Result",
+      "obligation": "Preserve the ledges' source positions, lengths and orientation so the shaft can be climbed.",
+      "check_ids": [
+        "D2-06",
+        "D3-08",
+        "D5-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TRAVERSAL-02",
+      "obligation_id": "TRAVERSAL-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No solid underside blocking ascent, fall through the supporting top, or moving ledge behavior.",
+      "check_ids": [
+        "D2-06",
+        "D3-08",
+        "D5-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TRAVERSAL-02",
+      "obligation_id": "TRAVERSAL-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The captain passes through from below, then visibly stands on the ledge.",
+      "check_ids": [
+        "D2-06",
+        "D3-08",
+        "D5-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TRAVERSAL-02",
+      "obligation_id": "TRAVERSAL-02.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Repeated landings and departures behave consistently on all three ledges.",
+      "check_ids": [
+        "D2-06",
+        "D3-08",
+        "D5-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.1.1",
+      "field": "Preconditions",
+      "obligation": "An active fresh attempt.",
+      "check_ids": [
+        "D2-04",
+        "D3-01",
+        "D3-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Wait or enter the lower-right corridor.",
+      "check_ids": [
+        "D2-04",
+        "D3-01",
+        "D3-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.3.1",
+      "field": "Required Result",
+      "obligation": "Exactly one green pig patrols the long ground-floor corridor in the lower-right part of the room, beneath the hollow masonry structure.",
+      "check_ids": [
+        "D2-04",
+        "D3-01",
+        "D3-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.3.2",
+      "field": "Required Result",
+      "obligation": "The corridor extends from the right face of the short lower divider to the inner face of the room's right wall, with the spring at its far-right end.",
+      "check_ids": [
+        "D2-04",
+        "D3-01",
+        "D3-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.3.3",
+      "field": "Required Result",
+      "obligation": "The pig begins on this floor, clear of the captain and spring.",
+      "check_ids": [
+        "D2-04",
+        "D3-01",
+        "D3-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.3.4",
+      "field": "Required Result",
+      "obligation": "It walks back and forth at 50 art pixels/second, turns at either corridor boundary or a blocked edge, and stays on this floor.",
+      "check_ids": [
+        "D2-04",
+        "D3-01",
+        "D3-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No stationary placeholder, extra monster, airborne patrol, escaping onto the divider or ledges, walking through walls, or obstructing use of the spring permanently.",
+      "check_ids": [
+        "D2-04",
+        "D3-01",
+        "D3-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "An animated small green pig visibly walks and turns along this corridor.",
+      "check_ids": [
+        "D2-04",
+        "D3-01",
+        "D3-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "There is one live monster initially and after retry.",
+      "check_ids": [
+        "D2-04",
+        "D3-01",
+        "D3-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.6.2",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Its exact initial horizontal position is free within the corridor, clear of the captain and spring; the illustrated position is representative.",
+      "check_ids": [
+        "D2-04",
+        "D3-01",
+        "D3-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-01",
+      "obligation_id": "ENEMY-01.6.3",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "No respawn during the same attempt after it is defeated.",
+      "check_ids": [
+        "D2-04",
+        "D3-01",
+        "D3-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.1.1",
+      "field": "Preconditions",
+      "obligation": "The monster is alive with initial health 50.",
+      "check_ids": [
+        "D2-04",
+        "D3-06",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Approach its attack range, or strike it with Z.",
+      "check_ids": [
+        "D2-04",
+        "D3-06",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.3.1",
+      "field": "Required Result",
+      "obligation": "The pig faces and attacks the nearby captain, inflicting 55 health damage for a connected attack; player sword strikes reduce its health by the damage in COMBAT-01.",
+      "check_ids": [
+        "D2-04",
+        "D3-06",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.3.2",
+      "field": "Required Result",
+      "obligation": "Show its attack, hit and death states.",
+      "check_ids": [
+        "D2-04",
+        "D3-06",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.3.3",
+      "field": "Required Result",
+      "obligation": "At zero health it dies and ceases collision, patrol and damage.",
+      "check_ids": [
+        "D2-04",
+        "D3-06",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No unavoidable room-wide damage, damage from a dead monster, duplicate damage from one attack, or progress/loot granted by killing it.",
+      "check_ids": [
+        "D2-04",
+        "D3-06",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The source pig attack/hit/death animations and matching player health feedback.",
+      "check_ids": [
+        "D2-04",
+        "D3-06",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Defeating the monster is optional for unlocking the exit; the single key remains the objective.",
+      "check_ids": [
+        "D2-04",
+        "D3-06",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ENEMY-02",
+      "obligation_id": "ENEMY-02.6.2",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Restore the monster on death/restart.",
+      "check_ids": [
+        "D2-04",
+        "D3-06",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-01",
+      "obligation_id": "HAZARD-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Captain is alive with health initially 100.",
+      "check_ids": [
+        "D2-07",
+        "D3-01",
+        "D3-09",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-01",
+      "obligation_id": "HAZARD-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Touch either spike group, or receive a connected monster attack.",
+      "check_ids": [
+        "D2-07",
+        "D3-01",
+        "D3-09",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-01",
+      "obligation_id": "HAZARD-01.3.1",
+      "field": "Required Result",
+      "obligation": "Each distinct effective spike contact removes 50 health; monster damage follows ENEMY-02.",
+      "check_ids": [
+        "D2-07",
+        "D3-01",
+        "D3-09",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-01",
+      "obligation_id": "HAZARD-01.3.2",
+      "field": "Required Result",
+      "obligation": "Nonfatal hits play the source hit reaction, reduce the health bar, and leave the attempt active.",
+      "check_ids": [
+        "D2-07",
+        "D3-01",
+        "D3-09",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-01",
+      "obligation_id": "HAZARD-01.3.3",
+      "field": "Required Result",
+      "obligation": "Spike contact pushes the captain away from the spikes.",
+      "check_ids": [
+        "D2-07",
+        "D3-01",
+        "D3-09",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-01",
+      "obligation_id": "HAZARD-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No instant death from a single spike contact at full health, healing on impact, per-frame damage stacking for a single contact, or incrementing deaths on a nonfatal hit.",
+      "check_ids": [
+        "D2-07",
+        "D3-01",
+        "D3-09",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-01",
+      "obligation_id": "HAZARD-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "A visible hit reaction and truthful health decrease.",
+      "check_ids": [
+        "D2-07",
+        "D3-01",
+        "D3-09",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-01",
+      "obligation_id": "HAZARD-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Both spike groups are fixed hazards.",
+      "check_ids": [
+        "D2-07",
+        "D3-01",
+        "D3-09",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-01",
+      "obligation_id": "HAZARD-01.6.2",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "A later distinct contact can damage again; hit handling must not leave permanent invulnerability or a trapped player.",
+      "check_ids": [
+        "D2-07",
+        "D3-01",
+        "D3-09",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-02",
+      "obligation_id": "HAZARD-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Health reaches zero during an active attempt.",
+      "check_ids": [
+        "D2-07",
+        "D3-10",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-02",
+      "obligation_id": "HAZARD-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "The lethal hit resolves.",
+      "check_ids": [
+        "D2-07",
+        "D3-10",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-02",
+      "obligation_id": "HAZARD-02.3.1",
+      "field": "Required Result",
+      "obligation": "Play death feedback once, increment the session death count once, then respawn safely at the lower-left start with health 100, key 0/1, one collectible, a locked exit, the live monster restored, and the spring and ledges restored.",
+      "check_ids": [
+        "D2-07",
+        "D3-10",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-02",
+      "obligation_id": "HAZARD-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No negative-health play, multiple deaths from one lethal event, stale collected key/open exit, duplicated objects, or old hit/attack effects damaging the new attempt.",
+      "check_ids": [
+        "D2-07",
+        "D3-10",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-02",
+      "obligation_id": "HAZARD-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Death animation, restored room and full health bar; the new death count stays visible.",
+      "check_ids": [
+        "D2-07",
+        "D3-10",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-02",
+      "obligation_id": "HAZARD-02.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Each later lethal event repeats this reset.",
+      "check_ids": [
+        "D2-07",
+        "D3-10",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HAZARD-02",
+      "obligation_id": "HAZARD-02.6.2",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "A nonfatal hit does not reset progress.",
+      "check_ids": [
+        "D2-07",
+        "D3-10",
+        "D4-02",
+        "D5-03"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-01",
+      "obligation_id": "OBJECTIVE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The key is present and progress is 0/1.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-01",
+      "obligation_id": "OBJECTIVE-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Overlap the key through normal traversal.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-01",
+      "obligation_id": "OBJECTIVE-01.3.1",
+      "field": "Required Result",
+      "obligation": "Collect it once, remove it from the world, update progress to 1/1, show the source pickup feedback, and start the exit opening.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-01",
+      "obligation_id": "OBJECTIVE-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No repeated collection, extra progress, or completion just from touching the key.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-01",
+      "obligation_id": "OBJECTIVE-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The key resolves visibly, its HUD count updates, and the exit starts opening.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-01",
+      "obligation_id": "OBJECTIVE-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Revisiting the pickup point has no further effect.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-02",
+      "obligation_id": "OBJECTIVE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Progress is 0/1 and the exit is closed.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-02",
+      "obligation_id": "OBJECTIVE-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Touch the upper-left exit.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-02",
+      "obligation_id": "OBJECTIVE-02.3.1",
+      "field": "Required Result",
+      "obligation": "Keep it closed and keep gameplay active with unchanged progress.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-02",
+      "obligation_id": "OBJECTIVE-02.3.2",
+      "field": "Required Result",
+      "obligation": "The closed door and 0/1 display communicate that the key is still needed.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-02",
+      "obligation_id": "OBJECTIVE-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No early completion, invented key, irreversible lockout or trap.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-02",
+      "obligation_id": "OBJECTIVE-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The visibly closed source door remains distinguishable from the open state.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-02",
+      "obligation_id": "OBJECTIVE-02.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Repeated early attempts remain harmless.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-02",
+      "obligation_id": "OBJECTIVE-02.6.2",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Additional locked text is optional.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-03",
+      "obligation_id": "OBJECTIVE-03.1.1",
+      "field": "Preconditions",
+      "obligation": "The key has been collected in this attempt.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-03",
+      "obligation_id": "OBJECTIVE-03.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Observe the exit, then approach it.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-03",
+      "obligation_id": "OBJECTIVE-03.3.1",
+      "field": "Required Result",
+      "obligation": "Play the supplied door-opening sequence, leave the exit visibly open and enterable, and keep it open until a reset.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-03",
+      "obligation_id": "OBJECTIVE-03.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No completion before entering; no invisible opening or blocked open doorway.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-03",
+      "obligation_id": "OBJECTIVE-03.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The original closed-to-open door presentation.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-03",
+      "obligation_id": "OBJECTIVE-03.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Nonfatal damage does not relock the exit.",
+      "check_ids": [
+        "D2-08",
+        "D3-11",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-04",
+      "obligation_id": "OBJECTIVE-04.1.1",
+      "field": "Preconditions",
+      "obligation": "Progress is 1/1 and the exit is open.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D4-01",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-04",
+      "obligation_id": "OBJECTIVE-04.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Enter the open upper-left exit.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D4-01",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-04",
+      "obligation_id": "OBJECTIVE-04.3.1",
+      "field": "Required Result",
+      "obligation": "Complete this room once and show a stable completion message containing ROOM CLEARED and an R restart hint.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D4-01",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-04",
+      "obligation_id": "OBJECTIVE-04.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No map transition, scene-number display, stage selection, or further destination.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D4-01",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-04",
+      "obligation_id": "OBJECTIVE-04.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "A readable completion message over the room.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D4-01",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBJECTIVE-04",
+      "obligation_id": "OBJECTIVE-04.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "The resulting terminal state follows TERMINAL-01.",
+      "check_ids": [
+        "D2-08",
+        "D3-12",
+        "D4-01",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Active, dying, respawning or completed.",
+      "check_ids": [
+        "D2-09",
+        "D5-01",
+        "D5-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Observe the HUD before and after gameplay changes.",
+      "check_ids": [
+        "D2-09",
+        "D5-01",
+        "D5-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.3.1",
+      "field": "Required Result",
+      "obligation": "Show the original-style heart health bar, key count out of one, skull death count and an R restart hint.",
+      "check_ids": [
+        "D2-09",
+        "D5-01",
+        "D5-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.3.2",
+      "field": "Required Result",
+      "obligation": "Keep all values synchronized with health, objective progress and session deaths.",
+      "check_ids": [
+        "D2-09",
+        "D5-01",
+        "D5-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No room/stage number, navigation selector, stale values, duplicated HUD, or a bar that stays full after damage.",
+      "check_ids": [
+        "D2-09",
+        "D5-01",
+        "D5-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Pixel-art health/key/skull indicators remain readable during normal play.",
+      "check_ids": [
+        "D2-09",
+        "D5-01",
+        "D5-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "INTERFACE-01",
+      "obligation_id": "INTERFACE-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Initial health 100, keys 0/1 and deaths 0; reset behavior follows HAZARD-02 and LIFECYCLE-01/02.",
+      "check_ids": [
+        "D2-09",
+        "D5-01",
+        "D5-03",
+        "D5-04"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The process is active, dying, respawned or completed.",
+      "check_ids": [
+        "D2-09",
+        "D4-03",
+        "D4-04",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Press R once.",
+      "check_ids": [
+        "D2-09",
+        "D4-03",
+        "D4-04",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.3.1",
+      "field": "Required Result",
+      "obligation": "Restart the same room at its clean initial attempt: safe player start, health 100, key 0/1, closed exit, live monster, reset spring and ledges, cleared hit/attack/completion feedback.",
+      "check_ids": [
+        "D2-09",
+        "D4-03",
+        "D4-04",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.3.2",
+      "field": "Required Result",
+      "obligation": "Preserve the current session death count.",
+      "check_ids": [
+        "D2-09",
+        "D4-03",
+        "D4-04",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No extra death for a manual restart, duplicated actors/HUD, retained key, missing monster, stuck input or stale pending damage.",
+      "check_ids": [
+        "D2-09",
+        "D4-03",
+        "D4-04",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The room visibly returns to its initial presentation with full health and preserved deaths.",
+      "check_ids": [
+        "D2-09",
+        "D4-03",
+        "D4-04",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-01",
+      "obligation_id": "LIFECYCLE-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Consecutive R presses stay stable, including during an attack, spring bounce or death transition.",
+      "check_ids": [
+        "D2-09",
+        "D4-03",
+        "D4-04",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "The old process has been closed.",
+      "check_ids": [
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Launch a new process.",
+      "check_ids": [
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.3.1",
+      "field": "Required Result",
+      "obligation": "Start a clean active room with all initial objects and health restored, key 0/1 and session deaths 0.",
+      "check_ids": [
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No saved progress, retained death count or terminal state from the previous process.",
+      "check_ids": [
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The same initial room and HUD.",
+      "check_ids": [
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFECYCLE-02",
+      "obligation_id": "LIFECYCLE-02.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Every true process reopen follows this rule.",
+      "check_ids": [
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The room has been completed.",
+      "check_ids": [
+        "D3-13",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Wait or send movement, jump or attack input.",
+      "check_ids": [
+        "D3-13",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.3.1",
+      "field": "Required Result",
+      "obligation": "Keep completion and all gameplay values stable; prevent further player/enemy/hazard interactions until R.",
+      "check_ids": [
+        "D3-13",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No new death, health loss, movement through new gameplay, monster attack, key pickup or repeated completion.",
+      "check_ids": [
+        "D3-13",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "ROOM CLEARED remains visible.",
+      "check_ids": [
+        "D3-13",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TERMINAL-01",
+      "obligation_id": "TERMINAL-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "R starts a fresh attempt under LIFECYCLE-01.",
+      "check_ids": [
+        "D3-13",
+        "D5-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Supplied captain art is available.",
+      "check_ids": [
+        "D1-05",
+        "D2-10",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Render idle, run, jump, fall, land, all three sword swings, hit and death.",
+      "check_ids": [
+        "D1-05",
+        "D2-10",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.3.1",
+      "field": "Required Result",
+      "obligation": "Use the corresponding supplied source captain-with-sword frames, preserving their silhouettes, colors and pixel scale.",
+      "check_ids": [
+        "D1-05",
+        "D2-10",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No missing action, substitute character, primitives, redrawn replacement or static sprite for every state.",
+      "check_ids": [
+        "D1-05",
+        "D2-10",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Original captain animation and facing changes are recognizable.",
+      "check_ids": [
+        "D1-05",
+        "D2-10",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Import, slicing and animation assembly are implementation work.",
+      "check_ids": [
+        "D1-05",
+        "D2-10",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Supplied objective art is available.",
+      "check_ids": [
+        "D1-05",
+        "D2-11",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Render the key, pickup feedback and exit closed/opening/open.",
+      "check_ids": [
+        "D1-05",
+        "D2-11",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.3.1",
+      "field": "Required Result",
+      "obligation": "Use the supplied original key and door frames in the corresponding states.",
+      "check_ids": [
+        "D1-05",
+        "D2-11",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No replacement objective icons, missing pickup state or permanently closed-looking unlocked exit.",
+      "check_ids": [
+        "D1-05",
+        "D2-11",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Objective state changes remain visually clear.",
+      "check_ids": [
+        "D1-05",
+        "D2-11",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Sprite assembly is free; replacement artwork is not.",
+      "check_ids": [
+        "D1-05",
+        "D2-11",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.1.1",
+      "field": "Preconditions",
+      "obligation": "Supplied map, tiles and world art are available.",
+      "check_ids": [
+        "D1-05",
+        "D2-01",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Render the room and its traversal objects.",
+      "check_ids": [
+        "D1-05",
+        "D2-01",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.3.1",
+      "field": "Required Result",
+      "obligation": "Use the supplied static room tile data and original terrain, back-wall, platform, spike, spring and decoration art.",
+      "check_ids": [
+        "D1-05",
+        "D2-01",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.3.2",
+      "field": "Required Result",
+      "obligation": "Preserve the room composition shown in the reference, including decorative barrels/bottles, chains, candle and doorway.",
+      "check_ids": [
+        "D1-05",
+        "D2-01",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No generic redesigned room, missing decor, flattened gameplay screenshot, replacement tiles, or imported source gameplay logic.",
+      "check_ids": [
+        "D1-05",
+        "D2-01",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "Original warm ship-interior pixel art with distinct solid surfaces and dangers.",
+      "check_ids": [
+        "D1-05",
+        "D2-01",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Build collision, live objects, spring behavior and one-way behavior yourself from the clean material.",
+      "check_ids": [
+        "D1-05",
+        "D2-01",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.1.1",
+      "field": "Preconditions",
+      "obligation": "Supplied green pig art is available.",
+      "check_ids": [
+        "D1-05",
+        "D2-10",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Render patrol, facing changes, attack, hit and death.",
+      "check_ids": [
+        "D1-05",
+        "D2-10",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.3.1",
+      "field": "Required Result",
+      "obligation": "Use the original green pig frames for their matching states, at the source small-monster scale relative to the captain.",
+      "check_ids": [
+        "D1-05",
+        "D2-10",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No unrelated enemy, primitive placeholder, missing animation or oversized replacement.",
+      "check_ids": [
+        "D1-05",
+        "D2-10",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The small green pig is visually distinct from the captain.",
+      "check_ids": [
+        "D1-05",
+        "D2-10",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "The same source presentation is restored on restart.",
+      "check_ids": [
+        "D1-05",
+        "D2-10",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.1.1",
+      "field": "Preconditions",
+      "obligation": "Supplied UI art is available.",
+      "check_ids": [
+        "D1-05",
+        "D2-11",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.2.1",
+      "field": "Player Action or Trigger",
+      "obligation": "Render the HUD.",
+      "check_ids": [
+        "D1-05",
+        "D2-11",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.3.1",
+      "field": "Required Result",
+      "obligation": "Use the original heart/bar and skull art, and the source key art, for the matching health, death and objective indicators.",
+      "check_ids": [
+        "D1-05",
+        "D2-11",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.3.2",
+      "field": "Required Result",
+      "obligation": "Preserve their recognizable pixel presentation.",
+      "check_ids": [
+        "D1-05",
+        "D2-11",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.4.1",
+      "field": "Prohibited Result",
+      "obligation": "No unrelated icon set, missing required indicator or decorative fake health bar.",
+      "check_ids": [
+        "D1-05",
+        "D2-11",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.5.1",
+      "field": "Player-Visible Feedback",
+      "obligation": "The HUD uses the supplied pixel-art indicators and remains readable in the client viewport.",
+      "check_ids": [
+        "D1-05",
+        "D2-11",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.6.1",
+      "field": "Failure, Repeat, Restart, or Other Boundary",
+      "obligation": "Text layout and font choice may adapt to viewport readability without introducing a scene number.",
+      "check_ids": [
+        "D1-05",
+        "D2-11",
+        "D6-initial",
+        "D6-sword",
+        "D6-airborne"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-01",
+      "obligation_id": "QUALITY-01.1.1",
+      "field": "Formal Requirement",
+      "obligation": "The project launches, runs, exits and reopens through the documented entry.",
+      "check_ids": [
+        "D1-01",
+        "D1-02",
+        "D1-03",
+        "D4-05"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-02",
+      "obligation_id": "QUALITY-02.1.1",
+      "field": "Formal Requirement",
+      "obligation": "Required gameplay uses normal player input without answer buttons, cheats or direct result calls.",
+      "check_ids": [
+        "D1-04",
+        "D4-01"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-03",
+      "obligation_id": "QUALITY-03.1.1",
+      "field": "Formal Requirement",
+      "obligation": "Critical objects, controls, paths, UI and text remain visible, discoverable and operable.",
+      "check_ids": [
+        "D5-01",
+        "D5-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-04",
+      "obligation_id": "QUALITY-04.1.1",
+      "field": "Formal Requirement",
+      "obligation": "Player actions give perceptible feedback consistent with actual game state.",
+      "check_ids": [
+        "D5-02",
+        "D5-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-05",
+      "obligation_id": "QUALITY-05.1.1",
+      "field": "Formal Requirement",
+      "obligation": "No severe error blocks the complete player flow.",
+      "check_ids": [
+        "D4-01",
+        "D4-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-06",
+      "obligation_id": "QUALITY-06.1.1",
+      "field": "Formal Requirement",
+      "obligation": "Repeated runs from the same starting conditions remain stable within the stated source attack variation.",
+      "check_ids": [
+        "D4-04",
+        "D4-06"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    }
+  ],
+  "qualification_tests": [
+    "tests/test_distribution.py"
+  ],
+  "qualification_test_scope": "Distribution, evidence conversion and attribution invariants only; not gameplay semantic qualification."
+}

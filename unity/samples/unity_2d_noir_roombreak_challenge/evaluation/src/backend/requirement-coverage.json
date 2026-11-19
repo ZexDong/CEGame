@@ -1,0 +1,338 @@
+{
+  "schema_version": 2,
+  "status": "frozen",
+  "benchmark_id": "unity.noir_roombreak_challenge.v1",
+  "gdd_source": "../input/GDD.md",
+  "requirements": [
+    {
+      "id": "FLOW-01",
+      "checks": [
+        "D1_FINAL_SCENE",
+        "D1_REAL_FRAME",
+        "D2_MENU",
+        "D3_INITIAL_STATE",
+        "D4_START",
+        "D4_COMPLETE_JOURNEY",
+        "D5_MENU_CONTROLS"
+      ],
+      "trajectories": [
+        "TRAJ01",
+        "TRAJ06",
+        "FRESH01"
+      ],
+      "visual_dimension": null
+    },
+    {
+      "id": "WORLD-01",
+      "checks": [
+        "D2_FIVE_ROOMS",
+        "D4_ROOM_PROGRESSION",
+        "D4_COMPLETE_JOURNEY"
+      ],
+      "trajectories": [
+        "TRAJ01",
+        "TRAJ04",
+        "TRAJ06"
+      ],
+      "visual_dimension": null
+    },
+    {
+      "id": "MOVE-01",
+      "checks": [
+        "D2_MOVE_JUMP",
+        "D3_MOVE_COLLISION",
+        "D5_MOVEMENT_COMBAT"
+      ],
+      "trajectories": [
+        "TRAJ01"
+      ],
+      "visual_dimension": null
+    },
+    {
+      "id": "COMBAT-01",
+      "checks": [
+        "D2_BACKSTAB",
+        "D3_BACKSTAB_BOUNDARY",
+        "D3_BACKSTAB_CHARGE",
+        "D4_COMPLETE_JOURNEY",
+        "D5_MOVEMENT_COMBAT"
+      ],
+      "trajectories": [
+        "TRAJ02",
+        "TRAJ06"
+      ],
+      "visual_dimension": null
+    },
+    {
+      "id": "DASH-01",
+      "checks": [
+        "D2_DASH",
+        "D3_BACKSTAB_CHARGE",
+        "D3_DASH_COST",
+        "D3_ZERO_DASH_REJECT",
+        "D3_DASH_INVULNERABILITY",
+        "D4_COMPLETE_JOURNEY",
+        "D5_HUD",
+        "D5_DASH_FEEDBACK"
+      ],
+      "trajectories": [
+        "TRAJ02",
+        "TRAJ03",
+        "TRAJ06"
+      ],
+      "visual_dimension": null
+    },
+    {
+      "id": "ANDA-01",
+      "checks": [
+        "D2_ANDA",
+        "D3_ANDA_TRANSITIONS",
+        "D5_ENEMY_WARNINGS"
+      ],
+      "trajectories": [
+        "TRAJ02",
+        "TRAJ06"
+      ],
+      "visual_dimension": null
+    },
+    {
+      "id": "OBSER-01",
+      "checks": [
+        "D2_OBSER",
+        "D3_OBSER_WARNING_ORDER",
+        "D5_ENEMY_WARNINGS"
+      ],
+      "trajectories": [
+        "TRAJ04",
+        "TRAJ06"
+      ],
+      "visual_dimension": null
+    },
+    {
+      "id": "DAMAGE-01",
+      "checks": [
+        "D2_LETHAL_DAMAGE",
+        "D3_DASH_INVULNERABILITY",
+        "D3_ONE_HIT_DEATH",
+        "D4_DEATH_RECOVERY",
+        "D5_DEATH_RESPAWN"
+      ],
+      "trajectories": [
+        "TRAJ03",
+        "TRAJ05"
+      ],
+      "visual_dimension": null
+    },
+    {
+      "id": "RESPAWN-01",
+      "checks": [
+        "D2_SOFT_RESPAWN",
+        "D2_GLOBAL_RESPAWN",
+        "D3_SOFT_RESPAWN_RULES",
+        "D3_GLOBAL_RESPAWN_RULES",
+        "D4_DEATH_RECOVERY",
+        "D5_HUD",
+        "D5_DEATH_RESPAWN"
+      ],
+      "trajectories": [
+        "TRAJ05"
+      ],
+      "visual_dimension": null
+    },
+    {
+      "id": "CAMERA-01",
+      "checks": [
+        "D1_FINAL_SCENE",
+        "D2_ROOM_CAMERA",
+        "D3_CAMERA_BOUNDARY",
+        "D4_ROOM_PROGRESSION"
+      ],
+      "trajectories": [
+        "TRAJ01",
+        "TRAJ04",
+        "TRAJ06"
+      ],
+      "visual_dimension": null
+    },
+    {
+      "id": "PAUSE-01",
+      "checks": [
+        "D2_PAUSE",
+        "D3_PAUSE_FREEZE",
+        "D4_PAUSE_RESUME",
+        "D4_RESTART_PAUSED_SUCCESS",
+        "D5_PAUSE_SUCCESS"
+      ],
+      "trajectories": [
+        "TRAJ04",
+        "TRAJ06"
+      ],
+      "visual_dimension": null
+    },
+    {
+      "id": "SUCCESS-01",
+      "checks": [
+        "D2_SUCCESS",
+        "D3_SUCCESS_CONDITION",
+        "D4_COMPLETE_JOURNEY",
+        "D4_RESTART_PAUSED_SUCCESS",
+        "D5_PAUSE_SUCCESS"
+      ],
+      "trajectories": [
+        "TRAJ06"
+      ],
+      "visual_dimension": null
+    },
+    {
+      "id": "RESTART-01",
+      "checks": [
+        "D3_RESTART_CLEAN",
+        "D4_RESTART_ACTIVE",
+        "D4_RESTART_PAUSED_SUCCESS",
+        "D5_PAUSE_SUCCESS"
+      ],
+      "trajectories": [
+        "TRAJ06"
+      ],
+      "visual_dimension": null
+    },
+    {
+      "id": "REOPEN-01",
+      "checks": [
+        "D4_REOPEN"
+      ],
+      "trajectories": [
+        "FRESH01"
+      ],
+      "visual_dimension": null
+    },
+    {
+      "id": "UI-01",
+      "checks": [
+        "D2_UI_STATES",
+        "D5_MENU_CONTROLS",
+        "D5_HUD",
+        "D5_AUDIO_VISUAL_FEEDBACK"
+      ],
+      "trajectories": [
+        "TRAJ01",
+        "TRAJ02",
+        "TRAJ03",
+        "TRAJ04",
+        "TRAJ05",
+        "TRAJ06"
+      ],
+      "visual_dimension": null
+    },
+    {
+      "id": "AV-01",
+      "checks": [
+        "D1_REAL_FRAME",
+        "D2_AV_ASSEMBLY",
+        "D5_AUDIO_VISUAL_FEEDBACK"
+      ],
+      "trajectories": [
+        "TRAJ01",
+        "TRAJ02",
+        "TRAJ03",
+        "TRAJ04",
+        "TRAJ05",
+        "TRAJ06"
+      ],
+      "visual_dimension": "D6"
+    }
+  ],
+  "trajectory_plan": [
+    {
+      "id": "TRAJ01",
+      "phase": "dynamic",
+      "purpose": "menu, start, initial room, movement, jump, HUD",
+      "scored_dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "id": "TRAJ02",
+      "phase": "dynamic",
+      "purpose": "Anda states, invalid and valid backstab, charge cap",
+      "scored_dimensions": [
+        "D2",
+        "D3",
+        "D5"
+      ]
+    },
+    {
+      "id": "TRAJ03",
+      "phase": "dynamic",
+      "purpose": "dash cost, zero-charge rejection, lethal hit, invulnerability boundary",
+      "scored_dimensions": [
+        "D2",
+        "D3",
+        "D5"
+      ]
+    },
+    {
+      "id": "TRAJ04",
+      "phase": "dynamic",
+      "purpose": "Obser warning/laser, room camera transition, pause/resume",
+      "scored_dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "id": "TRAJ05",
+      "phase": "dynamic",
+      "purpose": "soft and global respawn boundaries and reset scope",
+      "scored_dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "id": "TRAJ06",
+      "phase": "dynamic",
+      "purpose": "complete five-room journey, success, dirty restart variants, dirty-close receipt",
+      "scored_dimensions": [
+        "D2",
+        "D3",
+        "D4",
+        "D5"
+      ]
+    },
+    {
+      "id": "FRESH01",
+      "phase": "fresh_process",
+      "purpose": "new PID opens at clean menu",
+      "scored_dimensions": [
+        "D4"
+      ]
+    }
+  ],
+  "robustness_policy": {
+    "missing_or_short_collections": "legal candidate failure; record failed checks without evaluator exception",
+    "missing_probe": "D1 failure and dynamic checks unavailable; produce valid low score",
+    "timeouts": "bounded per state transition with diagnostic observation receipt",
+    "candidate_mutation": "forbidden",
+    "input_transport": "New Input System normal player keyboard and pointer only",
+    "probe_role": "read-only observation only"
+  },
+  "common_baseline": {
+    "id": "COMMON-BASELINE",
+    "source": "game-independent evaluator baseline (not a game-specific GDD requirement)",
+    "definition": "Game-independent deliverability baseline: the Unity project imports/compiles, preserves the published observation contract and asset catalog, loads its declared entry, exposes usable observation, advances real frames, and presents a non-empty player-facing frame without severe startup integration failure.",
+    "checks": [
+      "D1_IMPORT_COMPILE",
+      "D1_FINAL_SCENE",
+      "D1_RUNTIME_PROBE",
+      "D1_REAL_FRAME"
+    ]
+  }
+}

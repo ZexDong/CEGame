@@ -1,0 +1,9 @@
+{
+  "family": "flat",
+  "native_subdir": ".",
+  "place": "TidalLockCandidate.rbxlx",
+  "native_zip": "TidalLockProject.zip",
+  "zip_scope": "project",
+  "sample_id": "roblox_tidal_lock",
+  "requirement_prefix": "TD"
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "stormbound-natural-entry-review-shape/v1",
+  "review_schema": "stormbound-natural-entry-review/v1",
+  "required_fields": [
+    "schema",
+    "decision",
+    "reviewer",
+    "reason",
+    "candidate_source_sha256",
+    "player_receipt_sha256",
+    "after_png_sha256",
+    "before_png_sha256",
+    "process_id"
+  ],
+  "decisions": [
+    "initial_gameplay_visible",
+    "menu_or_ambiguous",
+    "observer_unsupported"
+  ],
+  "before_png_sha256_may_be_null_only_when_before_observation_unavailable": true,
+  "author_policy_location": "session-profile.json:d6.normal_input_review_policy",
+  "score_formula_changed": false,
+  "review_is_not_service_verification": true
+}

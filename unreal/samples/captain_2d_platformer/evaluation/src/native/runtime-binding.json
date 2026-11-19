@@ -1,0 +1,74 @@
+{
+  "schema_version": "2.0.0",
+  "mode": "editor_game",
+  "platform": "Win64",
+  "engine": {
+    "major": 5,
+    "minor": 7,
+    "patch": 4,
+    "changelist": 51494982
+  },
+  "compiler": "14.44.35207",
+  "viewport": [
+    1280,
+    720
+  ],
+  "public_contract": "../input/contracts/game-state.schema.json",
+  "public_contract_sha256": "6b8a01746cbaf6310646c5be75171d8eebc804f8303e45b7e02298f60a22d60d",
+  "identity": {
+    "files": [
+      {
+        "path": "unreal/Captain2DPlatformer/evaluator/scripts/runtime.py",
+        "sha256": "1639de98daa279baf6f5d3310662024b4286e10dd04f818eca0aeb927f3034ee"
+      },
+      {
+        "path": "unreal/Captain2DPlatformer/evaluator/scripts/evaluate.py",
+        "sha256": "07f9b6929d3f2f61d8cf63574316521d8a4aea6abf463f740e9e7d5b634cc896"
+      },
+      {
+        "path": "unreal/Captain2DPlatformer/evaluator/scripts/PlayerHost.ps1",
+        "sha256": "5114c66b30995ded9354095ff947c38aee5fd9c604bd96a44428f2a2913480e5"
+      },
+      {
+        "path": "unreal/Captain2DPlatformer/evaluator/scripts/schema.py",
+        "sha256": "3c44dfadbd837c5961683e308e2dd7ae31ebaf279322f8f81f133c75a81e2a26"
+      },
+      {
+        "path": "unreal/Captain2DPlatformer/evaluator/contracts/budget.json",
+        "sha256": "2d1d2c04a135f78c6effa22a18955704c92a18bfc26b8f2b26d5b22c5ff36ce5"
+      },
+      {
+        "path": "unreal/Captain2DPlatformer/input/contracts/game-state.schema.json",
+        "sha256": "6b8a01746cbaf6310646c5be75171d8eebc804f8303e45b7e02298f60a22d60d"
+      },
+      {
+        "path": "engine/unreal-5.7.4/executor/UnrealEvaluationExecutor.psm1",
+        "sha256": "614d34ac683267dd86be056a1c8c06ce1b23d0688675360bd606537b20622265"
+      },
+      {
+        "path": "engine/unreal-5.7.4/executor/Private/WindowsEvaluationNative.cs",
+        "sha256": "f30294711d13bcf44037154b5d8dc0225151b36d95372923078d8db5807a8661"
+      }
+    ],
+    "sha256": "d82e94fb28870876d142648a262e5fb5e5c7fce5549a7e05e2c4ae51c3241aa1"
+  },
+  "actions": {
+    "start": "Start-UnrealEvaluationSession",
+    "press": "Invoke-UnrealPressKey (50 ms)",
+    "down": "Start-UnrealKeyHold",
+    "up": "Stop-UnrealKeyHold",
+    "chord": "Start-UnrealKeyHold followed immediately by Invoke-UnrealPressKey, both receipts retained",
+    "capture": "Save-UnrealClientCapture",
+    "stop": "Stop-UnrealEvaluationSession",
+    "reopen": "Reopen-UnrealEvaluationSession",
+    "tap": "Invoke-UnrealPressKey with bounded 1-1000 ms duration"
+  },
+  "observation": "Strictly read-only public semantic snapshots; no gameplay result calls",
+  "budget": "contracts/budget.json",
+  "environment_arguments": [
+    "-ForceRes",
+    "-EvalGameStatePath=<run-root>/state/game-state.json"
+  ],
+  "dpi_note": "Do not add -nohighdpi: it enlarged the physical client on the authoring desktop.",
+  "projection": "Recomputed from public semantic ledge geometry for each observation"
+}

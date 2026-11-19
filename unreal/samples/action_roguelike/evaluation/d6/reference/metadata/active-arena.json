@@ -1,0 +1,12 @@
+{
+  "state_id": "active-arena",
+  "label": "Active arena",
+  "reference_image": "reference/active-arena.png",
+  "sha256": "71e726125db935e05fbee8be7ca92f8af5ed1fdbd0e05f122d77a6babc58d191",
+  "width": 1280,
+  "height": 720,
+  "source": "original_baseline",
+  "schema_version": "1.0",
+  "role": "fixed_reference_metadata",
+  "source_identity_sha256": "f58c977ad6b5fd15555748b0c017803e22dba03a5b67cc5b176dd1846b878cf4"
+}

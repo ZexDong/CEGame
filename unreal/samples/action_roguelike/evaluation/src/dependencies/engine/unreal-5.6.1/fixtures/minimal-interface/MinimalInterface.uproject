@@ -1,0 +1,13 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "5.6",
+  "Category": "Evaluation Fixture",
+  "Description": "Source-only fixture for validating the Unreal public evaluation interface.",
+  "Modules": [
+    {
+      "Name": "MinimalInterface",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}

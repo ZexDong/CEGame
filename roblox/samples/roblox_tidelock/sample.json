@@ -1,0 +1,108 @@
+{
+  "schema_version": "2.0",
+  "release_status": "packaged",
+  "sample_id": "roblox_tidelock",
+  "sample_version": "3.3.0-template-v2",
+  "title": "Tide Lock / Deep Dive Station",
+  "engine": {
+    "name": "Roblox Studio",
+    "version": "0.742.0.7421053",
+    "source_channel": "Stable"
+  },
+  "environment": {
+    "os": "Windows 11 desktop",
+    "runtime": "CPython 3.14.2; standard library only",
+    "tools": [
+      {
+        "name": "Rojo",
+        "version": "7.7.0",
+        "url": "https://github.com/rojo-rbx/rojo/releases/tag/v7.7.0"
+      },
+      {
+        "name": "Luau compiler",
+        "version": "0.734",
+        "url": "https://github.com/luau-lang/luau/releases/tag/0.734",
+        "optional": true
+      }
+    ],
+    "setup_commands": [
+      "python --version",
+      "rojo --version",
+      "python input/self-check/check_input.py"
+    ],
+    "credential_environment_variables": [],
+    "notes": "Studio may require the operator's own login/network. No platform binaries, login data or API keys are bundled."
+  },
+  "sources": [
+    {
+      "url": null,
+      "revision": "sha256:1665e1e1be89cd64ad918deafe482ced4abdf2e57d7c1b6beb5e7068c66c01af",
+      "kind": "local_frozen_file_snapshot",
+      "source_directory_label": "TideLock",
+      "source_input_revision": "v2.0-tool-catalog-3600s-20260826",
+      "license": "MIT; preserve input/legal/LICENSE.txt and component notices.",
+      "adaptation_scope": "Portable evaluator entry point and shared result serialization."
+    }
+  ],
+  "input": {
+    "path": "input/",
+    "prompt": "input/INITIAL_AGENT_PROMPT.md",
+    "design": "input/GDD.md",
+    "content": "input/CONTENT.json",
+    "tools": "input/tools/",
+    "assets": "input/assets/",
+    "starter_project": "input/starter-project/",
+    "contracts": "input/contracts/",
+    "self_check": "input/self-check/",
+    "language": "English",
+    "implementation_time_limit_seconds": 3600
+  },
+  "submission": {
+    "type": "complete_project",
+    "formats": [
+      "directory",
+      "zip"
+    ],
+    "required": [
+      "project/default.project.json",
+      "TideLockCandidate.rbxlx"
+    ],
+    "notes": "Include mapped sources, assets, public schema, build script and honest run/development reports."
+  },
+  "evaluation": {
+    "version": "original-tidelock-format-v2",
+    "command": [
+      "python",
+      "evaluation/evaluate.py",
+      "--project",
+      "{project}",
+      "--output",
+      "{output}"
+    ],
+    "project_argument": "Candidate root containing project/default.project.json and TideLockCandidate.rbxlx, or its ZIP.",
+    "optional_arguments": [
+      "--rojo <executable>",
+      "--luau-compile <executable>",
+      "--visual <original D6 JSON>",
+      "--prepare-only"
+    ],
+    "rules": "evaluation/rules.json",
+    "coverage": "evaluation/coverage.json",
+    "result_schema": "evaluation/score.schema.json",
+    "result_file": "score.json",
+    "result_format": "Cross-engine v2.1. A final total requires complete current execution evidence.",
+    "max_score": 100,
+    "d6_prompt": "evaluation/d6/prompt.txt",
+    "d6_protocol": "evaluation/d6/protocol.json",
+    "d6_capture_runner": "evaluation/src/d6_original/run_two_item_supplement.py",
+    "native_profile": "src/d6_original/",
+    "D6_reviewer_model": "gpt5.6sol",
+    "D6_calling_settings": "Platform defaults; no manual parameter overrides.",
+    "D6_parameter_mode": "platform_defaults",
+    "visual_binding": "evaluation/d6/EVIDENCE_FORMAT.md",
+    "entry": "evaluation/evaluate.py",
+    "result_format_version": "2.1"
+  },
+  "display_order": 1,
+  "collection_id": "roblox_ten_games"
+}

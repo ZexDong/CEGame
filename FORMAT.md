@@ -1,16 +1,16 @@
 # Shared Release Format
 
-Each engine package contains README, LICENSE, FORMAT, catalog, check_release,
-template, and samples. Each task contains:
+Each engine package contains README, LICENSE, FORMAT, catalog, template, and
+samples. Each task contains:
 
 ```text
 sample.json
 README.md
 THIRD_PARTY_NOTICES.md
-input-manifest.json
+
 input/                       # Only input supplied during generation
 evaluation/
-  evaluate.py                # --preflight; --project ... --output ...
+  evaluate.py                # --project ... --output ...
   rules.json                 # Fixed checkpoints, predicates, and weights
   coverage.json              # Design requirements mapped to checkpoints
   score.schema.json
@@ -23,8 +23,8 @@ evaluation/
 ```
 
 `sample.json.input` indexes prompt/design/tools/assets/starter_project/contracts/
-self_check. Engine-native input layouts are supported. `input-manifest.json`
-records the actual input file set and SHA-256 digests.
+self_check. Engine-native input layouts are supported.
+
 Supply an input copy during generation; use evaluation during assessment.
 
 Results use schema version 2.1 and D1-D6 maxima of 10/30/20/20/10/10.
@@ -47,6 +47,4 @@ Result directories must be outside both the sample and candidate directories.
 Sources, modifications, and applicable licenses belong in each task's
 THIRD_PARTY_NOTICES.md and bundled license files.
 
-`python -B check_release.py` checks files, input hashes, Python syntax, and
-dependencies without launching a game. See the engine README for prerequisites
-and execution commands.
+See the engine README for prerequisites and execution commands.

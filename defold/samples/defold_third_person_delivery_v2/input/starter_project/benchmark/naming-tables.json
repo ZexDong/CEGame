@@ -1,0 +1,79 @@
+{
+  "schema_version": 2,
+  "task_id": "defold_third_person_delivery_v2",
+  "coordinate_space": {
+    "name": "world_xyz_y_up",
+    "dimensions": 3,
+    "origin": "fixed island world origin",
+    "axes": ["x-right", "y-up", "z-back"],
+    "units": "Defold world units"
+  },
+  "target_rect_space": {
+    "width": 1136,
+    "height": 640,
+    "origin": "bottom-left",
+    "units": "game-view pixels"
+  },
+  "seed_entry": "not applicable; the island layout and cargo starts are fixed",
+  "slots": [
+    "time_remaining",
+    "carried_count",
+    "delivered_count",
+    "cargo_total"
+  ],
+  "entities": [
+    {
+      "kind": "player",
+      "geometry": "position",
+      "states": ["idle", "moving"]
+    },
+    {
+      "kind": "cargo",
+      "geometry": "position",
+      "states": ["world", "carried", "delivered"]
+    },
+    {
+      "kind": "delivery_zone",
+      "geometry": "position",
+      "states": ["active"]
+    },
+    {
+      "kind": "obstacle",
+      "geometry": "position",
+      "states": ["tree", "rock", "fence", "crate_stack"]
+    }
+  ],
+  "targets": [
+    { "kind": "start_button" },
+    { "kind": "resume_button" },
+    { "kind": "restart_button" },
+    { "kind": "exit_button" }
+  ],
+  "honesty": {
+    "phase_ocr_any": {
+      "menu": ["TODAY", "Today's task", "Start the shift"],
+      "playing": ["TIME", "CARRIED", "DELIVERED", "Remaining time", "Carrying", "Delivered"],
+      "paused": ["PAUSED", "Paused", "Shift suspension"],
+      "won": ["DELIVERY COMPLETE", "Transportation completed"],
+      "lost": ["SHIFT ENDED", "End of shift"]
+    }
+  },
+  "controls": {
+    "movement_template": "continuous_world_3d_keyboard_with_pointer_ui",
+    "keys": {
+      "up": ["W", "UpArrow"],
+      "down": ["S", "DownArrow"],
+      "left": ["A", "LeftArrow"],
+      "right": ["D", "RightArrow"],
+      "confirm": ["Enter", "Space"],
+      "pause": ["Escape"],
+      "restart_when_available": ["R"]
+    },
+    "navigation": {
+      "blocking_kinds": ["obstacle"],
+      "contact_kinds": ["cargo", "delivery_zone"],
+      "approach_kinds": ["obstacle"]
+    },
+    "mouse": "MouseButton1 on visible Dashboard targets"
+  }
+}

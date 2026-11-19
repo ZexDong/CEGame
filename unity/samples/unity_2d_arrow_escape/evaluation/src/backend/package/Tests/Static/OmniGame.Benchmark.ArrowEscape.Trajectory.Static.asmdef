@@ -1,0 +1,23 @@
+{
+  "name": "OmniGame.Benchmark.ArrowEscape.Trajectory.Static",
+  "rootNamespace": "OmniGame.Benchmark.ArrowEscape.Trajectory",
+  "references": [
+    "OmniGame.Benchmark.ArrowEscape.V2",
+    "UnityEngine.UI",
+    "Unity.InputSystem"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "noEngineReferences": false,
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ]
+}

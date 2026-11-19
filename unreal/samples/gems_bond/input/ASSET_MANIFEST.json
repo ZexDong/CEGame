@@ -1,0 +1,19 @@
+{
+  "language": "en",
+  "delivery": "Native UE presentation packages plus optional raw WAV cues and PNG references.",
+  "catalog": "assets/ASSET_CATALOG.json",
+  "catalog_sha256": "285ff9047f63e5633b05bd07eff6aec89765f6d7d405ff3a44113b74b3f7cee3",
+  "policy": "Assemble independently in starter-project/. GDD Section 6 is authoritative for mandatory use and replacement.",
+  "included_asset_count": 251,
+  "native_package_count": 239,
+  "excluded": [
+    "gameplay implementations",
+    "gameplay Blueprints and UI",
+    "complete maps",
+    "wave data assets",
+    "animation state machines",
+    "gameplay notifications"
+  ],
+  "license_map": "assets/legal/ASSET_LICENSE_MAP.json",
+  "engine_dependencies": "Resolve /Engine and /Script imports from installed UE 5.7.4."
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": "2.0.0",
+  "binding_policy": "Dedicated source-audited scaffold_rep candidate; native writes/readback and independent public observation required. No gameplay results or publisher writes.",
+  "bindings": [
+    {
+      "id": "native-gamestate-clock-ds-rep-v1",
+      "module": "ArenaSlice",
+      "headers": [
+        "ArenaCharacter.h",
+        "ArenaGameMode.h",
+        "ArenaGameState.h"
+      ],
+      "damage_guards": [
+        {
+          "file": "ArenaCharacter.cpp",
+          "pattern": "void\\s+AArenaCharacter::ApplyDamage\\([^)]*\\)\\s*\\{",
+          "insertion": " if (AREvaluationFixture::Protected(this)) return; "
+        }
+      ],
+      "cpp": {
+        "PLAYER": "AArenaCharacter",
+        "GAMEMODE": "AArenaGameMode",
+        "CONTEXT": "auto* S = World->GetGameState<AArenaGameState>(); if (!S) return false;\n        auto NativePosition = MakeShared<FJsonObject>();\n        const FVector Native = P->GetActorLocation() / 100.0;\n        NativePosition->SetNumberField(TEXT(\"x\"), Native.X);\n        NativePosition->SetNumberField(TEXT(\"y\"), Native.Y);\n        NativePosition->SetNumberField(TEXT(\"z\"), Native.Z);\n        Receipt->SetObjectField(TEXT(\"native_player_position_m\"), NativePosition);",
+        "HEALTH_WRITE": "P->Health = Number;",
+        "HEALTH_READ": "P->Health",
+        "CREDITS_WRITE": "P->Credits = Number;",
+        "CREDITS_READ": "P->Credits",
+        "TELEPORT_WRITE": "P->bTeleportAcquired = Flag;",
+        "TELEPORT_READ": "P->bTeleportAcquired",
+        "CLOCK_WRITE": "S->SurvivalTime = 60.0 - Number;",
+        "CLOCK_READ": "60.0 - S->SurvivalTime"
+      },
+      "source_sha256": {
+        "Source/ArenaSlice/ArenaCharacter.h": "5e48774f0bbfff8bee3f784371daa3ee6a04a910238fbb663a2c5b2a7b1c5c23",
+        "Source/ArenaSlice/ArenaCharacter.cpp": "58245c8a2f7d71a1887b28b57f863e9a444fb6bbdf85edc6fb1a6581a3948ad0",
+        "Source/ArenaSlice/ArenaGameMode.h": "1db660188a43079f16f463223a0d0e36763a073bac397bba6d346bc9beac4448",
+        "Source/ArenaSlice/ArenaGameMode.cpp": "b4da99b3e1c0b2564842cb8830d17fc58b480f3b5c29afb5541a2183127a0fcd",
+        "Source/ArenaSlice/ArenaGameState.h": "4d219d2cfb6dce5b663a81af2fb9acf2be63ccefc2e14ce8a8116a0e386469df",
+        "Source/ArenaSlice/ArenaPublisher.cpp": "f42701fc4f8ea486eba21dd56f8ee97aae7822c8ef790c8b9215eb5de74483a8"
+      },
+      "required_members": {
+        "P": [
+          "Health",
+          "Credits",
+          "bTeleportAcquired"
+        ],
+        "G": []
+      },
+      "source_anchors": [
+        {
+          "file": "ArenaGameState.h",
+          "pattern": "float\\s+SurvivalTime\\s*=\\s*0\\.0f\\s*;"
+        },
+        {
+          "file": "ArenaGameState.h",
+          "pattern": "float\\s+GetSurvivalTime\\(\\)\\s*const\\s*\\{\\s*return\\s+SurvivalTime\\s*;\\s*\\}"
+        },
+        {
+          "file": "ArenaGameMode.cpp",
+          "pattern": "GS->SetSurvivalTime\\(GS->GetSurvivalTime\\(\\)\\s*\\+\\s*DeltaSeconds\\);"
+        },
+        {
+          "file": "ArenaPublisher.cpp",
+          "pattern": "MakeObservedNumber\\(GS\\s*\\?\\s*GS->GetSurvivalTime\\(\\)\\s*:\\s*0\\.0\\)"
+        },
+        {
+          "file": "ArenaPublisher.cpp",
+          "pattern": "AArenaPublisher::MakeVector\\(const FVector& Value\\) const\\s*\\{[\\s\\S]*?return V;\\s*\\}"
+        }
+      ],
+      "observation_units": {
+        "version": "ar-metric-view-1.0.0",
+        "source_units": "unreal_centimeters",
+        "scale_to_meters": 0.01,
+        "fields": [
+          "position_m",
+          "target_position_m",
+          "velocity_mps"
+        ],
+        "native_corroboration_required": true,
+        "public_contract_violation": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,387 @@
+{
+  "schema_version": 3,
+  "evaluator_revision": "2026.09.13-undercooked-public-session-v2.2",
+  "game": "unity.undercooked_kitchen_shift.v2",
+  "benchmark_id": "unity.undercooked_kitchen_shift.v2",
+  "gdd_source": "input-v2/GDD.md",
+  "session_model_source": "input-v2/SESSION_MODEL.json",
+  "script": "checkpoint-script.json",
+  "script_status": "schema_v2_manifest_routes_d2_d5_only",
+  "script_executed_by_runner": false,
+  "baseline_applicability": "baseline-applicability.json",
+  "routing": "rules.json",
+  "rows": [
+    {
+      "source": "gdd:FLOW-01",
+      "check_ids": [
+        "D1_SCENE",
+        "D1_RUNTIME",
+        "D1_SESSION_ENTRY",
+        "D1_SESSION_STATE",
+        "D2_KITCHEN",
+        "D4_MENU_START"
+      ],
+      "dim": "D1/D2/D4",
+      "trajectory": "static,station_operations,lifecycle_reopen",
+      "disposition": "scored",
+      "note": "Clean menu, active shift and scene entry are scored by static and runtime routes."
+    },
+    {
+      "source": "gdd:INPUT-01",
+      "check_ids": [],
+      "dim": "D1/D2/D3/D4/D5",
+      "trajectory": "runtime_gap",
+      "disposition": "runtime_gap",
+      "gap": "Covered incidentally by normal-action tests; no independent calibration leaf."
+    },
+    {
+      "source": "gdd:MOVE-01",
+      "check_ids": [
+        "D2_MOVE_SWITCH"
+      ],
+      "dim": "D2",
+      "trajectory": "station_operations",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:SWITCH-01",
+      "check_ids": [
+        "D2_MOVE_SWITCH",
+        "D3_SWITCH_OWNERSHIP"
+      ],
+      "dim": "D2/D3",
+      "trajectory": "station_operations",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:CAMERA-01",
+      "check_ids": [
+        "D1_CAMERA"
+      ],
+      "dim": "D1",
+      "trajectory": "static",
+      "disposition": "scored",
+      "note": "D1 is declared by rules/coverage; checkpoint v2 has no D1 check."
+    },
+    {
+      "source": "gdd:PICKUP-01",
+      "check_ids": [
+        "D2_PICKUP",
+        "D3_RAW_REJECTION",
+        "D4_ADJACENT_WORKFLOW"
+      ],
+      "dim": "D2/D3/D4",
+      "trajectory": "station_operations",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:CHOP-01",
+      "check_ids": [
+        "D2_CHOP",
+        "D3_CHOP_TIMING",
+        "D4_ADJACENT_WORKFLOW"
+      ],
+      "dim": "D2/D3/D4",
+      "trajectory": "station_operations",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:COOK-01",
+      "check_ids": [
+        "D2_COOK",
+        "D3_COOK_RULES",
+        "D4_ADJACENT_WORKFLOW"
+      ],
+      "dim": "D2/D3/D4",
+      "trajectory": "station_operations",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:BURN-01",
+      "check_ids": [
+        "D2_BURN",
+        "D3_BURN_REJECTION"
+      ],
+      "dim": "D2/D3",
+      "trajectory": "timers_pause_and_failure",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:PLATE-01",
+      "check_ids": [
+        "D2_PLATE",
+        "D4_ADJACENT_WORKFLOW"
+      ],
+      "dim": "D2/D4",
+      "trajectory": "station_operations",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:ORDER-01",
+      "check_ids": [
+        "D2_DELIVERY_ORDERS",
+        "D3_ORDER_RULES"
+      ],
+      "dim": "D2/D3",
+      "trajectory": "station_operations,timers_pause_and_failure",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:DELIVERY-01",
+      "check_ids": [
+        "D2_DELIVERY_ORDERS",
+        "D3_DELIVERY_ONCE",
+        "D4_ADJACENT_WORKFLOW"
+      ],
+      "dim": "D2/D3/D4",
+      "trajectory": "station_operations",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:ORDER-02",
+      "check_ids": [
+        "D2_EXPIRY",
+        "D3_ORDER_RULES"
+      ],
+      "dim": "D2/D3",
+      "trajectory": "timers_pause_and_failure",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:PAUSE-01",
+      "check_ids": [
+        "D2_PAUSE",
+        "D3_PAUSE_FREEZE",
+        "D5_PAUSE_RESULT"
+      ],
+      "dim": "D2/D3/D5",
+      "trajectory": "timers_pause_and_failure",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:FLOW-02",
+      "check_ids": [
+        "D2_RESULT",
+        "D4_RESULT",
+        "D5_PAUSE_RESULT"
+      ],
+      "dim": "D2/D4/D5",
+      "trajectory": "lifecycle_reopen",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:RESTART-01",
+      "check_ids": [
+        "D3_RESET_CLEAN",
+        "D4_RESTART"
+      ],
+      "dim": "D3/D4",
+      "trajectory": "lifecycle_reopen",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:REOPEN-01",
+      "check_ids": [
+        "D4_REOPEN"
+      ],
+      "dim": "D4",
+      "trajectory": "lifecycle_reopen",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:UI-01",
+      "check_ids": [
+        "D5_MENU",
+        "D5_HUD_STATION",
+        "D5_ACTION",
+        "D5_PAUSE_RESULT"
+      ],
+      "dim": "D5",
+      "trajectory": "station_operations,timers_pause_and_failure,lifecycle_reopen",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:AUDIO-01",
+      "check_ids": [
+        "D5_AUDIO"
+      ],
+      "dim": "D5",
+      "trajectory": "station_operations,timers_pause_and_failure",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:VISUAL-01",
+      "check_ids": [
+        "D2_ASSETS"
+      ],
+      "dim": "D2",
+      "trajectory": "station_operations",
+      "disposition": "scored"
+    },
+    {
+      "source": "gdd:QUALITY-01",
+      "check_ids": [],
+      "dim": "D1/D2/D3/D4/D5",
+      "trajectory": "runtime_gap",
+      "disposition": "runtime_gap",
+      "note": "Broad no-severe-blocking quality obligation is not a distinct scored leaf; relevant entry and action leaves remain independently scored.",
+      "gap": "No dedicated quality aggregate leaf."
+    },
+    {
+      "source": "gdd:SESSION-DELIVERY",
+      "check_ids": [
+        "D1_SESSION_ENTRY",
+        "D1_SESSION_STATE",
+        "D3_ITEM_UNIQUENESS"
+      ],
+      "dim": "D1/D3",
+      "trajectory": "public-session",
+      "disposition": "scored_support",
+      "note": "GDD delivery obligation is supported by session-model rows below; complete service qualification remains pending.",
+      "gap": "Only the declared session leaves are currently exercised; full service matrix is not yet calibrated."
+    },
+    {
+      "source": "gdd:DELIVERY-TECH",
+      "check_ids": [],
+      "dim": "D1/D2/D3/D4/D5",
+      "trajectory": "runtime_gap",
+      "disposition": "runtime_gap",
+      "note": "Toolchain and file-boundary delivery is a gate/contract obligation, not a gameplay leaf in the current 90-point rules.",
+      "gap": "No dedicated technical-delivery scoring leaf."
+    },
+    {
+      "source": "session-model:SESSION-01",
+      "check_ids": [
+        "D1_SESSION_ENTRY"
+      ],
+      "dim": "D1",
+      "trajectory": "public-session",
+      "disposition": "scored_support",
+      "note": "Authority: input-v2/SESSION_MODEL.json; one active kitchen session and OpenEntry."
+    },
+    {
+      "source": "session-model:SESSION-02",
+      "check_ids": [
+        "D1_SESSION_STATE",
+        "D3_ITEM_UNIQUENESS"
+      ],
+      "dim": "D1/D3",
+      "trajectory": "public-session",
+      "disposition": "scored_support",
+      "note": "Authority: input-v2/SESSION_MODEL.json; exact identities, fields and legal state vocabulary."
+    },
+    {
+      "source": "session-model:SESSION-03",
+      "check_ids": [
+        "D1_SESSION_STATE",
+        "D3_ITEM_UNIQUENESS"
+      ],
+      "dim": "D1/D3",
+      "trajectory": "public-session",
+      "disposition": "scored_support",
+      "note": "Authority: input-v2/SESSION_MODEL.json; complete captures and legal edits.",
+      "gap": "Complete editable-field roundtrip matrix is not independently calibrated."
+    },
+    {
+      "source": "session-model:SESSION-04",
+      "check_ids": [
+        "D3_ITEM_UNIQUENESS"
+      ],
+      "dim": "D3",
+      "trajectory": "public-session",
+      "disposition": "scored_support",
+      "note": "Authority: input-v2/SESSION_MODEL.json; one positive item identity has one owner.",
+      "gap": "Only representative owner transfer is covered; all transformations are not independently calibrated."
+    },
+    {
+      "source": "session-model:SESSION-05",
+      "check_ids": [
+        "D2_CHOP",
+        "D2_COOK",
+        "D2_PLATE"
+      ],
+      "dim": "D2",
+      "trajectory": "public-session",
+      "disposition": "scored_support",
+      "note": "Authority: input-v2/SESSION_MODEL.json; legal container kinds and chopping states.",
+      "gap": "Full legal container cross-product is not independently calibrated."
+    },
+    {
+      "source": "session-model:SESSION-06",
+      "check_ids": [
+        "D2_COOK",
+        "D2_BURN",
+        "D3_COOK_RULES"
+      ],
+      "dim": "D2/D3",
+      "trajectory": "public-session",
+      "disposition": "scored_support",
+      "note": "Authority: input-v2/SESSION_MODEL.json; compact pot, cook and burn relations.",
+      "gap": "All malformed pot combinations are not independently calibrated."
+    },
+    {
+      "source": "session-model:SESSION-07",
+      "check_ids": [
+        "D2_DELIVERY_ORDERS",
+        "D2_EXPIRY",
+        "D3_ORDER_RULES"
+      ],
+      "dim": "D2/D3",
+      "trajectory": "public-session",
+      "disposition": "scored_support",
+      "note": "Authority: input-v2/SESSION_MODEL.json; compact oldest-first orders and timers.",
+      "gap": "All malformed order combinations are not independently calibrated."
+    },
+    {
+      "source": "session-model:SESSION-08",
+      "check_ids": [
+        "D2_PAUSE",
+        "D2_RESULT",
+        "D3_PAUSE_FREEZE",
+        "D3_RESET_CLEAN"
+      ],
+      "dim": "D2/D3",
+      "trajectory": "public-session",
+      "disposition": "scored_support",
+      "note": "Authority: input-v2/SESSION_MODEL.json; phase, timer, pause, result and clean menu relations.",
+      "gap": "Result/pause state is sampled but full legal phase matrix is not independently calibrated."
+    },
+    {
+      "source": "session-model:SESSION-09",
+      "check_ids": [
+        "D2_KITCHEN",
+        "D2_MOVE_SWITCH"
+      ],
+      "dim": "D2",
+      "trajectory": "public-session",
+      "disposition": "scored_support",
+      "note": "Authority: input-v2/SESSION_MODEL.json; real actors, poses and world geometry.",
+      "gap": "Full arbitrary legal pose and ResolveActor matrix is not independently calibrated."
+    },
+    {
+      "source": "session-model:SESSION-10",
+      "check_ids": [
+        "D2_MOVE_SWITCH",
+        "D2_PICKUP"
+      ],
+      "dim": "D2",
+      "trajectory": "public-session",
+      "disposition": "scored_support",
+      "note": "Authority: input-v2/SESSION_MODEL.json; reachable approach landmarks and interaction distance.",
+      "gap": "All station approach/occupancy edge cases are not independently calibrated."
+    },
+    {
+      "source": "session-model:SESSION-11",
+      "check_ids": [
+        "D1_SESSION_ENTRY",
+        "D1_SESSION_STATE"
+      ],
+      "dim": "D1",
+      "trajectory": "public-session",
+      "disposition": "scored_support",
+      "note": "Authority: input-v2/SESSION_MODEL.json and GAME_SESSION_SPEC.md; atomic rejection, suspension, detached capture and bounded completion.",
+      "gap": "Malformed-shape and timeout matrix is not independently calibrated."
+    }
+  ],
+  "note": "Every published GDD requirement, SESSION_MODEL requirement referenced by SESSION-DELIVERY, and CB-01..CB-18 appears explicitly. D1 is rules/coverage-only because checkpoint-script v2 check.dim excludes D1; D2-D5 use true schema-v2 check entries. Runtime gaps are explicit and do not claim qualification."
+}

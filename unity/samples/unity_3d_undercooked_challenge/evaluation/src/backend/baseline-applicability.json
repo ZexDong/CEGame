@@ -1,0 +1,156 @@
+{
+  "schema_version": 2,
+  "game": "unity.undercooked_kitchen_shift.v2",
+  "checklist_revision": "docv2-common-baseline-20260913",
+  "session_observation_surface": "game-session/v1-capture-only",
+  "items": [
+    {
+      "id": "CB-01",
+      "applies": true,
+      "check_ids": [
+        "D1_SCENE",
+        "D1_CAMERA",
+        "D4_MENU_START",
+        "D5_MENU"
+      ]
+    },
+    {
+      "id": "CB-02",
+      "applies": true,
+      "check_ids": [
+        "D1_RUNTIME",
+        "D1_SESSION_ENTRY",
+        "D1_SESSION_STATE"
+      ]
+    },
+    {
+      "id": "CB-03",
+      "applies": true,
+      "check_ids": [
+        "D4_REOPEN"
+      ]
+    },
+    {
+      "id": "CB-04",
+      "applies": true,
+      "check_ids": [
+        "D2_MOVE_SWITCH",
+        "D2_PICKUP",
+        "D2_CHOP",
+        "D2_COOK",
+        "D2_PLATE"
+      ]
+    },
+    {
+      "id": "CB-05",
+      "applies": true,
+      "check_ids": [
+        "D5_ACTION",
+        "D5_HUD_STATION",
+        "D5_AUDIO"
+      ]
+    },
+    {
+      "id": "CB-06",
+      "applies": true,
+      "check_ids": [
+        "D3_RAW_REJECTION",
+        "D3_BURN_REJECTION"
+      ]
+    },
+    {
+      "id": "CB-07",
+      "applies": true,
+      "check_ids": [
+        "D4_MENU_START",
+        "D4_RESTART",
+        "D4_REOPEN"
+      ]
+    },
+    {
+      "id": "CB-08",
+      "applies": true,
+      "check_ids": [
+        "D5_MENU",
+        "D5_HUD_STATION",
+        "D5_PAUSE_RESULT"
+      ]
+    },
+    {
+      "id": "CB-09",
+      "applies": true,
+      "check_ids": [
+        "D5_HUD_STATION",
+        "D5_ACTION",
+        "D2_DELIVERY_ORDERS"
+      ]
+    },
+    {
+      "id": "CB-10",
+      "applies": true,
+      "check_ids": [
+        "D5_MENU",
+        "D5_HUD_STATION"
+      ]
+    },
+    {
+      "id": "CB-11",
+      "applies": true,
+      "check_ids": [
+        "D2_RESULT",
+        "D4_RESULT"
+      ]
+    },
+    {
+      "id": "CB-12",
+      "applies": false,
+      "reason": "No separate losing ending exists; recoverable order expiry is covered by ORDER-02 without ending the shift.",
+      "check_ids": []
+    },
+    {
+      "id": "CB-13",
+      "applies": true,
+      "check_ids": [
+        "D3_RESET_CLEAN",
+        "D4_RESTART"
+      ]
+    },
+    {
+      "id": "CB-14",
+      "applies": true,
+      "check_ids": [
+        "D2_RESULT",
+        "D4_RESULT"
+      ]
+    },
+    {
+      "id": "CB-15",
+      "applies": true,
+      "check_ids": [
+        "D1_SESSION_ENTRY"
+      ]
+    },
+    {
+      "id": "CB-16",
+      "applies": true,
+      "check_ids": [
+        "D1_RUNTIME",
+        "D2_ASSETS"
+      ]
+    },
+    {
+      "id": "CB-17",
+      "applies": true,
+      "check_ids": [
+        "D2_ASSETS"
+      ]
+    },
+    {
+      "id": "CB-18",
+      "applies": false,
+      "reason": "Not applicable: this Input enables only game-session/v1 Capture; no Dashboard or legacy task-specific Probe is required.",
+      "check_ids": []
+    }
+  ],
+  "policy": "Declare CB-01 through CB-18 exactly once. applies=false requires a game-specific reason. CB-18 is explicitly N/A because the frozen Input uses the public session Capture as its sole authoritative state surface."
+}

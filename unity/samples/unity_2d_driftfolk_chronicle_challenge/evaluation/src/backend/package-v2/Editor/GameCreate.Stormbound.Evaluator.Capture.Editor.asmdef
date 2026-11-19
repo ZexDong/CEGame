@@ -1,0 +1,6 @@
+{
+  "name": "GameCreate.Stormbound.Evaluator.Capture.Editor",
+  "references": ["GameCreate.Stormbound.Evaluator.Capture"],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}

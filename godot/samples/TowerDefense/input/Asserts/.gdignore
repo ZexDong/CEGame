@@ -1,0 +1,2 @@
+# This directory is a raw transfer kit, not a Godot import root.
+# The Agent copies manifest-listed images into res://game_assets/ before import.

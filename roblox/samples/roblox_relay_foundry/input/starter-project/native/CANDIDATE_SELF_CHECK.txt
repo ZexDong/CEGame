@@ -1,0 +1,16 @@
+Relay Foundry Protocol — Play-mode self-check
+
+Perform these tests using a real Roblox Studio Play session and normal player input. In RUN_REPORT.txt write PASS, FAIL, or NOT RUN and the observed behavior for every item.
+
+1. Within 12 seconds of F5, character controls and HUD work; required Workspace readiness fields, Tags, Attributes, and prompts are present.
+2. At the Charge Bay, use Q twice and confirm that only Charge mode changes in HUD/feedback. Cycle it back to Pulse.
+3. Collect Order 1. At Stabilize Bay, press E while Raw: core becomes Faulted, fault count rises, and delivery/order count do not change.
+4. Purge the faulted core: it becomes Raw for Order 1. Charge Pulse, Stabilize Brace, Encode Cipher, and deliver it. Confirm 1/3 delivered and Order 2 appears.
+5. Collect Order 2; leave Charge on Pulse and press E. Confirm a wrong-mode fault, then purge. Use Arc, Float, Key and deliver Order 2.
+6. Before Order 3 is delivered, use the exit console. Confirm it is locked and the tagged door still blocks a walking character.
+7. Complete and deliver Order 3 with Flux, Lock, Mark. Power the exit; within 2 seconds the door becomes passable. Confirm completion occurs only after walking into evacuation zone.
+8. In a fresh run, touch Safety checkpoint, collect a core and process it once, then genuinely touch Safety hazard. Confirm death and respawn near Safety while progress/current phase/RunId/RunStart remain preserved and the core is recoverable.
+9. Press R during an in-progress run. Within 3 seconds confirm Central spawn, Order 1, Absent core, default modes, zero deliveries/faults/deaths, Central checkpoint, no power/completion, a closed blocking gate, and increased RunId.
+10. Complete a run then press R. Confirm the same complete reset and that no completed HUD/result remains.
+
+Compilation, source inspection, and string searches do not substitute for any check above.

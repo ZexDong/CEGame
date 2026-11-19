@@ -1,0 +1,392 @@
+{
+  "schema_version": 1,
+  "language": "en",
+  "benchmark_id": "unity.arrow_escape_reconstruction.v2",
+  "scope": "Static facts about the supplied public media only. This catalog does not prescribe the final board layout, level solution, class structure, or reference composition.",
+  "contact_sheet": "ASSET_CONTACT_SHEET.png",
+  "protected_sources": [
+    "Assets/BenchmarkStarter/**",
+    "TaskAssets/**"
+  ],
+  "writable_derivative_root": "Assets/ArrowEscapeBenchmark/**",
+  "critical_asset_notes": [
+    "ASSET_CONTACT_SHEET.png is the initial visual inventory; it is not a finished background or target composition.",
+    "The eight files under Assets/BenchmarkStarter/Art are protected Texture Type Default imports. Make project-owned derived copies when Sprite importer settings or cropping are needed.",
+    "TaskAssets/badges/key_badge.png and lock_badge.png are protected source files outside Assets; copy them to the manifest-declared writable destinations for runtime Sprite use.",
+    "The supplied key image represents key state and the supplied lock image represents locked state. Do not swap their semantic roles.",
+    "No final board composition, level answer, or gameplay implementation is supplied by this catalog."
+  ],
+  "images": [
+    {
+      "path": "Assets/BenchmarkStarter/Art/arrow_body.png",
+      "bytes": 507,
+      "sha256": "f427145f5ed38f3c03bc6264af2a43d1986bf9c87f1482967827ab3d46033abf",
+      "media_type": "image/png",
+      "semantic_role": "arrow_body",
+      "role_description": "Optional reusable arrow shaft/body texture",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGBA",
+      "has_alpha_channel": true,
+      "content_bounds": {
+        "x": 42,
+        "y": 2,
+        "width": 45,
+        "height": 125,
+        "coordinate_origin": "top-left",
+        "method": "alpha_nonzero"
+      },
+      "padding_pixels": {
+        "left": 42,
+        "top": 2,
+        "right": 41,
+        "bottom": 1
+      },
+      "importer": {
+        "location": "protected_preimported_unity_asset",
+        "texture_type": 0,
+        "sprite_mode": 0,
+        "pixels_per_unit": 100.0,
+        "mipmaps_enabled": true,
+        "alpha_is_transparency": false,
+        "handling_note": "The protected importer is Texture Type Default, not a ready Sprite importer. If a Sprite or cropped variant is useful, create a project-owned derived copy under Assets/ArrowEscapeBenchmark/** and configure that copy; do not edit the protected source importer."
+      }
+    },
+    {
+      "path": "Assets/BenchmarkStarter/Art/arrow_head.png",
+      "bytes": 570,
+      "sha256": "9b44a2628f12726de21e07c5dd48ae91095820bd72abd158e00469f27aec147d",
+      "media_type": "image/png",
+      "semantic_role": "arrow_head",
+      "role_description": "Optional reusable arrow direction-head texture",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGBA",
+      "has_alpha_channel": true,
+      "content_bounds": {
+        "x": 12,
+        "y": 8,
+        "width": 105,
+        "height": 113,
+        "coordinate_origin": "top-left",
+        "method": "alpha_nonzero"
+      },
+      "padding_pixels": {
+        "left": 12,
+        "top": 8,
+        "right": 11,
+        "bottom": 7
+      },
+      "importer": {
+        "location": "protected_preimported_unity_asset",
+        "texture_type": 0,
+        "sprite_mode": 0,
+        "pixels_per_unit": 100.0,
+        "mipmaps_enabled": true,
+        "alpha_is_transparency": false,
+        "handling_note": "The protected importer is Texture Type Default, not a ready Sprite importer. If a Sprite or cropped variant is useful, create a project-owned derived copy under Assets/ArrowEscapeBenchmark/** and configure that copy; do not edit the protected source importer."
+      }
+    },
+    {
+      "path": "Assets/BenchmarkStarter/Art/grid_dot.png",
+      "bytes": 470,
+      "sha256": "e00aee04d76a95f0140330b306f4cde5728a623ebb527c3ac7ed61b8db0b9323",
+      "media_type": "image/png",
+      "semantic_role": "board_grid",
+      "role_description": "Optional reusable dot-grid cell texture",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGBA",
+      "has_alpha_channel": true,
+      "content_bounds": {
+        "x": 42,
+        "y": 42,
+        "width": 45,
+        "height": 45,
+        "coordinate_origin": "top-left",
+        "method": "alpha_nonzero"
+      },
+      "padding_pixels": {
+        "left": 42,
+        "top": 42,
+        "right": 41,
+        "bottom": 41
+      },
+      "importer": {
+        "location": "protected_preimported_unity_asset",
+        "texture_type": 0,
+        "sprite_mode": 0,
+        "pixels_per_unit": 100.0,
+        "mipmaps_enabled": true,
+        "alpha_is_transparency": false,
+        "handling_note": "The protected importer is Texture Type Default, not a ready Sprite importer. If a Sprite or cropped variant is useful, create a project-owned derived copy under Assets/ArrowEscapeBenchmark/** and configure that copy; do not edit the protected source importer."
+      }
+    },
+    {
+      "path": "Assets/BenchmarkStarter/Art/heart.png",
+      "bytes": 839,
+      "sha256": "07e3fecce441a0aa422b26f66672cec6c39132e3f337ba76fa735bdbd97ab53d",
+      "media_type": "image/png",
+      "semantic_role": "hearts_budget",
+      "role_description": "Optional reusable Hearts-mode budget icon",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGBA",
+      "has_alpha_channel": true,
+      "content_bounds": {
+        "x": 18,
+        "y": 24,
+        "width": 93,
+        "height": 93,
+        "coordinate_origin": "top-left",
+        "method": "alpha_nonzero"
+      },
+      "padding_pixels": {
+        "left": 18,
+        "top": 24,
+        "right": 17,
+        "bottom": 11
+      },
+      "importer": {
+        "location": "protected_preimported_unity_asset",
+        "texture_type": 0,
+        "sprite_mode": 0,
+        "pixels_per_unit": 100.0,
+        "mipmaps_enabled": true,
+        "alpha_is_transparency": false,
+        "handling_note": "The protected importer is Texture Type Default, not a ready Sprite importer. If a Sprite or cropped variant is useful, create a project-owned derived copy under Assets/ArrowEscapeBenchmark/** and configure that copy; do not edit the protected source importer."
+      }
+    },
+    {
+      "path": "Assets/BenchmarkStarter/Art/hint_button.png",
+      "bytes": 981,
+      "sha256": "3f031993cc2033d4f572f58a8ef1ae8cbb5713a646e4355c2a1c51c437d374ab",
+      "media_type": "image/png",
+      "semantic_role": "hint_control",
+      "role_description": "Optional reusable Hint control icon",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGBA",
+      "has_alpha_channel": true,
+      "content_bounds": {
+        "x": 8,
+        "y": 8,
+        "width": 113,
+        "height": 113,
+        "coordinate_origin": "top-left",
+        "method": "alpha_nonzero"
+      },
+      "padding_pixels": {
+        "left": 8,
+        "top": 8,
+        "right": 7,
+        "bottom": 7
+      },
+      "importer": {
+        "location": "protected_preimported_unity_asset",
+        "texture_type": 0,
+        "sprite_mode": 0,
+        "pixels_per_unit": 100.0,
+        "mipmaps_enabled": true,
+        "alpha_is_transparency": false,
+        "handling_note": "The protected importer is Texture Type Default, not a ready Sprite importer. If a Sprite or cropped variant is useful, create a project-owned derived copy under Assets/ArrowEscapeBenchmark/** and configure that copy; do not edit the protected source importer."
+      }
+    },
+    {
+      "path": "Assets/BenchmarkStarter/Art/next_button.png",
+      "bytes": 722,
+      "sha256": "73fbf26dc09310e7e2692f09f328da59a5dbc3b61317a2486dd2293bf9617dc6",
+      "media_type": "image/png",
+      "semantic_role": "next_level_control",
+      "role_description": "Optional reusable Next Level control icon",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGBA",
+      "has_alpha_channel": true,
+      "content_bounds": {
+        "x": 8,
+        "y": 8,
+        "width": 113,
+        "height": 113,
+        "coordinate_origin": "top-left",
+        "method": "alpha_nonzero"
+      },
+      "padding_pixels": {
+        "left": 8,
+        "top": 8,
+        "right": 7,
+        "bottom": 7
+      },
+      "importer": {
+        "location": "protected_preimported_unity_asset",
+        "texture_type": 0,
+        "sprite_mode": 0,
+        "pixels_per_unit": 100.0,
+        "mipmaps_enabled": true,
+        "alpha_is_transparency": false,
+        "handling_note": "The protected importer is Texture Type Default, not a ready Sprite importer. If a Sprite or cropped variant is useful, create a project-owned derived copy under Assets/ArrowEscapeBenchmark/** and configure that copy; do not edit the protected source importer."
+      }
+    },
+    {
+      "path": "Assets/BenchmarkStarter/Art/restart_button.png",
+      "bytes": 939,
+      "sha256": "692478fe6d907171ff171afe1ba3471fb345546a3c92296d88e592fe1752f8e1",
+      "media_type": "image/png",
+      "semantic_role": "restart_control",
+      "role_description": "Optional reusable Restart control icon",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGBA",
+      "has_alpha_channel": true,
+      "content_bounds": {
+        "x": 8,
+        "y": 8,
+        "width": 113,
+        "height": 113,
+        "coordinate_origin": "top-left",
+        "method": "alpha_nonzero"
+      },
+      "padding_pixels": {
+        "left": 8,
+        "top": 8,
+        "right": 7,
+        "bottom": 7
+      },
+      "importer": {
+        "location": "protected_preimported_unity_asset",
+        "texture_type": 0,
+        "sprite_mode": 0,
+        "pixels_per_unit": 100.0,
+        "mipmaps_enabled": true,
+        "alpha_is_transparency": false,
+        "handling_note": "The protected importer is Texture Type Default, not a ready Sprite importer. If a Sprite or cropped variant is useful, create a project-owned derived copy under Assets/ArrowEscapeBenchmark/** and configure that copy; do not edit the protected source importer."
+      }
+    },
+    {
+      "path": "Assets/BenchmarkStarter/Art/ui_panel.png",
+      "bytes": 568,
+      "sha256": "7569f1398b3f12bdcea8cfd34598d0ff3cfce92213b815e7f39305cb2d1b9d8d",
+      "media_type": "image/png",
+      "semantic_role": "status_panel",
+      "role_description": "Optional reusable compact status/control panel texture",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGBA",
+      "has_alpha_channel": true,
+      "content_bounds": {
+        "x": 5,
+        "y": 12,
+        "width": 119,
+        "height": 105,
+        "coordinate_origin": "top-left",
+        "method": "alpha_nonzero"
+      },
+      "padding_pixels": {
+        "left": 5,
+        "top": 12,
+        "right": 4,
+        "bottom": 11
+      },
+      "importer": {
+        "location": "protected_preimported_unity_asset",
+        "texture_type": 0,
+        "sprite_mode": 0,
+        "pixels_per_unit": 100.0,
+        "mipmaps_enabled": true,
+        "alpha_is_transparency": false,
+        "handling_note": "The protected importer is Texture Type Default, not a ready Sprite importer. If a Sprite or cropped variant is useful, create a project-owned derived copy under Assets/ArrowEscapeBenchmark/** and configure that copy; do not edit the protected source importer."
+      }
+    },
+    {
+      "path": "TaskAssets/badges/key_badge.png",
+      "bytes": 1810,
+      "sha256": "bedcbdc0e83d2b2463de939b237878ae686c2aa77948ce35ded3db8c5b0d460c",
+      "media_type": "image/png",
+      "semantic_role": "dependency_key",
+      "role_description": "Required supplied key-state badge source",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGBA",
+      "has_alpha_channel": true,
+      "content_bounds": {
+        "x": 8,
+        "y": 8,
+        "width": 113,
+        "height": 113,
+        "coordinate_origin": "top-left",
+        "method": "alpha_nonzero"
+      },
+      "padding_pixels": {
+        "left": 8,
+        "top": 8,
+        "right": 7,
+        "bottom": 7
+      },
+      "importer": {
+        "location": "protected_task_file_outside_assets",
+        "handling_note": "Copy this source into the manifest-declared writable destination under Assets/ArrowEscapeBenchmark/** before using it as a Unity Sprite. Preserve this protected source file."
+      }
+    },
+    {
+      "path": "TaskAssets/badges/lock_badge.png",
+      "bytes": 1659,
+      "sha256": "9549bc403fdf09c118332d0ea15528a0e8d86121c44243df84d2e835b5c72f9b",
+      "media_type": "image/png",
+      "semantic_role": "dependency_lock",
+      "role_description": "Required supplied locked-state badge source",
+      "source_pixels": {
+        "width": 128,
+        "height": 128
+      },
+      "source_color_mode": "RGBA",
+      "has_alpha_channel": true,
+      "content_bounds": {
+        "x": 8,
+        "y": 8,
+        "width": 113,
+        "height": 113,
+        "coordinate_origin": "top-left",
+        "method": "alpha_nonzero"
+      },
+      "padding_pixels": {
+        "left": 8,
+        "top": 8,
+        "right": 7,
+        "bottom": 7
+      },
+      "importer": {
+        "location": "protected_task_file_outside_assets",
+        "handling_note": "Copy this source into the manifest-declared writable destination under Assets/ArrowEscapeBenchmark/** before using it as a Unity Sprite. Preserve this protected source file."
+      }
+    }
+  ],
+  "data_assets": [
+    {
+      "path": "TaskAssets/reference/sample_dependency_level.json",
+      "bytes": 897,
+      "sha256": "8f821cf05d7f4236d7a8bfc4d0b81e1e67d52a60f070f1923166a47ead61cefd",
+      "media_type": "application/json",
+      "semantic_role": "dependency_data_shape_example",
+      "runtime_use": false,
+      "handling_note": "Authoring-shape example only. Create equivalent saved Unity level data under the writable root; do not load this protected JSON at runtime."
+    }
+  ]
+}

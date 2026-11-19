@@ -1,0 +1,16 @@
+{
+  "source_type": "Original public Luau schema plus full public contract",
+  "schema_sources": [
+    "starter-project/native/project/src/shared/Schema.luau"
+  ],
+  "public_identifiers": [
+    "EAST",
+    "Left",
+    "Locked",
+    "NORTH",
+    "SY_",
+    "WEST",
+    "skyline-switchyard-v1"
+  ],
+  "contract": "GAME_SESSION_SPEC.md"
+}

@@ -1,0 +1,215 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "d6-run.schema.json",
+  "title": "Bomber Local Duel D6 evidence run",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "game_id",
+    "task_revision",
+    "evaluator_revision",
+    "candidate_id",
+    "candidate_identity_sha256",
+    "status",
+    "protocol",
+    "model_id",
+    "reference_manifest_sha256",
+    "prompt_sha256",
+    "states",
+    "rounds",
+    "score"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "3.0.0"
+    },
+    "game_id": {
+      "const": "Bomber"
+    },
+    "task_revision": {
+      "const": "2.0.1"
+    },
+    "evaluator_revision": {
+      "const": "bomber-evaluator-5.0.0"
+    },
+    "candidate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_identity_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "status": {
+      "const": "completed"
+    },
+    "protocol": {
+      "const": "canonical_five_criteria_three_rounds"
+    },
+    "model_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "reference_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "prompt_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "states": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "state_id",
+          "reference_image",
+          "reference_sha256",
+          "candidate_image",
+          "candidate_status",
+          "candidate_sha256",
+          "reason_code"
+        ],
+        "properties": {
+          "state_id": {
+            "enum": [
+              "active-duel",
+              "chain-reaction",
+              "player1-win"
+            ]
+          },
+          "reference_image": {
+            "type": "string"
+          },
+          "reference_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "candidate_image": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "candidate_status": {
+            "enum": [
+              "healthy",
+              "missing",
+              "invalid_png",
+              "wrong_resolution",
+              "black_or_blank"
+            ]
+          },
+          "candidate_sha256": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reason_code": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "rounds": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "round",
+          "response_sha256",
+          "states",
+          "score"
+        ],
+        "properties": {
+          "round": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 3
+          },
+          "response_sha256": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "states": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": {
+              "type": "object",
+              "required": [
+                "state_id",
+                "score",
+                "rationale",
+                "source",
+                "reason_code"
+              ],
+              "properties": {
+                "state_id": {
+                  "enum": [
+                    "active-duel",
+                    "chain-reaction",
+                    "player1-win"
+                  ]
+                },
+                "score": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 10,
+                  "multipleOf": 0.5
+                },
+                "rationale": {
+                  "type": "string"
+                },
+                "source": {
+                  "enum": [
+                    "vlm",
+                    "automatic_zero"
+                  ]
+                },
+                "reason_code": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "criteria": {
+                  "type": [
+                    "object",
+                    "null"
+                  ]
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "score": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 10
+    }
+  }
+}

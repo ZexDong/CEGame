@@ -1,0 +1,207 @@
+{
+  "schema_version": 3,
+  "task_id": "defold_match3_swipe_v2",
+  "phases": [
+    "not_ready",
+    "menu",
+    "playing",
+    "paused",
+    "level_clear",
+    "campaign_won",
+    "lost"
+  ],
+  "data_file": "campaign.json",
+  "design_size": [
+    960,
+    720
+  ],
+  "coordinate_space": "integer cells; enemy positions in cell units",
+  "target_rect_space": {
+    "width_slot": "client_width",
+    "height_slot": "client_height",
+    "origin": "bottom-left",
+    "units": "client coordinates"
+  },
+  "slots": [
+    "level_index",
+    "level_total",
+    "cleared_levels",
+    "saved_levels",
+    "run_serial",
+    "client_width",
+    "client_height",
+    "score",
+    "cleared_total",
+    "moves_used",
+    "moves_remaining",
+    "moves_limit",
+    "score_goal",
+    "busy",
+    "cascade_index",
+    "rng_cursor",
+    "ice_layers_remaining",
+    "ice_cells_remaining",
+    "stone_count",
+    "goal_red",
+    "goal_blue",
+    "cleared_green",
+    "cleared_blue",
+    "cleared_cyan",
+    "cleared_yellow",
+    "cleared_red",
+    "cleared_purple",
+    "campaign_score",
+    "campaign_moves_used"
+  ],
+  "entities": [
+    {
+      "kind": "gem_green",
+      "geometry": "cell",
+      "states": [
+        "idle",
+        "swapping",
+        "matched",
+        "falling"
+      ]
+    },
+    {
+      "kind": "gem_blue",
+      "geometry": "cell",
+      "states": [
+        "idle",
+        "swapping",
+        "matched",
+        "falling"
+      ]
+    },
+    {
+      "kind": "gem_cyan",
+      "geometry": "cell",
+      "states": [
+        "idle",
+        "swapping",
+        "matched",
+        "falling"
+      ]
+    },
+    {
+      "kind": "gem_yellow",
+      "geometry": "cell",
+      "states": [
+        "idle",
+        "swapping",
+        "matched",
+        "falling"
+      ]
+    },
+    {
+      "kind": "gem_red",
+      "geometry": "cell",
+      "states": [
+        "idle",
+        "swapping",
+        "matched",
+        "falling"
+      ]
+    },
+    {
+      "kind": "gem_purple",
+      "geometry": "cell",
+      "states": [
+        "idle",
+        "swapping",
+        "matched",
+        "falling"
+      ]
+    },
+    {
+      "kind": "ice",
+      "geometry": "cell",
+      "states": [
+        "one_layer",
+        "two_layers"
+      ]
+    },
+    {
+      "kind": "stone",
+      "geometry": "cell",
+      "states": [
+        "blocked"
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "kind": "menu_new_campaign"
+    },
+    {
+      "kind": "menu_continue"
+    },
+    {
+      "kind": "menu_controls"
+    },
+    {
+      "kind": "menu_exit"
+    },
+    {
+      "kind": "controls_back"
+    },
+    {
+      "kind": "new_confirm"
+    },
+    {
+      "kind": "new_cancel"
+    },
+    {
+      "kind": "pause_button"
+    },
+    {
+      "kind": "pause_resume"
+    },
+    {
+      "kind": "level_retry"
+    },
+    {
+      "kind": "return_menu"
+    },
+    {
+      "kind": "next_level"
+    },
+    {
+      "kind": "campaign_new"
+    },
+    {
+      "kind": "exit_button"
+    },
+    {
+      "kind": "board_surface"
+    }
+  ],
+  "controls": {
+    "keys": {
+      "left": [
+        "A",
+        "Left"
+      ],
+      "right": [
+        "D",
+        "Right"
+      ],
+      "up": [
+        "W",
+        "Up"
+      ],
+      "down": [
+        "S",
+        "Down"
+      ],
+      "confirm": "Enter",
+      "pause": "Escape",
+      "restart": "R"
+    }
+  },
+  "grid_size": [
+    15,
+    10
+  ]
+}

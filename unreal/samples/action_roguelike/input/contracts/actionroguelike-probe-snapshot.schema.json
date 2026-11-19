@@ -1,0 +1,540 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:actionroguelike:evaluator:runtime:schema:probe-snapshot:1.0.0",
+  "title": "ActionRoguelike implementation-neutral read-only probe snapshot",
+  "description": "A publisher-neutral snapshot contract. It exposes only player-observable semantics and read-only runtime truth; it does not name implementation classes, members, checkpoints, or scoring rules.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "publisher",
+    "identity",
+    "world",
+    "player",
+    "enemies",
+    "processes",
+    "objects",
+    "ui",
+    "controls",
+    "recent_event_ids",
+    "evidence"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "publisher": { "$ref": "#/$defs/publisher" },
+    "identity": { "$ref": "#/$defs/snapshot_identity" },
+    "world": { "$ref": "#/$defs/world" },
+    "player": { "$ref": "#/$defs/player" },
+    "enemies": {
+      "type": "array",
+      "maxItems": 1024,
+      "items": { "$ref": "#/$defs/enemy" }
+    },
+    "processes": {
+      "type": "array",
+      "maxItems": 4096,
+      "items": { "$ref": "#/$defs/process" }
+    },
+    "objects": {
+      "type": "array",
+      "maxItems": 4096,
+      "items": { "$ref": "#/$defs/object" }
+    },
+    "ui": {
+      "type": "array",
+      "maxItems": 1024,
+      "items": { "$ref": "#/$defs/ui" }
+    },
+    "controls": {
+      "type": "array",
+      "minItems": 11,
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/control" },
+      "allOf": [
+        { "contains": { "properties": { "semantic_action": { "const": "move_forward" } }, "required": ["semantic_action"] } },
+        { "contains": { "properties": { "semantic_action": { "const": "move_backward" } }, "required": ["semantic_action"] } },
+        { "contains": { "properties": { "semantic_action": { "const": "move_left" } }, "required": ["semantic_action"] } },
+        { "contains": { "properties": { "semantic_action": { "const": "move_right" } }, "required": ["semantic_action"] } },
+        { "contains": { "properties": { "semantic_action": { "const": "jump" } }, "required": ["semantic_action"] } },
+        { "contains": { "properties": { "semantic_action": { "const": "sprint" } }, "required": ["semantic_action"] } },
+        { "contains": { "properties": { "semantic_action": { "const": "primary_attack" } }, "required": ["semantic_action"] } },
+        { "contains": { "properties": { "semantic_action": { "const": "black_hole" } }, "required": ["semantic_action"] } },
+        { "contains": { "properties": { "semantic_action": { "const": "teleport" } }, "required": ["semantic_action"] } },
+        { "contains": { "properties": { "semantic_action": { "const": "interact" } }, "required": ["semantic_action"] } },
+        { "contains": { "properties": { "semantic_action": { "const": "restart" } }, "required": ["semantic_action"] } }
+      ]
+    },
+    "public_targets": {
+      "type": "array",
+      "maxItems": 1024,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/public_target" }
+    },
+    "asset_binding_claims": {
+      "description": "Optional read-only runtime observations that identify visible candidate assets. The host independently verifies package bytes, class, catalog membership, and render correlation before producing scoring evidence.",
+      "type": "array",
+      "maxItems": 256,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/asset_binding_claim" }
+    },
+    "recent_event_ids": {
+      "type": "array",
+      "maxItems": 4096,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/stable_id" }
+    },
+    "evidence": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": { "$ref": "#/$defs/evidence_ref" }
+    }
+  },
+  "$defs": {
+    "stable_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._+-]*$"
+    },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+    "relative_path": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "pattern": "^[^/\\\\][^\\\\\\r\\n\\u0000]*$",
+      "allOf": [
+        { "not": { "pattern": "^[A-Za-z][A-Za-z0-9+.-]*:" } },
+        { "not": { "pattern": "(^|/)\\.\\.?(/|$)" } },
+        { "not": { "pattern": "//|/$" } }
+      ]
+    },
+    "evidence_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "sha256", "media_type", "byte_length", "captured_monotonic_ms"],
+      "properties": {
+        "path": { "$ref": "#/$defs/relative_path" },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "media_type": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9!#$&^_.+-]+/[A-Za-z0-9!#$&^_.+-]+$"
+        },
+        "byte_length": { "type": "integer", "minimum": 0 },
+        "captured_monotonic_ms": { "type": "integer", "minimum": 0 },
+        "description": { "type": "string", "maxLength": 512 }
+      }
+    },
+    "publisher": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["publisher_id", "publisher_version", "readonly", "accepts_commands", "source_ref"],
+      "properties": {
+        "publisher_id": { "$ref": "#/$defs/stable_id" },
+        "publisher_version": { "$ref": "#/$defs/version" },
+        "readonly": { "const": true },
+        "accepts_commands": { "const": false },
+        "source_ref": { "$ref": "#/$defs/relative_path" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "source_ref", "probe_id", "probe_version"],
+      "properties": {
+        "kind": {
+          "enum": ["readonly_probe", "render_observation", "process_observation", "redacted_log", "derived_correlation"]
+        },
+        "source_ref": { "$ref": "#/$defs/relative_path" },
+        "probe_id": { "$ref": "#/$defs/stable_id" },
+        "probe_version": { "$ref": "#/$defs/version" }
+      }
+    },
+    "freshness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["observed_monotonic_ms", "valid_for_ms"],
+      "properties": {
+        "observed_monotonic_ms": { "type": "integer", "minimum": 0 },
+        "valid_for_ms": { "type": "integer", "minimum": 1, "maximum": 600000 }
+      }
+    },
+    "record_observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["trust", "provenance", "freshness"],
+      "properties": {
+        "trust": { "enum": ["verified", "corroborated", "unavailable", "unreliable"] },
+        "provenance": { "$ref": "#/$defs/provenance" },
+        "freshness": { "$ref": "#/$defs/freshness" }
+      }
+    },
+    "trusted_record_observation": {
+      "allOf": [
+        { "$ref": "#/$defs/record_observation" },
+        { "properties": { "trust": { "enum": ["verified", "corroborated"] } } }
+      ]
+    },
+    "snapshot_identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["process_token", "round_id", "snapshot_id", "sequence", "monotonic_ms", "observation"],
+      "properties": {
+        "process_token": { "$ref": "#/$defs/stable_id" },
+        "round_id": { "$ref": "#/$defs/stable_id" },
+        "snapshot_id": { "$ref": "#/$defs/stable_id" },
+        "sequence": { "type": "integer", "minimum": 0 },
+        "monotonic_ms": { "type": "integer", "minimum": 0 },
+        "observation": { "$ref": "#/$defs/trusted_record_observation" }
+      }
+    },
+    "observed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "trust", "provenance", "freshness"],
+      "properties": {
+        "value": {},
+        "trust": { "enum": ["verified", "corroborated", "unavailable", "unreliable"] },
+        "provenance": { "$ref": "#/$defs/provenance" },
+        "freshness": { "$ref": "#/$defs/freshness" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "trust": { "enum": ["unavailable", "unreliable"] } }, "required": ["trust"] },
+          "then": { "properties": { "value": { "type": "null" } } },
+          "else": { "properties": { "value": { "not": { "type": "null" } } } }
+        }
+      ]
+    },
+    "observed_boolean": {
+      "allOf": [{ "$ref": "#/$defs/observed" }, { "properties": { "value": { "type": ["boolean", "null"] } } }]
+    },
+    "observed_number": {
+      "allOf": [{ "$ref": "#/$defs/observed" }, { "properties": { "value": { "type": ["number", "null"] } } }]
+    },
+    "observed_nonnegative_number": {
+      "allOf": [{ "$ref": "#/$defs/observed" }, { "properties": { "value": { "type": ["number", "null"], "minimum": 0 } } }]
+    },
+    "observed_nonnegative_integer": {
+      "allOf": [{ "$ref": "#/$defs/observed" }, { "properties": { "value": { "type": ["integer", "null"], "minimum": 0 } } }]
+    },
+    "observed_string": {
+      "allOf": [{ "$ref": "#/$defs/observed" }, { "properties": { "value": { "type": ["string", "null"], "maxLength": 1024 } } }]
+    },
+    "observed_stable_id": {
+      "allOf": [
+        { "$ref": "#/$defs/observed" },
+        { "properties": { "value": { "type": ["string", "null"], "minLength": 1, "maxLength": 128, "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$" } } }
+      ]
+    },
+    "trusted_observed_stable_id": {
+      "allOf": [
+        { "$ref": "#/$defs/observed_stable_id" },
+        { "properties": { "value": { "$ref": "#/$defs/stable_id" }, "trust": { "enum": ["verified", "corroborated"] } } }
+      ]
+    },
+    "vector3": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "z"],
+      "properties": { "x": { "type": "number" }, "y": { "type": "number" }, "z": { "type": "number" } }
+    },
+    "observed_vector3": {
+      "allOf": [
+        { "$ref": "#/$defs/observed" },
+        { "properties": { "value": { "oneOf": [{ "$ref": "#/$defs/vector3" }, { "type": "null" }] } } }
+      ]
+    },
+    "rect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "width", "height"],
+      "properties": {
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "width": { "type": "number", "minimum": 0 },
+        "height": { "type": "number", "minimum": 0 }
+      }
+    },
+    "normalized_rect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "width", "height"],
+      "properties": {
+        "x": { "type": "number", "minimum": 0, "maximum": 1 },
+        "y": { "type": "number", "minimum": 0, "maximum": 1 },
+        "width": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 },
+        "height": { "type": "number", "exclusiveMinimum": 0, "maximum": 1 }
+      }
+    },
+    "observed_rect": {
+      "allOf": [
+        { "$ref": "#/$defs/observed" },
+        { "properties": { "value": { "oneOf": [{ "$ref": "#/$defs/rect" }, { "type": "null" }] } } }
+      ]
+    },
+    "observed_enum": {
+      "allOf": [
+        { "$ref": "#/$defs/observed" },
+        {
+          "properties": {
+            "value": {
+              "type": ["string", "null"],
+              "enum": [
+                "in_progress", "victory", "failure", "grounded", "airborne", "seeking", "melee", "ranged",
+                "idle", "move", "jump_start", "landing", "dash", "primary_cast", "black_hole_cast", "teleport_cast",
+                "melee_attack", "ranged_attack", "hit_reaction", "death", "requested", "started", "active", "resolved",
+                "ended", "cancelled", "blocked", "expired", "collision", "hit", "absorbed", "out_of_bounds",
+                "invalid_target", "round_ended", null
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "observed_process_type": {
+      "allOf": [
+        { "$ref": "#/$defs/observed" },
+        { "properties": { "value": { "enum": ["player_projectile", "enemy_projectile", "black_hole_projectile", "black_hole_field", "teleport"] }, "trust": { "enum": ["verified", "corroborated"] } } }
+      ]
+    },
+    "observed_object_type": {
+      "allOf": [
+        { "$ref": "#/$defs/observed" },
+        { "properties": { "value": { "enum": ["credits_pickup", "potion", "teleport_pickup", "physics_prop"] }, "trust": { "enum": ["verified", "corroborated"] } } }
+      ]
+    },
+    "observed_ui_role": {
+      "allOf": [
+        { "$ref": "#/$defs/observed" },
+        { "properties": { "value": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-z][a-z0-9_]*$" }, "trust": { "enum": ["verified", "corroborated"] } } }
+      ]
+    },
+    "world": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "entry": { "$ref": "#/$defs/observed_string" },
+        "playable": { "$ref": "#/$defs/observed_boolean" },
+        "survival_time_seconds": { "$ref": "#/$defs/observed_nonnegative_number" },
+        "refresh_opportunities": { "$ref": "#/$defs/observed_nonnegative_integer" },
+        "alive_enemy_count": { "$ref": "#/$defs/observed_nonnegative_integer" },
+        "round_phase": { "$ref": "#/$defs/observed_enum" },
+        "terminal_result_count": { "$ref": "#/$defs/observed_nonnegative_integer" }
+      }
+    },
+    "player": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "entity_id": { "$ref": "#/$defs/observed_stable_id" },
+        "controlled": { "$ref": "#/$defs/observed_boolean" },
+        "alive": { "$ref": "#/$defs/observed_boolean" },
+        "position_m": { "$ref": "#/$defs/observed_vector3" },
+        "velocity_mps": { "$ref": "#/$defs/observed_vector3" },
+        "facing": { "$ref": "#/$defs/observed_vector3" },
+        "ground_state": { "$ref": "#/$defs/observed_enum" },
+        "health": { "$ref": "#/$defs/observed_nonnegative_number" },
+        "health_max": { "$ref": "#/$defs/observed_nonnegative_number" },
+        "credits": { "$ref": "#/$defs/observed_nonnegative_integer" },
+        "teleport_acquired": { "$ref": "#/$defs/observed_boolean" },
+        "action_state": { "$ref": "#/$defs/observed_enum" },
+        "asset_semantic": { "$ref": "#/$defs/observed_string" }
+      }
+    },
+    "enemy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entity_id"],
+      "properties": {
+        "entity_id": { "$ref": "#/$defs/trusted_observed_stable_id" },
+        "alive": { "$ref": "#/$defs/observed_boolean" },
+        "position_m": { "$ref": "#/$defs/observed_vector3" },
+        "health": { "$ref": "#/$defs/observed_nonnegative_number" },
+        "health_max": { "$ref": "#/$defs/observed_nonnegative_number" },
+        "ai_mode": { "$ref": "#/$defs/observed_enum" },
+        "action_state": { "$ref": "#/$defs/observed_enum" },
+        "asset_semantic": { "$ref": "#/$defs/observed_string" }
+      }
+    },
+    "process": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entity_id", "process_type"],
+      "properties": {
+        "entity_id": { "$ref": "#/$defs/trusted_observed_stable_id" },
+        "process_type": { "$ref": "#/$defs/observed_process_type" },
+        "source_entity_id": { "$ref": "#/$defs/observed_stable_id" },
+        "target_entity_id": { "$ref": "#/$defs/observed_stable_id" },
+        "target_position_m": { "$ref": "#/$defs/observed_vector3" },
+        "started_monotonic_ms": { "$ref": "#/$defs/observed_nonnegative_integer" },
+        "phase": { "$ref": "#/$defs/observed_enum" },
+        "end_reason": { "$ref": "#/$defs/observed_enum" },
+        "position_m": { "$ref": "#/$defs/observed_vector3" },
+        "asset_semantic": { "$ref": "#/$defs/observed_string" }
+      }
+    },
+    "object": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entity_id", "object_type"],
+      "properties": {
+        "entity_id": { "$ref": "#/$defs/trusted_observed_stable_id" },
+        "object_type": { "$ref": "#/$defs/observed_object_type" },
+        "position_m": { "$ref": "#/$defs/observed_vector3" },
+        "available": { "$ref": "#/$defs/observed_boolean" },
+        "acquired": { "$ref": "#/$defs/observed_boolean" },
+        "asset_semantic": { "$ref": "#/$defs/observed_string" }
+      }
+    },
+    "ui": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["entity_id", "semantic_role"],
+      "properties": {
+        "entity_id": { "$ref": "#/$defs/trusted_observed_stable_id" },
+        "semantic_role": { "$ref": "#/$defs/observed_ui_role" },
+        "text": { "$ref": "#/$defs/observed_string" },
+        "icon_semantic": { "$ref": "#/$defs/observed_string" },
+        "client_rect": { "$ref": "#/$defs/observed_rect" },
+        "visible": { "$ref": "#/$defs/observed_boolean" },
+        "opacity": {
+          "allOf": [
+            { "$ref": "#/$defs/observed_nonnegative_number" },
+            { "properties": { "value": { "type": ["number", "null"], "maximum": 1 } } }
+          ]
+        },
+        "clipped": { "$ref": "#/$defs/observed_boolean" },
+        "occluded": { "$ref": "#/$defs/observed_boolean" },
+        "topmost_hit_target": { "$ref": "#/$defs/observed_boolean" }
+      }
+    },
+    "unreal_virtual_package": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 1024,
+      "pattern": "^/[A-Za-z0-9_][A-Za-z0-9_-]*(?:/[A-Za-z0-9_][A-Za-z0-9_-]*)+$"
+    },
+    "unreal_virtual_object": {
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 1152,
+      "pattern": "^/[A-Za-z0-9_][A-Za-z0-9_-]*(?:/[A-Za-z0-9_][A-Za-z0-9_-]*)+\\.[A-Za-z0-9_][A-Za-z0-9_-]*$"
+    },
+    "asset_binding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["slot", "candidate_object_path", "candidate_package", "candidate_asset_class"],
+      "properties": {
+        "slot": { "enum": ["skeletal_mesh", "skeleton", "animation", "static_mesh", "material"] },
+        "candidate_object_path": { "$ref": "#/$defs/unreal_virtual_object" },
+        "candidate_package": { "$ref": "#/$defs/unreal_virtual_package" },
+        "candidate_asset_class": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[A-Za-z][A-Za-z0-9_]*$"
+        }
+      }
+    },
+    "asset_binding_claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["claim_id", "runtime_state", "actor_instance_id", "component_instance_id", "visible", "bindings"],
+      "properties": {
+        "claim_id": { "$ref": "#/$defs/stable_id" },
+        "runtime_state": { "$ref": "#/$defs/stable_id" },
+        "actor_instance_id": { "$ref": "#/$defs/stable_id" },
+        "component_instance_id": { "$ref": "#/$defs/stable_id" },
+        "visible": { "const": true },
+        "bindings": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 16,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/asset_binding" }
+        }
+      }
+    },
+    "semantic_action": {
+      "enum": [
+        "move_forward", "move_backward", "move_left", "move_right", "jump", "sprint",
+        "primary_attack", "black_hole", "teleport", "interact", "restart"
+      ]
+    },
+    "activation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "operation", "physical_control", "mouse_button", "target_id"],
+      "properties": {
+        "kind": { "enum": ["keyboard", "mouse"] },
+        "operation": { "enum": ["Press", "Hold", "Click"] },
+        "physical_control": { "oneOf": [{ "$ref": "#/$defs/stable_id" }, { "type": "null" }] },
+        "mouse_button": { "enum": ["left", "right", "middle", null] },
+        "target_id": { "oneOf": [{ "$ref": "#/$defs/stable_id" }, { "type": "null" }] }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "kind": { "const": "keyboard" } }, "required": ["kind"] },
+          "then": {
+            "properties": {
+              "operation": { "enum": ["Press", "Hold"] },
+              "physical_control": { "$ref": "#/$defs/stable_id" },
+              "mouse_button": { "type": "null" },
+              "target_id": { "type": "null" }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "kind": { "const": "mouse" } }, "required": ["kind"] },
+          "then": {
+            "properties": {
+              "operation": { "const": "Click" },
+              "physical_control": { "type": "null" },
+              "mouse_button": { "enum": ["left", "right", "middle"] },
+              "target_id": { "$ref": "#/$defs/stable_id" }
+            }
+          }
+        }
+      ]
+    },
+    "control": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["semantic_action", "discovery_source", "activation", "observation"],
+      "properties": {
+        "semantic_action": { "$ref": "#/$defs/semantic_action" },
+        "discovery_source": { "enum": ["public_input_mapping", "current_visible_candidate_feedback"] },
+        "activation": { "$ref": "#/$defs/activation" },
+        "observation": { "$ref": "#/$defs/trusted_record_observation" }
+      }
+    },
+    "public_target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "entity_id", "semantic_role", "bounds_normalized", "visible", "enabled", "topmost_hit_target", "activation", "observation"
+      ],
+      "properties": {
+        "entity_id": { "$ref": "#/$defs/stable_id" },
+        "semantic_role": { "type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[a-z][a-z0-9_]*$" },
+        "bounds_normalized": { "$ref": "#/$defs/normalized_rect" },
+        "visible": { "type": "boolean" },
+        "enabled": { "type": "boolean" },
+        "topmost_hit_target": { "type": "boolean" },
+        "activation": { "oneOf": [{ "$ref": "#/$defs/activation" }, { "type": "null" }] },
+        "observation": { "$ref": "#/$defs/trusted_record_observation" }
+      }
+    }
+  }
+}

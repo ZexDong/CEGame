@@ -1,0 +1,998 @@
+{
+  "schema_version": 1,
+  "evaluator_revision": "2026.09.24-noir-public-session-r9.12-runtime-log-isolation",
+  "game": "unity_noir_roombreak_docv2_hard",
+  "naming_tables": "../input/NAMING_TABLES.json",
+  "player_runtime_min_version": "0.1",
+  "controls_from_naming_tables": true,
+  "trajectories": [
+    {
+      "id": "legacy_menu_movement",
+      "title": "Legacy adapter: menu, start, movement, HUD",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 15,
+          "cond": "phase == menu"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 10,
+          "cond": "phase == playing"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "A"
+        },
+        {
+          "do": "hold",
+          "key": "A",
+          "seconds": 0.22
+        },
+        {
+          "do": "press",
+          "key": "Space"
+        },
+        {
+          "do": "hold",
+          "key": "A",
+          "seconds": 1.1
+        },
+        {
+          "do": "hold",
+          "key": "D",
+          "seconds": 0.3
+        },
+        {
+          "do": "hold",
+          "key": "A",
+          "seconds": 4.5
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "check": {
+            "id": "D2_MENU",
+            "source": "gdd:FLOW-01",
+            "dim": "D2",
+            "assert": "the d2 menu observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D2_MOVE_JUMP",
+            "source": "gdd:MOVE-01",
+            "dim": "D2",
+            "assert": "the d2 move jump observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D2_UI_STATES",
+            "source": "gdd:UI-01",
+            "dim": "D2",
+            "assert": "the d2 ui states observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D2_AV_ASSEMBLY",
+            "source": "gdd:AV-01",
+            "dim": "D2",
+            "assert": "the d2 av assembly observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_INITIAL_STATE",
+            "source": "gdd:FLOW-01",
+            "dim": "D3",
+            "assert": "the d3 initial state observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_MOVE_COLLISION",
+            "source": "gdd:MOVE-01",
+            "dim": "D3",
+            "assert": "the d3 move collision observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D4_START",
+            "source": "gdd:FLOW-01",
+            "dim": "D4",
+            "assert": "the d4 start observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D5_MENU_CONTROLS",
+            "source": "gdd:FLOW-01",
+            "dim": "D5",
+            "assert": "the d5 menu controls observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D5_HUD",
+            "source": "gdd:UI-01",
+            "dim": "D5",
+            "assert": "the d5 hud observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D5_AUDIO_VISUAL_FEEDBACK",
+            "source": "gdd:AV-01",
+            "dim": "D5",
+            "assert": "the d5 audio visual feedback observation satisfies its mapped public requirement under normal player input"
+          }
+        }
+      ]
+    },
+    {
+      "id": "legacy_anda_backstab",
+      "title": "Legacy adapter: Anda and backstab",
+      "clean_start": "restart",
+      "steps": [
+        {
+          "do": "restart"
+        },
+        {
+          "do": "move_away",
+          "timeout_s": 10,
+          "target": {
+            "kind": "anda",
+            "state": "patrol"
+          }
+        },
+        {
+          "do": "press",
+          "key": "C"
+        },
+        {
+          "do": "move_toward",
+          "timeout_s": 10,
+          "target": {
+            "kind": "anda",
+            "state": "patrol"
+          }
+        },
+        {
+          "do": "press",
+          "key": "Space"
+        },
+        {
+          "do": "hold",
+          "key": "D",
+          "seconds": 1
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 5,
+          "cond": "exists(kind=anda,state=alert) then exists(kind=anda,state=chase)"
+        },
+        {
+          "do": "press",
+          "key": "C"
+        },
+        {
+          "do": "restart"
+        },
+        {
+          "do": "press",
+          "key": "Z"
+        },
+        {
+          "do": "move_toward",
+          "timeout_s": 10,
+          "target": {
+            "kind": "anda",
+            "state": "patrol"
+          }
+        },
+        {
+          "do": "press",
+          "key": "C"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "check": {
+            "id": "D2_BACKSTAB",
+            "source": "gdd:COMBAT-01",
+            "dim": "D2",
+            "assert": "the d2 backstab observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D2_ANDA",
+            "source": "gdd:ANDA-01",
+            "dim": "D2",
+            "assert": "the d2 anda observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_BACKSTAB_BOUNDARY",
+            "source": "gdd:COMBAT-01",
+            "dim": "D3",
+            "assert": "the d3 backstab boundary observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_BACKSTAB_CHARGE",
+            "source": "gdd:COMBAT-01",
+            "dim": "D3",
+            "assert": "the d3 backstab charge observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_ANDA_TRANSITIONS",
+            "source": "gdd:ANDA-01",
+            "dim": "D3",
+            "assert": "the d3 anda transitions observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D5_MOVEMENT_COMBAT",
+            "source": "gdd:MOVE-01",
+            "dim": "D5",
+            "assert": "the d5 movement combat observation satisfies its mapped public requirement under normal player input"
+          }
+        }
+      ]
+    },
+    {
+      "id": "legacy_dash_damage",
+      "title": "Legacy adapter: dash, damage, boundary",
+      "clean_start": "restart",
+      "steps": [
+        {
+          "do": "restart"
+        },
+        {
+          "do": "press",
+          "key": "Z"
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 3,
+          "cond": "slots.player_dashing == 0"
+        },
+        {
+          "do": "restart"
+        },
+        {
+          "do": "hold",
+          "key": "A",
+          "seconds": 0.45
+        },
+        {
+          "do": "press",
+          "key": "Z",
+          "repeat": 3,
+          "direction": "left-wall"
+        },
+        {
+          "do": "press",
+          "key": "Z",
+          "expected": "rejected_no_side_effect"
+        },
+        {
+          "do": "move_toward",
+          "timeout_s": 30,
+          "target": {
+            "kind": "anda"
+          }
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 8,
+          "cond": "slots.player_alive == 0 before one respawn increment"
+        },
+        {
+          "do": "press",
+          "key": "Z",
+          "expected": "invulnerable_near_live_threat"
+        },
+        {
+          "check": {
+            "id": "D2_DASH",
+            "source": "gdd:DASH-01",
+            "dim": "D2",
+            "assert": "the d2 dash observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D2_LETHAL_DAMAGE",
+            "source": "gdd:DAMAGE-01",
+            "dim": "D2",
+            "assert": "the d2 lethal damage observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_DASH_COST",
+            "source": "gdd:DASH-01",
+            "dim": "D3",
+            "assert": "the d3 dash cost observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_ZERO_DASH_REJECT",
+            "source": "gdd:DASH-01",
+            "dim": "D3",
+            "assert": "the d3 zero dash reject observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_DASH_INVULNERABILITY",
+            "source": "gdd:DASH-01",
+            "dim": "D3",
+            "assert": "the d3 dash invulnerability observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_ONE_HIT_DEATH",
+            "source": "gdd:DAMAGE-01",
+            "dim": "D3",
+            "assert": "the d3 one hit death observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D5_DASH_FEEDBACK",
+            "source": "gdd:DASH-01",
+            "dim": "D5",
+            "assert": "the d5 dash feedback observation satisfies its mapped public requirement under normal player input"
+          }
+        }
+      ]
+    },
+    {
+      "id": "legacy_obser_camera_pause",
+      "title": "Legacy adapter: Obser, camera, pause",
+      "clean_start": "restart",
+      "steps": [
+        {
+          "do": "restart"
+        },
+        {
+          "do": "move_toward",
+          "timeout_s": 50,
+          "target": {
+            "kind": "obser"
+          }
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 15,
+          "cond": "slots.obser_lock_visible == 1"
+        },
+        {
+          "do": "press",
+          "key": "Escape"
+        },
+        {
+          "do": "press",
+          "key": "Escape"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "check": {
+            "id": "D2_OBSER",
+            "source": "gdd:OBSER-01",
+            "dim": "D2",
+            "assert": "the d2 obser observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D2_ROOM_CAMERA",
+            "source": "gdd:CAMERA-01",
+            "dim": "D2",
+            "assert": "the d2 room camera observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D2_PAUSE",
+            "source": "gdd:PAUSE-01",
+            "dim": "D2",
+            "assert": "the d2 pause observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_OBSER_WARNING_ORDER",
+            "source": "gdd:OBSER-01",
+            "dim": "D3",
+            "assert": "the d3 obser warning order observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_CAMERA_BOUNDARY",
+            "source": "gdd:CAMERA-01",
+            "dim": "D3",
+            "assert": "the d3 camera boundary observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_PAUSE_FREEZE",
+            "source": "gdd:PAUSE-01",
+            "dim": "D3",
+            "assert": "the d3 pause freeze observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D4_PAUSE_RESUME",
+            "source": "gdd:PAUSE-01",
+            "dim": "D4",
+            "assert": "the d4 pause resume observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D5_ENEMY_WARNINGS",
+            "source": "gdd:ANDA-01",
+            "dim": "D5",
+            "assert": "the d5 enemy warnings observation satisfies its mapped public requirement under normal player input"
+          }
+        }
+      ]
+    },
+    {
+      "id": "legacy_respawn",
+      "title": "Legacy adapter: soft/global respawn",
+      "clean_start": "restart",
+      "steps": [
+        {
+          "do": "restart"
+        },
+        {
+          "do": "move_toward",
+          "timeout_s": 30,
+          "target": {
+            "kind": "anda"
+          }
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 20,
+          "cond": "slots.soft_respawn_count > 0"
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 60,
+          "cond": "slots.global_respawn_count > 0"
+        },
+        {
+          "check": {
+            "id": "D2_SOFT_RESPAWN",
+            "source": "gdd:RESPAWN-01",
+            "dim": "D2",
+            "assert": "the d2 soft respawn observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D2_GLOBAL_RESPAWN",
+            "source": "gdd:RESPAWN-01",
+            "dim": "D2",
+            "assert": "the d2 global respawn observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_SOFT_RESPAWN_RULES",
+            "source": "gdd:RESPAWN-01",
+            "dim": "D3",
+            "assert": "the d3 soft respawn rules observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_GLOBAL_RESPAWN_RULES",
+            "source": "gdd:RESPAWN-01",
+            "dim": "D3",
+            "assert": "the d3 global respawn rules observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D4_DEATH_RECOVERY",
+            "source": "gdd:DAMAGE-01",
+            "dim": "D4",
+            "assert": "the d4 death recovery observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D5_DEATH_RESPAWN",
+            "source": "gdd:DAMAGE-01",
+            "dim": "D5",
+            "assert": "the d5 death respawn observation satisfies its mapped public requirement under normal player input"
+          }
+        }
+      ]
+    },
+    {
+      "id": "legacy_complete_journey",
+      "title": "Legacy adapter: complete journey and restart",
+      "clean_start": "restart",
+      "steps": [
+        {
+          "do": "restart"
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 120,
+          "cond": "slots.room_index == 4"
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 120,
+          "cond": "phase == won"
+        },
+        {
+          "do": "restart"
+        },
+        {
+          "check": {
+            "id": "D2_FIVE_ROOMS",
+            "source": "gdd:WORLD-01",
+            "dim": "D2",
+            "assert": "the d2 five rooms observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D2_SUCCESS",
+            "source": "gdd:SUCCESS-01",
+            "dim": "D2",
+            "assert": "the d2 success observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_SUCCESS_CONDITION",
+            "source": "gdd:SUCCESS-01",
+            "dim": "D3",
+            "assert": "the d3 success condition observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_RESTART_CLEAN",
+            "source": "gdd:RESTART-01",
+            "dim": "D3",
+            "assert": "the d3 restart clean observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D4_ROOM_PROGRESSION",
+            "source": "gdd:WORLD-01",
+            "dim": "D4",
+            "assert": "the d4 room progression observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D4_COMPLETE_JOURNEY",
+            "source": "gdd:FLOW-01",
+            "dim": "D4",
+            "assert": "the d4 complete journey observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D4_RESTART_ACTIVE",
+            "source": "gdd:RESTART-01",
+            "dim": "D4",
+            "assert": "the d4 restart active observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D4_RESTART_PAUSED_SUCCESS",
+            "source": "gdd:RESTART-01",
+            "dim": "D4",
+            "assert": "the d4 restart paused success observation satisfies its mapped public requirement under normal player input"
+          }
+        },
+        {
+          "check": {
+            "id": "D5_PAUSE_SUCCESS",
+            "source": "gdd:PAUSE-01",
+            "dim": "D5",
+            "assert": "the d5 pause success observation satisfies its mapped public requirement under normal player input"
+          }
+        }
+      ]
+    },
+    {
+      "id": "v2_dashboard_input_edges",
+      "title": "V2: Dashboard cross-check and input edges",
+      "clean_start": "restart",
+      "steps": [
+        {
+          "do": "restart"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "I0"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "press",
+          "key": "C",
+          "expected": "rejected_feedback_without_world_side_effect"
+        },
+        {
+          "do": "press",
+          "key": "Z",
+          "expected": "exactly_one_charge_consumed"
+        },
+        {
+          "do": "restart"
+        },
+        {
+          "do": "hold",
+          "key": "A",
+          "seconds": 0.45
+        },
+        {
+          "do": "press",
+          "key": "Z",
+          "repeat": 3,
+          "direction": "left-wall"
+        },
+        {
+          "do": "press",
+          "key": "Z",
+          "expected": "zero_charge_rejected"
+        },
+        {
+          "do": "restart",
+          "repeat": 2,
+          "precondition": "dirty_run"
+        },
+        {
+          "do": "press",
+          "key": "Z",
+          "expected": "input_still_reusable"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "I1"
+        },
+        {
+          "check": {
+            "id": "D2_INPUT_EDGE_MODEL",
+            "source": "gdd:INPUT-EDGE-01",
+            "dim": "D2",
+            "assert": "one physical key press or pointer click produces at most one matching intent"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_ONE_PRESS_ONE_INTENT",
+            "source": "gdd:INPUT-EDGE-01",
+            "dim": "D3",
+            "assert": "one Z press consumes exactly one dash charge and does not retrigger without another press"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_REJECTED_ACTION_SIDE_EFFECT_FREE",
+            "source": "gdd:INPUT-EDGE-01",
+            "dim": "D3",
+            "assert": "a zero-charge dash leaves room, bonds, charges, defeats, respawns, terminal phase, and player position unchanged"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_INPUT_REUSABLE_AFTER_RESTARTS",
+            "source": "gdd:INPUT-EDGE-01",
+            "dim": "D3",
+            "assert": "after two dirty Restarts, one later Z press still produces exactly one dash intent"
+          }
+        },
+        {
+          "check": {
+            "id": "D4_INPUT_LIFECYCLE_STABILITY",
+            "source": "gdd:INPUT-EDGE-01",
+            "dim": "D4",
+            "assert": "two dirty Restart cycles return to the clean menu and preserve the one-input/one-intent rule"
+          }
+        },
+        {
+          "check": {
+            "id": "D5_INPUT_REJECTION_FEEDBACK",
+            "source": "gdd:INPUT-EDGE-01",
+            "dim": "D5",
+            "assert": "a rejected zero-charge dash or invalid backstab changes no gameplay state and gives understandable feedback"
+          }
+        },
+        {
+          "check": {
+            "id": "D5_DASHBOARD_VISIBLE_AGREEMENT",
+            "source": "gdd:UI-01",
+            "dim": "D5",
+            "assert": "Dashboard phase, slots, targets, player and visible enemies agree with Probe and rendered state"
+          }
+        }
+      ]
+    },
+    {
+      "id": "v2_timed_pause",
+      "title": "V2: live timed-threat pause",
+      "clean_start": "restart",
+      "steps": [
+        {
+          "do": "restart"
+        },
+        {
+          "do": "move_toward",
+          "timeout_s": 50,
+          "target": {
+            "kind": "obser"
+          }
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 20,
+          "cond": "slots.obser_lock_visible == 1 || slots.player_dashing == 1"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "P0"
+        },
+        {
+          "do": "press",
+          "key": "Escape"
+        },
+        {
+          "do": "hold",
+          "key": "Z",
+          "seconds": 1.1
+        },
+        {
+          "do": "snapshot",
+          "save_as": "P1"
+        },
+        {
+          "do": "press",
+          "key": "Escape"
+        },
+        {
+          "check": {
+            "id": "D2_TIMED_PAUSE",
+            "source": "gdd:PAUSE-TIME-01",
+            "dim": "D2",
+            "assert": "a timed dash or Obser warning can be paused and resumed through normal Escape input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_PAUSE_UNSCALED_FREEZE",
+            "source": "gdd:PAUSE-TIME-01",
+            "dim": "D3",
+            "assert": "for at least 1.0 seconds unscaled wall time, paused phase and timed threat/player/resource state remain unchanged"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_PAUSE_NO_BUFFER",
+            "source": "gdd:PAUSE-TIME-01",
+            "dim": "D3",
+            "assert": "actions pressed during pause cause no cost, movement, damage, kill, or deferred action after resume"
+          }
+        },
+        {
+          "check": {
+            "id": "D4_TIMED_THREAT_PAUSE_RESUME",
+            "source": "gdd:PAUSE-TIME-01",
+            "dim": "D4",
+            "assert": "resume continues the same run and the remaining timed threat interval without reset or skip"
+          }
+        }
+      ]
+    },
+    {
+      "id": "v2_mixed_final_gate",
+      "title": "V2: concurrent mixed encounter and final gate",
+      "clean_start": "restart",
+      "steps": [
+        {
+          "do": "restart"
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 120,
+          "cond": "slots.room_index >= 3"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "M0"
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 20,
+          "cond": "exists(kind=anda) && exists(kind=obser)"
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 20,
+          "cond": "slots.obser_lock_visible == 1 || slots.obser_laser_visible == 1"
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 60,
+          "cond": "slots.room_index == 4"
+        },
+        {
+          "do": "press",
+          "key": "C",
+          "repeat": "until all visible anda in room 5 are defeated"
+        },
+        {
+          "do": "hold",
+          "key": "D",
+          "seconds": 5,
+          "expected": "final exit remains blocked while obser lives"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "M1"
+        },
+        {
+          "do": "press",
+          "key": "Z",
+          "expected": "defeat remaining obser by normal play"
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 60,
+          "cond": "phase == won"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "check": {
+            "id": "D2_MIXED_ENCOUNTER",
+            "source": "gdd:MIXED-01",
+            "dim": "D2",
+            "assert": "Room 4 or 5 contains a live Anda and a live Obser concurrently"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_MIXED_CONCURRENT_THREATS",
+            "source": "gdd:MIXED-01",
+            "dim": "D3",
+            "assert": "both required enemy kinds are simultaneously present and active in the mixed room"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_MIXED_EXIT_LOCK",
+            "source": "gdd:MIXED-01",
+            "dim": "D3",
+            "assert": "Room 5 cannot reach won while either required final enemy kind remains alive"
+          }
+        },
+        {
+          "check": {
+            "id": "D3_MIXED_CROSS_THREAT_WINDOW",
+            "source": "gdd:MIXED-01",
+            "dim": "D3",
+            "assert": "Obser locking/firing is observed while an Anda in the same room is still alive"
+          }
+        },
+        {
+          "check": {
+            "id": "D4_MIXED_SUCCESS_FLOW",
+            "source": "gdd:MIXED-01",
+            "dim": "D4",
+            "assert": "normal input defeats both final enemy kinds in either order and only then reaches won"
+          }
+        },
+        {
+          "check": {
+            "id": "D5_MIXED_THREAT_FEEDBACK",
+            "source": "gdd:MIXED-01",
+            "dim": "D5",
+            "assert": "both threat states, blocked exit, and eventual completion are player-readable"
+          }
+        }
+      ]
+    },
+    {
+      "id": "v2_fresh_reopen",
+      "title": "V2 lifecycle: genuine reopen",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "reopen"
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 15,
+          "cond": "phase == menu"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "start_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "timeout_s": 10,
+          "cond": "phase == playing && slots.room_index == 0"
+        },
+        {
+          "check": {
+            "id": "D4_REOPEN",
+            "source": "gdd:REOPEN-01",
+            "dim": "D4",
+            "assert": "a different process ID opens at the clean menu and starts a clean Room 1"
+          }
+        }
+      ]
+    }
+  ],
+  "status": "manifest_only",
+  "role": "migration_shadow",
+  "executed_by_runner": false,
+  "scoring_authority": false,
+  "known_limitations": [
+    "The current runner does not load or interpret this file.",
+    "The current script contains migration-era free-form predicates and unsupported fields.",
+    "All scored dynamic behavior is executed by package-v2 handwritten C# sidecars until a generic player is separately qualified.",
+    "The formal D6 image is captured by a separate headful standalone two-layer composite sidecar; batch Camera.Render images are diagnostic only and this manifest does not execute that sidecar."
+  ],
+  "d6_capture": {
+    "route": "headful-standalone-two-layer-internal-composite",
+    "state": "initial_gameplay",
+    "required_rounds": 1,
+    "executed_by_checkpoint_runner": false,
+    "batch_camera_render_formal": false
+  }
+}

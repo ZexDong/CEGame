@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "task_id": "motaro_drive_procedural_reconstruction",
+  "status": "complete",
+  "supplied": [],
+  "procedural": [
+    "car",
+    "terrain",
+    "sky",
+    "weather",
+    "coin",
+    "gem",
+    "cone",
+    "enemy",
+    "boost_pad",
+    "spring",
+    "moving_platform",
+    "shield",
+    "magnet",
+    "goal",
+    "hud",
+    "menus",
+    "result_overlays"
+  ],
+  "missing": []
+}

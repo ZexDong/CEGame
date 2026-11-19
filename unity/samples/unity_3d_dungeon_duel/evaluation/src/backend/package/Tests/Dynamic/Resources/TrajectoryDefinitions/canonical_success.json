@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "id": "canonical_success",
+  "title": "Move, defeat both Imps, open the gate, Dash, defeat the Boss, click visible Restart, and move again",
+  "steps": [
+    {
+      "step_id": "setup",
+      "operation": "load_clean_canonical_scene",
+      "target": "CanonicalSuccess",
+      "check_ids": [
+        "setup.scene",
+        "setup.submission_probe",
+        "setup.submission_probe.version",
+        "setup.semantic_discovery",
+        "setup.clean_start",
+        "setup.world_target.MoveTargetA",
+        "setup.world_target.MoveTargetB",
+        "setup.world_target.DashTarget",
+        "setup.world_target.separation"
+      ]
+    },
+    {
+      "step_id": "initial",
+      "operation": "observe",
+      "target": "initial encounter",
+      "check_ids": [
+        "canonical.initial.playing",
+        "canonical.initial.gate_locked",
+        "canonical.initial.imps_alive",
+        "canonical.initial.boss_presented",
+        "canonical.initial.dash_ready",
+        "canonical.initial.audio.battle_loop",
+        "canonical.initial.feedback_surface",
+        "canonical.initial.hud_semantics"
+      ]
+    },
+    {
+      "step_id": "move",
+      "operation": "virtual_mouse_left",
+      "target": "MoveTargetA",
+      "check_ids": [
+        "canonical.move.input.route",
+        "canonical.move.reached"
+      ]
+    },
+    {
+      "step_id": "imp_a",
+      "operation": "virtual_mouse_right",
+      "target": "ImpA",
+      "check_ids": [
+        "canonical.imp_a.input.route",
+        "canonical.imp_a.dead",
+        "canonical.after_imp_a.gate_closed",
+        "canonical.after_imp_a.gate_blocking",
+        "canonical.after_imp_a.boss_dormant",
+        "canonical.after_imp_a.hud_semantics"
+      ]
+    },
+    {
+      "step_id": "imp_b",
+      "operation": "virtual_mouse_right",
+      "target": "ImpB",
+      "check_ids": [
+        "canonical.imp_b.input.route",
+        "canonical.imp_b.dead",
+        "canonical.gate.open",
+        "canonical.boss.active",
+        "canonical.gate.hud_semantics"
+      ]
+    },
+    {
+      "step_id": "dash_pointer",
+      "operation": "virtual_mouse_move",
+      "target": "Boss",
+      "check_ids": [
+        "canonical.pointer.route"
+      ]
+    },
+    {
+      "step_id": "dash_key",
+      "operation": "virtual_keyboard_2",
+      "target": "Boss",
+      "check_ids": [
+        "canonical.dash.input.route",
+        "canonical.dash.displacement",
+        "canonical.dash.cooldown",
+        "canonical.dash.hud_semantics"
+      ]
+    },
+    {
+      "step_id": "boss_attack",
+      "operation": "virtual_mouse_right",
+      "target": "Boss",
+      "check_ids": [
+        "canonical.boss.input.route",
+        "canonical.victory.reached",
+        "canonical.victory.audio.transition",
+        "canonical.victory.feedback_surface",
+        "canonical.victory.hud_semantics"
+      ]
+    },
+    {
+      "step_id": "terminal_probe",
+      "operation": "virtual_mouse_left",
+      "target": "MoveTargetB",
+      "check_ids": [
+        "canonical.terminal.input.route",
+        "canonical.terminal.freeze"
+      ]
+    },
+    {
+      "step_id": "restart_ui",
+      "operation": "virtual_mouse_left",
+      "target": "visible behaviorally operable Restart control",
+      "check_ids": [
+        "canonical.restart.control.visible",
+        "canonical.restart.control.top_hit",
+        "canonical.restart.input.route",
+        "canonical.restart.semantic_reloaded",
+        "canonical.restart.semantic_reloaded.world_target.MoveTargetA",
+        "canonical.restart.semantic_reloaded.world_target.MoveTargetB",
+        "canonical.restart.semantic_reloaded.world_target.DashTarget",
+        "canonical.restart.semantic_reloaded.world_target.separation",
+        "canonical.restart.initial",
+        "canonical.restart.audio.restored",
+        "canonical.restart.audio.no_duplicate",
+        "canonical.restart.feedback_surface",
+        "canonical.restart.hud_semantics"
+      ]
+    },
+    {
+      "step_id": "restart_move",
+      "operation": "virtual_mouse_left",
+      "target": "MoveTargetA",
+      "check_ids": [
+        "canonical.restart.move.input.route",
+        "canonical.restart.move.reached"
+      ]
+    }
+  ]
+}
+
+

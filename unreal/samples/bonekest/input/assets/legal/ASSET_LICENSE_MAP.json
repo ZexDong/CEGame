@@ -1,0 +1,1379 @@
+{
+  "files": [
+    {
+      "path": "starter-project/Content/Doors/SM_Ring.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Effects/GhostEffect/FX_GhostSmoke.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Effects/GhostEffect/MI_Pickups_Coin.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Effects/GhostEffect/MI_Pickups_KeyBlue.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Effects/GhostEffect/MI_Pickups_KeyGreen.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Effects/GhostEffect/MI_Pickups_KeyRed.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Effects/GhostEffect/MI_Pickups_Magic.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Effects/GhostEffect/M_Pickups.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Effects/GhostEffect/Mat_FX.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Effects/GhostEffect/SM_Particle_Smoke_01.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Effects/MF_PSXEffect.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Effects/MPC_PSXEffect.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Effects/M_PS1_PostProcess.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Effects/M_PS1_PostProcess_Inst.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/MI_ky_aura011_4x4.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/MI_ky_aura011_4x4_nonD.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/MI_ky_auraWall02_two.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/MI_ky_chantDecoAc.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/MI_ky_circle9_4x4c2.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/MI_ky_circleDust.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/MI_ky_flare_flash_trs.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/MI_ky_lightning02_4x4.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/MI_ky_lightningDust01_4x4_nonD.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/MI_ky_primitive_dynB_nonD.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/MI_ky_shine01R_nonD.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/MI_ky_starDust_dis.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/MI_ky_storm01_nonD.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/MI_ky_turbulence_smoke2d_trs.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/MI_ky_vortex04B_4x4_two.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_Fresnel.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_auraWall02.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_base.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_base_anime.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_base_turbulence.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_chantDecoA.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_circle01_4x4G_nonD.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_dust01_4x4.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_empty.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_flare01_primitive.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_flare_flash.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_magicCircle020.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_primitive_dyn2.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_starDust.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_stone02.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_storm01.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_stormDeco01.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_subUV01.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_subUV_dynRGB.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/M_ky_vortex04_4x4.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/Mfunction/MF_ky_AddHilight.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/Mfunction/MF_ky_MaskToTopUnder.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/Mfunction/MF_ky_TexController.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/Mfunction/MF_ky_TexController_primitive.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/Mfunction/MF_ky_UVcontrol_4x4.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Materials/Mfunction/MF_ky_VectorToRadialValue.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Meshes/SM_ky_auraWall_distB_kai.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Meshes/SM_ky_circleDist06.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Meshes/SM_ky_cylinderBend07.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Meshes/SM_ky_cylinder_lowPoly_dist.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Meshes/SM_ky_cylinder_superLow.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Meshes/SM_ky_quad_centerRot.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Meshes/SM_ky_tornado07.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Particles/P_ky_healAura.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Particles/P_ky_lightning1.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Particles/P_ky_lightning2.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Particles/P_ky_magicCircle1.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Particles/P_ky_storm.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_aura011_4x4.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_auraWallWhite_4x4.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_bg.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_bg_LC.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_chantDecoC.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_circle01_4x4.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_circle9_4x4.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_circleDust.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_dist_noise.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_dust01_4x4.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_dust_longStar.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_flareVertical02.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_flare_a.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_lightning02_4x4.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_lightningDust01_4x4.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_magicCircle020.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_maskCircle.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_maskRGB3.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_noise.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_noise13_sml_nor.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_noise17.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_noise4.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_noise5.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_noise6.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_shine01_4x4.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_smoke03.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_smoke_kai.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_stone02_2x2.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/FXVarietyPack/Textures/T_ky_vortex04_4x4.uasset",
+      "group": "fx_variety",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/InfinityBladeAdversaries/Enemy/Enemy_Greater_Spider_Boss/Enemy_SpiderBoss_Cine_Animation/ExoGame_Greater_Spider_Cine_Finale.uasset",
+      "group": "infinity_blade_adversaries",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/InfinityBladeAdversaries/Enemy/Enemy_Greater_Spider_Boss/Materials/CharM_Greater_Spider_BossFire.uasset",
+      "group": "infinity_blade_adversaries",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/InfinityBladeAdversaries/Enemy/Enemy_Greater_Spider_Boss/SK_Greater_Spider_Boss_Cine.uasset",
+      "group": "infinity_blade_adversaries",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/InfinityBladeAdversaries/Enemy/Enemy_Greater_Spider_Boss/SK_Greater_Spider_Boss_Cine_Skeleton.uasset",
+      "group": "infinity_blade_adversaries",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/InfinityBladeAdversaries/Enemy/Enemy_Greater_Spider_Boss/Textures/T_Enemy_SpiderBoss_E.uasset",
+      "group": "infinity_blade_adversaries",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/InfinityBladeAdversaries/Enemy/Enemy_Greater_Spider_Boss/Textures/T_Enemy_SpiderBoss_Fire_D.uasset",
+      "group": "infinity_blade_adversaries",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/InfinityBladeAdversaries/Enemy/Enemy_Greater_Spider_Boss/Textures/T_Enemy_SpiderBoss_Fire_M.uasset",
+      "group": "infinity_blade_adversaries",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/InfinityBladeAdversaries/Enemy/Enemy_Greater_Spider_Boss/Textures/T_Enemy_SpiderBoss_Fire_N.uasset",
+      "group": "infinity_blade_adversaries",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Pickups/Assets/SM_Coin.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Pickups/Assets/SM_Heart.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Pickups/Assets/SM_Key.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Blast.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Charge_Attack.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Default_Attack.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Die.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Hit_Back.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Hit_Front.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Hit_Left.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Hit_Right.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Idle_Loop.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Jump.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Rapid_Fire_Loop.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Roar.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Run_Loop.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Shuffle_Left_Loop.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Shuffle_Right_Loop.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Spawn.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Strafe_Left_Loop.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Strafe_Right_Loop.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Summon.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Animations/A_PlayerCharacter_Wall.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Character/PHYS_PlayerCharacter.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Character/SKEL_PlayerCharacter.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Character/SK_PlayerCharacter.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Materials/M_PlayerCharacter.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Materials/M_PlayerCharacter_RGB.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Materials/T_PlayerCharacter_E.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/PlayerCharacter/Materials/T_PlayercCharacter_D.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Materials/Mat_SimpleDungeons.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Materials/Mat_SimpleDungeons_DustParticle.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Materials/Mat_SimpleDungeons_LavaGlow.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/EnvParts/SM_Env_Door_Main_03.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/EnvParts/SM_Env_PrisonCell_Door_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Alter_Evil_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Door_03.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Doorway_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Floor_Stone_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Floor_Stone_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Floor_Stone_03.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Floor_Stone_Broken_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Floor_Stone_Broken_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Floor_Stone_Broken_03.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Floor_Stone_Broken_04.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Floor_Stone_Broken_05.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Floor_Stone_ClearEdge_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Floor_Stone_ClearEdge_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Floor_Stone_ClearEdge_03.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Pillar_Stone_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Pillar_Stone_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Pillar_Stone_03.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Pillar_Stone_Broken_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Pillar_Stone_Broken_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Pillar_Stone_Broken_03.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Pit_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_PrisonCell_DoorFrame_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_PrisonCell_Wall_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Railing_Stone_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Railing_Stone_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Railing_Stone_Pillar_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Railing_Stone_Pillar_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Railing_Wood_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Railing_Wood_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_StoneCircle_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Undead_Floor_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Undead_Floor_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Undead_Floor_03.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Undead_Floor_04.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Undead_Pillar_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Undead_Pillar_Broken_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Undead_Wall_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Undead_Wall_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Undead_Wall_03.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Wall_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Wall_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Wall_Half_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Environment/SM_Env_Wall_Half_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/PropParts/SM_Prop_Lever_Floor_Handle_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/PropParts/SM_Prop_Lever_Wall_Handle_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/PropParts/SM_Prop_Stone_Coffin_Lid_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_AlchemyTable_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Alter_Good_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Banner_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Banner_Emblem_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Banner_Emblem_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Banner_Emblem_Ripped_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Banner_Ripped_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Banner_Ripped_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Brazier_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Brazier_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Cage_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_CandleStand_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_CandleStand_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Cauldron_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_ChairStraps_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Chest_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Coin_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Corpse_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Corpse_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Corpse_03.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Crown_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Gem_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Gem_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Gem_03.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Gem_04.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Gem_05.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Grate_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Lever_Floor_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Lever_Wall_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Pedestal_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Pit_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Pot_Large_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Pot_Large_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Pot_Large_03.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Potion_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Skeleton_03.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Skeleton_04.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Skull_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Skull_Pile_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Stone_Coffin_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Sword_Rusty_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Table_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_Torch_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_WallCuffs_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Props/SM_Prop_WallGrate_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Traps/SM_Trap_BuzzSaw_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Traps/SM_Trap_FloorGrinder_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Traps/SM_Trap_FloorGrinder_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Traps/SM_Trap_SpikeBlock_02.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Traps/SM_Trap_SpikeGrate_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Traps/TrapDevices/SM_Trap_BuzzSaw_Blade_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Traps/TrapDevices/SM_Trap_FloorGrinde_Main_02_B.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Traps/TrapDevices/SM_Trap_FloorGrinder_Main_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Traps/TrapDevices/SM_Trap_FloorGrinder_Main_02_A.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Traps/TrapDevices/SM_Trap_SpikeGrate_Spikes_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Meshes/Traps/TrapDevices/SM_Trap_SwingingAxe_Axe_01.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/SimpleDungeons/Textures/Tex_SimpleDungeon.uasset",
+      "group": "simple_dungeons",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Sounds/A_Bonk.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Sounds/A_CastMagic.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Sounds/A_Coin.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Sounds/A_GetKey.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Sounds/A_IncreaseLives.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Sounds/A_Lose.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Sounds/A_Monster.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Sounds/A_Music.uasset",
+      "group": "credited_music",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Sounds/A_OpenDoor.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Sounds/A_TakeMagic.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Sounds/A_Teleport.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/Sounds/A_Win.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/Buttons/T_Button_Hover.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/Buttons/T_Button_Normal.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/Buttons/T_Button_Pressed.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/Fonts/Font_Logo.uasset",
+      "group": "unifrakturcook_ofl",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/Fonts/Font_Logo_Font.uasset",
+      "group": "unifrakturcook_ofl",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/Fonts/Font_Main.uasset",
+      "group": "grenze_gotisch_ofl",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/Fonts/Font_Main_Font.uasset",
+      "group": "grenze_gotisch_ofl",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/HUD/Textures/AttemptsIcon.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/HUD/Textures/CoinIcon.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/HUD/Textures/HeartImage_UI.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/HUD/Textures/KeyBlueActive.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/HUD/Textures/KeyBlueInactive.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/HUD/Textures/KeyGreenActive.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/HUD/Textures/KeyGreenInactive.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/HUD/Textures/KeyRedActive.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/HUD/Textures/KeyRedInactive.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/HUD/Textures/MonsterGreen.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/HUD/Textures/MonsterRed.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/HUD/Textures/MonsterYellow.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/HUD/Textures/SkullIcon.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    },
+    {
+      "path": "starter-project/Content/UserInterface/HUD/Textures/emptyHeartImageUI.uasset",
+      "group": "supplied_art",
+      "notice": "ASSET_NOTICES.md"
+    }
+  ]
+}

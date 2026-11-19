@@ -1,0 +1,1366 @@
+{
+  "schema_version": 2,
+  "game": "unity.undercooked_kitchen_shift.v2",
+  "naming_tables": "input/SESSION_MODEL.json",
+  "player_runtime_min_version": "game-session/v1",
+  "controls_from_naming_tables": true,
+  "result_contract": {
+    "statuses": [
+      "PASS",
+      "FAIL_OBSERVED",
+      "BLOCKED_BY_PRODUCT",
+      "INCONCLUSIVE_EVALUATOR"
+    ],
+    "inconclusive_blocks_unique_score": true
+  },
+  "routes": [
+    {
+      "id": "independent_station_operations",
+      "title": "Independent station operations",
+      "mode": "composition",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "session_entry",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "ENTRY",
+            "STATE"
+          ]
+        },
+        "fallbacks": [
+          {
+            "id": "legal_state",
+            "kind": "fixture",
+            "precondition_evidence": [
+              "RESTORED_STATE"
+            ]
+          }
+        ],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ENTRY"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "landmark",
+            "name": "tomato-crate-approach"
+          }
+        },
+        {
+          "do": "press",
+          "key": "E"
+        },
+        {
+          "do": "wait_until",
+          "cond": "held_kind == raw tomato",
+          "timeout_s": 10
+        },
+        {
+          "do": "snapshot",
+          "save_as": "STATE"
+        },
+        {
+          "check": {
+            "id": "D2_KITCHEN",
+            "source": "gdd:FLOW-01",
+            "dim": "D2",
+            "precondition": "published kitchen state is valid for D2_KITCHEN",
+            "oracle": "the live view exposes both chefs and all required kitchen stations",
+            "dashboard_fields": [
+              "phase",
+              "chefs",
+              "stations"
+            ],
+            "evidence": [
+              {
+                "id": "D2_KITCHEN_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D2_KITCHEN_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "the live view exposes both chefs and all required kitchen stations"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D2_MOVE_SWITCH",
+            "source": "gdd:MOVE-01",
+            "dim": "D2",
+            "precondition": "published kitchen state is valid for D2_MOVE_SWITCH",
+            "oracle": "normal movement and one-tap chef switching affect only the selected chef",
+            "dashboard_fields": [
+              "phase",
+              "active_chef",
+              "chefs"
+            ],
+            "evidence": [
+              {
+                "id": "D2_MOVE_SWITCH_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D2_MOVE_SWITCH_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "normal movement and one-tap chef switching affect only the selected chef"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D2_PICKUP",
+            "source": "gdd:PICKUP-01",
+            "dim": "D2",
+            "precondition": "published kitchen state is valid for D2_PICKUP",
+            "oracle": "one raw tomato is picked up, placed and retrieved by normal interaction",
+            "dashboard_fields": [
+              "phase",
+              "chefs",
+              "held_items"
+            ],
+            "evidence": [
+              {
+                "id": "D2_PICKUP_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D2_PICKUP_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "one raw tomato is picked up, placed and retrieved by normal interaction"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D2_CHOP",
+            "source": "gdd:CHOP-01",
+            "dim": "D2",
+            "precondition": "published kitchen state is valid for D2_CHOP",
+            "oracle": "a raw tomato progresses to one chopped tomato through normal interaction",
+            "dashboard_fields": [
+              "phase",
+              "chefs",
+              "stations"
+            ],
+            "evidence": [
+              {
+                "id": "D2_CHOP_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D2_CHOP_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "a raw tomato progresses to one chopped tomato through normal interaction"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D2_COOK",
+            "source": "gdd:COOK-01",
+            "dim": "D2",
+            "precondition": "published kitchen state is valid for D2_COOK",
+            "oracle": "three chopped tomatoes become one cooked soup after the declared cook interval",
+            "dashboard_fields": [
+              "phase",
+              "stations"
+            ],
+            "evidence": [
+              {
+                "id": "D2_COOK_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D2_COOK_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "three chopped tomatoes become one cooked soup after the declared cook interval"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D2_PLATE",
+            "source": "gdd:PLATE-01",
+            "dim": "D2",
+            "precondition": "published kitchen state is valid for D2_PLATE",
+            "oracle": "a clean plate receives only completed non-burnt soup and the pot is emptied",
+            "dashboard_fields": [
+              "phase",
+              "chefs",
+              "stations"
+            ],
+            "evidence": [
+              {
+                "id": "D2_PLATE_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D2_PLATE_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "a clean plate receives only completed non-burnt soup and the pot is emptied"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D2_DELIVERY_ORDERS",
+            "source": "gdd:DELIVERY-01",
+            "dim": "D2",
+            "precondition": "published kitchen state is valid for D2_DELIVERY_ORDERS",
+            "oracle": "plated soup completes the oldest visible order and updates score",
+            "dashboard_fields": [
+              "phase",
+              "orders",
+              "score",
+              "chefs"
+            ],
+            "evidence": [
+              {
+                "id": "D2_DELIVERY_ORDERS_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D2_DELIVERY_ORDERS_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "plated soup completes the oldest visible order and updates score"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D2_ASSETS",
+            "source": "gdd:VISUAL-01",
+            "dim": "D2",
+            "precondition": "published kitchen state is valid for D2_ASSETS",
+            "oracle": "supplied kitchen and chef presentation is visible in the live scene",
+            "dashboard_fields": [
+              "phase",
+              "chefs",
+              "stations"
+            ],
+            "evidence": [
+              {
+                "id": "D2_ASSETS_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D2_ASSETS_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "supplied kitchen and chef presentation is visible in the live scene"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_SWITCH_OWNERSHIP",
+            "source": "gdd:SWITCH-01",
+            "dim": "D3",
+            "precondition": "published kitchen state is valid for D3_SWITCH_OWNERSHIP",
+            "oracle": "each chef retains independent pose and held-item ownership through switching",
+            "dashboard_fields": [
+              "phase",
+              "active_chef",
+              "chefs"
+            ],
+            "evidence": [
+              {
+                "id": "D3_SWITCH_OWNERSHIP_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D3_SWITCH_OWNERSHIP_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "each chef retains independent pose and held-item ownership through switching"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_ITEM_UNIQUENESS",
+            "source": "gdd:SESSION-02",
+            "dim": "D3",
+            "precondition": "published kitchen state is valid for D3_ITEM_UNIQUENESS",
+            "oracle": "each live item identity occurs in exactly one holder or station",
+            "dashboard_fields": [
+              "phase",
+              "chefs",
+              "stations",
+              "orders"
+            ],
+            "evidence": [
+              {
+                "id": "D3_ITEM_UNIQUENESS_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D3_ITEM_UNIQUENESS_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "each live item identity occurs in exactly one holder or station"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_RAW_REJECTION",
+            "source": "gdd:PICKUP-01",
+            "dim": "D3",
+            "precondition": "published kitchen state is valid for D3_RAW_REJECTION",
+            "oracle": "raw ingredients do not satisfy cooking or delivery",
+            "dashboard_fields": [
+              "phase",
+              "chefs",
+              "stations",
+              "score"
+            ],
+            "evidence": [
+              {
+                "id": "D3_RAW_REJECTION_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D3_RAW_REJECTION_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "raw ingredients do not satisfy cooking or delivery"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_CHOP_TIMING",
+            "source": "gdd:CHOP-01",
+            "dim": "D3",
+            "precondition": "published kitchen state is valid for D3_CHOP_TIMING",
+            "oracle": "chopping takes real time and does not complete instantly",
+            "dashboard_fields": [
+              "phase",
+              "stations"
+            ],
+            "evidence": [
+              {
+                "id": "D3_CHOP_TIMING_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D3_CHOP_TIMING_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "chopping takes real time and does not complete instantly"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_COOK_RULES",
+            "source": "gdd:COOK-01",
+            "dim": "D3",
+            "precondition": "published kitchen state is valid for D3_COOK_RULES",
+            "oracle": "cooking requires exactly three chopped tomatoes and respects timing",
+            "dashboard_fields": [
+              "phase",
+              "stations"
+            ],
+            "evidence": [
+              {
+                "id": "D3_COOK_RULES_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D3_COOK_RULES_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "cooking requires exactly three chopped tomatoes and respects timing"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_DELIVERY_ONCE",
+            "source": "gdd:DELIVERY-01",
+            "dim": "D3",
+            "precondition": "published kitchen state is valid for D3_DELIVERY_ONCE",
+            "oracle": "repeated input cannot grant a second delivery reward",
+            "dashboard_fields": [
+              "phase",
+              "orders",
+              "score"
+            ],
+            "evidence": [
+              {
+                "id": "D3_DELIVERY_ONCE_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D3_DELIVERY_ONCE_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "repeated input cannot grant a second delivery reward"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D4_ADJACENT_WORKFLOW",
+            "source": "gdd:PICKUP-01",
+            "dim": "D4",
+            "precondition": "published kitchen state is valid for D4_ADJACENT_WORKFLOW",
+            "oracle": "normal station outputs connect from chop to cook to plate to delivery",
+            "dashboard_fields": [
+              "phase",
+              "chefs",
+              "stations",
+              "orders"
+            ],
+            "evidence": [
+              {
+                "id": "D4_ADJACENT_WORKFLOW_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D4_ADJACENT_WORKFLOW_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "normal station outputs connect from chop to cook to plate to delivery"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D5_HUD_STATION",
+            "source": "gdd:UI-01",
+            "dim": "D5",
+            "precondition": "published kitchen state is valid for D5_HUD_STATION",
+            "oracle": "HUD values reflect score, timer, active chef and station progress",
+            "dashboard_fields": [
+              "phase",
+              "score",
+              "shift_remaining",
+              "active_chef",
+              "stations"
+            ],
+            "evidence": [
+              {
+                "id": "D5_HUD_STATION_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D5_HUD_STATION_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "HUD values reflect score, timer, active chef and station progress"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D5_ACTION",
+            "source": "gdd:UI-01",
+            "dim": "D5",
+            "precondition": "published kitchen state is valid for D5_ACTION",
+            "oracle": "successful actions produce visible score/order feedback",
+            "dashboard_fields": [
+              "phase",
+              "score",
+              "orders"
+            ],
+            "evidence": [
+              {
+                "id": "D5_ACTION_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D5_ACTION_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "successful actions produce visible score/order feedback"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D5_AUDIO",
+            "source": "gdd:AUDIO-01",
+            "dim": "D5",
+            "precondition": "published kitchen state is valid for D5_AUDIO",
+            "oracle": "ambience and distinct action, warning, pause and result feedback are perceivable",
+            "dashboard_fields": [
+              "phase",
+              "audio"
+            ],
+            "evidence": [
+              {
+                "id": "D5_AUDIO_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D5_AUDIO_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "ambience and distinct action, warning, pause and result feedback are perceivable"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "timers_pause_and_failure",
+      "title": "Timers, pause and failure states",
+      "mode": "local_state",
+      "clean_start": "fixture_reset",
+      "acquisition": {
+        "primary": {
+          "id": "timer_fixture",
+          "kind": "fixture",
+          "precondition_evidence": [
+            "RESTORED_TIMER_STATE"
+          ]
+        },
+        "fallbacks": [],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "reset_fixture"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "RESTORED_TIMER_STATE"
+        },
+        {
+          "do": "press",
+          "key": "Escape"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == paused",
+          "timeout_s": 10
+        },
+        {
+          "do": "snapshot",
+          "save_as": "PAUSED"
+        },
+        {
+          "check": {
+            "id": "D2_BURN",
+            "source": "gdd:BURN-01",
+            "dim": "D2",
+            "precondition": "published kitchen state is valid for D2_BURN",
+            "oracle": "cooked soup burns after the declared threshold and the pot can be reused",
+            "dashboard_fields": [
+              "phase",
+              "stations"
+            ],
+            "evidence": [
+              {
+                "id": "D2_BURN_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D2_BURN_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "cooked soup burns after the declared threshold and the pot can be reused"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D2_EXPIRY",
+            "source": "gdd:ORDER-02",
+            "dim": "D2",
+            "precondition": "published kitchen state is valid for D2_EXPIRY",
+            "oracle": "an expired order is removed and applies the declared penalty",
+            "dashboard_fields": [
+              "phase",
+              "orders",
+              "score"
+            ],
+            "evidence": [
+              {
+                "id": "D2_EXPIRY_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D2_EXPIRY_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "an expired order is removed and applies the declared penalty"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D2_PAUSE",
+            "source": "gdd:PAUSE-01",
+            "dim": "D2",
+            "precondition": "published kitchen state is valid for D2_PAUSE",
+            "oracle": "pause visibly freezes timing, orders and stations and resume restores play",
+            "dashboard_fields": [
+              "phase",
+              "shift_remaining",
+              "stations",
+              "orders"
+            ],
+            "evidence": [
+              {
+                "id": "D2_PAUSE_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D2_PAUSE_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "pause visibly freezes timing, orders and stations and resume restores play"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_BURN_REJECTION",
+            "source": "gdd:BURN-01",
+            "dim": "D3",
+            "precondition": "published kitchen state is valid for D3_BURN_REJECTION",
+            "oracle": "burnt soup cannot be plated or delivered",
+            "dashboard_fields": [
+              "phase",
+              "stations",
+              "chefs",
+              "score"
+            ],
+            "evidence": [
+              {
+                "id": "D3_BURN_REJECTION_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D3_BURN_REJECTION_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "burnt soup cannot be plated or delivered"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_ORDER_RULES",
+            "source": "gdd:ORDER-01",
+            "dim": "D3",
+            "precondition": "published kitchen state is valid for D3_ORDER_RULES",
+            "oracle": "orders remain oldest-first, bounded and correctly expire",
+            "dashboard_fields": [
+              "phase",
+              "orders",
+              "score"
+            ],
+            "evidence": [
+              {
+                "id": "D3_ORDER_RULES_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D3_ORDER_RULES_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "orders remain oldest-first, bounded and correctly expire"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_PAUSE_FREEZE",
+            "source": "gdd:PAUSE-01",
+            "dim": "D3",
+            "precondition": "published kitchen state is valid for D3_PAUSE_FREEZE",
+            "oracle": "paused gameplay state remains unchanged despite input until resume",
+            "dashboard_fields": [
+              "phase",
+              "shift_remaining",
+              "orders",
+              "stations"
+            ],
+            "evidence": [
+              {
+                "id": "D3_PAUSE_FREEZE_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D3_PAUSE_FREEZE_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "paused gameplay state remains unchanged despite input until resume"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D5_PAUSE_RESULT",
+            "source": "gdd:PAUSE-01",
+            "dim": "D5",
+            "precondition": "published kitchen state is valid for D5_PAUSE_RESULT",
+            "oracle": "pause and result panels expose truthful controls and final score",
+            "dashboard_fields": [
+              "phase",
+              "score",
+              "shift_remaining"
+            ],
+            "evidence": [
+              {
+                "id": "D5_PAUSE_RESULT_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D5_PAUSE_RESULT_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "pause and result panels expose truthful controls and final score"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "lifecycle_reopen",
+      "title": "Restart and new-process reopen",
+      "mode": "transition",
+      "clean_start": "fresh_process",
+      "acquisition": {
+        "primary": {
+          "id": "fresh_process",
+          "kind": "generic_player",
+          "precondition_evidence": [
+            "PROCESS",
+            "MENU"
+          ]
+        },
+        "fallbacks": [],
+        "on_failure": "repair_evaluator_and_retry_same_candidate"
+      },
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "restart"
+        },
+        {
+          "do": "reopen"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "MENU"
+        },
+        {
+          "check": {
+            "id": "D2_RESULT",
+            "source": "gdd:FLOW-02",
+            "dim": "D2",
+            "precondition": "published kitchen state is valid for D2_RESULT",
+            "oracle": "the shift reaches one stable result with final score and grade",
+            "dashboard_fields": [
+              "phase",
+              "score"
+            ],
+            "evidence": [
+              {
+                "id": "D2_RESULT_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D2_RESULT_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "the shift reaches one stable result with final score and grade"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D3_RESET_CLEAN",
+            "source": "gdd:RESTART-01",
+            "dim": "D3",
+            "precondition": "published kitchen state is valid for D3_RESET_CLEAN",
+            "oracle": "restart clears score, timer, chefs, stations, orders and stale input latches",
+            "dashboard_fields": [
+              "phase",
+              "score",
+              "chefs",
+              "stations",
+              "orders"
+            ],
+            "evidence": [
+              {
+                "id": "D3_RESET_CLEAN_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D3_RESET_CLEAN_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "restart clears score, timer, chefs, stations, orders and stale input latches"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D4_MENU_START",
+            "source": "gdd:FLOW-01",
+            "dim": "D4",
+            "precondition": "published kitchen state is valid for D4_MENU_START",
+            "oracle": "normal menu Start reaches a clean active shift",
+            "dashboard_fields": [
+              "phase",
+              "score",
+              "shift_remaining"
+            ],
+            "evidence": [
+              {
+                "id": "D4_MENU_START_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D4_MENU_START_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "normal menu Start reaches a clean active shift"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D4_RESULT",
+            "source": "gdd:FLOW-02",
+            "dim": "D4",
+            "precondition": "published kitchen state is valid for D4_RESULT",
+            "oracle": "the complete active shift ends in the declared result state",
+            "dashboard_fields": [
+              "phase",
+              "score",
+              "grade"
+            ],
+            "evidence": [
+              {
+                "id": "D4_RESULT_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D4_RESULT_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "the complete active shift ends in the declared result state"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D4_RESTART",
+            "source": "gdd:RESTART-01",
+            "dim": "D4",
+            "precondition": "published kitchen state is valid for D4_RESTART",
+            "oracle": "restart works from active, paused and result states",
+            "dashboard_fields": [
+              "phase",
+              "score",
+              "chefs",
+              "stations"
+            ],
+            "evidence": [
+              {
+                "id": "D4_RESTART_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D4_RESTART_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "restart works from active, paused and result states"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D4_REOPEN",
+            "source": "gdd:REOPEN-01",
+            "dim": "D4",
+            "precondition": "published kitchen state is valid for D4_REOPEN",
+            "oracle": "a new process starts from a clean menu and shift",
+            "dashboard_fields": [
+              "process_id",
+              "phase",
+              "score"
+            ],
+            "evidence": [
+              {
+                "id": "D4_REOPEN_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D4_REOPEN_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "a new process starts from a clean menu and shift"
+            ]
+          }
+        },
+        {
+          "check": {
+            "id": "D5_MENU",
+            "source": "gdd:UI-01",
+            "dim": "D5",
+            "precondition": "published kitchen state is valid for D5_MENU",
+            "oracle": "the fresh menu exposes a readable Start control",
+            "dashboard_fields": [
+              "phase",
+              "controls"
+            ],
+            "evidence": [
+              {
+                "id": "D5_MENU_STATE",
+                "source": "dashboard",
+                "field": "phase",
+                "purpose": "verify the public state needed for this kitchen obligation",
+                "independent": false
+              },
+              {
+                "id": "D5_MENU_OUTPUT",
+                "source": "rendered_output",
+                "purpose": "independently verify the visible result after normal player input",
+                "independent": true
+              }
+            ],
+            "allowed_attribution": [
+              "observed",
+              "product_block",
+              "navigator_failure",
+              "observer_failure"
+            ],
+            "obligations": [
+              "the fresh menu exposes a readable Start control"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

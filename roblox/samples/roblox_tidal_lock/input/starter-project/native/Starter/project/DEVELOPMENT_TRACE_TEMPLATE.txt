@@ -1,0 +1,14 @@
+Tidal Lock Dispatch DEVELOPMENT TRACE
+
+Frozen public input ZIP SHA-256:
+Received at:
+Framework/model/tools:
+
+Chronological records:
+[time] action / tool / result
+
+Build records:
+Play records:
+Fix and retest records:
+Known remaining issues:
+Delivered at:

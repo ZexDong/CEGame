@@ -1,0 +1,93 @@
+{
+  "schema_version": "tide-lock-rubric-v1",
+  "total_points": 100,
+  "scoring_formula": "dimension_score = dimension_max * passed_checkpoints / total_checkpoints",
+  "dimensions": [
+    {
+      "id": "D1",
+      "name": "Engineering Validity & Engine Integration",
+      "points": 10,
+      "phase": "static",
+      "checkpoints": [
+        "d1.package_integrity",
+        "d1.source_compile",
+        "d1.rojo_clean_build",
+        "d1.delivered_place_integrity",
+        "d1.studio_open_smoke"
+      ]
+    },
+    {
+      "id": "D2",
+      "name": "Specification Fulfillment & Content Completeness",
+      "points": 30,
+      "phase": "dynamic",
+      "checkpoints": [
+        "d2.hub_and_three_sectors",
+        "d2.routing_system_usable",
+        "d2.pressure_system_usable",
+        "d2.core_transfer_system_usable",
+        "d2.checkpoint_and_hazards_usable",
+        "d2.final_controls_usable",
+        "d2.failure_retry_content_usable",
+        "d2.restart_and_reopen_content",
+        "d2.hud_content_complete",
+        "d2.world_feedback_content"
+      ]
+    },
+    {
+      "id": "D3",
+      "name": "Gameplay Correctness & System Behavior",
+      "points": 20,
+      "phase": "dynamic",
+      "checkpoints": [
+        "d3.routing_correct_order",
+        "d3.routing_rejections",
+        "d3.pump_wave_and_safe_lock",
+        "d3.pump_reject_and_reset",
+        "d3.core_pickup_carry_install",
+        "d3.hazard_phase_damage_rules",
+        "d3.death_checkpoint_preservation",
+        "d3.final_gate_and_order",
+        "d3.final_timeout_and_retry",
+        "d3.completion_prerequisites_and_timer"
+      ]
+    },
+    {
+      "id": "D4",
+      "name": "End-to-End Flow & Lifecycle Integrity",
+      "points": 20,
+      "phase": "dynamic",
+      "checkpoints": [
+        "d4.entry_to_active_play",
+        "d4.complete_success_flow",
+        "d4.failure_retry_flow",
+        "d4.death_respawn_flow",
+        "d4.restart_across_states",
+        "d4.reopen_clean_session"
+      ]
+    },
+    {
+      "id": "D5",
+      "name": "Interface Functionality & Player Feedback",
+      "points": 10,
+      "phase": "dynamic",
+      "checkpoints": [
+        "d5.hud_visible_readable_synced",
+        "d5.world_displays_and_gauges",
+        "d5.interactions_discoverable",
+        "d5.rejection_and_failure_feedback",
+        "d5.result_overlays_and_retry_button"
+      ]
+    },
+    {
+      "id": "D6",
+      "name": "Visual Assembly & Presentation Fidelity",
+      "points": 10,
+      "phase": "visual",
+      "method": "four frozen states, fixed prompt, same VLM, three complete rounds, arithmetic mean"
+    }
+  ],
+  "summary_precision_decimals": 1,
+  "executable_definition": "Studio opens and reaches a live playable state",
+  "solved_definition": "core gameplay, full success flow, required Restart and Reopen all pass"
+}

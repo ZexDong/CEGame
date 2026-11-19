@@ -1,0 +1,8 @@
+{
+  "name": "OmniGame.Benchmark.BrickChallenge.Evaluator.EditMode",
+  "rootNamespace": "OmniGame.Benchmark.BrickChallenge.Evaluator.EditMode",
+  "references": ["OmniGame.Benchmark.BrickChallenge.Contracts"],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": false,
+  "optionalUnityReferences": ["TestAssemblies"]
+}

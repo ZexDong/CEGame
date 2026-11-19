@@ -1,0 +1,225 @@
+{
+  "contract": "game-session/v1",
+  "contentVersion": "unity_2d_fungus_cave_challenge-v1-20261029",
+  "entries": [
+    "floor_1",
+    "floor_2",
+    "floor_3"
+  ],
+  "phases": [
+    "menu",
+    "playing",
+    "paused",
+    "won",
+    "lost"
+  ],
+  "operationTimeoutSeconds": 10,
+  "requiredLandmarks": [
+    "spawn",
+    "exit",
+    "board-center"
+  ],
+  "values": [
+    {
+      "name": "floor",
+      "minimum": 1,
+      "maximum": 3,
+      "integer": true,
+      "editable": false,
+      "meaning": ""
+    },
+    {
+      "name": "hp",
+      "minimum": 0,
+      "maximum": 10,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "potions",
+      "minimum": 0,
+      "maximum": 4,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "energy",
+      "minimum": 0,
+      "maximum": 4000,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "stress",
+      "minimum": 0,
+      "maximum": 4,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "infection",
+      "minimum": 0,
+      "maximum": 3,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "infection_turns",
+      "minimum": 0,
+      "maximum": 9,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "turn",
+      "minimum": 0,
+      "maximum": 1000000,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "beetle_counter",
+      "minimum": 1,
+      "maximum": 30,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "powers_mask",
+      "minimum": 0,
+      "maximum": 511,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "slot_1",
+      "minimum": 0,
+      "maximum": 9,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "slot_2",
+      "minimum": 0,
+      "maximum": 9,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "slot_3",
+      "minimum": 0,
+      "maximum": 9,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "kills",
+      "minimum": 0,
+      "maximum": 40,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    },
+    {
+      "name": "completed_mask",
+      "minimum": 0,
+      "maximum": 7,
+      "integer": true,
+      "editable": true,
+      "meaning": ""
+    }
+  ],
+  "actorKinds": [
+    {
+      "kind": "player",
+      "states": [
+        "alive",
+        "dead"
+      ],
+      "poseEditable": true,
+      "stateEditable": true
+    },
+    {
+      "kind": "tile",
+      "states": [
+        "floor",
+        "wall",
+        "pool",
+        "fungus",
+        "exit"
+      ],
+      "poseEditable": false,
+      "stateEditable": false
+    },
+    {
+      "kind": "enemy",
+      "states": [
+        "active",
+        "dead"
+      ],
+      "poseEditable": true,
+      "stateEditable": true
+    },
+    {
+      "kind": "beetle",
+      "states": [
+        "active",
+        "dead"
+      ],
+      "poseEditable": true,
+      "stateEditable": true
+    },
+    {
+      "kind": "control",
+      "states": [
+        "normal"
+      ],
+      "poseEditable": false,
+      "stateEditable": false
+    }
+  ],
+  "controls": [
+    "start",
+    "continue",
+    "pause",
+    "resume",
+    "restart",
+    "menu",
+    "save",
+    "shop",
+    "close_shop",
+    "buy_1",
+    "buy_2",
+    "buy_3",
+    "buy_4",
+    "buy_5",
+    "buy_6",
+    "buy_7",
+    "buy_8",
+    "buy_9",
+    "slot_1",
+    "slot_2",
+    "slot_3"
+  ],
+  "semanticRules": [
+    "Non-menu: player (kind player; values empty), tile_x_y for every grid cell (kind tile; values empty; immutable state per content), fixed enemy_i per current floor and beetle_0..3. Enemy/beetle values are exactly hp (0..20),damage (1..5),potions (0..4),energy (0..4000),infection (0..3),infection_turns (0..9), all editable integers. Beetle potions=0. Enemy state=dead/present=false iff hp=0; active/present=true iff hp>0. Unused beetles are dead/absent/hp0. All positions are actual grid world centers (x,y,0). Player alive/present iff hp>0, dead otherwise.",
+    "Player and living enemy poses are editable to integral walkable in-bounds cells with no overlapping live actors or wall. Enemy counts/types/damage/reward identities remain the current floor's content; hp may vary within its content maximum. Infected actors have infection_turns>0 iff infection>0. hp=0 only in lost phase with potions=0. phase playing/paused has hp>0. Won only on cleared floor3 at its exit. Floor is readonly and agrees with entry. kills equals the number of dead fixed potion-bearing enemies. completed_mask may contain prior floors, not imply a new win.",
+    "Slot values are zero or purchased power IDs with no duplicate nonzero slot; purchase prerequisites must hold in powers_mask. All non-floor top-level numbers are editable subject to these rules. Legal prepared histories may clear earlier enemies and leave one last live target, but the final kill, exit step, revival and power purchase under test must be caused by normal input. DescribeCurrentEntry reports board-center, spawn and the real exit.",
+    "One active IGameSession. Capture has exactly the declared top-level numbers. Each present actor resolves uniquely to its actual visible/interactable gameplay root, not a reporting proxy, and reports its actual transform.position. Facing is +1 except a visibly left-facing actor may use -1. Actor entryId equals the current entry. Unknown/duplicate identities, wrong version, nonfinite or out-of-range values and illegal cross-field combinations are atomically rejected. Preserve opaqueData from this candidate's own capture; explicitly editable public fields take precedence over opaqueData.",
+    "OpenEntry and Restore complete with gameplay suspended until ResumeSimulation; UI, rendering and reads continue. Release of this suspension does not unpause phase=paused. Capture is detached and side-effect-free. Restore establishes a legal initial situation, never performs the next attack, placement, collision, kill or victory on behalf of the player. Input latches and transient visuals must be restored consistently.",
+    "Control actors use the exact listed IDs, kind=control, state=normal, no numeric values. Include only controls that are currently present, or report present=false. ResolveActor returns the real visible uGUI button root. These identities locate ordinary input targets, not action methods. No Dashboard or additional probe is required.",
+    "Menu snapshots still have a valid entryId and complete numeric set. World actors may be omitted in menu. Non-menu snapshots include all fixed content identities; absent/dead/unused actors have present=false and ResolveActor may return null. Dynamic projectiles, when present, have stable IDs projectile_<monotonic integer> and preserve their own timing/pose through opaqueData."
+  ]
+}

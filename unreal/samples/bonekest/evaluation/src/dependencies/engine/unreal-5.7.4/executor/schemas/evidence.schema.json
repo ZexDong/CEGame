@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:vibe-gaming:unreal-public-executor:evidence:1.0.0",
+  "title": "Unreal public executor evidence reference",
+  "description": "A redacted, run-relative evidence artifact reference. Artifact integrity does not by itself prove game semantics.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "path",
+    "sha256",
+    "media_type",
+    "byte_length",
+    "captured_monotonic_ms",
+    "kind",
+    "producer"
+  ],
+  "properties": {
+    "path": { "$ref": "#/$defs/relative_path" },
+    "sha256": { "$ref": "#/$defs/sha256" },
+    "media_type": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9!#$&^_.+-]+/[A-Za-z0-9!#$&^_.+-]+$"
+    },
+    "byte_length": { "type": "integer", "minimum": 0 },
+    "captured_monotonic_ms": { "type": "integer", "minimum": 0 },
+    "kind": {
+      "enum": [
+        "state",
+        "wait_samples",
+        "capture",
+        "input_receipt",
+        "process",
+        "cleanup",
+        "redacted_log",
+        "report"
+      ]
+    },
+    "producer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "version"],
+      "properties": {
+        "id": { "$ref": "#/$defs/stable_id" },
+        "version": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._+-]{0,127}$" }
+      }
+    }
+  },
+  "$defs": {
+    "stable_id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "relative_path": {
+      "description": "Forward-slash path relative to one run package; absolute, parent, empty, URI, UNC, drive, dot and reparse traversal forms cannot match.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*(/[A-Za-z0-9][A-Za-z0-9._-]*)*$"
+    },
+    "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+  }
+}

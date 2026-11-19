@@ -1,0 +1,250 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://benchmark.invalid/bomber-local-duel/game-state.schema.json",
+  "title": "Bomber Local Duel Read-Only Game State",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "process_token",
+    "process_id",
+    "snapshot_id",
+    "round_id",
+    "round_index",
+    "restart_count",
+    "monotonic_ms",
+    "bridge_ready",
+    "provider_ready",
+    "game_state"
+  ],
+  "properties": {
+    "schema_version": { "const": "2.0.0" },
+    "process_token": { "type": "string", "minLength": 1, "maxLength": 256 },
+    "process_id": { "type": "integer", "minimum": 1 },
+    "snapshot_id": { "type": "integer", "minimum": 0 },
+    "round_id": { "type": "string", "minLength": 1, "maxLength": 256 },
+    "round_index": { "type": "integer", "minimum": 0 },
+    "restart_count": { "type": "integer", "minimum": 0 },
+    "monotonic_ms": { "type": "number", "minimum": 0 },
+    "bridge_ready": { "type": "boolean" },
+    "provider_ready": { "type": "boolean" },
+    "game_state": {
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "#/$defs/game_state" }
+      ]
+    }
+  },
+  "$defs": {
+    "cell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y"],
+      "properties": {
+        "x": { "type": "integer", "minimum": 0, "maximum": 10 },
+        "y": { "type": "integer", "minimum": 0, "maximum": 8 }
+      }
+    },
+    "resources": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bombs_available", "bomb_capacity", "fire", "skate", "move_step_ms"],
+      "properties": {
+        "bombs_available": { "type": "integer", "minimum": 0, "maximum": 2 },
+        "bomb_capacity": { "type": "integer", "minimum": 1, "maximum": 2 },
+        "fire": { "type": "integer", "minimum": 2, "maximum": 3 },
+        "skate": { "type": "integer", "minimum": 0, "maximum": 1 },
+        "move_step_ms": { "type": "integer", "minimum": 100, "maximum": 200 }
+      }
+    },
+    "player": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["object_id", "slot", "cell", "alive", "visible", "input_enabled", "movement_state", "resources"],
+      "properties": {
+        "object_id": { "enum": ["player_1", "player_2"] },
+        "slot": { "enum": [1, 2] },
+        "cell": { "$ref": "#/$defs/cell" },
+        "alive": { "type": "boolean" },
+        "visible": { "type": "boolean" },
+        "input_enabled": { "type": "boolean" },
+        "movement_state": { "enum": ["idle", "moving", "dead"] },
+        "resources": { "$ref": "#/$defs/resources" }
+      }
+    },
+    "bomb": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["object_id", "owner_id", "cell", "state", "fuse_remaining_ms", "captured_fire", "visible"],
+      "properties": {
+        "object_id": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "owner_id": { "enum": ["player_1", "player_2"] },
+        "cell": { "$ref": "#/$defs/cell" },
+        "state": { "enum": ["armed", "exploding"] },
+        "fuse_remaining_ms": { "type": "number", "minimum": 0, "maximum": 2000 },
+        "captured_fire": { "type": "integer", "minimum": 2, "maximum": 3 },
+        "visible": { "type": "boolean" }
+      }
+    },
+    "crate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["object_id", "cell", "state", "contains"],
+      "properties": {
+        "object_id": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "cell": { "$ref": "#/$defs/cell" },
+        "state": { "enum": ["present", "destroyed"] },
+        "contains": { "enum": ["none", "bomb_powerup", "fire_powerup", "skate_powerup"] }
+      }
+    },
+    "powerup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["object_id", "kind", "cell", "state", "collected_by", "visible"],
+      "properties": {
+        "object_id": { "type": "string", "minLength": 1, "maxLength": 128 },
+        "kind": { "enum": ["bomb", "fire", "skate"] },
+        "cell": { "$ref": "#/$defs/cell" },
+        "state": { "enum": ["hidden", "available", "collected"] },
+        "collected_by": {
+          "oneOf": [
+            { "type": "null" },
+            { "enum": ["player_1", "player_2"] }
+          ]
+        },
+        "visible": { "type": "boolean" }
+      }
+    },
+    "hud_player": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["player_id", "alive", "resources"],
+      "properties": {
+        "player_id": { "enum": ["player_1", "player_2"] },
+        "alive": { "type": "boolean" },
+        "resources": { "$ref": "#/$defs/resources" }
+      }
+    },
+    "message": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["player_id", "text"],
+      "properties": {
+        "player_id": { "enum": ["player_1", "player_2", "shared"] },
+        "text": { "type": "string", "maxLength": 128 }
+      }
+    },
+    "asset_bindings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "character_mesh",
+        "player_1_material",
+        "player_2_material",
+        "idle_animation",
+        "wall_mesh",
+        "crate_mesh",
+        "bomb_powerup_mesh",
+        "fire_powerup_mesh",
+        "skate_powerup_mesh",
+        "bomb_mesh",
+        "player_marker_mesh"
+      ],
+      "properties": {
+        "character_mesh": { "type": "string", "minLength": 1 },
+        "player_1_material": { "type": "string", "minLength": 1 },
+        "player_2_material": { "type": "string", "minLength": 1 },
+        "idle_animation": { "type": "string", "minLength": 1 },
+        "wall_mesh": { "type": "string", "minLength": 1 },
+        "crate_mesh": { "type": "string", "minLength": 1 },
+        "bomb_powerup_mesh": { "type": "string", "minLength": 1 },
+        "fire_powerup_mesh": { "type": "string", "minLength": 1 },
+        "skate_powerup_mesh": { "type": "string", "minLength": 1 },
+        "bomb_mesh": { "type": "string", "minLength": 1 },
+        "player_marker_mesh": { "type": "string", "minLength": 1 }
+      }
+    },
+    "game_state": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "phase",
+        "countdown_remaining_ms",
+        "match_remaining_ms",
+        "players",
+        "bombs",
+        "explosion_cells",
+        "crates",
+        "powerups",
+        "feedback",
+        "asset_bindings"
+      ],
+      "properties": {
+        "phase": { "enum": ["countdown", "active", "player1_win", "player2_win", "draw"] },
+        "countdown_remaining_ms": { "type": "number", "minimum": 0, "maximum": 3000 },
+        "match_remaining_ms": { "type": "number", "minimum": 0, "maximum": 45000 },
+        "players": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "$ref": "#/$defs/player" }
+        },
+        "bombs": {
+          "type": "array",
+          "maxItems": 4,
+          "items": { "$ref": "#/$defs/bomb" }
+        },
+        "explosion_cells": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/cell" }
+        },
+        "crates": {
+          "type": "array",
+          "minItems": 15,
+          "maxItems": 15,
+          "items": { "$ref": "#/$defs/crate" }
+        },
+        "powerups": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": { "$ref": "#/$defs/powerup" }
+        },
+        "feedback": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["hud", "terminal_text", "countdown_text", "urgency_active", "messages", "player_1_marker_visible"],
+          "properties": {
+            "hud": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["visible", "time_seconds", "alive_count", "players"],
+              "properties": {
+                "visible": { "type": "boolean" },
+                "time_seconds": { "type": "integer", "minimum": 0, "maximum": 45 },
+                "alive_count": { "type": "integer", "minimum": 0, "maximum": 2 },
+                "players": {
+                  "type": "array",
+                  "minItems": 2,
+                  "maxItems": 2,
+                  "items": { "$ref": "#/$defs/hud_player" }
+                }
+              }
+            },
+            "terminal_text": { "enum": ["", "PLAYER 1 WINS", "PLAYER 2 WINS", "DRAW"] },
+            "countdown_text": { "type": "string", "maxLength": 16 },
+            "urgency_active": { "type": "boolean" },
+            "messages": {
+              "type": "array",
+              "maxItems": 8,
+              "items": { "$ref": "#/$defs/message" }
+            },
+            "player_1_marker_visible": { "type": "boolean" }
+          }
+        },
+        "asset_bindings": { "$ref": "#/$defs/asset_bindings" }
+      }
+    }
+  }
+}

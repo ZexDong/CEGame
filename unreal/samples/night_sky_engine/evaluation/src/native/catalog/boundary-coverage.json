@@ -1,0 +1,101 @@
+{
+  "revision": "nightsky-gdd-coverage-3.1.0",
+  "checks": [
+    {
+      "id": "guard_movement",
+      "owner": "D3-07",
+      "requirement_id": "DEFENSE-02",
+      "case_id": "guard-conflict"
+    },
+    {
+      "id": "repeated_jump",
+      "owner": "D3-02",
+      "requirement_id": "INPUT-02",
+      "case_id": "repeated-jump"
+    },
+    {
+      "id": "whiff_duration",
+      "owner": "D5-03",
+      "requirement_id": "INTERFACE-02",
+      "case_id": "feedback-whiff"
+    },
+    {
+      "id": "bolt_refire",
+      "owner": "D3-04",
+      "requirement_id": "COMBAT-02",
+      "case_id": "mixed-damage"
+    },
+    {
+      "id": "strike_overkill",
+      "owner": "D3-03",
+      "requirement_id": "COMBAT-01",
+      "case_id": "mixed-damage"
+    },
+    {
+      "id": "restart_held_A",
+      "owner": "D4-04",
+      "requirement_id": "LIFECYCLE-01",
+      "case_id": "restart-movement"
+    },
+    {
+      "id": "restart_held_D",
+      "owner": "D4-04",
+      "requirement_id": "LIFECYCLE-01",
+      "case_id": "restart-movement"
+    },
+    {
+      "id": "simultaneous_draw",
+      "owner": "D3-09",
+      "requirement_id": "TERMINAL-01",
+      "case_id": "draw-probe"
+    },
+    {
+      "id": "player-win_input_lock",
+      "owner": "D3-10",
+      "requirement_id": "TERMINAL-02",
+      "case_id": "player-win"
+    },
+    {
+      "id": "rival-win_input_lock",
+      "owner": "D3-10",
+      "requirement_id": "TERMINAL-02",
+      "case_id": "rival-win"
+    },
+    {
+      "id": "restart_strike",
+      "owner": "D4-04",
+      "requirement_id": "LIFECYCLE-01",
+      "case_id": "restart-strike"
+    },
+    {
+      "id": "reopen_terminal",
+      "owner": "D4-05",
+      "requirement_id": "LIFECYCLE-02",
+      "case_id": "reopen-terminal"
+    },
+    {
+      "id": "bolt_overkill",
+      "owner": "D3-04",
+      "requirement_id": "COMBAT-02",
+      "case_id": "bolt-overkill"
+    },
+    {
+      "id": "guard_duration",
+      "owner": "D5-04",
+      "requirement_id": "INTERFACE-02",
+      "case_id": "feedback-guard"
+    },
+    {
+      "id": "rejection_side_effects",
+      "owner": "D3-05",
+      "requirement_id": "COMBAT-03",
+      "case_id": "bolt-rejection-trace"
+    },
+    {
+      "id": "cooldown_duration",
+      "owner": "D5-03",
+      "requirement_id": "INTERFACE-02",
+      "case_id": "bolt-rejection-trace"
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "requirements": {
+    "ASSET-01": {
+      "primary_assets": [
+        "PlayerCharacter.Animations.A_PlayerCharacter_Blast",
+        "PlayerCharacter.Animations.A_PlayerCharacter_Default_Attack",
+        "PlayerCharacter.Animations.A_PlayerCharacter_Die",
+        "PlayerCharacter.Animations.A_PlayerCharacter_Hit_Front",
+        "PlayerCharacter.Animations.A_PlayerCharacter_Idle_Loop",
+        "PlayerCharacter.Animations.A_PlayerCharacter_Run_Loop",
+        "PlayerCharacter.Animations.A_PlayerCharacter_Spawn",
+        "PlayerCharacter.Character.SK_PlayerCharacter"
+      ],
+      "dependencies": [
+        "Effects.MF_PSXEffect",
+        "Effects.MPC_PSXEffect",
+        "PlayerCharacter.Character.PHYS_PlayerCharacter",
+        "PlayerCharacter.Character.SKEL_PlayerCharacter",
+        "PlayerCharacter.Materials.M_PlayerCharacter",
+        "PlayerCharacter.Materials.M_PlayerCharacter_RGB",
+        "PlayerCharacter.Materials.T_PlayerCharacter_E",
+        "PlayerCharacter.Materials.T_PlayercCharacter_D"
+      ]
+    },
+    "ASSET-02": {
+      "primary_assets": [
+        "SimpleDungeons.Meshes.Environment.EnvParts.SM_Env_Door_Main_03",
+        "SimpleDungeons.Meshes.Environment.SM_Env_Doorway_01",
+        "SimpleDungeons.Meshes.Environment.SM_Env_Floor_Stone_01",
+        "SimpleDungeons.Meshes.Environment.SM_Env_Pillar_Stone_01",
+        "SimpleDungeons.Meshes.Environment.SM_Env_Wall_01",
+        "SimpleDungeons.Meshes.Props.SM_Prop_Skull_01",
+        "SimpleDungeons.Meshes.Props.SM_Prop_Stone_Coffin_01",
+        "SimpleDungeons.Meshes.Props.SM_Prop_Torch_01"
+      ],
+      "dependencies": [
+        "SimpleDungeons.Materials.Mat_SimpleDungeons",
+        "SimpleDungeons.Textures.Tex_SimpleDungeon"
+      ]
+    },
+    "ASSET-03": {
+      "primary_assets": [
+        "Effects.GhostEffect.MI_Pickups_Coin",
+        "Effects.GhostEffect.MI_Pickups_KeyBlue",
+        "Effects.GhostEffect.MI_Pickups_KeyGreen",
+        "Effects.GhostEffect.MI_Pickups_KeyRed",
+        "Effects.GhostEffect.MI_Pickups_Magic",
+        "Pickups.Assets.SM_Coin",
+        "Pickups.Assets.SM_Heart",
+        "Pickups.Assets.SM_Key",
+        "UserInterface.HUD.Textures.AttemptsIcon"
+      ],
+      "dependencies": [
+        "Effects.GhostEffect.M_Pickups"
+      ]
+    },
+    "ASSET-04": {
+      "primary_assets": [
+        "UserInterface.Buttons.T_Button_Hover",
+        "UserInterface.Buttons.T_Button_Normal",
+        "UserInterface.Buttons.T_Button_Pressed",
+        "UserInterface.HUD.Textures.AttemptsIcon",
+        "UserInterface.HUD.Textures.CoinIcon",
+        "UserInterface.HUD.Textures.HeartImage_UI",
+        "UserInterface.HUD.Textures.KeyBlueActive",
+        "UserInterface.HUD.Textures.KeyBlueInactive",
+        "UserInterface.HUD.Textures.KeyGreenActive",
+        "UserInterface.HUD.Textures.KeyGreenInactive",
+        "UserInterface.HUD.Textures.KeyRedActive",
+        "UserInterface.HUD.Textures.KeyRedInactive",
+        "UserInterface.HUD.Textures.MonsterGreen",
+        "UserInterface.HUD.Textures.MonsterRed",
+        "UserInterface.HUD.Textures.MonsterYellow"
+      ],
+      "dependencies": []
+    },
+    "ASSET-05": {
+      "primary_assets": [
+        "Effects.GhostEffect.FX_GhostSmoke",
+        "Effects.GhostEffect.MI_Pickups_Magic",
+        "Effects.M_PS1_PostProcess_Inst",
+        "FXVarietyPack.Particles.P_ky_healAura",
+        "FXVarietyPack.Particles.P_ky_lightning1",
+        "FXVarietyPack.Particles.P_ky_lightning2",
+        "FXVarietyPack.Particles.P_ky_magicCircle1"
+      ],
+      "dependencies": [
+        "Effects.GhostEffect.M_Pickups",
+        "Effects.GhostEffect.Mat_FX",
+        "Effects.GhostEffect.SM_Particle_Smoke_01",
+        "Effects.M_PS1_PostProcess",
+        "FXVarietyPack.Materials.MI_ky_aura011_4x4",
+        "FXVarietyPack.Materials.MI_ky_aura011_4x4_nonD",
+        "FXVarietyPack.Materials.MI_ky_auraWall02_two",
+        "FXVarietyPack.Materials.MI_ky_chantDecoAc",
+        "FXVarietyPack.Materials.MI_ky_circle9_4x4c2",
+        "FXVarietyPack.Materials.MI_ky_circleDust",
+        "FXVarietyPack.Materials.MI_ky_flare_flash_trs",
+        "FXVarietyPack.Materials.MI_ky_lightning02_4x4",
+        "FXVarietyPack.Materials.MI_ky_lightningDust01_4x4_nonD",
+        "FXVarietyPack.Materials.MI_ky_primitive_dynB_nonD",
+        "FXVarietyPack.Materials.MI_ky_shine01R_nonD",
+        "FXVarietyPack.Materials.MI_ky_starDust_dis",
+        "FXVarietyPack.Materials.MI_ky_turbulence_smoke2d_trs",
+        "FXVarietyPack.Materials.M_ky_Fresnel",
+        "FXVarietyPack.Materials.M_ky_auraWall02",
+        "FXVarietyPack.Materials.M_ky_base",
+        "FXVarietyPack.Materials.M_ky_base_anime",
+        "FXVarietyPack.Materials.M_ky_base_turbulence",
+        "FXVarietyPack.Materials.M_ky_chantDecoA",
+        "FXVarietyPack.Materials.M_ky_circle01_4x4G_nonD",
+        "FXVarietyPack.Materials.M_ky_dust01_4x4",
+        "FXVarietyPack.Materials.M_ky_empty",
+        "FXVarietyPack.Materials.M_ky_flare01_primitive",
+        "FXVarietyPack.Materials.M_ky_flare_flash",
+        "FXVarietyPack.Materials.M_ky_magicCircle020",
+        "FXVarietyPack.Materials.M_ky_primitive_dyn2",
+        "FXVarietyPack.Materials.M_ky_starDust",
+        "FXVarietyPack.Materials.M_ky_subUV01",
+        "FXVarietyPack.Materials.M_ky_subUV_dynRGB",
+        "FXVarietyPack.Materials.Mfunction.MF_ky_UVcontrol_4x4",
+        "FXVarietyPack.Materials.Mfunction.MF_ky_VectorToRadialValue",
+        "FXVarietyPack.Meshes.SM_ky_auraWall_distB_kai",
+        "FXVarietyPack.Meshes.SM_ky_cylinderBend07",
+        "FXVarietyPack.Meshes.SM_ky_cylinder_lowPoly_dist",
+        "FXVarietyPack.Meshes.SM_ky_cylinder_superLow",
+        "FXVarietyPack.Textures.T_ky_aura011_4x4",
+        "FXVarietyPack.Textures.T_ky_auraWallWhite_4x4",
+        "FXVarietyPack.Textures.T_ky_bg",
+        "FXVarietyPack.Textures.T_ky_bg_LC",
+        "FXVarietyPack.Textures.T_ky_chantDecoC",
+        "FXVarietyPack.Textures.T_ky_circle01_4x4",
+        "FXVarietyPack.Textures.T_ky_circle9_4x4",
+        "FXVarietyPack.Textures.T_ky_circleDust",
+        "FXVarietyPack.Textures.T_ky_dist_noise",
+        "FXVarietyPack.Textures.T_ky_dust01_4x4",
+        "FXVarietyPack.Textures.T_ky_dust_longStar",
+        "FXVarietyPack.Textures.T_ky_flareVertical02",
+        "FXVarietyPack.Textures.T_ky_flare_a",
+        "FXVarietyPack.Textures.T_ky_lightning02_4x4",
+        "FXVarietyPack.Textures.T_ky_lightningDust01_4x4",
+        "FXVarietyPack.Textures.T_ky_magicCircle020",
+        "FXVarietyPack.Textures.T_ky_maskCircle",
+        "FXVarietyPack.Textures.T_ky_maskRGB3",
+        "FXVarietyPack.Textures.T_ky_noise",
+        "FXVarietyPack.Textures.T_ky_noise13_sml_nor",
+        "FXVarietyPack.Textures.T_ky_noise6",
+        "FXVarietyPack.Textures.T_ky_shine01_4x4",
+        "FXVarietyPack.Textures.T_ky_smoke03",
+        "FXVarietyPack.Textures.T_ky_smoke_kai"
+      ]
+    },
+    "ASSET-06": {
+      "primary_assets": [
+        "Sounds.A_Bonk",
+        "Sounds.A_CastMagic",
+        "Sounds.A_Coin",
+        "Sounds.A_GetKey",
+        "Sounds.A_IncreaseLives",
+        "Sounds.A_Lose",
+        "Sounds.A_Monster",
+        "Sounds.A_Music",
+        "Sounds.A_OpenDoor",
+        "Sounds.A_TakeMagic",
+        "Sounds.A_Teleport",
+        "Sounds.A_Win"
+      ],
+      "dependencies": []
+    },
+    "ASSET-07": {
+      "primary_assets": [
+        "UserInterface.Fonts.Font_Logo",
+        "UserInterface.Fonts.Font_Logo_Font",
+        "UserInterface.Fonts.Font_Main",
+        "UserInterface.Fonts.Font_Main_Font"
+      ],
+      "dependencies": []
+    }
+  },
+  "missing_required_assets": []
+}

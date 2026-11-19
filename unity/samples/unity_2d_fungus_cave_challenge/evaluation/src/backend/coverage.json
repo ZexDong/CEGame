@@ -1,0 +1,2436 @@
+{
+  "sample_id": "unity_2d_fungus_cave_challenge",
+  "evaluator_version": "1.2.1",
+  "status": "Frozen requirement and checkpoint mapping.",
+  "semantic_review": "GDD requirements plus identified v1.1 gaps, not inferred coverage from repeated numeric scores.",
+  "obligations": [
+    {
+      "id": "FC.001",
+      "requirement_ids": [
+        "FC-01",
+        "FC-02",
+        "FC-03",
+        "FC-13"
+      ],
+      "check_ids": [
+        "d2.movement",
+        "d3.movement",
+        "d5.hud"
+      ],
+      "scenario": "FC/exact-content-all-bindings-energy",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.movement', correct, 'Every fixed wall/water/fungus/exit cell in every actual floor matches public content and renderer')",
+      "source": "coverage_fungus.py",
+      "line": 47,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.002",
+      "requirement_ids": [
+        "FC-01",
+        "FC-02",
+        "FC-03",
+        "FC-13"
+      ],
+      "check_ids": [
+        "d2.movement",
+        "d3.movement",
+        "d5.hud"
+      ],
+      "scenario": "FC/exact-content-all-bindings-energy",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.movement', all((n(s, k) == v for (k, v) in {'hp': 10, 'potions': 2, 'energy': 4000, 'stress': 0, 'infection': 0, 'infection_turns': 0, 'powers_mask': 0, 'turn': 0, 'beetle_counter': 30}.items())), 'Each normal chapter entry has exact declared fresh resources')",
+      "source": "coverage_fungus.py",
+      "line": 48,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.003",
+      "requirement_ids": [
+        "FC-01",
+        "FC-02",
+        "FC-03",
+        "FC-13"
+      ],
+      "check_ids": [
+        "d2.movement",
+        "d3.movement",
+        "d5.hud"
+      ],
+      "scenario": "FC/exact-content-all-bindings-energy",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.movement', xyz(actor(s, 'player')) == (2 + delta[0], 5 + delta[1], 0) and n(s, 'turn') == 1 and (n(s, 'energy') == (3600 if delta[0] and delta[1] else 4000)), 'Each binding makes exactly one accepted action while held, with exact cardinal/diagonal/wait energy')",
+      "source": "coverage_fungus.py",
+      "line": 60,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.004",
+      "requirement_ids": [
+        "FC-01",
+        "FC-02",
+        "FC-03",
+        "FC-13"
+      ],
+      "check_ids": [
+        "d2.movement",
+        "d3.movement",
+        "d5.hud"
+      ],
+      "scenario": "FC/exact-content-all-bindings-energy",
+      "status": "declared_assertion",
+      "obligation": "self.assert_hud(r, {'hp': n(s, 'hp'), 'potions': n(s, 'potions'), 'stress': n(s, 'stress'), 'turn': n(s, 'turn'), 'floor': n(s, 'floor')})",
+      "source": "coverage_fungus.py",
+      "line": 64,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.005",
+      "requirement_ids": [
+        "FC-01",
+        "FC-02",
+        "FC-03",
+        "FC-13"
+      ],
+      "check_ids": [
+        "d2.movement",
+        "d3.movement",
+        "d5.hud"
+      ],
+      "scenario": "FC/exact-content-all-bindings-energy",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.movement', actor(s, 'player')['position']['x'] == (1 if energy < 3000 else 2) and n(s, 'energy') == (3999 if energy < 3000 else 3000) and (n(s, 'turn') == 1), 'Energy threshold2999/3000 distinguishes forced wait from real movement')",
+      "source": "coverage_fungus.py",
+      "line": 84,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.006",
+      "requirement_ids": [
+        "FC-01",
+        "FC-02",
+        "FC-03",
+        "FC-13"
+      ],
+      "check_ids": [
+        "d2.movement",
+        "d3.movement",
+        "d5.hud"
+      ],
+      "scenario": "FC/exact-content-all-bindings-energy",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.movement', n(s, 'energy') == expected, 'Leaving actual pool combines exact400 cost with diagonal and Slow modifiers')",
+      "source": "coverage_fungus.py",
+      "line": 76,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.007",
+      "requirement_ids": [
+        "FC-02",
+        "FC-04",
+        "FC-05"
+      ],
+      "check_ids": [
+        "d2.combat",
+        "d3.combat"
+      ],
+      "scenario": "FC/enemy-energy-pursuit-occupancy",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.combat', xyz(actor(s, 'enemy_0')) == (3, 1, 0) and xyz(fact(r, 'enemy_0')) == (3, 1, 0), 'Real non-adjacent enemy takes one pursuit step, not a stationary report')",
+      "source": "coverage_fungus.py",
+      "line": 99,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.008",
+      "requirement_ids": [
+        "FC-02",
+        "FC-04",
+        "FC-05"
+      ],
+      "check_ids": [
+        "d2.combat",
+        "d3.combat"
+      ],
+      "scenario": "FC/enemy-energy-pursuit-occupancy",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.combat', n(actor(s, 'enemy_0'), 'energy') == 3000 and n(s, 'hp') == 10, 'Pursuit step costs1000 and cannot chain another move/attack in same player turn')",
+      "source": "coverage_fungus.py",
+      "line": 102,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.009",
+      "requirement_ids": [
+        "FC-02",
+        "FC-04",
+        "FC-05"
+      ],
+      "check_ids": [
+        "d2.combat",
+        "d3.combat"
+      ],
+      "scenario": "FC/enemy-energy-pursuit-occupancy",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.combat', len(live) == len(set(live)), 'Enemy pursuit cannot occupy another live actor or player cell')",
+      "source": "coverage_fungus.py",
+      "line": 115,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.010",
+      "requirement_ids": [
+        "FC-02",
+        "FC-04",
+        "FC-05"
+      ],
+      "check_ids": [
+        "d2.combat",
+        "d3.combat"
+      ],
+      "scenario": "FC/enemy-energy-pursuit-occupancy",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.combat', n(s, 'hp') == expected_hp and n(actor(s, 'enemy_0'), 'energy') == expected_energy, 'Enemy +1000/cap4000, threshold3000, at-most-one attack and1400 attack cost')",
+      "source": "coverage_fungus.py",
+      "line": 92,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.011",
+      "requirement_ids": [
+        "FC-02",
+        "FC-04",
+        "FC-05"
+      ],
+      "check_ids": [
+        "d2.combat",
+        "d3.combat"
+      ],
+      "scenario": "FC/enemy-energy-pursuit-occupancy",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.combat', legal and grid[9 - int(y)][int(x)] != '#' and (abs(x - previous[0]) + abs(y - previous[1]) <= 1), 'Repeated pursuit beside an actual wall never walks through it or chains multiple cardinal steps')",
+      "source": "coverage_fungus.py",
+      "line": 126,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.012",
+      "requirement_ids": [
+        "FC-07",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.powers",
+        "d3.powers",
+        "d5.feedback"
+      ],
+      "scenario": "FC/all-nine-powers-real-effects-and-slots",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.powers', set(values) == {0, 3, 4}, 'Slot cycle covers its owned unused powers and empty exactly')",
+      "source": "coverage_fungus.py",
+      "line": 207,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.013",
+      "requirement_ids": [
+        "FC-07",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.powers",
+        "d3.powers",
+        "d5.feedback"
+      ],
+      "scenario": "FC/all-nine-powers-real-effects-and-slots",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.powers', n(s, 'potions') == n(before, 'potions') and n(s, 'powers_mask') == n(before, 'powers_mask') and (n(s, 'turn') == n(before, 'turn')), kind + ' purchase is atomically rejected without advancing combat')",
+      "source": "coverage_fungus.py",
+      "line": 189,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.014",
+      "requirement_ids": [
+        "FC-07",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.powers",
+        "d3.powers",
+        "d5.feedback"
+      ],
+      "scenario": "FC/all-nine-powers-real-effects-and-slots",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.feedback', feedback_changed({'ui': []}, r), 'Shop has visible explanatory/rejection information')",
+      "source": "coverage_fungus.py",
+      "line": 192,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.015",
+      "requirement_ids": [
+        "FC-07",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.powers",
+        "d3.powers",
+        "d5.feedback"
+      ],
+      "scenario": "FC/all-nine-powers-real-effects-and-slots",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.powers', len(nonempty) == len(set(nonempty)) and n(s, 'turn') == 0, 'Normal slot cycling cannot duplicate another active slot or advance combat')",
+      "source": "coverage_fungus.py",
+      "line": 205,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.016",
+      "requirement_ids": [
+        "FC-07",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.powers",
+        "d3.powers",
+        "d5.feedback"
+      ],
+      "scenario": "FC/all-nine-powers-real-effects-and-slots",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.powers', n(s, field) == target, f\"Power{power} actual {('active' if active else 'inactive')} {field}, HP/infection boundary={hp}/{infection}\")",
+      "source": "coverage_fungus.py",
+      "line": 152,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.017",
+      "requirement_ids": [
+        "FC-07",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.powers",
+        "d3.powers",
+        "d5.feedback"
+      ],
+      "scenario": "FC/all-nine-powers-real-effects-and-slots",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.powers', okay, 'Siphon subtracts actual damage*300 energy / Bleed adds actual1 damage only while active')",
+      "source": "coverage_fungus.py",
+      "line": 166,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.018",
+      "requirement_ids": [
+        "FC-07",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.powers",
+        "d3.powers",
+        "d5.feedback"
+      ],
+      "scenario": "FC/all-nine-powers-real-effects-and-slots",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.powers', n(self.validate(self.key('Period')), 'energy') == (1200 if active else 1000), 'Each of all three slots activates only at its own stress threshold')",
+      "source": "coverage_fungus.py",
+      "line": 174,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.019",
+      "requirement_ids": [
+        "FC-06",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.infection",
+        "d3.infection",
+        "d3.powers"
+      ],
+      "scenario": "FC/seeded-infection-generation-and-thresholds",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.powers', 0.05 <= delta <= 0.35, 'Active Plague changes the measured infection probability, not merely its purchase flag')",
+      "source": "coverage_fungus.py",
+      "line": 236,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.020",
+      "requirement_ids": [
+        "FC-06",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.infection",
+        "d3.infection",
+        "d3.powers"
+      ],
+      "scenario": "FC/seeded-infection-generation-and-thresholds",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.infection', 0 < sum(groups['base40']) < len(seeds), 'Actual normal attacks sometimes infect and sometimes do not')",
+      "source": "coverage_fungus.py",
+      "line": 238,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.021",
+      "requirement_ids": [
+        "FC-06",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.infection",
+        "d3.infection",
+        "d3.powers"
+      ],
+      "scenario": "FC/seeded-infection-generation-and-thresholds",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.infection', self.fc_seeded_hit(1105) == self.fc_seeded_hit(1105), 'Reopening the same published seed gives reproducible infection outcome')",
+      "source": "coverage_fungus.py",
+      "line": 240,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.022",
+      "requirement_ids": [
+        "FC-06",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.infection",
+        "d3.infection",
+        "d3.powers"
+      ],
+      "scenario": "FC/seeded-infection-generation-and-thresholds",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.infection', abs(rate - expected) <= 0.18, f'Seeded actual attack infection rate {label}: {sum(outcomes)}/{len(outcomes)}, broad preregistered ±.18 binomial tolerance')",
+      "source": "coverage_fungus.py",
+      "line": 233,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.023",
+      "requirement_ids": [
+        "FC-06",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.infection",
+        "d3.infection",
+        "d3.powers"
+      ],
+      "scenario": "FC/seeded-infection-generation-and-thresholds",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.infection', events > 0, 'Repeated seeded real incoming attacks actually trigger stress/infection events')",
+      "source": "coverage_fungus.py",
+      "line": 261,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.024",
+      "requirement_ids": [
+        "FC-06",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.infection",
+        "d3.infection",
+        "d3.powers"
+      ],
+      "scenario": "FC/seeded-infection-generation-and-thresholds",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.infection', n(s, 'infection') == 0 and n(s, 'stress') in [stress, stress + 1] if stress < threshold else n(s, 'stress') == stress, 'Actual incoming attack obeys player stress-before-infection / active Immunity threshold')",
+      "source": "coverage_fungus.py",
+      "line": 258,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.025",
+      "requirement_ids": [
+        "FC-06"
+      ],
+      "check_ids": [
+        "d3.infection"
+      ],
+      "scenario": "FC/reinfection-same-type-duration-cap",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.infection', extended > 0, 'Seeded real repeated hits demonstrate actual duration extension')",
+      "source": "coverage_fungus.py",
+      "line": 333,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.026",
+      "requirement_ids": [
+        "FC-06"
+      ],
+      "check_ids": [
+        "d3.infection"
+      ],
+      "scenario": "FC/reinfection-same-type-duration-cap",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.infection', n(victim, 'infection') == 1 and duration in [turns - 1, turns] and (duration <= 9), 'Reinfection keeps existing type, adds at most one turn, and respects cap9 across actual turn recovery')",
+      "source": "coverage_fungus.py",
+      "line": 328,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.027",
+      "requirement_ids": [
+        "FC-05",
+        "FC-06",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d3.infection",
+        "d3.combat",
+        "d3.survival",
+        "d4.journey"
+      ],
+      "scenario": "FC/recovery-clear-and-mutated-reward",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.combat', n(s, 'potions') == 2 and (not actor(s, 'enemy_0')['present']), 'Mutated dead enemy grants one extra actual potion')",
+      "source": "coverage_fungus.py",
+      "line": 281,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.028",
+      "requirement_ids": [
+        "FC-05",
+        "FC-06",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d3.infection",
+        "d3.combat",
+        "d3.survival",
+        "d4.journey"
+      ],
+      "scenario": "FC/recovery-clear-and-mutated-reward",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.combat', n(s, 'hp') == 10, 'Killed enemy never attacks on later accepted turns')",
+      "source": "coverage_fungus.py",
+      "line": 285,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.029",
+      "requirement_ids": [
+        "FC-05",
+        "FC-06",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d3.infection",
+        "d3.combat",
+        "d3.survival",
+        "d4.journey"
+      ],
+      "scenario": "FC/recovery-clear-and-mutated-reward",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.survival', s['phase'] == 'lost' and n(s, 'hp') == 0, 'Real lethal attack with no potion reaches actual defeat')",
+      "source": "coverage_fungus.py",
+      "line": 307,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.030",
+      "requirement_ids": [
+        "FC-05",
+        "FC-06",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d3.infection",
+        "d3.combat",
+        "d3.survival",
+        "d4.journey"
+      ],
+      "scenario": "FC/recovery-clear-and-mutated-reward",
+      "status": "declared_assertion",
+      "obligation": "self.assert_stable(s, after)",
+      "source": "coverage_fungus.py",
+      "line": 310,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.031",
+      "requirement_ids": [
+        "FC-05",
+        "FC-06",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d3.infection",
+        "d3.combat",
+        "d3.survival",
+        "d4.journey"
+      ],
+      "scenario": "FC/recovery-clear-and-mutated-reward",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.infection', n(s, 'infection') == 0 and n(s, 'infection_turns') == 0, 'All infection types clear exactly at duration zero')",
+      "source": "coverage_fungus.py",
+      "line": 271,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.032",
+      "requirement_ids": [
+        "FC-05",
+        "FC-06",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d3.infection",
+        "d3.combat",
+        "d3.survival",
+        "d4.journey"
+      ],
+      "scenario": "FC/recovery-clear-and-mutated-reward",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.survival', n(s, 'hp') == hp and n(s, 'potions') == 0 and (n(s, 'energy') == 4000) and (n(s, 'stress') == 0), 'Real lethal attack revival preserves exact normal/Mutated HP, potion debit, energy cap and stress reduction')",
+      "source": "coverage_fungus.py",
+      "line": 299,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.033",
+      "requirement_ids": [
+        "FC-09",
+        "FC-10"
+      ],
+      "check_ids": [
+        "d2.pressure",
+        "d3.pressure",
+        "d3.survival",
+        "d4.journey"
+      ],
+      "scenario": "FC/pressure-exclusions-and-locked-exit",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.pressure', n(s, 'beetle_counter') == 10 and n(s, 'potions') == 2, 'Actual beetle kill neither grants potions nor recursively decrements beetle pressure')",
+      "source": "coverage_fungus.py",
+      "line": 352,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.034",
+      "requirement_ids": [
+        "FC-09",
+        "FC-10"
+      ],
+      "check_ids": [
+        "d2.pressure",
+        "d3.pressure",
+        "d3.survival",
+        "d4.journey"
+      ],
+      "scenario": "FC/pressure-exclusions-and-locked-exit",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.survival', n(self.validate(self.key('D')), 'floor') == 1, 'Actual exit entry remains locked with one live reward-bearing enemy')",
+      "source": "coverage_fungus.py",
+      "line": 357,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.035",
+      "requirement_ids": [
+        "FC-09",
+        "FC-10"
+      ],
+      "check_ids": [
+        "d2.pressure",
+        "d3.pressure",
+        "d3.survival",
+        "d4.journey"
+      ],
+      "scenario": "FC/pressure-exclusions-and-locked-exit",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.journey', n(self.validate(self.key('D')), 'floor') == 2, 'Living beetles do not prevent real floor-clear exit progression')",
+      "source": "coverage_fungus.py",
+      "line": 366,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.036",
+      "requirement_ids": [
+        "FC-09",
+        "FC-10"
+      ],
+      "check_ids": [
+        "d2.pressure",
+        "d3.pressure",
+        "d3.survival",
+        "d4.journey"
+      ],
+      "scenario": "FC/pressure-exclusions-and-locked-exit",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.pressure', len(beetles) == 4 and n(s, 'beetle_counter') == 30, 'Actual revival also decrements pressure and spawns beetles at threshold')",
+      "source": "coverage_fungus.py",
+      "line": 377,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.037",
+      "requirement_ids": [
+        "FC-09",
+        "FC-10"
+      ],
+      "check_ids": [
+        "d2.pressure",
+        "d3.pressure",
+        "d3.survival",
+        "d4.journey"
+      ],
+      "scenario": "FC/pressure-exclusions-and-locked-exit",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.pressure', len(beetles) == 4 and all(((a['position']['x'] - player['x']) ** 2 + (a['position']['y'] - player['y']) ** 2 <= candidates[3] for a in beetles)), 'Spawned beetles occupy nearest legal free cells; tied nearest cells are equally legal')",
+      "source": "coverage_fungus.py",
+      "line": 384,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.038",
+      "requirement_ids": [
+        "FC-09",
+        "FC-10"
+      ],
+      "check_ids": [
+        "d2.pressure",
+        "d3.pressure",
+        "d3.survival",
+        "d4.journey"
+      ],
+      "scenario": "FC/pressure-exclusions-and-locked-exit",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.pressure', n(self.validate(self.key('D')), 'beetle_counter') == expected, 'Ordinary versus fungus-neighbor victim decrements pressure by1/2')",
+      "source": "coverage_fungus.py",
+      "line": 341,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.039",
+      "requirement_ids": [
+        "FC-05",
+        "FC-10",
+        "FC-11"
+      ],
+      "check_ids": [
+        "d3.survival",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "FC/full-resource-floor-carry-and-reset",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.journey', n(self.validate(self.p.last), 'floor') == floor and self.validate(self.p.last)['phase'] == 'playing', 'Restoring legal cleared near-exit state does not itself change floor or grant win')",
+      "source": "coverage_fungus.py",
+      "line": 403,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.040",
+      "requirement_ids": [
+        "FC-05",
+        "FC-10",
+        "FC-11"
+      ],
+      "check_ids": [
+        "d3.survival",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "FC/full-resource-floor-carry-and-reset",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.survival', all((n(s, k) == v for (k, v) in expected.items())), 'Real adjacent floor transition carries all survival/power fields and resets local enemies/turn/energy/pressure')",
+      "source": "coverage_fungus.py",
+      "line": 410,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.041",
+      "requirement_ids": [
+        "FC-07",
+        "FC-11",
+        "FC-12",
+        "FC-13"
+      ],
+      "check_ids": [
+        "d4.reopen",
+        "d4.restart"
+      ],
+      "scenario": "FC/ordinary-complex-manual-save-new-process",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.reopen', menu['phase'] == 'menu' and self.p.process.pid != old_pid, 'Complex normal manual save reopens in a genuinely new process at title')",
+      "source": "coverage_fungus.py",
+      "line": 427,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.042",
+      "requirement_ids": [
+        "FC-07",
+        "FC-11",
+        "FC-12",
+        "FC-13"
+      ],
+      "check_ids": [
+        "d4.reopen",
+        "d4.restart"
+      ],
+      "scenario": "FC/ordinary-complex-manual-save-new-process",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.reopen', equivalent(frozen_state(before), frozen_state(after)), 'Ordinary Continue restores all floor/resource/enemy/energy/power/loadout state, not just player HP/pose')",
+      "source": "coverage_fungus.py",
+      "line": 431,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.043",
+      "requirement_ids": [
+        "FC-07",
+        "FC-11",
+        "FC-12",
+        "FC-13"
+      ],
+      "check_ids": [
+        "d4.reopen",
+        "d4.restart"
+      ],
+      "scenario": "FC/ordinary-complex-manual-save-new-process",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.reopen', n(self.validate(r), 'turn') == n(before, 'turn') + 1, 'Normal input continues the restored real game')",
+      "source": "coverage_fungus.py",
+      "line": 434,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.044",
+      "requirement_ids": [
+        "FC-07",
+        "FC-11",
+        "FC-12",
+        "FC-13"
+      ],
+      "check_ids": [
+        "d4.reopen",
+        "d4.restart"
+      ],
+      "scenario": "FC/ordinary-complex-manual-save-new-process",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.restart', n(s, 'floor') == 1 and n(s, 'turn') == 0 and (n(s, 'powers_mask') == 0) and (n(s, 'potions') == 2) and (xyz(actor(s, 'player')) == (1, 1, 0)), 'Restart starts fresh instead of silently resuming saved acquired power/loadout')",
+      "source": "coverage_fungus.py",
+      "line": 438,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.045",
+      "requirement_ids": [
+        "FC-11"
+      ],
+      "check_ids": [
+        "d4.entry"
+      ],
+      "scenario": "COMMON/repeated-natural-menu",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.entry', all((q == footprints[0] for q in footprints)) and footprints[0]['event_systems'] == 1, 'Three normal Menu/Start cycles have stable actual actor/control/EventSystem cardinality')",
+      "source": "coverage_common.py",
+      "line": 150,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.046",
+      "requirement_ids": [
+        "FC-01",
+        "FC-11",
+        "FC-13"
+      ],
+      "check_ids": [
+        "d5.overlays"
+      ],
+      "scenario": "COMMON/required-readable-instructions-and-pause",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.overlays', bool(re.search('move|wasd|arrow|select|acceler|shift|click|instructions|controls|help', text(self.p.last), re.I)), 'Actual readable title includes instructions or a discoverable Help control')",
+      "source": "coverage_common.py",
+      "line": 157,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.047",
+      "requirement_ids": [
+        "FC-01",
+        "FC-11",
+        "FC-13"
+      ],
+      "check_ids": [
+        "d5.overlays"
+      ],
+      "scenario": "COMMON/required-readable-instructions-and-pause",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.overlays', bool(re.search('paus', text(r), re.I)), 'Actual readable pause overlay is available after ordinary Start/Escape')",
+      "source": "coverage_common.py",
+      "line": 163,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.048",
+      "requirement_ids": [
+        "DELIVERY"
+      ],
+      "check_ids": [
+        "d1.service"
+      ],
+      "scenario": "COMMON/session-detached-atomic-own-restore",
+      "status": "declared_assertion",
+      "obligation": "self.check('d1.service', equivalent(frozen_state(before), frozen_state(after)), 'Every chapter restores its own unedited detached public state before any authored fixture')",
+      "source": "coverage_common.py",
+      "line": 175,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.049",
+      "requirement_ids": [
+        "FC-01",
+        "FC-02"
+      ],
+      "check_ids": [
+        "d2.movement"
+      ],
+      "scenario": "three floors and movement",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.movement', visible(after, 'player') and actor(ss, 'player')['position']['x'] == 2 and (len([a for a in s['actors'] if a['kind'] == 'tile']) == 120) and all((actor(s, e['id'])['present'] for e in f['enemies'])), 'All three actual floors and ordinary movement')",
+      "source": "session_core.py",
+      "line": 242,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.050",
+      "requirement_ids": [
+        "FC-02",
+        "FC-03"
+      ],
+      "check_ids": [
+        "d3.movement"
+      ],
+      "scenario": "movement boundaries",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.movement', actor(s, 'player')['position']['x'] == 1 and n(s, 'turn') == 0 and (n(s, 'energy') == 4000), 'Wall move has no turn/cost')",
+      "source": "session_core.py",
+      "line": 246,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.051",
+      "requirement_ids": [
+        "FC-02",
+        "FC-03"
+      ],
+      "check_ids": [
+        "d3.movement"
+      ],
+      "scenario": "movement boundaries",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.movement', actor(s, 'player')['position']['x'] == 1 and n(s, 'energy') == 3000 and (n(s, 'turn') == 1), 'Low energy forces a waiting turn')",
+      "source": "session_core.py",
+      "line": 249,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.052",
+      "requirement_ids": [
+        "FC-02",
+        "FC-03"
+      ],
+      "check_ids": [
+        "d3.movement"
+      ],
+      "scenario": "movement boundaries",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.movement', xyz(actor(s, 'player')) == (2, 2, 0) and n(s, 'energy') == 3600, 'Diagonal cost includes400')",
+      "source": "session_core.py",
+      "line": 251,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.053",
+      "requirement_ids": [
+        "FC-04",
+        "FC-05",
+        "FC-13"
+      ],
+      "check_ids": [
+        "d2.combat",
+        "d3.combat",
+        "d5.hud",
+        "d5.feedback"
+      ],
+      "scenario": "combat and enemy turns",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.combat', not actor(s, 'enemy_0')['present'] and (not fact(r, 'enemy_0').get('active', False)) and visible(r, 'player'), 'Normal bump kills real enemy root')",
+      "source": "session_core.py",
+      "line": 256,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.054",
+      "requirement_ids": [
+        "FC-04",
+        "FC-05",
+        "FC-13"
+      ],
+      "check_ids": [
+        "d2.combat",
+        "d3.combat",
+        "d5.hud",
+        "d5.feedback"
+      ],
+      "scenario": "combat and enemy turns",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.combat', n(s, 'potions') == 4 and xyz(actor(s, 'player')) == (1, 1, 0) and (n(s, 'energy') == 3600), 'Damage2/reward cap4/no move into victim')",
+      "source": "session_core.py",
+      "line": 257,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.055",
+      "requirement_ids": [
+        "FC-04",
+        "FC-05",
+        "FC-13"
+      ],
+      "check_ids": [
+        "d2.combat",
+        "d3.combat",
+        "d5.hud",
+        "d5.feedback"
+      ],
+      "scenario": "combat and enemy turns",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.hud', hud_number(r, 'potions', n(s, 'potions')), 'Actual potion balance has matching rendered HUD label')",
+      "source": "session_core.py",
+      "line": 258,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.056",
+      "requirement_ids": [
+        "FC-04",
+        "FC-05",
+        "FC-13"
+      ],
+      "check_ids": [
+        "d2.combat",
+        "d3.combat",
+        "d5.hud",
+        "d5.feedback"
+      ],
+      "scenario": "combat and enemy turns",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.feedback', text(before) != text(r) and bool(re.search('hit|attack|kill|damage', text(r), re.I)), 'Normal attack has rendered feedback')",
+      "source": "session_core.py",
+      "line": 259,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.057",
+      "requirement_ids": [
+        "FC-04",
+        "FC-05",
+        "FC-13"
+      ],
+      "check_ids": [
+        "d2.combat",
+        "d3.combat",
+        "d5.hud",
+        "d5.feedback"
+      ],
+      "scenario": "combat and enemy turns",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.combat', n(s, 'hp') == 9 and actor(s, 'enemy_0')['present'], 'Live enemy turn causes real player damage')",
+      "source": "session_core.py",
+      "line": 262,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.058",
+      "requirement_ids": [
+        "FC-06",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.infection",
+        "d3.infection"
+      ],
+      "scenario": "infection effects and recovery",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.infection', n(s, 'infection') == infection and n(s, 'infection_turns') > 0, 'Distinct infection present in active gameplay')",
+      "source": "session_core.py",
+      "line": 269,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.059",
+      "requirement_ids": [
+        "FC-06",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.infection",
+        "d3.infection"
+      ],
+      "scenario": "infection effects and recovery",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.infection', n(s, 'infection_turns') == 4 and n(s, 'energy') == (2800 if infection == 1 else 3600) and (n(actor(s, 'enemy_0'), 'hp') == (3 if infection == 2 else 2)), 'Recovery duration, Slow cost and Weak damage')",
+      "source": "session_core.py",
+      "line": 270,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.060",
+      "requirement_ids": [
+        "FC-07",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.powers",
+        "d3.powers",
+        "d5.feedback"
+      ],
+      "scenario": "shop prerequisites and stress loadout",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.powers', n(s, 'potions') == n(before, 'potions') and n(s, 'powers_mask') == 0, 'Prerequisite/insufficient purchase rejected atomically')",
+      "source": "session_core.py",
+      "line": 281,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.061",
+      "requirement_ids": [
+        "FC-07",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.powers",
+        "d3.powers",
+        "d5.feedback"
+      ],
+      "scenario": "shop prerequisites and stress loadout",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.feedback', bool(re.search('reject|need|require|insufficient|enough', text(r), re.I)), 'Shop rejection is visible')",
+      "source": "session_core.py",
+      "line": 282,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.062",
+      "requirement_ids": [
+        "FC-07",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.powers",
+        "d3.powers",
+        "d5.feedback"
+      ],
+      "scenario": "shop prerequisites and stress loadout",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.powers', int(n(s, 'powers_mask')) & 1 << p['id'] - 1 != 0, 'Nine actual normal-input purchases: ' + p['name'])",
+      "source": "session_core.py",
+      "line": 278,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.063",
+      "requirement_ids": [
+        "FC-07",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.powers",
+        "d3.powers",
+        "d5.feedback"
+      ],
+      "scenario": "shop prerequisites and stress loadout",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.powers', n(s, 'potions') == 4 - p['cost'], 'Exact purchase cost: ' + p['name'])",
+      "source": "session_core.py",
+      "line": 279,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.064",
+      "requirement_ids": [
+        "FC-07",
+        "FC-08"
+      ],
+      "check_ids": [
+        "d2.powers",
+        "d3.powers",
+        "d5.feedback"
+      ],
+      "scenario": "shop prerequisites and stress loadout",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.powers', n(s, 'energy') == expected, 'Owned power active only in stress-eligible slot')",
+      "source": "session_core.py",
+      "line": 286,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.065",
+      "requirement_ids": [
+        "FC-09"
+      ],
+      "check_ids": [
+        "d2.pressure",
+        "d3.pressure"
+      ],
+      "scenario": "fungus pressure and beetles",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.pressure', len(bs) == 4 and all((visible(r, a['id']) for a in bs)), 'Four actual beetles spawned by fungus-neighbor kill')",
+      "source": "session_core.py",
+      "line": 291,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.066",
+      "requirement_ids": [
+        "FC-09"
+      ],
+      "check_ids": [
+        "d2.pressure",
+        "d3.pressure"
+      ],
+      "scenario": "fungus pressure and beetles",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.pressure', n(s, 'beetle_counter') == 30 and all((n(a, 'potions') == 0 and n(a, 'hp') == 3 for a in bs)), 'Fungus pressure double decrement and reset')",
+      "source": "session_core.py",
+      "line": 292,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.067",
+      "requirement_ids": [
+        "FC-05",
+        "FC-10",
+        "FC-11"
+      ],
+      "check_ids": [
+        "d2.survival",
+        "d3.survival",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "revival defeat and three floor exits",
+      "status": "declared_assertion",
+      "obligation": "self.check('d2.survival', (n(s, 'hp') > 0 if potions else n(s, 'hp') == 0) and s['phase'] == ('playing' if potions else 'lost'), 'Revival/defeat reached by normal enemy attack')",
+      "source": "session_core.py",
+      "line": 299,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.068",
+      "requirement_ids": [
+        "FC-05",
+        "FC-10",
+        "FC-11"
+      ],
+      "check_ids": [
+        "d2.survival",
+        "d3.survival",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "revival defeat and three floor exits",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.survival', n(s, 'potions') == 0 and n(s, 'hp') == hp, 'Potion debit and mutated recovery HP')",
+      "source": "session_core.py",
+      "line": 300,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.069",
+      "requirement_ids": [
+        "FC-05",
+        "FC-10",
+        "FC-11"
+      ],
+      "check_ids": [
+        "d2.survival",
+        "d3.survival",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "revival defeat and three floor exits",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.journey', s['phase'] == ('won' if floor == 3 else 'playing') and n(s, 'floor') == min(3, floor + 1) and (n(s, 'hp') == 7), 'Actual exit step links adjacent floors/final win')",
+      "source": "session_core.py",
+      "line": 307,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.070",
+      "requirement_ids": [
+        "FC-05",
+        "FC-10",
+        "FC-11"
+      ],
+      "check_ids": [
+        "d2.survival",
+        "d3.survival",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "revival defeat and three floor exits",
+      "status": "declared_assertion",
+      "obligation": "self.check('d3.survival', n(s, 'potions') == 3, 'Floor transition carries survival resources')",
+      "source": "session_core.py",
+      "line": 308,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.071",
+      "requirement_ids": [
+        "FC-05",
+        "FC-10",
+        "FC-11"
+      ],
+      "check_ids": [
+        "d2.survival",
+        "d3.survival",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "revival defeat and three floor exits",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.journey', after['phase'] == 'lost' and n(after, 'turn') == n(stable, 'turn'), 'No-potion loss is stable')",
+      "source": "session_core.py",
+      "line": 302,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.072",
+      "requirement_ids": [
+        "FC-05",
+        "FC-10",
+        "FC-11"
+      ],
+      "check_ids": [
+        "d2.survival",
+        "d3.survival",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "revival defeat and three floor exits",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.restart', n(self.validate(r), 'hp') == 10 and n(self.validate(r), 'floor') == 1, 'Normal retry from defeat')",
+      "source": "session_core.py",
+      "line": 303,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.073",
+      "requirement_ids": [
+        "FC-05",
+        "FC-10",
+        "FC-11"
+      ],
+      "check_ids": [
+        "d2.survival",
+        "d3.survival",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "scenario": "revival defeat and three floor exits",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.restart', n(self.validate(r), 'floor') == 1 and n(self.validate(r), 'kills') == 0, 'Normal victory retry starts clean campaign')",
+      "source": "session_core.py",
+      "line": 310,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.074",
+      "requirement_ids": [
+        "FC-01"
+      ],
+      "check_ids": [
+        "d4.entry",
+        "d5.controls"
+      ],
+      "scenario": "natural menu and start",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.entry', s['phase'] == 'playing', 'Natural button enters actual game')",
+      "source": "session_core.py",
+      "line": 322,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.075",
+      "requirement_ids": [
+        "FC-01"
+      ],
+      "check_ids": [
+        "d4.entry",
+        "d5.controls"
+      ],
+      "scenario": "natural menu and start",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.controls', s['phase'] == 'playing', 'Normal mouse hit real visible Start button and caused its advertised transition')",
+      "source": "session_core.py",
+      "line": 323,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.076",
+      "requirement_ids": [
+        "FC-01"
+      ],
+      "check_ids": [
+        "d4.entry",
+        "d5.controls"
+      ],
+      "scenario": "natural menu and start",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.overlays', bool(re.search('move|wasd|arrow|select|acceler|shift|click|instructions|controls|help', text(r), re.I)), 'Menu presents control instructions or a discoverable instructions control; no fixed wording/layout')",
+      "source": "session_core.py",
+      "line": 320,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.077",
+      "requirement_ids": [
+        "FC-11"
+      ],
+      "check_ids": [
+        "d4.pause",
+        "d5.overlays"
+      ],
+      "scenario": "independent pause resume escape",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.pause', before['phase'] == 'paused' and state(before) == state(after), 'Pause freezes real state despite delivered input/time')",
+      "source": "session_core.py",
+      "line": 338,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.078",
+      "requirement_ids": [
+        "FC-11"
+      ],
+      "check_ids": [
+        "d4.pause",
+        "d5.overlays"
+      ],
+      "scenario": "independent pause resume escape",
+      "status": "declared_assertion",
+      "obligation": "self.check('d5.overlays', bool(re.search('paus', text(self.p.last), re.I)), 'Pause overlay visible')",
+      "source": "session_core.py",
+      "line": 339,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.079",
+      "requirement_ids": [
+        "FC-11"
+      ],
+      "check_ids": [
+        "d4.pause",
+        "d5.overlays"
+      ],
+      "scenario": "independent pause resume escape",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.pause', self.validate(r)['phase'] == 'playing', 'Ordinary Resume releases pause')",
+      "source": "session_core.py",
+      "line": 340,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.080",
+      "requirement_ids": [
+        "FC-11"
+      ],
+      "check_ids": [
+        "d4.pause",
+        "d5.overlays"
+      ],
+      "scenario": "independent pause resume escape",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.pause', self.validate(r)['phase'] == 'paused', 'Escape also pauses normally')",
+      "source": "session_core.py",
+      "line": 341,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.081",
+      "requirement_ids": [
+        "FC-11"
+      ],
+      "check_ids": [
+        "d4.restart"
+      ],
+      "scenario": "independent paused restart",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.restart', s['phase'] == 'playing' and (n(s, 'turn') == 0 if self.game == 'fungus' else n(s, 'stars') == 300 if self.game == 'glitch' else n(s, 'countdown') > 2), 'Paused Retry clears local state')",
+      "source": "session_core.py",
+      "line": 347,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.082",
+      "requirement_ids": [
+        "FC-11"
+      ],
+      "check_ids": [
+        "d4.entry"
+      ],
+      "scenario": "independent ordinary menu return",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.entry', self.validate(r)['phase'] == 'playing', 'Ordinary play/pause to Menu to Start without duplicate roots')",
+      "source": "session_core.py",
+      "line": 351,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.083",
+      "requirement_ids": [
+        "DELIVERY"
+      ],
+      "check_ids": [
+        "d1.service"
+      ],
+      "scenario": "service deep-copy and rejection",
+      "status": "declared_assertion",
+      "obligation": "self.check('d1.service', True, 'Detached capture and atomically rejected invalid service requests')",
+      "source": "session_core.py",
+      "line": 357,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    },
+    {
+      "id": "FC.084",
+      "requirement_ids": [
+        "FC-12"
+      ],
+      "check_ids": [
+        "d4.reopen"
+      ],
+      "scenario": "real close new PID persistence",
+      "status": "declared_assertion",
+      "obligation": "self.check('d4.reopen', okay, 'Old PID exited; new player opens title with actual earned/manual persistent state')",
+      "source": "session_core.py",
+      "line": 384,
+      "limitations": "Parameterized assertions cover the fixed public content; no claim of exhaustive arbitrary-architecture coverage."
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "FC/exact-content-all-bindings-energy",
+      "leaves": [
+        "d2.movement",
+        "d3.movement",
+        "d5.hud"
+      ],
+      "requirement_ids": [
+        "FC-01",
+        "FC-02",
+        "FC-03",
+        "FC-13"
+      ],
+      "function": "fc_movement",
+      "source": "coverage_fungus.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d2.movement', correct, 'Every fixed wall/water/fungus/exit cell in every actual floor matches public content and renderer')",
+          "line": 47,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.movement', all((n(s, k) == v for (k, v) in {'hp': 10, 'potions': 2, 'energy': 4000, 'stress': 0, 'infection': 0, 'infection_turns': 0, 'powers_mask': 0, 'turn': 0, 'beetle_counter': 30}.items())), 'Each normal chapter entry has exact declared fresh resources')",
+          "line": 48,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.movement', xyz(actor(s, 'player')) == (2 + delta[0], 5 + delta[1], 0) and n(s, 'turn') == 1 and (n(s, 'energy') == (3600 if delta[0] and delta[1] else 4000)), 'Each binding makes exactly one accepted action while held, with exact cardinal/diagonal/wait energy')",
+          "line": 60,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.assert_hud(r, {'hp': n(s, 'hp'), 'potions': n(s, 'potions'), 'stress': n(s, 'stress'), 'turn': n(s, 'turn'), 'floor': n(s, 'floor')})",
+          "line": 64,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.movement', actor(s, 'player')['position']['x'] == (1 if energy < 3000 else 2) and n(s, 'energy') == (3999 if energy < 3000 else 3000) and (n(s, 'turn') == 1), 'Energy threshold2999/3000 distinguishes forced wait from real movement')",
+          "line": 84,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.movement', n(s, 'energy') == expected, 'Leaving actual pool combines exact400 cost with diagonal and Slow modifiers')",
+          "line": 76,
+          "source": "coverage_fungus.py"
+        }
+      ],
+      "parameterization": [
+        "(index, entry) in enumerate(self.model['entries'])",
+        "(key, delta) in [('W', (0, 1)), ('UpArrow', (0, 1)), ('S', (0, -1)), ('DownArrow', (0, -1)), ('A', (-1, 0)), ('LeftArrow', (-1, 0)), ('D', (1, 0)), ('RightArrow', (1, 0)), ('Q', (-1, 1)), ('E', (1, 1)), ('Z', (-1, -1)), ('C', (1, -1)), ('Period', (0, 0))]",
+        "slow in [False, True]",
+        "energy in [2999, 3000]",
+        "diagonal in [False, True]"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "FC/enemy-energy-pursuit-occupancy",
+      "leaves": [
+        "d2.combat",
+        "d3.combat"
+      ],
+      "requirement_ids": [
+        "FC-02",
+        "FC-04",
+        "FC-05"
+      ],
+      "function": "fc_enemy_turns",
+      "source": "coverage_fungus.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d2.combat', xyz(actor(s, 'enemy_0')) == (3, 1, 0) and xyz(fact(r, 'enemy_0')) == (3, 1, 0), 'Real non-adjacent enemy takes one pursuit step, not a stationary report')",
+          "line": 99,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.combat', n(actor(s, 'enemy_0'), 'energy') == 3000 and n(s, 'hp') == 10, 'Pursuit step costs1000 and cannot chain another move/attack in same player turn')",
+          "line": 102,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.combat', len(live) == len(set(live)), 'Enemy pursuit cannot occupy another live actor or player cell')",
+          "line": 115,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.combat', n(s, 'hp') == expected_hp and n(actor(s, 'enemy_0'), 'energy') == expected_energy, 'Enemy +1000/cap4000, threshold3000, at-most-one attack and1400 attack cost')",
+          "line": 92,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.combat', legal and grid[9 - int(y)][int(x)] != '#' and (abs(x - previous[0]) + abs(y - previous[1]) <= 1), 'Repeated pursuit beside an actual wall never walks through it or chains multiple cardinal steps')",
+          "line": 126,
+          "source": "coverage_fungus.py"
+        }
+      ],
+      "parameterization": [
+        "(energy, expected_hp, expected_energy) in [(0, 10, 1000), (1999, 10, 2999), (2000, 9, 1600), (4000, 9, 2600)]",
+        "_ in range(4)"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "FC/all-nine-powers-real-effects-and-slots",
+      "leaves": [
+        "d2.powers",
+        "d3.powers",
+        "d5.feedback"
+      ],
+      "requirement_ids": [
+        "FC-07",
+        "FC-08"
+      ],
+      "function": "fc_power_effects",
+      "source": "coverage_fungus.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.powers', set(values) == {0, 3, 4}, 'Slot cycle covers its owned unused powers and empty exactly')",
+          "line": 207,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.powers', n(s, 'potions') == n(before, 'potions') and n(s, 'powers_mask') == n(before, 'powers_mask') and (n(s, 'turn') == n(before, 'turn')), kind + ' purchase is atomically rejected without advancing combat')",
+          "line": 189,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d5.feedback', feedback_changed({'ui': []}, r), 'Shop has visible explanatory/rejection information')",
+          "line": 192,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.powers', len(nonempty) == len(set(nonempty)) and n(s, 'turn') == 0, 'Normal slot cycling cannot duplicate another active slot or advance combat')",
+          "line": 205,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.powers', n(s, field) == target, f\"Power{power} actual {('active' if active else 'inactive')} {field}, HP/infection boundary={hp}/{infection}\")",
+          "line": 152,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.powers', okay, 'Siphon subtracts actual damage*300 energy / Bleed adds actual1 damage only while active')",
+          "line": 166,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.powers', n(self.validate(self.key('Period')), 'energy') == (1200 if active else 1000), 'Each of all three slots activates only at its own stress threshold')",
+          "line": 174,
+          "source": "coverage_fungus.py"
+        }
+      ],
+      "parameterization": [
+        "(power, hp, infection, expected) in [(1, 10, 0, ('energy', 1200)), (4, 5, 0, ('energy', 1200)), (4, 4, 0, ('energy', 1400)), (3, 4, 0, ('hp', 5)), (3, 5, 0, ('hp', 5)), (6, 7, 1, ('hp', 8)), (6, 8, 1, ('hp', 8)), (6, 7, 0, ('hp', 7)), (5, 10, 1, ('infection_turns', 3))]",
+        "power in [7, 9]",
+        "slot in [1, 2, 3]",
+        "kind in ['prerequisite', 'funds', 'duplicate']",
+        "_ in range(3)",
+        "active in [False, True]",
+        "active in [False, True]",
+        "active in [False, True]",
+        "i in range(1, 4)"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "FC/seeded-infection-generation-and-thresholds",
+      "leaves": [
+        "d2.infection",
+        "d3.infection",
+        "d3.powers"
+      ],
+      "requirement_ids": [
+        "FC-06",
+        "FC-08"
+      ],
+      "function": "fc_infection_generation",
+      "source": "coverage_fungus.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.powers', 0.05 <= delta <= 0.35, 'Active Plague changes the measured infection probability, not merely its purchase flag')",
+          "line": 236,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d2.infection', 0 < sum(groups['base40']) < len(seeds), 'Actual normal attacks sometimes infect and sometimes do not')",
+          "line": 238,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.infection', self.fc_seeded_hit(1105) == self.fc_seeded_hit(1105), 'Reopening the same published seed gives reproducible infection outcome')",
+          "line": 240,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.infection', abs(rate - expected) <= 0.18, f'Seeded actual attack infection rate {label}: {sum(outcomes)}/{len(outcomes)}, broad preregistered ±.18 binomial tolerance')",
+          "line": 233,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.infection', events > 0, 'Repeated seeded real incoming attacks actually trigger stress/infection events')",
+          "line": 261,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.infection', n(s, 'infection') == 0 and n(s, 'stress') in [stress, stress + 1] if stress < threshold else n(s, 'stress') == stress, 'Actual incoming attack obeys player stress-before-infection / active Immunity threshold')",
+          "line": 258,
+          "source": "coverage_fungus.py"
+        }
+      ],
+      "parameterization": [
+        "(label, pool, low, plague) in [('base40', False, False, False), ('pool80', True, False, False), ('low80', False, True, False), ('plague60', False, False, True)]",
+        "(stress, immunity) in [(0, False), (1, False), (2, False), (3, False), (3, True), (4, True)]",
+        "seed in range(2100, 2124)"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "FC/reinfection-same-type-duration-cap",
+      "leaves": [
+        "d3.infection"
+      ],
+      "requirement_ids": [
+        "FC-06"
+      ],
+      "function": "fc_reinfection",
+      "source": "coverage_fungus.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.infection', extended > 0, 'Seeded real repeated hits demonstrate actual duration extension')",
+          "line": 333,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.infection', n(victim, 'infection') == 1 and duration in [turns - 1, turns] and (duration <= 9), 'Reinfection keeps existing type, adds at most one turn, and respects cap9 across actual turn recovery')",
+          "line": 328,
+          "source": "coverage_fungus.py"
+        }
+      ],
+      "parameterization": [
+        "turns in [5, 9]",
+        "seed in range(3100, 3124)"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "FC/recovery-clear-and-mutated-reward",
+      "leaves": [
+        "d3.infection",
+        "d3.combat",
+        "d3.survival",
+        "d4.journey"
+      ],
+      "requirement_ids": [
+        "FC-05",
+        "FC-06",
+        "FC-08"
+      ],
+      "function": "fc_recovery",
+      "source": "coverage_fungus.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.combat', n(s, 'potions') == 2 and (not actor(s, 'enemy_0')['present']), 'Mutated dead enemy grants one extra actual potion')",
+          "line": 281,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.combat', n(s, 'hp') == 10, 'Killed enemy never attacks on later accepted turns')",
+          "line": 285,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.survival', s['phase'] == 'lost' and n(s, 'hp') == 0, 'Real lethal attack with no potion reaches actual defeat')",
+          "line": 307,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.assert_stable(s, after)",
+          "line": 310,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.infection', n(s, 'infection') == 0 and n(s, 'infection_turns') == 0, 'All infection types clear exactly at duration zero')",
+          "line": 271,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.survival', n(s, 'hp') == hp and n(s, 'potions') == 0 and (n(s, 'energy') == 4000) and (n(s, 'stress') == 0), 'Real lethal attack revival preserves exact normal/Mutated HP, potion debit, energy cap and stress reduction')",
+          "line": 299,
+          "source": "coverage_fungus.py"
+        }
+      ],
+      "parameterization": [
+        "kind in [1, 2, 3]",
+        "_ in range(4)",
+        "(mutation, hp) in [(1, 10), (3, 5)]"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "FC/pressure-exclusions-and-locked-exit",
+      "leaves": [
+        "d2.pressure",
+        "d3.pressure",
+        "d3.survival",
+        "d4.journey"
+      ],
+      "requirement_ids": [
+        "FC-09",
+        "FC-10"
+      ],
+      "function": "fc_pressure",
+      "source": "coverage_fungus.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.pressure', n(s, 'beetle_counter') == 10 and n(s, 'potions') == 2, 'Actual beetle kill neither grants potions nor recursively decrements beetle pressure')",
+          "line": 352,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.survival', n(self.validate(self.key('D')), 'floor') == 1, 'Actual exit entry remains locked with one live reward-bearing enemy')",
+          "line": 357,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d4.journey', n(self.validate(self.key('D')), 'floor') == 2, 'Living beetles do not prevent real floor-clear exit progression')",
+          "line": 366,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.pressure', len(beetles) == 4 and n(s, 'beetle_counter') == 30, 'Actual revival also decrements pressure and spawns beetles at threshold')",
+          "line": 377,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.pressure', len(beetles) == 4 and all(((a['position']['x'] - player['x']) ** 2 + (a['position']['y'] - player['y']) ** 2 <= candidates[3] for a in beetles)), 'Spawned beetles occupy nearest legal free cells; tied nearest cells are equally legal')",
+          "line": 384,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.pressure', n(self.validate(self.key('D')), 'beetle_counter') == expected, 'Ordinary versus fungus-neighbor victim decrements pressure by1/2')",
+          "line": 341,
+          "source": "coverage_fungus.py"
+        }
+      ],
+      "parameterization": [
+        "(adjacent, expected) in [(False, 9), (True, 8)]"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "FC/full-resource-floor-carry-and-reset",
+      "leaves": [
+        "d3.survival",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "requirement_ids": [
+        "FC-05",
+        "FC-10",
+        "FC-11"
+      ],
+      "function": "fc_carry",
+      "source": "coverage_fungus.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.journey', n(self.validate(self.p.last), 'floor') == floor and self.validate(self.p.last)['phase'] == 'playing', 'Restoring legal cleared near-exit state does not itself change floor or grant win')",
+          "line": 403,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d3.survival', all((n(s, k) == v for (k, v) in expected.items())), 'Real adjacent floor transition carries all survival/power fields and resets local enemies/turn/energy/pressure')",
+          "line": 410,
+          "source": "coverage_fungus.py"
+        }
+      ],
+      "parameterization": [
+        "floor in [1, 2]"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "FC/ordinary-complex-manual-save-new-process",
+      "leaves": [
+        "d4.reopen",
+        "d4.restart",
+        "d5.hud"
+      ],
+      "requirement_ids": [
+        "FC-07",
+        "FC-11",
+        "FC-12",
+        "FC-13"
+      ],
+      "function": "fc_full_save",
+      "source": "coverage_fungus.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.reopen', menu['phase'] == 'menu' and self.p.process.pid != old_pid, 'Complex normal manual save reopens in a genuinely new process at title')",
+          "line": 427,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d4.reopen', equivalent(frozen_state(before), frozen_state(after)), 'Ordinary Continue restores all floor/resource/enemy/energy/power/loadout state, not just player HP/pose')",
+          "line": 431,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d4.reopen', n(self.validate(r), 'turn') == n(before, 'turn') + 1, 'Normal input continues the restored real game')",
+          "line": 434,
+          "source": "coverage_fungus.py"
+        },
+        {
+          "assertion": "self.check('d4.restart', n(s, 'floor') == 1 and n(s, 'turn') == 0 and (n(s, 'powers_mask') == 0) and (n(s, 'potions') == 2) and (xyz(actor(s, 'player')) == (1, 1, 0)), 'Restart starts fresh instead of silently resuming saved acquired power/loadout')",
+          "line": 438,
+          "source": "coverage_fungus.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "COMMON/repeated-natural-menu",
+      "leaves": [
+        "d4.entry"
+      ],
+      "requirement_ids": [
+        "FC-11"
+      ],
+      "function": "repeat_navigation",
+      "source": "coverage_common.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.entry', all((q == footprints[0] for q in footprints)) and footprints[0]['event_systems'] == 1, 'Three normal Menu/Start cycles have stable actual actor/control/EventSystem cardinality')",
+          "line": 150,
+          "source": "coverage_common.py"
+        }
+      ],
+      "parameterization": [
+        "_ in range(3)"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "COMMON/required-readable-instructions-and-pause",
+      "leaves": [
+        "d5.overlays"
+      ],
+      "requirement_ids": [
+        "FC-01",
+        "FC-11",
+        "FC-13"
+      ],
+      "function": "readable_overlays",
+      "source": "coverage_common.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d5.overlays', bool(re.search('move|wasd|arrow|select|acceler|shift|click|instructions|controls|help', text(self.p.last), re.I)), 'Actual readable title includes instructions or a discoverable Help control')",
+          "line": 157,
+          "source": "coverage_common.py"
+        },
+        {
+          "assertion": "self.check('d5.overlays', bool(re.search('paus', text(r), re.I)), 'Actual readable pause overlay is available after ordinary Start/Escape')",
+          "line": 163,
+          "source": "coverage_common.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "COMMON/session-detached-atomic-own-restore",
+      "leaves": [
+        "d1.service"
+      ],
+      "requirement_ids": [
+        "DELIVERY"
+      ],
+      "function": "own_restore",
+      "source": "coverage_common.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d1.service', equivalent(frozen_state(before), frozen_state(after)), 'Every chapter restores its own unedited detached public state before any authored fixture')",
+          "line": 175,
+          "source": "coverage_common.py"
+        }
+      ],
+      "parameterization": [
+        "entry in self.model['entries']"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "three floors and movement",
+      "leaves": [
+        "d2.movement"
+      ],
+      "requirement_ids": [
+        "FC-01",
+        "FC-02"
+      ],
+      "function": "content",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d2.movement', visible(after, 'player') and actor(ss, 'player')['position']['x'] == 2 and (len([a for a in s['actors'] if a['kind'] == 'tile']) == 120) and all((actor(s, e['id'])['present'] for e in f['enemies'])), 'All three actual floors and ordinary movement')",
+          "line": 242,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [
+        "entry in self.model['entries']"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "movement boundaries",
+      "leaves": [
+        "d3.movement"
+      ],
+      "requirement_ids": [
+        "FC-02",
+        "FC-03"
+      ],
+      "function": "bounds",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.movement', actor(s, 'player')['position']['x'] == 1 and n(s, 'turn') == 0 and (n(s, 'energy') == 4000), 'Wall move has no turn/cost')",
+          "line": 246,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.movement', actor(s, 'player')['position']['x'] == 1 and n(s, 'energy') == 3000 and (n(s, 'turn') == 1), 'Low energy forces a waiting turn')",
+          "line": 249,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.movement', xyz(actor(s, 'player')) == (2, 2, 0) and n(s, 'energy') == 3600, 'Diagonal cost includes400')",
+          "line": 251,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "combat and enemy turns",
+      "leaves": [
+        "d2.combat",
+        "d3.combat",
+        "d5.hud",
+        "d5.feedback"
+      ],
+      "requirement_ids": [
+        "FC-04",
+        "FC-05",
+        "FC-13"
+      ],
+      "function": "combat",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d2.combat', not actor(s, 'enemy_0')['present'] and (not fact(r, 'enemy_0').get('active', False)) and visible(r, 'player'), 'Normal bump kills real enemy root')",
+          "line": 256,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.combat', n(s, 'potions') == 4 and xyz(actor(s, 'player')) == (1, 1, 0) and (n(s, 'energy') == 3600), 'Damage2/reward cap4/no move into victim')",
+          "line": 257,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d5.hud', hud_number(r, 'potions', n(s, 'potions')), 'Actual potion balance has matching rendered HUD label')",
+          "line": 258,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d5.feedback', text(before) != text(r) and bool(re.search('hit|attack|kill|damage', text(r), re.I)), 'Normal attack has rendered feedback')",
+          "line": 259,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.combat', n(s, 'hp') == 9 and actor(s, 'enemy_0')['present'], 'Live enemy turn causes real player damage')",
+          "line": 262,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "infection effects and recovery",
+      "leaves": [
+        "d2.infection",
+        "d3.infection"
+      ],
+      "requirement_ids": [
+        "FC-06",
+        "FC-08"
+      ],
+      "function": "infection",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d2.infection', n(s, 'infection') == infection and n(s, 'infection_turns') > 0, 'Distinct infection present in active gameplay')",
+          "line": 269,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.infection', n(s, 'infection_turns') == 4 and n(s, 'energy') == (2800 if infection == 1 else 3600) and (n(actor(s, 'enemy_0'), 'hp') == (3 if infection == 2 else 2)), 'Recovery duration, Slow cost and Weak damage')",
+          "line": 270,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [
+        "infection in [1, 2, 3]"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "shop prerequisites and stress loadout",
+      "leaves": [
+        "d2.powers",
+        "d3.powers",
+        "d5.feedback"
+      ],
+      "requirement_ids": [
+        "FC-07",
+        "FC-08"
+      ],
+      "function": "powers",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d3.powers', n(s, 'potions') == n(before, 'potions') and n(s, 'powers_mask') == 0, 'Prerequisite/insufficient purchase rejected atomically')",
+          "line": 281,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d5.feedback', bool(re.search('reject|need|require|insufficient|enough', text(r), re.I)), 'Shop rejection is visible')",
+          "line": 282,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d2.powers', int(n(s, 'powers_mask')) & 1 << p['id'] - 1 != 0, 'Nine actual normal-input purchases: ' + p['name'])",
+          "line": 278,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.powers', n(s, 'potions') == 4 - p['cost'], 'Exact purchase cost: ' + p['name'])",
+          "line": 279,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.powers', n(s, 'energy') == expected, 'Owned power active only in stress-eligible slot')",
+          "line": 286,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [
+        "p in self.content['powers']",
+        "(stress, expected) in [(0, 1000), (1, 1200)]"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "fungus pressure and beetles",
+      "leaves": [
+        "d2.pressure",
+        "d3.pressure"
+      ],
+      "requirement_ids": [
+        "FC-09"
+      ],
+      "function": "pressure",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d2.pressure', len(bs) == 4 and all((visible(r, a['id']) for a in bs)), 'Four actual beetles spawned by fungus-neighbor kill')",
+          "line": 291,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.pressure', n(s, 'beetle_counter') == 30 and all((n(a, 'potions') == 0 and n(a, 'hp') == 3 for a in bs)), 'Fungus pressure double decrement and reset')",
+          "line": 292,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "revival defeat and three floor exits",
+      "leaves": [
+        "d2.survival",
+        "d3.survival",
+        "d4.journey",
+        "d4.restart"
+      ],
+      "requirement_ids": [
+        "FC-05",
+        "FC-10",
+        "FC-11"
+      ],
+      "function": "survival",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d2.survival', (n(s, 'hp') > 0 if potions else n(s, 'hp') == 0) and s['phase'] == ('playing' if potions else 'lost'), 'Revival/defeat reached by normal enemy attack')",
+          "line": 299,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.survival', n(s, 'potions') == 0 and n(s, 'hp') == hp, 'Potion debit and mutated recovery HP')",
+          "line": 300,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.journey', s['phase'] == ('won' if floor == 3 else 'playing') and n(s, 'floor') == min(3, floor + 1) and (n(s, 'hp') == 7), 'Actual exit step links adjacent floors/final win')",
+          "line": 307,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d3.survival', n(s, 'potions') == 3, 'Floor transition carries survival resources')",
+          "line": 308,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.journey', after['phase'] == 'lost' and n(after, 'turn') == n(stable, 'turn'), 'No-potion loss is stable')",
+          "line": 302,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.restart', n(self.validate(r), 'hp') == 10 and n(self.validate(r), 'floor') == 1, 'Normal retry from defeat')",
+          "line": 303,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.restart', n(self.validate(r), 'floor') == 1 and n(self.validate(r), 'kills') == 0, 'Normal victory retry starts clean campaign')",
+          "line": 310,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [
+        "(potions, mutation, hp) in [(1, 0, 10), (1, 3, 5), (0, 0, 0)]",
+        "floor in range(1, 4)"
+      ],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "natural menu and start",
+      "leaves": [
+        "d4.entry",
+        "d5.controls"
+      ],
+      "requirement_ids": [
+        "FC-01"
+      ],
+      "function": "natural_start",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.entry', s['phase'] == 'playing', 'Natural button enters actual game')",
+          "line": 322,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d5.controls', s['phase'] == 'playing', 'Normal mouse hit real visible Start button and caused its advertised transition')",
+          "line": 323,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d5.overlays', bool(re.search('move|wasd|arrow|select|acceler|shift|click|instructions|controls|help', text(r), re.I)), 'Menu presents control instructions or a discoverable instructions control; no fixed wording/layout')",
+          "line": 320,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "independent pause resume escape",
+      "leaves": [
+        "d4.pause",
+        "d5.overlays"
+      ],
+      "requirement_ids": [
+        "FC-11"
+      ],
+      "function": "pause_flow",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.pause', before['phase'] == 'paused' and state(before) == state(after), 'Pause freezes real state despite delivered input/time')",
+          "line": 338,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d5.overlays', bool(re.search('paus', text(self.p.last), re.I)), 'Pause overlay visible')",
+          "line": 339,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.pause', self.validate(r)['phase'] == 'playing', 'Ordinary Resume releases pause')",
+          "line": 340,
+          "source": "session_core.py"
+        },
+        {
+          "assertion": "self.check('d4.pause', self.validate(r)['phase'] == 'paused', 'Escape also pauses normally')",
+          "line": 341,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "independent paused restart",
+      "leaves": [
+        "d4.restart"
+      ],
+      "requirement_ids": [
+        "FC-11"
+      ],
+      "function": "paused_restart",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.restart', s['phase'] == 'playing' and (n(s, 'turn') == 0 if self.game == 'fungus' else n(s, 'stars') == 300 if self.game == 'glitch' else n(s, 'countdown') > 2), 'Paused Retry clears local state')",
+          "line": 347,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "independent ordinary menu return",
+      "leaves": [
+        "d4.entry"
+      ],
+      "requirement_ids": [
+        "FC-11"
+      ],
+      "function": "menu_return",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.entry', self.validate(r)['phase'] == 'playing', 'Ordinary play/pause to Menu to Start without duplicate roots')",
+          "line": 351,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "service deep-copy and rejection",
+      "leaves": [
+        "d1.service"
+      ],
+      "requirement_ids": [
+        "DELIVERY"
+      ],
+      "function": "services",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d1.service', True, 'Detached capture and atomically rejected invalid service requests')",
+          "line": 357,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    },
+    {
+      "id": "real close new PID persistence",
+      "leaves": [
+        "d4.reopen"
+      ],
+      "requirement_ids": [
+        "FC-12"
+      ],
+      "function": "reopen",
+      "source": "session_core.py",
+      "assertions": [
+        {
+          "assertion": "self.check('d4.reopen', okay, 'Old PID exited; new player opens title with actual earned/manual persistent state')",
+          "line": 384,
+          "source": "session_core.py"
+        }
+      ],
+      "parameterization": [],
+      "preparation": "Candidate-owned Capture, only published legal edits; input-only execution after sealing."
+    }
+  ],
+  "d6": {
+    "requirement_id": "FC-13",
+    "scope": {
+      "state": "main-play-v1",
+      "review_model": "gpt-5.6-sol",
+      "rounds": 1,
+      "reference": "reference.png",
+      "scope": "Declared bounded adaptation and supplied art, not unannounced original asset/layout requirements."
+    }
+  },
+  "navigation_note": "Genuine ordinary UI can be reached by exact visible label when the published control identity is defective. Required service checks remain."
+}

@@ -1,0 +1,407 @@
+{
+  "game": "Tidal Lock",
+  "source": "Frozen original public input",
+  "data": [
+    {
+      "path": "starter-project/native/PUBLIC_SCHEMA.json",
+      "content": {
+        "contract_version": "tidal-lock-v1",
+        "workspace_attributes": {
+          "TLD_ContractVersion": {
+            "type": "string",
+            "required_value": "tidal-lock-v1"
+          },
+          "TLD_Ready": {
+            "type": "boolean",
+            "required_value": true
+          }
+        },
+        "tags": {
+          "TLD_CentralSpawn": {
+            "count": 1,
+            "class": "BasePart"
+          },
+          "TLD_PumpConsole": {
+            "count": 3,
+            "class": "BasePart",
+            "ids": [
+              "Prime",
+              "Balance",
+              "Vent"
+            ]
+          },
+          "TLD_LockChamber": {
+            "count": 2,
+            "class": "BasePart",
+            "locks": [
+              "Lock1",
+              "Lock2"
+            ]
+          },
+          "TLD_WaterPlane": {
+            "count": 2,
+            "class": "BasePart",
+            "locks": [
+              "Lock1",
+              "Lock2"
+            ]
+          },
+          "TLD_LevelMarker": {
+            "count": 6,
+            "class": "BasePart",
+            "locks": [
+              "Lock1",
+              "Lock2"
+            ],
+            "levels": [
+              "Low",
+              "Mid",
+              "High"
+            ]
+          },
+          "TLD_LevelConsole": {
+            "count": 4,
+            "class": "BasePart",
+            "locks": [
+              "Lock1",
+              "Lock2"
+            ],
+            "actions": [
+              "Fill",
+              "Drain"
+            ]
+          },
+          "TLD_Gate": {
+            "count": 4,
+            "class": "BasePart",
+            "locks": [
+              "Lock1",
+              "Lock2"
+            ],
+            "sides": [
+              "Upstream",
+              "Downstream"
+            ]
+          },
+          "TLD_Barge": {
+            "count": 1,
+            "class": "BasePart"
+          },
+          "TLD_MooringZone": {
+            "count": 5,
+            "class": "BasePart",
+            "ids": [
+              "Upstream",
+              "Lock1",
+              "Transfer",
+              "Lock2",
+              "Terminal"
+            ]
+          },
+          "TLD_AdvanceConsole": {
+            "count": 4,
+            "class": "BasePart",
+            "segments": [
+              "S1",
+              "S2",
+              "S3",
+              "S4"
+            ]
+          },
+          "TLD_MooringClamp": {
+            "count": 2,
+            "class": "BasePart",
+            "ids": [
+              "Port",
+              "Starboard"
+            ]
+          },
+          "TLD_DispatchConsole": {
+            "count": 1,
+            "class": "BasePart"
+          },
+          "TLD_Checkpoint": {
+            "count": 3,
+            "class": "BasePart",
+            "ids": [
+              "Lock1",
+              "Transfer",
+              "Terminal"
+            ]
+          },
+          "TLD_Hazard": {
+            "count": 1,
+            "class": "BasePart",
+            "ids": [
+              "Spill"
+            ]
+          }
+        },
+        "enums": {
+          "pump_order": [
+            "Prime",
+            "Balance",
+            "Vent"
+          ],
+          "level": [
+            "Low",
+            "Mid",
+            "High"
+          ],
+          "barge_location": [
+            "Upstream",
+            "Lock1",
+            "Transfer",
+            "Lock2",
+            "Terminal"
+          ],
+          "segment": [
+            "None",
+            "S1",
+            "S2",
+            "S3",
+            "S4"
+          ],
+          "checkpoint": [
+            "Central",
+            "Lock1",
+            "Transfer",
+            "Terminal"
+          ]
+        },
+        "level_transitions": {
+          "Lock1": [
+            [
+              "Low",
+              "High",
+              "Fill"
+            ],
+            [
+              "High",
+              "Mid",
+              "Drain"
+            ]
+          ],
+          "Lock2": [
+            [
+              "Low",
+              "Mid",
+              "Fill"
+            ],
+            [
+              "Mid",
+              "Low",
+              "Drain"
+            ]
+          ]
+        },
+        "gate_required_levels": {
+          "Lock1.Upstream": "High",
+          "Lock1.Downstream": "Mid",
+          "Lock2.Upstream": "Mid",
+          "Lock2.Downstream": "Low"
+        },
+        "barge_segments": {
+          "S1": {
+            "from": "Upstream",
+            "to": "Lock1",
+            "gate": "Lock1.Upstream",
+            "level": "High"
+          },
+          "S2": {
+            "from": "Lock1",
+            "to": "Transfer",
+            "gate": "Lock1.Downstream",
+            "level": "Mid"
+          },
+          "S3": {
+            "from": "Transfer",
+            "to": "Lock2",
+            "gate": "Lock2.Upstream",
+            "level": "Mid"
+          },
+          "S4": {
+            "from": "Lock2",
+            "to": "Terminal",
+            "gate": "Lock2.Downstream",
+            "level": "Low"
+          }
+        },
+        "player_attribute_types": {
+          "TLD_RunId": "number",
+          "TLD_PumpStep": "number",
+          "TLD_NextPump": "string",
+          "TLD_PrimeOn": "boolean",
+          "TLD_BalanceOn": "boolean",
+          "TLD_VentOn": "boolean",
+          "TLD_PumpOnline": "boolean",
+          "TLD_Lock1Level": "string",
+          "TLD_Lock1TargetLevel": "string",
+          "TLD_Lock1Transitioning": "boolean",
+          "TLD_Lock1Progress": "number",
+          "TLD_Lock2Level": "string",
+          "TLD_Lock2TargetLevel": "string",
+          "TLD_Lock2Transitioning": "boolean",
+          "TLD_Lock2Progress": "number",
+          "TLD_L1UpstreamOpen": "boolean",
+          "TLD_L1DownstreamOpen": "boolean",
+          "TLD_L2UpstreamOpen": "boolean",
+          "TLD_L2DownstreamOpen": "boolean",
+          "TLD_BargeLocation": "string",
+          "TLD_BargeMoving": "boolean",
+          "TLD_BargeSegment": "string",
+          "TLD_BargeProgress": "number",
+          "TLD_PortClamped": "boolean",
+          "TLD_StarboardClamped": "boolean",
+          "TLD_Checkpoint": "string",
+          "TLD_DeathCount": "number",
+          "TLD_Completed": "boolean",
+          "TLD_RunStart": "number",
+          "TLD_FinalTime": "number",
+          "TLD_EventSerial": "number",
+          "TLD_LastEvent": "string",
+          "TLD_FeedbackText": "string"
+        },
+        "event_families": {
+          "pump": [
+            "RunStarted",
+            "PumpWrong.Expected.<Prime|Balance|Vent>",
+            "PumpAlreadyOn.<Prime|Balance|Vent>",
+            "PumpStarted.<Prime|Balance|Vent>",
+            "PumpOnline"
+          ],
+          "level": [
+            "LevelRejected.PumpOffline.<Lock1|Lock2>",
+            "LevelRejected.GateOpen.<Lock1|Lock2>",
+            "LevelRejected.Busy.<Lock1|Lock2>",
+            "LevelRejected.InvalidDirection.<Lock1|Lock2>",
+            "LevelStarted.<Lock>.<Target>",
+            "LevelReached.<Lock>.<Target>"
+          ],
+          "gate": [
+            "GateRejected.LevelMismatch.<Lock>.<Side>",
+            "GateRejected.OtherGateOpen.<Lock>",
+            "GateRejected.Busy.<Lock>",
+            "GateOpened.<Lock>.<Side>",
+            "GateClosed.<Lock>.<Side>"
+          ],
+          "barge_and_dock": [
+            "BargeRejected.<S1|S2|S3|S4>",
+            "BargeDeparted.<S1|S2|S3|S4>",
+            "BargeArrived.<Lock1|Transfer|Lock2|Terminal>",
+            "ClampRejected.NotDocked.<Port|Starboard>",
+            "ClampRejected.Expected.Port",
+            "ClampAlreadyLocked.<Port|Starboard>",
+            "ClampLocked.<Port|Starboard>",
+            "DispatchRejected",
+            "Completed"
+          ],
+          "lifecycle": [
+            "CheckpointActivated.<Lock1|Transfer|Terminal>",
+            "HazardTriggered.Spill",
+            "Respawned.<Central|Lock1|Transfer|Terminal>",
+            "Restarted"
+          ]
+        },
+        "prompt": {
+          "key": "E",
+          "activation_distance_range": [
+            6,
+            14
+          ],
+          "maximum_hold_duration": 0.5
+        },
+        "geometry": {
+          "max_horizontal_distance_from_central": 175,
+          "max_target_height_delta": 2,
+          "minimum_walk_width": 12,
+          "minimum_headroom": 8,
+          "minimum_interaction_footprint": [
+            7,
+            7
+          ],
+          "minimum_prompt_separation": 14,
+          "water_marker_tolerance": 1.5,
+          "barge_zone_radius": 10,
+          "checkpoint_hazard_distance_range": [
+            12,
+            35
+          ],
+          "minimum_hazard_footprint": [
+            8,
+            8
+          ],
+          "respawn_radius": 16,
+          "central_restart_radius": 24
+        },
+        "timing": {
+          "ready_timeout_seconds": 10,
+          "level_duration_range_seconds": [
+            3,
+            5
+          ],
+          "barge_duration_range_seconds": [
+            3,
+            5
+          ],
+          "door_transition_timeout_seconds": 2,
+          "hazard_death_timeout_seconds": 1,
+          "restart_timeout_seconds": 2,
+          "minimum_feedback_visible_seconds": 1.5
+        },
+        "required_player_attributes": [
+          "TLD_RunId",
+          "TLD_PumpStep",
+          "TLD_NextPump",
+          "TLD_PrimeOn",
+          "TLD_BalanceOn",
+          "TLD_VentOn",
+          "TLD_PumpOnline",
+          "TLD_Lock1Level",
+          "TLD_Lock1TargetLevel",
+          "TLD_Lock1Transitioning",
+          "TLD_Lock1Progress",
+          "TLD_Lock2Level",
+          "TLD_Lock2TargetLevel",
+          "TLD_Lock2Transitioning",
+          "TLD_Lock2Progress",
+          "TLD_L1UpstreamOpen",
+          "TLD_L1DownstreamOpen",
+          "TLD_L2UpstreamOpen",
+          "TLD_L2DownstreamOpen",
+          "TLD_BargeLocation",
+          "TLD_BargeMoving",
+          "TLD_BargeSegment",
+          "TLD_BargeProgress",
+          "TLD_PortClamped",
+          "TLD_StarboardClamped",
+          "TLD_Checkpoint",
+          "TLD_DeathCount",
+          "TLD_Completed",
+          "TLD_RunStart",
+          "TLD_FinalTime",
+          "TLD_EventSerial",
+          "TLD_LastEvent",
+          "TLD_FeedbackText"
+        ]
+      }
+    },
+    {
+      "path": "starter-project/native/TaskAssets/VISUAL_PALETTE.json",
+      "content": {
+        "name": "Tidal Lock Dispatch public palette",
+        "colors": {
+          "background": "#101923",
+          "structure": "#344554",
+          "water": "#1FAFC3",
+          "active": "#33D6C2",
+          "industrial": "#F0B84A",
+          "hazard": "#E6534B",
+          "complete": "#55D66B",
+          "text": "#F2F6F8"
+        },
+        "note": "Recommended visual palette; semantic protocol and readability requirements remain authoritative."
+      }
+    }
+  ]
+}

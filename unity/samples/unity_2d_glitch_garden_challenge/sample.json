@@ -1,0 +1,203 @@
+{
+  "schema_version": "2.0",
+  "sample_id": "unity_2d_glitch_garden_challenge",
+  "sample_version": "1.0.0-open-release",
+  "title": "Glitch Garden",
+  "game_family": "unity_2d_glitch_garden_challenge",
+  "release_status": "packaged",
+  "engine": {
+    "name": "Unity",
+    "version": "6000.0.80f1",
+    "cli_version": "1.0.0-beta.3"
+  },
+  "input_revision": "unity_2d_glitch_garden_challenge-v1-20261029",
+  "input_source_directory": "input",
+  "input_layout": "frozen-project-root",
+  "input_locations": {
+    "prompt": "input/INITIAL_AGENT_PROMPT.md",
+    "design": "input/GDD.md",
+    "tools": "input/UNITY_BENCHMARK_TOOL_GUIDE.md",
+    "assets": "input/Assets",
+    "starter_project": "input",
+    "contracts": "input/Packages",
+    "self_check": "input/Assets"
+  },
+  "evaluator_version": "1.2.1+portable.2.release1",
+  "native_evaluator_version": "1.2.1",
+  "backend_directory": "evaluation/src/backend",
+  "native_subdirectory": "",
+  "native_entry": "evaluate.py",
+  "native_project_argument": "--project",
+  "native_output_argument": "--output",
+  "accepts_engine_arguments": true,
+  "coverage_status": "not_reviewed",
+  "dimension_requirements": {
+    "D1": [
+      "GG-01",
+      "GG-02",
+      "GG-03",
+      "GG-04",
+      "GG-05",
+      "GG-06",
+      "GG-07",
+      "GG-08",
+      "GG-09",
+      "GG-10"
+    ],
+    "D2": [
+      "GG-01",
+      "GG-02",
+      "GG-03",
+      "GG-04",
+      "GG-05",
+      "GG-06",
+      "GG-07",
+      "GG-08",
+      "GG-09",
+      "GG-10"
+    ],
+    "D3": [
+      "GG-01",
+      "GG-02",
+      "GG-03",
+      "GG-04",
+      "GG-05",
+      "GG-06",
+      "GG-07",
+      "GG-08",
+      "GG-09",
+      "GG-10"
+    ],
+    "D4": [
+      "GG-01",
+      "GG-02",
+      "GG-03",
+      "GG-04",
+      "GG-05",
+      "GG-06",
+      "GG-07",
+      "GG-08",
+      "GG-09",
+      "GG-10"
+    ],
+    "D5": [
+      "GG-01",
+      "GG-02",
+      "GG-03",
+      "GG-04",
+      "GG-05",
+      "GG-06",
+      "GG-07",
+      "GG-08",
+      "GG-09",
+      "GG-10"
+    ],
+    "D6": [
+      "GG-01",
+      "GG-02",
+      "GG-03",
+      "GG-04",
+      "GG-05",
+      "GG-06",
+      "GG-07",
+      "GG-08",
+      "GG-09",
+      "GG-10"
+    ]
+  },
+  "required_files": [
+    "input/GDD.md",
+    "input/INITIAL_AGENT_PROMPT.md",
+    "input/UNITY_BENCHMARK_TOOL_GUIDE.md",
+    "input/Packages/manifest.json",
+    "input/ProjectSettings/ProjectVersion.txt",
+    "evaluation/evaluate.py",
+    "evaluation/rules.json",
+    "evaluation/coverage.json",
+    "evaluation/score.schema.json",
+    "evaluation/validate_score.py",
+    "evaluation/src/backend/evaluate.py"
+  ],
+  "generation_boundary": "Only an independent copy of input is supplied to the construction model. Never supply evaluation.",
+  "excluded": [
+    "original",
+    "gold",
+    "model projects",
+    "generation traces",
+    "API keys",
+    "previous scores",
+    "engine caches"
+  ],
+  "format_status": "dependency_packaged",
+  "complete_score_requires": [
+    "native execution valid",
+    "coverage qualification for this evaluator",
+    "all six dimensions with valid visual evidence"
+  ],
+  "environment": {
+    "os": "Windows 10/11 x64",
+    "runtime": "Python 3.9+; PowerShell 7; Unity 6000.0.80f1; Unity CLI 1.0.0-beta.3",
+    "setup_commands": [
+      [
+        "python",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "evaluation/requirements.txt"
+      ]
+    ],
+    "credential_environment_variables": [
+      "GAMECREATE_REVIEW_BASE_URL",
+      "GAMECREATE_REVIEW_API_KEY",
+      "GAMECREATE_REVIEW_ACTOR"
+    ],
+    "output_path_note": "Use a short result path on Windows when long-path support is disabled. Setup failures are infrastructure failures, not zero candidate scores."
+  },
+  "input": {
+    "path": "input/",
+    "prompt": "input/INITIAL_AGENT_PROMPT.md",
+    "design": "input/GDD.md",
+    "tools": "input/UNITY_BENCHMARK_TOOL_GUIDE.md",
+    "assets": "input/Assets",
+    "starter_project": "input",
+    "contracts": "input/Packages",
+    "self_check": "input/Assets"
+  },
+  "submission": {
+    "type": "complete_project"
+  },
+  "evaluation": {
+    "version": "1.2.1+portable.2.release1",
+    "command": [
+      "python",
+      "-B",
+      "evaluation/evaluate.py",
+      "--project",
+      "{project}",
+      "--output",
+      "{output}",
+      "--editor",
+      "{editor}",
+      "--unity-cli",
+      "{unity_cli}"
+    ],
+    "rules": "evaluation/rules.json",
+    "coverage": "evaluation/coverage.json",
+    "result_schema": "evaluation/score.schema.json",
+    "result_file": "score.json",
+    "max_score": 100,
+    "visual_review": "--review-d6 with environment-only credentials; one frozen state/round",
+    "entry": "evaluation/evaluate.py",
+    "result_format_version": "2.1"
+  },
+  "sources": [
+    {
+      "url": "https://github.com/CompleteUnityDeveloper/07-Glitch-Garden",
+      "revision": "c3fcf4a1750a16db0f952dfa3272573f84d492f2",
+      "license": "MIT",
+      "adaptation_scope": "Complete multi-level five-lane resource-defense game, not just tower placement or one wave.",
+      "notice": "THIRD_PARTY_NOTICES.md"
+    }
+  ]
+}

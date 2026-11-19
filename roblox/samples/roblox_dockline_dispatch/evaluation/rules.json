@@ -1,0 +1,91 @@
+{
+  "native_rules": {
+    "schema_version": "dockline-dispatch-simplified-rules-v2",
+    "source_scoring_guide_sha256": "FC52D97A72DA8447A049597FF0B4DC8D2A11EAFF80A0FF58069BDC36F01802E3",
+    "scoring_formula": "dimension points * passed checkpoints / total checkpoints",
+    "simplification_note": "Large non-duplicative checkpoints per scoring guide section 4; D1-D6 weights unchanged.",
+    "dimensions": [
+      {
+        "id": "D1",
+        "name": "Engineering Validity & Engine Integration",
+        "points": 10,
+        "method": "static only",
+        "checkpoints": [
+          "d1.package_integrity",
+          "d1.source_compile",
+          "d1.rojo_clean_build",
+          "d1.delivered_place_integrity",
+          "d1.studio_open_smoke"
+        ]
+      },
+      {
+        "id": "D2",
+        "name": "Specification Fulfillment & Content Completeness",
+        "points": 30,
+        "method": "live Play with OS input and engine state",
+        "checkpoints": [
+          "d2.world_and_protocol",
+          "d2.package_processing",
+          "d2.routing_and_recovery",
+          "d2.pallet_checkpoint",
+          "d2.hazard_and_final"
+        ]
+      },
+      {
+        "id": "D3",
+        "name": "Gameplay Correctness & System Behavior",
+        "points": 20,
+        "method": "live Play with positive and negative rules",
+        "checkpoints": [
+          "d3.initial_and_rejection",
+          "d3.processing_routing_rules",
+          "d3.pallet_hazard_rules",
+          "d3.final_rules"
+        ]
+      },
+      {
+        "id": "D4",
+        "name": "End-to-End Flow & Lifecycle Integrity",
+        "points": 20,
+        "method": "live Play success/recovery plus separate clean Reopen",
+        "checkpoints": [
+          "d4.start_and_restart",
+          "d4.packages_to_staging",
+          "d4.complete_success_flow",
+          "d4.reopen_clean_session"
+        ]
+      },
+      {
+        "id": "D5",
+        "name": "Interface Functionality & Player Feedback",
+        "points": 10,
+        "method": "live HUD objects and feedback state",
+        "checkpoints": [
+          "d5.input_and_hud",
+          "d5.stage_and_rejection_feedback",
+          "d5.completion_feedback"
+        ]
+      },
+      {
+        "id": "D6",
+        "name": "Visual Assembly & Presentation Fidelity",
+        "points": 10,
+        "method": "independent Reference/Candidate image pairs, fixed VLM prompt, three complete rounds",
+        "checkpoints": [
+          "d6.visual_three_round_mean"
+        ]
+      }
+    ]
+  },
+  "native_source": "src/original/",
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "D6_protocol": "d6/protocol.json",
+  "scoring_logic_modified": false
+}

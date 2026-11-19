@@ -1,0 +1,221 @@
+{
+  "assets": [
+    {
+      "path": "Assets/TaskAssets/grass.png",
+      "role": "grass",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "e7c18d91a9bc851169c9bfc279bd69dc8a15fb4d1bd50514f5b425ec193cf01c"
+    },
+    {
+      "path": "Assets/TaskAssets/cactus.png",
+      "role": "cactus",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "f021b4176b79e49c3a9ed6fd358ffdff720ae29ecc08557e2e44a0a25a32d8ac"
+    },
+    {
+      "path": "Assets/TaskAssets/gnome.png",
+      "role": "gnome",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "cbca0845a81237aa5ae88d28ea737b0db34b030fd47de72727c064a81ad620c5"
+    },
+    {
+      "path": "Assets/TaskAssets/gravestone.png",
+      "role": "gravestone",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "208b229c6697661953fefa6d4c8f34192645cf2f77572ad93687d902921f08f5"
+    },
+    {
+      "path": "Assets/TaskAssets/trophy.png",
+      "role": "trophy",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "933e4c4cc4f76e4412d07850683345eb18465be92b7152cc62ae98b5bffccee3"
+    },
+    {
+      "path": "Assets/TaskAssets/lizard.png",
+      "role": "lizard",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "cc74950fc2f9aa2370ff569fae4edf4f3c302aa71474fcc35b896c888d0a44bc"
+    },
+    {
+      "path": "Assets/TaskAssets/fox.png",
+      "role": "fox",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "eeffa0ea58cd16085f271653c1f068162eb64d087339f8772f8ed2dbd4620236"
+    },
+    {
+      "path": "Assets/TaskAssets/projectile.png",
+      "role": "projectile",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "69e3d426e8134e1138294240897e3110585de028c32e60914532500afd265945"
+    },
+    {
+      "path": "Assets/TaskAssets/star.png",
+      "role": "star",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "6bc80668d59744480c3db04b104e2d8c56aec8438901d8c2fa45c103b9168e5e"
+    },
+    {
+      "path": "Assets/Resources/UIRenderDependencies.prefab",
+      "role": "Inactive script-free uGUI/built-in font rendering dependency, not gameplay or scene composition",
+      "license": "Unity built-in engine resource dependency; no external font copied",
+      "dependencies": [
+        "UnityEngine.UI.Text",
+        "Unity built-in LegacyRuntime font"
+      ],
+      "sha256": "f77284bd8bcdd9edb9b7d63b186c465d369f06d94f85a8b50673cc19cd6970ee"
+    }
+  ]
+}

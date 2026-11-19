@@ -1,0 +1,16 @@
+Dockline Dispatch DEVELOPMENT_TRACE
+
+Generation window start:
+Generation window end:
+Candidate task name or link:
+
+Record each major observable development action in chronological order. A tool call and its final result form one entry. Do not invent Studio Play or runtime observations that did not occur.
+
+Entry format:
+- timestamp or sequence:
+- action:
+- result:
+- files affected:
+- status: success / failed / partial
+
+Final handoff marker:

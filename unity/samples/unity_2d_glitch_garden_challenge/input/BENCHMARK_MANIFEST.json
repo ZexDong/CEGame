@@ -1,0 +1,67 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "unity_2d_glitch_garden_challenge.v1",
+  "input_version": "unity_2d_glitch_garden_challenge-v1-20261029",
+  "unity_editor": "6000.0.80f1",
+  "unity_cli": "1.0.0-beta.3",
+  "starter_scene": "Assets/Starter/Scenes/Starter.unity",
+  "required_final_scene": "Assets/Game/Scenes/Game.unity",
+  "target_resolution": [
+    1280,
+    720
+  ],
+  "public_session_required": true,
+  "session_contract": "GameCreate.Session.IGameSession",
+  "session_contract_version": "game-session/v1",
+  "session_model": "SESSION_MODEL.json",
+  "session_spec": "GAME_SESSION_SPEC.md",
+  "observation_surfaces": [
+    "game-session/v1"
+  ],
+  "public_test_suites": [
+    {
+      "mode": "PlayMode",
+      "filter": "GameCreate.Session.PublicChecks",
+      "expected_tests": 4,
+      "assembly": "Assets/SessionSelfCheck/GameCreate.Session.PublicChecks.asmdef"
+    }
+  ],
+  "asset_manifest": "ASSET_MANIFEST.json",
+  "asset_catalog": "ASSET_CATALOG.json",
+  "asset_contact_sheet": "ASSET_CONTACT_SHEET.png",
+  "network_required": false,
+  "writable_paths": [
+    "Assets/Game/**",
+    "ProjectSettings/EditorBuildSettings.asset",
+    "ProjectSettings/ProjectSettings.asset",
+    "ProjectSettings/GraphicsSettings.asset",
+    "ProjectSettings/QualitySettings.asset",
+    "Logs/**"
+  ],
+  "protected_paths": [
+    "ASSET_CATALOG.json",
+    "ASSET_CATALOG.md",
+    "ASSET_CONTACT_SHEET.png",
+    "ASSET_MANIFEST.json",
+    "Assets/Resources/**",
+    "Assets/Resources/content.json",
+    "Assets/Resources/session-model.json",
+    "Assets/SessionSelfCheck/**",
+    "Assets/Starter/**",
+    "Assets/TaskAssets/**",
+    "BENCHMARK_MANIFEST.json",
+    "COMMON_BASELINE.md",
+    "CONTENT.json",
+    "GAME_SESSION_SPEC.md",
+    "GDD.md",
+    "INITIAL_AGENT_PROMPT.md",
+    "Packages/**",
+    "Packages/com.gamecreate.game-session/**",
+    "ProjectSettings/ProjectVersion.txt",
+    "README.md",
+    "SESSION_MODEL.json",
+    "TOOLCHAIN.md",
+    "UNITY_BENCHMARK_TOOL_GUIDE.md",
+    "legal/**"
+  ]
+}

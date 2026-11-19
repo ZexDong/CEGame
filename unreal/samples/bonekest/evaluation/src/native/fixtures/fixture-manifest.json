@@ -1,0 +1,43 @@
+{
+  "version": "bonemaze-private-fixture-1.0",
+  "transport": "../../../../engine/shared/state-fixture",
+  "observation_transport_remains_read_only": true,
+  "allowlisted_precursors": [
+    "room",
+    "monster_room",
+    "lives",
+    "scrolls",
+    "coins",
+    "keys",
+    "anchor",
+    "slot",
+    "pickup_id",
+    "distance",
+    "local_position"
+  ],
+  "forbidden": [
+    "verdict",
+    "hit/damage call",
+    "pickup/reward call",
+    "cast call",
+    "win/loss call",
+    "Restart call",
+    "monster-turn call",
+    "direct test outcome"
+  ],
+  "isolation": "New isolated assessment copy and nonce per run; public Restart with changed round identity before each atomic case. Reopen has a new process.",
+  "setup_acceptance": [
+    "source/adapter hashes",
+    "native before/after receipt",
+    "fresh public snapshot",
+    "contemporaneous capture",
+    "non-allowlisted state invariants"
+  ],
+  "unknown_mapping": "authoring blocker/run_invalid; never candidate failure",
+  "adapters": [
+    "GoldAdapter.cpp",
+    "DsHarnessAdapter.cpp",
+    "StarterAdapter.cpp"
+  ],
+  "setup_scope": "Separate evaluation-copy adapters prepare declared preconditions; normal input produces the tested outcome."
+}

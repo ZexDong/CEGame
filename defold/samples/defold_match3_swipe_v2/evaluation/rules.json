@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "task_id": "defold_match3_swipe_v2",
+  "input_revision": "frozen-2026-11-10",
+  "status": "frozen",
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "checks": [
+    {
+      "id": "D1.PROJECT",
+      "dimension": "D1",
+      "weight": 2,
+      "requirements": [
+        "CB-01"
+      ],
+      "evidence_method": "static",
+      "description": "There is an independent game.project entrance"
+    },
+    {
+      "id": "D1.BUILD",
+      "dimension": "D1",
+      "weight": 3,
+      "requirements": [
+        "CB-01"
+      ],
+      "evidence_method": "static",
+      "description": "isolated copy is fixed Bob the tool chain is built successfully"
+    },
+    {
+      "id": "D1.START",
+      "dimension": "D1",
+      "weight": 3,
+      "requirements": [
+        "CB-02"
+      ],
+      "evidence_method": "static",
+      "description": "native process is started and a read-only snapshot is released"
+    },
+    {
+      "id": "D1.CONTRACT",
+      "dimension": "D1",
+      "weight": 2,
+      "requirements": [
+        "M3-OBSERVE-01"
+      ],
+      "evidence_method": "static",
+      "description": "the complete observed trajectory is consistent Dashboard v3"
+    },
+    {
+      "id": "D2.MENU",
+      "dimension": "D2",
+      "weight": 1,
+      "requirements": [
+        "M3-CAMPAIGN-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "the menu and the new campaign entrance can operate normally"
+    },
+    {
+      "id": "D2.BOARD",
+      "dimension": "D2",
+      "weight": 2,
+      "requirements": [
+        "M3-BOARD-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "the current chapter board\u3001obstacles and goals are built according to public data Stand"
+    },
+    {
+      "id": "D2.INPUT",
+      "dimension": "D2",
+      "weight": 1,
+      "requirements": [
+        "M3-INPUT-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "Normal direction input drives the whole board exchange"
+    },
+    {
+      "id": "D2.POINTER",
+      "dimension": "D2",
+      "weight": 1,
+      "requirements": [
+        "M3-INPUT-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "Real board dragging can complete legal actions"
+    },
+    {
+      "id": "D2.CHAPTERS",
+      "dimension": "D2",
+      "weight": 2,
+      "requirements": [
+        "M3-CAMPAIGN-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "The data and target differences in the three chapters are actually entered"
+    },
+    {
+      "id": "D2.RESULTS",
+      "dimension": "D2",
+      "weight": 1,
+      "requirements": [
+        "M3-END-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "The level and battle result entrances are real"
+    },
+    {
+      "id": "D3.GESTURE",
+      "dimension": "D3",
+      "weight": 1,
+      "requirements": [
+        "M3-INPUT-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "Short dragging and dragging outside the board do not consume steps"
+    },
+    {
+      "id": "D3.CASCADE",
+      "dimension": "D3",
+      "weight": 3,
+      "requirements": [
+        "M3-SWAP-01",
+        "M3-MATCH-01",
+        "M3-POWER-01",
+        "M3-REFILL-01",
+        "M3-SCORE-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "Swapping\u3001Matching\u3001Line rewards\u3001Supplement\u3001The random cursor and scoring are consistent with independent recalculation"
+    },
+    {
+      "id": "D3.ICE",
+      "dimension": "D3",
+      "weight": 2,
+      "requirements": [
+        "M3-ICE-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "Ice layers are deducted in batches and participate in chapter objectives"
+    },
+    {
+      "id": "D3.STONE",
+      "dimension": "D3",
+      "weight": 2,
+      "requirements": [
+        "M3-STONE-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "The stones cannot be removed and the gravity is correctly segmented"
+    },
+    {
+      "id": "D3.GOALS",
+      "dimension": "D3",
+      "weight": 2,
+      "requirements": [
+        "M3-GOAL-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "After stabilization, it is judged according to the composite goal of this chapter"
+    },
+    {
+      "id": "D3.PAUSE",
+      "dimension": "D3",
+      "weight": 1,
+      "requirements": [
+        "M3-PAUSE-01"
+      ],
+      "evidence_method": "input_read",
+      "description": "The freeze is suspended during settlement and no additional actions are accepted"
+    },
+    {
+      "id": "D4.CHAPTERS",
+      "dimension": "D4",
+      "weight": 3,
+      "requirements": [
+        "M3-CAMPAIGN-01",
+        "M3-COMMIT-01"
+      ],
+      "evidence_method": "lifecycle",
+      "description": "Three chapters are completed in sequence and each is submitted once"
+    },
+    {
+      "id": "D4.SUCCESS",
+      "dimension": "D4",
+      "weight": 2,
+      "requirements": [
+        "M3-END-01"
+      ],
+      "evidence_method": "lifecycle",
+      "description": "Normal input completes the entire campaign"
+    },
+    {
+      "id": "D4.FAILURE",
+      "dimension": "D4",
+      "weight": 1,
+      "requirements": [
+        "M3-END-01"
+      ],
+      "evidence_method": "lifecycle",
+      "description": "Normal input runs out of steps and fails."
+    },
+    {
+      "id": "D4.RETRY",
+      "dimension": "D4",
+      "weight": 1,
+      "requirements": [
+        "M3-RESET-01"
+      ],
+      "evidence_method": "lifecycle",
+      "description": "Within the level Retry Rebuild this chapter and keep the previous chapter"
+    },
+    {
+      "id": "D4.REOPEN",
+      "dimension": "D4",
+      "weight": 1,
+      "requirements": [
+        "M3-PERSIST-01"
+      ],
+      "evidence_method": "lifecycle",
+      "description": "After closing and reopening Continue Resume the next chapter"
+    },
+    {
+      "id": "D4.ORDER",
+      "dimension": "D4",
+      "weight": 1,
+      "requirements": [
+        "M3-CLEAN-01"
+      ],
+      "evidence_method": "lifecycle",
+      "description": "Repeat Next and completed state Continue Do not skip the level or re-submit"
+    },
+    {
+      "id": "D4.RESET",
+      "dimension": "D4",
+      "weight": 1,
+      "requirements": [
+        "M3-PERSIST-01"
+      ],
+      "evidence_method": "lifecycle",
+      "description": "Cancel the retention of the new campaign\u3001Clear the file after confirmation"
+    },
+    {
+      "id": "D5.MENU",
+      "dimension": "D5",
+      "weight": 1,
+      "requirements": [
+        "M3-UI-01"
+      ],
+      "evidence_method": "visual",
+      "description": "Menu screenshots are not empty and the entrance is visible"
+    },
+    {
+      "id": "D5.HUD",
+      "dimension": "D5",
+      "weight": 2,
+      "requirements": [
+        "M3-UI-01"
+      ],
+      "evidence_method": "visual",
+      "description": "Chessboard goal\u3001Scores and steps are readable on the real screen"
+    },
+    {
+      "id": "D5.PAUSE",
+      "dimension": "D5",
+      "weight": 1,
+      "requirements": [
+        "M3-PAUSE-01",
+        "M3-UI-01"
+      ],
+      "evidence_method": "visual",
+      "description": "Pause layer and controls are actually visible"
+    },
+    {
+      "id": "D5.RESULT",
+      "dimension": "D5",
+      "weight": 1,
+      "requirements": [
+        "M3-UI-01"
+      ],
+      "evidence_method": "visual",
+      "description": "Level and campaign result screens are actually visible"
+    }
+  ]
+}

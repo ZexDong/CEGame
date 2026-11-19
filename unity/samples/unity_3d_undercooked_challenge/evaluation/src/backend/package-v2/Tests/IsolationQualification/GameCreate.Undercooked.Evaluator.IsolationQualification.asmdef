@@ -1,0 +1,5 @@
+{
+ "name":"GameCreate.Undercooked.Evaluator.IsolationQualification",
+ "references":["GameCreate.Undercooked.Evaluator.Core","GameCreate.Evaluation.Session"],
+ "includePlatforms":[],"optionalUnityReferences":["TestAssemblies"],"autoReferenced":false
+}

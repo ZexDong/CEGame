@@ -1,0 +1,515 @@
+{
+  "width": 12,
+  "height": 10,
+  "floors": [
+    {
+      "id": "floor_1",
+      "rows": [
+        "############",
+        "#....#.....#",
+        "#.~..#..f..#",
+        "#....#.....#",
+        "#..........#",
+        "#..f...~~..#",
+        "#..........#",
+        "#..~.......#",
+        "#P........X#",
+        "############"
+      ],
+      "enemies": [
+        {
+          "id": "enemy_0",
+          "x": 10,
+          "y": 5,
+          "hp": 6,
+          "damage": 1,
+          "potions": 1,
+          "type": "corpse"
+        },
+        {
+          "id": "enemy_1",
+          "x": 9,
+          "y": 7,
+          "hp": 8,
+          "damage": 1,
+          "potions": 1,
+          "type": "fly"
+        },
+        {
+          "id": "enemy_2",
+          "x": 1,
+          "y": 4,
+          "hp": 4,
+          "damage": 1,
+          "potions": 1,
+          "type": "ooze"
+        },
+        {
+          "id": "enemy_3",
+          "x": 7,
+          "y": 6,
+          "hp": 6,
+          "damage": 1,
+          "potions": 1,
+          "type": "corpse"
+        },
+        {
+          "id": "enemy_4",
+          "x": 8,
+          "y": 2,
+          "hp": 8,
+          "damage": 1,
+          "potions": 1,
+          "type": "fly"
+        },
+        {
+          "id": "enemy_5",
+          "x": 2,
+          "y": 5,
+          "hp": 4,
+          "damage": 1,
+          "potions": 1,
+          "type": "ooze"
+        },
+        {
+          "id": "enemy_6",
+          "x": 3,
+          "y": 8,
+          "hp": 6,
+          "damage": 1,
+          "potions": 1,
+          "type": "corpse"
+        },
+        {
+          "id": "enemy_7",
+          "x": 5,
+          "y": 3,
+          "hp": 8,
+          "damage": 1,
+          "potions": 1,
+          "type": "fly"
+        },
+        {
+          "id": "enemy_8",
+          "x": 9,
+          "y": 3,
+          "hp": 4,
+          "damage": 1,
+          "potions": 1,
+          "type": "ooze"
+        },
+        {
+          "id": "enemy_9",
+          "x": 9,
+          "y": 5,
+          "hp": 6,
+          "damage": 1,
+          "potions": 1,
+          "type": "corpse"
+        },
+        {
+          "id": "enemy_10",
+          "x": 4,
+          "y": 4,
+          "hp": 8,
+          "damage": 1,
+          "potions": 1,
+          "type": "fly"
+        },
+        {
+          "id": "enemy_11",
+          "x": 1,
+          "y": 6,
+          "hp": 4,
+          "damage": 1,
+          "potions": 1,
+          "type": "ooze"
+        }
+      ],
+      "exit": [
+        10,
+        1
+      ],
+      "spawn": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "floor_2",
+      "rows": [
+        "############",
+        "#....#.....#",
+        "#.f..#..~..#",
+        "#....#.....#",
+        "#..........#",
+        "#..~~..f...#",
+        "#..........#",
+        "#..~.......#",
+        "#P........X#",
+        "############"
+      ],
+      "enemies": [
+        {
+          "id": "enemy_0",
+          "x": 4,
+          "y": 6,
+          "hp": 8,
+          "damage": 1,
+          "potions": 1,
+          "type": "corpse"
+        },
+        {
+          "id": "enemy_1",
+          "x": 10,
+          "y": 7,
+          "hp": 4,
+          "damage": 1,
+          "potions": 1,
+          "type": "fly"
+        },
+        {
+          "id": "enemy_2",
+          "x": 7,
+          "y": 3,
+          "hp": 6,
+          "damage": 1,
+          "potions": 1,
+          "type": "ooze"
+        },
+        {
+          "id": "enemy_3",
+          "x": 5,
+          "y": 3,
+          "hp": 8,
+          "damage": 1,
+          "potions": 1,
+          "type": "corpse"
+        },
+        {
+          "id": "enemy_4",
+          "x": 10,
+          "y": 6,
+          "hp": 4,
+          "damage": 1,
+          "potions": 1,
+          "type": "fly"
+        },
+        {
+          "id": "enemy_5",
+          "x": 6,
+          "y": 8,
+          "hp": 6,
+          "damage": 1,
+          "potions": 1,
+          "type": "ooze"
+        },
+        {
+          "id": "enemy_6",
+          "x": 8,
+          "y": 5,
+          "hp": 8,
+          "damage": 1,
+          "potions": 1,
+          "type": "corpse"
+        },
+        {
+          "id": "enemy_7",
+          "x": 3,
+          "y": 8,
+          "hp": 4,
+          "damage": 1,
+          "potions": 1,
+          "type": "fly"
+        },
+        {
+          "id": "enemy_8",
+          "x": 7,
+          "y": 7,
+          "hp": 6,
+          "damage": 1,
+          "potions": 1,
+          "type": "ooze"
+        },
+        {
+          "id": "enemy_9",
+          "x": 8,
+          "y": 1,
+          "hp": 8,
+          "damage": 1,
+          "potions": 1,
+          "type": "corpse"
+        },
+        {
+          "id": "enemy_10",
+          "x": 6,
+          "y": 5,
+          "hp": 4,
+          "damage": 1,
+          "potions": 1,
+          "type": "fly"
+        },
+        {
+          "id": "enemy_11",
+          "x": 9,
+          "y": 7,
+          "hp": 6,
+          "damage": 1,
+          "potions": 1,
+          "type": "ooze"
+        },
+        {
+          "id": "enemy_12",
+          "x": 9,
+          "y": 4,
+          "hp": 8,
+          "damage": 1,
+          "potions": 1,
+          "type": "corpse"
+        },
+        {
+          "id": "enemy_13",
+          "x": 3,
+          "y": 7,
+          "hp": 4,
+          "damage": 1,
+          "potions": 1,
+          "type": "fly"
+        }
+      ],
+      "exit": [
+        10,
+        1
+      ],
+      "spawn": [
+        1,
+        1
+      ]
+    },
+    {
+      "id": "floor_3",
+      "rows": [
+        "############",
+        "#....#.....#",
+        "#.~..#..f..#",
+        "#.f..#..~~.#",
+        "#..........#",
+        "#..f...~~..#",
+        "#..~...f...#",
+        "#..~.......#",
+        "#P........X#",
+        "############"
+      ],
+      "enemies": [
+        {
+          "id": "enemy_0",
+          "x": 6,
+          "y": 3,
+          "hp": 4,
+          "damage": 2,
+          "potions": 1,
+          "type": "corpse"
+        },
+        {
+          "id": "enemy_1",
+          "x": 7,
+          "y": 7,
+          "hp": 6,
+          "damage": 2,
+          "potions": 1,
+          "type": "fly"
+        },
+        {
+          "id": "enemy_2",
+          "x": 7,
+          "y": 8,
+          "hp": 8,
+          "damage": 2,
+          "potions": 1,
+          "type": "ooze"
+        },
+        {
+          "id": "enemy_3",
+          "x": 9,
+          "y": 8,
+          "hp": 4,
+          "damage": 2,
+          "potions": 1,
+          "type": "corpse"
+        },
+        {
+          "id": "enemy_4",
+          "x": 6,
+          "y": 4,
+          "hp": 6,
+          "damage": 2,
+          "potions": 1,
+          "type": "fly"
+        },
+        {
+          "id": "enemy_5",
+          "x": 5,
+          "y": 2,
+          "hp": 8,
+          "damage": 2,
+          "potions": 1,
+          "type": "ooze"
+        },
+        {
+          "id": "enemy_6",
+          "x": 1,
+          "y": 7,
+          "hp": 4,
+          "damage": 2,
+          "potions": 1,
+          "type": "corpse"
+        },
+        {
+          "id": "enemy_7",
+          "x": 8,
+          "y": 5,
+          "hp": 6,
+          "damage": 2,
+          "potions": 1,
+          "type": "fly"
+        },
+        {
+          "id": "enemy_8",
+          "x": 4,
+          "y": 3,
+          "hp": 8,
+          "damage": 2,
+          "potions": 1,
+          "type": "ooze"
+        },
+        {
+          "id": "enemy_9",
+          "x": 4,
+          "y": 8,
+          "hp": 4,
+          "damage": 2,
+          "potions": 1,
+          "type": "corpse"
+        },
+        {
+          "id": "enemy_10",
+          "x": 2,
+          "y": 3,
+          "hp": 6,
+          "damage": 2,
+          "potions": 1,
+          "type": "fly"
+        },
+        {
+          "id": "enemy_11",
+          "x": 4,
+          "y": 5,
+          "hp": 8,
+          "damage": 2,
+          "potions": 1,
+          "type": "ooze"
+        },
+        {
+          "id": "enemy_12",
+          "x": 2,
+          "y": 5,
+          "hp": 4,
+          "damage": 2,
+          "potions": 1,
+          "type": "corpse"
+        },
+        {
+          "id": "enemy_13",
+          "x": 1,
+          "y": 8,
+          "hp": 6,
+          "damage": 2,
+          "potions": 1,
+          "type": "fly"
+        },
+        {
+          "id": "enemy_14",
+          "x": 9,
+          "y": 7,
+          "hp": 8,
+          "damage": 2,
+          "potions": 1,
+          "type": "ooze"
+        },
+        {
+          "id": "enemy_15",
+          "x": 1,
+          "y": 6,
+          "hp": 4,
+          "damage": 2,
+          "potions": 1,
+          "type": "corpse"
+        }
+      ],
+      "exit": [
+        10,
+        1
+      ],
+      "spawn": [
+        1,
+        1
+      ]
+    }
+  ],
+  "powers": [
+    {
+      "id": 1,
+      "name": "Vigor",
+      "cost": 2,
+      "prerequisite": 0
+    },
+    {
+      "id": 2,
+      "name": "Immunity",
+      "cost": 2,
+      "prerequisite": 0
+    },
+    {
+      "id": 3,
+      "name": "First Aid",
+      "cost": 2,
+      "prerequisite": 0
+    },
+    {
+      "id": 4,
+      "name": "Adrenaline",
+      "cost": 4,
+      "prerequisite": 1
+    },
+    {
+      "id": 5,
+      "name": "Fast Heal",
+      "cost": 4,
+      "prerequisite": 2
+    },
+    {
+      "id": 6,
+      "name": "Patient Zero",
+      "cost": 4,
+      "prerequisite": 3
+    },
+    {
+      "id": 7,
+      "name": "Siphon",
+      "cost": 4,
+      "prerequisite": 0
+    },
+    {
+      "id": 8,
+      "name": "Plague",
+      "cost": 4,
+      "prerequisite": 0
+    },
+    {
+      "id": 9,
+      "name": "Bleed",
+      "cost": 4,
+      "prerequisite": 0
+    }
+  ]
+}

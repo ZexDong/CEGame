@@ -1,0 +1,173 @@
+{
+  "sample_id": "roblox_reactor_relay_protocol",
+  "document_type": "Original GDD and evaluator source index",
+  "new_evaluation_requirement": false,
+  "requirements": [
+    {
+      "requirement_id": "RR-GDD-1",
+      "obligation": "1 One Sentence Task",
+      "source_line": 17,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-2",
+      "obligation": "2 Scope",
+      "source_line": 21,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-3",
+      "obligation": "2.1 Required Scope",
+      "source_line": 23,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-4",
+      "obligation": "2.2 Excluded Scope",
+      "source_line": 34,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-5",
+      "obligation": "3 Starting State",
+      "source_line": 42,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-6",
+      "obligation": "4 Player Goal and Complete Flow",
+      "source_line": 53,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-7",
+      "obligation": "4.1 Player Goal",
+      "source_line": 55,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-8",
+      "obligation": "4.2 Complete Player Flow",
+      "source_line": 59,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-9",
+      "obligation": "4.3 Main Loop",
+      "source_line": 63,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-10",
+      "obligation": "5 Player Operations",
+      "source_line": 67,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-11",
+      "obligation": "6 Numbered Requirements",
+      "source_line": 82,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-12",
+      "obligation": "6.1 Requirement Table",
+      "source_line": 86,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-13",
+      "obligation": "6.2 Frozen Deterministic Data",
+      "source_line": 129,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-14",
+      "obligation": "7 Success Failure and Stages",
+      "source_line": 156,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-15",
+      "obligation": "7.1 Success",
+      "source_line": 158,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-16",
+      "obligation": "7.2 Failure",
+      "source_line": 164,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-17",
+      "obligation": "7.3 Stage Summary",
+      "source_line": 171,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-18",
+      "obligation": "8 Interface and Feedback",
+      "source_line": 180,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-19",
+      "obligation": "9 Restart Reopen and Saving",
+      "source_line": 192,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-20",
+      "obligation": "10 Existing Functions",
+      "source_line": 199,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-21",
+      "obligation": "11 Assets and Content",
+      "source_line": 203,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-22",
+      "obligation": "12 Dashboard Naming and Operation",
+      "source_line": 210,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-23",
+      "obligation": "12.1 Numeric Slots",
+      "source_line": 214,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-24",
+      "obligation": "12.2 Entities and Clickable Targets",
+      "source_line": 234,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-25",
+      "obligation": "12.3 Operation Declaration",
+      "source_line": 250,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-26",
+      "obligation": "13 Implementation Boundary",
+      "source_line": 258,
+      "native_evaluator_sources": "src/original/"
+    },
+    {
+      "requirement_id": "RR-GDD-27",
+      "obligation": "14 Requirement Index",
+      "source_line": 264,
+      "native_evaluator_sources": "src/original/"
+    }
+  ],
+  "original_coverage_files": [
+    "src/original/requirement-coverage.json"
+  ],
+  "existing_evaluators_preserved": true
+}

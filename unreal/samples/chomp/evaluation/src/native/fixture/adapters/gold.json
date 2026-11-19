@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "source": "gold.cpp",
+  "source_sha256": "d75c6ef84c21dddd5deb2fcf5b769a4d1d547254297a13946f4ddf5ee624ce52",
+  "candidate_identity": "9df9346ae2a5b29a0e09d8eb8ade0b0cc37d1d26f6c13a5f6b0349769c027855",
+  "module": "ChompStarter",
+  "review": {
+    "lookup": "engine-owned current GameMode; semantic state mapped only in this private file",
+    "forbidden_outcome_calls": false,
+    "atomic_prevalidation": true,
+    "public_observer_unchanged": true
+  },
+  "kind": "gold"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 3,
+  "benchmark_id": "unity.arrow_escape_reconstruction.v2",
+  "input_revision": "v2.6-tool-interface-catalog-3600s-20260826",
+  "network_download_required": false,
+  "asset_catalog": "ASSET_CATALOG.json",
+  "asset_coverage": "ASSET_COVERAGE.json",
+  "asset_contact_sheet": "ASSET_CONTACT_SHEET.png",
+  "asset_usage_guide": "ASSET_CATALOG.md",
+  "provided_assets": [
+    {
+      "path": "Assets/BenchmarkStarter/Art",
+      "purpose": "Protected optional board, arrow, HUD, Hint, Restart and Next Level source textures; exact per-file facts are in ASSET_CATALOG.json",
+      "editable": false,
+      "runtime_import_ready": false
+    },
+    {
+      "path": "TaskAssets/badges/key_badge.png",
+      "purpose": "Required key-state badge source",
+      "required_destination": "Assets/ArrowEscapeBenchmark/Art/Imported/key_badge.png",
+      "editable": false
+    },
+    {
+      "path": "TaskAssets/badges/lock_badge.png",
+      "purpose": "Required locked-state badge source",
+      "required_destination": "Assets/ArrowEscapeBenchmark/Art/Imported/lock_badge.png",
+      "editable": false
+    },
+    {
+      "path": "TaskAssets/reference/sample_dependency_level.json",
+      "purpose": "Data-shape example only; create equivalent saved Unity level data and do not load this file at runtime",
+      "editable": false
+    }
+  ],
+  "restrictions": {
+    "additional_downloads": false,
+    "runtime_absolute_file_loading": false,
+    "modify_protected_source_assets": false,
+    "pixel_perfect_matching": false,
+    "contact_sheet_is_final_composition": false
+  }
+}

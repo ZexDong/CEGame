@@ -1,0 +1,151 @@
+{
+  "contract_version": "dockline-dispatch-v1",
+  "ready_timeout_seconds": 12,
+  "workspace_attributes": {
+    "DD_ContractVersion": {"type": "string", "required_value": "dockline-dispatch-v1"},
+    "DD_Ready": {"type": "boolean", "required_value": true}
+  },
+  "tags": {
+    "DD_CentralSpawn": {"count": 1, "classes": ["BasePart", "SpawnLocation"]},
+    "DD_GameState": {"count": 1, "classes": ["Configuration"]},
+    "DD_Interactable": {"count": 30, "classes": ["BasePart"], "id_attribute": "DD_InteractionId"},
+    "DD_CarryItem": {"count": 4, "classes": ["BasePart", "Model"], "id_attribute": "DD_ItemId"},
+    "DD_Package": {"count": 3, "classes": ["BasePart", "Model"], "id_attribute": "DD_PackageId"},
+    "DD_ItemStation": {"count": 13, "classes": ["BasePart"], "id_attribute": "DD_StationId"},
+    "DD_StagingBay": {"count": 3, "classes": ["BasePart"], "id_attribute": "DD_BayId"},
+    "DD_Hazard": {"count": 1, "classes": ["BasePart"], "id_attribute": "DD_HazardId"},
+    "DD_SafeZone": {"count": 1, "classes": ["BasePart"], "id_attribute": "DD_ZoneId"},
+    "DD_NavNode": {"minimum_count": 18, "maximum_count": 55, "classes": ["BasePart"], "id_attribute": "DD_NodeId"},
+    "DD_NavLink": {"minimum_count": 20, "maximum_count": 100, "classes": ["Configuration"], "id_attribute": "DD_LinkId"},
+    "DD_HUDField": {"count": 13, "classes": ["GuiObject"], "id_attribute": "DD_FieldId"}
+  },
+  "interaction_ids": [
+    "Manifest.StartShift",
+    "Inbound.Pickup.Glass", "Inbound.Pickup.Cold", "Inbound.Pickup.Cipher",
+    "Inspection.Scanner", "Process.FragileWrap", "Process.ColdCondition",
+    "Secure.AuthStart", "Secure.Key.Delta", "Secure.Key.Alpha", "Secure.Key.Charlie",
+    "Measure.Scale", "Label.Printer", "Conveyor.Load",
+    "Routing.Diverter.One", "Routing.Diverter.Two", "Conveyor.Dispatch", "Reject.Return",
+    "Staging.Pickup.A", "Staging.Pickup.B", "Staging.Pickup.C",
+    "Pallet.Slot.Cipher", "Pallet.Slot.Glass", "Pallet.Slot.Cold", "Pallet.SealPickup",
+    "Checkpoint.SealShelf", "Truck.SealSocket", "Final.Code.2", "Final.Code.4", "Final.Code.1"
+  ],
+  "item_ids": ["GlassCrate", "ColdCase", "CipherBox", "DispatchSeal"],
+  "package_ids": ["GlassCrate", "ColdCase", "CipherBox"],
+  "item_states": ["Unavailable", "Available", "Inbound", "Carried", "Scanned", "Processed", "Weighed", "Labeled", "OnConveyor", "Rejected", "Staged", "Palletized", "Installed"],
+  "package_states": ["Inbound", "Carried", "Scanned", "Processed", "Weighed", "Labeled", "OnConveyor", "Rejected", "Staged", "Palletized"],
+  "item_station_ids": [
+    "InboundGlass", "InboundCold", "InboundCipher", "ScannerPad", "FragileWrapPad",
+    "ColdConditionPad", "SecureAuthPad", "ScalePad", "LabelPad", "ConveyorLoadPad",
+    "RejectBuffer", "PalletSealOutput", "SealShelf"
+  ],
+  "bay_ids": ["A", "B", "C"],
+  "hazard_ids": ["ForkliftLane"],
+  "safe_zone_ids": ["ForkliftWait"],
+  "packages": {
+    "GlassCrate": {"required_process": "FragileWrap", "expected_weight": 3, "route_id": "B", "bay_id": "B"},
+    "ColdCase": {"required_process": "ColdCondition", "expected_weight": 5, "route_id": "C", "bay_id": "C"},
+    "CipherBox": {"required_process": "SecureAuth", "expected_weight": 8, "route_id": "A", "bay_id": "A"}
+  },
+  "carry_item_attributes": {
+    "DD_ItemId": {"type": "string", "enum": ["GlassCrate", "ColdCase", "CipherBox", "DispatchSeal"]},
+    "DD_ItemState": {"type": "string", "enum": ["Unavailable", "Available", "Inbound", "Carried", "Scanned", "Processed", "Weighed", "Labeled", "OnConveyor", "Rejected", "Staged", "Palletized", "Installed"]},
+    "DD_HolderUserId": {"type": "number_integer", "initial": 0},
+    "DD_HomeStationId": {"type": "string"},
+    "DD_ApproachNodeId": {"type": "string"}
+  },
+  "orders": {
+    "secure_auth": ["Delta", "Alpha", "Charlie"],
+    "pallet_load": ["CipherBox", "GlassCrate", "ColdCase"],
+    "final_code": ["2", "4", "1"]
+  },
+  "routes": {
+    "A": {"diverter_one": "Left", "diverter_two": "Left"},
+    "B": {"diverter_one": "Left", "diverter_two": "Right"},
+    "C": {"diverter_one": "Right", "diverter_two": "Right"}
+  },
+  "package_attributes": {
+    "DD_PackageId": {"type": "string"},
+    "DD_PackageState": {"type": "string", "initial": "Inbound"},
+    "DD_RequiredProcess": {"type": "string"},
+    "DD_RouteId": {"type": "string"},
+    "DD_ExpectedWeight": {"type": "number"},
+    "DD_Scanned": {"type": "boolean", "initial": false},
+    "DD_ProcessComplete": {"type": "boolean", "initial": false},
+    "DD_MeasuredWeight": {"type": "number", "initial": 0},
+    "DD_LabelRouteId": {"type": "string", "initial": "None"},
+    "DD_HolderUserId": {"type": "number_integer", "initial": 0},
+    "DD_HomeStationId": {"type": "string"},
+    "DD_ApproachNodeId": {"type": "string"}
+  },
+  "game_state_attributes": {
+    "DD_ProtocolVersion": {"type": "string", "initial": "dockline-dispatch-v1"},
+    "DD_RunId": {"type": "number_integer", "minimum_initial": 1},
+    "DD_RunStatus": {"type": "string", "initial": "AwaitingStart", "enum": ["AwaitingStart", "InProgress", "Completed"]},
+    "DD_Phase": {"type": "string", "initial": "AwaitingStart", "enum": ["AwaitingStart", "ProcessPackages", "Routing", "Pallet", "Dispatch", "Completed"]},
+    "DD_CarryItemId": {"type": "string", "initial": "None", "enum": ["None", "GlassCrate", "ColdCase", "CipherBox", "DispatchSeal"]},
+    "DD_GlassState": {"type": "string", "initial": "Inbound"},
+    "DD_ColdState": {"type": "string", "initial": "Inbound"},
+    "DD_CipherState": {"type": "string", "initial": "Inbound"},
+    "DD_AuthState": {"type": "string", "initial": "Idle", "enum": ["Idle", "Running", "Complete"]},
+    "DD_AuthProgress": {"type": "number_integer", "initial": 0, "range": [0, 3]},
+    "DD_DiverterOne": {"type": "string", "initial": "Left", "enum": ["Left", "Right"]},
+    "DD_DiverterTwo": {"type": "string", "initial": "Left", "enum": ["Left", "Right"]},
+    "DD_ConveyorState": {"type": "string", "initial": "Empty", "enum": ["Empty", "Loaded", "Moving"]},
+    "DD_ConveyorPackageId": {"type": "string", "initial": "None", "enum": ["None", "GlassCrate", "ColdCase", "CipherBox"]},
+    "DD_StagedCount": {"type": "number_integer", "initial": 0, "range": [0, 3]},
+    "DD_RejectCount": {"type": "number_integer", "initial": 0},
+    "DD_PalletState": {"type": "string", "initial": "Waiting", "enum": ["Waiting", "Loading", "Complete"]},
+    "DD_PalletProgress": {"type": "number_integer", "initial": 0, "range": [0, 3]},
+    "DD_CheckpointId": {"type": "string", "initial": "Start", "enum": ["Start", "SealShelf"]},
+    "DD_HazardState": {"type": "string", "enum": ["Safe", "Active"]},
+    "DD_HazardEpoch": {"type": "number", "minimum_initial": 0},
+    "DD_SealInstalled": {"type": "boolean", "initial": false},
+    "DD_FinalCodeProgress": {"type": "number_integer", "initial": 0, "range": [0, 3]},
+    "DD_FinalCodeDeadline": {"type": "number", "initial": 0},
+    "DD_ObjectiveId": {"type": "string", "initial": "Start.Shift"},
+    "DD_DeathCount": {"type": "number_integer", "initial": 0},
+    "DD_RunStart": {"type": "number", "initial": 0},
+    "DD_FinalTime": {"type": "number", "initial": 0},
+    "DD_EventSeq": {"type": "number_integer", "minimum_initial": 1},
+    "DD_LastEvent": {"type": "string", "initial": "RunPrepared"},
+    "DD_LastSourceId": {"type": "string", "initial": "Game"},
+    "DD_LastRejectCode": {"type": "string", "initial": "None"},
+    "DD_FeedbackText": {"type": "string", "initial_nonempty": true}
+  },
+  "hud_field_ids": ["Objective", "Shift", "Packages", "CarryItem", "Scanner", "Auth", "Routing", "Conveyor", "Pallet", "Hazard", "Checkpoint", "Timer", "Feedback"],
+  "node_roles": ["Spawn", "Transit", "Approach", "SafeWait", "Checkpoint", "Goal"],
+  "nav_link": {
+    "class": "Configuration",
+    "attributes_only": ["DD_LinkId", "DD_FromNodeId", "DD_ToNodeId", "DD_Enabled", "DD_Bidirectional"],
+    "forbidden_roblox_properties": ["Enabled", "Attachment0", "Attachment1"]
+  },
+  "prompt": {
+    "key": "E",
+    "activation_distance_range": [7, 12],
+    "tap_hold_duration_range": [0, 0.35],
+    "fragile_wrap_hold_seconds": 1.5,
+    "cold_condition_hold_seconds": 2.0
+  },
+  "hazard_cycle": {"period_seconds": 7, "safe_seconds": 3, "active_seconds": 4, "phase_origin": "DD_HazardEpoch", "phase_tolerance_seconds": 0.25},
+  "timing": {
+    "minimum_feedback_visible_seconds": 1.5,
+    "conveyor_result_timeout_seconds": 3.0,
+    "hazard_death_timeout_seconds": 1.0,
+    "restart_timeout_seconds": 2.0,
+    "final_code_window_seconds": 20.0
+  },
+  "movement": {"normal_walk_speed": 16, "seal_carry_walk_speed": 13, "speed_tolerance": 0.5},
+  "geometry": {
+    "minimum_route_width": 10,
+    "minimum_hazard_width": 12,
+    "minimum_headroom": 8,
+    "maximum_approach_height_delta": 2,
+    "maximum_nav_edge_length": 70,
+    "nav_node_size_xz_minimum": [2, 2],
+    "nav_node_ground_offset_range": [2.5, 4.5],
+    "carried_item_radius_from_root": 8,
+    "station_item_radius": 10,
+    "maximum_final_code_distance_from_socket": 35
+  }
+}

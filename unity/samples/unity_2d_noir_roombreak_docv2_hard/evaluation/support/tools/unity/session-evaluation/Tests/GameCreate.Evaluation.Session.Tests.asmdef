@@ -1,0 +1,6 @@
+{
+  "name": "GameCreate.Evaluation.Session.Tests",
+  "references": ["GameCreate.Evaluation.Session", "GameCreate.Session"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": false
+}

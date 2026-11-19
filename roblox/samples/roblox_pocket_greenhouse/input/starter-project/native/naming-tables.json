@@ -1,0 +1,45 @@
+{
+  "contract_id": "game-state-dashboard-roblox",
+  "contract_revision": "v2-roblox-1",
+  "task_id": "pocket-greenhouse-v2",
+  "slots": {
+    "day": { "type": "number", "min": 1, "max": 4 },
+    "coins": { "type": "number", "min": 0 },
+    "water": { "type": "number", "min": 0, "max": 4 },
+    "sunberry_inventory": { "type": "number", "min": 0 },
+    "moonleaf_inventory": { "type": "number", "min": 0 },
+    "selected_plot": { "type": "number", "allowed": [0, 1, 2, 3] }
+  },
+  "entities": {
+    "required_unique_kinds": ["plot_1", "plot_2", "plot_3"],
+    "position_mode": "none",
+    "allowed_states": [
+      "empty",
+      "sunberry_stage0_dry",
+      "sunberry_stage0_watered",
+      "sunberry_stage1_dry",
+      "sunberry_stage1_watered",
+      "sunberry_ripe",
+      "moonleaf_stage0_dry",
+      "moonleaf_stage0_watered",
+      "moonleaf_ripe"
+    ]
+  },
+  "targets": {
+    "required_kinds": [
+      "plot_1",
+      "plot_2",
+      "plot_3",
+      "start_button",
+      "plant_sunberry_button",
+      "plant_moonleaf_button",
+      "water_button",
+      "harvest_button",
+      "end_day_button",
+      "deliver_button",
+      "restart_button"
+    ],
+    "rect_format": ["x", "y", "width", "height"],
+    "coordinate_space": "current Roblox playable viewport pixels"
+  }
+}

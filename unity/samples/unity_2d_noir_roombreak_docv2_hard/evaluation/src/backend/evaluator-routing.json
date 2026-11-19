@@ -1,0 +1,1088 @@
+{
+  "schema_version": 1,
+  "evaluator_revision": "2026.09.24-noir-public-session-r9.12-runtime-log-isolation",
+  "checkpoint_script_status": "manifest_only_migration_shadow",
+  "checkpoint_script_executed_by_runner": false,
+  "policy": "Each scored leaf has exactly one primary handwritten C# sidecar route and is counted once. The checkpoint script is a manifest-only migration shadow; Probe, rendering and Dashboard evidence may corroborate but never duplicate a leaf.",
+  "leaf_count": 69,
+  "routes": [
+    {
+      "check_id": "D1_IMPORT_COMPILE",
+      "dimension": "D1",
+      "weight": 2.0,
+      "requirements": [
+        "COMMON-BASELINE"
+      ],
+      "primary_route": {
+        "phase": "static",
+        "test_name": "STATIC01_LoadCompileCameraAndRuntimeEntry",
+        "trajectory_id": "STATIC01",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D1_FINAL_SCENE",
+      "dimension": "D1",
+      "weight": 2.0,
+      "requirements": [
+        "COMMON-BASELINE",
+        "FLOW-01",
+        "CAMERA-01"
+      ],
+      "primary_route": {
+        "phase": "static",
+        "test_name": "STATIC01_LoadCompileCameraAndRuntimeEntry",
+        "trajectory_id": "STATIC01",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D1_DASHBOARD_CONTRACT",
+      "dimension": "D1",
+      "weight": 2.0,
+      "requirements": [
+        "COMMON-BASELINE"
+      ],
+      "primary_route": {
+        "phase": "static",
+        "test_name": "STATIC01_LoadCompileCameraAndRuntimeEntry",
+        "trajectory_id": "STATIC01",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D1_DASHBOARD_PROBE_CROSSCHECK",
+      "dimension": "D1",
+      "weight": 2.0,
+      "requirements": [
+        "COMMON-BASELINE"
+      ],
+      "primary_route": {
+        "phase": "static",
+        "test_name": "STATIC01_LoadCompileCameraAndRuntimeEntry",
+        "trajectory_id": "STATIC01",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D1_REAL_FRAME",
+      "dimension": "D1",
+      "weight": 2.0,
+      "requirements": [
+        "COMMON-BASELINE",
+        "FLOW-01",
+        "AV-01"
+      ],
+      "primary_route": {
+        "phase": "static",
+        "test_name": "STATIC01_LoadCompileCameraAndRuntimeEntry",
+        "trajectory_id": "STATIC01",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_MENU",
+      "dimension": "D2",
+      "weight": 1.5,
+      "requirements": [
+        "FLOW-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ01_MenuStartMovementAndHud",
+        "trajectory_id": "TRAJ01",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_FIVE_ROOMS",
+      "dimension": "D2",
+      "weight": 2.0,
+      "requirements": [
+        "WORLD-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ06_CompleteJourneyResultRestartAndDirtyClose",
+        "trajectory_id": "TRAJ06",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_MOVE_JUMP",
+      "dimension": "D2",
+      "weight": 1.5,
+      "requirements": [
+        "MOVE-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ01_MenuStartMovementAndHud",
+        "trajectory_id": "TRAJ01",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_BACKSTAB",
+      "dimension": "D2",
+      "weight": 1.75,
+      "requirements": [
+        "COMBAT-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ02_AndaAndBackstab",
+        "trajectory_id": "TRAJ02",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_DASH",
+      "dimension": "D2",
+      "weight": 1.75,
+      "requirements": [
+        "DASH-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ03_DashDamageAndBoundaries",
+        "trajectory_id": "TRAJ03",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_ANDA",
+      "dimension": "D2",
+      "weight": 1.75,
+      "requirements": [
+        "ANDA-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ02_AndaAndBackstab",
+        "trajectory_id": "TRAJ02",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_OBSER",
+      "dimension": "D2",
+      "weight": 1.75,
+      "requirements": [
+        "OBSER-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ04_ObserCameraAndPause",
+        "trajectory_id": "TRAJ04",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_LETHAL_DAMAGE",
+      "dimension": "D2",
+      "weight": 1.5,
+      "requirements": [
+        "DAMAGE-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ03_DashDamageAndBoundaries",
+        "trajectory_id": "TRAJ03",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_SOFT_RESPAWN",
+      "dimension": "D2",
+      "weight": 1.5,
+      "requirements": [
+        "RESPAWN-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ05_SoftAndGlobalRespawn",
+        "trajectory_id": "TRAJ05",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_GLOBAL_RESPAWN",
+      "dimension": "D2",
+      "weight": 1.5,
+      "requirements": [
+        "RESPAWN-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ05_SoftAndGlobalRespawn",
+        "trajectory_id": "TRAJ05",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_ROOM_CAMERA",
+      "dimension": "D2",
+      "weight": 1.5,
+      "requirements": [
+        "CAMERA-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ04_ObserCameraAndPause",
+        "trajectory_id": "TRAJ04",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_PAUSE",
+      "dimension": "D2",
+      "weight": 1.5,
+      "requirements": [
+        "PAUSE-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ04_ObserCameraAndPause",
+        "trajectory_id": "TRAJ04",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_SUCCESS",
+      "dimension": "D2",
+      "weight": 1.75,
+      "requirements": [
+        "SUCCESS-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ06_CompleteJourneyResultRestartAndDirtyClose",
+        "trajectory_id": "TRAJ06",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_UI_STATES",
+      "dimension": "D2",
+      "weight": 1.5,
+      "requirements": [
+        "UI-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ01_MenuStartMovementAndHud",
+        "trajectory_id": "TRAJ01",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_AV_ASSEMBLY",
+      "dimension": "D2",
+      "weight": 1.75,
+      "requirements": [
+        "AV-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ01_MenuStartMovementAndHud",
+        "trajectory_id": "TRAJ01",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_MIXED_ENCOUNTER",
+      "dimension": "D2",
+      "weight": 2.0,
+      "requirements": [
+        "MIXED-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ09_FinalMixedEncounterGate",
+        "trajectory_id": "TRAJ09",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_TIMED_PAUSE",
+      "dimension": "D2",
+      "weight": 1.5,
+      "requirements": [
+        "PAUSE-TIME-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ08_TimedPauseDuringLiveThreat",
+        "trajectory_id": "TRAJ08",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D2_INPUT_EDGE_MODEL",
+      "dimension": "D2",
+      "weight": 2.0,
+      "requirements": [
+        "INPUT-EDGE-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ07_DashboardAndInputEdges",
+        "trajectory_id": "TRAJ07",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_INITIAL_STATE",
+      "dimension": "D3",
+      "weight": 0.75,
+      "requirements": [
+        "FLOW-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ01_MenuStartMovementAndHud",
+        "trajectory_id": "TRAJ01",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_MOVE_COLLISION",
+      "dimension": "D3",
+      "weight": 0.75,
+      "requirements": [
+        "MOVE-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ01_MenuStartMovementAndHud",
+        "trajectory_id": "TRAJ01",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_BACKSTAB_BOUNDARY",
+      "dimension": "D3",
+      "weight": 0.75,
+      "requirements": [
+        "COMBAT-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ02_AndaAndBackstab",
+        "trajectory_id": "TRAJ02",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_BACKSTAB_CHARGE",
+      "dimension": "D3",
+      "weight": 0.75,
+      "requirements": [
+        "COMBAT-01",
+        "DASH-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ02_AndaAndBackstab",
+        "trajectory_id": "TRAJ02",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_DASH_COST",
+      "dimension": "D3",
+      "weight": 0.75,
+      "requirements": [
+        "DASH-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ03_DashDamageAndBoundaries",
+        "trajectory_id": "TRAJ03",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_ZERO_DASH_REJECT",
+      "dimension": "D3",
+      "weight": 0.75,
+      "requirements": [
+        "DASH-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ03_DashDamageAndBoundaries",
+        "trajectory_id": "TRAJ03",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_DASH_INVULNERABILITY",
+      "dimension": "D3",
+      "weight": 0.75,
+      "requirements": [
+        "DASH-01",
+        "DAMAGE-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ03_DashDamageAndBoundaries",
+        "trajectory_id": "TRAJ03",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_ANDA_TRANSITIONS",
+      "dimension": "D3",
+      "weight": 0.75,
+      "requirements": [
+        "ANDA-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ02_AndaAndBackstab",
+        "trajectory_id": "TRAJ02",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_OBSER_WARNING_ORDER",
+      "dimension": "D3",
+      "weight": 0.75,
+      "requirements": [
+        "OBSER-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ04_ObserCameraAndPause",
+        "trajectory_id": "TRAJ04",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_ONE_HIT_DEATH",
+      "dimension": "D3",
+      "weight": 0.75,
+      "requirements": [
+        "DAMAGE-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ03_DashDamageAndBoundaries",
+        "trajectory_id": "TRAJ03",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_SOFT_RESPAWN_RULES",
+      "dimension": "D3",
+      "weight": 0.75,
+      "requirements": [
+        "RESPAWN-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ05_SoftAndGlobalRespawn",
+        "trajectory_id": "TRAJ05",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_GLOBAL_RESPAWN_RULES",
+      "dimension": "D3",
+      "weight": 0.75,
+      "requirements": [
+        "RESPAWN-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ05_SoftAndGlobalRespawn",
+        "trajectory_id": "TRAJ05",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_CAMERA_BOUNDARY",
+      "dimension": "D3",
+      "weight": 0.75,
+      "requirements": [
+        "CAMERA-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ04_ObserCameraAndPause",
+        "trajectory_id": "TRAJ04",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_PAUSE_FREEZE",
+      "dimension": "D3",
+      "weight": 0.75,
+      "requirements": [
+        "PAUSE-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ04_ObserCameraAndPause",
+        "trajectory_id": "TRAJ04",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_SUCCESS_CONDITION",
+      "dimension": "D3",
+      "weight": 0.75,
+      "requirements": [
+        "SUCCESS-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ06_CompleteJourneyResultRestartAndDirtyClose",
+        "trajectory_id": "TRAJ06",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_RESTART_CLEAN",
+      "dimension": "D3",
+      "weight": 0.75,
+      "requirements": [
+        "RESTART-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ06_CompleteJourneyResultRestartAndDirtyClose",
+        "trajectory_id": "TRAJ06",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_MIXED_CONCURRENT_THREATS",
+      "dimension": "D3",
+      "weight": 1.0,
+      "requirements": [
+        "MIXED-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ09_FinalMixedEncounterGate",
+        "trajectory_id": "TRAJ09",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_MIXED_EXIT_LOCK",
+      "dimension": "D3",
+      "weight": 1.0,
+      "requirements": [
+        "MIXED-01",
+        "SUCCESS-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ09_FinalMixedEncounterGate",
+        "trajectory_id": "TRAJ09",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_MIXED_CROSS_THREAT_WINDOW",
+      "dimension": "D3",
+      "weight": 1.0,
+      "requirements": [
+        "MIXED-01",
+        "ANDA-01",
+        "OBSER-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ09_FinalMixedEncounterGate",
+        "trajectory_id": "TRAJ09",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_PAUSE_UNSCALED_FREEZE",
+      "dimension": "D3",
+      "weight": 1.0,
+      "requirements": [
+        "PAUSE-TIME-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ08_TimedPauseDuringLiveThreat",
+        "trajectory_id": "TRAJ08",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_PAUSE_NO_BUFFER",
+      "dimension": "D3",
+      "weight": 1.0,
+      "requirements": [
+        "PAUSE-TIME-01",
+        "INPUT-EDGE-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ08_TimedPauseDuringLiveThreat",
+        "trajectory_id": "TRAJ08",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_ONE_PRESS_ONE_INTENT",
+      "dimension": "D3",
+      "weight": 1.0,
+      "requirements": [
+        "INPUT-EDGE-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ07_DashboardAndInputEdges",
+        "trajectory_id": "TRAJ07",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_REJECTED_ACTION_SIDE_EFFECT_FREE",
+      "dimension": "D3",
+      "weight": 1.0,
+      "requirements": [
+        "INPUT-EDGE-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ07_DashboardAndInputEdges",
+        "trajectory_id": "TRAJ07",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D3_INPUT_REUSABLE_AFTER_RESTARTS",
+      "dimension": "D3",
+      "weight": 1.0,
+      "requirements": [
+        "INPUT-EDGE-01",
+        "DASH-01",
+        "MOVE-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ07_DashboardAndInputEdges",
+        "trajectory_id": "TRAJ07",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D4_START",
+      "dimension": "D4",
+      "weight": 1.5,
+      "requirements": [
+        "FLOW-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ01_MenuStartMovementAndHud",
+        "trajectory_id": "TRAJ01",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D4_ROOM_PROGRESSION",
+      "dimension": "D4",
+      "weight": 2.5,
+      "requirements": [
+        "WORLD-01",
+        "CAMERA-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ06_CompleteJourneyResultRestartAndDirtyClose",
+        "trajectory_id": "TRAJ06",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D4_COMPLETE_JOURNEY",
+      "dimension": "D4",
+      "weight": 3.0,
+      "requirements": [
+        "FLOW-01",
+        "WORLD-01",
+        "COMBAT-01",
+        "DASH-01",
+        "SUCCESS-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ06_CompleteJourneyResultRestartAndDirtyClose",
+        "trajectory_id": "TRAJ06",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D4_DEATH_RECOVERY",
+      "dimension": "D4",
+      "weight": 2.0,
+      "requirements": [
+        "DAMAGE-01",
+        "RESPAWN-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ05_SoftAndGlobalRespawn",
+        "trajectory_id": "TRAJ05",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D4_PAUSE_RESUME",
+      "dimension": "D4",
+      "weight": 1.0,
+      "requirements": [
+        "PAUSE-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ04_ObserCameraAndPause",
+        "trajectory_id": "TRAJ04",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D4_RESTART_ACTIVE",
+      "dimension": "D4",
+      "weight": 1.0,
+      "requirements": [
+        "RESTART-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ06_CompleteJourneyResultRestartAndDirtyClose",
+        "trajectory_id": "TRAJ06",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D4_RESTART_PAUSED_SUCCESS",
+      "dimension": "D4",
+      "weight": 1.0,
+      "requirements": [
+        "RESTART-01",
+        "PAUSE-01",
+        "SUCCESS-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ06_CompleteJourneyResultRestartAndDirtyClose",
+        "trajectory_id": "TRAJ06",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D4_REOPEN",
+      "dimension": "D4",
+      "weight": 3.0,
+      "requirements": [
+        "REOPEN-01"
+      ],
+      "primary_route": {
+        "phase": "fresh",
+        "test_name": "FRESH01_NewProcessStartsAtCleanMenu",
+        "trajectory_id": "FRESH01",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D4_MIXED_SUCCESS_FLOW",
+      "dimension": "D4",
+      "weight": 2.5,
+      "requirements": [
+        "MIXED-01",
+        "SUCCESS-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ09_FinalMixedEncounterGate",
+        "trajectory_id": "TRAJ09",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D4_TIMED_THREAT_PAUSE_RESUME",
+      "dimension": "D4",
+      "weight": 1.0,
+      "requirements": [
+        "PAUSE-TIME-01",
+        "PAUSE-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ08_TimedPauseDuringLiveThreat",
+        "trajectory_id": "TRAJ08",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D4_INPUT_LIFECYCLE_STABILITY",
+      "dimension": "D4",
+      "weight": 1.5,
+      "requirements": [
+        "INPUT-EDGE-01",
+        "FLOW-01",
+        "PAUSE-01",
+        "SUCCESS-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ07_DashboardAndInputEdges",
+        "trajectory_id": "TRAJ07",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D5_MENU_CONTROLS",
+      "dimension": "D5",
+      "weight": 0.75,
+      "requirements": [
+        "FLOW-01",
+        "UI-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ01_MenuStartMovementAndHud",
+        "trajectory_id": "TRAJ01",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D5_HUD",
+      "dimension": "D5",
+      "weight": 1.25,
+      "requirements": [
+        "UI-01",
+        "DASH-01",
+        "RESPAWN-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ01_MenuStartMovementAndHud",
+        "trajectory_id": "TRAJ01",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D5_MOVEMENT_COMBAT",
+      "dimension": "D5",
+      "weight": 0.75,
+      "requirements": [
+        "MOVE-01",
+        "COMBAT-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ02_AndaAndBackstab",
+        "trajectory_id": "TRAJ02",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D5_DASH_FEEDBACK",
+      "dimension": "D5",
+      "weight": 0.75,
+      "requirements": [
+        "DASH-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ03_DashDamageAndBoundaries",
+        "trajectory_id": "TRAJ03",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D5_ENEMY_WARNINGS",
+      "dimension": "D5",
+      "weight": 1.0,
+      "requirements": [
+        "ANDA-01",
+        "OBSER-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ04_ObserCameraAndPause",
+        "trajectory_id": "TRAJ04",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D5_DEATH_RESPAWN",
+      "dimension": "D5",
+      "weight": 1.0,
+      "requirements": [
+        "DAMAGE-01",
+        "RESPAWN-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ05_SoftAndGlobalRespawn",
+        "trajectory_id": "TRAJ05",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D5_PAUSE_SUCCESS",
+      "dimension": "D5",
+      "weight": 0.75,
+      "requirements": [
+        "PAUSE-01",
+        "SUCCESS-01",
+        "RESTART-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ06_CompleteJourneyResultRestartAndDirtyClose",
+        "trajectory_id": "TRAJ06",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D5_AUDIO_VISUAL_FEEDBACK",
+      "dimension": "D5",
+      "weight": 1.25,
+      "requirements": [
+        "AV-01",
+        "UI-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ01_MenuStartMovementAndHud",
+        "trajectory_id": "TRAJ01",
+        "implementation": "legacy_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D5_MIXED_THREAT_FEEDBACK",
+      "dimension": "D5",
+      "weight": 1.0,
+      "requirements": [
+        "MIXED-01",
+        "UI-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ09_FinalMixedEncounterGate",
+        "trajectory_id": "TRAJ09",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D5_INPUT_REJECTION_FEEDBACK",
+      "dimension": "D5",
+      "weight": 0.75,
+      "requirements": [
+        "INPUT-EDGE-01",
+        "UI-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ07_DashboardAndInputEdges",
+        "trajectory_id": "TRAJ07",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    },
+    {
+      "check_id": "D5_DASHBOARD_VISIBLE_AGREEMENT",
+      "dimension": "D5",
+      "weight": 0.75,
+      "requirements": [
+        "UI-01"
+      ],
+      "primary_route": {
+        "phase": "dynamic",
+        "test_name": "TRAJ07_DashboardAndInputEdges",
+        "trajectory_id": "TRAJ07",
+        "implementation": "v2_dashboard_specialist_sidecar"
+      },
+      "score_once": true
+    }
+  ],
+  "d6_capture": {
+    "scoring_authority": "external_single_state_single_round_visual_evaluator",
+    "capture_route": "headful-standalone-two-layer-internal-composite",
+    "state": "initial_gameplay",
+    "batch_camera_render_formal": false,
+    "checkpoint_script_executed": false
+  }
+}

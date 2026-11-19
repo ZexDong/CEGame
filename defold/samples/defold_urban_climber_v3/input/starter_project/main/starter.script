@@ -1,0 +1,38 @@
+local dashboard = require("main.dashboard")
+
+local function capture_starter()
+	return {
+		phase = "not_ready",
+		slots = {
+			time_remaining = 0,
+			height_row = 0,
+			total_rows = 0,
+			visible_row_min = 0,
+			visible_row_max = 0,
+			level_index = 0,
+			beacon_activated = 0,
+			campaign_checkpoint = 0,
+			stage_code = 0,
+		},
+		entities = {},
+		targets = {},
+	}
+end
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	dashboard.init(capture_starter)
+	print("DEFOLD_URBAN_CLIMBER_V3_STARTER_READY")
+end
+
+function update(self, dt)
+	dashboard.update(dt)
+end
+
+function on_input(self, action_id, action)
+	-- This starting point intentionally contains no gameplay.
+end
+
+function final(self)
+	dashboard.final()
+end

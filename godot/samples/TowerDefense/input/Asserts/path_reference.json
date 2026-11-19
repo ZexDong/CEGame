@@ -1,0 +1,17 @@
+{
+  "schema_version": 4,
+  "route_id": "grassland_route_source_like_v2",
+  "visual_source": "Asserts/maps/map1.webp",
+  "direction": "from the lower entrance to the base on the left edge",
+  "player_visible_requirements": [
+    "Enemies continuously follow the painted stone road.",
+    "The visible order is lower entrance, lower road toward the right, right-side loop, middle road toward the left, lower-left loop, central vertical road, upper loop, then the leftward road to the base.",
+    "The route keeps every major loop and turn shown by the supplied map, including the intended order through crossings.",
+    "Enemies do not take a straight shortcut, leave the road, teleport, or resolve before reaching the base.",
+    "The painted road is not a legal tower-building area, while clear unoccupied grass is a continuous buildable space rather than a set of fixed pads."
+  ],
+  "implementation_freedom": "Any implementation is allowed if the visible result matches the supplied map and the numbered GDD requirements.",
+  "notes": [
+    "This file states only player-visible route semantics. It does not expose coordinates, curve handles, nodes, collision geometry, evaluator samples, or tolerances."
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "game": "Relay Foundry",
+  "source": "Frozen original public input",
+  "data": [
+    {
+      "path": "starter-project/native/EVALUATION_SCHEMA.json",
+      "content": {
+        "contract_version": "relay-foundry-v1",
+        "workspace_attributes": {
+          "RFP_ContractVersion": {
+            "type": "string",
+            "required_value": "relay-foundry-v1"
+          },
+          "RFP_Ready": {
+            "type": "boolean",
+            "required_value": true
+          }
+        },
+        "tags": {
+          "RFP_CentralSpawn": {
+            "count": 1,
+            "class": "BasePart"
+          },
+          "RFP_CoreDock": {
+            "count": 1,
+            "class": "BasePart"
+          },
+          "RFP_ProductionBay": {
+            "count": 3,
+            "class": "BasePart",
+            "id_attribute": "RFP_BayId",
+            "ids": [
+              "Charge",
+              "Stabilize",
+              "Encode"
+            ]
+          },
+          "RFP_PurgeBay": {
+            "count": 1,
+            "class": "BasePart"
+          },
+          "RFP_DeliveryDock": {
+            "count": 1,
+            "class": "BasePart"
+          },
+          "RFP_SafetyCheckpoint": {
+            "count": 1,
+            "class": "BasePart",
+            "id_attribute": "RFP_Id",
+            "ids": [
+              "Safety"
+            ]
+          },
+          "RFP_Hazard": {
+            "count": 1,
+            "class": "BasePart",
+            "id_attribute": "RFP_Id",
+            "ids": [
+              "Safety"
+            ]
+          },
+          "RFP_ExitConsole": {
+            "count": 1,
+            "class": "BasePart"
+          },
+          "RFP_ExitDoor": {
+            "count": 1,
+            "class": "BasePart"
+          },
+          "RFP_EvacuationZone": {
+            "count": 1,
+            "class": "BasePart"
+          }
+        },
+        "recipes": [
+          {
+            "order": 1,
+            "charge": "Pulse",
+            "stabilize": "Brace",
+            "encode": "Cipher"
+          },
+          {
+            "order": 2,
+            "charge": "Arc",
+            "stabilize": "Float",
+            "encode": "Key"
+          },
+          {
+            "order": 3,
+            "charge": "Flux",
+            "stabilize": "Lock",
+            "encode": "Mark"
+          }
+        ],
+        "player_attributes": {
+          "RFP_RunId": "number",
+          "RFP_OrderIndex": "number",
+          "RFP_CorePhase": "string",
+          "RFP_ChargeMode": "string",
+          "RFP_StabilizeMode": "string",
+          "RFP_EncodeMode": "string",
+          "RFP_DeliveredCount": "number",
+          "RFP_FaultCount": "number",
+          "RFP_Checkpoint": "string",
+          "RFP_Powered": "boolean",
+          "RFP_Completed": "boolean",
+          "RFP_RunStart": "number",
+          "RFP_FinalTime": "number",
+          "RFP_DeathCount": "number",
+          "RFP_EventSerial": "number",
+          "RFP_LastEvent": "string",
+          "RFP_FeedbackText": "string"
+        },
+        "events": [
+          "RunStarted",
+          "CoreCollected",
+          "Processed.Charge",
+          "Processed.Stabilize",
+          "Processed.Encode",
+          "Rejected.WrongPhase",
+          "Rejected.WrongMode",
+          "CorePurged",
+          "CoreDelivered",
+          "CheckpointActivated.Safety",
+          "HazardTriggered.Safety",
+          "Respawned.Safety",
+          "ExitLocked",
+          "ExitPowered",
+          "Completed",
+          "Restarted"
+        ],
+        "geometry": {
+          "max_horizontal_distance_from_central": 180,
+          "minimum_walk_width": 10,
+          "minimum_headroom": 8,
+          "central_restart_radius": 24
+        },
+        "prompt": {
+          "operation_key": "E",
+          "mode_key": "Q",
+          "activation_distance_range": [
+            6,
+            14
+          ],
+          "maximum_hold_duration": 0.5
+        },
+        "timing": {
+          "ready_timeout_seconds": 12,
+          "hazard_death_timeout_seconds": 1.5,
+          "door_open_timeout_seconds": 2,
+          "restart_timeout_seconds": 3,
+          "minimum_feedback_visible_seconds": 1.5
+        }
+      }
+    }
+  ]
+}

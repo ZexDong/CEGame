@@ -1,0 +1,7 @@
+{
+  "name": "GameCreate.Undercooked.Evaluator.Qualification",
+  "references": ["GameCreate.Undercooked.Evaluator.Core", "GameCreate.Evaluation.Session", "Unity.InputSystem", "UnityEngine.UI", "Unity.TextMeshPro"],
+  "includePlatforms": [],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": false
+}

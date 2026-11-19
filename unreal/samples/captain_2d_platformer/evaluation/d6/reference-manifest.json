@@ -1,0 +1,51 @@
+{
+  "schema_version": "2.0.0",
+  "model_requested": "gpt-6-astra",
+  "states": [
+    {
+      "id": "initial",
+      "label": "Initial active room",
+      "reference": "reference/initial.png",
+      "sha256": "95d7587b91516d622f1f0d25c1252fb3b700f46874a2b982a27a52d511198bfd",
+      "source_capture_sha256": "5709481b82eacf0a5e5ff28480038568070e389070165a67088cf7442cdcb944",
+      "source_size": [
+        1920,
+        1080
+      ],
+      "candidate_capture": "initial"
+    },
+    {
+      "id": "sword",
+      "label": "Captain sword swing in the active room",
+      "reference": "reference/sword.png",
+      "sha256": "5cac3f8dc2c1bc2434ee2e86656f3d5e1ca496398336f4822c50def3cdac909f",
+      "source_capture_sha256": "abffaefe180f12632661a7da8edad8faa019d8d5c80f49dd5954f67dfbed3d78",
+      "source_size": [
+        1920,
+        1080
+      ],
+      "candidate_capture": "sword"
+    },
+    {
+      "id": "airborne",
+      "label": "Captain airborne after a grounded jump",
+      "reference": "reference/airborne.png",
+      "sha256": "e9b112d7eece78bdd4ab41598eac3682dd2f9b9690349beb2935133130e08c1a",
+      "source_capture_sha256": "44c0bf53915bd3910f97c3f633ec1aa0f52d7a4823ad1613ff13ccb17c784c9e",
+      "source_size": [
+        1920,
+        1080
+      ],
+      "candidate_capture": "airborne"
+    }
+  ],
+  "rounds": 3,
+  "state_weight": "equal",
+  "frozen_before_candidate_run": true,
+  "source": "Actual UE 5.7.4 adapted original LEVEL_2, normal controls only",
+  "source_project": "baseline_ue5_7_4/captain2D.uproject",
+  "transform": "Full client frame uniformly resized to 1280x720 with Lanczos; no crop, overlay or composition",
+  "source_adaptation": "GDD removes level numbering, adds pig in the specified corridor, and uses room completion. Reference remains original presentation.",
+  "prompt_sha256": "a6007f3de2357d2353d208588b1fb88071f85d7749a3dd021e41b0aab446be7f",
+  "scoring_guide_sha256": "3e3e6cf19cbd5cda5667c44710f483fbba2ac30af7d098921acc811cf08dfdae"
+}

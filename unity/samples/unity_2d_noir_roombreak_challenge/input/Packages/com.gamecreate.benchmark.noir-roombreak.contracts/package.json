@@ -1,0 +1,7 @@
+{
+  "name": "com.gamecreate.benchmark.noir-roombreak.contracts",
+  "version": "1.0.0",
+  "displayName": "Noir Roombreak Public Contracts",
+  "description": "Read-only observation contract for the Noir Roombreak benchmark.",
+  "unity": "6000.0"
+}

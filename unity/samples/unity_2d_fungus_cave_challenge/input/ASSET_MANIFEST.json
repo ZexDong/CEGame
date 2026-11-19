@@ -1,0 +1,244 @@
+{
+  "assets": [
+    {
+      "path": "Assets/TaskAssets/floor.png",
+      "role": "floor",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "e7c18d91a9bc851169c9bfc279bd69dc8a15fb4d1bd50514f5b425ec193cf01c"
+    },
+    {
+      "path": "Assets/TaskAssets/wall.png",
+      "role": "wall",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "b9b965cf4db75cadde632680c34892149f7c85c919c0ad8cd2c567dc9538987a"
+    },
+    {
+      "path": "Assets/TaskAssets/pool.png",
+      "role": "pool",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "a8b86a83d92e0461243bcfee2d4a91606bb77cd2ae02df469c277d82ac7e1570"
+    },
+    {
+      "path": "Assets/TaskAssets/fungus.png",
+      "role": "fungus",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "f0fc5348198f0958f677295e7dc2fde4a708b3e9819f49f700ddc1883168ac3e"
+    },
+    {
+      "path": "Assets/TaskAssets/exit.png",
+      "role": "exit",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "05a4677f11636b7ad063b3f4150868ff56cc75758e3bec7c42a98975d055f0e6"
+    },
+    {
+      "path": "Assets/TaskAssets/player.png",
+      "role": "player",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "cc74950fc2f9aa2370ff569fae4edf4f3c302aa71474fcc35b896c888d0a44bc"
+    },
+    {
+      "path": "Assets/TaskAssets/corpse.png",
+      "role": "corpse",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "f7f40a65cd59096c90a801fb13ea2d3e5f5a3fbbce3588348622a168957de09f"
+    },
+    {
+      "path": "Assets/TaskAssets/fly.png",
+      "role": "fly",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "69e3d426e8134e1138294240897e3110585de028c32e60914532500afd265945"
+    },
+    {
+      "path": "Assets/TaskAssets/ooze.png",
+      "role": "ooze",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "6bc80668d59744480c3db04b104e2d8c56aec8438901d8c2fa45c103b9168e5e"
+    },
+    {
+      "path": "Assets/TaskAssets/beetle.png",
+      "role": "beetle",
+      "pixels": [
+        96,
+        96
+      ],
+      "sprite_rect": [
+        0,
+        0,
+        96,
+        96
+      ],
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "ppu": 96,
+      "importer": "Sprite Single; Point; no mipmaps; transparent padding <=12px",
+      "origin": "new GameCreate authored art",
+      "license": "MIT",
+      "sha256": "f4d195b4bf4b603d208c351338b980e09d94afc996111ee028476b7f2fc9d897"
+    },
+    {
+      "path": "Assets/Resources/UIRenderDependencies.prefab",
+      "role": "Inactive script-free uGUI/built-in font rendering dependency, not gameplay or scene composition",
+      "license": "Unity built-in engine resource dependency; no external font copied",
+      "dependencies": [
+        "UnityEngine.UI.Text",
+        "Unity built-in LegacyRuntime font"
+      ],
+      "sha256": "f2a5671cb8d964c4a6190dfcc256160c49735061649ca9cff632d7c959543458"
+    }
+  ]
+}

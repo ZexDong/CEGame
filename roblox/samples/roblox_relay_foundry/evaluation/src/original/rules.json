@@ -1,0 +1,12 @@
+{
+  "version": "relay-foundry-rubric-v1",
+  "dimensions": [
+    {"id":"D1","points":10,"method":"static","checks":["package_integrity","qa_source_isolation","engine_open_smoke"]},
+    {"id":"D2","points":30,"method":"dynamic","checks":["required_world_and_hud","all_three_orders_usable","purge_and_exit_content"]},
+    {"id":"D3","points":20,"method":"dynamic","checks":["mode_cycle_no_core_change","wrong_phase_fault_and_purge","wrong_mode_fault_and_purge","physical_gate_and_completion_condition"]},
+    {"id":"D4","points":20,"method":"dynamic","checks":["complete_success_flow","checkpoint_death_preserves_run","restart_in_progress","restart_after_completion"]},
+    {"id":"D5","points":10,"method":"dynamic","checks":["hud_state_sync","visible_error_and_success_feedback"]},
+    {"id":"D6","points":10,"method":"separate_visual","checks":["three_to_five_fixed_reference_states_three_rounds"]}
+  ],
+  "discipline":"PASS/FAIL require an established prerequisite and engine evidence. INCONCLUSIVE/NOT_RUN never become candidate failures. A runner or host fault produces official_score=null."
+}

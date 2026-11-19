@@ -1,0 +1,11 @@
+{
+  "name": "com.omnigame.benchmark.arrow-escape.contracts",
+  "version": "3.0.0",
+  "displayName": "OmniGame Arrow Escape Benchmark Contracts",
+  "description": "Implementation-neutral observation, authoring and engine-native player input contracts for the Arrow Escape reconstruction task.",
+  "unity": "6000.0",
+  "license": "MIT",
+  "author": {
+    "name": "OmniGame Benchmark"
+  }
+}

@@ -1,0 +1,446 @@
+{
+  "schema_version": "2.1",
+  "rows": [
+    {
+      "source": "delivery:D1-01",
+      "check_ids": [
+        "D1-01"
+      ],
+      "dimension": "D1"
+    },
+    {
+      "source": "delivery:D1-02",
+      "check_ids": [
+        "D1-02"
+      ],
+      "dimension": "D1"
+    },
+    {
+      "source": "delivery:D1-03",
+      "check_ids": [
+        "D1-03"
+      ],
+      "dimension": "D1"
+    },
+    {
+      "source": "delivery:D1-04",
+      "check_ids": [
+        "D1-04"
+      ],
+      "dimension": "D1"
+    },
+    {
+      "source": "delivery:D1-05",
+      "check_ids": [
+        "D1-05"
+      ],
+      "dimension": "D1"
+    },
+    {
+      "source": "gdd:ENTRY-01",
+      "check_ids": [
+        "entry_001"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "gdd:ENTRY-02",
+      "check_ids": [
+        "entry_002"
+      ],
+      "dimension": "D2"
+    },
+    {
+      "source": "common-baseline:CB-01",
+      "check_ids": [
+        "entry_003"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "common-baseline:CB-07",
+      "check_ids": [
+        "entry_004"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "common-baseline:CB-08",
+      "check_ids": [
+        "entry_005"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "common-baseline:CB-15",
+      "check_ids": [
+        "entry_006"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PLAYER-01",
+      "check_ids": [
+        "core_001"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PLAYER-02",
+      "check_ids": [
+        "core_002"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:FORMATION-01",
+      "check_ids": [
+        "core_003"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:FORMATION-02",
+      "check_ids": [
+        "core_004"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:FORMATION-03",
+      "check_ids": [
+        "core_005"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:FORMATION-04",
+      "check_ids": [
+        "core_006"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:ATTACK-01",
+      "check_ids": [
+        "core_007"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:ATTACK-02",
+      "check_ids": [
+        "core_008"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:ATTACK-03",
+      "check_ids": [
+        "core_009"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:ENEMY-01",
+      "check_ids": [
+        "core_010"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:ENEMY-02",
+      "check_ids": [
+        "core_011"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:ENEMY-03",
+      "check_ids": [
+        "core_012"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SCORE-01",
+      "check_ids": [
+        "core_013"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SCORE-02",
+      "check_ids": [
+        "core_014"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:SCORE-03",
+      "check_ids": [
+        "core_015"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PAUSE-01",
+      "check_ids": [
+        "core_016"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "gdd:PAUSE-02",
+      "check_ids": [
+        "core_017"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "common-baseline:CB-04",
+      "check_ids": [
+        "core_018"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "common-baseline:CB-05",
+      "check_ids": [
+        "core_019"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "common-baseline:CB-06",
+      "check_ids": [
+        "core_020"
+      ],
+      "dimension": "D3"
+    },
+    {
+      "source": "common-baseline:CB-09",
+      "check_ids": [
+        "core_021"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "gdd:LEVEL-01",
+      "check_ids": [
+        "success_001"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "gdd:LEVEL-02",
+      "check_ids": [
+        "success_002"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "gdd:HUD-01",
+      "check_ids": [
+        "success_003"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "gdd:HUD-02",
+      "check_ids": [
+        "success_004"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "gdd:HUD-03",
+      "check_ids": [
+        "success_005"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "gdd:VISUAL-01",
+      "check_ids": [
+        "success_006"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "gdd:VISUAL-02",
+      "check_ids": [
+        "success_007"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "gdd:VISUAL-03",
+      "check_ids": [
+        "success_008"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "gdd:QUALITY-01",
+      "check_ids": [
+        "success_009"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "gdd:QUALITY-02",
+      "check_ids": [
+        "success_010"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "gdd:QUALITY-03",
+      "check_ids": [
+        "success_011"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "common-baseline:CB-02",
+      "check_ids": [
+        "success_012"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "common-baseline:CB-10",
+      "check_ids": [
+        "success_013"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "common-baseline:CB-11",
+      "check_ids": [
+        "success_014"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "common-baseline:CB-16",
+      "check_ids": [
+        "success_015"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "common-baseline:CB-17",
+      "check_ids": [
+        "success_016"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "common-baseline:CB-18",
+      "check_ids": [
+        "success_017"
+      ],
+      "dimension": "D5"
+    },
+    {
+      "source": "common-baseline:CB-12",
+      "check_ids": [
+        "failure_001"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "common-baseline:CB-14",
+      "check_ids": [
+        "failure_002"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "gdd:LIFE-01",
+      "check_ids": [
+        "lifecycle_001"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "gdd:LIFE-02",
+      "check_ids": [
+        "lifecycle_002"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "gdd:LIFE-03",
+      "check_ids": [
+        "lifecycle_003"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "gdd:RESTART-01",
+      "check_ids": [
+        "lifecycle_004"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "gdd:RESTART-02",
+      "check_ids": [
+        "lifecycle_005"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "common-baseline:CB-03",
+      "check_ids": [
+        "lifecycle_006"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "common-baseline:CB-13",
+      "check_ids": [
+        "lifecycle_007"
+      ],
+      "dimension": "D4"
+    },
+    {
+      "source": "visual:composition",
+      "check_ids": [
+        "D6-01"
+      ],
+      "dimension": "D6"
+    },
+    {
+      "source": "visual:objects",
+      "check_ids": [
+        "D6-02"
+      ],
+      "dimension": "D6"
+    },
+    {
+      "source": "visual:ui",
+      "check_ids": [
+        "D6-03"
+      ],
+      "dimension": "D6"
+    },
+    {
+      "source": "visual:feedback",
+      "check_ids": [
+        "D6-04"
+      ],
+      "dimension": "D6"
+    },
+    {
+      "source": "visual:consistency",
+      "check_ids": [
+        "D6-05"
+      ],
+      "dimension": "D6"
+    }
+  ]
+}

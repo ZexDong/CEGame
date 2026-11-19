@@ -1,0 +1,6530 @@
+{
+  "schema_version": "2.0",
+  "coverage_status": "not_reviewed",
+  "gdd_sha256": "b138175d047f9dd39cd756a65c3aac7966c855b947650a7979f0904c2c813d14",
+  "limitations": [
+    "Native requirement mapping is preserved; independent semantic coverage and targeted positive/negative/equivalent game fixtures have not been qualified."
+  ],
+  "requirements": [
+    {
+      "requirement_id": "FLOW-01",
+      "obligation_id": "FLOW-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Application opened.",
+      "check_ids": [
+        "D2-title",
+        "D5-title"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-01",
+      "obligation_id": "FLOW-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Enter the default game entry.",
+      "check_ids": [
+        "D2-title",
+        "D5-title"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-01",
+      "obligation_id": "FLOW-01.3.1",
+      "field": "Required result",
+      "obligation": "Show the CHOMP title, saved High Score, and working Start, Options and Quit choices on a dark screen.",
+      "check_ids": [
+        "D2-title",
+        "D5-title"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-01",
+      "obligation_id": "FLOW-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "Do not begin a run behind the main menu.",
+      "check_ids": [
+        "D2-title",
+        "D5-title"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-01",
+      "obligation_id": "FLOW-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Large white title, readable choices and hover/focus feedback.",
+      "check_ids": [
+        "D2-title",
+        "D5-title"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-01",
+      "obligation_id": "FLOW-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "With no save, High Score is 0; returning to this menu never silently starts a run.",
+      "check_ids": [
+        "D2-title",
+        "D5-title"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-01",
+      "obligation_id": "FLOW-01.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-title",
+        "D5-title"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-02",
+      "obligation_id": "FLOW-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Main menu, death overlay, pause menu or a terminal result screen.",
+      "check_ids": [
+        "D3-initial",
+        "D4-start"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-02",
+      "obligation_id": "FLOW-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Activate Start or Restart.",
+      "check_ids": [
+        "D3-initial",
+        "D4-start"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-02",
+      "obligation_id": "FLOW-02.3.1",
+      "field": "Required result",
+      "obligation": "Begin the maze in Figure 6A with score 0, three lives, all 299 ordinary dots, four energizers, no fruit and no capture chain.",
+      "check_ids": [
+        "D3-initial",
+        "D4-start"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-02",
+      "obligation_id": "FLOW-02.3.2",
+      "field": "Required result",
+      "obligation": "The player starts at P facing and travelling right; red starts at R, cyan/pink/orange at their listed home cells.",
+      "check_ids": [
+        "D3-initial",
+        "D4-start"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-02",
+      "obligation_id": "FLOW-02.3.3",
+      "field": "Required result",
+      "obligation": "The first mode is Scatter.",
+      "check_ids": [
+        "D3-initial",
+        "D4-start"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-02",
+      "obligation_id": "FLOW-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No inherited pickups, active timers, input buffer or ghosts from the preceding run.",
+      "check_ids": [
+        "D3-initial",
+        "D4-start"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-02",
+      "obligation_id": "FLOW-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "The play view and HUD replace the menu; movement begins.",
+      "check_ids": [
+        "D3-initial",
+        "D4-start"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-02",
+      "obligation_id": "FLOW-02.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "A fresh run has a new run identity.",
+      "check_ids": [
+        "D3-initial",
+        "D4-start"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-02",
+      "obligation_id": "FLOW-02.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Publish its initial state before motion, as defined in Section 6.4.",
+      "check_ids": [
+        "D3-initial",
+        "D4-start"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-01",
+      "obligation_id": "MAZE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A fresh maze is displayed.",
+      "check_ids": [
+        "D2-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-01",
+      "obligation_id": "MAZE-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Observe and traverse its corridors.",
+      "check_ids": [
+        "D2-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-01",
+      "obligation_id": "MAZE-01.3.1",
+      "field": "Required result",
+      "obligation": "Reproduce Figure 6A as a 30-column by 28-row maze, including all wall cells, blocked void cells, ordinary-dot cells, four energizers, the home gate and three paired wrap passages.",
+      "check_ids": [
+        "D2-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-01",
+      "obligation_id": "MAZE-01.3.2",
+      "field": "Required result",
+      "obligation": "Cells are square; scale is free.",
+      "check_ids": [
+        "D2-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-01",
+      "obligation_id": "MAZE-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "Do not shrink the board, remove branches, open wall shortcuts or replace the playfield with a small demonstration maze.",
+      "check_ids": [
+        "D2-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-01",
+      "obligation_id": "MAZE-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "A dense, continuous maze with recognizable central ghost home and perimeter corridors.",
+      "check_ids": [
+        "D2-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MAZE-01",
+      "obligation_id": "MAZE-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The full diagram is part of this requirement; rotating the entire world is allowed if controls and reported coordinates retain the diagram semantics.",
+      "check_ids": [
+        "D2-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-01",
+      "obligation_id": "MOVE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Playing with a valid corridor ahead.",
+      "check_ids": [
+        "D2-movement",
+        "D3-speed",
+        "D3-blocked"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-01",
+      "obligation_id": "MOVE-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Press W/A/S/D or an arrow key.",
+      "check_ids": [
+        "D2-movement",
+        "D3-speed",
+        "D3-blocked"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-01",
+      "obligation_id": "MOVE-01.3.1",
+      "field": "Required result",
+      "obligation": "W/Up requests up, S/Down down, A/Left left and D/Right right in the board diagram.",
+      "check_ids": [
+        "D2-movement",
+        "D3-speed",
+        "D3-blocked"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-01",
+      "obligation_id": "MOVE-01.3.2",
+      "field": "Required result",
+      "obligation": "Move smoothly along corridor centers at 6 cells per active second, within 5%.",
+      "check_ids": [
+        "D2-movement",
+        "D3-speed",
+        "D3-blocked"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-01",
+      "obligation_id": "MOVE-01.3.3",
+      "field": "Required result",
+      "obligation": "Releasing the key continues the current direction until blocked.",
+      "check_ids": [
+        "D2-movement",
+        "D3-speed",
+        "D3-blocked"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-01",
+      "obligation_id": "MOVE-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No diagonal movement, tile skipping, key-repeat speed changes or movement driven by observer commands.",
+      "check_ids": [
+        "D2-movement",
+        "D3-speed",
+        "D3-blocked"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-01",
+      "obligation_id": "MOVE-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The character visibly travels and turns to face travel.",
+      "check_ids": [
+        "D2-movement",
+        "D3-speed",
+        "D3-blocked"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-01",
+      "obligation_id": "MOVE-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "At a wall, stop at the last legal cell center; no movement is also a valid blocked result.",
+      "check_ids": [
+        "D2-movement",
+        "D3-speed",
+        "D3-blocked"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-01",
+      "obligation_id": "MOVE-01.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-movement",
+        "D3-speed",
+        "D3-blocked"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-02",
+      "obligation_id": "MOVE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Approaching an intersection.",
+      "check_ids": [
+        "D2-movement",
+        "D3-buffer",
+        "D3-buffer_expiry"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-02",
+      "obligation_id": "MOVE-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Request a perpendicular turn before reaching it.",
+      "check_ids": [
+        "D2-movement",
+        "D3-buffer",
+        "D3-buffer_expiry"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-02",
+      "obligation_id": "MOVE-02.3.1",
+      "field": "Required result",
+      "obligation": "Take the requested turn at the first reachable corridor center while the key is held or within 0.25 seconds after release.",
+      "check_ids": [
+        "D2-movement",
+        "D3-buffer",
+        "D3-buffer_expiry"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-02",
+      "obligation_id": "MOVE-02.3.2",
+      "field": "Required result",
+      "obligation": "If it is illegal there, continue the current legal direction.",
+      "check_ids": [
+        "D2-movement",
+        "D3-buffer",
+        "D3-buffer_expiry"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-02",
+      "obligation_id": "MOVE-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No corner cutting or snapping through a wall.",
+      "check_ids": [
+        "D2-movement",
+        "D3-buffer",
+        "D3-buffer_expiry"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-02",
+      "obligation_id": "MOVE-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "A smooth center-aligned turn.",
+      "check_ids": [
+        "D2-movement",
+        "D3-buffer",
+        "D3-buffer_expiry"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-02",
+      "obligation_id": "MOVE-02.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "A released request expires after 0.25 active seconds; the most recently pressed direction wins.",
+      "check_ids": [
+        "D2-movement",
+        "D3-buffer",
+        "D3-buffer_expiry"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-02",
+      "obligation_id": "MOVE-02.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Opposite held keys use the latest press.",
+      "check_ids": [
+        "D2-movement",
+        "D3-buffer",
+        "D3-buffer_expiry"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-02",
+      "obligation_id": "MOVE-02.6.3",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-movement",
+        "D3-buffer",
+        "D3-buffer_expiry"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-03",
+      "obligation_id": "MOVE-03.1.1",
+      "field": "Preconditions",
+      "obligation": "Travelling between centers.",
+      "check_ids": [
+        "D2-movement",
+        "D3-reverse"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-03",
+      "obligation_id": "MOVE-03.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Request the opposite direction.",
+      "check_ids": [
+        "D2-movement",
+        "D3-reverse"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-03",
+      "obligation_id": "MOVE-03.3.1",
+      "field": "Required result",
+      "obligation": "Reverse promptly within 0.10 active seconds if the corridor behind is legal, without waiting for the next center.",
+      "check_ids": [
+        "D2-movement",
+        "D3-reverse"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-03",
+      "obligation_id": "MOVE-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No position jump, duplicate pickup or loss of alignment.",
+      "check_ids": [
+        "D2-movement",
+        "D3-reverse"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-03",
+      "obligation_id": "MOVE-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "Facing and travel reverse.",
+      "check_ids": [
+        "D2-movement",
+        "D3-reverse"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-03",
+      "obligation_id": "MOVE-03.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Repeated reversals remain stable; a blocked request cannot cross a wall.",
+      "check_ids": [
+        "D2-movement",
+        "D3-reverse"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-03",
+      "obligation_id": "MOVE-03.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-movement",
+        "D3-reverse"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-04",
+      "obligation_id": "MOVE-04.1.1",
+      "field": "Preconditions",
+      "obligation": "Player or a roaming/returning ghost reaches a T boundary.",
+      "check_ids": [
+        "D2-movement",
+        "D3-blocked",
+        "D3-wrap"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-04",
+      "obligation_id": "MOVE-04.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Continue outward through that passage.",
+      "check_ids": [
+        "D2-movement",
+        "D3-blocked",
+        "D3-wrap"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-04",
+      "obligation_id": "MOVE-04.3.1",
+      "field": "Required result",
+      "obligation": "Reappear at its opposite listed T cell, preserve direction, and continue normal travel.",
+      "check_ids": [
+        "D2-movement",
+        "D3-blocked",
+        "D3-wrap"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-04",
+      "obligation_id": "MOVE-04.3.2",
+      "field": "Required result",
+      "obligation": "The top and bottom T cells pair; each side T pairs with the same row on the opposite side.",
+      "check_ids": [
+        "D2-movement",
+        "D3-blocked",
+        "D3-wrap"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-04",
+      "obligation_id": "MOVE-04.4.1",
+      "field": "Forbidden result",
+      "obligation": "No travel through other borders, across the middle of the maze, or through the home gate as the player.",
+      "check_ids": [
+        "D2-movement",
+        "D3-blocked",
+        "D3-wrap"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-04",
+      "obligation_id": "MOVE-04.5.1",
+      "field": "Visible feedback",
+      "obligation": "The moving character exits one edge and appears at the paired edge.",
+      "check_ids": [
+        "D2-movement",
+        "D3-blocked",
+        "D3-wrap"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-04",
+      "obligation_id": "MOVE-04.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Distance travelled across the seam is one cell; no long camera sweep across the board or repeated scoring on wrap.",
+      "check_ids": [
+        "D2-movement",
+        "D3-blocked",
+        "D3-wrap"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MOVE-04",
+      "obligation_id": "MOVE-04.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-movement",
+        "D3-blocked",
+        "D3-wrap"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOT-01",
+      "obligation_id": "DOT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Playing with an ordinary dot at the player cell.",
+      "check_ids": [
+        "D3-dot"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOT-01",
+      "obligation_id": "DOT-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Cross the dot.",
+      "check_ids": [
+        "D3-dot"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOT-01",
+      "obligation_id": "DOT-01.3.1",
+      "field": "Required result",
+      "obligation": "Remove that dot once, add 10 score, increase consumed ordinary dots by one and decrease remaining ordinary dots by one.",
+      "check_ids": [
+        "D3-dot"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOT-01",
+      "obligation_id": "DOT-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No points for empty cells, repeated overlap or another actor consuming the dot.",
+      "check_ids": [
+        "D3-dot"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOT-01",
+      "obligation_id": "DOT-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The dot disappears and the score updates.",
+      "check_ids": [
+        "D3-dot"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOT-01",
+      "obligation_id": "DOT-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Dots at T and F follow the same rule.",
+      "check_ids": [
+        "D3-dot"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOT-01",
+      "obligation_id": "DOT-01.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "P, R, home and gate start without dots.",
+      "check_ids": [
+        "D3-dot"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "DOT-01",
+      "obligation_id": "DOT-01.6.3",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D3-dot"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWER-01",
+      "obligation_id": "POWER-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Playing with an energizer present.",
+      "check_ids": [
+        "D2-power",
+        "D3-power"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWER-01",
+      "obligation_id": "POWER-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Touch the energizer.",
+      "check_ids": [
+        "D2-power",
+        "D3-power"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWER-01",
+      "obligation_id": "POWER-01.3.1",
+      "field": "Required result",
+      "obligation": "Remove it once, add 50 score and enter Frightened for 5.0 active seconds.",
+      "check_ids": [
+        "D2-power",
+        "D3-power"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWER-01",
+      "obligation_id": "POWER-01.3.2",
+      "field": "Required result",
+      "obligation": "Roaming non-returning ghosts become vulnerable and change appearance.",
+      "check_ids": [
+        "D2-power",
+        "D3-power"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWER-01",
+      "obligation_id": "POWER-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "Energizers do not change the ordinary-dot count or alone satisfy maze completion.",
+      "check_ids": [
+        "D2-power",
+        "D3-power"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWER-01",
+      "obligation_id": "POWER-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The large orb disappears; frightened ghosts and the empowered player visibly change.",
+      "check_ids": [
+        "D2-power",
+        "D3-power"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWER-01",
+      "obligation_id": "POWER-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "A returning ghost stays harmless and returning; waiting ghosts become vulnerable when they emerge during the active period.",
+      "check_ids": [
+        "D2-power",
+        "D3-power"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWER-01",
+      "obligation_id": "POWER-01.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-power",
+        "D3-power"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWER-02",
+      "obligation_id": "POWER-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Frightened is already active.",
+      "check_ids": [
+        "D2-power",
+        "D3-refresh",
+        "D4-restart_fright"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWER-02",
+      "obligation_id": "POWER-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Collect another energizer.",
+      "check_ids": [
+        "D2-power",
+        "D3-refresh",
+        "D4-restart_fright"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWER-02",
+      "obligation_id": "POWER-02.3.1",
+      "field": "Required result",
+      "obligation": "Add another 50 and refresh the remaining frightened duration to 5.0 seconds.",
+      "check_ids": [
+        "D2-power",
+        "D3-refresh",
+        "D4-restart_fright"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWER-02",
+      "obligation_id": "POWER-02.3.2",
+      "field": "Required result",
+      "obligation": "Preserve the current capture-chain count until the continuous frightened period ends.",
+      "check_ids": [
+        "D2-power",
+        "D3-refresh",
+        "D4-restart_fright"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWER-02",
+      "obligation_id": "POWER-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "Do not stack duration, leave an earlier expiry active, or reset the capture multiplier on refresh.",
+      "check_ids": [
+        "D2-power",
+        "D3-refresh",
+        "D4-restart_fright"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWER-02",
+      "obligation_id": "POWER-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Empowered appearance continues without flickering back to normal.",
+      "check_ids": [
+        "D2-power",
+        "D3-refresh",
+        "D4-restart_fright"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWER-02",
+      "obligation_id": "POWER-02.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "At expiry restore normal appearance and behavior, clear the capture chain, and resume the suspended wave remainder.",
+      "check_ids": [
+        "D2-power",
+        "D3-refresh",
+        "D4-restart_fright"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "POWER-02",
+      "obligation_id": "POWER-02.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-power",
+        "D3-refresh",
+        "D4-restart_fright"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-01",
+      "obligation_id": "GHOST-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A run is playing.",
+      "check_ids": [
+        "D2-actors",
+        "D3-ghost_speed"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-01",
+      "obligation_id": "GHOST-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Observe the pursuers.",
+      "check_ids": [
+        "D2-actors",
+        "D3-ghost_speed"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-01",
+      "obligation_id": "GHOST-01.3.1",
+      "field": "Required result",
+      "obligation": "Maintain exactly four distinct ghosts: red, cyan, pink and orange.",
+      "check_ids": [
+        "D2-actors",
+        "D3-ghost_speed"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-01",
+      "obligation_id": "GHOST-01.3.2",
+      "field": "Required result",
+      "obligation": "Normal and frightened speed is 2 cells per active second; returning speed is 4, each within 5%.",
+      "check_ids": [
+        "D2-actors",
+        "D3-ghost_speed"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-01",
+      "obligation_id": "GHOST-01.3.3",
+      "field": "Required result",
+      "obligation": "They navigate legal corridors and wrap passages.",
+      "check_ids": [
+        "D2-actors",
+        "D3-ghost_speed"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-01",
+      "obligation_id": "GHOST-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No wall penetration, teleporting pursuit, extra pursuers or a single shared pursuit personality.",
+      "check_ids": [
+        "D2-actors",
+        "D3-ghost_speed"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-01",
+      "obligation_id": "GHOST-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Each ghost remains distinguishable by its normal color and rounded silhouette.",
+      "check_ids": [
+        "D2-actors",
+        "D3-ghost_speed"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-01",
+      "obligation_id": "GHOST-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Home/gate traversal is reserved for ghosts entering or leaving home.",
+      "check_ids": [
+        "D2-actors",
+        "D3-ghost_speed"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-01",
+      "obligation_id": "GHOST-01.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-actors",
+        "D3-ghost_speed"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-02",
+      "obligation_id": "GHOST-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Fresh run or life recovery.",
+      "check_ids": [
+        "D2-release",
+        "D3-release"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-02",
+      "obligation_id": "GHOST-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Accumulate ordinary dots.",
+      "check_ids": [
+        "D2-release",
+        "D3-release"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-02",
+      "obligation_id": "GHOST-02.3.1",
+      "field": "Required result",
+      "obligation": "Red begins outside.",
+      "check_ids": [
+        "D2-release",
+        "D3-release"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-02",
+      "obligation_id": "GHOST-02.3.2",
+      "field": "Required result",
+      "obligation": "Cyan must begin leaving at 30 consumed ordinary dots, pink at 60 and orange at 90, within 0.15 active seconds of reaching the threshold.",
+      "check_ids": [
+        "D2-release",
+        "D3-release"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-02",
+      "obligation_id": "GHOST-02.3.3",
+      "field": "Required result",
+      "obligation": "At life recovery, waiting ghosts whose thresholds are already met must begin leaving within the same bound, in cyan, pink, orange order.",
+      "check_ids": [
+        "D2-release",
+        "D3-release"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-02",
+      "obligation_id": "GHOST-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No premature threshold release caused by energizers, fruit or ghost points.",
+      "check_ids": [
+        "D2-release",
+        "D3-release"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-02",
+      "obligation_id": "GHOST-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Waiting ghosts are visible inside home and exit through the gate.",
+      "check_ids": [
+        "D2-release",
+        "D3-release"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-02",
+      "obligation_id": "GHOST-02.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Returning ghosts rejoin independently of the initial threshold.",
+      "check_ids": [
+        "D2-release",
+        "D3-release"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-02",
+      "obligation_id": "GHOST-02.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Already released ghosts are not returned home at a threshold.",
+      "check_ids": [
+        "D2-release",
+        "D3-release"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-02",
+      "obligation_id": "GHOST-02.6.3",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Section 6.4 defines departure start, inactivity selection and recovery eligibility.",
+      "check_ids": [
+        "D2-release",
+        "D3-release"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-03",
+      "obligation_id": "GHOST-03.1.1",
+      "field": "Preconditions",
+      "obligation": "At least one initial-release ghost is still waiting.",
+      "check_ids": [
+        "D2-release",
+        "D3-inactivity"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-03",
+      "obligation_id": "GHOST-03.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Spend 5.0 active seconds without eating an ordinary dot.",
+      "check_ids": [
+        "D2-release",
+        "D3-inactivity"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-03",
+      "obligation_id": "GHOST-03.3.1",
+      "field": "Required result",
+      "obligation": "Force the next waiting ghost out in cyan, pink, orange order.",
+      "check_ids": [
+        "D2-release",
+        "D3-inactivity"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-03",
+      "obligation_id": "GHOST-03.3.2",
+      "field": "Required result",
+      "obligation": "Restart the inactivity clock after a forced release or ordinary-dot pickup.",
+      "check_ids": [
+        "D2-release",
+        "D3-inactivity"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-03",
+      "obligation_id": "GHOST-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "Do not force all waiting ghosts out at once or use wall-clock time while paused.",
+      "check_ids": [
+        "D2-release",
+        "D3-inactivity"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-03",
+      "obligation_id": "GHOST-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "One additional pursuer leaves home even if the player is stationary.",
+      "check_ids": [
+        "D2-release",
+        "D3-inactivity"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-03",
+      "obligation_id": "GHOST-03.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Repeat after another 5.0 seconds if a ghost still waits; fresh run and recovery restart this clock.",
+      "check_ids": [
+        "D2-release",
+        "D3-inactivity"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-03",
+      "obligation_id": "GHOST-03.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-release",
+        "D3-inactivity"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-04",
+      "obligation_id": "GHOST-04.1.1",
+      "field": "Preconditions",
+      "obligation": "Normal ghost behavior is active.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-waves"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-04",
+      "obligation_id": "GHOST-04.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Allow active play time to pass.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-waves"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-04",
+      "obligation_id": "GHOST-04.3.1",
+      "field": "Required result",
+      "obligation": "Use Scatter 5s, Chase 5s, Scatter 5s, Chase 5s, Scatter 5s, Chase 5s, Scatter 5s, then Chase for the rest of that life.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-waves"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-04",
+      "obligation_id": "GHOST-04.3.2",
+      "field": "Required result",
+      "obligation": "During Scatter each ghost patrols between its two corner-region cells in Table 6B.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-waves"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-04",
+      "obligation_id": "GHOST-04.4.1",
+      "field": "Forbidden result",
+      "obligation": "No wave advancement during pause, death recovery or frightened time.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-waves"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-04",
+      "obligation_id": "GHOST-04.5.1",
+      "field": "Visible feedback",
+      "obligation": "Ghost motion alternates between corner patrol and pursuit.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-waves"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-04",
+      "obligation_id": "GHOST-04.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "After fright expiry continue the remaining time of the interrupted wave; recovery after a lost life starts a fresh wave sequence.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-waves"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-04",
+      "obligation_id": "GHOST-04.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-waves"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-05",
+      "obligation_id": "GHOST-05.1.1",
+      "field": "Preconditions",
+      "obligation": "Red is roaming in Chase.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-red"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-05",
+      "obligation_id": "GHOST-05.2.1",
+      "field": "Player action or trigger",
+      "obligation": "The player moves to a different corridor.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-red"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-05",
+      "obligation_id": "GHOST-05.3.1",
+      "field": "Required result",
+      "obligation": "Red pursues the player's current cell, refreshing its pursuit as it reaches corridor centers.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-red"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-05",
+      "obligation_id": "GHOST-05.4.1",
+      "field": "Forbidden result",
+      "obligation": "No fixed waypoint loop presented as chasing.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-red"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-05",
+      "obligation_id": "GHOST-05.5.1",
+      "field": "Visible feedback",
+      "obligation": "Red visibly follows the player through legal routes.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-red"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-05",
+      "obligation_id": "GHOST-05.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Any shortest legal route, including wraps, is acceptable; equally short routes can differ.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-red"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-05",
+      "obligation_id": "GHOST-05.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-red"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-06",
+      "obligation_id": "GHOST-06.1.1",
+      "field": "Preconditions",
+      "obligation": "Pink is roaming in Chase.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-pink"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-06",
+      "obligation_id": "GHOST-06.2.1",
+      "field": "Player action or trigger",
+      "obligation": "The player changes heading.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-pink"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-06",
+      "obligation_id": "GHOST-06.3.1",
+      "field": "Required result",
+      "obligation": "Pink pursues the reachable cell up to four cells ahead in the player's current direction, stopping the look-ahead at the first wall, gate or board edge.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-pink"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-06",
+      "obligation_id": "GHOST-06.4.1",
+      "field": "Forbidden result",
+      "obligation": "Do not always target the current player cell when a distinct ahead cell exists.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-pink"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-06",
+      "obligation_id": "GHOST-06.5.1",
+      "field": "Visible feedback",
+      "obligation": "Pink attempts to intercept ahead.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-pink"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-06",
+      "obligation_id": "GHOST-06.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "A stationary player retains the last facing; if no ahead cell is legal, the player cell is the target.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-pink"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-06",
+      "obligation_id": "GHOST-06.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-pink"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-07",
+      "obligation_id": "GHOST-07.1.1",
+      "field": "Preconditions",
+      "obligation": "Cyan is roaming in Chase.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-cyan"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-07",
+      "obligation_id": "GHOST-07.2.1",
+      "field": "Player action or trigger",
+      "obligation": "The player or red ghost changes position.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-cyan"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-07",
+      "obligation_id": "GHOST-07.3.1",
+      "field": "Required result",
+      "obligation": "Cyan's pursuit destination is the reflection of red's current cell across the point up to two legal cells ahead of the player.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-cyan"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-07",
+      "obligation_id": "GHOST-07.3.2",
+      "field": "Required result",
+      "obligation": "If that reflected destination is blocked or outside, the target is a roaming cell with minimum straight-line distance to it.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-cyan"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-07",
+      "obligation_id": "GHOST-07.3.3",
+      "field": "Required result",
+      "obligation": "Equally near targets may use any reproducible choice.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-cyan"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-07",
+      "obligation_id": "GHOST-07.4.1",
+      "field": "Forbidden result",
+      "obligation": "No permanently identical red/pink/cyan targets when their defined destinations differ.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-cyan"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-07",
+      "obligation_id": "GHOST-07.5.1",
+      "field": "Visible feedback",
+      "obligation": "Cyan visibly chooses an approach affected by both player heading and red position.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-cyan"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-07",
+      "obligation_id": "GHOST-07.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Section 6.4 defines look-ahead limits, nearest-cell sampling and target-refresh boundaries; no search algorithm or data structure is prescribed.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-cyan"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-08",
+      "obligation_id": "GHOST-08.1.1",
+      "field": "Preconditions",
+      "obligation": "Orange is roaming in Chase.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-orange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-08",
+      "obligation_id": "GHOST-08.2.1",
+      "field": "Player action or trigger",
+      "obligation": "The player crosses orange's distance boundary.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-orange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-08",
+      "obligation_id": "GHOST-08.3.1",
+      "field": "Required result",
+      "obligation": "At straight-line distance less than 8 cells orange pursues the current player cell; at distance 8 or greater orange patrols its corner region.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-orange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-08",
+      "obligation_id": "GHOST-08.4.1",
+      "field": "Forbidden result",
+      "obligation": "Do not retreat when closer than 8 cells or pursue the player at distance 8 cells or greater.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-orange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-08",
+      "obligation_id": "GHOST-08.5.1",
+      "field": "Visible feedback",
+      "obligation": "Orange alternates between nearby pursuit and distant retreat.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-orange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-08",
+      "obligation_id": "GHOST-08.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Distance uses displayed board coordinates without wrap-distance shortening; reconsider at corridor centers.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-orange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-08",
+      "obligation_id": "GHOST-08.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-orange"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-09",
+      "obligation_id": "GHOST-09.1.1",
+      "field": "Preconditions",
+      "obligation": "A vulnerable roaming ghost is frightened.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-flee"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-09",
+      "obligation_id": "GHOST-09.2.1",
+      "field": "Player action or trigger",
+      "obligation": "It reaches a corridor decision.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-flee"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-09",
+      "obligation_id": "GHOST-09.3.1",
+      "field": "Required result",
+      "obligation": "At a corridor center, choose a legal next center that increases shortest legal corridor distance to the player's cell when one exists.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-flee"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-09",
+      "obligation_id": "GHOST-09.3.2",
+      "field": "Required result",
+      "obligation": "Count paired wraps as one step.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-flee"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-09",
+      "obligation_id": "GHOST-09.3.3",
+      "field": "Required result",
+      "obligation": "If no next center increases distance, choose one with the greatest available distance.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-flee"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-09",
+      "obligation_id": "GHOST-09.3.4",
+      "field": "Required result",
+      "obligation": "Keep the 2-cell/second speed.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-flee"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-09",
+      "obligation_id": "GHOST-09.4.1",
+      "field": "Forbidden result",
+      "obligation": "No wall crossing, indefinite paralysis or hidden invulnerability.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-flee"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-09",
+      "obligation_id": "GHOST-09.5.1",
+      "field": "Visible feedback",
+      "obligation": "The ghost retreats with its frightened appearance.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-flee"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-09",
+      "obligation_id": "GHOST-09.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Section 6.4 defines the distance, target cell, reversal and tie boundaries.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-flee"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "GHOST-09",
+      "obligation_id": "GHOST-09.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Equal allowed choices may differ but must be reproducible under the same seed and action timing.",
+      "check_ids": [
+        "D2-pursuit",
+        "D3-flee"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAPTURE-01",
+      "obligation_id": "CAPTURE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Player contacts a frightened ghost.",
+      "check_ids": [
+        "D2-capture",
+        "D3-capture"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAPTURE-01",
+      "obligation_id": "CAPTURE-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Their collision areas overlap.",
+      "check_ids": [
+        "D2-capture",
+        "D3-capture"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAPTURE-01",
+      "obligation_id": "CAPTURE-01.3.1",
+      "field": "Required result",
+      "obligation": "Capture that ghost once without losing a life; successive captures in one continuous frightened period award 200, 400, 800, 1600, then double again for each further capture.",
+      "check_ids": [
+        "D2-capture",
+        "D3-capture"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAPTURE-01",
+      "obligation_id": "CAPTURE-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "Repeated overlap with the same returning ghost cannot award points.",
+      "check_ids": [
+        "D2-capture",
+        "D3-capture"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAPTURE-01",
+      "obligation_id": "CAPTURE-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The colored body disappears or becomes a clearly reduced returning form; score changes.",
+      "check_ids": [
+        "D2-capture",
+        "D3-capture"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAPTURE-01",
+      "obligation_id": "CAPTURE-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The chain resets at frightened expiry, death or fresh run, and is preserved on energizer refresh.",
+      "check_ids": [
+        "D2-capture",
+        "D3-capture"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAPTURE-01",
+      "obligation_id": "CAPTURE-01.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-capture",
+        "D3-capture"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAPTURE-02",
+      "obligation_id": "CAPTURE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A ghost has been captured.",
+      "check_ids": [
+        "D2-capture",
+        "D3-return",
+        "D4-restart_return"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAPTURE-02",
+      "obligation_id": "CAPTURE-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Allow it to return home.",
+      "check_ids": [
+        "D2-capture",
+        "D3-return",
+        "D4-restart_return"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAPTURE-02",
+      "obligation_id": "CAPTURE-02.3.1",
+      "field": "Required result",
+      "obligation": "Travel visibly through corridors and the gate to its home cell at returning speed, remain harmless en route, and then resume roaming.",
+      "check_ids": [
+        "D2-capture",
+        "D3-return",
+        "D4-restart_return"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAPTURE-02",
+      "obligation_id": "CAPTURE-02.3.2",
+      "field": "Required result",
+      "obligation": "It is frightened again if the global frightened period is still active.",
+      "check_ids": [
+        "D2-capture",
+        "D3-return",
+        "D4-restart_return"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAPTURE-02",
+      "obligation_id": "CAPTURE-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No instant disappearance/reappearance, permanent removal, harm or recapture while returning.",
+      "check_ids": [
+        "D2-capture",
+        "D3-return",
+        "D4-restart_return"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAPTURE-02",
+      "obligation_id": "CAPTURE-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "A distinct returning form moves back to home and its normal/frightened body reappears.",
+      "check_ids": [
+        "D2-capture",
+        "D3-return",
+        "D4-restart_return"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAPTURE-02",
+      "obligation_id": "CAPTURE-02.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "A new run or life recovery cancels the old return journey.",
+      "check_ids": [
+        "D2-capture",
+        "D3-return",
+        "D4-restart_return"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "CAPTURE-02",
+      "obligation_id": "CAPTURE-02.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-capture",
+        "D3-return",
+        "D4-restart_return"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-01",
+      "obligation_id": "LIFE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Playing and touching a dangerous ghost.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-death",
+        "D4-restart_dying",
+        "D5-death"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-01",
+      "obligation_id": "LIFE-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Collision occurs.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-death",
+        "D4-restart_dying",
+        "D5-death"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-01",
+      "obligation_id": "LIFE-01.3.1",
+      "field": "Required result",
+      "obligation": "Lose exactly one life, enter a death interval, stop active play and show the death feedback.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-death",
+        "D4-restart_dying",
+        "D5-death"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-01",
+      "obligation_id": "LIFE-01.3.2",
+      "field": "Required result",
+      "obligation": "Multiple same-time dangerous contacts cause only one life loss.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-death",
+        "D4-restart_dying",
+        "D5-death"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-01",
+      "obligation_id": "LIFE-01.3.3",
+      "field": "Required result",
+      "obligation": "Show an enabled, clickable Restart control during dying within 0.15 seconds.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-death",
+        "D4-restart_dying",
+        "D5-death"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-01",
+      "obligation_id": "LIFE-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No further score, movement, pickup, ghost release or damage during the death interval.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-death",
+        "D4-restart_dying",
+        "D5-death"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-01",
+      "obligation_id": "LIFE-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The player disappears or visibly dies, accompanied by a brief camera impulse and updated lives.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-death",
+        "D4-restart_dying",
+        "D5-death"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-01",
+      "obligation_id": "LIFE-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Frightened and returning ghosts are not dangerous.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-death",
+        "D4-restart_dying",
+        "D5-death"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-01",
+      "obligation_id": "LIFE-01.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "FLOW-04 and Section 6.4 define simultaneous contacts, death timing and the normal Restart route.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-death",
+        "D4-restart_dying",
+        "D5-death"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-02",
+      "obligation_id": "LIFE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A nonfinal life was lost.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-recovery"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-02",
+      "obligation_id": "LIFE-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "The 3.0-second death interval ends.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-recovery"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-02",
+      "obligation_id": "LIFE-02.3.1",
+      "field": "Required result",
+      "obligation": "Respawn the player at P facing right and reset ghost positions to their starting cells.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-recovery"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-02",
+      "obligation_id": "LIFE-02.3.2",
+      "field": "Required result",
+      "obligation": "Preserve current score, collected dots/energizers and fruit-spawn thresholds already spent.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-recovery"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-02",
+      "obligation_id": "LIFE-02.3.3",
+      "field": "Required result",
+      "obligation": "Remove any active fruit; clear fright, capture chain, turn buffer and old motion.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-recovery"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-02",
+      "obligation_id": "LIFE-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No board refill, score reset, duplicate actors or delayed changes from the lost life.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-recovery"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-02",
+      "obligation_id": "LIFE-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Normal play resumes on the partially cleared maze with one fewer life.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-recovery"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-02",
+      "obligation_id": "LIFE-02.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Restart wave and inactivity clocks and resume rightward player motion.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-recovery"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-02",
+      "obligation_id": "LIFE-02.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "A new run resets the whole board",
+      "check_ids": [
+        "D2-recovery",
+        "D3-recovery"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-02",
+      "obligation_id": "LIFE-02.6.3",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Section 6.4 defines the recovery boundary.",
+      "check_ids": [
+        "D2-recovery",
+        "D3-recovery"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-03",
+      "obligation_id": "LIFE-03.1.1",
+      "field": "Preconditions",
+      "obligation": "A collision reduces lives to 0.",
+      "check_ids": [
+        "D2-results",
+        "D3-loss",
+        "D4-restart_lost",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-03",
+      "obligation_id": "LIFE-03.2.1",
+      "field": "Player action or trigger",
+      "obligation": "The final lethal contact starts the death interval.",
+      "check_ids": [
+        "D2-results",
+        "D3-loss",
+        "D4-restart_lost",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-03",
+      "obligation_id": "LIFE-03.3.1",
+      "field": "Required result",
+      "obligation": "At the end of the 3.0-second death interval after that lethal contact, show GAME OVER with final score, saved high score and Restart, Main Menu and Quit.",
+      "check_ids": [
+        "D2-results",
+        "D3-loss",
+        "D4-restart_lost",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-03",
+      "obligation_id": "LIFE-03.3.2",
+      "field": "Required result",
+      "obligation": "TIME-01 tolerance applies to this single deadline.",
+      "check_ids": [
+        "D2-results",
+        "D3-loss",
+        "D4-restart_lost",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-03",
+      "obligation_id": "LIFE-03.3.3",
+      "field": "Required result",
+      "obligation": "Keep the terminal world frozen.",
+      "check_ids": [
+        "D2-results",
+        "D3-loss",
+        "D4-restart_lost",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-03",
+      "obligation_id": "LIFE-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No automatic respawn, negative lives, further score or resumed AI.",
+      "check_ids": [
+        "D2-results",
+        "D3-loss",
+        "D4-restart_lost",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-03",
+      "obligation_id": "LIFE-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "Clearly distinct losing result screen.",
+      "check_ids": [
+        "D2-results",
+        "D3-loss",
+        "D4-restart_lost",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-03",
+      "obligation_id": "LIFE-03.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The 3-second limit includes the death feedback; no second interval follows it.",
+      "check_ids": [
+        "D2-results",
+        "D3-loss",
+        "D4-restart_lost",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-03",
+      "obligation_id": "LIFE-03.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Movement and pause do not dismiss the result.",
+      "check_ids": [
+        "D2-results",
+        "D3-loss",
+        "D4-restart_lost",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-03",
+      "obligation_id": "LIFE-03.6.3",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Restart during dying follows Section 6.4.",
+      "check_ids": [
+        "D2-results",
+        "D3-loss",
+        "D4-restart_lost",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-04",
+      "obligation_id": "LIFE-04.1.1",
+      "field": "Preconditions",
+      "obligation": "Playing after a fresh run, recovery or previous extra-life grant.",
+      "check_ids": [
+        "D2-extra_life",
+        "D3-extra_life"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-04",
+      "obligation_id": "LIFE-04.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Earn score.",
+      "check_ids": [
+        "D2-extra_life",
+        "D3-extra_life"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-04",
+      "obligation_id": "LIFE-04.3.1",
+      "field": "Required result",
+      "obligation": "Track points earned since that reset.",
+      "check_ids": [
+        "D2-extra_life",
+        "D3-extra_life"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-04",
+      "obligation_id": "LIFE-04.3.2",
+      "field": "Required result",
+      "obligation": "When at least 2000 have accumulated and lives are below 3, award one life and reset this progress to 0.",
+      "check_ids": [
+        "D2-extra_life",
+        "D3-extra_life"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-04",
+      "obligation_id": "LIFE-04.3.3",
+      "field": "Required result",
+      "obligation": "Never exceed 3 lives.",
+      "check_ids": [
+        "D2-extra_life",
+        "D3-extra_life"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-04",
+      "obligation_id": "LIFE-04.4.1",
+      "field": "Forbidden result",
+      "obligation": "No repeated grant from an unchanged score or negative progress on Restart.",
+      "check_ids": [
+        "D2-extra_life",
+        "D3-extra_life"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-04",
+      "obligation_id": "LIFE-04.5.1",
+      "field": "Visible feedback",
+      "obligation": "An additional yellow life icon appears with a perceptible positive pulse.",
+      "check_ids": [
+        "D2-extra_life",
+        "D3-extra_life"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-04",
+      "obligation_id": "LIFE-04.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "At 3 lives do not grant; accumulated progress can remain until a later eligible positive score change, but life recovery resets it to 0.",
+      "check_ids": [
+        "D2-extra_life",
+        "D3-extra_life"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "LIFE-04",
+      "obligation_id": "LIFE-04.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-extra_life",
+        "D3-extra_life"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FRUIT-01",
+      "obligation_id": "FRUIT-01.1.1",
+      "field": "Preconditions",
+      "obligation": "An ordinary-dot pickup reaches consumed count 70 or 170.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_spawn",
+        "D3-fruit_expiry",
+        "D4-restart_fruit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FRUIT-01",
+      "obligation_id": "FRUIT-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "The threshold is reached exactly once.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_spawn",
+        "D3-fruit_expiry",
+        "D4-restart_fruit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FRUIT-01",
+      "obligation_id": "FRUIT-01.3.1",
+      "field": "Required result",
+      "obligation": "Spawn a visible pineapple at F for 10.0 active seconds.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_spawn",
+        "D3-fruit_expiry",
+        "D4-restart_fruit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FRUIT-01",
+      "obligation_id": "FRUIT-01.3.2",
+      "field": "Required result",
+      "obligation": "At 170 spawn only if the earlier pineapple is absent; if one is still active, skip that second opportunity without queuing it.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_spawn",
+        "D3-fruit_expiry",
+        "D4-restart_fruit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FRUIT-01",
+      "obligation_id": "FRUIT-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No spawn from score thresholds, duplicate pineapple, delayed second spawn or repeat after death.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_spawn",
+        "D3-fruit_expiry",
+        "D4-restart_fruit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FRUIT-01",
+      "obligation_id": "FRUIT-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "A small orange/gold fruit with a green crown appears in the maze.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_spawn",
+        "D3-fruit_expiry",
+        "D4-restart_fruit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FRUIT-01",
+      "obligation_id": "FRUIT-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Pause freezes its lifetime.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_spawn",
+        "D3-fruit_expiry",
+        "D4-restart_fruit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FRUIT-01",
+      "obligation_id": "FRUIT-01.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Expiry removes it without awarding points; a new run restores both opportunities.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_spawn",
+        "D3-fruit_expiry",
+        "D4-restart_fruit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FRUIT-01",
+      "obligation_id": "FRUIT-01.6.3",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_spawn",
+        "D3-fruit_expiry",
+        "D4-restart_fruit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FRUIT-02",
+      "obligation_id": "FRUIT-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A pineapple is present.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_reward",
+        "D3-fruit_expiry",
+        "D5-fruit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FRUIT-02",
+      "obligation_id": "FRUIT-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "The player contacts it before expiry.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_reward",
+        "D3-fruit_expiry",
+        "D5-fruit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FRUIT-02",
+      "obligation_id": "FRUIT-02.3.1",
+      "field": "Required result",
+      "obligation": "Remove it once and award 1000 score.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_reward",
+        "D3-fruit_expiry",
+        "D5-fruit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FRUIT-02",
+      "obligation_id": "FRUIT-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No repeated overlap reward or ordinary-dot count change.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_reward",
+        "D3-fruit_expiry",
+        "D5-fruit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FRUIT-02",
+      "obligation_id": "FRUIT-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Score increases, a brief pineapple-themed reward overlay appears and a short camera impulse is visible.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_reward",
+        "D3-fruit_expiry",
+        "D5-fruit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FRUIT-02",
+      "obligation_id": "FRUIT-02.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Fruit disappears on death or terminal transition without points.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_reward",
+        "D3-fruit_expiry",
+        "D5-fruit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FRUIT-02",
+      "obligation_id": "FRUIT-02.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "At exactly its expiry time, expiry wins.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_reward",
+        "D3-fruit_expiry",
+        "D5-fruit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FRUIT-02",
+      "obligation_id": "FRUIT-02.6.3",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_reward",
+        "D3-fruit_expiry",
+        "D5-fruit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-03",
+      "obligation_id": "FLOW-03.1.1",
+      "field": "Preconditions",
+      "obligation": "At least one ordinary dot remains.",
+      "check_ids": [
+        "D3-victory"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-03",
+      "obligation_id": "FLOW-03.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Play, consume energizers, fruit or ghosts.",
+      "check_ids": [
+        "D3-victory"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-03",
+      "obligation_id": "FLOW-03.3.1",
+      "field": "Required result",
+      "obligation": "Continue the run until all ordinary dots are gone.",
+      "check_ids": [
+        "D3-victory"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-03",
+      "obligation_id": "FLOW-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No early victory from score, time, energizers or fruit.",
+      "check_ids": [
+        "D3-victory"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-03",
+      "obligation_id": "FLOW-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "The board remains playable and the score/lives HUD remains active.",
+      "check_ids": [
+        "D3-victory"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-03",
+      "obligation_id": "FLOW-03.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The victory condition counts ordinary dots only.",
+      "check_ids": [
+        "D3-victory"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-03",
+      "obligation_id": "FLOW-03.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D3-victory"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-04",
+      "obligation_id": "FLOW-04.1.1",
+      "field": "Preconditions",
+      "obligation": "The player collects the final ordinary dot.",
+      "check_ids": [
+        "D2-results",
+        "D3-victory",
+        "D4-restart_won",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-04",
+      "obligation_id": "FLOW-04.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Resolve the pickup.",
+      "check_ids": [
+        "D2-results",
+        "D3-victory",
+        "D4-restart_won",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-04",
+      "obligation_id": "FLOW-04.3.1",
+      "field": "Required result",
+      "obligation": "Award its 10 points and show YOU WIN within 0.5 seconds with final score, high score, pineapple stage emblem and Restart, Main Menu and Quit.",
+      "check_ids": [
+        "D2-results",
+        "D3-victory",
+        "D4-restart_won",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-04",
+      "obligation_id": "FLOW-04.3.2",
+      "field": "Required result",
+      "obligation": "Freeze movement, damage, scoring, AI and spawning.",
+      "check_ids": [
+        "D2-results",
+        "D3-victory",
+        "D4-restart_won",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-04",
+      "obligation_id": "FLOW-04.4.1",
+      "field": "Forbidden result",
+      "obligation": "Do not require leftover energizers or fruit, or permit late death to replace the win.",
+      "check_ids": [
+        "D2-results",
+        "D3-victory",
+        "D4-restart_won",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-04",
+      "obligation_id": "FLOW-04.5.1",
+      "field": "Visible feedback",
+      "obligation": "A winning result screen distinct from GAME OVER.",
+      "check_ids": [
+        "D2-results",
+        "D3-victory",
+        "D4-restart_won",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-04",
+      "obligation_id": "FLOW-04.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "If the final dot and a dangerous ghost are touched in the same simulation step, the final-dot win takes priority.",
+      "check_ids": [
+        "D2-results",
+        "D3-victory",
+        "D4-restart_won",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-04",
+      "obligation_id": "FLOW-04.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "There is one complete maze, not an extra hidden level.",
+      "check_ids": [
+        "D2-results",
+        "D3-victory",
+        "D4-restart_won",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "FLOW-04",
+      "obligation_id": "FLOW-04.6.3",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-results",
+        "D3-victory",
+        "D4-restart_won",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-01",
+      "obligation_id": "PAUSE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Active play.",
+      "check_ids": [
+        "D2-pause",
+        "D3-pause"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-01",
+      "obligation_id": "PAUSE-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Press P or Escape once.",
+      "check_ids": [
+        "D2-pause",
+        "D3-pause"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-01",
+      "obligation_id": "PAUSE-01.3.1",
+      "field": "Required result",
+      "obligation": "Open a pause overlay with Resume, Restart, Options, Main Menu and Quit.",
+      "check_ids": [
+        "D2-pause",
+        "D3-pause"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-01",
+      "obligation_id": "PAUSE-01.3.2",
+      "field": "Required result",
+      "obligation": "Freeze positions, score, lives, wave time, fright time, fruit lifetime and release inactivity time.",
+      "check_ids": [
+        "D2-pause",
+        "D3-pause"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-01",
+      "obligation_id": "PAUSE-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No gameplay key leakage or wall-clock expiry behind the overlay.",
+      "check_ids": [
+        "D2-pause",
+        "D3-pause"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-01",
+      "obligation_id": "PAUSE-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "A dimmed/blurred view remains behind readable pause choices.",
+      "check_ids": [
+        "D2-pause",
+        "D3-pause"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-01",
+      "obligation_id": "PAUSE-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Resume or a second P/Escape returns to the same state; held keys cannot trigger repeated toggles.",
+      "check_ids": [
+        "D2-pause",
+        "D3-pause"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-01",
+      "obligation_id": "PAUSE-01.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-pause",
+        "D3-pause"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-02",
+      "obligation_id": "PAUSE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Pause menu, death overlay or terminal result.",
+      "check_ids": [
+        "D2-pause",
+        "D4-restart_normal",
+        "D4-restart_fright",
+        "D4-restart_return",
+        "D4-restart_fruit",
+        "D4-restart_dying",
+        "D4-restart_won",
+        "D4-restart_lost"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-02",
+      "obligation_id": "PAUSE-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Activate Restart.",
+      "check_ids": [
+        "D2-pause",
+        "D4-restart_normal",
+        "D4-restart_fright",
+        "D4-restart_return",
+        "D4-restart_fruit",
+        "D4-restart_dying",
+        "D4-restart_won",
+        "D4-restart_lost"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-02",
+      "obligation_id": "PAUSE-02.3.1",
+      "field": "Required result",
+      "obligation": "Start the complete fresh state in FLOW-02 even while frightened play, return travel, fruit expiry or a death interval was in progress.",
+      "check_ids": [
+        "D2-pause",
+        "D4-restart_normal",
+        "D4-restart_fright",
+        "D4-restart_return",
+        "D4-restart_fruit",
+        "D4-restart_dying",
+        "D4-restart_won",
+        "D4-restart_lost"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-02",
+      "obligation_id": "PAUSE-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No old effect, held/queued direction, damage, award or pickup alters the new run.",
+      "check_ids": [
+        "D2-pause",
+        "D4-restart_normal",
+        "D4-restart_fright",
+        "D4-restart_return",
+        "D4-restart_fruit",
+        "D4-restart_dying",
+        "D4-restart_won",
+        "D4-restart_lost"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-02",
+      "obligation_id": "PAUSE-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "The clean maze and three lives reappear.",
+      "check_ids": [
+        "D2-pause",
+        "D4-restart_normal",
+        "D4-restart_fright",
+        "D4-restart_return",
+        "D4-restart_fruit",
+        "D4-restart_dying",
+        "D4-restart_won",
+        "D4-restart_lost"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-02",
+      "obligation_id": "PAUSE-02.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Repeated Restart works; high score and applied settings survive.",
+      "check_ids": [
+        "D2-pause",
+        "D4-restart_normal",
+        "D4-restart_fright",
+        "D4-restart_return",
+        "D4-restart_fruit",
+        "D4-restart_dying",
+        "D4-restart_won",
+        "D4-restart_lost"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "PAUSE-02",
+      "obligation_id": "PAUSE-02.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Section 6.4 defines death-overlay access and simultaneous-event priority.",
+      "check_ids": [
+        "D2-pause",
+        "D4-restart_normal",
+        "D4-restart_fright",
+        "D4-restart_return",
+        "D4-restart_fruit",
+        "D4-restart_dying",
+        "D4-restart_won",
+        "D4-restart_lost"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MENU-01",
+      "obligation_id": "MENU-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Pause, Options or a terminal result.",
+      "check_ids": [
+        "D2-menus",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MENU-01",
+      "obligation_id": "MENU-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Navigate Back or Main Menu as appropriate.",
+      "check_ids": [
+        "D2-menus",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MENU-01",
+      "obligation_id": "MENU-01.3.1",
+      "field": "Required result",
+      "obligation": "Back from Options returns to its originating menu",
+      "check_ids": [
+        "D2-menus",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MENU-01",
+      "obligation_id": "MENU-01.3.2",
+      "field": "Required result",
+      "obligation": "Main Menu ends the current run and returns to the title screen.",
+      "check_ids": [
+        "D2-menus",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MENU-01",
+      "obligation_id": "MENU-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No orphan overlay, invisible modal control, active play behind the menu or lost input focus.",
+      "check_ids": [
+        "D2-menus",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MENU-01",
+      "obligation_id": "MENU-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The requested menu and its usable controls appear.",
+      "check_ids": [
+        "D2-menus",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MENU-01",
+      "obligation_id": "MENU-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Repeated Options navigation does not duplicate controls or resume a paused run.",
+      "check_ids": [
+        "D2-menus",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MENU-01",
+      "obligation_id": "MENU-01.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Main Menu discards the run while preserving high score and applied settings.",
+      "check_ids": [
+        "D2-menus",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MENU-01",
+      "obligation_id": "MENU-01.6.3",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-menus",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MENU-02",
+      "obligation_id": "MENU-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A menu containing Quit.",
+      "check_ids": [
+        "D2-menus",
+        "D4-save",
+        "D4-quit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MENU-02",
+      "obligation_id": "MENU-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Activate Quit.",
+      "check_ids": [
+        "D2-menus",
+        "D4-save",
+        "D4-quit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MENU-02",
+      "obligation_id": "MENU-02.3.1",
+      "field": "Required result",
+      "obligation": "Save the high score and applied options, then close normally.",
+      "check_ids": [
+        "D2-menus",
+        "D4-save",
+        "D4-quit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MENU-02",
+      "obligation_id": "MENU-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No background game process left running.",
+      "check_ids": [
+        "D2-menus",
+        "D4-save",
+        "D4-quit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MENU-02",
+      "obligation_id": "MENU-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "The game window closes.",
+      "check_ids": [
+        "D2-menus",
+        "D4-save",
+        "D4-quit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MENU-02",
+      "obligation_id": "MENU-02.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Standard OS close performs the same persistent-data save.",
+      "check_ids": [
+        "D2-menus",
+        "D4-save",
+        "D4-quit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "MENU-02",
+      "obligation_id": "MENU-02.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-menus",
+        "D4-save",
+        "D4-quit"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-01",
+      "obligation_id": "OPTIONS-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Options opened from title or pause.",
+      "check_ids": [
+        "D2-menus",
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-01",
+      "obligation_id": "OPTIONS-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Change the displayed choices.",
+      "check_ids": [
+        "D2-menus",
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-01",
+      "obligation_id": "OPTIONS-01.3.1",
+      "field": "Required result",
+      "obligation": "Expose Window Mode (Windowed, Fullscreen), VSync (Enabled, Disabled), Graphics (Low, Medium, High, Epic, Cinematic) and Resolution.",
+      "check_ids": [
+        "D2-menus",
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-01",
+      "obligation_id": "OPTIONS-01.3.2",
+      "field": "Required result",
+      "obligation": "Offer 1280x720 and 1920x1080 when the desktop supports them; keep unsupported resolutions unavailable.",
+      "check_ids": [
+        "D2-menus",
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-01",
+      "obligation_id": "OPTIONS-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "Do not show choices that cannot be changed or silently apply a pending selection.",
+      "check_ids": [
+        "D2-menus",
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-01",
+      "obligation_id": "OPTIONS-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Left/right selectors and the selected values are legible",
+      "check_ids": [
+        "D2-menus",
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-01",
+      "obligation_id": "OPTIONS-01.5.2",
+      "field": "Visible feedback",
+      "obligation": "Apply/Revert indicate whether changes are pending.",
+      "check_ids": [
+        "D2-menus",
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-01",
+      "obligation_id": "OPTIONS-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Use an explicit custom label when existing engine settings do not match a preset.",
+      "check_ids": [
+        "D2-menus",
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-01",
+      "obligation_id": "OPTIONS-01.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-menus",
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-02",
+      "obligation_id": "OPTIONS-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Options have pending changes.",
+      "check_ids": [
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-02",
+      "obligation_id": "OPTIONS-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Activate Revert or Back without Apply.",
+      "check_ids": [
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-02",
+      "obligation_id": "OPTIONS-02.3.1",
+      "field": "Required result",
+      "obligation": "Discard pending choices and retain the last applied settings.",
+      "check_ids": [
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-02",
+      "obligation_id": "OPTIONS-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No unintended resolution, quality or VSync changes.",
+      "check_ids": [
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-02",
+      "obligation_id": "OPTIONS-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Revert restores the displayed applied values",
+      "check_ids": [
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-02",
+      "obligation_id": "OPTIONS-02.5.2",
+      "field": "Visible feedback",
+      "obligation": "Back returns to the originating menu.",
+      "check_ids": [
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-02",
+      "obligation_id": "OPTIONS-02.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "With no changes, Apply and Revert are disabled or harmless.",
+      "check_ids": [
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-02",
+      "obligation_id": "OPTIONS-02.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D3-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-03",
+      "obligation_id": "OPTIONS-03.1.1",
+      "field": "Preconditions",
+      "obligation": "Options have valid pending changes.",
+      "check_ids": [
+        "D4-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-03",
+      "obligation_id": "OPTIONS-03.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Activate Apply.",
+      "check_ids": [
+        "D4-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-03",
+      "obligation_id": "OPTIONS-03.3.1",
+      "field": "Required result",
+      "obligation": "Apply the actual window mode, resolution, VSync and graphics preset, save them, and continue showing usable UI at the new dimensions.",
+      "check_ids": [
+        "D4-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-03",
+      "obligation_id": "OPTIONS-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "No decorative-only settings or stretched/unreachable menu after resize.",
+      "check_ids": [
+        "D4-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-03",
+      "obligation_id": "OPTIONS-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "The window/rendering change and selected labels agree.",
+      "check_ids": [
+        "D4-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-03",
+      "obligation_id": "OPTIONS-03.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Reopening the application preserves applied settings; a launch-time viewport override may temporarily override window size for a session.",
+      "check_ids": [
+        "D4-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OPTIONS-03",
+      "obligation_id": "OPTIONS-03.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D4-options",
+        "D5-options"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SAVE-01",
+      "obligation_id": "SAVE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A score exceeds the existing best.",
+      "check_ids": [
+        "D4-save",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SAVE-01",
+      "obligation_id": "SAVE-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Continue play, return to menu, quit and reopen normally.",
+      "check_ids": [
+        "D4-save",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SAVE-01",
+      "obligation_id": "SAVE-01.3.1",
+      "field": "Required result",
+      "obligation": "High score is the maximum achieved score, visible on the title and result screens and preserved across process restart.",
+      "check_ids": [
+        "D4-save",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SAVE-01",
+      "obligation_id": "SAVE-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No decrease after a weaker run, Restart or returning to menu.",
+      "check_ids": [
+        "D4-save",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SAVE-01",
+      "obligation_id": "SAVE-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The new record is identified on the result screen.",
+      "check_ids": [
+        "D4-save",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SAVE-01",
+      "obligation_id": "SAVE-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "On first launch or unreadable save, start safely at 0 without corrupting the playable flow.",
+      "check_ids": [
+        "D4-save",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SAVE-01",
+      "obligation_id": "SAVE-01.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D4-save",
+        "D5-results"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SAVE-02",
+      "obligation_id": "SAVE-02.1.1",
+      "field": "Preconditions",
+      "obligation": "A partially played run was closed.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SAVE-02",
+      "obligation_id": "SAVE-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Open the application again.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SAVE-02",
+      "obligation_id": "SAVE-02.3.1",
+      "field": "Required result",
+      "obligation": "Open the main menu with the saved best and applied settings.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SAVE-02",
+      "obligation_id": "SAVE-02.3.2",
+      "field": "Required result",
+      "obligation": "Starting then begins a fresh run.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SAVE-02",
+      "obligation_id": "SAVE-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "Do not restore partial score, lives, remaining pickups, fruit, frightened state or terminal state as a resumed run.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SAVE-02",
+      "obligation_id": "SAVE-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Title screen appears before a new clean play session.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SAVE-02",
+      "obligation_id": "SAVE-02.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "A fresh process identity distinguishes reopening from in-process Restart.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "SAVE-02",
+      "obligation_id": "SAVE-02.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HUD-01",
+      "obligation_id": "HUD-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Playing or paused.",
+      "check_ids": [
+        "D5-hud"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HUD-01",
+      "obligation_id": "HUD-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Score or lives change.",
+      "check_ids": [
+        "D5-hud"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HUD-01",
+      "obligation_id": "HUD-01.3.1",
+      "field": "Required result",
+      "obligation": "Show SCORE at the upper left and LIVES with yellow open-mouth icons at the lower left.",
+      "check_ids": [
+        "D5-hud"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HUD-01",
+      "obligation_id": "HUD-01.3.2",
+      "field": "Required result",
+      "obligation": "Update both within 0.15 seconds of a change; the icon count equals current lives.",
+      "check_ids": [
+        "D5-hud"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HUD-01",
+      "obligation_id": "HUD-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No stale number, negative count, cropped text or overlap obscuring the player near the screen center.",
+      "check_ids": [
+        "D5-hud"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HUD-01",
+      "obligation_id": "HUD-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Large thin white labels and clearly separated yellow icons.",
+      "check_ids": [
+        "D5-hud"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HUD-01",
+      "obligation_id": "HUD-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "At 1280x720 and 1920x1080 the information stays readable; terminal screens may replace the HUD.",
+      "check_ids": [
+        "D5-hud"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "HUD-01",
+      "obligation_id": "HUD-01.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D5-hud"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.1.1",
+      "field": "Preconditions",
+      "obligation": "Viewing active play.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Inspect the maze and move through it.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.3.1",
+      "field": "Required result",
+      "obligation": "Render a real 3D perspective maze: near-black cuboid walls with thin electric-blue emissive edges, dark walkable floor, visible wall height and shaded side faces.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.3.2",
+      "field": "Required result",
+      "obligation": "White luminous dots sit along corridor centers; energizers are visibly larger.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.3.3",
+      "field": "Required result",
+      "obligation": "Retain bloom without washing out corridor boundaries.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No flat diagram, unlit debug boxes, missing materials or HUD drawing used as the entire world.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Dark neon arcade composition with visible depth and a dense full-sized maze.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Geometry and rendering technique are free within ASSET-04; keep wall height between 0.65 and 1.10 cell and dot diameter between 0.12 and 0.25 cell.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-01",
+      "obligation_id": "VISUAL-01.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Player moving and turning.",
+      "check_ids": [
+        "D2-actors",
+        "D5-camera",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Travel along corridors.",
+      "check_ids": [
+        "D2-actors",
+        "D5-camera",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.3.1",
+      "field": "Required result",
+      "obligation": "Show a luminous yellow spherical character with a visibly opening/closing mouth, dark eyes and pale triangular teeth.",
+      "check_ids": [
+        "D2-actors",
+        "D5-camera",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.3.2",
+      "field": "Required result",
+      "obligation": "Animate repeated chomping while moving, oriented along travel.",
+      "check_ids": [
+        "D2-actors",
+        "D5-camera",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "No static sphere, permanently closed mouth, backward-facing travel or animation detached from the character.",
+      "check_ids": [
+        "D2-actors",
+        "D5-camera",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "Readable biting silhouette and animated mouth at normal camera distance.",
+      "check_ids": [
+        "D2-actors",
+        "D5-camera",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Body diameter is 0.55 to 0.85 cell; open mouth animation also remains readable in frightened play.",
+      "check_ids": [
+        "D2-actors",
+        "D5-camera",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-02",
+      "obligation_id": "VISUAL-02.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-actors",
+        "D5-camera",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.1.1",
+      "field": "Preconditions",
+      "obligation": "Four ghosts are visible.",
+      "check_ids": [
+        "D2-actors",
+        "D5-power",
+        "D5-capture",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Normal, frightened and returning states occur.",
+      "check_ids": [
+        "D2-actors",
+        "D5-power",
+        "D5-capture",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.3.1",
+      "field": "Required result",
+      "obligation": "Ghosts have rounded heads and short vertical rounded bodies, with distinguishable red/cyan/pink/orange glow in normal play.",
+      "check_ids": [
+        "D2-actors",
+        "D5-power",
+        "D5-capture",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.3.2",
+      "field": "Required result",
+      "obligation": "Frightened ghosts use a common pale-blue vulnerable appearance.",
+      "check_ids": [
+        "D2-actors",
+        "D5-power",
+        "D5-capture",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.3.3",
+      "field": "Required result",
+      "obligation": "Returning ghosts use a visibly reduced pale form without the normal body.",
+      "check_ids": [
+        "D2-actors",
+        "D5-power",
+        "D5-capture",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "Do not distinguish these states only by observer data or text.",
+      "check_ids": [
+        "D2-actors",
+        "D5-power",
+        "D5-capture",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "State and identity are readable from moving silhouettes and color.",
+      "check_ids": [
+        "D2-actors",
+        "D5-power",
+        "D5-capture",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "At fright expiry restore each ghost's own normal color; returning appearance takes precedence.",
+      "check_ids": [
+        "D2-actors",
+        "D5-power",
+        "D5-capture",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-03",
+      "obligation_id": "VISUAL-03.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-actors",
+        "D5-power",
+        "D5-capture",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.1.1",
+      "field": "Preconditions",
+      "obligation": "Active play.",
+      "check_ids": [
+        "D5-camera",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Player moves around the maze.",
+      "check_ids": [
+        "D5-camera",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.3.1",
+      "field": "Required result",
+      "obligation": "Use a smoothly following, elevated perspective camera with visible top and side wall faces.",
+      "check_ids": [
+        "D5-camera",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.3.2",
+      "field": "Required result",
+      "obligation": "Keep the player within the central half of the view and enough surroundings to read upcoming intersections; at 720p show roughly 12 to 22 cell widths.",
+      "check_ids": [
+        "D5-camera",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.4.1",
+      "field": "Forbidden result",
+      "obligation": "No fixed full-board orthographic map, first-person view, wall clipping, sustained occlusion or immediate snap at ordinary turns.",
+      "check_ids": [
+        "D5-camera",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.5.1",
+      "field": "Visible feedback",
+      "obligation": "The maze slides naturally beneath a readable foreground character.",
+      "check_ids": [
+        "D5-camera",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "A wrap may reset the follow position promptly; no multi-second flight across the maze.",
+      "check_ids": [
+        "D5-camera",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Menus/results may use a wider overview.",
+      "check_ids": [
+        "D5-camera",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-04",
+      "obligation_id": "VISUAL-04.6.3",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D5-camera",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-05",
+      "obligation_id": "VISUAL-05.1.1",
+      "field": "Preconditions",
+      "obligation": "An energizer, ghost capture, pineapple or life-loss event occurs.",
+      "check_ids": [
+        "D5-power",
+        "D5-capture",
+        "D5-fruit",
+        "D5-death",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-05",
+      "obligation_id": "VISUAL-05.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Resolve the event.",
+      "check_ids": [
+        "D5-power",
+        "D5-capture",
+        "D5-fruit",
+        "D5-death",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-05",
+      "obligation_id": "VISUAL-05.3.1",
+      "field": "Required result",
+      "obligation": "Provide a short perceptible camera impulse and a distinct visual response: empowered-player change for energizer, returning-form change for ghost, pineapple overlay for fruit, and disappearance/death motion for life loss.",
+      "check_ids": [
+        "D5-power",
+        "D5-capture",
+        "D5-fruit",
+        "D5-death",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-05",
+      "obligation_id": "VISUAL-05.4.1",
+      "field": "Forbidden result",
+      "obligation": "No missing feedback, permanent shaking, unreadable prolonged flash or camera displacement that prevents control.",
+      "check_ids": [
+        "D5-power",
+        "D5-capture",
+        "D5-fruit",
+        "D5-death",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-05",
+      "obligation_id": "VISUAL-05.5.1",
+      "field": "Visible feedback",
+      "obligation": "A brief impulse settles within 0.5 seconds; the pineapple overlay clears within 1.5 seconds.",
+      "check_ids": [
+        "D5-power",
+        "D5-capture",
+        "D5-fruit",
+        "D5-death",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-05",
+      "obligation_id": "VISUAL-05.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Repeated events remain bounded and Restart clears old effects.",
+      "check_ids": [
+        "D5-power",
+        "D5-capture",
+        "D5-fruit",
+        "D5-death",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-05",
+      "obligation_id": "VISUAL-05.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Exact shake curves and shader implementations are free.",
+      "check_ids": [
+        "D5-power",
+        "D5-capture",
+        "D5-fruit",
+        "D5-death",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-05",
+      "obligation_id": "VISUAL-05.6.3",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D5-power",
+        "D5-capture",
+        "D5-fruit",
+        "D5-death",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "obligation_id": "VISUAL-06.1.1",
+      "field": "Preconditions",
+      "obligation": "Any game menu or result is visible.",
+      "check_ids": [
+        "D5-title",
+        "D5-options",
+        "D5-results",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "obligation_id": "VISUAL-06.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Read and use its controls.",
+      "check_ids": [
+        "D5-title",
+        "D5-options",
+        "D5-results",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "obligation_id": "VISUAL-06.3.1",
+      "field": "Required result",
+      "obligation": "Use a predominantly black background, large white heading and white/light-gray controls.",
+      "check_ids": [
+        "D5-title",
+        "D5-options",
+        "D5-results",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "obligation_id": "VISUAL-06.3.2",
+      "field": "Required result",
+      "obligation": "Keep title-menu choices left aligned",
+      "check_ids": [
+        "D5-title",
+        "D5-options",
+        "D5-results",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "obligation_id": "VISUAL-06.3.3",
+      "field": "Required result",
+      "obligation": "Options use labeled rows with left/right selectors and Back, Revert, Apply along the bottom.",
+      "check_ids": [
+        "D5-title",
+        "D5-options",
+        "D5-results",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "obligation_id": "VISUAL-06.3.4",
+      "field": "Required result",
+      "obligation": "Pause/result overlays preserve a dimmed or blurred world context.",
+      "check_ids": [
+        "D5-title",
+        "D5-options",
+        "D5-results",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "obligation_id": "VISUAL-06.4.1",
+      "field": "Forbidden result",
+      "obligation": "No debug console as menu, clipped controls or style replaced by generic editor widgets.",
+      "check_ids": [
+        "D5-title",
+        "D5-options",
+        "D5-results",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "obligation_id": "VISUAL-06.5.1",
+      "field": "Visible feedback",
+      "obligation": "The same visual language spans title, pause, options, win and loss.",
+      "check_ids": [
+        "D5-title",
+        "D5-options",
+        "D5-results",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "obligation_id": "VISUAL-06.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Exact font family and pixel placement are free if visual hierarchy and required information remain clear.",
+      "check_ids": [
+        "D5-title",
+        "D5-options",
+        "D5-results",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "VISUAL-06",
+      "obligation_id": "VISUAL-06.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D5-title",
+        "D5-options",
+        "D5-results",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TIME-01",
+      "obligation_id": "TIME-01.1.1",
+      "field": "Preconditions",
+      "obligation": "A timed rule in this contract is active.",
+      "check_ids": [
+        "D3-waves",
+        "D3-pause"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TIME-01",
+      "obligation_id": "TIME-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Observe its boundary or pause/resume.",
+      "check_ids": [
+        "D3-waves",
+        "D3-pause"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TIME-01",
+      "obligation_id": "TIME-01.3.1",
+      "field": "Required result",
+      "obligation": "Use active game time for movement, waves, frightened duration, release inactivity and fruit lifetime; the death interval is measured from lethal contact as defined in Section 6.4.",
+      "check_ids": [
+        "D3-waves",
+        "D3-pause"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TIME-01",
+      "obligation_id": "TIME-01.3.2",
+      "field": "Required result",
+      "obligation": "Timing acceptance tolerance is 0.15 seconds unless a rule specifies another tolerance.",
+      "check_ids": [
+        "D3-waves",
+        "D3-pause"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TIME-01",
+      "obligation_id": "TIME-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No timer acceleration from render frame rate or elapsed paused time.",
+      "check_ids": [
+        "D3-waves",
+        "D3-pause"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TIME-01",
+      "obligation_id": "TIME-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Paused world visuals stay still and resumed effects retain their remaining duration; menu feedback may animate.",
+      "check_ids": [
+        "D3-waves",
+        "D3-pause"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "TIME-01",
+      "obligation_id": "TIME-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Section 6.4 defines simultaneous-event priority, exact threshold boundaries and which clocks run in each phase.",
+      "check_ids": [
+        "D3-waves",
+        "D3-pause"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBSERVE-01",
+      "obligation_id": "OBSERVE-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The application is running.",
+      "check_ids": [
+        "D1-observation",
+        "D5-honesty"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBSERVE-01",
+      "obligation_id": "OBSERVE-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Read the public observation output during normal play.",
+      "check_ids": [
+        "D1-observation",
+        "D5-honesty"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBSERVE-01",
+      "obligation_id": "OBSERVE-01.3.1",
+      "field": "Required result",
+      "obligation": "Expose truthful, current read-only observations of the visible phase, resources, actors, pickup presence, timers and usable menu targets described by the public observation contract.",
+      "check_ids": [
+        "D1-observation",
+        "D5-honesty"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBSERVE-01",
+      "obligation_id": "OBSERVE-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "No observation read may alter play, trigger a result, expose a cheat control or claim an outcome unsupported by the world.",
+      "check_ids": [
+        "D1-observation",
+        "D5-honesty"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBSERVE-01",
+      "obligation_id": "OBSERVE-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "Ordinary players use the normal game; all reported visible objects and controls match that view.",
+      "check_ids": [
+        "D1-observation",
+        "D5-honesty"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "OBSERVE-01",
+      "obligation_id": "OBSERVE-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Missing gameplay remains explicitly unavailable in the untouched starter; alternative internal architectures are allowed.",
+      "check_ids": [
+        "D1-observation",
+        "D5-honesty"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.1.1",
+      "field": "Preconditions",
+      "obligation": "The player is visible.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Move, turn and enter empowered play.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.3.1",
+      "field": "Required result",
+      "obligation": "Use the supplied SM_Jaw mesh for the yellow upper/lower mouth, SM_Tooth for the pale teeth and SM_Eye for the dark eyes.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.3.2",
+      "field": "Required result",
+      "obligation": "Use MI_Player, MI_Dot and MI_Eye for those respective surfaces, with M_Neon as their material base.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.4.1",
+      "field": "Forbidden result",
+      "obligation": "Keeping unused files in the project or substituting unrelated character art does not satisfy this requirement.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.5.1",
+      "field": "Visible feedback",
+      "obligation": "The supplied curved jaws, triangular teeth and spherical eyes form the visible animated player described by VISUAL-02.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Duplicate, transform, scale and animate the supplied parts; material parameter changes and derived instances are allowed if the specified colors and state feedback remain.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Retain the recognizable geometry.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-01",
+      "obligation_id": "ASSET-01.6.3",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.1.1",
+      "field": "Preconditions",
+      "obligation": "Ghosts are visible.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Observe normal, frightened and returning play.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.3.1",
+      "field": "Required result",
+      "obligation": "Build the four normal ghost silhouettes from the supplied SM_GhostHead and SM_GhostBody.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.3.2",
+      "field": "Required result",
+      "obligation": "Use MI_Red, MI_Cyan, MI_Pink and MI_Orange for their respective identities and MI_Frightened during vulnerability, retaining M_Neon as the base.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.4.1",
+      "field": "Forbidden result",
+      "obligation": "Unused resource references, generic replacement capsules or four identical normal colors do not satisfy the binding.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.5.1",
+      "field": "Visible feedback",
+      "obligation": "The supplied rounded heads and short bodies remain recognizable in normal/frightened play, with the distinctions required by VISUAL-03.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Scaling, animation and parameter changes are allowed.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The returning form may hide or reduce body parts to meet CAPTURE-02 and VISUAL-03.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-02",
+      "obligation_id": "ASSET-02.6.3",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.1.1",
+      "field": "Preconditions",
+      "obligation": "A pineapple is present.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_reward",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Reach a fruit opportunity and collect it.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_reward",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.3.1",
+      "field": "Required result",
+      "obligation": "Use the supplied SM_FruitBody with MI_Fruit and SM_FruitCrown with MI_Crown as the visible maze pineapple, retaining M_Neon as their base.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_reward",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.4.1",
+      "field": "Forbidden result",
+      "obligation": "A substitute primitive, unrelated model or decorative unused copy cannot replace the required fruit parts.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_reward",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.5.1",
+      "field": "Visible feedback",
+      "obligation": "The faceted orange/gold fruit and green crown are visible during FRUIT-01.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_reward",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Transforming, scaling, animating and tuning parameters is allowed while retaining the supplied silhouette.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_reward",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The reward overlay and stage emblem may use a rendered image of these parts or separately authored artwork.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_reward",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-03",
+      "obligation_id": "ASSET-03.6.3",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-fruit",
+        "D3-fruit_reward",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.1.1",
+      "field": "Preconditions",
+      "obligation": "The maze is visible.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Inspect active play.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.3.1",
+      "field": "Required result",
+      "obligation": "Use M_Wall with its supplied T_WallEdge texture on the maze walls.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.3.2",
+      "field": "Required result",
+      "obligation": "Use MI_Floor on the floor, MI_Gate on the home gate and MI_Dot on ordinary dots and energizers, retaining M_Neon as the base of these instances.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.4.1",
+      "field": "Forbidden result",
+      "obligation": "A resource present only in the Content Browser or an unrelated replacement material does not satisfy visible use.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.5.1",
+      "field": "Visible feedback",
+      "obligation": "The dark surfaces, blue wall edges, cyan gate and white pickups satisfy VISUAL-01.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Geometry, UV layout and collision are free.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Derived instances and shader/parameter adjustments are allowed while retaining the supplied material/texture contribution and the required colors, edge pattern and readability.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-04",
+      "obligation_id": "ASSET-04.6.3",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D2-actors",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.1.1",
+      "field": "Preconditions",
+      "obligation": "The score/lives HUD is visible.",
+      "check_ids": [
+        "D5-hud",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.2.1",
+      "field": "Player action or trigger",
+      "obligation": "Start a run, lose a life or gain a life.",
+      "check_ids": [
+        "D5-hud",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.3.1",
+      "field": "Required result",
+      "obligation": "Use the supplied T_LifeIcon texture, or a raster/vector derived from the supplied life-icon SVG or PNG, for each life icon in HUD-01.",
+      "check_ids": [
+        "D5-hud",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.3.2",
+      "field": "Required result",
+      "obligation": "Either route fulfills the binding; using both is unnecessary.",
+      "check_ids": [
+        "D5-hud",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.4.1",
+      "field": "Forbidden result",
+      "obligation": "Text-only lives, generic circles or unrelated icon art cannot replace the supplied shape; merely storing the icon is insufficient.",
+      "check_ids": [
+        "D5-hud",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.5.1",
+      "field": "Visible feedback",
+      "obligation": "Yellow open-mouth icons remain recognizable and their count matches current lives.",
+      "check_ids": [
+        "D5-hud",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.6.1",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Scale, space and animate icons to fit both required resolutions.",
+      "check_ids": [
+        "D5-hud",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.6.2",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "A derived raster or vector must retain the supplied shape and yellow color.",
+      "check_ids": [
+        "D5-hud",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.6.3",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "Reimporting raw files is not required.",
+      "check_ids": [
+        "D5-hud",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "ASSET-05",
+      "obligation_id": "ASSET-05.6.4",
+      "field": "Failure, repeat, restart or boundary",
+      "obligation": "The relevant Section 6.4 boundaries apply.",
+      "check_ids": [
+        "D5-hud",
+        "D6-title",
+        "D6-options",
+        "D6-maze"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-01",
+      "obligation_id": "QUALITY-01.1.1",
+      "field": "Requirement",
+      "obligation": "The project starts, runs, exits and starts again normally using the public instructions.",
+      "check_ids": [
+        "D1-project",
+        "D1-build",
+        "D1-startup",
+        "D4-reopen"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-02",
+      "obligation_id": "QUALITY-02.1.1",
+      "field": "Requirement",
+      "obligation": "The main flow uses normal player input and does not rely on answer buttons, cheats or direct calls to gameplay outcomes.",
+      "check_ids": [
+        "D4-start"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-03",
+      "obligation_id": "QUALITY-03.1.1",
+      "field": "Requirement",
+      "obligation": "Key entry points, text and controls are visible, discoverable, readable and operable.",
+      "check_ids": [
+        "D5-title"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-04",
+      "obligation_id": "QUALITY-04.1.1",
+      "field": "Requirement",
+      "obligation": "Player actions have perceptible feedback that agrees with actual game state.",
+      "check_ids": [
+        "D5-hud",
+        "D5-power",
+        "D5-honesty"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-05",
+      "obligation_id": "QUALITY-05.1.1",
+      "field": "Requirement",
+      "obligation": "No severe error blocks the main flow.",
+      "check_ids": [
+        "D1-build",
+        "D4-menu"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    },
+    {
+      "requirement_id": "QUALITY-06",
+      "obligation_id": "QUALITY-06.1.1",
+      "field": "Requirement",
+      "obligation": "Repeated runs from the same initial conditions are substantially stable.",
+      "check_ids": [
+        "D4-repeat"
+      ],
+      "status": "partial",
+      "positive_test": null,
+      "negative_test": null,
+      "equivalent_test": null
+    }
+  ],
+  "qualification_tests": [
+    "tests/test_distribution.py"
+  ],
+  "qualification_test_scope": "Distribution, evidence conversion and attribution invariants only; not gameplay semantic qualification."
+}

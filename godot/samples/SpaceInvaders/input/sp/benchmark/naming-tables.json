@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "task_id": "space_invaders_first_level",
+  "coordinate_space": "viewport pixels; x right, y down; origin top-left",
+  "level_width_cells": 1280,
+  "level_height_cells": 720,
+  "slots": [
+    "score",
+    "lives",
+    "level",
+    "invaders_remaining",
+    "player_projectiles",
+    "enemy_projectiles"
+  ],
+  "entities": [
+    {
+      "kind": "player",
+      "states": [
+        "active",
+        "hit",
+        "lost"
+      ]
+    },
+    {
+      "kind": "invader",
+      "states": [
+        "active",
+        "hit"
+      ]
+    },
+    {
+      "kind": "player_projectile",
+      "states": [
+        "active"
+      ]
+    },
+    {
+      "kind": "enemy_projectile",
+      "states": [
+        "active"
+      ]
+    },
+    {
+      "kind": "barrier",
+      "states": [
+        "intact"
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "kind": "restart_button"
+    },
+    {
+      "kind": "resume_button"
+    },
+    {
+      "kind": "fullscreen_button"
+    }
+  ],
+  "controls": {
+    "movement_template": "continuous hold",
+    "keys": {
+      "left": "A or Left Arrow",
+      "right": "D or Right Arrow",
+      "shoot": "W, Up Arrow, Space, or Enter",
+      "pause": "Escape"
+    }
+  }
+}

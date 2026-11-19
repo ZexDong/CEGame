@@ -1,0 +1,185 @@
+{
+  "native_rules": {
+    "benchmark_id": "skyline-switchyard-v1",
+    "automatic_score_maximum": 90,
+    "manual_visual_score_maximum": 10,
+    "dimensions": {
+      "D1": {
+        "label": "Startup, contract, and scene",
+        "maximum_score": 10,
+        "checks": [
+          {
+            "id": "D1_BOOT",
+            "weight": 4,
+            "description": "Complete initial state"
+          },
+          {
+            "id": "D1_CONTRACT",
+            "weight": 3,
+            "description": "Public attributes and destinations"
+          },
+          {
+            "id": "D1_WORLD",
+            "weight": 3,
+            "description": "Key scene structure"
+          }
+        ]
+      },
+      "D2": {
+        "label": "Core gameplay",
+        "maximum_score": 35,
+        "checks": [
+          {
+            "id": "D2_LOAD",
+            "weight": 4,
+            "description": "Loading power cost"
+          },
+          {
+            "id": "D2_SWITCH",
+            "weight": 4,
+            "description": "Two-switch routing"
+          },
+          {
+            "id": "D2_SCAN",
+            "weight": 3,
+            "description": "Safe hub prompt"
+          },
+          {
+            "id": "D2_DELIVERY",
+            "weight": 5,
+            "description": "Correct delivery and fuel consumption"
+          },
+          {
+            "id": "D2_MISROUTE",
+            "weight": 5,
+            "description": "Incorrect route penalty"
+          },
+          {
+            "id": "D2_CYCLES",
+            "weight": 8,
+            "description": "Three windows and resource replenishment"
+          },
+          {
+            "id": "D2_FINAL",
+            "weight": 6,
+            "description": "A-C-B-A-C victory"
+          }
+        ]
+      },
+      "D3": {
+        "label": "Rules and failure boundaries",
+        "maximum_score": 25,
+        "checks": [
+          {
+            "id": "D3_GATES",
+            "weight": 4,
+            "description": "Empty dispatch and premature commit"
+          },
+          {
+            "id": "D3_DUPLICATE",
+            "weight": 3,
+            "description": "Repeated loading"
+          },
+          {
+            "id": "D3_REPEAT",
+            "weight": 3,
+            "description": "Repeated delivery"
+          },
+          {
+            "id": "D3_LOSS",
+            "weight": 4,
+            "description": "Failure at four faults"
+          },
+          {
+            "id": "D3_TERMINAL",
+            "weight": 3,
+            "description": "Lock after failure"
+          },
+          {
+            "id": "D3_WRONG",
+            "weight": 4,
+            "description": "Incorrect synchronization input"
+          },
+          {
+            "id": "D3_TIMEOUT",
+            "weight": 4,
+            "description": "12-second timeout"
+          }
+        ]
+      },
+      "D4": {
+        "label": "End-to-end flow and reopen",
+        "maximum_score": 10,
+        "checks": [
+          {
+            "id": "D4_WORKFLOW",
+            "weight": 4,
+            "description": "Nine consecutive deliveries"
+          },
+          {
+            "id": "D4_RESET",
+            "weight": 3,
+            "description": "R reset after victory"
+          },
+          {
+            "id": "D4_REOPEN",
+            "weight": 3,
+            "description": "Clean reopen in an independent process"
+          }
+        ]
+      },
+      "D5": {
+        "label": "HUD and feedback",
+        "maximum_score": 10,
+        "checks": [
+          {
+            "id": "D5_HUD",
+            "weight": 4,
+            "description": "Resource and drone state"
+          },
+          {
+            "id": "D5_FINAL",
+            "weight": 3,
+            "description": "Synchronization input feedback"
+          },
+          {
+            "id": "D5_RESULT",
+            "weight": 3,
+            "description": "Victory result"
+          }
+        ]
+      },
+      "D6": {
+        "label": "Visual and spatial experience",
+        "manual": true,
+        "maximum_score": 10,
+        "rubric": [
+          {
+            "item": "Elevated city, track branches, and recognizable hubs",
+            "maximum": 4
+          },
+          {
+            "item": "Readable HUD, no overlap or occlusion, and clear prompts",
+            "maximum": 3
+          },
+          {
+            "item": "Walking reachability, camera, and interaction",
+            "maximum": 3
+          }
+        ]
+      }
+    },
+    "adaptation": "Game10 D1-D6 weights retained. Full package: real published HUD buttons and keyboard A/C/B/A/C/R are tested; no QA calls to candidate remotes and no character teleportation. Per-window Delivered, cumulative TotalDelivered; FinalIndex starts at 1 and becomes 6 on victory; stages Locked/Preview/Input/Won/Lost. Current window A/B/C_Route attributes publish required Switch1 positions; Switch2 is an auxiliary hint. D6 movement and visual quality require separate manual review."
+  },
+  "native_source": "src/original/",
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "D6_protocol": "d6/protocol.json",
+  "scoring_logic_modified": false
+}

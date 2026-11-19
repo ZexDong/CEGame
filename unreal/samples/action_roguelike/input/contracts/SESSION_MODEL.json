@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "contract_kind": "historical_read_only_observation",
+  "schemas": [
+    "contracts/actionroguelike-probe-events.schema.json",
+    "contracts/actionroguelike-probe-snapshot.schema.json"
+  ],
+  "authority": "GDD.md",
+  "state_mutation": "No public Capture/Restore contract was required by the frozen task; private evaluator fixtures are not candidate API requirements."
+}

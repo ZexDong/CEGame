@@ -1,0 +1,14 @@
+{
+  "version": "scoped-observation-v2-20260918",
+  "base_directory": "tools/unity/session-evaluation",
+  "base_files": {
+    "package.json": "13bd94eb77e357b684048cfe153657c167b2f7bc9ce114d92236c4ff42d16914",
+    "Runtime/GameCreate.Evaluation.Session.asmdef": "337edbfb8cff1ee159d76f2978429d686cdc8a232a33b2b5881a568bdf19f882",
+    "Runtime/PlayerInputDriver.cs": "0921cfc32e7278ea20a3e2d03800ed1c8223da1dcbecdd7242d705dc1f92536c",
+    "Runtime/SessionDriver.cs": "4a67fd6f8dccf531d1b0e7456f6f7f70a88d1ce5816e3c9625272cab4e5d447f",
+    "Tests/GameCreate.Evaluation.Session.Tests.asmdef": "c88ff2c6b77ebaa9b0cfe4d87e61b4c3382cef663ae04b78f535dbb6e23323d7",
+    "Tests/SessionDriverTests.cs": "4ea53c0e4fb418dbf5623f6fd1e207eb2d61c6c4767308d74aa2f9d68656fa4f"
+  },
+  "package_identity_preserved": true,
+  "inject_only_one_version": true
+}

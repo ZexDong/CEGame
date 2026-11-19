@@ -1,0 +1,640 @@
+{
+  "schema_version": 1,
+  "game": "cervantes_tactics",
+  "naming_tables": "../input/sp/benchmark/naming-tables.json",
+  "controls_from_naming_tables": true,
+  "honesty_spot_checks": {
+    "mode": "review_against_captured_render_and_input_trace"
+  },
+  "trajectories": [
+    {
+      "id": "entry_and_initial",
+      "title": "entry and initial",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 30
+        },
+        {
+          "check": {
+            "id": "D2-01",
+            "source": "gdd:MENU-01",
+            "dim": "D2",
+            "assert": "The main menu, three save slots, chapter page, options, quit confirmation, and return paths are visible and operable"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-02",
+            "source": "gdd:SAVE-02",
+            "dim": "D3",
+            "assert": "Three-slot create/overwrite/load/Continue behavior respects commit boundaries, isolation, timing, and empty-slot rules"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "new_game_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "save_slot_empty"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "chapter_start_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 120
+        },
+        {
+          "check": {
+            "id": "D2-02",
+            "source": "gdd:SCENE-01i",
+            "dim": "D2",
+            "assert": "The 12x9 isometric battlefield, Crystal, fixed terrain, four Family units, and three enemies are fully present"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-01",
+            "source": "gdd:DATA-01a",
+            "dim": "D3",
+            "assert": "The board, coordinates, obstacles, traps, Crystal, and every unit match their public initial values"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-10",
+            "source": "gdd:ASSET-01a",
+            "dim": "D2",
+            "assert": "English UI, specified textures/portraits/scene assets, HUD, layout, and feedback appear in their corresponding screens"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "core_and_boundaries",
+      "title": "core and boundaries",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 30
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "new_game_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "save_slot_empty"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "chapter_start_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 120
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "family_unit"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "move_action"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "legal_cell"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "confirm_action_button"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-03",
+            "source": "gdd:INTERACTION-01",
+            "dim": "D2",
+            "assert": "Selection, action menus, preview, confirm, cancel, and End Turn work through normal mouse/keyboard input"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-03",
+            "source": "gdd:TURN-01a",
+            "dim": "D3",
+            "assert": "Player/enemy phases, one action per turn, atomic confirmation, and turn progression follow the rules"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-04",
+            "source": "gdd:MOVEMENT-01",
+            "dim": "D3",
+            "assert": "Movement range, blocking, occupancy, attack range, legal targets, and invalid-target invariants are correct"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "family_unit"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "attack_action"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "enemy_unit"
+          }
+        },
+        {
+          "do": "press",
+          "key": "Escape"
+        },
+        {
+          "check": {
+            "id": "D3-10",
+            "source": "gdd:PROHIBITION-01a",
+            "dim": "D3",
+            "assert": "No prohibited duplicate instances, premature commits, out-of-bounds actions, hidden state changes, or post-terminal inputs occur"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-04",
+            "source": "gdd:MAGIC-01",
+            "dim": "D2",
+            "assert": "Normal attack, defense, wait, magic, healing, and Eagle Slash resolve under legal conditions"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-05",
+            "source": "gdd:TRAP-01a",
+            "dim": "D2",
+            "assert": "Traps, Mitzi detection/aura, and visible Family Crystal gameplay are complete"
+          }
+        },
+        {
+          "check": {
+            "id": "D5-ACTION",
+            "source": "gdd:FEEDBACK-01a",
+            "dim": "D5",
+            "assert": "Selection, range, confirmation, damage, status, and invalid-action feedback match the dashboard"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "success_and_progression",
+      "title": "success and progression",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 30
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "new_game_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "save_slot_empty"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "chapter_start_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 120
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "enemy_unit"
+          },
+          "timeout_s": 1200
+        },
+        {
+          "check": {
+            "id": "D2-06",
+            "source": "gdd:ENEMY-01a",
+            "dim": "D2",
+            "assert": "Enemy turns, pathfinding, attacks, death, occupancy release, and the common resolution sequence are complete"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-05",
+            "source": "gdd:DAMAGE-01",
+            "dim": "D3",
+            "assert": "Damage, defense, aura, magic, healing, Limit, and trap values and resolution order are correct"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-06",
+            "source": "gdd:RESOLUTION-01",
+            "dim": "D3",
+            "assert": "Enemy decisions, path priorities, Crystal/Family targeting, and common death resolution are correct"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == won",
+          "timeout_s": 1200
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-07",
+            "source": "gdd:OUTCOME-01",
+            "dim": "D3",
+            "assert": "Victory, Crystal destruction, and Family wipeout are mutually exclusive and never trigger early or repeatedly"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-07",
+            "source": "gdd:STORY-01",
+            "dim": "D2",
+            "assert": "Opening, victory, defeat, and result narratives appear in order and can advance"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-08",
+            "source": "gdd:PROGRESSION-01",
+            "dim": "D2",
+            "assert": "Victory experience, level-ups, result summary, menu return, and replay content are complete"
+          }
+        },
+        {
+          "check": {
+            "id": "D3-08",
+            "source": "gdd:XP-01a",
+            "dim": "D3",
+            "assert": "Experience for surviving/fallen units, thresholds, successive level-ups, and stat growth are correct for each unit"
+          }
+        },
+        {
+          "check": {
+            "id": "D4-SUCCESS",
+            "source": "gdd:PLAYABILITY-01",
+            "dim": "D4",
+            "assert": "A normal-input strategy proceeds from the menu through victory and results to a usable continuation entry"
+          }
+        },
+        {
+          "check": {
+            "id": "D5-RESULT",
+            "source": "gdd:RESULT-01a",
+            "dim": "D5",
+            "assert": "The outcome reason, experience/level/stat changes for all four units, and next actions are visible and readable"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "defeat_and_restart",
+      "title": "defeat and restart",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 30
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "new_game_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "save_slot_empty"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "chapter_start_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "dialogue_continue_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 120
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == lost",
+          "timeout_s": 1200
+        },
+        {
+          "check": {
+            "id": "D4-LOSS",
+            "source": "common-baseline:CB-12",
+            "dim": "D4",
+            "assert": "Natural defeat reaches a single clear defeat result with return/retry paths"
+          }
+        },
+        {
+          "do": "press",
+          "key": "Escape"
+        },
+        {
+          "check": {
+            "id": "D4-FINAL",
+            "source": "common-baseline:CB-14",
+            "dim": "D4",
+            "assert": "The terminal state freezes prior combat input"
+          }
+        },
+        {
+          "do": "restart"
+        },
+        {
+          "check": {
+            "id": "D4-RESTART",
+            "source": "common-baseline:CB-13",
+            "dim": "D4",
+            "assert": "Restart after defeat clears all temporary combat state"
+          }
+        },
+        {
+          "check": {
+            "id": "D2-09",
+            "source": "gdd:PAUSE-01a",
+            "dim": "D2",
+            "assert": "Pause, return confirmation, camera pan/reset, repeated interaction, and lifecycle entries work correctly"
+          }
+        },
+        {
+          "check": {
+            "id": "D5-ENTRY",
+            "source": "gdd:LAYOUT-01a",
+            "dim": "D5",
+            "assert": "Menu, slots, chapters, options, and pause entries are clear and operable at 1280x720"
+          }
+        },
+        {
+          "check": {
+            "id": "D5-HUD",
+            "source": "gdd:HUD-01a",
+            "dim": "D5",
+            "assert": "Objective, Crystal, enemies, turn, unit values, and action HUD stay synchronized with actual state"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "lifecycle_reopen",
+      "title": "lifecycle reopen",
+      "clean_start": "none",
+      "steps": [
+        {
+          "do": "reopen"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 30
+        },
+        {
+          "check": {
+            "id": "D3-09",
+            "source": "gdd:PERSISTENCE-01",
+            "dim": "D3",
+            "assert": "Victory commits, defeat rollback, reopen, option application, and corrupt-save fallback respect their boundaries"
+          }
+        },
+        {
+          "check": {
+            "id": "D4-REOPEN",
+            "source": "common-baseline:CB-03",
+            "dim": "D4",
+            "assert": "The old PID ends; the new PID loads only committed saves and applied settings"
+          }
+        },
+        {
+          "check": {
+            "id": "D5-READABLE",
+            "source": "common-baseline:CB-08",
+            "dim": "D5",
+            "assert": "Key English text and values are readable at the target resolution without a permanently blocking overlay"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 10
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    }
+  ]
+}

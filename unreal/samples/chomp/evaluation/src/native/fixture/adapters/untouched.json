@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "source": "untouched.cpp",
+  "source_sha256": "f099ae73917e8aa5b83c851a288e057e120454d85e685efccce3c510aefc4dae",
+  "candidate_identity": "86c5158807568775690f501f001a0fd7fa570bd9b2e0db545ad3855dbd6a9b12",
+  "module": "ChompStarter",
+  "review": {
+    "lookup": "engine-owned current GameMode; semantic state mapped only in this private file",
+    "forbidden_outcome_calls": false,
+    "atomic_prevalidation": true,
+    "public_observer_unchanged": true
+  },
+  "kind": "untouched"
+}

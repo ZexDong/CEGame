@@ -1,0 +1,1459 @@
+{
+  "schema_version": 1,
+  "game": "defold_urban_climber_v3",
+  "naming_tables": "../input/naming-tables.json",
+  "player_runtime_min_version": "0.12",
+  "controls_from_naming_tables": true,
+  "honesty_spot_checks": {
+    "per_trajectory": 0,
+    "mode": "random"
+  },
+  "score_caps": [
+    {
+      "id": "core_two_building_completion",
+      "requires_all": [
+        "UC_D2_BUILDING1_EXTRACTION",
+        "UC_D3_BUILDING1_CHECKPOINT_BOUNDARY",
+        "UC_D4_BUILDING2_FRESH_START",
+        "UC_D2_BEACON_AND_ROOF_UNLOCK",
+        "UC_D2_BUILDING2_EXTRACTION",
+        "UC_D4_FULL_CAMPAIGN_SUCCESS"
+      ],
+      "max_nonvisual_score": 50.0
+    },
+    {
+      "id": "second_building_key_mechanics",
+      "requires_all": [
+        "UC_D3_LOCKED_ROOF_REJECTION",
+        "UC_D3_BEACON_PROXIMITY_AND_IDEMPOTENCE",
+        "UC_D3_CLOSURE_WARNING_AND_DURATION",
+        "UC_D3_CLOSURE_BLOCK_FREEZE_REOPEN"
+      ],
+      "max_nonvisual_score": 70.0
+    },
+    {
+      "id": "meaningful_hazard_challenge",
+      "requires_all": [
+        "UC_D2_BUILDING1_TWO_HAZARD_KINDS",
+        "UC_D2_BUILDING2_TWO_HAZARD_KINDS",
+        "UC_D2_NONTERMINAL_HIT_SYSTEM",
+        "UC_D3_WARNING_DURATION_AND_SOURCE",
+        "UC_D3_BUILDING1_THREE_VISIBLE_WARNINGS",
+        "UC_D3_BUILDING2_THREE_VISIBLE_WARNINGS",
+        "UC_D3_FOUR_ROW_DROP_AND_RECOVERY"
+      ],
+      "max_nonvisual_score": 70.0
+    },
+    {
+      "id": "required_route_topology",
+      "requires_all": [
+        "UC_D3_BUILDING1_MULTI_TRANSFER_ROUTE",
+        "UC_D3_BUILDING2_MULTI_TRANSFER_ROUTE",
+        "UC_D3_BUILDING1_ONLY_UP_BLOCKED",
+        "UC_D3_BUILDING2_ONLY_UP_BLOCKED"
+      ],
+      "max_nonvisual_score": 70.0
+    }
+  ],
+  "trajectories": [
+    {
+      "id": "entry_movement_pause_reopen",
+      "title": "Menu, truthful initial world, movement rejection, pause freeze, resume, and clean reopen",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15,
+          "check": {
+            "id": "UC_D2_MENU_ENTRY",
+            "source": "gdd:UC-MENU-01",
+            "dim": "D2",
+            "assert": "phase == menu && slots.level_index == 0 && slots.stage_code == 0 && slots.total_rows == 0 && count(kind=player) == 0"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "MenuFrame",
+          "check": {
+            "id": "UC_D5_MENU_FEEDBACK",
+            "source": "gdd:UC-MENU-01",
+            "dim": "D5",
+            "assert": "phase == menu && capture_nonblank(MenuFrame) && ocr_contains_any(MenuFrame,[\"START\",\"BEGIN\",\"NEW CLIMB\",\"Start\"]) && ocr_contains_any(MenuFrame,[\"CLIMB\",\"CLIMBER\",\"climbing\"])"
+          }
+        },
+        {
+          "do": "press",
+          "key": "confirm",
+          "cond": "phase == playing",
+          "timeout_s": 10
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing && slots.level_index == 1 && entity(player).state == normal",
+          "timeout_s": 10,
+          "check": {
+            "id": "UC_D2_BUILDING1_WORLD_AND_DASHBOARD",
+            "source": "gdd:UC-LEVEL-01",
+            "dim": "D2",
+            "assert": "phase == playing && slots.level_index == 1 && slots.stage_code == 1 && slots.campaign_checkpoint == 0 && slots.total_rows == 18 && slots.height_row == 0 && slots.visible_row_min == 0 && slots.visible_row_max < 17 && slots.time_remaining > 44 && slots.time_remaining <= 45 && count(kind=climb_anchor) >= 18 && entity(player).cell.x >= 0 && entity(player).cell.x <= 2 && entity(roof_goal).cell.x == 2 && entity(roof_goal).cell.y == 17 && exists(kind=movement_edge,state=left_open) && exists(kind=movement_edge,state=right_open) && entity(roof_goal).state == open && entity(roof_goal).visible == false && !exists(kind=rescue_beacon) && !exists(kind=route_closure) && !exists(kind=helicopter)"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "GameplayFrame",
+          "defer_ocr": true
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Boundary"
+        },
+        {
+          "do": "press",
+          "key": "down"
+        },
+        {
+          "do": "wait_until",
+          "cond": "wall_clock_since(Boundary) >= 0.4",
+          "timeout_s": 1
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Rejected"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "roof_goal",
+            "state": "open"
+          },
+          "max_steps": 1,
+          "timeout_s": 3
+        },
+        {
+          "do": "wait_until",
+          "cond": "entity(player).cell != Rejected.entity(kind=player).cell && entity(player).state == normal",
+          "timeout_s": 2,
+          "check": {
+            "id": "UC_D3_ONE_STEP_REJECTION_AND_CAUSALITY",
+            "source": "gdd:UC-MOVE-01",
+            "dim": "D3",
+            "assert": "Boundary.entity(kind=player).cell == Rejected.entity(kind=player).cell && distance_cells(Rejected.entity(kind=player),entity(player)) == 1 && entity(player).cell.x >= 0 && entity(player).cell.x <= 2 && entity(player).cell.y >= 0 && entity(player).cell.y <= 17 && phase == playing"
+          }
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ActiveStart"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.time_remaining < ActiveStart.slots.time_remaining - 0.4",
+          "timeout_s": 3
+        },
+        {
+          "do": "wait_until",
+          "cond": "(exists(kind=flowerpot,state=falling) && entity(kind=flowerpot,state=falling).cell.y >= entity(player).cell.y + 2) || (exists(kind=bird_egg,state=falling) && entity(kind=bird_egg,state=falling).cell.y >= entity(player).cell.y + 2)",
+          "timeout_s": 12
+        },
+        {
+          "do": "press",
+          "key": "pause",
+          "cond": "phase == paused",
+          "timeout_s": 3
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Paused"
+        },
+        {
+          "do": "wait_until",
+          "cond": "wall_clock_since(Paused) >= 1",
+          "timeout_s": 2,
+          "check": {
+            "id": "UC_D3_PAUSE_FREEZES_WORLD",
+            "source": "gdd:UC-PAUSE-01",
+            "dim": "D3",
+            "assert": "phase == paused && slots.time_remaining >= Paused.slots.time_remaining - 0.05 && slots.time_remaining <= Paused.slots.time_remaining + 0.05 && entity(player).cell == Paused.entity(kind=player).cell && same_entities(Paused,flowerpot) && same_entities(Paused,bird_egg)"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "PauseFrame",
+          "check": {
+            "id": "UC_D5_PAUSE_FEEDBACK",
+            "source": "gdd:UC-PAUSE-01",
+            "dim": "D5",
+            "assert": "phase == paused && entity(player).cell == Paused.entity(kind=player).cell && capture_nonblank(PauseFrame) && ocr_contains_any(PauseFrame,[\"PAUSED\",\"PAUSE\",\"RESUME\",\"CONTINUE\",\"Pause\",\"Continue\"])"
+          }
+        },
+        {
+          "do": "ocr_capture",
+          "from": "GameplayFrame",
+          "check": {
+            "id": "UC_D5_GAMEPLAY_HUD",
+            "source": "gdd:UC-UI-01",
+            "dim": "D5",
+            "assert": "Boundary.phase == playing && Boundary.slots.level_index == 1 && Boundary.entity(kind=player).visible == true && capture_nonblank(GameplayFrame) && ocr_line_count(GameplayFrame) >= 2 && ocr_contains(GameplayFrame,\"TIME\") && ocr_contains_any(GameplayFrame,[\"HEIGHT\",\"ROUTE\",\"BUILDING 1\"])"
+          }
+        },
+        {
+          "do": "press",
+          "key": "pause",
+          "cond": "phase == playing",
+          "timeout_s": 3
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Resumed"
+        },
+        {
+          "do": "reopen"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15,
+          "check": {
+            "id": "UC_D4_RESUME_AND_REOPEN_RESET",
+            "source": "gdd:UC-RESET-02",
+            "dim": "D4",
+            "assert": "Resumed.phase == playing && phase == menu && slots.level_index == 0 && slots.stage_code == 0 && slots.campaign_checkpoint == 0 && slots.time_remaining == 0 && count(kind=player) == 0"
+          }
+        }
+      ]
+    },
+    {
+      "id": "building1_hazard_warning_and_variety",
+      "title": "Building 1 warning duration, three visible warning episodes, source association, and both hazard kinds",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15
+        },
+        {
+          "do": "press",
+          "key": "confirm",
+          "cond": "phase == playing",
+          "timeout_s": 10
+        },
+        {
+          "do": "wait_until",
+          "cond": "count(kind=source_window,state=warning) == 1 && entity(kind=source_window,state=warning).visible == true && entity(player).state == normal",
+          "timeout_s": 12,
+          "save_as": "Building1Warning1"
+        },
+        {
+          "do": "wait_until",
+          "cond": "wall_clock_since(Building1Warning1) >= 0.5",
+          "timeout_s": 2
+        },
+        {
+          "do": "wait_until",
+          "cond": "exists(kind=flowerpot,state=falling) || exists(kind=bird_egg,state=falling)",
+          "timeout_s": 5,
+          "check": {
+            "id": "UC_D3_WARNING_DURATION_AND_SOURCE",
+            "source": "gdd:UC-HAZARD-02",
+            "dim": "D3",
+            "assert": "wall_clock_since(Building1Warning1) >= 0.5 && Building1Warning1.exists(kind=source_window,state=warning) && Building1Warning1.entity(kind=source_window,state=warning).visible == true && ((exists(kind=flowerpot,state=falling) && Building1Warning1.entity(kind=source_window,state=warning).cell.x == entity(kind=flowerpot,state=falling).cell.x) || (exists(kind=bird_egg,state=falling) && Building1Warning1.entity(kind=source_window,state=warning).cell.x == entity(kind=bird_egg,state=falling).cell.x))"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "exists(kind=flowerpot,state=falling)",
+          "timeout_s": 12,
+          "save_as": "Building1Pot"
+        },
+        {
+          "do": "wait_until",
+          "cond": "exists(kind=bird_egg,state=falling)",
+          "timeout_s": 12,
+          "check": {
+            "id": "UC_D2_BUILDING1_TWO_HAZARD_KINDS",
+            "source": "gdd:UC-HAZARD-01",
+            "dim": "D2",
+            "assert": "slots.level_index == 1 && Building1Pot.exists(kind=flowerpot,state=falling) && exists(kind=bird_egg,state=falling)"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "count(kind=source_window,state=warning) == 0 || (count(kind=source_window,state=warning) == 1 && entity(kind=source_window,state=warning).id != Building1Warning1.entity(kind=source_window,state=warning).id) || count(kind=source_window,state=warning) >= 2",
+          "timeout_s": 3
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "roof_goal",
+            "state": "open"
+          },
+          "max_steps": 1,
+          "cond": "slots.visible_row_min > Building1Warning1.slots.visible_row_min",
+          "timeout_s": 15
+        },
+        {
+          "do": "wait_until",
+          "cond": "count(kind=source_window,state=warning) == 1 && entity(kind=source_window,state=warning).visible == true && entity(player).state == normal",
+          "timeout_s": 20,
+          "save_as": "Building1Warning2"
+        },
+        {
+          "do": "wait_until",
+          "cond": "count(kind=source_window,state=warning) == 0 || (count(kind=source_window,state=warning) == 1 && entity(kind=source_window,state=warning).id != Building1Warning2.entity(kind=source_window,state=warning).id) || count(kind=source_window,state=warning) >= 2",
+          "timeout_s": 3
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "roof_goal",
+            "state": "open"
+          },
+          "max_steps": 1,
+          "cond": "slots.visible_row_min > Building1Warning2.slots.visible_row_min",
+          "timeout_s": 15
+        },
+        {
+          "do": "wait_until",
+          "cond": "count(kind=source_window,state=warning) == 1 && entity(kind=source_window,state=warning).visible == true && entity(player).state == normal",
+          "timeout_s": 20,
+          "save_as": "Building1Warning3",
+          "check": {
+            "id": "UC_D3_BUILDING1_THREE_VISIBLE_WARNINGS",
+            "source": "gdd:UC-HAZARD-02",
+            "dim": "D3",
+            "assert": "phase == playing && slots.level_index == 1 && Building1Warning1.entity(kind=source_window,state=warning).visible == true && Building1Warning2.entity(kind=source_window,state=warning).visible == true && Building1Warning3.entity(kind=source_window,state=warning).visible == true && Building1Warning1.revision < Building1Warning2.revision && Building1Warning2.revision < Building1Warning3.revision"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hazard_collision_drop_recovery",
+      "title": "A real Building 1 collision, four-row drop, visible hit, and nonterminal recovery",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15
+        },
+        {
+          "do": "press",
+          "key": "confirm",
+          "cond": "phase == playing",
+          "timeout_s": 10
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "roof_goal",
+            "state": "open"
+          },
+          "max_steps": 1,
+          "cond": "slots.height_row >= 4",
+          "timeout_s": 25
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.height_row >= 4 && entity(player).state == normal",
+          "timeout_s": 5
+        },
+        {
+          "do": "wait_until",
+          "cond": "(exists(kind=flowerpot,state=falling) && entity(kind=flowerpot,state=falling).cell.x == entity(player).cell.x && entity(kind=flowerpot,state=falling).cell.y >= entity(player).cell.y + 1) || (exists(kind=bird_egg,state=falling) && entity(kind=bird_egg,state=falling).cell.x == entity(player).cell.x && entity(kind=bird_egg,state=falling).cell.y >= entity(player).cell.y + 1)",
+          "timeout_s": 30
+        },
+        {
+          "do": "snapshot",
+          "save_as": "BeforeImpact"
+        },
+        {
+          "do": "wait_until",
+          "cond": "entity(player).state == hit",
+          "timeout_s": 5,
+          "check": {
+            "id": "UC_D2_NONTERMINAL_HIT_SYSTEM",
+            "source": "gdd:UC-HIT-01",
+            "dim": "D2",
+            "assert": "phase == playing && slots.level_index == 1 && entity(player).state == hit && slots.time_remaining > 0"
+          }
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Hit"
+        },
+        {
+          "do": "capture",
+          "save_as": "HitFrame",
+          "defer_ocr": true
+        },
+        {
+          "do": "wait_until",
+          "cond": "entity(player).state == normal",
+          "timeout_s": 3,
+          "check": {
+            "id": "UC_D3_FOUR_ROW_DROP_AND_RECOVERY",
+            "source": "gdd:UC-HIT-01",
+            "dim": "D3",
+            "assert": "phase == playing && entity(player).state == normal && BeforeImpact.slots.height_row >= 4 && slots.height_row == BeforeImpact.slots.height_row - 4 && slots.time_remaining < BeforeImpact.slots.time_remaining"
+          }
+        },
+        {
+          "do": "ocr_capture",
+          "from": "HitFrame",
+          "check": {
+            "id": "UC_D5_WARNING_AND_HIT_FEEDBACK",
+            "source": "gdd:UC-UI-01",
+            "dim": "D5",
+            "assert": "Hit.entity(kind=player).state == hit && phase == playing && capture_nonblank(HitFrame) && ocr_contains_any(HitFrame,[\"HIT\",\"IMPACT\",\"DROPPED\",\"DOWN\"])"
+          }
+        }
+      ]
+    },
+    {
+      "id": "building2_hazards_closure_and_retry",
+      "title": "Building 2 hazard variety, closure warning-duration lifecycle, blocked passage, pause freeze, reopen, and retry reset",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15
+        },
+        {
+          "do": "press",
+          "key": "confirm",
+          "cond": "phase == playing",
+          "timeout_s": 10
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "roof_goal",
+            "state": "open"
+          },
+          "timeout_s": 40
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing && slots.stage_code == 3 && slots.campaign_checkpoint == 1",
+          "timeout_s": 15
+        },
+        {
+          "do": "press",
+          "key": "confirm",
+          "cond": "slots.level_index == 2 && slots.stage_code == 1",
+          "timeout_s": 10
+        },
+        {
+          "check": {
+            "id": "UC_D2_BUILDING2_WORLD_AND_LOCKED_GOAL",
+            "source": "gdd:UC-BEACON-02",
+            "dim": "D2",
+            "assert": "phase == playing && slots.level_index == 2 && slots.stage_code == 1 && slots.campaign_checkpoint == 1 && slots.beacon_activated == 0 && slots.total_rows == 18 && count(kind=climb_anchor) >= 18 && entity(player).cell.x >= 0 && entity(player).cell.x <= 2 && entity(roof_goal).cell.x == 2 && entity(roof_goal).cell.y == 17 && exists(kind=rescue_beacon,state=inactive) && entity(roof_goal).state == locked && count(kind=movement_edge,state=up_blocked) == 0 && !exists(kind=route_closure) && !exists(kind=helicopter)"
+          }
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Building2Attempt1Start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "exists(kind=bird_egg,state=falling)",
+          "timeout_s": 8,
+          "save_as": "Building2Egg"
+        },
+        {
+          "do": "wait_until",
+          "cond": "exists(kind=flowerpot,state=falling)",
+          "timeout_s": 8,
+          "check": {
+            "id": "UC_D2_BUILDING2_TWO_HAZARD_KINDS",
+            "source": "gdd:UC-HAZARD-01",
+            "dim": "D2",
+            "assert": "slots.level_index == 2 && Building2Egg.exists(kind=bird_egg,state=falling) && exists(kind=flowerpot,state=falling)"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "exists(kind=route_closure,state=warning)",
+          "timeout_s": 8,
+          "save_as": "ClosureWarning"
+        },
+        {
+          "do": "wait_until",
+          "cond": "exists(kind=route_closure,state=closed)",
+          "timeout_s": 3,
+          "save_as": "FirstClosed",
+          "check": {
+            "id": "UC_D3_CLOSURE_WARNING_AND_DURATION",
+            "source": "gdd:UC-CLOSURE-01",
+            "dim": "D3",
+            "assert": "slots.level_index == 2 && ClosureWarning.exists(kind=route_closure,state=warning) && exists(kind=route_closure,state=closed) && wall_clock_since(ClosureWarning) >= 0.75"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "exists(kind=route_closure,state=open)",
+          "timeout_s": 4,
+          "check": {
+            "id": "UC_D2_CLOSURE_LIFECYCLE",
+            "source": "gdd:UC-CLOSURE-01",
+            "dim": "D2",
+            "assert": "ClosureWarning.exists(kind=route_closure,state=warning) && FirstClosed.exists(kind=route_closure,state=closed) && exists(kind=route_closure,state=open) && wall_clock_since(FirstClosed) >= 1.5 && wall_clock_since(FirstClosed) <= 2.8"
+          }
+        },
+        {
+          "do": "press",
+          "key": "restart",
+          "cond": "phase == playing && slots.level_index == 2 && slots.height_row == 0 && slots.beacon_activated == 0 && !exists(kind=route_closure)",
+          "timeout_s": 10
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing && slots.level_index == 2 && slots.height_row == 0 && slots.beacon_activated == 0 && !exists(kind=route_closure)",
+          "timeout_s": 10,
+          "check": {
+            "id": "UC_D4_BUILDING2_LOCAL_RETRY_RESET",
+            "source": "gdd:UC-RESET-01",
+            "dim": "D4",
+            "assert": "phase == playing && slots.level_index == 2 && slots.stage_code == 1 && slots.campaign_checkpoint == 1 && slots.height_row == 0 && slots.time_remaining > 44 && slots.time_remaining <= 45 && slots.beacon_activated == 0 && entity(roof_goal).state == locked && !exists(kind=route_closure) && !exists(kind=flowerpot) && !exists(kind=bird_egg)"
+          }
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Building2Attempt2Start",
+          "check": {
+            "id": "UC_D4_ATTEMPT1_RETRY_ID_SCOPING",
+            "source": "gdd:UC-DASHBOARD-02",
+            "dim": "D4",
+            "assert": "Building2Attempt1Start.entity(kind=player).id != Building2Attempt2Start.entity(kind=player).id && Building2Attempt1Start.entity(kind=roof_goal).id != Building2Attempt2Start.entity(kind=roof_goal).id && Building2Attempt1Start.entity(kind=rescue_beacon).id != Building2Attempt2Start.entity(kind=rescue_beacon).id"
+          }
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "roof_goal",
+            "state": "locked"
+          },
+          "max_steps": 2,
+          "cond": "distance_cells(entity(player),FirstClosed.entity(kind=route_closure,state=closed)) <= 1 || exists(kind=route_closure,state=warning) || exists(kind=route_closure,state=closed)",
+          "timeout_s": 12
+        },
+        {
+          "do": "wait_until",
+          "cond": "exists(kind=route_closure,state=warning) || exists(kind=route_closure,state=closed)",
+          "timeout_s": 8,
+          "save_as": "RetryClosureEncounter"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "route_closure"
+          },
+          "cond": "entity(player).cell == entity(route_closure).cell",
+          "timeout_s": 4
+        },
+        {
+          "do": "wait_until",
+          "cond": "exists(kind=route_closure,state=closed) && entity(player).state == normal",
+          "timeout_s": 3,
+          "save_as": "Blocked"
+        },
+        {
+          "do": "press",
+          "key": "pause",
+          "cond": "phase == paused",
+          "timeout_s": 2
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == paused",
+          "timeout_s": 1,
+          "save_as": "ClosurePaused"
+        },
+        {
+          "do": "wait_until",
+          "cond": "wall_clock_since(ClosurePaused) >= 1",
+          "timeout_s": 2
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ClosureStillPaused"
+        },
+        {
+          "do": "press",
+          "key": "pause",
+          "cond": "phase == playing",
+          "timeout_s": 2
+        },
+        {
+          "do": "snapshot",
+          "save_as": "ClosureResumed"
+        },
+        {
+          "do": "press",
+          "key": "up"
+        },
+        {
+          "do": "snapshot",
+          "save_as": "RejectedByClosure"
+        },
+        {
+          "do": "capture",
+          "save_as": "ClosureBlockedFrame",
+          "defer_ocr": true
+        },
+        {
+          "do": "wait_until",
+          "cond": "exists(kind=route_closure,state=open)",
+          "timeout_s": 4
+        },
+        {
+          "do": "press",
+          "key": "up"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.height_row == RejectedByClosure.slots.height_row + 1 && entity(player).state == normal",
+          "timeout_s": 2,
+          "check": {
+            "id": "UC_D3_CLOSURE_BLOCK_FREEZE_REOPEN",
+            "source": "gdd:UC-CLOSURE-01",
+            "dim": "D3",
+            "assert": "Blocked.entity(kind=route_closure,state=closed).cell == FirstClosed.entity(kind=route_closure,state=closed).cell && Blocked.entity(kind=route_closure,state=closed).cell == Blocked.entity(kind=player).cell && Blocked.count(kind=movement_edge,state=up_blocked) == 1 && Blocked.entity(kind=movement_edge,state=up_blocked).cell == Blocked.entity(kind=route_closure,state=closed).cell && Blocked.entity(kind=player).cell == RejectedByClosure.entity(kind=player).cell && RejectedByClosure.count(kind=movement_edge,state=up_blocked) == 1 && RejectedByClosure.entity(kind=movement_edge,state=up_blocked).cell == RejectedByClosure.entity(kind=route_closure,state=closed).cell && ClosurePaused.phase == paused && ClosurePaused.exists(kind=route_closure,state=closed) && ClosureStillPaused.phase == paused && ClosureStillPaused.entity(kind=player).cell == ClosurePaused.entity(kind=player).cell && ClosureStillPaused.slots.time_remaining >= ClosurePaused.slots.time_remaining - 0.05 && ClosureStillPaused.slots.time_remaining <= ClosurePaused.slots.time_remaining + 0.05 && ClosureStillPaused.exists(kind=route_closure,state=closed) && wall_clock_since(ClosureResumed) <= 2.5 && exists(kind=route_closure,state=open) && slots.height_row == RejectedByClosure.slots.height_row + 1"
+          }
+        },
+        {
+          "do": "ocr_capture",
+          "from": "ClosureBlockedFrame",
+          "check": {
+            "id": "UC_D5_CLOSURE_FEEDBACK",
+            "source": "gdd:UC-CLOSURE-01",
+            "dim": "D5",
+            "assert": "Blocked.exists(kind=route_closure,state=closed) && capture_nonblank(ClosureBlockedFrame) && ocr_contains_any(ClosureBlockedFrame,[\"CLOSED\",\"CLOSING\",\"ROUTE\",\"PASSAGE\"])"
+          }
+        },
+        {
+          "do": "press",
+          "key": "restart",
+          "cond": "phase == playing && slots.level_index == 2 && slots.height_row == 0 && slots.beacon_activated == 0 && !exists(kind=route_closure)",
+          "timeout_s": 10
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Building2Attempt3Start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "exists(kind=bird_egg,state=falling)",
+          "timeout_s": 8,
+          "check": {
+            "id": "UC_D4_REPEATED_RETRY_DYNAMIC_ID_SCOPING",
+            "source": "gdd:UC-DASHBOARD-02",
+            "dim": "D4",
+            "assert": "Building2Attempt2Start.entity(kind=player).id != Building2Attempt3Start.entity(kind=player).id && Building2Attempt2Start.entity(kind=roof_goal).id != Building2Attempt3Start.entity(kind=roof_goal).id && Building2Attempt2Start.entity(kind=rescue_beacon).id != Building2Attempt3Start.entity(kind=rescue_beacon).id && Building2Egg.entity(kind=bird_egg,state=falling).id != entity(kind=bird_egg,state=falling).id"
+          }
+        }
+      ]
+    },
+    {
+      "id": "two_building_campaign_success_and_retry",
+      "title": "Both extractions, non-winning checkpoint, locked roof, beacon proximity, final success, terminal lock, retry, and reopen",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15
+        },
+        {
+          "do": "press",
+          "key": "confirm",
+          "cond": "phase == playing && slots.level_index == 1",
+          "timeout_s": 10
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Building1Start"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "roof_goal",
+            "state": "open"
+          },
+          "max_steps": 1,
+          "cond": "entity(player).cell.x != Building1Start.entity(kind=player).cell.x || slots.stage_code == 2",
+          "timeout_s": 20
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Building1Transfer1"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "roof_goal",
+            "state": "open"
+          },
+          "max_steps": 1,
+          "cond": "entity(player).cell.x != Building1Transfer1.entity(kind=player).cell.x || slots.stage_code == 2",
+          "timeout_s": 20
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Building1Transfer2",
+          "check": {
+            "id": "UC_D3_BUILDING1_MULTI_TRANSFER_ROUTE",
+            "source": "gdd:UC-LEVEL-01",
+            "dim": "D3",
+            "assert": "Building1Start.entity(kind=player).cell.x != Building1Transfer1.entity(kind=player).cell.x && Building1Transfer1.entity(kind=player).cell.x != Building1Transfer2.entity(kind=player).cell.x && Building1Transfer1.entity(kind=player).cell.x >= 0 && Building1Transfer1.entity(kind=player).cell.x <= 2 && Building1Transfer2.entity(kind=player).cell.x >= 0 && Building1Transfer2.entity(kind=player).cell.x <= 2 && phase == playing && slots.stage_code == 1"
+          }
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "roof_goal"
+          },
+          "timeout_s": 40
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.stage_code == 2 && !exists(kind=helicopter)",
+          "timeout_s": 1,
+          "save_as": "Building1RoofArrival",
+          "check": {
+            "id": "UC_D3_HELICOPTER_OBSERVATION_BOUNDARY",
+            "source": "gdd:UC-DASHBOARD-02",
+            "dim": "D3",
+            "assert": "slots.level_index == 1 && slots.stage_code == 2 && entity(roof_goal).state == reached && !exists(kind=helicopter)"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.stage_code == 2 && exists(kind=helicopter,state=inbound)",
+          "timeout_s": 10,
+          "save_as": "Building1Inbound"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.stage_code == 2 && exists(kind=helicopter,state=departing)",
+          "timeout_s": 10,
+          "check": {
+            "id": "UC_D2_BUILDING1_EXTRACTION",
+            "source": "gdd:UC-WIN-01",
+            "dim": "D2",
+            "assert": "Building1RoofArrival.slots.stage_code == 2 && !Building1RoofArrival.exists(kind=helicopter) && Building1Inbound.slots.level_index == 1 && Building1Inbound.exists(kind=helicopter,state=inbound) && Building1Inbound.entity(kind=helicopter,state=inbound).visible == true && slots.level_index == 1 && exists(kind=helicopter,state=departing) && entity(kind=helicopter,state=departing).visible == true && Building1Inbound.entity(kind=helicopter,state=inbound).id == entity(kind=helicopter,state=departing).id && entity(roof_goal).state == reached && slots.stage_code == 2"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing && slots.stage_code == 3 && slots.campaign_checkpoint == 1",
+          "timeout_s": 10,
+          "save_as": "Checkpoint",
+          "check": {
+            "id": "UC_D3_BUILDING1_CHECKPOINT_BOUNDARY",
+            "source": "gdd:UC-WIN-01",
+            "dim": "D3",
+            "assert": "phase == playing && slots.level_index == 1 && slots.stage_code == 3 && slots.campaign_checkpoint == 1 && slots.time_remaining > 0 && entity(roof_goal).state == reached && !exists(kind=helicopter) && Building1Start.slots.time_remaining - slots.time_remaining >= 7 && Building1Start.slots.time_remaining - slots.time_remaining <= 22"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "CheckpointFrame",
+          "check": {
+            "id": "UC_D5_CHECKPOINT_FEEDBACK",
+            "source": "gdd:UC-WIN-01",
+            "dim": "D5",
+            "assert": "phase == playing && slots.stage_code == 3 && capture_nonblank(CheckpointFrame) && ocr_contains_any(CheckpointFrame,[\"BUILDING 1\",\"FIRST BUILDING\",\"CHECKPOINT\",\"SECURED\"]) && ocr_contains_any(CheckpointFrame,[\"BUILDING 2\",\"NEXT\",\"CONTINUE\",\"START\"])"
+          }
+        },
+        {
+          "do": "press",
+          "key": "up"
+        },
+        {
+          "do": "wait_until",
+          "cond": "wall_clock_since(Checkpoint) >= 0.6",
+          "timeout_s": 2,
+          "check": {
+            "id": "UC_D4_CHECKPOINT_LOCK_AND_FREEZE",
+            "source": "gdd:UC-WIN-01",
+            "dim": "D4",
+            "assert": "phase == playing && slots.stage_code == 3 && slots.level_index == 1 && slots.time_remaining == Checkpoint.slots.time_remaining && entity(player).cell == Checkpoint.entity(kind=player).cell"
+          }
+        },
+        {
+          "do": "press",
+          "key": "confirm",
+          "cond": "slots.level_index == 2 && slots.stage_code == 1",
+          "timeout_s": 10,
+          "check": {
+            "id": "UC_D4_BUILDING2_FRESH_START",
+            "source": "gdd:UC-TIMER-01",
+            "dim": "D4",
+            "assert": "phase == playing && slots.level_index == 2 && slots.stage_code == 1 && slots.campaign_checkpoint == 1 && slots.height_row == 0 && slots.time_remaining > 44 && slots.time_remaining <= 45 && slots.beacon_activated == 0 && exists(kind=rescue_beacon,state=inactive) && entity(roof_goal).state == locked"
+          }
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Building2Start"
+        },
+        {
+          "check": {
+            "id": "UC_D4_LEVEL_ID_SCOPING",
+            "source": "gdd:UC-DASHBOARD-02",
+            "dim": "D4",
+            "assert": "Building1Start.entity(kind=player).id != Building2Start.entity(kind=player).id && Building1Start.entity(kind=roof_goal).id != Building2Start.entity(kind=roof_goal).id"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "Building2Frame",
+          "defer_ocr": true
+        },
+        {
+          "do": "press",
+          "key": "confirm"
+        },
+        {
+          "do": "capture",
+          "save_as": "MoveCloserFrame",
+          "defer_ocr": true
+        },
+        {
+          "do": "snapshot",
+          "save_as": "RemoteRejected"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "roof_goal",
+            "state": "locked"
+          },
+          "max_steps": 1,
+          "cond": "entity(player).cell.x != Building2Start.entity(kind=player).cell.x || distance_cells(entity(player),entity(roof_goal)) == 1",
+          "timeout_s": 20
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Building2Transfer1"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "roof_goal",
+            "state": "locked"
+          },
+          "max_steps": 1,
+          "cond": "entity(player).cell.x != Building2Transfer1.entity(kind=player).cell.x || distance_cells(entity(player),entity(roof_goal)) == 1",
+          "timeout_s": 20
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Building2Transfer2",
+          "check": {
+            "id": "UC_D3_BUILDING2_MULTI_TRANSFER_ROUTE",
+            "source": "gdd:UC-LEVEL-01",
+            "dim": "D3",
+            "assert": "Building2Start.entity(kind=player).cell.x != Building2Transfer1.entity(kind=player).cell.x && Building2Transfer1.entity(kind=player).cell.x != Building2Transfer2.entity(kind=player).cell.x && Building2Transfer1.entity(kind=player).cell.x >= 0 && Building2Transfer1.entity(kind=player).cell.x <= 2 && Building2Transfer2.entity(kind=player).cell.x >= 0 && Building2Transfer2.entity(kind=player).cell.x <= 2 && phase == playing && slots.stage_code == 1"
+          }
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "roof_goal",
+            "state": "locked"
+          },
+          "max_steps": 1,
+          "cond": "entity(player).cell.y == entity(roof_goal).cell.y - 1 && distance_cells(entity(player),entity(roof_goal)) <= 2",
+          "timeout_s": 35
+        },
+        {
+          "do": "wait_until",
+          "cond": "entity(player).cell.y == entity(roof_goal).cell.y - 1 && distance_cells(entity(player),entity(roof_goal)) <= 2 && entity(player).state == normal",
+          "timeout_s": 3
+        },
+        {
+          "do": "press",
+          "key": "right"
+        },
+        {
+          "do": "wait_until",
+          "cond": "entity(player).cell.y == entity(roof_goal).cell.y - 1 && distance_cells(entity(player),entity(roof_goal)) <= 2 && entity(player).state == normal",
+          "timeout_s": 3
+        },
+        {
+          "do": "snapshot",
+          "save_as": "AtLockedRoof"
+        },
+        {
+          "do": "press",
+          "key": "up"
+        },
+        {
+          "do": "capture",
+          "save_as": "RoofLockedUpFrame",
+          "defer_ocr": true
+        },
+        {
+          "do": "press",
+          "key": "right"
+        },
+        {
+          "do": "capture",
+          "save_as": "RoofLockedRightFrame",
+          "defer_ocr": true
+        },
+        {
+          "do": "wait_until",
+          "cond": "wall_clock_since(AtLockedRoof) >= 0.5",
+          "timeout_s": 1
+        },
+        {
+          "do": "snapshot",
+          "save_as": "LockedRejected"
+        },
+        {
+          "check": {
+            "id": "UC_D3_LOCKED_ROOF_REJECTION",
+            "source": "gdd:UC-BEACON-02",
+            "dim": "D3",
+            "assert": "AtLockedRoof.entity(kind=player).cell.y == AtLockedRoof.entity(kind=roof_goal).cell.y - 1 && distance_cells(AtLockedRoof.entity(kind=player),AtLockedRoof.entity(kind=roof_goal)) <= 2 && AtLockedRoof.entity(kind=player).cell == LockedRejected.entity(kind=player).cell && LockedRejected.slots.beacon_activated == 0 && LockedRejected.entity(kind=roof_goal).state == locked && LockedRejected.count(kind=movement_edge,state=up_blocked) == 0 && LockedRejected.slots.stage_code == 1 && LockedRejected.phase == playing && !LockedRejected.exists(kind=helicopter)"
+          }
+        },
+        {
+          "do": "press",
+          "key": "restart",
+          "cond": "phase == playing && slots.level_index == 2 && slots.height_row == 0 && slots.beacon_activated == 0 && !exists(kind=route_closure)",
+          "timeout_s": 10
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Building2CleanStart",
+          "check": {
+            "id": "UC_D4_SUCCESS_PATH_RETRY_ID_SCOPING",
+            "source": "gdd:UC-DASHBOARD-02",
+            "dim": "D4",
+            "assert": "Building2Start.entity(kind=player).id != Building2CleanStart.entity(kind=player).id && Building2Start.entity(kind=roof_goal).id != Building2CleanStart.entity(kind=roof_goal).id && Building2Start.entity(kind=rescue_beacon).id != Building2CleanStart.entity(kind=rescue_beacon).id"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "exists(kind=bird_egg,state=falling)",
+          "timeout_s": 4
+        },
+        {
+          "do": "wait_until",
+          "cond": "!exists(kind=bird_egg,state=falling)",
+          "timeout_s": 4
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "rescue_beacon",
+            "state": "inactive"
+          },
+          "key": "confirm",
+          "max_steps": 1,
+          "cond": "slots.beacon_activated == 1 && entity(roof_goal).state == open",
+          "timeout_s": 30
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.beacon_activated == 1 && exists(kind=rescue_beacon,state=active) && entity(roof_goal).state == open",
+          "timeout_s": 3,
+          "save_as": "Activated",
+          "check": {
+            "id": "UC_D2_BEACON_AND_ROOF_UNLOCK",
+            "source": "gdd:UC-BEACON-01",
+            "dim": "D2",
+            "assert": "slots.level_index == 2 && slots.beacon_activated == 1 && exists(kind=rescue_beacon,state=active) && entity(roof_goal).state == open && slots.stage_code == 1 && Building2CleanStart.entity(kind=roof_goal).state == locked && Building2CleanStart.count(kind=movement_edge,state=up_blocked) == 0 && count(kind=movement_edge,state=up_open) > Building2CleanStart.count(kind=movement_edge,state=up_open) && !exists(kind=helicopter)"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "BeaconActiveFrame",
+          "defer_ocr": true
+        },
+        {
+          "do": "press",
+          "key": "confirm"
+        },
+        {
+          "do": "wait_until",
+          "cond": "wall_clock_since(Activated) >= 0.4",
+          "timeout_s": 1,
+          "check": {
+            "id": "UC_D3_BEACON_PROXIMITY_AND_IDEMPOTENCE",
+            "source": "gdd:UC-BEACON-01",
+            "dim": "D3",
+            "assert": "RemoteRejected.slots.beacon_activated == 0 && RemoteRejected.entity(kind=roof_goal).state == locked && ((Activated.entity(kind=player).cell.x == Activated.entity(kind=rescue_beacon,state=active).cell.x + 1 && Activated.entity(kind=player).cell.y == Activated.entity(kind=rescue_beacon,state=active).cell.y) || (Activated.entity(kind=player).cell.x == Activated.entity(kind=rescue_beacon,state=active).cell.x - 1 && Activated.entity(kind=player).cell.y == Activated.entity(kind=rescue_beacon,state=active).cell.y) || (Activated.entity(kind=player).cell.y == Activated.entity(kind=rescue_beacon,state=active).cell.y + 1 && Activated.entity(kind=player).cell.x == Activated.entity(kind=rescue_beacon,state=active).cell.x) || (Activated.entity(kind=player).cell.y == Activated.entity(kind=rescue_beacon,state=active).cell.y - 1 && Activated.entity(kind=player).cell.x == Activated.entity(kind=rescue_beacon,state=active).cell.x)) && slots.beacon_activated == 1 && exists(kind=rescue_beacon,state=active) && entity(kind=rescue_beacon,state=active).id == Activated.entity(kind=rescue_beacon,state=active).id && entity(roof_goal).state == open && slots.stage_code == Activated.slots.stage_code"
+          }
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "roof_goal",
+            "state": "open"
+          },
+          "timeout_s": 30
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.stage_code == 2 && !exists(kind=helicopter)",
+          "timeout_s": 1,
+          "save_as": "Building2RoofArrival",
+          "check": {
+            "id": "UC_D3_HELICOPTER_OBSERVATION_BOUNDARY",
+            "source": "gdd:UC-DASHBOARD-02",
+            "dim": "D3",
+            "assert": "slots.level_index == 2 && slots.stage_code == 2 && entity(roof_goal).state == reached && !exists(kind=helicopter)"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.stage_code == 2 && exists(kind=helicopter,state=inbound)",
+          "timeout_s": 10,
+          "save_as": "Building2Inbound"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.stage_code == 2 && exists(kind=helicopter,state=departing)",
+          "timeout_s": 10,
+          "check": {
+            "id": "UC_D2_BUILDING2_EXTRACTION",
+            "source": "gdd:UC-WIN-01",
+            "dim": "D2",
+            "assert": "Building2RoofArrival.slots.stage_code == 2 && !Building2RoofArrival.exists(kind=helicopter) && Building2Inbound.slots.level_index == 2 && Building2Inbound.exists(kind=helicopter,state=inbound) && Building2Inbound.entity(kind=helicopter,state=inbound).visible == true && slots.level_index == 2 && exists(kind=helicopter,state=departing) && entity(kind=helicopter,state=departing).visible == true && Building2Inbound.entity(kind=helicopter,state=inbound).id == entity(kind=helicopter,state=departing).id && Building1Inbound.entity(kind=helicopter,state=inbound).id != Building2Inbound.entity(kind=helicopter,state=inbound).id && entity(roof_goal).state == reached && slots.beacon_activated == 1 && slots.stage_code == 2"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == won && slots.stage_code == 4",
+          "timeout_s": 10,
+          "check": {
+            "id": "UC_D3_FINAL_WIN_BOUNDARY_AND_PACING",
+            "source": "gdd:UC-PACING-01",
+            "dim": "D3",
+            "assert": "phase == won && slots.level_index == 2 && slots.stage_code == 4 && slots.campaign_checkpoint == 1 && slots.beacon_activated == 1 && slots.height_row == 17 && entity(roof_goal).state == reached && slots.time_remaining > 0 && Building2CleanStart.slots.time_remaining - slots.time_remaining >= 10 && Building2CleanStart.slots.time_remaining - slots.time_remaining <= 30"
+          }
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Won"
+        },
+        {
+          "do": "press",
+          "key": "down"
+        },
+        {
+          "do": "capture",
+          "save_as": "SuccessFrame",
+          "check": {
+            "id": "UC_D5_FINAL_SUCCESS_FEEDBACK",
+            "source": "gdd:UC-WIN-02",
+            "dim": "D5",
+            "assert": "phase == won && slots.level_index == 2 && slots.stage_code == 4 && capture_nonblank(SuccessFrame) && ocr_contains_any(SuccessFrame,[\"ESCAPED\",\"COMPLETE\",\"SUCCESS\",\"Success\",\"escape\"]) && ocr_contains_any(SuccessFrame,[\"RETRY BUILDING 2\",\"RETRY\",\"AGAIN\",\"Retry\"])"
+          }
+        },
+        {
+          "do": "press",
+          "key": "up"
+        },
+        {
+          "do": "press",
+          "key": "left"
+        },
+        {
+          "do": "wait_until",
+          "cond": "wall_clock_since(Won) >= 0.7",
+          "timeout_s": 2,
+          "check": {
+            "id": "UC_D4_FULL_CAMPAIGN_SUCCESS",
+            "source": "gdd:UC-WIN-02",
+            "dim": "D4",
+            "assert": "phase == won && slots.level_index == 2 && slots.stage_code == 4 && slots.campaign_checkpoint == 1 && slots.time_remaining == Won.slots.time_remaining && entity(player).cell == Won.entity(kind=player).cell && entity(roof_goal).state == reached"
+          }
+        },
+        {
+          "do": "ocr_capture",
+          "from": "Building2Frame",
+          "check": {
+            "id": "UC_D5_BUILDING2_HUD",
+            "source": "gdd:UC-UI-01",
+            "dim": "D5",
+            "assert": "Building2Start.phase == playing && Building2Start.slots.level_index == 2 && Building2Start.slots.beacon_activated == 0 && capture_nonblank(Building2Frame) && ocr_contains_any(Building2Frame,[\"BUILDING 2\",\"EAST TOWER\"]) && ocr_contains(Building2Frame,\"BEACON\") && ocr_contains_any(Building2Frame,[\"INACTIVE\",\"OFF\",\"LOCKED\"]) && ocr_contains(Building2Frame,\"TIME\")"
+          }
+        },
+        {
+          "do": "ocr_capture",
+          "from": "MoveCloserFrame",
+          "check": {
+            "id": "UC_D5_BEACON_REMOTE_REJECTION_FEEDBACK",
+            "source": "gdd:UC-BEACON-01",
+            "dim": "D5",
+            "assert": "RemoteRejected.slots.beacon_activated == 0 && capture_nonblank(MoveCloserFrame) && ocr_contains_any(MoveCloserFrame,[\"MOVE CLOSER\",\"CLOSER\",\"BEACON\"])"
+          }
+        },
+        {
+          "do": "ocr_capture",
+          "from": "RoofLockedUpFrame"
+        },
+        {
+          "do": "ocr_capture",
+          "from": "RoofLockedRightFrame",
+          "check": {
+            "id": "UC_D5_LOCKED_ROOF_FEEDBACK",
+            "source": "gdd:UC-BEACON-02",
+            "dim": "D5",
+            "assert": "LockedRejected.entity(kind=roof_goal).state == locked && capture_nonblank(RoofLockedUpFrame) && capture_nonblank(RoofLockedRightFrame) && (ocr_contains_any(RoofLockedUpFrame,[\"BEACON REQUIRED\",\"ROOF LOCKED\",\"LOCKED\",\"BEACON\"]) || ocr_contains_any(RoofLockedRightFrame,[\"BEACON REQUIRED\",\"ROOF LOCKED\",\"LOCKED\",\"BEACON\"]))"
+          }
+        },
+        {
+          "do": "ocr_capture",
+          "from": "BeaconActiveFrame",
+          "check": {
+            "id": "UC_D5_BEACON_ACTIVATION_FEEDBACK",
+            "source": "gdd:UC-BEACON-01",
+            "dim": "D5",
+            "assert": "Activated.slots.beacon_activated == 1 && Activated.entity(kind=roof_goal).state == open && capture_nonblank(BeaconActiveFrame) && ocr_contains(BeaconActiveFrame,\"BEACON\") && ocr_contains_any(BeaconActiveFrame,[\"BEACON ACTIVE\",\"ROOF UNLOCKED\",\"ACTIVE\",\"UNLOCKED\"])"
+          }
+        },
+        {
+          "do": "press",
+          "key": "confirm",
+          "cond": "phase == playing",
+          "timeout_s": 10
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing && slots.level_index == 2 && slots.height_row == 0",
+          "timeout_s": 10,
+          "check": {
+            "id": "UC_D4_SUCCESS_RETRY_BUILDING2_CLEAN",
+            "source": "gdd:UC-RESET-01",
+            "dim": "D4",
+            "assert": "phase == playing && slots.level_index == 2 && slots.stage_code == 1 && slots.campaign_checkpoint == 1 && slots.height_row == 0 && slots.time_remaining > 44 && slots.time_remaining <= 45 && slots.beacon_activated == 0 && exists(kind=rescue_beacon,state=inactive) && entity(roof_goal).state == locked && !exists(kind=route_closure) && !exists(kind=helicopter)"
+          }
+        },
+        {
+          "do": "reopen"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15,
+          "check": {
+            "id": "UC_D4_REOPEN_CLEARS_CAMPAIGN",
+            "source": "gdd:UC-RESET-02",
+            "dim": "D4",
+            "assert": "phase == menu && slots.level_index == 0 && slots.stage_code == 0 && slots.campaign_checkpoint == 0 && slots.beacon_activated == 0 && count(kind=player) == 0 && !exists(kind=rescue_beacon)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "building2_three_visible_warnings",
+      "title": "A clean-progressing Building 2 route observes three distinct visible source-window warnings",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15
+        },
+        {
+          "do": "press",
+          "key": "confirm",
+          "cond": "phase == playing && slots.level_index == 1",
+          "timeout_s": 10
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "roof_goal",
+            "state": "open"
+          },
+          "timeout_s": 40
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing && slots.stage_code == 3 && slots.campaign_checkpoint == 1",
+          "timeout_s": 15
+        },
+        {
+          "do": "press",
+          "key": "confirm",
+          "cond": "slots.level_index == 2 && slots.stage_code == 1",
+          "timeout_s": 10
+        },
+        {
+          "do": "wait_until",
+          "cond": "count(kind=source_window,state=warning) == 1 && entity(kind=source_window,state=warning).visible == true && entity(player).state == normal",
+          "timeout_s": 10,
+          "save_as": "Building2Warning1"
+        },
+        {
+          "do": "wait_until",
+          "cond": "count(kind=source_window,state=warning) == 0 || (count(kind=source_window,state=warning) == 1 && entity(kind=source_window,state=warning).id != Building2Warning1.entity(kind=source_window,state=warning).id) || count(kind=source_window,state=warning) >= 2",
+          "timeout_s": 3
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "roof_goal",
+            "state": "locked"
+          },
+          "max_steps": 1,
+          "cond": "slots.visible_row_min > Building2Warning1.slots.visible_row_min",
+          "timeout_s": 20
+        },
+        {
+          "do": "wait_until",
+          "cond": "count(kind=source_window,state=warning) == 1 && entity(kind=source_window,state=warning).visible == true && entity(player).state == normal",
+          "timeout_s": 20,
+          "save_as": "Building2Warning2"
+        },
+        {
+          "do": "wait_until",
+          "cond": "count(kind=source_window,state=warning) == 0 || (count(kind=source_window,state=warning) == 1 && entity(kind=source_window,state=warning).id != Building2Warning2.entity(kind=source_window,state=warning).id) || count(kind=source_window,state=warning) >= 2",
+          "timeout_s": 3
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "roof_goal",
+            "state": "locked"
+          },
+          "max_steps": 1,
+          "cond": "slots.visible_row_min > Building2Warning2.slots.visible_row_min",
+          "timeout_s": 20
+        },
+        {
+          "do": "wait_until",
+          "cond": "count(kind=source_window,state=warning) == 1 && entity(kind=source_window,state=warning).visible == true && entity(player).state == normal",
+          "timeout_s": 20,
+          "save_as": "Building2Warning3",
+          "check": {
+            "id": "UC_D3_BUILDING2_THREE_VISIBLE_WARNINGS",
+            "source": "gdd:UC-HAZARD-02",
+            "dim": "D3",
+            "assert": "phase == playing && slots.level_index == 2 && Building2Warning1.entity(kind=source_window,state=warning).visible == true && Building2Warning2.entity(kind=source_window,state=warning).visible == true && Building2Warning3.entity(kind=source_window,state=warning).visible == true && Building2Warning1.revision < Building2Warning2.revision && Building2Warning2.revision < Building2Warning3.revision"
+          }
+        }
+      ]
+    },
+    {
+      "id": "only_up_routes_do_not_complete",
+      "title": "Repeated normal Up input alone cannot complete either public 18-row building",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15
+        },
+        {
+          "do": "press",
+          "key": "confirm",
+          "cond": "phase == playing && slots.level_index == 1",
+          "timeout_s": 10
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Building1UpOnlyStart"
+        },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        {
+          "do": "wait_until",
+          "cond": "wall_clock_since(Building1UpOnlyStart) >= 8 && entity(player).state == normal",
+          "timeout_s": 10,
+          "check": {
+            "id": "UC_D3_BUILDING1_ONLY_UP_BLOCKED",
+            "source": "gdd:UC-LEVEL-01",
+            "dim": "D3",
+            "assert": "phase == playing && slots.level_index == 1 && slots.stage_code == 1 && slots.height_row < 17 && entity(player).cell.x == Building1UpOnlyStart.entity(kind=player).cell.x && entity(roof_goal).state == open && !exists(kind=helicopter)"
+          }
+        },
+        {
+          "do": "press",
+          "key": "restart",
+          "cond": "(phase == playing && slots.level_index == 1 && slots.height_row == 0 && slots.time_remaining > 44) || slots.stage_code != 1",
+          "timeout_s": 10
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "roof_goal"
+          },
+          "cond": "phase == playing && slots.stage_code == 3 && slots.campaign_checkpoint == 1",
+          "timeout_s": 40
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing && slots.stage_code == 3 && slots.campaign_checkpoint == 1",
+          "timeout_s": 15
+        },
+        {
+          "do": "press",
+          "key": "confirm",
+          "cond": "slots.level_index == 2 && slots.stage_code == 1",
+          "timeout_s": 10
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Building2UpOnlyStart"
+        },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        { "do": "hold", "key": "up", "seconds": 0.2 },
+        {
+          "do": "wait_until",
+          "cond": "wall_clock_since(Building2UpOnlyStart) >= 8 && entity(player).state == normal",
+          "timeout_s": 10,
+          "check": {
+            "id": "UC_D3_BUILDING2_ONLY_UP_BLOCKED",
+            "source": "gdd:UC-LEVEL-01",
+            "dim": "D3",
+            "assert": "phase == playing && slots.level_index == 2 && slots.stage_code == 1 && slots.height_row < 17 && entity(player).cell.x == Building2UpOnlyStart.entity(kind=player).cell.x && slots.beacon_activated == 0 && entity(roof_goal).state == locked && !exists(kind=helicopter)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "timeout_loss_terminal_and_retry",
+      "title": "Local timer loss, visible result, terminal lock, and clean current-building retry",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15
+        },
+        {
+          "do": "press",
+          "key": "confirm",
+          "cond": "phase == playing && slots.level_index == 1",
+          "timeout_s": 10
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == lost",
+          "timeout_s": 55,
+          "check": {
+            "id": "UC_D3_TIMEOUT_LOSS_BOUNDARY",
+            "source": "gdd:UC-LOSE-01",
+            "dim": "D3",
+            "assert": "phase == lost && slots.level_index == 1 && slots.stage_code == 1 && slots.time_remaining == 0 && slots.height_row < 17 && entity(roof_goal).state == open && !exists(kind=helicopter)"
+          }
+        },
+        {
+          "do": "capture",
+          "save_as": "LossFrame",
+          "check": {
+            "id": "UC_D5_TIMEOUT_FEEDBACK",
+            "source": "gdd:UC-LOSE-01",
+            "dim": "D5",
+            "assert": "phase == lost && slots.time_remaining == 0 && capture_nonblank(LossFrame) && ocr_contains_any(LossFrame,[\"OUT OF TIME\",\"TIME UP\",\"timeout\",\"Failure\"]) && ocr_contains_any(LossFrame,[\"RETRY\",\"AGAIN\",\"Retry\"])"
+          }
+        },
+        {
+          "do": "snapshot",
+          "save_as": "Lost"
+        },
+        {
+          "do": "press",
+          "key": "left"
+        },
+        {
+          "do": "press",
+          "key": "up"
+        },
+        {
+          "do": "wait_until",
+          "cond": "wall_clock_since(Lost) >= 0.6",
+          "timeout_s": 2,
+          "check": {
+            "id": "UC_D4_TIMEOUT_TERMINAL_LOCK",
+            "source": "gdd:UC-LOSE-01",
+            "dim": "D4",
+            "assert": "phase == lost && slots.time_remaining == Lost.slots.time_remaining && entity(player).cell == Lost.entity(kind=player).cell && slots.stage_code == Lost.slots.stage_code"
+          }
+        },
+        {
+          "do": "press",
+          "key": "confirm",
+          "cond": "phase == playing",
+          "timeout_s": 10
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing && slots.level_index == 1 && slots.height_row == 0",
+          "timeout_s": 10,
+          "check": {
+            "id": "UC_D4_TIMEOUT_RETRY_CLEAN",
+            "source": "gdd:UC-RESET-01",
+            "dim": "D4",
+            "assert": "phase == playing && slots.level_index == 1 && slots.stage_code == 1 && slots.campaign_checkpoint == 0 && slots.height_row == 0 && slots.time_remaining > 44 && slots.time_remaining <= 45 && slots.beacon_activated == 0 && entity(roof_goal).state == open && !exists(kind=flowerpot) && !exists(kind=bird_egg) && !exists(kind=helicopter)"
+          }
+        }
+      ]
+    }
+  ]
+}

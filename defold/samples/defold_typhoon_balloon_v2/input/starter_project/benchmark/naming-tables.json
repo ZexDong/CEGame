@@ -1,0 +1,201 @@
+{
+  "schema_version": 3,
+  "task_id": "defold_typhoon_balloon_v2",
+  "phases": [
+    "not_ready",
+    "menu",
+    "playing",
+    "paused",
+    "level_clear",
+    "campaign_won"
+  ],
+  "data_file": "campaign.json",
+  "design_size": [
+    1024,
+    576
+  ],
+  "coordinate_space": "world pixels",
+  "target_rect_space": {
+    "width_slot": "client_width",
+    "height_slot": "client_height",
+    "origin": "bottom-left",
+    "units": "client coordinates"
+  },
+  "slots": [
+    "level_index",
+    "level_total",
+    "cleared_levels",
+    "saved_levels",
+    "run_serial",
+    "client_width",
+    "client_height",
+    "elapsed",
+    "retries",
+    "checkpoint_index",
+    "respawn_remaining",
+    "stars_collected",
+    "star_total",
+    "chapter_new_stars",
+    "committed_star_count",
+    "velocity_x",
+    "velocity_y",
+    "camera_x",
+    "camera_y",
+    "wind_x",
+    "wind_y",
+    "active_zone_index",
+    "station_power_mask",
+    "station_used_mask",
+    "campaign_elapsed",
+    "campaign_retries",
+    "rank"
+  ],
+  "entities": [
+    {
+      "kind": "balloon",
+      "geometry": "position",
+      "states": [
+        "flying",
+        "respawning",
+        "finished"
+      ]
+    },
+    {
+      "kind": "wall",
+      "geometry": "position",
+      "states": [
+        "solid"
+      ]
+    },
+    {
+      "kind": "spawn_pad",
+      "geometry": "position",
+      "states": [
+        "active"
+      ]
+    },
+    {
+      "kind": "spike",
+      "geometry": "position",
+      "states": [
+        "dangerous"
+      ]
+    },
+    {
+      "kind": "star",
+      "geometry": "position",
+      "states": [
+        "available"
+      ]
+    },
+    {
+      "kind": "checkpoint",
+      "geometry": "position",
+      "states": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "kind": "finish",
+      "geometry": "position",
+      "states": [
+        "locked",
+        "available"
+      ]
+    },
+    {
+      "kind": "wind_zone",
+      "geometry": "position",
+      "states": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "kind": "wind_station_A",
+      "geometry": "position",
+      "states": [
+        "off",
+        "on"
+      ]
+    },
+    {
+      "kind": "wind_station_B",
+      "geometry": "position",
+      "states": [
+        "off",
+        "on"
+      ]
+    }
+  ],
+  "targets": [
+    {
+      "kind": "menu_new_campaign"
+    },
+    {
+      "kind": "menu_continue"
+    },
+    {
+      "kind": "menu_controls"
+    },
+    {
+      "kind": "menu_exit"
+    },
+    {
+      "kind": "controls_back"
+    },
+    {
+      "kind": "new_confirm"
+    },
+    {
+      "kind": "new_cancel"
+    },
+    {
+      "kind": "pause_button"
+    },
+    {
+      "kind": "pause_resume"
+    },
+    {
+      "kind": "level_retry"
+    },
+    {
+      "kind": "return_menu"
+    },
+    {
+      "kind": "next_level"
+    },
+    {
+      "kind": "campaign_new"
+    },
+    {
+      "kind": "exit_button"
+    }
+  ],
+  "controls": {
+    "keys": {
+      "left": [
+        "A",
+        "Left"
+      ],
+      "right": [
+        "D",
+        "Right"
+      ],
+      "up": [
+        "W",
+        "Up"
+      ],
+      "down": [
+        "S",
+        "Down"
+      ],
+      "confirm": "Enter",
+      "pause": "Escape",
+      "restart": "R",
+      "action": "Space",
+      "interact": "E"
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "version": "gemsbond-gold-semantic-1.0",
+  "adapter_source": "fixtures/GoldMapping.cpp",
+  "adapter_sha256": "71e544eae812bd94e1def3d9e4d60ced420937267811f33aea179c5eac9dc634",
+  "module_path": "Source/GemsBondStarter",
+  "text_identity": "UTF-8 normalized LF without BOM",
+  "source_files": {
+    "Source/GemsBondStarter.Target.cs": "88468f354365fbc0d2868fddfe0b56e8bbe333103c8ee1dd648c9bce740628e9",
+    "Source/GemsBondStarterEditor.Target.cs": "fe4025f19004e7cde20128a7af5566b18f267e14d5ae7753468cfd2abeb98a3a",
+    "Source/GemsBondStarter/GemsBondHUD.cpp": "8f2c7edaad2500da2f2c2b1a15503f8a2858dcbddd205c5078eef1991201d903",
+    "Source/GemsBondStarter/GemsBondObservation.cpp": "66244a618052df5b8b9eabaecb541f782fe4a8f8a72c69b13e1254d25ceccb3c",
+    "Source/GemsBondStarter/GemsBondRules.cpp": "0b1b36f439781c6408e8069fc3fbcab486ddd87a83e781cffc3176edfd0c4cb5",
+    "Source/GemsBondStarter/GemsBondScene.cpp": "dc98387d9e90f10df4074ea304fac0a7fa6a928f4d43d97a2f03c7a7213c1dd4",
+    "Source/GemsBondStarter/GemsBondStarter.Build.cs": "c92b2c4bef59d87fffaee5135b12a4b814d596dff0a0f241f33848f8cc7aa4e6",
+    "Source/GemsBondStarter/GemsBondStarter.cpp": "7b5660b8b519cc153d18bc0e486a9920e1ecdfbdb5ccd7a72a931b95bbb32590",
+    "Source/GemsBondStarter/StarterGameMode.cpp": "7082e9e9a851dc4d6946685903f78ddfb4ed3489aae9c1eb3b60a57cb9d26f7a",
+    "Source/GemsBondStarter/StarterGameMode.h": "f55ebc5169c9ac0f14f66e60cfa249c8af9c8ffa1dbe66d6988cf7ba0980b791"
+  },
+  "selection": "exact reviewed source fingerprint only",
+  "locator": "engine-owned sole GameMode role; private implementation mapping",
+  "forbidden_result_calls": [
+    "Build",
+    "Upgrade",
+    "Sell",
+    "Hit",
+    "StartWave",
+    "EmitEnemy",
+    "ResetRound",
+    "Step",
+    "Publish"
+  ],
+  "allowed_semantic_fields": [
+    "coins",
+    "crystal_health",
+    "resume_phase",
+    "wave",
+    "completed",
+    "countdown",
+    "units",
+    "wave_total",
+    "wave_spawned"
+  ],
+  "precondition": "fresh new process; setup paused; normal P resumes; positive-health entities only"
+}

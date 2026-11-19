@@ -1,0 +1,21 @@
+{
+  "task_id": "pocket-greenhouse-v2",
+  "title": "Pocket Greenhouse",
+  "engine": "Roblox Studio",
+  "task_form": "reconstruction",
+  "public_requirements": [
+    "UI-01", "STATE-01", "SELECT-01", "PLANT-01", "PLANT-02", "PLANT-03",
+    "WATER-01", "WATER-02", "DAY-01", "DAY-02", "HARVEST-01", "DELIVER-01",
+    "WIN-01", "LOSE-01", "HUD-01", "FEEDBACK-01", "RESET-01", "REOPEN-01",
+    "DASH-01", "DASH-02"
+  ],
+  "required_public_files": [
+    "README.md", "PROMPT.txt", "GDD.md", "COMMON_BASELINE.md", "DASHBOARD_SPEC.md",
+    "naming-tables.json", "TOOLCHAIN.md", "examples/BenchmarkDashboard.template.lua",
+    "examples/DashboardSelfCheck.server.lua"
+  ],
+  "forbidden_public_material": [
+    "scores", "rubric weights", "checkpoint script", "gold implementation",
+    "faulty variants", "calibration results", "historical candidate results"
+  ]
+}

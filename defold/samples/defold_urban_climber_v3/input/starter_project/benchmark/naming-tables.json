@@ -1,0 +1,148 @@
+{
+  "schema_version": 2,
+  "task_id": "defold_urban_climber_v3",
+  "coordinate_space": {
+    "name": "urban-climber-grid",
+    "dimensions": 2,
+    "origin": "bottom-left cell (0,0) of the current level",
+    "axes": [
+      "column increases right",
+      "row increases upward"
+    ],
+    "units": "climbing cells"
+  },
+  "level_width_cells": 3,
+  "level_height_cells": 18,
+  "target_rect_space": {
+    "width": 960,
+    "height": 540,
+    "origin": "bottom-left",
+    "units": "game-view pixels"
+  },
+  "seed_entry": "not applicable; both levels and their event schedules are deterministic",
+  "slots": [
+    "time_remaining",
+    "height_row",
+    "total_rows",
+    "visible_row_min",
+    "visible_row_max",
+    "level_index",
+    "beacon_activated",
+    "campaign_checkpoint",
+    "stage_code"
+  ],
+  "entities": [
+    {
+      "kind": "player",
+      "geometry": "cell",
+      "states": [
+        "normal",
+        "moving",
+        "hit"
+      ]
+    },
+    {
+      "kind": "climb_anchor",
+      "geometry": "cell",
+      "states": [
+        "active"
+      ]
+    },
+    {
+      "kind": "movement_edge",
+      "geometry": "cell",
+      "states": [
+        "up_open",
+        "up_blocked",
+        "down_open",
+        "left_open",
+        "right_open"
+      ]
+    },
+    {
+      "kind": "source_window",
+      "geometry": "cell",
+      "states": [
+        "idle",
+        "warning"
+      ]
+    },
+    {
+      "kind": "flowerpot",
+      "geometry": "cell",
+      "states": [
+        "falling"
+      ]
+    },
+    {
+      "kind": "bird_egg",
+      "geometry": "cell",
+      "states": [
+        "falling"
+      ]
+    },
+    {
+      "kind": "roof_goal",
+      "geometry": "cell",
+      "states": [
+        "locked",
+        "open",
+        "reached"
+      ]
+    },
+    {
+      "kind": "helicopter",
+      "geometry": "cell",
+      "states": [
+        "inbound",
+        "departing"
+      ]
+    },
+    {
+      "kind": "rescue_beacon",
+      "geometry": "cell",
+      "states": [
+        "inactive",
+        "active"
+      ]
+    },
+    {
+      "kind": "route_closure",
+      "geometry": "cell",
+      "states": [
+        "warning",
+        "closed",
+        "open"
+      ]
+    }
+  ],
+  "targets": [],
+  "controls": {
+    "movement_template": "discrete_keys",
+    "keys": {
+      "up": [
+        "W",
+        "UpArrow"
+      ],
+      "down": [
+        "S",
+        "DownArrow"
+      ],
+      "left": [
+        "A",
+        "LeftArrow"
+      ],
+      "right": [
+        "D",
+        "RightArrow"
+      ],
+      "confirm": [
+        "Enter",
+        "Space"
+      ],
+      "pause": "Escape",
+      "restart": "R",
+      "quit": "Q"
+    }
+  }
+}

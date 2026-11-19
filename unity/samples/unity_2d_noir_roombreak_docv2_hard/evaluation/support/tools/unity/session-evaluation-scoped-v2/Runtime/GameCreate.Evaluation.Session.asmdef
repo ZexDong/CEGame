@@ -1,0 +1,5 @@
+{
+  "name": "GameCreate.Evaluation.Session",
+  "references": ["GameCreate.Session", "Unity.InputSystem"],
+  "autoReferenced": false
+}

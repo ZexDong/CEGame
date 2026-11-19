@@ -1,0 +1,7 @@
+{
+  "name": "GameCreate.Stormbound.Evaluator.ImguiQualification",
+  "references": ["GameCreate.Stormbound.Evaluator.Core", "GameCreate.Evaluation.Session", "Unity.InputSystem", "UnityEngine.UI"],
+  "includePlatforms": [],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": false
+}

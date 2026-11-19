@@ -1,0 +1,608 @@
+{
+  "sample_id": "unity_3d_dungeon_duel",
+  "status": "legacy_mapping_not_new_coverage_qualification",
+  "source": "src/backend/capability-map.json",
+  "mapping": {
+    "schema_version": 4,
+    "benchmark_id": "unity.dungeon_duel_3d.v2",
+    "scoring_guide": "docs/GAME_INDEPENDENT_SCORING_GUIDE.md",
+    "rules_sha256": "c5c874e2b060d80b3f6d8cfe2c9b5d47a0d79aa4c9faa095e7426636f6453512",
+    "dimension_maxima": {
+      "D1": 10,
+      "D2": 30,
+      "D3": 20,
+      "D4": 20,
+      "D5": 10,
+      "D6": 10
+    },
+    "phase_totals": {
+      "static": 10.0,
+      "dynamic": 76.7,
+      "fresh": 3.3,
+      "visual": 10.0
+    },
+    "leaves": [
+      {
+        "id": "D2.required_encounter_content",
+        "phase": "dynamic",
+        "trajectory": "canonical_success",
+        "dimension": "D2",
+        "gdd_ref": "GDD FLOW-01, GATE-01, UI-01, AUDIO-01, VISUAL-01, ASSET-01",
+        "required_check_ids": [
+          "setup.scene",
+          "setup.submission_probe",
+          "setup.submission_probe.version",
+          "setup.semantic_discovery",
+          "setup.clean_start",
+          "setup.world_target.MoveTargetA",
+          "setup.world_target.MoveTargetB",
+          "setup.world_target.DashTarget",
+          "setup.world_target.separation",
+          "canonical.initial.playing",
+          "canonical.initial.gate_locked",
+          "canonical.initial.imps_alive",
+          "canonical.initial.boss_presented",
+          "canonical.initial.dash_ready",
+          "canonical.initial.audio.battle_loop"
+        ],
+        "diagnostic_weight": 8,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 5,
+        "formal_points_unrounded": 6.0
+      },
+      {
+        "id": "D3.core_progression_rules",
+        "phase": "dynamic",
+        "trajectory": "canonical_success",
+        "dimension": "D3",
+        "gdd_ref": "GDD COMBAT-03, DASH-01, GATE-01, GATE-02, FLOW-02, TERMINAL-01",
+        "required_check_ids": [
+          "canonical.imp_a.dead",
+          "canonical.after_imp_a.gate_closed",
+          "canonical.after_imp_a.gate_blocking",
+          "canonical.after_imp_a.boss_dormant",
+          "canonical.imp_b.dead",
+          "canonical.gate.open",
+          "canonical.boss.active",
+          "canonical.dash.displacement",
+          "canonical.dash.cooldown",
+          "canonical.victory.reached",
+          "canonical.terminal.freeze"
+        ],
+        "diagnostic_weight": 6,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 5,
+        "formal_points_unrounded": 4.0
+      },
+      {
+        "id": "D4.complete_success_flow",
+        "phase": "dynamic",
+        "trajectory": "canonical_success",
+        "dimension": "D4",
+        "gdd_ref": "GDD INPUT-01, NAV-01, COMBAT-01, DASH-01, GATE-01, GATE-02, FLOW-02, TERMINAL-01, QUALITY-02",
+        "required_check_ids": [
+          "canonical.move.input.route",
+          "canonical.move.reached",
+          "canonical.imp_a.input.route",
+          "canonical.imp_a.dead",
+          "canonical.imp_b.input.route",
+          "canonical.imp_b.dead",
+          "canonical.dash.input.route",
+          "canonical.boss.input.route",
+          "canonical.victory.reached",
+          "canonical.terminal.freeze"
+        ],
+        "diagnostic_weight": 5,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 6,
+        "formal_points_unrounded": 3.3333333333
+      },
+      {
+        "id": "D4.victory_restart_replay",
+        "phase": "dynamic",
+        "trajectory": "canonical_success",
+        "dimension": "D4",
+        "gdd_ref": "GDD RESTART-01, FLOW-01, NAV-01, RESTART-02, AUDIO-01, QUALITY-06",
+        "required_check_ids": [
+          "canonical.restart.control.visible",
+          "canonical.restart.control.top_hit",
+          "canonical.restart.input.route",
+          "canonical.restart.semantic_reloaded",
+          "canonical.restart.initial",
+          "canonical.restart.move.input.route",
+          "canonical.restart.move.reached",
+          "canonical.restart.audio.restored",
+          "canonical.restart.audio.no_duplicate"
+        ],
+        "diagnostic_weight": 1,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 6,
+        "formal_points_unrounded": 3.3333333333
+      },
+      {
+        "id": "D5.hud_and_terminal_feedback",
+        "phase": "dynamic",
+        "trajectory": "canonical_success",
+        "dimension": "D5",
+        "gdd_ref": "GDD UI-01, UI-02, AUDIO-01, FLOW-02, RESTART-01, RESTART-02, QUALITY-03, QUALITY-04",
+        "required_check_ids": [
+          "canonical.initial.feedback_surface",
+          "canonical.initial.hud_semantics",
+          "canonical.after_imp_a.hud_semantics",
+          "canonical.gate.hud_semantics",
+          "canonical.dash.hud_semantics",
+          "canonical.victory.feedback_surface",
+          "canonical.victory.hud_semantics",
+          "canonical.restart.control.visible",
+          "canonical.restart.control.top_hit",
+          "canonical.restart.feedback_surface",
+          "canonical.restart.hud_semantics",
+          "canonical.initial.audio.battle_loop",
+          "canonical.victory.audio.transition",
+          "canonical.restart.audio.restored",
+          "canonical.restart.audio.no_duplicate"
+        ],
+        "diagnostic_weight": 4,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 4,
+        "formal_points_unrounded": 2.5
+      },
+      {
+        "id": "D2.navigation_camera_available",
+        "phase": "dynamic",
+        "trajectory": "navigation_camera",
+        "dimension": "D2",
+        "gdd_ref": "GDD INPUT-01, NAV-01, CAMERA-01",
+        "required_check_ids": [
+          "setup.scene",
+          "setup.submission_probe",
+          "setup.submission_probe.version",
+          "setup.semantic_discovery",
+          "setup.clean_start",
+          "setup.world_target.MoveTargetA",
+          "setup.world_target.MoveTargetB",
+          "setup.world_target.DashTarget",
+          "setup.world_target.separation",
+          "navigation.move_a.input.route",
+          "navigation.move_a.reached",
+          "navigation.move_b.input.route",
+          "navigation.move_b.reached"
+        ],
+        "diagnostic_weight": 5,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 5,
+        "formal_points_unrounded": 6.0
+      },
+      {
+        "id": "D3.navigation_motion_correct",
+        "phase": "dynamic",
+        "trajectory": "navigation_camera",
+        "dimension": "D3",
+        "gdd_ref": "GDD NAV-01",
+        "required_check_ids": [
+          "navigation.move_a.distance",
+          "navigation.move_a.reached",
+          "navigation.move_b.distance",
+          "navigation.move_b.reached"
+        ],
+        "diagnostic_weight": 2,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 5,
+        "formal_points_unrounded": 4.0
+      },
+      {
+        "id": "D5.camera_feedback_clear",
+        "phase": "dynamic",
+        "trajectory": "navigation_camera",
+        "dimension": "D5",
+        "gdd_ref": "GDD CAMERA-01, VISUAL-01",
+        "required_check_ids": [
+          "navigation.camera_a.player_visible",
+          "navigation.camera_b.player_visible",
+          "navigation.camera.tracked_distance"
+        ],
+        "diagnostic_weight": 1,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 4,
+        "formal_points_unrounded": 2.5
+      },
+      {
+        "id": "D2.combat_and_ai_available",
+        "phase": "dynamic",
+        "trajectory": "combat_loop",
+        "dimension": "D2",
+        "gdd_ref": "GDD INPUT-01, COMBAT-01, COMBAT-02, COMBAT-03, TUNING-01, AUDIO-01",
+        "required_check_ids": [
+          "setup.scene",
+          "setup.submission_probe",
+          "setup.submission_probe.version",
+          "setup.semantic_discovery",
+          "setup.clean_start",
+          "setup.world_target.MoveTargetA",
+          "setup.world_target.MoveTargetB",
+          "setup.world_target.DashTarget",
+          "setup.world_target.separation",
+          "threat_setup.scene",
+          "threat_setup.submission_probe",
+          "threat_setup.submission_probe.version",
+          "threat_setup.semantic_discovery",
+          "threat_setup.clean_start",
+          "threat_setup.world_target.MoveTargetA",
+          "threat_setup.world_target.MoveTargetB",
+          "threat_setup.world_target.DashTarget",
+          "threat_setup.world_target.separation",
+          "combat.attack.input.route",
+          "combat.attack.damage",
+          "combat.followup.resolution",
+          "combat.imp.dead",
+          "combat.threat.approach",
+          "combat.threat.damage",
+          "combat.audio.battle_loop"
+        ],
+        "diagnostic_weight": 7,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 5,
+        "formal_points_unrounded": 6.0
+      },
+      {
+        "id": "D3.combat_rules_correct",
+        "phase": "dynamic",
+        "trajectory": "combat_loop",
+        "dimension": "D3",
+        "gdd_ref": "GDD COMBAT-01, COMBAT-02, COMBAT-03, TUNING-01",
+        "required_check_ids": [
+          "combat.initial.tuning",
+          "combat.attack.damage",
+          "combat.imp.dead",
+          "combat.imp.stable_dead",
+          "combat.threat.approach",
+          "combat.threat.damage",
+          "combat.threat.player_alive"
+        ],
+        "diagnostic_weight": 5,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 5,
+        "formal_points_unrounded": 4.0
+      },
+      {
+        "id": "D4.nonterminal_combat_continues",
+        "phase": "dynamic",
+        "trajectory": "combat_loop",
+        "dimension": "D4",
+        "gdd_ref": "GDD COMBAT-02, FLOW-03",
+        "required_check_ids": [
+          "combat.threat.damage",
+          "combat.threat.player_alive"
+        ],
+        "diagnostic_weight": 1,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 6,
+        "formal_points_unrounded": 3.3333333333
+      },
+      {
+        "id": "D5.health_feedback_visible",
+        "phase": "dynamic",
+        "trajectory": "combat_loop",
+        "dimension": "D5",
+        "gdd_ref": "GDD COMBAT-01, COMBAT-02, UI-01, UI-02, QUALITY-04",
+        "required_check_ids": [
+          "combat.damage.feedback_surface",
+          "combat.damage.hud_semantics"
+        ],
+        "diagnostic_weight": 2,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 4,
+        "formal_points_unrounded": 2.5
+      },
+      {
+        "id": "D2.dash_gate_boss_content",
+        "phase": "dynamic",
+        "trajectory": "dash_gate",
+        "dimension": "D2",
+        "gdd_ref": "GDD DASH-01, GATE-01, GATE-02",
+        "required_check_ids": [
+          "setup.scene",
+          "setup.submission_probe",
+          "setup.submission_probe.version",
+          "setup.semantic_discovery",
+          "setup.clean_start",
+          "setup.world_target.MoveTargetA",
+          "setup.world_target.MoveTargetB",
+          "setup.world_target.DashTarget",
+          "setup.world_target.separation",
+          "gate_setup.scene",
+          "gate_setup.submission_probe",
+          "gate_setup.submission_probe.version",
+          "gate_setup.semantic_discovery",
+          "gate_setup.clean_start",
+          "gate_setup.world_target.MoveTargetA",
+          "gate_setup.world_target.MoveTargetB",
+          "gate_setup.world_target.DashTarget",
+          "gate_setup.world_target.separation",
+          "dash.pointer.route",
+          "dash.first.input.route",
+          "dash.first.displacement"
+        ],
+        "diagnostic_weight": 6,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 5,
+        "formal_points_unrounded": 6.0
+      },
+      {
+        "id": "D3.dash_gate_rules_correct",
+        "phase": "dynamic",
+        "trajectory": "dash_gate",
+        "dimension": "D3",
+        "gdd_ref": "GDD DASH-01, GATE-01, GATE-02",
+        "required_check_ids": [
+          "dash.first.displacement",
+          "dash.first.cooldown",
+          "dash.repeat.input.route",
+          "dash.repeat.blocked",
+          "dash.cooldown.recovered",
+          "dash.second.input.route",
+          "dash.second.displacement",
+          "gate.before.closed",
+          "gate.before.blocking",
+          "gate.before.boss_dormant",
+          "gate.final_imp.dead",
+          "gate.after.open",
+          "gate.after.nonblocking",
+          "gate.after.boss_active",
+          "dash.cooldown.hud_semantics",
+          "dash.ready.hud_semantics",
+          "gate.behind_target.discovered",
+          "gate.before.boss_unattackable",
+          "gate.before.physical_block",
+          "gate.after.crossed",
+          "gate.after.boss_damage"
+        ],
+        "diagnostic_weight": 5,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 5,
+        "formal_points_unrounded": 4.0
+      },
+      {
+        "id": "D4.gate_progression_transition",
+        "phase": "dynamic",
+        "trajectory": "dash_gate",
+        "dimension": "D4",
+        "gdd_ref": "GDD COMBAT-03, GATE-02, FLOW-02",
+        "required_check_ids": [
+          "gate.before.blocking",
+          "gate.final_imp.input.route",
+          "gate.final_imp.dead",
+          "gate.after.open",
+          "gate.after.nonblocking",
+          "gate.after.boss_active",
+          "gate.before.boss_unattackable",
+          "gate.before.physical_block",
+          "gate.after.cross.input.route",
+          "gate.after.crossed",
+          "gate.after.boss_attack.input.route",
+          "gate.after.boss_damage"
+        ],
+        "diagnostic_weight": 1,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 6,
+        "formal_points_unrounded": 3.3333333333
+      },
+      {
+        "id": "D2.defeat_restart_content",
+        "phase": "dynamic",
+        "trajectory": "defeat_restart",
+        "dimension": "D2",
+        "gdd_ref": "GDD COMBAT-02, FLOW-03, RESTART-01",
+        "required_check_ids": [
+          "setup.scene",
+          "setup.submission_probe",
+          "setup.submission_probe.version",
+          "setup.semantic_discovery",
+          "setup.clean_start",
+          "setup.world_target.MoveTargetA",
+          "setup.world_target.MoveTargetB",
+          "setup.world_target.DashTarget",
+          "setup.world_target.separation",
+          "defeat.enemy_damage",
+          "defeat.phase",
+          "defeat.restart.input.route",
+          "defeat.restart.semantic_reloaded",
+          "defeat.restart.initial"
+        ],
+        "diagnostic_weight": 4,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 5,
+        "formal_points_unrounded": 6.0
+      },
+      {
+        "id": "D3.defeat_rules_correct",
+        "phase": "dynamic",
+        "trajectory": "defeat_restart",
+        "dimension": "D3",
+        "gdd_ref": "GDD COMBAT-02, FLOW-03, TERMINAL-01",
+        "required_check_ids": [
+          "defeat.enemy_damage",
+          "defeat.player_zero",
+          "defeat.phase",
+          "defeat.terminal_stable"
+        ],
+        "diagnostic_weight": 2,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 5,
+        "formal_points_unrounded": 4.0
+      },
+      {
+        "id": "D4.defeat_restart_lifecycle",
+        "phase": "dynamic",
+        "trajectory": "defeat_restart",
+        "dimension": "D4",
+        "gdd_ref": "GDD FLOW-03, TERMINAL-01, RESTART-01, NAV-01, QUALITY-06",
+        "required_check_ids": [
+          "defeat.terminal_stable",
+          "defeat.restart.input.route",
+          "defeat.restart.semantic_reloaded",
+          "defeat.restart.initial",
+          "defeat.restart.no_stale_terminal",
+          "defeat.restart.move.input.route",
+          "defeat.restart.move.reached"
+        ],
+        "diagnostic_weight": 4,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 6,
+        "formal_points_unrounded": 3.3333333333
+      },
+      {
+        "id": "D5.defeat_restart_feedback",
+        "phase": "dynamic",
+        "trajectory": "defeat_restart",
+        "dimension": "D5",
+        "gdd_ref": "GDD UI-01, UI-02, FLOW-03, RESTART-01",
+        "required_check_ids": [
+          "defeat.feedback_surface",
+          "defeat.hud_semantics",
+          "defeat.restart.feedback_surface",
+          "defeat.restart.hud_semantics"
+        ],
+        "diagnostic_weight": 3,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 4,
+        "formal_points_unrounded": 2.5
+      },
+      {
+        "id": "STATIC01_ProjectStartsInAPlayableBenchmarkScene",
+        "phase": "static",
+        "dimension": "D1",
+        "gdd_ref": "GDD FLOW-01, QUALITY-01, QUALITY-05",
+        "diagnostic_weight": 4,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 3,
+        "formal_points_unrounded": 3.3333333333
+      },
+      {
+        "id": "STATIC02_GameplayCameraRendersANonEmpty3DFrame",
+        "phase": "static",
+        "dimension": "D1",
+        "gdd_ref": "GDD FLOW-01, CAMERA-01, VISUAL-01",
+        "diagnostic_weight": 3,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 3,
+        "formal_points_unrounded": 3.3333333333
+      },
+      {
+        "id": "STATIC03_NormalWorldAndActorInputTargetsAreDiscoverable",
+        "phase": "static",
+        "dimension": "D1",
+        "gdd_ref": "GDD INPUT-01, NAV-01, COMBAT-01, DASH-01",
+        "diagnostic_weight": 3,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 3,
+        "formal_points_unrounded": 3.3333333333
+      },
+      {
+        "id": "D4.fresh_reopen_integrity",
+        "phase": "fresh",
+        "trajectory": "fresh_reopen",
+        "dimension": "D4",
+        "gdd_ref": "GDD FLOW-01, REOPEN-01, UI-01, UI-02, AUDIO-01, QUALITY-06",
+        "required_check_ids": [
+          "setup.scene",
+          "setup.submission_probe",
+          "setup.submission_probe.version",
+          "setup.semantic_discovery",
+          "setup.clean_start",
+          "fresh.phase.playing",
+          "fresh.player.full_health",
+          "fresh.imps.two_alive",
+          "fresh.boss.dormant",
+          "fresh.gate.closed",
+          "fresh.gate.blocking",
+          "fresh.dash.ready",
+          "fresh.audio.battle_loop",
+          "fresh.hud.neutral",
+          "fresh.stable.flow01"
+        ],
+        "diagnostic_weight": 8,
+        "scored_checkpoint": true,
+        "dimension_checkpoint_count": 6,
+        "formal_points_unrounded": 3.3333333333
+      }
+    ],
+    "coverage": {
+      "d1_d5_automated_points": 90,
+      "d6_external_points": 10,
+      "unmapped_points": 0,
+      "formal_scored_checkpoint_count": 23
+    },
+    "implementation_independence": {
+      "private_class_names_required": false,
+      "private_field_names_required": false,
+      "gold_hierarchy_required": false,
+      "source_similarity_used": false,
+      "public_read_only_probe_required": true,
+      "probe_state_cross_checked_with_runtime_objects": true,
+      "probe_may_mutate_candidate_state": false,
+      "input_actions_or_direct_input_polling_allowed": true,
+      "normal_visible_actor_and_floor_colliders_required": true,
+      "runtime_ugui_text_or_tmp_required": true
+    },
+    "health_prerequisites": {
+      "invalid_status": "invalid_evaluator_health",
+      "failure_kind": "evaluator_health_failure",
+      "dynamic": {
+        "required_tests": [
+          "EVALUATOR_HEALTH_Dynamic_KeyboardRouteRetainsInputActionDiagnostics",
+          "EVALUATOR_HEALTH_Dynamic_MousePhysicsRouteUsesVisibleActorSurface",
+          "EVALUATOR_HEALTH_Dynamic_NavMeshWorldRouteUsesRealPhysicsAndInput",
+          "EVALUATOR_HEALTH_Dynamic_EvidenceSinkWritable"
+        ],
+        "required_artifacts": [
+          "evaluator-health-dynamic.json"
+        ]
+      },
+      "fresh": {
+        "required_tests": [
+          "EVALUATOR_HEALTH_Fresh_ProcessIsolationAndEvidenceSink",
+          "EVALUATOR_HEALTH_Fresh_UiProbeLoadsInIndependentAssembly"
+        ],
+        "required_artifacts": [
+          "evaluator-health-fresh.json"
+        ]
+      }
+    },
+    "reopen_preparation": {
+      "trajectory": "reopen_prepare",
+      "nunit_test": "TRAJ99_LeaveDirtyStateForFreshProcess",
+      "prerequisite_only": true,
+      "required_check_ids": [
+        "reopen.prepare.initial_clean",
+        "setup.submission_probe",
+        "setup.submission_probe.version",
+        "reopen.prepare.dash.pointer.route",
+        "reopen.prepare.dash.input.route",
+        "reopen.prepare.dash.dirty",
+        "reopen.prepare.imp.input.route",
+        "reopen.prepare.imp.dead",
+        "reopen.prepare.dirty_state",
+        "reopen.prepare.no_restart"
+      ]
+    },
+    "formal_scoring": {
+      "formula": "dimension_maximum * passed_scored_checkpoints / total_scored_checkpoints",
+      "dimension_rounding_decimals": 1,
+      "overall_rounding_decimals": 1,
+      "legal_failed_nunit_is_evidence_envelope": true,
+      "legal_failed_nunit_does_not_zero_passed_checkpoints": true,
+      "checkpoint_counts": {
+        "D1": 3,
+        "D2": 5,
+        "D3": 5,
+        "D4": 6,
+        "D5": 4
+      },
+      "diagnostic_weights_affect_formal_score": false
+    }
+  },
+  "limitations": [
+    "Native test mappings do not establish independent per-requirement coverage."
+  ]
+}

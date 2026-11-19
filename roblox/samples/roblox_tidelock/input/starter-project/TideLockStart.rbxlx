@@ -1,0 +1,273 @@
+<roblox version="4">
+  <Item class="Lighting" referent="0">
+    <Properties>
+      <string name="Name">Lighting</string>
+      <Color3 name="Ambient">
+        <R>20</R>
+        <G>35</G>
+        <B>50</B>
+      </Color3>
+      <float name="Brightness">2</float>
+      <float name="ClockTime">2</float>
+      <Color3 name="OutdoorAmbient">
+        <R>10</R>
+        <G>20</G>
+        <B>32</B>
+      </Color3>
+    </Properties>
+  </Item>
+  <Item class="ReplicatedStorage" referent="1">
+    <Properties>
+      <string name="Name">ReplicatedStorage</string>
+    </Properties>
+    <Item class="ModuleScript" referent="2">
+      <Properties>
+        <string name="Name">TideLockPublicSchema</string>
+        <string name="Source"><![CDATA[--!strict
+-- Public constants only. This module contains no gameplay, answers, trajectories, or scoring logic.
+
+local Schema = {
+	ContractVersion = "tide-lock-v1",
+	WorkspaceAttributes = {
+		ContractVersion = "TL_ContractVersion",
+		Ready = "TL_Ready",
+	},
+	TelemetryRemote = "TL_PublicTelemetry",
+	Tags = {
+		GameStateRoot = "TL_GameStateRoot",
+		CentralSpawn = "TL_CentralSpawn",
+		OrderDisplay = "TL_OrderDisplay",
+		RoutingNode = "TL_RoutingNode",
+		PressurePump = "TL_PressurePump",
+		CoreRack = "TL_CoreRack",
+		CarryCore = "TL_CarryCore",
+		CoreSocket = "TL_CoreSocket",
+		TransferCheckpoint = "TL_TransferCheckpoint",
+		Hazard = "TL_Hazard",
+		TransferWaypoint = "TL_TransferWaypoint",
+		FinalLever = "TL_FinalLever",
+		FinalConsole = "TL_FinalConsole",
+		ApproachPoint = "TL_ApproachPoint",
+		HUDRoot = "TL_HUDRoot",
+		HUDField = "TL_HUDField",
+		FailureOverlay = "TL_FailureOverlay",
+		CompletionOverlay = "TL_CompletionOverlay",
+		RetryButton = "TL_RetryButton",
+	},
+	Attributes = {
+		SemanticId = "TL_SemanticId",
+		TargetSemanticId = "TL_TargetSemanticId",
+		HudRole = "TL_HudRole",
+		OrderCsv = "TL_OrderCsv",
+		RoutingId = "TL_RoutingId",
+		OrderIndex = "TL_OrderIndex",
+		Activated = "TL_Activated",
+		InitialColor = "TL_InitialColor",
+		InitialMaterial = "TL_InitialMaterial",
+		PumpId = "TL_PumpId",
+		PumpState = "TL_PumpState",
+		GaugeValue = "TL_GaugeValue",
+		SafeMin = "TL_SafeMin",
+		SafeMax = "TL_SafeMax",
+		CycleSeconds = "TL_CycleSeconds",
+		CoreState = "TL_CoreState",
+		CarrierUserId = "TL_CarrierUserId",
+		CheckpointId = "TL_CheckpointId",
+		HazardId = "TL_HazardId",
+		SequenceIndex = "TL_SequenceIndex",
+		HazardState = "TL_HazardState",
+		Active = "TL_Active",
+		DamagePerTouch = "TL_DamagePerTouch",
+		LeverId = "TL_LeverId",
+		LeverState = "TL_LeverState",
+		ConsoleState = "TL_ConsoleState",
+	},
+	PlayerAttributes = {
+		RunId = "TL_RunId",
+		RunState = "TL_RunState",
+		RoutingComplete = "TL_RoutingComplete",
+		RoutingProgress = "TL_RoutingProgress",
+		RoutingNext = "TL_RoutingNext",
+		PressureComplete = "TL_PressureComplete",
+		PumpPortState = "TL_PumpPortState",
+		PumpStarboardState = "TL_PumpStarboardState",
+		CoreTransferComplete = "TL_CoreTransferComplete",
+		CarryingCore = "TL_CarryingCore",
+		Checkpoint = "TL_Checkpoint",
+		FinalStage = "TL_FinalStage",
+		CompletionState = "TL_CompletionState",
+		DeathCount = "TL_DeathCount",
+		RetryCount = "TL_RetryCount",
+		RunStart = "TL_RunStart",
+		FinalTime = "TL_FinalTime",
+		EventSerial = "TL_EventSerial",
+		LastEvent = "TL_LastEvent",
+		EventDetail = "TL_EventDetail",
+		FeedbackText = "TL_FeedbackText",
+	},
+	SemanticIds = {
+		GameState = "GameState",
+		CentralSpawn = "CentralSpawn",
+		OrderDisplay = "OrderDisplay",
+		Routing = {
+			Delta = "Routing.Delta",
+			Nova = "Routing.Nova",
+			Echo = "Routing.Echo",
+		},
+		Pump = {
+			Port = "Pump.Port",
+			Starboard = "Pump.Starboard",
+		},
+		CoreRack = "Core.Rack",
+		CoreItem = "Core.Item",
+		CoreSocket = "Core.Socket",
+		TransferCheckpoint = "Checkpoint.Transfer",
+		Hazard = {
+			ArcA = "Hazard.ArcA",
+			ArcB = "Hazard.ArcB",
+			ArcC = "Hazard.ArcC",
+		},
+		Waypoint = { "Waypoint.0", "Waypoint.1", "Waypoint.2", "Waypoint.3" },
+		Final = {
+			Left = "Final.Left",
+			Right = "Final.Right",
+			Console = "Final.Console",
+		},
+	},
+	RoutingIds = { "Delta", "Nova", "Echo" },
+	PumpIds = { "Port", "Starboard" },
+	HazardIds = { "ArcA", "ArcB", "ArcC" },
+	HudRoles = {
+		Objective = "Objective",
+		Timer = "Timer",
+		Feedback = "Feedback",
+		RoutingStatus = "RoutingStatus",
+		RoutingOrder = "RoutingOrder",
+		PressureStatus = "PressureStatus",
+		GaugePort = "GaugePort",
+		GaugeStarboard = "GaugeStarboard",
+		CoreStatus = "CoreStatus",
+		FinalStatus = "FinalStatus",
+	},
+	Enums = {
+		RunState = { Active = "Active", Failed = "Failed", Completed = "Completed" },
+		PumpState = { Idle = "Idle", Running = "Running", Rejected = "Rejected", Locked = "Locked" },
+		Checkpoint = { Central = "Central", Transfer = "Transfer" },
+		CoreState = { AtRack = "AtRack", Carried = "Carried", Installed = "Installed" },
+		HazardState = { Inactive = "Inactive", Active = "Active" },
+		FinalStage = {
+			Locked = "Locked",
+			Ready = "Ready",
+			LeftArmed = "LeftArmed",
+			DualArmed = "DualArmed",
+			Failed = "Failed",
+			Completed = "Completed",
+		},
+		CompletionState = { InProgress = "InProgress", Failed = "Failed", Completed = "Completed" },
+	},
+	Events = {
+		RunStarted = "RunStarted",
+		Restarted = "Restarted",
+		RoutingAccepted = "RoutingAccepted",
+		RoutingWrongOrder = "RoutingWrongOrder",
+		RoutingAlreadyActive = "RoutingAlreadyActive",
+		RoutingCompleted = "RoutingCompleted",
+		PumpStarted = "PumpStarted",
+		PumpLocked = "PumpLocked",
+		PumpRejected = "PumpRejected",
+		PumpAlreadyLocked = "PumpAlreadyLocked",
+		PressureCompleted = "PressureCompleted",
+		CheckpointActivated = "CheckpointActivated",
+		CorePickedUp = "CorePickedUp",
+		CorePickupRejected = "CorePickupRejected",
+		CoreSocketRejected = "CoreSocketRejected",
+		CoreInstalled = "CoreInstalled",
+		HazardTouched = "HazardTouched",
+		PlayerDied = "PlayerDied",
+		RespawnedTransfer = "RespawnedTransfer",
+		FinalNotReady = "FinalNotReady",
+		FinalWrongLever = "FinalWrongLever",
+		FinalAlreadyArmed = "FinalAlreadyArmed",
+		FinalLeftArmed = "FinalLeftArmed",
+		FinalDualArmed = "FinalDualArmed",
+		FinalTimeout = "FinalTimeout",
+		RetryAccepted = "RetryAccepted",
+		Completed = "Completed",
+	},
+	Geometry = {
+		MaxHorizontalDistanceFromCentral = 180,
+		MinimumWalkWidth = 10,
+		MinimumHeadroom = 8,
+		MaximumApproachHeightDelta = 2,
+		ApproachArrivalRadius = 3,
+		CentralRestartRadius = 24,
+		TransferRespawnRadius = 18,
+		FinalMinimumTimeMargin = 3,
+	},
+	Prompt = {
+		Key = Enum.KeyCode.E,
+		MinActivationDistance = 6,
+		MaxActivationDistance = 12,
+		MaximumHoldDuration = 0.4,
+		RequiresLineOfSight = false,
+	},
+	Timing = {
+		ReadyTimeout = 12,
+		MinimumFeedbackVisible = 1.5,
+		PumpCycleSeconds = 8,
+		PumpCycleTolerance = 0.8,
+		PumpSafeMin = 40,
+		PumpSafeMax = 60,
+		PumpRejectReset = 1,
+		MinimumHazardPhase = 2.5,
+		HazardDeathTimeout = 0.75,
+		CoreReturnTimeout = 2,
+		LeftToRightWindow = 10,
+		RightToConsoleWindow = 8,
+		WindowInputReplicationTolerance = 0.25,
+		RestartTimeout = 2,
+	},
+}
+
+return table.freeze(Schema)
+]]></string>
+      </Properties>
+    </Item>
+  </Item>
+  <Item class="ServerScriptService" referent="3">
+    <Properties>
+      <string name="Name">ServerScriptService</string>
+    </Properties>
+  </Item>
+  <Item class="ServerStorage" referent="4">
+    <Properties>
+      <string name="Name">ServerStorage</string>
+    </Properties>
+  </Item>
+  <Item class="StarterGui" referent="5">
+    <Properties>
+      <string name="Name">StarterGui</string>
+    </Properties>
+  </Item>
+  <Item class="StarterPlayer" referent="6">
+    <Properties>
+      <string name="Name">StarterPlayer</string>
+      <token name="CameraMode">0</token>
+      <float name="CharacterJumpHeight">7.2</float>
+      <float name="CharacterWalkSpeed">16</float>
+    </Properties>
+    <Item class="StarterPlayerScripts" referent="7">
+      <Properties>
+        <string name="Name">StarterPlayerScripts</string>
+      </Properties>
+    </Item>
+  </Item>
+  <Item class="Workspace" referent="8">
+    <Properties>
+      <string name="Name">Workspace</string>
+      <float name="Gravity">196.2</float>
+      <bool name="NeedsPivotMigration">false</bool>
+      <bool name="StreamingEnabled">false</bool>
+    </Properties>
+  </Item>
+</roblox>

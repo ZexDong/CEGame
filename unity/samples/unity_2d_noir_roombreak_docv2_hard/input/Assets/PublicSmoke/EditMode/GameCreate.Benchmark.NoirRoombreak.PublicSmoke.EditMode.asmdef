@@ -1,0 +1,8 @@
+{
+  "name": "GameCreate.Benchmark.NoirRoombreak.PublicSmoke.EditMode",
+  "rootNamespace": "GameCreate.Benchmark.NoirRoombreak.PublicSmoke.EditMode",
+  "references": [],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"],
+  "autoReferenced": true
+}

@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "id": "restart_interrupt",
+  "title": "Virtual Restart during motion cancels stale work and reconstructs the exact initial state",
+  "steps": [
+    {
+      "step_id": "setup.scene",
+      "operation": "load_canonical_scene",
+      "target": "scene:ArrowEscape",
+      "check_ids": [
+        "setup.scene_load",
+        "setup.probe",
+        "setup.playable"
+      ]
+    },
+    {
+      "step_id": "declared.scoring_checks",
+      "operation": "observe_visible_player_journeys",
+      "target": "running_scene",
+      "check_ids": [
+        "restart.key_click.input.top_hit",
+        "restart.moving.state",
+        "restart.ui_click.input.top_hit",
+        "restart.playing.reached",
+        "restart.equivalent_now.snapshot",
+        "restart.count_now.same",
+        "restart.equivalent_late.snapshot",
+        "restart.count_late.same",
+        "restart.locked_click.input.top_hit",
+        "restart.single_cost.exactly_one"
+      ]
+    }
+  ]
+}

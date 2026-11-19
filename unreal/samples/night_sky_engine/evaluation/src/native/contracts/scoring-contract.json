@@ -1,0 +1,22 @@
+{
+  "schema_version": "3.0.0",
+  "revision": "nightsky-gdd-coverage-3.1.1-source-assisted",
+  "scoring_guide": "gamecreate/GAME_INDEPENDENT_SCORING_GUIDE.md",
+  "scoring_guide_sha256": "3e3e6cf19cbd5cda5667c44710f483fbba2ac30af7d098921acc811cf08dfdae",
+  "input_gdd_sha256": "48c1ae0d9d42b0f0fb0e8d74a6d30bfb096da732d0e29c4ff0187fa1456a5b8d",
+  "dimensions": {
+    "D1": 10,
+    "D2": 30,
+    "D3": 20,
+    "D4": 20,
+    "D5": 10,
+    "D6": 10
+  },
+  "dynamic_policy": "Independent short normal-input cases; bounded player journeys only for lifecycle and terminal checks.",
+  "state_fixture_policy": "No validated external semantic fixture adapter is bound; use bounded normal input, never hidden candidate hooks.",
+  "candidate_failure_policy": "Affected checkpoints fail or unreachable with numeric zero; confirmed infrastructure failure prevents score publication.",
+  "diagnostic_only": true,
+  "formal_freeze_performed": false,
+  "coverage_policy": "Fixed 36 owners and weights. Boundary evidence is mandatory; acquisition/setup gaps prevent aggregate publication unless the explicitly authorized DRAW source review resolves its missing witness. Missing evidence is never a passing default or candidate zero.",
+  "source_review_policy": "Diagnostic source review, revision nightsky-source-review-3.1.1, for exactly simultaneous_draw (D3-09) and missed_bolt_cleanup (D3-04). Trusted manual call-flow review, GDD/project identity, source snapshots and citations are required. Runtime failures cannot be repaired by source passes. See contracts/source-review.md."
+}

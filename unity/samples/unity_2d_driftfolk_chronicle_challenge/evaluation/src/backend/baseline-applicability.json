@@ -1,0 +1,144 @@
+{
+  "schema_version": 2,
+  "game": "unity.driftfolk_stormbound.v2",
+  "checklist_revision": "docv2-common-baseline-20260913",
+  "session_observation_surface": "game-session/v1-capture-only",
+  "items": [
+    {
+      "id": "CB-01",
+      "applies": true,
+      "check_ids": [
+        "D1_SCENE",
+        "D1_CAMERA",
+        "D2_START"
+      ]
+    },
+    {
+      "id": "CB-02",
+      "applies": true,
+      "check_ids": [
+        "D1_SESSION_ENTRY",
+        "D1_SESSION_STATE"
+      ]
+    },
+    {
+      "id": "CB-03",
+      "applies": true,
+      "check_ids": [
+        "D4_REOPEN"
+      ]
+    },
+    {
+      "id": "CB-04",
+      "applies": true,
+      "check_ids": [
+        "D5_CONTROLS",
+        "D3_EVENT_ONCE"
+      ]
+    },
+    {
+      "id": "CB-05",
+      "applies": true,
+      "check_ids": [
+        "D5_FEEDBACK",
+        "D5_AUDIO"
+      ]
+    },
+    {
+      "id": "CB-06",
+      "applies": true,
+      "check_ids": [
+        "D3_BUILD_GUARDS",
+        "D3_TRANSPORT_ATOMIC"
+      ]
+    },
+    {
+      "id": "CB-07",
+      "applies": true,
+      "check_ids": [
+        "D4_RESTART",
+        "D4_REOPEN"
+      ]
+    },
+    {
+      "id": "CB-08",
+      "applies": true,
+      "check_ids": [
+        "D5_HUD",
+        "D5_CONTROLS"
+      ]
+    },
+    {
+      "id": "CB-09",
+      "applies": true,
+      "check_ids": [
+        "D5_FEEDBACK",
+        "D5_HUD"
+      ]
+    },
+    {
+      "id": "CB-10",
+      "applies": true,
+      "check_ids": [
+        "D5_HUD"
+      ]
+    },
+    {
+      "id": "CB-11",
+      "applies": true,
+      "check_ids": [
+        "D2_ENDINGS"
+      ]
+    },
+    {
+      "id": "CB-12",
+      "applies": true,
+      "check_ids": [
+        "D2_ENDINGS",
+        "D4_TERMINAL_LIFECYCLE"
+      ]
+    },
+    {
+      "id": "CB-13",
+      "applies": true,
+      "check_ids": [
+        "D4_RESTART"
+      ]
+    },
+    {
+      "id": "CB-14",
+      "applies": true,
+      "check_ids": [
+        "D4_TERMINAL_LIFECYCLE"
+      ]
+    },
+    {
+      "id": "CB-15",
+      "applies": true,
+      "check_ids": [
+        "D1_SESSION_STATE"
+      ]
+    },
+    {
+      "id": "CB-16",
+      "applies": true,
+      "check_ids": [
+        "D1_ACTORS"
+      ]
+    },
+    {
+      "id": "CB-17",
+      "applies": true,
+      "check_ids": [
+        "D1_ACTORS"
+      ]
+    },
+    {
+      "id": "CB-18",
+      "applies": false,
+      "check_ids": [],
+      "reason": "Only game-session/v1 Capture is enabled; no Dashboard or legacy probe is required."
+    }
+  ],
+  "policy": "CB-18 is not applicable: the single authoritative state surface is Capture, with no duplicate Dashboard/Probe."
+}

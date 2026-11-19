@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "roblox.deep_relay.single_candidate.v2",
+  "input_revision": "v2.1-pure-tool-catalog-navlink-fix-3600s-20260831",
+  "task_family": "single_player_stateful_facility_recovery_game",
+  "human_specification": "GDD.md",
+  "model_visible_language": "English",
+  "agent_entry_prompt": "INITIAL_AGENT_PROMPT.md",
+  "tool_guide": "ROBLOX_STUDIO_TOOL_GUIDE.md",
+  "toolchain": "TOOLCHAIN.md",
+  "asset_manifest": "ASSET_MANIFEST.json",
+  "asset_catalog": "ASSET_CATALOG.json",
+  "asset_coverage": "ASSET_COVERAGE.json",
+  "starter_place": "DeepRelayStart.rbxlx",
+  "starter_project": "project/default.project.json",
+  "public_schema": "project/src/shared/DeepRelaySchema.luau",
+  "engine": {
+    "name": "Roblox Studio",
+    "channel": "Stable",
+    "single_player_play": true,
+    "streaming_enabled": false
+  },
+  "time_limit_seconds": 3600,
+  "timeout_policy": "terminate development and evaluate current files; no second development window",
+  "starter": {
+    "gameplay_present": false,
+    "semantic_schema_only": true
+  },
+  "writable_paths": [
+    "project/**",
+    "DeepRelayCandidate.rbxlx",
+    "DEVELOPMENT_TRACE.txt",
+    "BUILD_REPORT.txt",
+    "optional_raw_logs/**"
+  ],
+  "protected_paths": [
+    "GDD.md",
+    "EVALUABILITY_CONTRACT.md",
+    "EVALUATION_SCHEMA.json",
+    "BENCHMARK_MANIFEST.json",
+    "ASSET_MANIFEST.json",
+    "ASSET_CATALOG.*",
+    "ASSET_COVERAGE.json",
+    "ROBLOX_STUDIO_TOOL_GUIDE.md",
+    "TaskAssets/**",
+    "legal/**",
+    "project/src/shared/DeepRelaySchema.luau"
+  ],
+  "network_required": false,
+  "public_validation": {
+    "scaffold_test": "ScaffoldTests/Test-InputScaffold.ps1",
+    "scope": "input structure, public isolation, manifest, relative paths, starter build surfaces",
+    "gameplay_completion_proven": false
+  },
+  "protocol_revision_note": "DR_NavLink is a Configuration with DR_Enabled Attribute; PathfindingLink.Enabled is not part of the Roblox API."
+}

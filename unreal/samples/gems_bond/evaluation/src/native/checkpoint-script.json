@@ -1,0 +1,4914 @@
+{
+  "schema_version": "gemsbond-legacy-atomic-1.0",
+  "generation": "legacy; not falsely labelled v2",
+  "naming_tables": "../input/naming-tables.json",
+  "runtime": "../../../engine/observation-player/1.0",
+  "trajectories": [
+    {
+      "id": "opening",
+      "setup_method": "normal_input",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "opening_content",
+        "initial_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "selection",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "selection_rules",
+        "ui_build"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "gate",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "gate_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "build_mine",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "content_mine",
+        "purchase_rules",
+        "gate_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "build_archer",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "content_archer",
+        "feedback_content",
+        "purchase_rules",
+        "ui_build",
+        "ui_feedback"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "build_cannon",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "content_cannon",
+        "purchase_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "build_wall",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "content_wall",
+        "purchase_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "repeat_build",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "purchase_rules",
+        "price_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "placement",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "placement_rules",
+        "ui_build",
+        "ui_feedback"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "sale",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "inspection_content",
+        "price_rules",
+        "inspect_rules",
+        "refund_rules",
+        "ui_context"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "speed",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "pause_speed_content",
+        "speed_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "pause",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "pause_speed_content",
+        "regeneration_rules",
+        "pause_rules",
+        "ui_lifecycle"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "lifecycle",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 180,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "defeat_content",
+        "defeat_rules",
+        "flow",
+        "ui_lifecycle"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "restart_preparing",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "restart_preparing"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "restart_countdown",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "restart_countdown"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "restart_combat",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "restart_combat"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "restart_paused",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "restart_paused"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "restart_defeated",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "restart_defeated"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "restart_inflight",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "restart_inflight"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "reopen",
+      "setup_method": "normal_input",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "reopen"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "seed",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 180,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "seed_rules",
+        "repeat_round"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "resolution",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "ui_resolutions"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "audio",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "feedback_content",
+        "audio_mute"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "input_boundaries",
+      "setup_method": "normal_input",
+      "clean_start": "restart_with_fresh_process_fallback",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": null,
+      "check_ids": [
+        "selection_rules",
+        "purchase_rules",
+        "speed_rules",
+        "pause_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "exact_funds",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 20,
+        "crystal_health": 500,
+        "resume_phase": "rest",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 8,
+        "units": []
+      },
+      "check_ids": [
+        "placement_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "unaffordable",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 0,
+        "crystal_health": 500,
+        "resume_phase": "rest",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 8,
+        "units": []
+      },
+      "check_ids": [
+        "placement_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "income",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "rest",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 8,
+        "units": [
+          {
+            "kind": "mine",
+            "position": [
+              4,
+              3,
+              0
+            ],
+            "tier": 1,
+            "income_remaining": 0.8
+          },
+          {
+            "kind": "mine",
+            "position": [
+              12,
+              8,
+              0
+            ],
+            "tier": 1,
+            "income_remaining": 2.8,
+            "paid": 600
+          }
+        ]
+      },
+      "check_ids": [
+        "income_content",
+        "feedback_content",
+        "income_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "income_removed",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "rest",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 8,
+        "units": [
+          {
+            "kind": "mine",
+            "position": [
+              4,
+              3,
+              0
+            ],
+            "tier": 1,
+            "income_remaining": 2
+          }
+        ]
+      },
+      "check_ids": [
+        "income_rules",
+        "refund_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "regeneration",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 450,
+        "resume_phase": "rest",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 8,
+        "units": [
+          {
+            "kind": "wall",
+            "position": [
+              8,
+              9,
+              0
+            ],
+            "tier": 1,
+            "health": 449
+          },
+          {
+            "kind": "mine",
+            "position": [
+              4,
+              3,
+              0
+            ],
+            "tier": 1,
+            "health": 1400,
+            "income_remaining": 10
+          }
+        ]
+      },
+      "check_ids": [
+        "regeneration_rules",
+        "ui_health"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "destruction",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "wall",
+            "position": [
+              10,
+              7,
+              0
+            ],
+            "tier": 1,
+            "health": 3,
+            "paid": 5
+          },
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              6.32,
+              0
+            ],
+            "tier": 1,
+            "attack_remaining": 0.4
+          }
+        ]
+      },
+      "check_ids": [
+        "price_rules",
+        "destruction_rules",
+        "ui_health"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "upgrade_reject",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 0,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              8,
+              0
+            ],
+            "tier": 3
+          },
+          {
+            "kind": "cannon",
+            "position": [
+              12,
+              8,
+              0
+            ],
+            "tier": 1,
+            "construction_remaining": 0.3
+          },
+          {
+            "kind": "wall",
+            "position": [
+              11,
+              9,
+              0
+            ],
+            "tier": 1
+          }
+        ]
+      },
+      "check_ids": [
+        "upgrade_rejection",
+        "ui_context"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "clear",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              10,
+              7,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              5,
+              0
+            ],
+            "tier": 1,
+            "health": 1
+          }
+        ]
+      },
+      "check_ids": [
+        "wave_clear_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "rest",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "wave_clear_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "restart_rest",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "rest",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 8,
+        "units": []
+      },
+      "check_ids": [
+        "restart_rest"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "enemy_matrix",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 25,
+        "completed": 0,
+        "wave_total": 101,
+        "wave_spawned": 101,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "slime",
+            "position": [
+              1,
+              1,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "slime",
+            "position": [
+              4,
+              1,
+              0
+            ],
+            "tier": 2
+          },
+          {
+            "kind": "slime",
+            "position": [
+              7,
+              1,
+              0
+            ],
+            "tier": 3
+          },
+          {
+            "kind": "skeleton",
+            "position": [
+              10,
+              1,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "skeleton",
+            "position": [
+              13,
+              1,
+              0
+            ],
+            "tier": 2
+          },
+          {
+            "kind": "skeleton",
+            "position": [
+              1,
+              3,
+              0
+            ],
+            "tier": 3
+          },
+          {
+            "kind": "orc",
+            "position": [
+              4,
+              3,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "orc",
+            "position": [
+              7,
+              3,
+              0
+            ],
+            "tier": 2
+          },
+          {
+            "kind": "orc",
+            "position": [
+              10,
+              3,
+              0
+            ],
+            "tier": 3
+          },
+          {
+            "kind": "bat",
+            "position": [
+              13,
+              3,
+              1.25
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "bat",
+            "position": [
+              1,
+              5,
+              1.25
+            ],
+            "tier": 2
+          },
+          {
+            "kind": "bat",
+            "position": [
+              4,
+              5,
+              1.25
+            ],
+            "tier": 3
+          },
+          {
+            "kind": "dragon",
+            "position": [
+              7,
+              5,
+              1.25
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "dragon",
+            "position": [
+              10,
+              5,
+              1.25
+            ],
+            "tier": 2
+          },
+          {
+            "kind": "dragon",
+            "position": [
+              13,
+              5,
+              1.25
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "enemy_content",
+        "ground_rules",
+        "flight_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "obstruction",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "wall",
+            "position": [
+              10,
+              5,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              3.9,
+              0
+            ],
+            "tier": 1
+          }
+        ]
+      },
+      "check_ids": [
+        "ground_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "flight",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 4,
+        "completed": 0,
+        "wave_total": 70,
+        "wave_spawned": 70,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "wall",
+            "position": [
+              10,
+              5,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "bat",
+            "position": [
+              10,
+              3.9,
+              1.25
+            ],
+            "tier": 1
+          }
+        ]
+      },
+      "check_ids": [
+        "flight_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "melee",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              9.32,
+              0
+            ],
+            "tier": 1
+          }
+        ]
+      },
+      "check_ids": [
+        "melee_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "death",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              10,
+              8,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              5,
+              0
+            ],
+            "tier": 1,
+            "health": 1
+          }
+        ]
+      },
+      "check_ids": [
+        "death_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "archer_combat",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              10,
+              9,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              5,
+              0
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "weapons_content",
+        "feedback_content",
+        "archer_targeting",
+        "arrow_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "cannon_combat",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "cannon",
+            "position": [
+              10,
+              9,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              5,
+              0
+            ],
+            "tier": 3
+          },
+          {
+            "kind": "slime",
+            "position": [
+              10.4,
+              5,
+              0
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "weapons_content",
+        "feedback_content",
+        "cannon_targeting",
+        "splash_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "archer_flight",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 20,
+        "completed": 0,
+        "wave_total": 50,
+        "wave_spawned": 50,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              10,
+              9,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "bat",
+            "position": [
+              10,
+              5,
+              1.25
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "archer_targeting"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "cannon_flight",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 20,
+        "completed": 0,
+        "wave_total": 50,
+        "wave_spawned": 50,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "cannon",
+            "position": [
+              10,
+              9,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "bat",
+            "position": [
+              10,
+              5,
+              1.25
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "cannon_targeting"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "range",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              10,
+              8,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              2,
+              0
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "archer_targeting"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "projectile_block",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              10,
+              9,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "wall",
+            "position": [
+              10,
+              7,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              5,
+              0
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "arrow_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "projectile_sale",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "cannon",
+            "position": [
+              10,
+              9,
+              0
+            ],
+            "tier": 1,
+            "paid": 25,
+            "cooldown_remaining": 0.8
+          },
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              4.1,
+              0
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "projectile_lifecycle"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "cooldown_upgrade",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 1000,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "cannon",
+            "position": [
+              10,
+              9,
+              0
+            ],
+            "tier": 1,
+            "cooldown_remaining": 1.8
+          },
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              5,
+              0
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "cooldown_upgrade"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "splash_boundary",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "cannon",
+            "position": [
+              10,
+              9,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              5,
+              0
+            ],
+            "tier": 3
+          },
+          {
+            "kind": "slime",
+            "position": [
+              10.7,
+              5,
+              0
+            ],
+            "tier": 3
+          },
+          {
+            "kind": "slime",
+            "position": [
+              12.5,
+              5,
+              0
+            ],
+            "tier": 3
+          },
+          {
+            "kind": "bat",
+            "position": [
+              10,
+              5,
+              1.25
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "splash_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "terminal_priority",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 1,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              9.32,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "mine",
+            "position": [
+              4,
+              3,
+              0
+            ],
+            "tier": 1,
+            "income_remaining": 0
+          }
+        ]
+      },
+      "check_ids": [
+        "defeat_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "upgrade_archer_2",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 200,
+        "crystal_health": 500,
+        "resume_phase": "rest",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 8,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              8,
+              0
+            ],
+            "tier": 1,
+            "health": 75.0,
+            "paid": 20
+          }
+        ]
+      },
+      "check_ids": [
+        "tiers_archer",
+        "feedback_content",
+        "upgrade_rules",
+        "upgrade_health"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "upgrade_archer_3",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 600,
+        "crystal_health": 500,
+        "resume_phase": "rest",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 8,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              8,
+              0
+            ],
+            "tier": 2,
+            "health": 125.0,
+            "paid": 20
+          }
+        ]
+      },
+      "check_ids": [
+        "tiers_archer",
+        "upgrade_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "upgrade_cannon_2",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 200,
+        "crystal_health": 500,
+        "resume_phase": "rest",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 8,
+        "units": [
+          {
+            "kind": "cannon",
+            "position": [
+              8,
+              8,
+              0
+            ],
+            "tier": 1,
+            "health": 75.0,
+            "paid": 25
+          }
+        ]
+      },
+      "check_ids": [
+        "tiers_cannon",
+        "upgrade_rules",
+        "upgrade_health"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "upgrade_cannon_3",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 600,
+        "crystal_health": 500,
+        "resume_phase": "rest",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 8,
+        "units": [
+          {
+            "kind": "cannon",
+            "position": [
+              8,
+              8,
+              0
+            ],
+            "tier": 2,
+            "health": 100.0,
+            "paid": 25
+          }
+        ]
+      },
+      "check_ids": [
+        "tiers_cannon",
+        "upgrade_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_1",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_2",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 2,
+        "completed": 1,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_3",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 3,
+        "completed": 2,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_4",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 4,
+        "completed": 3,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_5",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 5,
+        "completed": 4,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_6",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 6,
+        "completed": 5,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_7",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 7,
+        "completed": 6,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_8",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 8,
+        "completed": 7,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_9",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 9,
+        "completed": 8,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_10",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 10,
+        "completed": 9,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_11",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_12",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 12,
+        "completed": 11,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_13",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 13,
+        "completed": 12,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_14",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 14,
+        "completed": 13,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_15",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 15,
+        "completed": 14,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_16",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 16,
+        "completed": 15,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_17",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 17,
+        "completed": 16,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_18",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 18,
+        "completed": 17,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_19",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 19,
+        "completed": 18,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_20",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 20,
+        "completed": 19,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_21",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 21,
+        "completed": 20,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_22",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 22,
+        "completed": 21,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_23",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 23,
+        "completed": 22,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_24",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 24,
+        "completed": 23,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_25",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 25,
+        "completed": 24,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "schedule_content",
+        "wave_schedule_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_26",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 26,
+        "completed": 25,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "endless_content",
+        "endless_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "wave_30",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "countdown",
+        "wave": 30,
+        "completed": 29,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0.6,
+        "units": []
+      },
+      "check_ids": [
+        "endless_content",
+        "endless_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "contact_slime_1",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 300,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              9.32,
+              0
+            ],
+            "tier": 1,
+            "health": 1,
+            "attack_remaining": 0.2
+          },
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              9,
+              0
+            ],
+            "tier": 1,
+            "cooldown_remaining": 1.8
+          }
+        ]
+      },
+      "check_ids": [
+        "melee_rules",
+        "death_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "contact_slime_2",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 300,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              9.26,
+              0
+            ],
+            "tier": 2,
+            "health": 1,
+            "attack_remaining": 0.2
+          },
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              9,
+              0
+            ],
+            "tier": 1,
+            "cooldown_remaining": 1.8
+          }
+        ]
+      },
+      "check_ids": [
+        "melee_rules",
+        "death_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "contact_slime_3",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 300,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              9.22,
+              0
+            ],
+            "tier": 3,
+            "health": 1,
+            "attack_remaining": 0.2
+          },
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              9,
+              0
+            ],
+            "tier": 1,
+            "cooldown_remaining": 1.8
+          }
+        ]
+      },
+      "check_ids": [
+        "melee_rules",
+        "death_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "contact_skeleton_1",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 300,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "skeleton",
+            "position": [
+              10,
+              9.36,
+              0
+            ],
+            "tier": 1,
+            "health": 1,
+            "attack_remaining": 0.2
+          },
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              9,
+              0
+            ],
+            "tier": 1,
+            "cooldown_remaining": 1.8
+          }
+        ]
+      },
+      "check_ids": [
+        "melee_rules",
+        "death_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "contact_skeleton_2",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 300,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "skeleton",
+            "position": [
+              10,
+              9.28,
+              0
+            ],
+            "tier": 2,
+            "health": 1,
+            "attack_remaining": 0.2
+          },
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              9,
+              0
+            ],
+            "tier": 1,
+            "cooldown_remaining": 1.8
+          }
+        ]
+      },
+      "check_ids": [
+        "melee_rules",
+        "death_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "contact_skeleton_3",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 300,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "skeleton",
+            "position": [
+              10,
+              9.22,
+              0
+            ],
+            "tier": 3,
+            "health": 1,
+            "attack_remaining": 0.2
+          },
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              9,
+              0
+            ],
+            "tier": 1,
+            "cooldown_remaining": 1.8
+          }
+        ]
+      },
+      "check_ids": [
+        "melee_rules",
+        "death_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "contact_orc_1",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 300,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "orc",
+            "position": [
+              10,
+              9.36,
+              0
+            ],
+            "tier": 1,
+            "health": 1,
+            "attack_remaining": 0.2
+          },
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              9,
+              0
+            ],
+            "tier": 1,
+            "cooldown_remaining": 1.8
+          }
+        ]
+      },
+      "check_ids": [
+        "melee_rules",
+        "death_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "contact_orc_2",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 300,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "orc",
+            "position": [
+              10,
+              9.3,
+              0
+            ],
+            "tier": 2,
+            "health": 1,
+            "attack_remaining": 0.2
+          },
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              9,
+              0
+            ],
+            "tier": 1,
+            "cooldown_remaining": 1.8
+          }
+        ]
+      },
+      "check_ids": [
+        "melee_rules",
+        "death_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "contact_orc_3",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 300,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "orc",
+            "position": [
+              10,
+              9.24,
+              0
+            ],
+            "tier": 3,
+            "health": 1,
+            "attack_remaining": 0.2
+          },
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              9,
+              0
+            ],
+            "tier": 1,
+            "cooldown_remaining": 1.8
+          }
+        ]
+      },
+      "check_ids": [
+        "melee_rules",
+        "death_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "contact_bat_1",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 300,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "bat",
+            "position": [
+              10,
+              9.36,
+              1.25
+            ],
+            "tier": 1,
+            "health": 1,
+            "attack_remaining": 0.2
+          },
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              9,
+              0
+            ],
+            "tier": 1,
+            "cooldown_remaining": 1.8
+          }
+        ]
+      },
+      "check_ids": [
+        "melee_rules",
+        "death_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "contact_bat_2",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 300,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "bat",
+            "position": [
+              10,
+              9.3,
+              1.25
+            ],
+            "tier": 2,
+            "health": 1,
+            "attack_remaining": 0.2
+          },
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              9,
+              0
+            ],
+            "tier": 1,
+            "cooldown_remaining": 1.8
+          }
+        ]
+      },
+      "check_ids": [
+        "melee_rules",
+        "death_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "contact_bat_3",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 300,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "bat",
+            "position": [
+              10,
+              9.24,
+              1.25
+            ],
+            "tier": 3,
+            "health": 1,
+            "attack_remaining": 0.2
+          },
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              9,
+              0
+            ],
+            "tier": 1,
+            "cooldown_remaining": 1.8
+          }
+        ]
+      },
+      "check_ids": [
+        "melee_rules",
+        "death_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "contact_dragon_1",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 300,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "dragon",
+            "position": [
+              10,
+              9.32,
+              1.25
+            ],
+            "tier": 1,
+            "health": 1,
+            "attack_remaining": 0.2
+          },
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              9,
+              0
+            ],
+            "tier": 1,
+            "cooldown_remaining": 1.8
+          }
+        ]
+      },
+      "check_ids": [
+        "melee_rules",
+        "death_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "contact_dragon_2",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 300,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "dragon",
+            "position": [
+              10,
+              9.1,
+              1.25
+            ],
+            "tier": 2,
+            "health": 1,
+            "attack_remaining": 0.2
+          },
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              9,
+              0
+            ],
+            "tier": 1,
+            "cooldown_remaining": 1.8
+          }
+        ]
+      },
+      "check_ids": [
+        "melee_rules",
+        "death_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "contact_dragon_3",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 300,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "dragon",
+            "position": [
+              10,
+              8.9,
+              1.25
+            ],
+            "tier": 3,
+            "health": 1,
+            "attack_remaining": 0.2
+          },
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              9,
+              0
+            ],
+            "tier": 1,
+            "cooldown_remaining": 1.8
+          }
+        ]
+      },
+      "check_ids": [
+        "melee_rules",
+        "death_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "weapon_archer_2",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 25,
+        "completed": 0,
+        "wave_total": 101,
+        "wave_spawned": 101,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              10,
+              9,
+              0
+            ],
+            "tier": 2
+          },
+          {
+            "kind": "orc",
+            "position": [
+              10,
+              5,
+              0
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "upgrade_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "weapon_archer_3",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 25,
+        "completed": 0,
+        "wave_total": 101,
+        "wave_spawned": 101,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              10,
+              9,
+              0
+            ],
+            "tier": 3
+          },
+          {
+            "kind": "orc",
+            "position": [
+              10,
+              5,
+              0
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "upgrade_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "weapon_cannon_2",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 25,
+        "completed": 0,
+        "wave_total": 101,
+        "wave_spawned": 101,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "cannon",
+            "position": [
+              10,
+              9,
+              0
+            ],
+            "tier": 2
+          },
+          {
+            "kind": "orc",
+            "position": [
+              10,
+              5,
+              0
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "upgrade_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "weapon_cannon_3",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 25,
+        "completed": 0,
+        "wave_total": 101,
+        "wave_spawned": 101,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "cannon",
+            "position": [
+              10,
+              9,
+              0
+            ],
+            "tier": 3
+          },
+          {
+            "kind": "orc",
+            "position": [
+              10,
+              5,
+              0
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "upgrade_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "refund_upgrade",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              8,
+              0
+            ],
+            "tier": 3,
+            "paid": 35
+          }
+        ]
+      },
+      "check_ids": [
+        "refund_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "destroy_during_sell",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 200,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              10,
+              7,
+              0
+            ],
+            "tier": 1,
+            "health": 1,
+            "paid": 20,
+            "cooldown_remaining": 2
+          },
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              6.32,
+              0
+            ],
+            "tier": 1,
+            "attack_remaining": 1
+          }
+        ]
+      },
+      "check_ids": [
+        "destruction_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "destroy_during_upgrade",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 200,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              10,
+              7,
+              0
+            ],
+            "tier": 1,
+            "health": 1,
+            "paid": 20,
+            "cooldown_remaining": 2
+          },
+          {
+            "kind": "slime",
+            "position": [
+              10,
+              6.32,
+              0
+            ],
+            "tier": 1,
+            "attack_remaining": 1
+          }
+        ]
+      },
+      "check_ids": [
+        "destruction_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "enemy_placement",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "slime",
+            "position": [
+              8,
+              8,
+              0
+            ],
+            "tier": 3
+          },
+          {
+            "kind": "bat",
+            "position": [
+              13,
+              8,
+              1.25
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "placement_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "review_visible_archer",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "slime",
+            "position": [
+              4.9,
+              0,
+              0
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "weapons_content",
+        "feedback_content"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "review_nearest_archer",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              6,
+              6,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "slime",
+            "position": [
+              1.5,
+              6,
+              0
+            ],
+            "tier": 3
+          },
+          {
+            "kind": "slime",
+            "position": [
+              5,
+              4,
+              0
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "archer_targeting"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "review_projectile_upgrade_archer",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 200,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              6,
+              6,
+              0
+            ],
+            "tier": 1,
+            "paid": 20
+          },
+          {
+            "kind": "slime",
+            "position": [
+              6,
+              1.05,
+              0
+            ],
+            "tier": 3
+          }
+        ],
+        "selected_entity": 0
+      },
+      "check_ids": [
+        "projectile_lifecycle"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "review_projectile_sale_archer",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 200,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              6,
+              6,
+              0
+            ],
+            "tier": 1,
+            "paid": 20
+          },
+          {
+            "kind": "slime",
+            "position": [
+              6,
+              1.05,
+              0
+            ],
+            "tier": 3
+          }
+        ],
+        "selected_entity": 0
+      },
+      "check_ids": [
+        "projectile_lifecycle"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "review_visible_cannon",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "cannon",
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "slime",
+            "position": [
+              4.9,
+              0,
+              0
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "weapons_content",
+        "feedback_content"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "review_nearest_cannon",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "cannon",
+            "position": [
+              6,
+              6,
+              0
+            ],
+            "tier": 1
+          },
+          {
+            "kind": "slime",
+            "position": [
+              1.5,
+              6,
+              0
+            ],
+            "tier": 3
+          },
+          {
+            "kind": "slime",
+            "position": [
+              5,
+              4,
+              0
+            ],
+            "tier": 3
+          }
+        ]
+      },
+      "check_ids": [
+        "cannon_targeting"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "review_projectile_upgrade_cannon",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 200,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "cannon",
+            "position": [
+              6,
+              6,
+              0
+            ],
+            "tier": 1,
+            "paid": 25
+          },
+          {
+            "kind": "slime",
+            "position": [
+              6,
+              1.05,
+              0
+            ],
+            "tier": 3
+          },
+          {
+            "kind": "slime",
+            "position": [
+              7.15,
+              1.05,
+              0
+            ],
+            "tier": 3
+          }
+        ],
+        "selected_entity": 0
+      },
+      "check_ids": [
+        "projectile_lifecycle"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "review_projectile_sale_cannon",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 200,
+        "crystal_health": 500,
+        "resume_phase": "combat",
+        "wave": 1,
+        "completed": 0,
+        "wave_total": 20,
+        "wave_spawned": 20,
+        "countdown": 0,
+        "units": [
+          {
+            "kind": "cannon",
+            "position": [
+              6,
+              6,
+              0
+            ],
+            "tier": 1,
+            "paid": 25
+          },
+          {
+            "kind": "slime",
+            "position": [
+              6,
+              1.05,
+              0
+            ],
+            "tier": 3
+          },
+          {
+            "kind": "slime",
+            "position": [
+              7.15,
+              1.05,
+              0
+            ],
+            "tier": 3
+          }
+        ],
+        "selected_entity": 0
+      },
+      "check_ids": [
+        "projectile_lifecycle"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "review_reject_unaffordable",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 0,
+        "crystal_health": 500,
+        "resume_phase": "rest",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 8,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              8,
+              0
+            ],
+            "tier": 1,
+            "construction_remaining": 0
+          }
+        ],
+        "selected_entity": 0
+      },
+      "check_ids": [
+        "upgrade_rejection"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "review_reject_maximum",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 2000,
+        "crystal_health": 500,
+        "resume_phase": "rest",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 8,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              8,
+              0
+            ],
+            "tier": 3,
+            "construction_remaining": 0
+          },
+          {
+            "kind": "archer",
+            "position": [
+              12,
+              8,
+              0
+            ],
+            "tier": 1
+          }
+        ],
+        "selected_entity": 0
+      },
+      "check_ids": [
+        "upgrade_rejection"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "review_reject_construction",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 2000,
+        "crystal_health": 500,
+        "resume_phase": "rest",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 8,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              8,
+              0
+            ],
+            "tier": 1,
+            "construction_remaining": 0.6
+          }
+        ],
+        "selected_entity": 0
+      },
+      "check_ids": [
+        "upgrade_rejection"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "review_reject_mine",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 2000,
+        "crystal_health": 500,
+        "resume_phase": "rest",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 8,
+        "units": [
+          {
+            "kind": "mine",
+            "position": [
+              4,
+              3,
+              0
+            ],
+            "tier": 1,
+            "construction_remaining": 0
+          },
+          {
+            "kind": "archer",
+            "position": [
+              12,
+              8,
+              0
+            ],
+            "tier": 1
+          }
+        ],
+        "selected_entity": 0
+      },
+      "check_ids": [
+        "upgrade_rejection"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "review_reject_wall",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 2000,
+        "crystal_health": 500,
+        "resume_phase": "rest",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 8,
+        "units": [
+          {
+            "kind": "wall",
+            "position": [
+              8,
+              8,
+              0
+            ],
+            "tier": 1,
+            "construction_remaining": 0
+          },
+          {
+            "kind": "archer",
+            "position": [
+              12,
+              8,
+              0
+            ],
+            "tier": 1
+          }
+        ],
+        "selected_entity": 0
+      },
+      "check_ids": [
+        "upgrade_rejection"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "review_income_purchase",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 170,
+        "crystal_health": 500,
+        "resume_phase": "preparing",
+        "wave": 0,
+        "completed": 0,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 0,
+        "units": []
+      },
+      "check_ids": [
+        "income_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    },
+    {
+      "id": "review_upgrade_single_click",
+      "setup_method": "state_fixture",
+      "clean_start": "fresh_process",
+      "max_actions": 80,
+      "max_serial_seconds": 65,
+      "tested_action_policy": "Real input only; condition waits and captures are evidence, not scoring actions.",
+      "action_budget_reason": "Conservative cap includes semantic setup through public controls, press/release edges and repeated-boundary probes. Fixture core behavior normally needs P plus at most two target clicks; schedule cases use P and held/released F. Longer normal cases explicitly test sequences, repeated rejection, lifecycle or seed replay.",
+      "setup": {
+        "coins": 1000,
+        "crystal_health": 500,
+        "resume_phase": "rest",
+        "wave": 11,
+        "completed": 10,
+        "wave_total": 0,
+        "wave_spawned": 0,
+        "countdown": 8,
+        "units": [
+          {
+            "kind": "archer",
+            "position": [
+              8,
+              8,
+              0
+            ],
+            "tier": 1
+          }
+        ],
+        "selected_entity": 0
+      },
+      "check_ids": [
+        "upgrade_rules"
+      ],
+      "evidence": [
+        "setup receipt when applicable",
+        "PID/session/round-bound continuous samples",
+        "real input receipts",
+        "contemporaneous client captures",
+        "normal cleanup receipt"
+      ],
+      "cleanup": "Release controlled inputs and stop the isolated process; ordinary cases restart before the next independent case."
+    }
+  ]
+}
