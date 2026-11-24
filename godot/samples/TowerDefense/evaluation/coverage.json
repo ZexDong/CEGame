@@ -41,7 +41,13 @@
       "check_ids": [
         "D2-01"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "entry_and_initial",
+          "checkpoint_id": "D2-01"
+        }
+      ]
     },
     {
       "source": "gdd:ENTRY-02",
@@ -69,7 +75,13 @@
       "check_ids": [
         "D3-01"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "entry_and_initial",
+          "checkpoint_id": "D3-01"
+        }
+      ]
     },
     {
       "source": "gdd:STATE-02",
@@ -83,7 +95,13 @@
       "check_ids": [
         "D2-02"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "entry_and_initial",
+          "checkpoint_id": "D2-02"
+        }
+      ]
     },
     {
       "source": "gdd:MAP-02",
@@ -95,51 +113,57 @@
     {
       "source": "gdd:HUD-02",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-03",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-01",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-02",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-03",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-04",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "common-baseline:CB-07",
       "check_ids": [
         "D5-ENTRY"
       ],
-      "dimension": "D5"
+      "dimension": "D5",
+      "observations": [
+        {
+          "trajectory": "entry_and_initial",
+          "checkpoint_id": "D5-ENTRY"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-08",
@@ -160,7 +184,13 @@
       "check_ids": [
         "D5-HUD"
       ],
-      "dimension": "D5"
+      "dimension": "D5",
+      "observations": [
+        {
+          "trajectory": "entry_and_initial",
+          "checkpoint_id": "D5-HUD"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-09",
@@ -174,7 +204,13 @@
       "check_ids": [
         "D2-03"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "building_and_management",
+          "checkpoint_id": "D2-03"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-04",
@@ -188,7 +224,13 @@
       "check_ids": [
         "D3-03"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "building_and_management",
+          "checkpoint_id": "D3-03"
+        }
+      ]
     },
     {
       "source": "gdd:BUILD-03",
@@ -223,7 +265,13 @@
       "check_ids": [
         "D2-04"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "building_and_management",
+          "checkpoint_id": "D2-04"
+        }
+      ]
     },
     {
       "source": "gdd:TOWER-02",
@@ -251,7 +299,13 @@
       "check_ids": [
         "D3-04"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "building_and_management",
+          "checkpoint_id": "D3-04"
+        }
+      ]
     },
     {
       "source": "gdd:TOWER_HP-02",
@@ -272,7 +326,13 @@
       "check_ids": [
         "D2-07"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "building_and_management",
+          "checkpoint_id": "D2-07"
+        }
+      ]
     },
     {
       "source": "gdd:UPGRADE-01",
@@ -293,7 +353,13 @@
       "check_ids": [
         "D2-08"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "building_and_management",
+          "checkpoint_id": "D2-08"
+        }
+      ]
     },
     {
       "source": "gdd:REPAIR-02",
@@ -307,7 +373,13 @@
       "check_ids": [
         "D3-05"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "building_and_management",
+          "checkpoint_id": "D3-05"
+        }
+      ]
     },
     {
       "source": "gdd:ECON-02",
@@ -321,7 +393,13 @@
       "check_ids": [
         "D5-BUILD"
       ],
-      "dimension": "D5"
+      "dimension": "D5",
+      "observations": [
+        {
+          "trajectory": "building_and_management",
+          "checkpoint_id": "D5-BUILD"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-05",
@@ -335,7 +413,13 @@
       "check_ids": [
         "D2-05"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "waves_attacks_and_success",
+          "checkpoint_id": "D2-05"
+        }
+      ]
     },
     {
       "source": "gdd:WAVE-02",
@@ -349,7 +433,13 @@
       "check_ids": [
         "D3-02"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "waves_attacks_and_success",
+          "checkpoint_id": "D3-02"
+        }
+      ]
     },
     {
       "source": "gdd:ROUTE-02",
@@ -363,7 +453,13 @@
       "check_ids": [
         "D3-06"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "waves_attacks_and_success",
+          "checkpoint_id": "D3-06"
+        }
+      ]
     },
     {
       "source": "gdd:WAVE-04",
@@ -384,7 +480,13 @@
       "check_ids": [
         "D2-06"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "waves_attacks_and_success",
+          "checkpoint_id": "D2-06"
+        }
+      ]
     },
     {
       "source": "gdd:ENEMY_ATTACK-02",
@@ -398,7 +500,13 @@
       "check_ids": [
         "D3-08"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "waves_attacks_and_success",
+          "checkpoint_id": "D3-08"
+        }
+      ]
     },
     {
       "source": "gdd:ENEMY_ATTACK-04",
@@ -419,14 +527,26 @@
       "check_ids": [
         "D3-07"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "waves_attacks_and_success",
+          "checkpoint_id": "D3-07"
+        }
+      ]
     },
     {
       "source": "gdd:BALANCE-01",
       "check_ids": [
         "D3-09"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "waves_attacks_and_success",
+          "checkpoint_id": "D3-09"
+        }
+      ]
     },
     {
       "source": "gdd:BALANCE-02",
@@ -447,7 +567,13 @@
       "check_ids": [
         "D2-09"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "waves_attacks_and_success",
+          "checkpoint_id": "D2-09"
+        }
+      ]
     },
     {
       "source": "gdd:MENU-01",
@@ -461,7 +587,13 @@
       "check_ids": [
         "D4-SUCCESS"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "waves_attacks_and_success",
+          "checkpoint_id": "D4-SUCCESS"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-11",
@@ -473,16 +605,22 @@
     {
       "source": "gdd:ASSET-05",
       "check_ids": [
-        "D5-COMBAT"
+        "D6-04"
       ],
-      "dimension": "D5"
+      "dimension": "D6"
     },
     {
       "source": "gdd:FAIL-01",
       "check_ids": [
         "D4-LOSS"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "failure_and_restart",
+          "checkpoint_id": "D4-LOSS"
+        }
+      ]
     },
     {
       "source": "gdd:COMBAT-01",
@@ -524,7 +662,13 @@
       "check_ids": [
         "D3-10"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "failure_and_restart",
+          "checkpoint_id": "D3-10"
+        }
+      ]
     },
     {
       "source": "gdd:REOPEN-01",
@@ -552,14 +696,26 @@
       "check_ids": [
         "D4-RESTART"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "failure_and_restart",
+          "checkpoint_id": "D4-RESTART"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-03",
       "check_ids": [
         "D4-REOPEN"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "lifecycle_reopen",
+          "checkpoint_id": "D4-REOPEN"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-15",
@@ -573,7 +729,13 @@
       "check_ids": [
         "D5-END"
       ],
-      "dimension": "D5"
+      "dimension": "D5",
+      "observations": [
+        {
+          "trajectory": "lifecycle_reopen",
+          "checkpoint_id": "D5-END"
+        }
+      ]
     },
     {
       "source": "visual:composition",

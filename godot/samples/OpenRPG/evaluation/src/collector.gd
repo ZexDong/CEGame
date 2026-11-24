@@ -130,7 +130,17 @@ func _targets(selector: Dictionary, allow_relax := true) -> Array:
 	var out: Array = []
 	var wanted_kinds := _selector_kinds(selector)
 	var wanted_state := str(selector.get("state", ""))
-	for t in _state().get("targets", []):
+	var snapshot := _state()
+	var matching_ids := {}
+	var entity_kind := str(selector.get("entity_kind", ""))
+	if entity_kind != "":
+		var owner := str(selector.get("entity_owner", ""))
+		for entity in snapshot.get("entities", []):
+			if entity.get("kind", "") != entity_kind or not entity.has("id"): continue
+			if owner != "" and entity.get("owner", "") != owner: continue
+			matching_ids[entity["id"]] = true
+	for t in snapshot.get("targets", []):
+		if entity_kind != "" and not matching_ids.has(t.get("id")): continue
 		var kind := str(t.get("kind", ""))
 		if not wanted_kinds.has(kind): continue
 		# Stateful selectors must resolve the exact public semantic state.  A
@@ -145,7 +155,7 @@ func _targets(selector: Dictionary, allow_relax := true) -> Array:
 func _revision() -> int:
 	return int(_state().get("revision", -1))
 
-func _send(event: InputEvent) -> void:
+func _send(event: InputEvent, local := false) -> void:
 	var receipt := {"at_ms":Time.get_ticks_msec(),"step":seq}
 	if event is InputEventKey:
 		receipt.merge({"type":"key","keycode":event.physical_keycode,"pressed":event.pressed})
@@ -154,43 +164,41 @@ func _send(event: InputEvent) -> void:
 	elif event is InputEventMouseMotion:
 		receipt.merge({"type":"mouse_motion","position":[event.position.x,event.position.y]})
 	input_trace.append(receipt)
-	Input.parse_input_event(event)
+	if local:
+		root.push_input(event, true)
+	else:
+		Input.parse_input_event(event)
 
-func _inject_click(selector: Dictionary) -> bool:
-	# A scripted click represents exactly one player input.  Retrying a still
-	# visible button here can advance a dialogue several pages (or submit an
-	# action repeatedly), which makes an otherwise correct trajectory diverge.
+func _inject_click(selector: Dictionary, button := MOUSE_BUTTON_LEFT) -> bool:
+	# Resolve the visible target once and deliver one click.
 	var items := _targets(selector)
 	if items.is_empty(): return false
-	var r: Array = items[0].get("rect", [0,0,0,0])
-	if float(r[2]) <= 0.0 or float(r[3]) <= 0.0: return false
-	var p := Vector2(float(r[0]) + float(r[2]) / 2.0, float(r[1]) + float(r[3]) / 2.0)
+	var r: Array = items[0].get("rect", [])
+	if r.size() != 4 or float(r[2]) <= 0.0 or float(r[3]) <= 0.0: return false
+	var point := Vector2(float(r[0]) + float(r[2]) * 0.5, float(r[1]) + float(r[3]) * 0.5)
 	await _settle(2)
-	if allow_system_mouse:
-		var motion := InputEventMouseMotion.new(); motion.position = p; motion.global_position = p
-		_send(motion); await process_frame
-	var down := InputEventMouseButton.new(); down.position = p; down.global_position = p; down.button_index = MOUSE_BUTTON_LEFT; down.button_mask = MOUSE_BUTTON_MASK_LEFT; down.pressed = true
-	if allow_system_mouse: _send(down)
-	else: root.push_input(down, true)
-	await process_frame
-	var up := InputEventMouseButton.new(); up.position = p; up.global_position = p; up.button_index = MOUSE_BUTTON_LEFT; up.pressed = false
-	if allow_system_mouse: _send(up)
-	else: root.push_input(up, true)
-	await process_frame
-	await _settle(12)
-	return true
+	return await _inject_click_point(point, button)
 
-func _inject_click_point(p: Vector2) -> bool:
+func _inject_click_point(point: Vector2, button := MOUSE_BUTTON_LEFT) -> bool:
 	if allow_system_mouse:
-		var motion := InputEventMouseMotion.new(); motion.position = p; motion.global_position = p
-		_send(motion); await process_frame
-	var down := InputEventMouseButton.new(); down.position = p; down.global_position = p; down.button_index = MOUSE_BUTTON_LEFT; down.button_mask = MOUSE_BUTTON_MASK_LEFT; down.pressed = true
-	if allow_system_mouse: _send(down)
-	else: root.push_input(down, true)
+		var motion := InputEventMouseMotion.new()
+		motion.position = point
+		motion.global_position = point
+		_send(motion)
+		await process_frame
+	var down := InputEventMouseButton.new()
+	down.position = point
+	down.global_position = point
+	down.button_index = button
+	down.button_mask = MOUSE_BUTTON_MASK_RIGHT if button == MOUSE_BUTTON_RIGHT else MOUSE_BUTTON_MASK_LEFT
+	down.pressed = true
+	_send(down, not allow_system_mouse)
 	await process_frame
-	var up := InputEventMouseButton.new(); up.position = p; up.global_position = p; up.button_index = MOUSE_BUTTON_LEFT; up.pressed = false
-	if allow_system_mouse: _send(up)
-	else: root.push_input(up, true)
+	var up := InputEventMouseButton.new()
+	up.position = point
+	up.global_position = point
+	up.button_index = button
+	_send(up, not allow_system_mouse)
 	await process_frame
 	await _settle(12)
 	return true
@@ -265,7 +273,10 @@ func _inject_key(name: String, seconds := 0.0) -> bool:
 	var key := _keycode(name)
 	if key == KEY_NONE: return false
 	var e := InputEventKey.new(); e.keycode = key; e.physical_keycode = key; e.pressed = true; _send(e)
-	if seconds > 0.0: await create_timer(seconds).timeout
+	if seconds > 0.0:
+		await create_timer(seconds).timeout
+	else:
+		await process_frame
 	e = InputEventKey.new(); e.keycode = key; e.physical_keycode = key; e.pressed = false; _send(e)
 	await _settle(6); return true
 
@@ -323,27 +334,74 @@ func _move_toward(selector: Dictionary, timeout_s: float) -> bool:
 		await _inject_key(key, 0.05)
 	return false
 
-func _condition(cond: String) -> bool:
-	var s := _state()
-	var operators := [">=", "<=", "!=", "==", ">", "<"]
-	for op in operators:
+func _entity_x(entity: Dictionary) -> Variant:
+	var cell = entity.get("cell", [])
+	if cell is Array and cell.size() >= 2 and (cell[0] is int or cell[0] is float):
+		return cell[0]
+	return null
+
+func _align_horizontal(selector: Dictionary, timeout_s: float) -> bool:
+	var deadline := Time.get_ticks_msec() + int(timeout_s * 1000.0)
+	while Time.get_ticks_msec() < deadline:
+		var snapshot := _state()
+		if snapshot.get("phase") == "won": return true
+		if snapshot.get("phase") != "playing": return false
+		var entities = snapshot.get("entities", [])
+		var player_x: Variant = null
+		for entity in entities:
+			if entity.get("kind") == "player":
+				player_x = _entity_x(entity)
+				break
+		if player_x == null: return false
+		var delta := INF
+		for entity in entities:
+			if entity.get("kind") != selector.get("kind"): continue
+			if selector.has("state") and entity.get("state") != selector["state"]: continue
+			var target_x: Variant = _entity_x(entity)
+			if target_x != null and absf(float(target_x) - float(player_x)) < absf(delta):
+				delta = float(target_x) - float(player_x)
+		if is_inf(delta): return false
+		if absf(delta) <= 12.0: return true
+		await _inject_key("D" if delta > 0.0 else "A", clampf(absf(delta) / 900.0, 0.02, 0.12))
+	return false
+
+func _condition_value(path: String, snapshot: Dictionary) -> Variant:
+	if path == "phase": return snapshot.get("phase")
+	if snapshot.get("phase", "not_ready") == "not_ready": return null
+	if path.begins_with("slots."):
+		var slots = snapshot.get("slots")
+		return slots.get(path.trim_prefix("slots.")) if slots is Dictionary else null
+	var parts := path.split(".")
+	if parts.size() != 3 or parts[0] != "entities": return null
+	var entities = snapshot.get("entities")
+	if not entities is Array: return null
+	var count := 0
+	for entity in entities:
+		if not entity is Dictionary or entity.get("kind") != parts[1]: continue
+		if parts[2] == "x": return _entity_x(entity)
+		count += 1
+	return count if parts[2] == "count" else null
+
+func _condition(cond: String, snapshot: Dictionary) -> bool:
+	for op in [">=", "<=", "!=", "==", ">", "<"]:
 		var parts := cond.split(op)
 		if parts.size() != 2: continue
-		var lhs := parts[0].strip_edges(); var rhs_text := parts[1].strip_edges().trim_prefix("\"").trim_suffix("\"")
-		var actual: Variant
-		if lhs == "phase": actual = s.get("phase", "")
-		elif lhs.begins_with("slots."): actual = s.get("slots", {}).get(lhs.trim_prefix("slots."), null)
-		else: return false
-		if actual == null: return false
-		if op == "==": return str(actual) == rhs_text
-		if op == "!=": return str(actual) != rhs_text
-		if not rhs_text.is_valid_float() or not (actual is int or actual is float): return false
-		var a := float(actual); var b := float(rhs_text)
+		var lhs := parts[0].strip_edges()
+		var rhs := parts[1].strip_edges().trim_prefix("\"").trim_suffix("\"")
+		var value: Variant = _condition_value(lhs, snapshot)
+		if lhs == "phase":
+			if not value is String or rhs.is_empty(): return false
+			return (op == "==" and value == rhs) or (op == "!=" and value != rhs)
+		if not rhs.is_valid_float() or not (value is int or value is float): return false
+		var a := float(value)
+		var b := float(rhs)
+		if op == "==": return a == b
+		if op == "!=": return a != b
 		if op == ">=": return a >= b
 		if op == "<=": return a <= b
 		if op == ">": return a > b
 		if op == "<": return a < b
-	return not s.is_empty() and s.get("phase", "not_ready") != "not_ready"
+	return false
 
 func _reached_opposite_terminal(cond: String) -> bool:
 	# Won and lost are mutually exclusive.  Once the opposite terminal appears,
@@ -383,7 +441,11 @@ func _run_step(tid: String, i: int, st: Dictionary) -> void:
 	# the candidate's actual blocked state and is required by the transcript
 	# protocol.  Only gameplay-mutating/further waiting actions are short-circuited.
 	var skipped_by_prerequisite := trajectory_blocked and do_action != "" and do_action not in ["capture", "snapshot"]
-	if skipped_by_prerequisite:
+	var skip_condition := str(st.get("skip_if", ""))
+	if not skip_condition.is_empty() and _condition(skip_condition, before["snapshot"]):
+		consumed = true
+		status = "skipped"
+	elif skipped_by_prerequisite:
 		consumed = true
 		ok = false
 	elif adapter != null and adapter.has_method("prepare"):
@@ -393,19 +455,23 @@ func _run_step(tid: String, i: int, st: Dictionary) -> void:
 	if not consumed:
 		match do_action:
 			"start": await _settle(10)
-			"click": ok = await _inject_click(st.get("target", {}))
+			"click":
+				var button := MOUSE_BUTTON_RIGHT if st.get("button", "left") == "right" else MOUSE_BUTTON_LEFT
+				ok = await _inject_click(st.get("target", {}), button)
 			"drag": ok = await _inject_drag(st.get("from", {}), st.get("to", {}))
 			"press": ok = await _inject_key(str(st.get("key", "")))
 			"hold": ok = await _inject_key(str(st.get("key", "")), float(st.get("seconds", 0.0)))
-			"move_toward": ok = await _move_toward(st.get("target", {}), float(st.get("timeout_s", 10.0)))
+			"move_toward":
+				var timeout_s := float(st.get("timeout_s", 10.0))
+				if st.get("axis") == "x":
+					ok = await _align_horizontal(st.get("target", {}), timeout_s)
+				else:
+					ok = await _move_toward(st.get("target", {}), timeout_s)
 			"wait_until":
-				# Honour the authored timeout.  The old five-second hard cap made
-				# legitimate long combat/lifecycle waits fail before the strategy had
-				# a chance to finish.  Keep only a generous safety ceiling for corrupt
-				# scripts that advertise an unbounded duration.
+				# Apply the configured timeout with a 30-minute upper bound.
 				var deadline := Time.get_ticks_msec() + mini(int(float(st.get("timeout_s", 10.0)) * 1000.0), 1800000); ok = false
 				while Time.get_ticks_msec() < deadline:
-					if _condition(str(st.get("cond", ""))): ok = true; break
+					if _condition(str(st.get("cond", "")), _state()): ok = true; break
 					if _reached_opposite_terminal(str(st.get("cond", ""))): break
 					await _settle(4)
 			"restart": ok = await _inject_click({"kind":"restart_button"})
@@ -420,7 +486,8 @@ func _run_step(tid: String, i: int, st: Dictionary) -> void:
 		if skipped_by_prerequisite:
 			status = "candidate_rejected"; error_class = "prerequisite_not_reached"
 		else:
-			status = "candidate_timeout"; error_class = "public_target_unavailable"
+			status = "candidate_timeout"
+			error_class = "condition_not_met" if do_action == "wait_until" else "public_target_unavailable"
 		# Every failed gameplay action is a failed prerequisite for later gameplay
 		# in the same trajectory.  Continuing after an unavailable click/press can
 		# spend the full timeout waiting for a state the candidate had no route to
@@ -442,7 +509,18 @@ func _run_step(tid: String, i: int, st: Dictionary) -> void:
 		if viewport_texture != null: image = viewport_texture.get_image()
 		if image != null and image.save_png(image_path) == OK:
 			e["screenshot"] = {"capture_source":"candidate_viewport", "sha256":_file_sha(ProjectSettings.globalize_path(image_path)), "path":image_path}
-	if st.has("check"): e["check_id"] = st["check"].get("id", "")
+	if not error_class.is_empty(): e["error_class"] = error_class
+	if st.has("check"):
+		var check: Dictionary = st["check"]
+		e["check_id"] = check.get("id", "")
+		if check.has("condition"):
+			var condition := str(check["condition"])
+			var passed: Variant = null
+			if status == "ok":
+				passed = _condition(condition, after["snapshot"])
+			elif error_class == "condition_not_met" and condition == st.get("cond", ""):
+				passed = false
+			e["check_result"] = {"condition": condition, "passed": passed}
 	events.append(e); seq += 1
 
 func _run() -> void:

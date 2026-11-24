@@ -106,14 +106,6 @@
           }
         },
         {
-          "check": {
-            "id": "D2-10",
-            "source": "gdd:ASSET-01a",
-            "dim": "D2",
-            "assert": "English UI, specified textures/portraits/scene assets, HUD, layout, and feedback appear in their corresponding screens"
-          }
-        },
-        {
           "do": "capture"
         }
       ]

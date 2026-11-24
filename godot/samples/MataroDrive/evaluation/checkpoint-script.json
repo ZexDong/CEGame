@@ -48,6 +48,514 @@
           "do": "capture"
         }
       ]
+    },
+    {
+      "id": "entry",
+      "title": "Menu, level selection, garage and story launch",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15,
+          "check": {
+            "id": "entry_011",
+            "source": "common-baseline:CB-01",
+            "dim": "D4",
+            "condition": "phase == menu",
+            "scoring": "automatic"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.profile_cash == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_001",
+            "condition": "slots.profile_cash == 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.owned_cars == 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_012",
+            "condition": "slots.owned_cars == 1"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.completed_levels == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_013",
+            "condition": "slots.completed_levels == 0"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "levels_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.total_levels == 15",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_004",
+            "source": "gdd:LEVELSELECT-01",
+            "dim": "D2",
+            "condition": "slots.total_levels == 15",
+            "scoring": "prerequisite"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.completed_levels == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_005",
+            "condition": "slots.completed_levels == 0"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "main_menu_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 5
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "garage_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.owned_cars == 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_006",
+            "condition": "slots.owned_cars == 1"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.equipped_car == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_007",
+            "condition": "slots.equipped_car == 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.profile_cash == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_008",
+            "condition": "slots.profile_cash == 0"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "main_menu_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 5
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "play_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 15,
+          "check": {
+            "id": "entry_002",
+            "source": "gdd:ENTRY-02",
+            "dim": "D2",
+            "condition": "phase == playing",
+            "scoring": "prerequisite"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.level == 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_003",
+            "condition": "slots.level == 1"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.completed_levels == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_014",
+            "condition": "slots.completed_levels == 0"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "title": "Story movement and initial combo",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "play_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 15
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "continue_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 5
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.combo == 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "core_019",
+            "condition": "slots.combo == 1"
+          }
+        },
+        {
+          "do": "hold",
+          "key": "D",
+          "seconds": 0.5,
+          "check": {
+            "id": "core_001",
+            "condition": "entities.player.x > 140"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "failure",
+      "title": "Endless and hill climb entry and pause",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "endless_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 15,
+          "check": {
+            "id": "failure_001",
+            "condition": "phase == playing"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.level == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "failure_002",
+            "condition": "slots.level == 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.distance == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "failure_003",
+            "condition": "slots.distance == 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.combo == 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "failure_004",
+            "condition": "slots.combo == 1"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "pause_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == paused",
+          "timeout_s": 5
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "main_menu_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 5
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "hill_climb_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 15,
+          "check": {
+            "id": "failure_005",
+            "condition": "phase == playing"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.level == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "failure_006",
+            "condition": "slots.level == 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.distance == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "failure_007",
+            "condition": "slots.distance == 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.combo == 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "failure_008",
+            "condition": "slots.combo == 1"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "lifecycle",
+      "title": "Initial profile, settings and reopening",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.completed_levels == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "lifecycle_001",
+            "condition": "slots.completed_levels == 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.stars == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "lifecycle_002",
+            "condition": "slots.stars == 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.best_distance == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "lifecycle_003",
+            "condition": "slots.best_distance == 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.gems == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "lifecycle_004",
+            "condition": "slots.gems == 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.lifetime_cash == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "lifecycle_005",
+            "condition": "slots.lifetime_cash == 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.profile_cash == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "lifecycle_009",
+            "condition": "slots.profile_cash == 0"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "settings_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 5,
+          "check": {
+            "id": "lifecycle_006",
+            "condition": "phase == menu"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "music_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.music_enabled == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "lifecycle_007",
+            "source": "gdd:SETTINGS-02",
+            "dim": "D4",
+            "condition": "slots.music_enabled == 0",
+            "scoring": "prerequisite"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "sound_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.sound_enabled == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "lifecycle_008",
+            "condition": "slots.sound_enabled == 0"
+          }
+        },
+        {
+          "do": "reopen"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15,
+          "check": {
+            "id": "lifecycle_010",
+            "source": "common-baseline:CB-03",
+            "dim": "D4",
+            "condition": "phase == menu",
+            "scoring": "prerequisite"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.completed_levels == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "lifecycle_011",
+            "condition": "slots.completed_levels == 0"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
     }
   ]
 }

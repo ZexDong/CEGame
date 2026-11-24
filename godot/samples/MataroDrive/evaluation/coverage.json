@@ -48,7 +48,13 @@
       "check_ids": [
         "entry_002"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "entry",
+          "checkpoint_id": "entry_002"
+        }
+      ]
     },
     {
       "source": "gdd:ENTRY-03",
@@ -62,7 +68,13 @@
       "check_ids": [
         "entry_004"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "entry",
+          "checkpoint_id": "entry_004"
+        }
+      ]
     },
     {
       "source": "gdd:LEVELSELECT-02",
@@ -111,7 +123,13 @@
       "check_ids": [
         "entry_011"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "entry",
+          "checkpoint_id": "entry_011"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-07",
@@ -382,30 +400,30 @@
     {
       "source": "gdd:VISUAL-01",
       "check_ids": [
-        "success_014"
+        "D6-01"
       ],
-      "dimension": "D5"
+      "dimension": "D6"
     },
     {
       "source": "gdd:VISUAL-02",
       "check_ids": [
-        "success_015"
+        "D6-05"
       ],
-      "dimension": "D5"
+      "dimension": "D6"
     },
     {
       "source": "gdd:VISUAL-03",
       "check_ids": [
-        "success_016"
+        "D6-02"
       ],
-      "dimension": "D5"
+      "dimension": "D6"
     },
     {
       "source": "gdd:VISUAL-04",
       "check_ids": [
-        "success_017"
+        "D6-03"
       ],
-      "dimension": "D5"
+      "dimension": "D6"
     },
     {
       "source": "gdd:QUALITY-01",
@@ -587,7 +605,13 @@
       "check_ids": [
         "lifecycle_007"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "lifecycle",
+          "checkpoint_id": "lifecycle_007"
+        }
+      ]
     },
     {
       "source": "gdd:SETTINGS-03",
@@ -608,7 +632,13 @@
       "check_ids": [
         "lifecycle_010"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "lifecycle",
+          "checkpoint_id": "lifecycle_010"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-13",

@@ -211,18 +211,17 @@
       ],
       "description": "Menu, Controls, level selection, briefings, and entry controls are visible, readable, and clickable",
       "trajectory": "entry_and_training",
-      "max_score": 2.0
+      "max_score": 2.5
     },
     {
       "id": "D5-02",
       "dimension": "D5",
       "requirement_ids": [
-        "common-baseline:CB-08",
         "common-baseline:CB-09"
       ],
-      "description": "HUD, objectives, ammunition, and training progress agree with snapshots and rendered output",
+      "description": "Displayed HUD values agree with the live game state",
       "trajectory": "entry_and_training",
-      "max_score": 2.0
+      "max_score": 2.5
     },
     {
       "id": "D2-03",
@@ -283,16 +282,6 @@
         "gdd:RULE-07e"
       ],
       "description": "Both slime types have correct health, distance behavior, projectile count/damage, experience, and spawn legality",
-      "trajectory": "core_levels",
-      "max_score": 2.0
-    },
-    {
-      "id": "D5-03",
-      "dimension": "D5",
-      "requirement_ids": [
-        "common-baseline:CB-05"
-      ],
-      "description": "Shooting, hits, damage, door locks, room clearing, and healing provide clear and truthful feedback",
       "trajectory": "core_levels",
       "max_score": 2.0
     },
@@ -560,7 +549,7 @@
       ],
       "description": "Completion, victory, defeat, and continuation entries are clear and respond once",
       "trajectory": "boss_and_level6_success",
-      "max_score": 2.0
+      "max_score": 2.5
     },
     {
       "id": "D3-10",
@@ -614,7 +603,7 @@
       ],
       "description": "Feedback clearly distinguishes invalid input and mutually exclusive pause, map, upgrade, and result modals",
       "trajectory": "failure_and_retry",
-      "max_score": 2.0
+      "max_score": 2.5
     },
     {
       "id": "D3-01",
@@ -670,6 +659,67 @@
       "id": "D2-10",
       "dimension": "D2",
       "requirement_ids": [
+        "gdd:ASSET-08a",
+        "gdd:ASSET-08b",
+        "gdd:ASSET-08c",
+        "gdd:ASSET-08d",
+        "gdd:ASSET-08e",
+        "gdd:ASSET-08f",
+        "gdd:ASSET-08g",
+        "gdd:ASSET-08h",
+        "gdd:ASSET-08i",
+        "gdd:ASSET-08k",
+        "gdd:ASSET-09b"
+      ],
+      "description": "Runtime audio use and agreement of the visible blast with its collision area",
+      "trajectory": "lifecycle",
+      "max_score": 3.0
+    },
+    {
+      "id": "D6-01",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:composition"
+      ],
+      "description": "Overall composition and task visual identity",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-02",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:objects",
+        "gdd:ASSET-01a",
+        "gdd:ASSET-01b",
+        "gdd:ASSET-02a",
+        "gdd:ASSET-02b",
+        "gdd:ASSET-02c",
+        "gdd:ASSET-02d",
+        "gdd:ASSET-03a",
+        "gdd:ASSET-03b",
+        "gdd:ASSET-03c",
+        "gdd:ASSET-04a",
+        "gdd:ASSET-04b",
+        "gdd:ASSET-04c",
+        "gdd:ASSET-05a",
+        "gdd:ASSET-05b",
+        "gdd:ASSET-05c",
+        "gdd:ASSET-06a",
+        "gdd:ASSET-06b",
+        "gdd:ASSET-07a",
+        "gdd:ASSET-07b",
+        "gdd:ASSET-08j",
+        "gdd:ASSET-09a"
+      ],
+      "description": "Required objects, character and asset identity",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-03",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:ui",
+        "common-baseline:CB-08",
         "gdd:UI-01a",
         "gdd:UI-01b",
         "gdd:UI-02a",
@@ -683,13 +733,6 @@
         "gdd:UI-03g",
         "gdd:UI-03h",
         "gdd:UI-03i",
-        "gdd:UI-05a",
-        "gdd:UI-05b",
-        "gdd:UI-05c",
-        "gdd:UI-05d",
-        "gdd:UI-05e",
-        "gdd:UI-05f",
-        "gdd:UI-05g",
         "gdd:UI-04a",
         "gdd:UI-04b",
         "gdd:UI-04c",
@@ -713,7 +756,24 @@
         "gdd:UI-04u",
         "gdd:UI-04v",
         "gdd:UI-04w",
-        "gdd:UI-04x",
+        "gdd:UI-04x"
+      ],
+      "description": "UI readability and information hierarchy",
+      "max_score": 2.0
+    },
+    {
+      "id": "D6-04",
+      "dimension": "D6",
+      "requirement_ids": [
+        "visual:feedback",
+        "common-baseline:CB-05",
+        "gdd:UI-05a",
+        "gdd:UI-05b",
+        "gdd:UI-05c",
+        "gdd:UI-05d",
+        "gdd:UI-05e",
+        "gdd:UI-05f",
+        "gdd:UI-05g",
         "gdd:UI-06a",
         "gdd:UI-06b",
         "gdd:UI-06c",
@@ -727,76 +787,7 @@
         "gdd:UI-07d",
         "gdd:UI-08a",
         "gdd:UI-08b",
-        "gdd:UI-08c",
-        "gdd:ASSET-01a",
-        "gdd:ASSET-01b",
-        "gdd:ASSET-02a",
-        "gdd:ASSET-02b",
-        "gdd:ASSET-02c",
-        "gdd:ASSET-02d",
-        "gdd:ASSET-03a",
-        "gdd:ASSET-03b",
-        "gdd:ASSET-03c",
-        "gdd:ASSET-04a",
-        "gdd:ASSET-04b",
-        "gdd:ASSET-04c",
-        "gdd:ASSET-05a",
-        "gdd:ASSET-05b",
-        "gdd:ASSET-05c",
-        "gdd:ASSET-06a",
-        "gdd:ASSET-06b",
-        "gdd:ASSET-07a",
-        "gdd:ASSET-07b",
-        "gdd:ASSET-08a",
-        "gdd:ASSET-08b",
-        "gdd:ASSET-08c",
-        "gdd:ASSET-08d",
-        "gdd:ASSET-08e",
-        "gdd:ASSET-08f",
-        "gdd:ASSET-08g",
-        "gdd:ASSET-08h",
-        "gdd:ASSET-08i",
-        "gdd:ASSET-08j",
-        "gdd:ASSET-08k",
-        "gdd:ASSET-09a",
-        "gdd:ASSET-09b"
-      ],
-      "description": "HUD, feedback, results, and declared images, fonts, and audio are used in the corresponding runtime states",
-      "trajectory": "lifecycle",
-      "max_score": 3.0
-    },
-    {
-      "id": "D6-01",
-      "dimension": "D6",
-      "requirement_ids": [
-        "visual:composition"
-      ],
-      "description": "Overall composition and task visual identity",
-      "max_score": 2.0
-    },
-    {
-      "id": "D6-02",
-      "dimension": "D6",
-      "requirement_ids": [
-        "visual:objects"
-      ],
-      "description": "Required objects, character and asset identity",
-      "max_score": 2.0
-    },
-    {
-      "id": "D6-03",
-      "dimension": "D6",
-      "requirement_ids": [
-        "visual:ui"
-      ],
-      "description": "UI readability and information hierarchy",
-      "max_score": 2.0
-    },
-    {
-      "id": "D6-04",
-      "dimension": "D6",
-      "requirement_ids": [
-        "visual:feedback"
+        "gdd:UI-08c"
       ],
       "description": "State transitions and visual feedback",
       "max_score": 2.0

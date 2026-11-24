@@ -152,7 +152,7 @@
         "common-baseline:CB-07"
       ],
       "description": "Review the complete public requirement common-baseline:CB-07",
-      "max_score": 1.111111
+      "max_score": 1.25
     },
     {
       "id": "entry_012",
@@ -161,7 +161,7 @@
         "common-baseline:CB-08"
       ],
       "description": "Review the complete public requirement common-baseline:CB-08",
-      "max_score": 1.111111
+      "max_score": 1.25
     },
     {
       "id": "entry_013",
@@ -485,7 +485,7 @@
         "common-baseline:CB-05"
       ],
       "description": "Review the complete public requirement common-baseline:CB-05",
-      "max_score": 1.111111
+      "max_score": 1.25
     },
     {
       "id": "core_036",
@@ -503,7 +503,7 @@
         "common-baseline:CB-09"
       ],
       "description": "Review the complete public requirement common-baseline:CB-09",
-      "max_score": 1.111111
+      "max_score": 1.25
     },
     {
       "id": "success_001",
@@ -551,15 +551,6 @@
       "max_score": 1.052632
     },
     {
-      "id": "success_006",
-      "dimension": "D5",
-      "requirement_ids": [
-        "gdd:ART-01"
-      ],
-      "description": "Use the supplied principal artwork.",
-      "max_score": 1.111111
-    },
-    {
       "id": "success_007",
       "dimension": "D4",
       "requirement_ids": [
@@ -575,7 +566,7 @@
         "common-baseline:CB-10"
       ],
       "description": "Review the complete public requirement common-baseline:CB-10",
-      "max_score": 1.111111
+      "max_score": 1.25
     },
     {
       "id": "success_009",
@@ -593,7 +584,7 @@
         "common-baseline:CB-16"
       ],
       "description": "Review the complete public requirement common-baseline:CB-16",
-      "max_score": 1.111111
+      "max_score": 1.25
     },
     {
       "id": "success_011",
@@ -602,7 +593,7 @@
         "common-baseline:CB-17"
       ],
       "description": "Review the complete public requirement common-baseline:CB-17",
-      "max_score": 1.111111
+      "max_score": 1.25
     },
     {
       "id": "success_012",
@@ -611,7 +602,7 @@
         "common-baseline:CB-18"
       ],
       "description": "Review the complete public requirement common-baseline:CB-18",
-      "max_score": 1.111112
+      "max_score": 1.25
     },
     {
       "id": "failure_001",
@@ -725,7 +716,8 @@
       "id": "D6-02",
       "dimension": "D6",
       "requirement_ids": [
-        "visual:objects"
+        "visual:objects",
+        "gdd:ART-01"
       ],
       "description": "Required objects, character and asset identity",
       "max_score": 2.0

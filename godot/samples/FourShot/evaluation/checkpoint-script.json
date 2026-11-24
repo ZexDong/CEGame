@@ -219,14 +219,6 @@
             "dim": "D5",
             "assert": "Menu, Controls, level selection, briefings, and entry controls are visible, readable, and clickable"
           }
-        },
-        {
-          "check": {
-            "id": "D5-02",
-            "source": "common-baseline:CB-09",
-            "dim": "D5",
-            "assert": "HUD, objectives, ammunition, and training progress agree with snapshots and rendered output"
-          }
         }
       ]
     },
@@ -298,14 +290,6 @@
         {
           "do": "press",
           "key": "Tab"
-        },
-        {
-          "check": {
-            "id": "D5-03",
-            "source": "common-baseline:CB-05",
-            "dim": "D5",
-            "assert": "Shooting, hits, damage, door locks, room clearing, and healing provide clear and truthful feedback"
-          }
         },
         {
           "do": "click",
@@ -821,14 +805,6 @@
             "source": "common-baseline:CB-03",
             "dim": "D4",
             "assert": "The exact old PID ends; the new PID returns to the menu without restoring gameplay state"
-          }
-        },
-        {
-          "check": {
-            "id": "D2-10",
-            "source": "gdd:ASSET-01a",
-            "dim": "D2",
-            "assert": "HUD, feedback, results, and declared images, fonts, and audio are used in the corresponding runtime states"
           }
         },
         {

@@ -1,4 +1,4 @@
-"""Collect a Godot candidate and aggregate evidence-backed checkpoint reviews."""
+"""Collect a Godot candidate and score checkpoints from engine evidence and reviews."""
 from __future__ import annotations
 
 import argparse
@@ -122,6 +122,33 @@ def _engine_errors(output, receipts):
                           text))
 
 
+def dashboard_well_formed(snapshot, required_slots):
+    return (snapshot.get("phase") in {"menu", "playing", "paused", "won", "lost"}
+            and type(snapshot.get("revision")) in (int, float)
+            and isinstance(snapshot.get("slots"), dict)
+            and all(type(snapshot["slots"].get(k)) in (int, float) for k in required_slots)
+            and isinstance(snapshot.get("entities"), list)
+            and isinstance(snapshot.get("targets"), list))
+
+
+def condition_outcomes(events, authored, required_slots):
+    for index, event in enumerate(events):
+        check = authored.get((event.get("trajectory"), event.get("step")))
+        result = event.get("check_result", {})
+        if (not check or event.get("check_id") != check["id"]
+                or result.get("condition") != check["condition"]):
+            continue
+        passed = result.get("passed")
+        status = event.get("status")
+        observed = status == "ok" or (status == "candidate_timeout" and passed is False
+                                      and event.get("error_class") == "condition_not_met")
+        if (not observed or type(passed) is not bool
+                or not dashboard_well_formed(event.get("after", {}).get("snapshot", {}), required_slots)):
+            continue
+        if check["scoring"] == "automatic" or not passed:
+            yield check, passed, index
+
+
 def collect(evaluation, meta, args, output):
     source = args.project.resolve()
     if not (source / "project.godot").is_file():
@@ -141,9 +168,14 @@ def collect(evaluation, meta, args, output):
     project_file = project / "project.godot"
     text = project_file.read_text(encoding="utf-8-sig")
     text = re.sub(r"(?m)^config/(?:use_custom_user_dir|custom_user_dir_name)=.*\n?", "", text)
-    text = text.replace("[application]", '[application]\nconfig/use_custom_user_dir=true\n'
-                        'config/custom_user_dir_name="GameCreate/' + uuid.uuid4().hex + '"', 1)
-    project_file.write_text(text, encoding="utf-8")
+    profile_base = "GameCreate/" + uuid.uuid4().hex
+
+    def set_profile(name):
+        project_file.write_text(text.replace(
+            "[application]", '[application]\nconfig/use_custom_user_dir=true\n'
+            f'config/custom_user_dir_name="{profile_base}/{name}"', 1), encoding="utf-8")
+
+    set_profile("import")
     evidence = output / "evidence"
     native = evidence / "native"
     native.mkdir(parents=True)
@@ -154,8 +186,10 @@ def collect(evaluation, meta, args, output):
     imported = run_process(prefix + ["--headless", "--editor", "--import", "--quit"],
                            native, "import", args.timeout)
     receipts, reports = [imported], []
-    data = load(evaluation / "checkpoint-script.json")
-    trajectories = data["trajectories"]
+    completed_reports = set()
+    script_path = evaluation / "checkpoint-script.json"
+    script_hash = digest(script_path)
+    trajectories = load(script_path)["trajectories"]
     if args.trajectory:
         trajectories = [t for t in trajectories if t["id"] == args.trajectory]
         if not trajectories:
@@ -163,8 +197,10 @@ def collect(evaluation, meta, args, output):
     if imported["exit_code"] == 0 and not _engine_errors(native, receipts):
         if args.interactive_seconds:
             trajectories = trajectories[:1]
-        for trajectory in trajectories:
-            reopen = [i for i, s in enumerate(trajectory["steps"]) if s.get("do") == "reopen"]
+        for index, trajectory in enumerate(trajectories):
+            set_profile(f"trajectory-{index}")
+            reopen = [] if args.interactive_seconds else [
+                i for i, step in enumerate(trajectory["steps"]) if step.get("do") == "reopen"]
             cuts = [0] + reopen + [len(trajectory["steps"])]
             for part, (start, stop) in enumerate(zip(cuts, cuts[1:])):
                 label = trajectory["id"] + "-part" + str(part)
@@ -180,25 +216,44 @@ def collect(evaluation, meta, args, output):
                 receipts.append(receipt)
                 if report.is_file():
                     reports.append(report.relative_to(output).as_posix())
+                if (receipt["exit_code"] != 0 or receipt["timed_out"] or not report.is_file()
+                        or _engine_errors(native, [receipt])):
+                    # Reopen requires a completed preceding process in the same profile.
+                    break
+                completed_reports.add(report.relative_to(output).as_posix())
     write(evidence / "source-integrity.json", {
         "unchanged": before == tree_hashes(source), "source_files": before})
+    names = load(evaluation.parent / meta["input"]["starter_project"] / "benchmark/naming-tables.json")
+    required_slots = names.get("slots", [])
+    definitions = load(evaluation / "rules.json")["checks"]
+    rule_by_id = {definition["id"]: definition for definition in definitions}
+    authored = {}
+    for trajectory in trajectories:
+        for index, step in enumerate(trajectory["steps"]):
+            check = step.get("check", {})
+            if check.get("scoring") not in {"automatic", "prerequisite"}:
+                continue
+            rule = rule_by_id[check["id"]]
+            if (rule["dimension"] not in {"D2", "D3", "D4", "D5"}
+                    or rule["dimension"] != check.get("dim")
+                    or rule["requirement_ids"] != [check.get("source")]):
+                raise ValueError("Condition scoring must match one functional requirement: " + check["id"])
+            authored[trajectory["id"], index] = check
+
     transcripts = []
+    condition_scores = {}
     for rel in reports:
         value = load(output / rel)
         if isinstance(value, dict):
+            events = value.get("events", [])
             transcripts.extend(value.get("observations", []))
-            transcripts.extend({"state": e.get("after", {})} for e in value.get("events", []))
+            transcripts.extend({"state": e.get("after", {})} for e in events)
+            if rel in completed_reports and value.get("script_sha256") == script_hash:
+                for check, passed, index in condition_outcomes(events, authored, required_slots):
+                    condition_scores[check["id"]] = (passed, f"{rel}#/events/{index}")
     snapshots = [v.get("state", {}).get("snapshot", {}) for v in transcripts]
     snapshots = [s for s in snapshots if s]
-    names = load(evaluation.parent / meta["input"]["starter_project"] / "benchmark/naming-tables.json")
-    required_slots = names.get("slots", [])
-    well_formed = any(
-        s.get("phase") in {"menu", "playing", "paused", "won", "lost"}
-        and type(s.get("revision")) in (int, float)
-        and isinstance(s.get("slots"), dict)
-        and all(type(s["slots"].get(k)) in (int, float) for k in required_slots)
-        and isinstance(s.get("entities"), list) and isinstance(s.get("targets"), list)
-        for s in snapshots)
+    well_formed = any(dashboard_well_formed(s, required_slots) for s in snapshots)
     images = sorted(p.relative_to(output).as_posix() for p in native.glob("*.png"))
     write(evidence / "runtime-summary.json", {
         "reports": reports, "snapshots": len(snapshots), "images": images,
@@ -206,9 +261,6 @@ def collect(evaluation, meta, args, output):
         "engine_version": (native / version["stdout"]).read_text(encoding="utf-8", errors="replace").strip(),
         "engine_error": _engine_errors(native, receipts),
         "processes": receipts, "headless": args.headless})
-    # D1 tests use only current import/runtime observations; other dimensions
-    # require requirement-level observations, never inferred from "phase ready".
-    definitions = load(evaluation / "rules.json")["checks"]
     d1_ok = [
         imported["exit_code"] == 0 and not imported["timed_out"],
         bool(reports) and all(r["exit_code"] == 0 and not r["timed_out"] for r in receipts[1:]),
@@ -225,10 +277,15 @@ def collect(evaluation, meta, args, output):
                                     definition["max_score"] if passed else 0,
                                     ["evidence/runtime-summary.json"],
                                     definition["description"] + (": observed" if passed else ": not demonstrated")))
+        elif definition["id"] in condition_scores:
+            passed, reference = condition_scores[definition["id"]]
+            checks.append(check_row(definition, "pass" if passed else "fail",
+                                    definition["max_score"] if passed else 0, [reference],
+                                    "Runtime condition met" if passed else "Runtime condition not met"))
         else:
             checks.append(check_row(definition, "inconclusive_evaluator", None,
                                     ["evidence/runtime-summary.json"],
-                                    "Requires review of the named requirement and collected evidence"))
+                                    "Review the requirement using collected evidence"))
     write(evidence / "initial-checks.json", checks)
     write(output / "review-template.json", {
         "protocol": "godot-evidence-review/v1", "sample_id": meta["sample_id"],
@@ -237,7 +294,7 @@ def collect(evaluation, meta, args, output):
         "checks": [{"id": r["id"], "verdict": None, "reason": "",
                     "requirements": [{"id": k, "verdict": None, "evidence": [], "reason": ""}
                                      for k in r["requirement_ids"]]}
-                   for r in checks if r["dimension"] != "D1"],
+                   for r in checks if r["score"] is None],
     })
     # Seal only observed evidence, excluding mutable review and score documents.
     seal = {p.relative_to(output).as_posix(): digest(p) for p in evidence.rglob("*") if p.is_file()}
@@ -270,13 +327,13 @@ def finalize(evaluation, meta, args, output):
             or not str(review.get("reviewer", "")).strip()):
         raise ValueError("Review does not identify this collection/evaluator/reviewer")
     checks = load(evidence / "initial-checks.json")
-    expected = {r["id"] for r in checks if r["dimension"] != "D1"}
+    expected = {r["id"] for r in checks if r["score"] is None}
     rows = review.get("checks", [])
     if len(rows) != len(expected) or {r["id"] for r in rows} != expected:
         raise ValueError("Review checkpoint set differs from rules")
     reviewed = {r["id"]: r for r in rows}
     for row in checks:
-        if row["dimension"] == "D1":
+        if row["id"] not in expected:
             continue
         supplied = reviewed[row["id"]]
         atoms = supplied.get("requirements", [])

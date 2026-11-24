@@ -70,6 +70,451 @@
           "do": "capture"
         }
       ]
+    },
+    {
+      "id": "entry",
+      "title": "Quick play and initial match state",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15,
+          "check": {
+            "id": "entry_004",
+            "source": "common-baseline:CB-01",
+            "dim": "D4",
+            "condition": "phase == menu",
+            "scoring": "automatic"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "quick_play"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 15,
+          "check": {
+            "id": "entry_002",
+            "condition": "phase == playing"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.unit_count == 3",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_003",
+            "condition": "slots.unit_count == 3"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.friendly_command_centers == 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_001",
+            "condition": "slots.friendly_command_centers == 1"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.resource_a == 10",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_005",
+            "condition": "slots.resource_a == 10"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.resource_b == 10",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_006",
+            "condition": "slots.resource_b == 10"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.idle_workers == 2",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_007",
+            "condition": "slots.idle_workers == 2"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "title": "Selection, building, production and resource gathering",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "quick_play"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 15
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "unit_target",
+            "entity_kind": "worker",
+            "entity_owner": "friendly"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.selected_hp > 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "core_001",
+            "source": "gdd:SELECT-01",
+            "dim": "D3",
+            "condition": "slots.selected_hp > 0",
+            "scoring": "prerequisite"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "battlefield"
+          },
+          "check": {
+            "id": "core_002",
+            "condition": "slots.selected_hp == 0"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "unit_target",
+            "entity_kind": "worker",
+            "entity_owner": "friendly"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "build_vehicle_factory"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "battlefield"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.resource_a == 4",
+          "timeout_s": 5,
+          "check": {
+            "id": "core_005",
+            "source": "gdd:BUILD-01",
+            "dim": "D3",
+            "condition": "slots.resource_a == 4"
+          }
+        },
+        {
+          "do": "reopen"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "quick_play"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 15
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "unit_target",
+            "entity_kind": "command_center",
+            "entity_owner": "friendly"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "produce_worker"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.queue_length == 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "core_010",
+            "condition": "slots.queue_length == 1"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "queue_entry"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.queue_length == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "core_026",
+            "condition": "slots.queue_length == 0"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "produce_worker"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "produce_worker"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "produce_worker"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "produce_worker"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "produce_worker"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.queue_length == 5",
+          "timeout_s": 5,
+          "check": {
+            "id": "core_009",
+            "source": "gdd:PROD-01",
+            "dim": "D3",
+            "condition": "slots.queue_length == 5"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.resource_a == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "core_024",
+            "condition": "slots.resource_a == 0"
+          }
+        },
+        {
+          "do": "press",
+          "key": "I",
+          "check": {
+            "id": "core_022",
+            "condition": "slots.selected_hp == 110"
+          }
+        },
+        {
+          "do": "press",
+          "key": "ESCAPE",
+          "check": {
+            "id": "core_027",
+            "condition": "phase == paused"
+          }
+        },
+        {
+          "do": "press",
+          "key": "ESCAPE"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "unit_target",
+            "entity_kind": "worker",
+            "entity_owner": "friendly"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "resource_target",
+            "entity_kind": "resource_a_pile"
+          },
+          "button": "right"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.resource_a > 0",
+          "timeout_s": 15,
+          "check": {
+            "id": "core_003",
+            "source": "gdd:ECON-01",
+            "dim": "D3",
+            "condition": "slots.resource_a > 0"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "lifecycle",
+      "title": "Pause, resume, reopening and restart",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "quick_play"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 15
+        },
+        {
+          "do": "press",
+          "key": "ESCAPE",
+          "check": {
+            "id": "lifecycle_001",
+            "source": "gdd:LIFE-01",
+            "dim": "D4",
+            "condition": "phase == paused",
+            "scoring": "prerequisite"
+          }
+        },
+        {
+          "do": "press",
+          "key": "ESCAPE",
+          "check": {
+            "id": "lifecycle_002",
+            "condition": "phase == playing"
+          }
+        },
+        {
+          "do": "reopen"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15,
+          "check": {
+            "id": "lifecycle_004",
+            "source": "gdd:LIFE-04",
+            "dim": "D4",
+            "condition": "phase == menu",
+            "scoring": "prerequisite"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.resource_a == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "lifecycle_005",
+            "condition": "slots.resource_a == 0"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "quick_play"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 15
+        },
+        {
+          "do": "press",
+          "key": "ESCAPE"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == paused",
+          "timeout_s": 5
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "restart"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 15,
+          "check": {
+            "id": "lifecycle_006",
+            "condition": "phase == playing"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
     }
   ]
 }

@@ -66,7 +66,7 @@
       ],
       "description": "The initial menu, START, Grassland selection, and battlefield entry are complete and operable",
       "trajectory": "entry_and_initial",
-      "max_score": 3.0
+      "max_score": 3.333333
     },
     {
       "id": "D3-01",
@@ -88,22 +88,7 @@
       ],
       "description": "The Grassland map, continuous grass, stone road, and route relationships are clearly visible",
       "trajectory": "entry_and_initial",
-      "max_score": 3.0
-    },
-    {
-      "id": "D2-10",
-      "dimension": "D2",
-      "requirement_ids": [
-        "gdd:HUD-02",
-        "gdd:HUD-03",
-        "gdd:ASSET-01",
-        "gdd:ASSET-02",
-        "gdd:ASSET-03",
-        "gdd:ASSET-04"
-      ],
-      "description": "Menu, map, four towers, four Dino types, and procedural projectiles/durability UI use the correct asset identities",
-      "trajectory": "entry_and_initial",
-      "max_score": 3.0
+      "max_score": 3.333333
     },
     {
       "id": "D5-ENTRY",
@@ -115,7 +100,7 @@
       ],
       "description": "START, Grassland, tower cards, and the main HUD are visible, readable, and inside the window",
       "trajectory": "entry_and_initial",
-      "max_score": 2.0
+      "max_score": 2.5
     },
     {
       "id": "D5-HUD",
@@ -126,7 +111,7 @@
       ],
       "description": "Gold, base HP, Wave, countdown, and Remaining are synchronized with the dashboard",
       "trajectory": "entry_and_initial",
-      "max_score": 2.0
+      "max_score": 2.5
     },
     {
       "id": "D2-03",
@@ -137,7 +122,7 @@
       ],
       "description": "All four tower cards support free dragging, legal preview/building, and complete invalid-drop feedback",
       "trajectory": "building_and_management",
-      "max_score": 3.0
+      "max_score": 3.333333
     },
     {
       "id": "D3-03",
@@ -164,7 +149,7 @@
       ],
       "description": "Gatling, Flamethrower, Raygun, and Explosive roles, assets, and attack presentations are distinguishable",
       "trajectory": "building_and_management",
-      "max_score": 3.0
+      "max_score": 3.333333
     },
     {
       "id": "D3-04",
@@ -188,7 +173,7 @@
       ],
       "description": "Tower details, upgrades, sale, level cap, and economy feedback are complete",
       "trajectory": "building_and_management",
-      "max_score": 3.0
+      "max_score": 3.333333
     },
     {
       "id": "D2-08",
@@ -199,7 +184,7 @@
       ],
       "description": "Tower health bars, HP text, Repair - 20 Gold, and repair feedback are complete",
       "trajectory": "building_and_management",
-      "max_score": 3.0
+      "max_score": 3.333333
     },
     {
       "id": "D3-05",
@@ -221,7 +206,7 @@
       ],
       "description": "Drag preview, rejection, building, selection, upgrade, sale, and repair feedback are clear and consistent",
       "trajectory": "building_and_management",
-      "max_score": 2.0
+      "max_score": 2.5
     },
     {
       "id": "D2-05",
@@ -232,7 +217,7 @@
       ],
       "description": "Ten-wave countdowns, fixed spawn order, inter-wave progression, and remaining-enemy counts are complete",
       "trajectory": "waves_attacks_and_success",
-      "max_score": 3.0
+      "max_score": 3.333333
     },
     {
       "id": "D3-02",
@@ -266,7 +251,7 @@
       ],
       "description": "Red/Green attack while moving; both red projectile types, tower-hit damage, and projectile cancellation are complete",
       "trajectory": "waves_attacks_and_success",
-      "max_score": 3.0
+      "max_score": 3.333333
     },
     {
       "id": "D3-08",
@@ -311,7 +296,7 @@
       ],
       "description": "Mutually exclusive Map Complete/Game Over outcomes and Restart/Main Menu flows are complete",
       "trajectory": "waves_attacks_and_success",
-      "max_score": 3.0
+      "max_score": 3.333336
     },
     {
       "id": "D4-SUCCESS",
@@ -323,16 +308,6 @@
       "description": "A normal public strategy reaches one Map Complete after Wave 10 and the boss are fully resolved",
       "trajectory": "waves_attacks_and_success",
       "max_score": 5.0
-    },
-    {
-      "id": "D5-COMBAT",
-      "dimension": "D5",
-      "requirement_ids": [
-        "gdd:ASSET-05"
-      ],
-      "description": "Tower attacks, Dino projectiles, tower health bars, HP text, and Repair feedback are visible and synchronized",
-      "trajectory": "waves_attacks_and_success",
-      "max_score": 2.0
     },
     {
       "id": "D4-LOSS",
@@ -391,7 +366,7 @@
       ],
       "description": "Map Complete/Game Over reasons and subsequent Restart/Main Menu entries are clear and usable",
       "trajectory": "lifecycle_reopen",
-      "max_score": 2.0
+      "max_score": 2.5
     },
     {
       "id": "D6-01",
@@ -406,7 +381,11 @@
       "id": "D6-02",
       "dimension": "D6",
       "requirement_ids": [
-        "visual:objects"
+        "visual:objects",
+        "gdd:ASSET-01",
+        "gdd:ASSET-02",
+        "gdd:ASSET-03",
+        "gdd:ASSET-04"
       ],
       "description": "Required objects, character and asset identity",
       "max_score": 2.0
@@ -415,7 +394,9 @@
       "id": "D6-03",
       "dimension": "D6",
       "requirement_ids": [
-        "visual:ui"
+        "visual:ui",
+        "gdd:HUD-02",
+        "gdd:HUD-03"
       ],
       "description": "UI readability and information hierarchy",
       "max_score": 2.0
@@ -424,7 +405,8 @@
       "id": "D6-04",
       "dimension": "D6",
       "requirement_ids": [
-        "visual:feedback"
+        "visual:feedback",
+        "gdd:ASSET-05"
       ],
       "description": "State transitions and visual feedback",
       "max_score": 2.0

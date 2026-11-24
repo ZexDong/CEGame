@@ -98,7 +98,7 @@
         "common-baseline:CB-07"
       ],
       "description": "Review the complete public requirement common-baseline:CB-07",
-      "max_score": 1.0
+      "max_score": 1.111111
     },
     {
       "id": "entry_006",
@@ -107,7 +107,7 @@
         "common-baseline:CB-08"
       ],
       "description": "Review the complete public requirement common-baseline:CB-08",
-      "max_score": 1.0
+      "max_score": 1.111111
     },
     {
       "id": "entry_007",
@@ -341,7 +341,7 @@
         "common-baseline:CB-05"
       ],
       "description": "Review the complete public requirement common-baseline:CB-05",
-      "max_score": 1.0
+      "max_score": 1.111111
     },
     {
       "id": "core_026",
@@ -359,7 +359,7 @@
         "common-baseline:CB-09"
       ],
       "description": "Review the complete public requirement common-baseline:CB-09",
-      "max_score": 1.0
+      "max_score": 1.111111
     },
     {
       "id": "success_001",
@@ -386,16 +386,7 @@
         "gdd:HUD-01"
       ],
       "description": "Match state changes | Show resources, elapsed simulation time, mobile count, idle Workers, selected health, construction/queue progress, blocked output, events | Stale totals or progress during pause | Immediate readable changes",
-      "max_score": 1.0
-    },
-    {
-      "id": "success_004",
-      "dimension": "D5",
-      "requirement_ids": [
-        "gdd:ART-01"
-      ],
-      "description": "Battlefield visible | Use supplied model identities for Workers, Tanks, Helicopters, Drones, factories, turrets, minerals; assemble recognizable bases from supplied structures | Unrelated replacement identities | Ownership and ground/air distinction",
-      "max_score": 1.0
+      "max_score": 1.111111
     },
     {
       "id": "success_005",
@@ -413,7 +404,7 @@
         "common-baseline:CB-10"
       ],
       "description": "Review the complete public requirement common-baseline:CB-10",
-      "max_score": 1.0
+      "max_score": 1.111111
     },
     {
       "id": "success_007",
@@ -431,7 +422,7 @@
         "common-baseline:CB-16"
       ],
       "description": "Review the complete public requirement common-baseline:CB-16",
-      "max_score": 1.0
+      "max_score": 1.111111
     },
     {
       "id": "success_009",
@@ -440,7 +431,7 @@
         "common-baseline:CB-17"
       ],
       "description": "Review the complete public requirement common-baseline:CB-17",
-      "max_score": 1.0
+      "max_score": 1.111111
     },
     {
       "id": "success_010",
@@ -449,7 +440,7 @@
         "common-baseline:CB-18"
       ],
       "description": "Review the complete public requirement common-baseline:CB-18",
-      "max_score": 1.0
+      "max_score": 1.111112
     },
     {
       "id": "failure_001",
@@ -536,7 +527,8 @@
       "id": "D6-02",
       "dimension": "D6",
       "requirement_ids": [
-        "visual:objects"
+        "visual:objects",
+        "gdd:ART-01"
       ],
       "description": "Required objects, character and asset identity",
       "max_score": 2.0

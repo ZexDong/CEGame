@@ -98,7 +98,7 @@
         "common-baseline:CB-07"
       ],
       "description": "Review the complete public requirement common-baseline:CB-07",
-      "max_score": 0.5
+      "max_score": 0.666667
     },
     {
       "id": "entry_006",
@@ -107,7 +107,7 @@
         "common-baseline:CB-08"
       ],
       "description": "Review the complete public requirement common-baseline:CB-08",
-      "max_score": 0.5
+      "max_score": 0.666667
     },
     {
       "id": "entry_007",
@@ -404,7 +404,7 @@
         "common-baseline:CB-05"
       ],
       "description": "Review the complete public requirement common-baseline:CB-05",
-      "max_score": 0.5
+      "max_score": 0.666667
     },
     {
       "id": "core_033",
@@ -422,7 +422,7 @@
         "common-baseline:CB-09"
       ],
       "description": "Review the complete public requirement common-baseline:CB-09",
-      "max_score": 0.5
+      "max_score": 0.666667
     },
     {
       "id": "success_001",
@@ -449,7 +449,7 @@
         "gdd:HUD-01"
       ],
       "description": "A run is active | Show gold, base health, current wave/12, and total living/unspawned enemies | Confuse health with gold or omit remaining enemies | All values update immediately",
-      "max_score": 0.5
+      "max_score": 0.666667
     },
     {
       "id": "success_004",
@@ -458,7 +458,7 @@
         "gdd:HUD-02"
       ],
       "description": "A hero card is affordable/unaffordable | Distinguish usable and insufficient-gold states | Permit a negative-gold purchase | Card state matches gold",
-      "max_score": 0.5
+      "max_score": 0.666667
     },
     {
       "id": "success_005",
@@ -467,7 +467,7 @@
         "gdd:HUD-03"
       ],
       "description": "Reward state is active | Show the three relic names, tiers, effects, and values | Show blank or implementation-only labels | The player can compare choices",
-      "max_score": 0.5
+      "max_score": 0.666667
     },
     {
       "id": "success_006",
@@ -476,52 +476,7 @@
         "gdd:HUD-04"
       ],
       "description": "Victory or Defeat appears | Show the reached wave and not more than one terminal result | Continue changing the run HUD | Result remains stable until exit/restart",
-      "max_score": 0.5
-    },
-    {
-      "id": "success_007",
-      "dimension": "D5",
-      "requirement_ids": [
-        "gdd:VISUAL-01"
-      ],
-      "description": "Map is visible | Show a readable continuous grass area and a distinct path from spawn to base | Let visual path differ from actual movement/build blocking | Enemies and valid placement agree with the path",
-      "max_score": 0.5
-    },
-    {
-      "id": "success_008",
-      "dimension": "D5",
-      "requirement_ids": [
-        "gdd:VISUAL-02"
-      ],
-      "description": "Hero placement is active | Show green valid and red invalid preview states | Place without feedback or cover the target cell | The target cell remains visible",
-      "max_score": 0.5
-    },
-    {
-      "id": "success_009",
-      "dimension": "D5",
-      "requirement_ids": [
-        "gdd:VISUAL-03"
-      ],
-      "description": "Three hero roles are on screen | Use distinct supplied hero/tower sprites and recognizable attack feedback | Collapse all roles into indistinguishable visuals | The player can tell Archer, Mage, and Warrior",
-      "max_score": 0.5
-    },
-    {
-      "id": "success_010",
-      "dimension": "D5",
-      "requirement_ids": [
-        "gdd:VISUAL-04"
-      ],
-      "description": "Four enemy roles are on screen | Use distinct supplied enemy sprites and readable health/damage feedback | Hide the Boss among normal enemies or use missing textures | Enemy type and remaining health are understandable",
-      "max_score": 0.5
-    },
-    {
-      "id": "success_011",
-      "dimension": "D5",
-      "requirement_ids": [
-        "gdd:VISUAL-05"
-      ],
-      "description": "Ranged hero attacks are visible | Use the supplied projectile identity, with tint/scale allowed for distinct effects | Omit visible ranged attack feedback | Projectile travel and impact remain readable",
-      "max_score": 0.5
+      "max_score": 0.666667
     },
     {
       "id": "success_012",
@@ -530,7 +485,7 @@
         "gdd:QUALITY-01"
       ],
       "description": "Play a complete run | Remain stable through twelve waves, rewards, death, victory, restart, menu, and Reopen | Crash, freeze, dead-end, or lose required input | Complete flow is reachable",
-      "max_score": 0.5
+      "max_score": 0.666667
     },
     {
       "id": "success_013",
@@ -539,7 +494,7 @@
         "gdd:QUALITY-02"
       ],
       "description": "Use normal mouse input | Reach all required interactions through visible controls | Require hidden keys, internal calls, or debug menus | Clicks produce immediate feedback",
-      "max_score": 0.5
+      "max_score": 0.666667
     },
     {
       "id": "success_014",
@@ -548,7 +503,7 @@
         "gdd:QUALITY-03"
       ],
       "description": "Victory or Defeat is visible | Stop gameplay actions except Restart/Main Menu/close | Let wave simulation continue behind the result | Result is final and stable",
-      "max_score": 0.5
+      "max_score": 0.666667
     },
     {
       "id": "success_015",
@@ -566,7 +521,7 @@
         "common-baseline:CB-10"
       ],
       "description": "Review the complete public requirement common-baseline:CB-10",
-      "max_score": 0.5
+      "max_score": 0.666667
     },
     {
       "id": "success_017",
@@ -584,7 +539,7 @@
         "common-baseline:CB-16"
       ],
       "description": "Review the complete public requirement common-baseline:CB-16",
-      "max_score": 0.5
+      "max_score": 0.666667
     },
     {
       "id": "success_019",
@@ -593,7 +548,7 @@
         "common-baseline:CB-17"
       ],
       "description": "Review the complete public requirement common-baseline:CB-17",
-      "max_score": 0.5
+      "max_score": 0.666667
     },
     {
       "id": "success_020",
@@ -602,7 +557,7 @@
         "common-baseline:CB-18"
       ],
       "description": "Review the complete public requirement common-baseline:CB-18",
-      "max_score": 0.5
+      "max_score": 0.666662
     },
     {
       "id": "failure_001",
@@ -698,7 +653,8 @@
       "id": "D6-01",
       "dimension": "D6",
       "requirement_ids": [
-        "visual:composition"
+        "visual:composition",
+        "gdd:VISUAL-01"
       ],
       "description": "Overall composition and task visual identity",
       "max_score": 2.0
@@ -707,7 +663,9 @@
       "id": "D6-02",
       "dimension": "D6",
       "requirement_ids": [
-        "visual:objects"
+        "visual:objects",
+        "gdd:VISUAL-03",
+        "gdd:VISUAL-04"
       ],
       "description": "Required objects, character and asset identity",
       "max_score": 2.0
@@ -725,7 +683,9 @@
       "id": "D6-04",
       "dimension": "D6",
       "requirement_ids": [
-        "visual:feedback"
+        "visual:feedback",
+        "gdd:VISUAL-02",
+        "gdd:VISUAL-05"
       ],
       "description": "State transitions and visual feedback",
       "max_score": 2.0

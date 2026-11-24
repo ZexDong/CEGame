@@ -41,7 +41,13 @@
       "check_ids": [
         "D2-01"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "entry_and_training",
+          "checkpoint_id": "D2-01"
+        }
+      ]
     },
     {
       "source": "gdd:ENTRY-01b",
@@ -258,7 +264,13 @@
       "check_ids": [
         "D2-02"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "entry_and_training",
+          "checkpoint_id": "D2-02"
+        }
+      ]
     },
     {
       "source": "gdd:LEVEL-01b",
@@ -335,7 +347,13 @@
       "check_ids": [
         "D2-08"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "entry_and_training",
+          "checkpoint_id": "D2-08"
+        }
+      ]
     },
     {
       "source": "gdd:RULE-01b",
@@ -384,7 +402,13 @@
       "check_ids": [
         "D3-02"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "entry_and_training",
+          "checkpoint_id": "D3-02"
+        }
+      ]
     },
     {
       "source": "gdd:RULE-04b",
@@ -447,7 +471,13 @@
       "check_ids": [
         "D3-03"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "entry_and_training",
+          "checkpoint_id": "D3-03"
+        }
+      ]
     },
     {
       "source": "gdd:RULE-02b",
@@ -587,7 +617,13 @@
       "check_ids": [
         "D3-04"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "entry_and_training",
+          "checkpoint_id": "D3-04"
+        }
+      ]
     },
     {
       "source": "gdd:BOMB-01b",
@@ -692,7 +728,13 @@
       "check_ids": [
         "D5-01"
       ],
-      "dimension": "D5"
+      "dimension": "D5",
+      "observations": [
+        {
+          "trajectory": "entry_and_training",
+          "checkpoint_id": "D5-01"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-10",
@@ -704,9 +746,9 @@
     {
       "source": "common-baseline:CB-08",
       "check_ids": [
-        "D5-02"
+        "D6-03"
       ],
-      "dimension": "D5"
+      "dimension": "D6"
     },
     {
       "source": "common-baseline:CB-09",
@@ -720,7 +762,13 @@
       "check_ids": [
         "D2-03"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "core_levels",
+          "checkpoint_id": "D2-03"
+        }
+      ]
     },
     {
       "source": "gdd:LEVEL-02b",
@@ -818,7 +866,13 @@
       "check_ids": [
         "D3-05"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "core_levels",
+          "checkpoint_id": "D3-05"
+        }
+      ]
     },
     {
       "source": "gdd:RULE-05b",
@@ -1026,16 +1080,22 @@
     {
       "source": "common-baseline:CB-05",
       "check_ids": [
-        "D5-03"
+        "D6-04"
       ],
-      "dimension": "D5"
+      "dimension": "D6"
     },
     {
       "source": "gdd:LEVEL-03a",
       "check_ids": [
         "D2-04"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "core_levels",
+          "checkpoint_id": "D2-04"
+        }
+      ]
     },
     {
       "source": "gdd:LEVEL-03b",
@@ -1168,7 +1228,13 @@
       "check_ids": [
         "D3-06"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "core_levels",
+          "checkpoint_id": "D3-06"
+        }
+      ]
     },
     {
       "source": "gdd:RULE-08b",
@@ -1294,7 +1360,13 @@
       "check_ids": [
         "D3-07"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "core_levels",
+          "checkpoint_id": "D3-07"
+        }
+      ]
     },
     {
       "source": "gdd:RULE-10b",
@@ -1406,7 +1478,13 @@
       "check_ids": [
         "D4-01"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "core_levels",
+          "checkpoint_id": "D4-01"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-02",
@@ -1420,7 +1498,13 @@
       "check_ids": [
         "D2-05"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "boss_and_level6_success",
+          "checkpoint_id": "D2-05"
+        }
+      ]
     },
     {
       "source": "gdd:LEVEL-04b",
@@ -1441,7 +1525,13 @@
       "check_ids": [
         "D2-06"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "boss_and_level6_success",
+          "checkpoint_id": "D2-06"
+        }
+      ]
     },
     {
       "source": "gdd:LEVEL-04e",
@@ -1553,7 +1643,13 @@
       "check_ids": [
         "D3-08"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "boss_and_level6_success",
+          "checkpoint_id": "D3-08"
+        }
+      ]
     },
     {
       "source": "gdd:RULE-11c",
@@ -1763,7 +1859,13 @@
       "check_ids": [
         "D3-09"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "boss_and_level6_success",
+          "checkpoint_id": "D3-09"
+        }
+      ]
     },
     {
       "source": "gdd:RULE-12b",
@@ -2008,7 +2110,13 @@
       "check_ids": [
         "D2-07"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "boss_and_level6_success",
+          "checkpoint_id": "D2-07"
+        }
+      ]
     },
     {
       "source": "gdd:LEVEL-06b",
@@ -2120,28 +2228,52 @@
       "check_ids": [
         "D2-09"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "boss_and_level6_success",
+          "checkpoint_id": "D2-09"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-11",
       "check_ids": [
         "D4-02"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "boss_and_level6_success",
+          "checkpoint_id": "D4-02"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-12",
       "check_ids": [
         "D5-05"
       ],
-      "dimension": "D5"
+      "dimension": "D5",
+      "observations": [
+        {
+          "trajectory": "boss_and_level6_success",
+          "checkpoint_id": "D5-05"
+        }
+      ]
     },
     {
       "source": "gdd:RULE-14a",
       "check_ids": [
         "D3-10"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "failure_and_retry",
+          "checkpoint_id": "D3-10"
+        }
+      ]
     },
     {
       "source": "gdd:RULE-14b",
@@ -2246,28 +2378,52 @@
       "check_ids": [
         "D4-03"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "failure_and_retry",
+          "checkpoint_id": "D4-03"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-14",
       "check_ids": [
         "D4-04"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "failure_and_retry",
+          "checkpoint_id": "D4-04"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-06",
       "check_ids": [
         "D5-04"
       ],
-      "dimension": "D5"
+      "dimension": "D5",
+      "observations": [
+        {
+          "trajectory": "failure_and_retry",
+          "checkpoint_id": "D5-04"
+        }
+      ]
     },
     {
       "source": "gdd:ENTRY-05a",
       "check_ids": [
         "D3-01"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "lifecycle",
+          "checkpoint_id": "D3-01"
+        }
+      ]
     },
     {
       "source": "gdd:ENTRY-05b",
@@ -2477,7 +2633,13 @@
       "check_ids": [
         "D4-05"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "lifecycle",
+          "checkpoint_id": "D4-05"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-15",
@@ -2489,541 +2651,541 @@
     {
       "source": "gdd:UI-01a",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-01b",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-02a",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-02b",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-03a",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-03b",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-03c",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-03d",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-03e",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-03f",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-03g",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-03h",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-03i",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-05a",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-05b",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-05c",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-05d",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-05e",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-05f",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-05g",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04a",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04b",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04c",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04d",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04e",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04f",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04g",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04h",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04i",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04j",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04k",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04l",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04m",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04n",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04o",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04p",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04q",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04r",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04s",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04t",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04u",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04v",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04w",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-04x",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-06a",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-06b",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-06c",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-06d",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-06e",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-06f",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-06g",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-07a",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-07b",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-07c",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-07d",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-08a",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-08b",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:UI-08c",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-01a",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-01b",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-02a",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-02b",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-02c",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-02d",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-03a",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-03b",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-03c",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-04a",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-04b",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-04c",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-05a",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-05b",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-05c",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-06a",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-06b",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-07a",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-07b",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-08a",
@@ -3091,9 +3253,9 @@
     {
       "source": "gdd:ASSET-08j",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-08k",
@@ -3105,9 +3267,9 @@
     {
       "source": "gdd:ASSET-09a",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-09b",

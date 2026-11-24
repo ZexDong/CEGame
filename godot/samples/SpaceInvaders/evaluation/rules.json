@@ -89,7 +89,7 @@
         "common-baseline:CB-07"
       ],
       "description": "Review the complete public requirement common-baseline:CB-07",
-      "max_score": 0.588235
+      "max_score": 0.714286
     },
     {
       "id": "entry_005",
@@ -98,7 +98,7 @@
         "common-baseline:CB-08"
       ],
       "description": "Review the complete public requirement common-baseline:CB-08",
-      "max_score": 0.588235
+      "max_score": 0.714286
     },
     {
       "id": "entry_006",
@@ -278,7 +278,7 @@
         "common-baseline:CB-05"
       ],
       "description": "Review the complete public requirement common-baseline:CB-05",
-      "max_score": 0.588235
+      "max_score": 0.714286
     },
     {
       "id": "core_020",
@@ -296,7 +296,7 @@
         "common-baseline:CB-09"
       ],
       "description": "Review the complete public requirement common-baseline:CB-09",
-      "max_score": 0.588235
+      "max_score": 0.714286
     },
     {
       "id": "success_001",
@@ -323,7 +323,7 @@
         "gdd:HUD-01"
       ],
       "description": "Any active level is visible | Show current score, remaining lives, current level, and remaining invaders; update each value with the actual state | Display negative lives, stale score, a different level, or an incorrect remaining count | All four values remain readable at `1280x720`",
-      "max_score": 0.588235
+      "max_score": 0.714286
     },
     {
       "id": "success_004",
@@ -332,7 +332,7 @@
         "gdd:HUD-02"
       ],
       "description": "Pause, Game Over, or Mission Complete appears | Keep the result/pause feedback visible and do not let the underlying HUD be mistaken for active play | Hide the reason for the stopped state or let HUD values continue changing | The overlay and HUD are distinguishable",
-      "max_score": 0.588235
+      "max_score": 0.714286
     },
     {
       "id": "success_005",
@@ -341,7 +341,7 @@
         "gdd:HUD-03"
       ],
       "description": "A new game starts | Reset/report level `1` and remaining-invader value `40` immediately | Show a prior count or imply that a later level exists | The HUD matches the visible formation from the first frame",
-      "max_score": 0.588235
+      "max_score": 0.714286
     },
     {
       "id": "success_006",
@@ -350,25 +350,7 @@
         "gdd:VISUAL-01"
       ],
       "description": "Supplied images/audio are available | Use recognizable cannon, invader, projectile, barrier, and background identities from the supplied material | Replace a required identity with an unrelated sprite or leave a missing-resource checkerboard | The battlefield reads as a coherent fixed shooter",
-      "max_score": 0.588235
-    },
-    {
-      "id": "success_007",
-      "dimension": "D5",
-      "requirement_ids": [
-        "gdd:VISUAL-02"
-      ],
-      "description": "Player and enemy projectiles are on screen | Make their direction/identity visually distinct | Use the same ambiguous marker for both sides | The player can tell incoming danger from their own shot",
-      "max_score": 0.588235
-    },
-    {
-      "id": "success_008",
-      "dimension": "D5",
-      "requirement_ids": [
-        "gdd:VISUAL-03"
-      ],
-      "description": "Normal play is observed | Keep sprites and text aligned, readable, and inside the `1280x720` viewport | Stretch, crop, or cover required HUD/controls | No broken or unreadable required element",
-      "max_score": 0.588235
+      "max_score": 0.714286
     },
     {
       "id": "success_009",
@@ -377,7 +359,7 @@
         "gdd:QUALITY-01"
       ],
       "description": "Launch and play | Remain responsive and stable through the single level, hit/reset paths, pause, Restart, and Reopen | Freeze, crash, hang, or dead-end the main flow | Every required state remains reachable",
-      "max_score": 0.588235
+      "max_score": 0.714286
     },
     {
       "id": "success_010",
@@ -386,7 +368,7 @@
         "gdd:QUALITY-02"
       ],
       "description": "Play with ordinary keyboard/mouse input | Reach every required action through visible controls or documented keys | Require hidden keyboard combinations, internal calls, or debug controls | Inputs produce immediate visible feedback",
-      "max_score": 0.588235
+      "max_score": 0.714286
     },
     {
       "id": "success_011",
@@ -395,7 +377,7 @@
         "gdd:QUALITY-03"
       ],
       "description": "Game Over or Mission Complete is visible | Stop gameplay actions; only Retry/Restart and close controls remain effective | Let movement, enemy fire, scoring, or collisions continue behind the result | The terminal state is stable",
-      "max_score": 0.588235
+      "max_score": 0.714286
     },
     {
       "id": "success_012",
@@ -413,7 +395,7 @@
         "common-baseline:CB-10"
       ],
       "description": "Review the complete public requirement common-baseline:CB-10",
-      "max_score": 0.588235
+      "max_score": 0.714286
     },
     {
       "id": "success_014",
@@ -431,16 +413,7 @@
         "common-baseline:CB-16"
       ],
       "description": "Review the complete public requirement common-baseline:CB-16",
-      "max_score": 0.588235
-    },
-    {
-      "id": "success_016",
-      "dimension": "D5",
-      "requirement_ids": [
-        "common-baseline:CB-17"
-      ],
-      "description": "Review the complete public requirement common-baseline:CB-17",
-      "max_score": 0.588235
+      "max_score": 0.714286
     },
     {
       "id": "success_017",
@@ -449,7 +422,7 @@
         "common-baseline:CB-18"
       ],
       "description": "Review the complete public requirement common-baseline:CB-18",
-      "max_score": 0.58824
+      "max_score": 0.714282
     },
     {
       "id": "failure_001",
@@ -545,7 +518,8 @@
       "id": "D6-02",
       "dimension": "D6",
       "requirement_ids": [
-        "visual:objects"
+        "visual:objects",
+        "gdd:VISUAL-02"
       ],
       "description": "Required objects, character and asset identity",
       "max_score": 2.0
@@ -554,7 +528,8 @@
       "id": "D6-03",
       "dimension": "D6",
       "requirement_ids": [
-        "visual:ui"
+        "visual:ui",
+        "gdd:VISUAL-03"
       ],
       "description": "UI readability and information hierarchy",
       "max_score": 2.0
@@ -572,7 +547,8 @@
       "id": "D6-05",
       "dimension": "D6",
       "requirement_ids": [
-        "visual:consistency"
+        "visual:consistency",
+        "common-baseline:CB-17"
       ],
       "description": "Visual consistency across gameplay and result states",
       "max_score": 2.0

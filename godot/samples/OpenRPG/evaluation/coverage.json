@@ -41,7 +41,13 @@
       "check_ids": [
         "entry_001"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "entry",
+          "checkpoint_id": "entry_001"
+        }
+      ]
     },
     {
       "source": "gdd:START-02",
@@ -104,7 +110,13 @@
       "check_ids": [
         "entry_010"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "entry",
+          "checkpoint_id": "entry_010"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-07",
@@ -424,9 +436,9 @@
     {
       "source": "gdd:ART-01",
       "check_ids": [
-        "success_006"
+        "D6-02"
       ],
-      "dimension": "D5"
+      "dimension": "D6"
     },
     {
       "source": "common-baseline:CB-02",

@@ -48,7 +48,13 @@
       "check_ids": [
         "entry_002"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "entry",
+          "checkpoint_id": "entry_002"
+        }
+      ]
     },
     {
       "source": "gdd:MAP-01",
@@ -62,7 +68,13 @@
       "check_ids": [
         "entry_004"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "entry",
+          "checkpoint_id": "entry_004"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-07",
@@ -368,37 +380,37 @@
     {
       "source": "gdd:VISUAL-01",
       "check_ids": [
-        "success_007"
+        "D6-01"
       ],
-      "dimension": "D5"
+      "dimension": "D6"
     },
     {
       "source": "gdd:VISUAL-02",
       "check_ids": [
-        "success_008"
+        "D6-04"
       ],
-      "dimension": "D5"
+      "dimension": "D6"
     },
     {
       "source": "gdd:VISUAL-03",
       "check_ids": [
-        "success_009"
+        "D6-02"
       ],
-      "dimension": "D5"
+      "dimension": "D6"
     },
     {
       "source": "gdd:VISUAL-04",
       "check_ids": [
-        "success_010"
+        "D6-02"
       ],
-      "dimension": "D5"
+      "dimension": "D6"
     },
     {
       "source": "gdd:VISUAL-05",
       "check_ids": [
-        "success_011"
+        "D6-04"
       ],
-      "dimension": "D5"
+      "dimension": "D6"
     },
     {
       "source": "gdd:QUALITY-01",

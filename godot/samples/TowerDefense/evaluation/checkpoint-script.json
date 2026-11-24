@@ -63,14 +63,6 @@
         },
         {
           "check": {
-            "id": "D2-10",
-            "source": "gdd:ASSET-01",
-            "dim": "D2",
-            "assert": "Menu, map, four towers, four Dino types, and procedural projectiles/durability UI use the correct asset identities"
-          }
-        },
-        {
-          "check": {
             "id": "D5-ENTRY",
             "source": "common-baseline:CB-07",
             "dim": "D5",
@@ -513,14 +505,6 @@
             "source": "gdd:SUCCESS-01",
             "dim": "D4",
             "assert": "A normal public strategy reaches one Map Complete after Wave 10 and the boss are fully resolved"
-          }
-        },
-        {
-          "check": {
-            "id": "D5-COMBAT",
-            "source": "gdd:ASSET-05",
-            "dim": "D5",
-            "assert": "Tower attacks, Dino projectiles, tower health bars, HP text, and Repair feedback are visible and synchronized"
           }
         },
         {

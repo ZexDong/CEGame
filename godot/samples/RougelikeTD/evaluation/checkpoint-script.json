@@ -43,6 +43,97 @@
           "do": "capture"
         }
       ]
+    },
+    {
+      "id": "entry",
+      "title": "Menu, initial resources and wave setup",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == menu",
+          "timeout_s": 15,
+          "check": {
+            "id": "entry_004",
+            "source": "common-baseline:CB-01",
+            "dim": "D4",
+            "condition": "phase == menu",
+            "scoring": "automatic"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.gold == 100",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_003",
+            "condition": "slots.gold == 100"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.base_hp == 20",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_001",
+            "condition": "slots.base_hp == 20"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.total_waves == 12",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_005",
+            "condition": "slots.total_waves == 12"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.relics_owned == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_006",
+            "condition": "slots.relics_owned == 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.wave == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_007",
+            "condition": "slots.wave == 0"
+          }
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "play_button"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 15,
+          "check": {
+            "id": "entry_002",
+            "source": "gdd:ENTRY-02",
+            "dim": "D2",
+            "condition": "phase == playing",
+            "scoring": "prerequisite"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
     }
   ]
 }

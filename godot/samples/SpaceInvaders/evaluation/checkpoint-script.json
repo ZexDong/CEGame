@@ -37,6 +37,1266 @@
           "do": "capture"
         }
       ]
+    },
+    {
+      "id": "entry",
+      "title": "Initial shooter state",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 15,
+          "check": {
+            "id": "entry_003",
+            "source": "common-baseline:CB-01",
+            "dim": "D4",
+            "condition": "phase == playing",
+            "scoring": "automatic"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.level == 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_002",
+            "condition": "slots.level == 1"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.score == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_001",
+            "condition": "slots.score == 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.lives == 3",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_004",
+            "condition": "slots.lives == 3"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.invaders_remaining == 40",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_005",
+            "condition": "slots.invaders_remaining == 40"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_006",
+            "condition": "slots.player_projectiles == 0"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "core",
+      "title": "Movement, fire and pause",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 15,
+          "check": {
+            "id": "core_003",
+            "source": "gdd:FORMATION-01",
+            "dim": "D3",
+            "condition": "slots.invaders_remaining == 40",
+            "scoring": "prerequisite"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.enemy_projectiles > 0",
+          "timeout_s": 14,
+          "check": {
+            "id": "core_004",
+            "condition": "slots.enemy_projectiles > 0"
+          }
+        },
+        {
+          "do": "hold",
+          "key": "A",
+          "seconds": 0.4,
+          "check": {
+            "id": "core_001",
+            "condition": "entities.player.x < 640"
+          }
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "check": {
+            "id": "core_002",
+            "source": "gdd:PLAYER-02",
+            "dim": "D3",
+            "condition": "slots.player_projectiles == 1"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "core_005",
+            "condition": "slots.player_projectiles == 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "entities.invader.count > 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "core_010",
+            "condition": "entities.invader.count > 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.invaders_remaining > 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "core_011",
+            "condition": "slots.invaders_remaining > 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "core_012",
+            "condition": "slots.player_projectiles == 0"
+          }
+        },
+        {
+          "do": "press",
+          "key": "ESCAPE",
+          "check": {
+            "id": "core_016",
+            "source": "gdd:PAUSE-01",
+            "dim": "D3",
+            "condition": "phase == paused",
+            "scoring": "prerequisite"
+          },
+          "skip_if": "phase != playing"
+        },
+        {
+          "do": "press",
+          "key": "ESCAPE",
+          "check": {
+            "id": "core_017",
+            "source": "gdd:PAUSE-02",
+            "dim": "D3",
+            "condition": "phase == playing",
+            "scoring": "prerequisite"
+          },
+          "skip_if": "phase != paused"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "check": {
+            "id": "core_018",
+            "condition": "slots.player_projectiles == 1"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "entities.player_projectile.count >= 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "core_019",
+            "source": "common-baseline:CB-05",
+            "dim": "D5",
+            "condition": "entities.player_projectile.count >= 1"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.score > 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "core_021",
+            "condition": "slots.score > 0"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "success",
+      "title": "Aim and fire at the invader formation",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 15
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "move_toward",
+          "target": {
+            "kind": "invader",
+            "state": "active"
+          },
+          "timeout_s": 5,
+          "axis": "x",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "press",
+          "key": "W",
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.player_projectiles == 0",
+          "timeout_s": 3,
+          "skip_if": "phase == won"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == won",
+          "timeout_s": 60,
+          "check": {
+            "id": "success_001",
+            "source": "gdd:LEVEL-01",
+            "dim": "D4",
+            "condition": "phase == won"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == won",
+          "timeout_s": 5,
+          "check": {
+            "id": "success_002",
+            "condition": "phase == won"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == won",
+          "timeout_s": 5,
+          "check": {
+            "id": "success_003",
+            "condition": "phase == won"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == won",
+          "timeout_s": 5,
+          "check": {
+            "id": "success_004",
+            "condition": "phase == won"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == won",
+          "timeout_s": 5,
+          "check": {
+            "id": "success_005",
+            "condition": "phase == won"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == won",
+          "timeout_s": 5,
+          "check": {
+            "id": "success_012",
+            "condition": "phase == won"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == won",
+          "timeout_s": 5,
+          "check": {
+            "id": "success_013",
+            "condition": "phase == won"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == won",
+          "timeout_s": 5,
+          "check": {
+            "id": "success_014",
+            "source": "common-baseline:CB-11",
+            "dim": "D4",
+            "condition": "phase == won"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.invaders_remaining == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "success_017",
+            "condition": "slots.invaders_remaining == 0"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "failure",
+      "title": "Defeat and restart",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == lost",
+          "timeout_s": 150,
+          "check": {
+            "id": "failure_002",
+            "condition": "phase == lost"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == lost",
+          "timeout_s": 5
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "click",
+          "target": {
+            "kind": "restart_button"
+          },
+          "check": {
+            "id": "failure_001",
+            "source": "common-baseline:CB-12",
+            "dim": "D4",
+            "condition": "phase == playing"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.invaders_remaining == 40",
+          "timeout_s": 5,
+          "check": {
+            "id": "failure_003",
+            "source": "gdd:RESTART-01",
+            "dim": "D4",
+            "condition": "slots.invaders_remaining == 40"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
+    },
+    {
+      "id": "lifecycle",
+      "title": "Reopen into a fresh run",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 15,
+          "check": {
+            "id": "lifecycle_005",
+            "condition": "phase == playing"
+          }
+        },
+        {
+          "do": "reopen",
+          "check": {
+            "id": "lifecycle_006",
+            "condition": "phase == playing"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.lives == 3",
+          "timeout_s": 5,
+          "check": {
+            "id": "lifecycle_007",
+            "condition": "slots.lives == 3"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
     }
   ]
 }

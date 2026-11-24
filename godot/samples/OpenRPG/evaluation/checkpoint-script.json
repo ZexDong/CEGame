@@ -67,6 +67,129 @@
           "do": "capture"
         }
       ]
+    },
+    {
+      "id": "entry",
+      "title": "Opening dialogue and return to exploration",
+      "clean_start": "fresh_process",
+      "steps": [
+        {
+          "do": "start"
+        },
+        {
+          "do": "capture"
+        },
+        {
+          "do": "wait_until",
+          "cond": "phase == playing",
+          "timeout_s": 15,
+          "check": {
+            "id": "entry_010",
+            "source": "common-baseline:CB-01",
+            "dim": "D4",
+            "condition": "phase == playing",
+            "scoring": "automatic"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.dialogue_open == 1",
+          "timeout_s": 15,
+          "check": {
+            "id": "entry_001",
+            "source": "gdd:START-01",
+            "dim": "D2",
+            "condition": "slots.dialogue_open == 1",
+            "scoring": "prerequisite"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.opening_line == 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_002",
+            "condition": "slots.opening_line == 1"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.coins == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_012",
+            "condition": "slots.coins == 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.region == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_013",
+            "condition": "slots.region == 0"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.opening_complete == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_014",
+            "condition": "slots.opening_complete == 0"
+          }
+        },
+        {
+          "do": "press",
+          "key": "ENTER"
+        },
+        {
+          "do": "press",
+          "key": "ENTER"
+        },
+        {
+          "do": "press",
+          "key": "ENTER"
+        },
+        {
+          "do": "press",
+          "key": "ENTER"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.opening_line == 5",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_003",
+            "condition": "slots.opening_line == 5"
+          }
+        },
+        {
+          "do": "press",
+          "key": "ENTER"
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.opening_complete == 1",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_004",
+            "condition": "slots.opening_complete == 1"
+          }
+        },
+        {
+          "do": "wait_until",
+          "cond": "slots.dialogue_open == 0",
+          "timeout_s": 5,
+          "check": {
+            "id": "entry_005",
+            "condition": "slots.dialogue_open == 0"
+          }
+        },
+        {
+          "do": "capture"
+        }
+      ]
     }
   ]
 }

@@ -161,7 +161,7 @@
         "common-baseline:CB-07"
       ],
       "description": "Review the complete public requirement common-baseline:CB-07",
-      "max_score": 0.454545
+      "max_score": 0.555556
     },
     {
       "id": "entry_013",
@@ -170,7 +170,7 @@
         "common-baseline:CB-08"
       ],
       "description": "Review the complete public requirement common-baseline:CB-08",
-      "max_score": 0.454545
+      "max_score": 0.555556
     },
     {
       "id": "entry_014",
@@ -359,7 +359,7 @@
         "common-baseline:CB-05"
       ],
       "description": "Review the complete public requirement common-baseline:CB-05",
-      "max_score": 0.454545
+      "max_score": 0.555556
     },
     {
       "id": "core_021",
@@ -377,7 +377,7 @@
         "common-baseline:CB-09"
       ],
       "description": "Review the complete public requirement common-baseline:CB-09",
-      "max_score": 0.454545
+      "max_score": 0.555556
     },
     {
       "id": "success_001",
@@ -440,7 +440,7 @@
         "gdd:TROPHY-01"
       ],
       "description": "Open Trophies | Show completed levels/15, total stars/45, best distance, owned cars/6, gems, and lifetime cash | Display stale or invented values | Summary matches saved profile",
-      "max_score": 0.454545
+      "max_score": 0.555556
     },
     {
       "id": "success_008",
@@ -449,7 +449,7 @@
         "gdd:TROPHY-02"
       ],
       "description": "Achievement conditions | Unlock First Sale at 1 completed level, Big Spender at 2 owned cars, Full Garage at 6 owned cars, Star Collector at 10 total best stars, Long Hauler at 250 metres best distance, Combo Master at x7 maximum combo, Gem Hunter at 15 lifetime gems, and The Legend at 15 distinct completed levels; show one notification per newly unlocked achievement | Unlock twice, lose unlocked state, or use another threshold | Trophies list and toast update",
-      "max_score": 0.454545
+      "max_score": 0.555556
     },
     {
       "id": "success_009",
@@ -458,7 +458,7 @@
         "gdd:TROPHY-03"
       ],
       "description": "Return from Trophies | Preserve unlocked achievements and return to Main Menu | Reset progress | Menu appears with profile unchanged",
-      "max_score": 0.454545
+      "max_score": 0.555556
     },
     {
       "id": "success_010",
@@ -467,7 +467,7 @@
         "gdd:HUD-01"
       ],
       "description": "Story level active | Show run cash, combo when above x1, current level/15, and active shield/magnet state | Show stale or conflicting values | Values update with the true state",
-      "max_score": 0.454545
+      "max_score": 0.555556
     },
     {
       "id": "success_011",
@@ -476,7 +476,7 @@
         "gdd:HUD-02"
       ],
       "description": "Endless or Hill Climb active | Show current distance and best distance | Show level/15 or omit distance | Distance updates continuously",
-      "max_score": 0.454545
+      "max_score": 0.555556
     },
     {
       "id": "success_012",
@@ -485,7 +485,7 @@
         "gdd:HUD-03"
       ],
       "description": "Left-click Pause/Resume | Story levels | Pause or resume",
-      "max_score": 0.454545
+      "max_score": 0.555556
     },
     {
       "id": "success_013",
@@ -494,43 +494,7 @@
         "gdd:HUD-04"
       ],
       "description": "Left-click visible result controls | Results | Next Level, Retry, or Main Menu",
-      "max_score": 0.454545
-    },
-    {
-      "id": "success_014",
-      "dimension": "D5",
-      "requirement_ids": [
-        "gdd:VISUAL-01"
-      ],
-      "description": "Story level visible | Use runtime-drawn or independently cleared terrain, car, hazards, and scenery with readable contrast | Use the upstream logo/audio or missing-resource placeholders | The scene reads as a coherent car platformer",
-      "max_score": 0.454545
-    },
-    {
-      "id": "success_015",
-      "dimension": "D5",
-      "requirement_ids": [
-        "gdd:VISUAL-02"
-      ],
-      "description": "Themes appear across levels | Include day, dusk, night, sunset, dawn, rain and snow atmosphere families across the fifteen levels; the level-to-theme assignment is free | Use one flat undifferentiated background for all levels or let weather obscure gameplay | Level theme changes remain recognizable",
-      "max_score": 0.454545
-    },
-    {
-      "id": "success_016",
-      "dimension": "D5",
-      "requirement_ids": [
-        "gdd:VISUAL-03"
-      ],
-      "description": "Car, coin, gem, cone, enemy, boost, spring, shield, magnet, and goal appear | Make each gameplay role visually distinct from the others | Reuse one indistinguishable marker for multiple roles | Players can identify object roles and feedback",
-      "max_score": 0.454545
-    },
-    {
-      "id": "success_017",
-      "dimension": "D5",
-      "requirement_ids": [
-        "gdd:VISUAL-04"
-      ],
-      "description": "Any screen is open | Keep menu text, HUD, and result controls readable and inside `1280x720` | Crop, hide, or cover required controls | No broken text/layout at the fixed viewport",
-      "max_score": 0.454545
+      "max_score": 0.555556
     },
     {
       "id": "success_018",
@@ -539,7 +503,7 @@
         "gdd:QUALITY-01"
       ],
       "description": "Use the complete profile lifecycle | Remain stable across all modes, purchase/settings paths, results, restart, and Reopen | Crash, freeze, dead-end, or corrupt profile | All required screens remain reachable",
-      "max_score": 0.454545
+      "max_score": 0.555556
     },
     {
       "id": "success_019",
@@ -548,7 +512,7 @@
         "gdd:QUALITY-02"
       ],
       "description": "Use normal keyboard/mouse input | Reach every required control through visible UI or documented keys | Require hidden keys, internal calls, or debug menu | Inputs produce immediate feedback",
-      "max_score": 0.454545
+      "max_score": 0.555556
     },
     {
       "id": "success_020",
@@ -557,7 +521,7 @@
         "gdd:QUALITY-03"
       ],
       "description": "A result/pause panel is visible | Stop underlying gameplay except documented Retry/Menu/Resume controls | Let the old run continue or respond to unrelated input | State remains stable until the player chooses",
-      "max_score": 0.454545
+      "max_score": 0.555556
     },
     {
       "id": "success_021",
@@ -575,7 +539,7 @@
         "common-baseline:CB-10"
       ],
       "description": "Review the complete public requirement common-baseline:CB-10",
-      "max_score": 0.454545
+      "max_score": 0.555556
     },
     {
       "id": "success_023",
@@ -593,7 +557,7 @@
         "common-baseline:CB-16"
       ],
       "description": "Review the complete public requirement common-baseline:CB-16",
-      "max_score": 0.454545
+      "max_score": 0.555556
     },
     {
       "id": "success_025",
@@ -602,7 +566,7 @@
         "common-baseline:CB-17"
       ],
       "description": "Review the complete public requirement common-baseline:CB-17",
-      "max_score": 0.454545
+      "max_score": 0.555556
     },
     {
       "id": "success_026",
@@ -611,7 +575,7 @@
         "common-baseline:CB-18"
       ],
       "description": "Review the complete public requirement common-baseline:CB-18",
-      "max_score": 0.454555
+      "max_score": 0.555548
     },
     {
       "id": "failure_001",
@@ -806,7 +770,8 @@
       "id": "D6-01",
       "dimension": "D6",
       "requirement_ids": [
-        "visual:composition"
+        "visual:composition",
+        "gdd:VISUAL-01"
       ],
       "description": "Overall composition and task visual identity",
       "max_score": 2.0
@@ -815,7 +780,8 @@
       "id": "D6-02",
       "dimension": "D6",
       "requirement_ids": [
-        "visual:objects"
+        "visual:objects",
+        "gdd:VISUAL-03"
       ],
       "description": "Required objects, character and asset identity",
       "max_score": 2.0
@@ -824,7 +790,8 @@
       "id": "D6-03",
       "dimension": "D6",
       "requirement_ids": [
-        "visual:ui"
+        "visual:ui",
+        "gdd:VISUAL-04"
       ],
       "description": "UI readability and information hierarchy",
       "max_score": 2.0
@@ -842,7 +809,8 @@
       "id": "D6-05",
       "dimension": "D6",
       "requirement_ids": [
-        "visual:consistency"
+        "visual:consistency",
+        "gdd:VISUAL-02"
       ],
       "description": "Visual consistency across gameplay and result states",
       "max_score": 2.0

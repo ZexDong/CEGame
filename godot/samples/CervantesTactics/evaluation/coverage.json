@@ -41,7 +41,13 @@
       "check_ids": [
         "D2-01"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "entry_and_initial",
+          "checkpoint_id": "D2-01"
+        }
+      ]
     },
     {
       "source": "gdd:MENU-02a",
@@ -377,7 +383,13 @@
       "check_ids": [
         "D3-02"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "entry_and_initial",
+          "checkpoint_id": "D3-02"
+        }
+      ]
     },
     {
       "source": "gdd:SAVE-03a",
@@ -573,7 +585,13 @@
       "check_ids": [
         "D2-02"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "entry_and_initial",
+          "checkpoint_id": "D2-02"
+        }
+      ]
     },
     {
       "source": "gdd:SCENE-01j",
@@ -804,7 +822,13 @@
       "check_ids": [
         "D3-01"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "entry_and_initial",
+          "checkpoint_id": "D3-01"
+        }
+      ]
     },
     {
       "source": "gdd:DATA-01b",
@@ -1383,688 +1407,694 @@
     {
       "source": "gdd:LANGUAGE-01a",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:LANGUAGE-01b",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:LANGUAGE-01c",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:LANGUAGE-01d",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:LANGUAGE-01e",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-01a",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-01b",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-01c",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-01d",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-01e",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-01f",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-01g",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-01h",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-01i",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-01j",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-01k",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-01l",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-01m",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-02a",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-02b",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-02c",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-02d",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-02e",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-02f",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-02g",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-02h",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-02i",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-03a",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-03b",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-03c",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-03d",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-03e",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-03f",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-03g",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-03h",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-03i",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-03j",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-03k",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-03l",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-03m",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-04a",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-05a",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-05b",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-05c",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-05d",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-05e",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-06a",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-06b",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-06c",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-06d",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-06e",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:ASSET-06f",
       "check_ids": [
-        "D2-10"
+        "D6-02"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-01b",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-01c",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-01d",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-01e",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-01f",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-01g",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-01h",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-03a",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-03b",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-03c",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-03d",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-04a",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-04b",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-04c",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-04d",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-04e",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-04f",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-04g",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-04h",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-04i",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-02a",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-02b",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-02c",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:HUD-02d",
       "check_ids": [
-        "D2-10"
+        "D6-03"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:PRESENTATION-01a",
       "check_ids": [
-        "D2-10"
+        "D6-01"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:PRESENTATION-01b",
       "check_ids": [
-        "D2-10"
+        "D6-01"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:PRESENTATION-01c",
       "check_ids": [
-        "D2-10"
+        "D6-01"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:PRESENTATION-01d",
       "check_ids": [
-        "D2-10"
+        "D6-01"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:PRESENTATION-02a",
       "check_ids": [
-        "D2-10"
+        "D6-01"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:PRESENTATION-02b",
       "check_ids": [
-        "D2-10"
+        "D6-01"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:PRESENTATION-03a",
       "check_ids": [
-        "D2-10"
+        "D6-01"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:PRESENTATION-03b",
       "check_ids": [
-        "D2-10"
+        "D6-01"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:PRESENTATION-03c",
       "check_ids": [
-        "D2-10"
+        "D6-01"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:FEEDBACK-01b",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:FEEDBACK-01c",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:FEEDBACK-01d",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:FEEDBACK-01e",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:FEEDBACK-02a",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:FEEDBACK-02b",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:FEEDBACK-02c",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:FEEDBACK-02d",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:FEEDBACK-03a",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:FEEDBACK-03b",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:FEEDBACK-03c",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:FEEDBACK-03d",
       "check_ids": [
-        "D2-10"
+        "D6-04"
       ],
-      "dimension": "D2"
+      "dimension": "D6"
     },
     {
       "source": "gdd:INTERACTION-01",
       "check_ids": [
         "D2-03"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "core_and_boundaries",
+          "checkpoint_id": "D2-03"
+        }
+      ]
     },
     {
       "source": "gdd:INTERACTION-01a",
@@ -2225,7 +2255,13 @@
       "check_ids": [
         "D3-03"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "core_and_boundaries",
+          "checkpoint_id": "D3-03"
+        }
+      ]
     },
     {
       "source": "gdd:TURN-01b",
@@ -2351,7 +2387,13 @@
       "check_ids": [
         "D3-04"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "core_and_boundaries",
+          "checkpoint_id": "D3-04"
+        }
+      ]
     },
     {
       "source": "gdd:MOVEMENT-01a",
@@ -2526,7 +2568,13 @@
       "check_ids": [
         "D3-10"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "core_and_boundaries",
+          "checkpoint_id": "D3-10"
+        }
+      ]
     },
     {
       "source": "gdd:PROHIBITION-01b",
@@ -2638,7 +2686,13 @@
       "check_ids": [
         "D2-04"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "core_and_boundaries",
+          "checkpoint_id": "D2-04"
+        }
+      ]
     },
     {
       "source": "gdd:MAGIC-02",
@@ -2778,7 +2832,13 @@
       "check_ids": [
         "D2-05"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "core_and_boundaries",
+          "checkpoint_id": "D2-05"
+        }
+      ]
     },
     {
       "source": "gdd:TRAP-01b",
@@ -2904,7 +2964,13 @@
       "check_ids": [
         "D5-ACTION"
       ],
-      "dimension": "D5"
+      "dimension": "D5",
+      "observations": [
+        {
+          "trajectory": "core_and_boundaries",
+          "checkpoint_id": "D5-ACTION"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-05",
@@ -2918,7 +2984,13 @@
       "check_ids": [
         "D2-06"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "success_and_progression",
+          "checkpoint_id": "D2-06"
+        }
+      ]
     },
     {
       "source": "gdd:ENEMY-01b",
@@ -3072,7 +3144,13 @@
       "check_ids": [
         "D3-05"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "success_and_progression",
+          "checkpoint_id": "D3-05"
+        }
+      ]
     },
     {
       "source": "gdd:DAMAGE-02a",
@@ -3142,7 +3220,13 @@
       "check_ids": [
         "D3-06"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "success_and_progression",
+          "checkpoint_id": "D3-06"
+        }
+      ]
     },
     {
       "source": "gdd:RESOLUTION-01a",
@@ -3317,7 +3401,13 @@
       "check_ids": [
         "D3-07"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "success_and_progression",
+          "checkpoint_id": "D3-07"
+        }
+      ]
     },
     {
       "source": "gdd:OUTCOME-02a",
@@ -3373,7 +3463,13 @@
       "check_ids": [
         "D2-07"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "success_and_progression",
+          "checkpoint_id": "D2-07"
+        }
+      ]
     },
     {
       "source": "gdd:STORY-02",
@@ -3709,7 +3805,13 @@
       "check_ids": [
         "D2-08"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "success_and_progression",
+          "checkpoint_id": "D2-08"
+        }
+      ]
     },
     {
       "source": "gdd:PROGRESSION-02a",
@@ -3807,7 +3909,13 @@
       "check_ids": [
         "D3-08"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "success_and_progression",
+          "checkpoint_id": "D3-08"
+        }
+      ]
     },
     {
       "source": "gdd:XP-01b",
@@ -3877,7 +3985,13 @@
       "check_ids": [
         "D4-SUCCESS"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "success_and_progression",
+          "checkpoint_id": "D4-SUCCESS"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-11",
@@ -3891,35 +4005,65 @@
       "check_ids": [
         "D5-RESULT"
       ],
-      "dimension": "D5"
+      "dimension": "D5",
+      "observations": [
+        {
+          "trajectory": "success_and_progression",
+          "checkpoint_id": "D5-RESULT"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-12",
       "check_ids": [
         "D4-LOSS"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "defeat_and_restart",
+          "checkpoint_id": "D4-LOSS"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-14",
       "check_ids": [
         "D4-FINAL"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "defeat_and_restart",
+          "checkpoint_id": "D4-FINAL"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-13",
       "check_ids": [
         "D4-RESTART"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "defeat_and_restart",
+          "checkpoint_id": "D4-RESTART"
+        }
+      ]
     },
     {
       "source": "gdd:PAUSE-01a",
       "check_ids": [
         "D2-09"
       ],
-      "dimension": "D2"
+      "dimension": "D2",
+      "observations": [
+        {
+          "trajectory": "defeat_and_restart",
+          "checkpoint_id": "D2-09"
+        }
+      ]
     },
     {
       "source": "gdd:PAUSE-01b",
@@ -4199,7 +4343,13 @@
       "check_ids": [
         "D5-ENTRY"
       ],
-      "dimension": "D5"
+      "dimension": "D5",
+      "observations": [
+        {
+          "trajectory": "defeat_and_restart",
+          "checkpoint_id": "D5-ENTRY"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-07",
@@ -4220,7 +4370,13 @@
       "check_ids": [
         "D5-HUD"
       ],
-      "dimension": "D5"
+      "dimension": "D5",
+      "observations": [
+        {
+          "trajectory": "defeat_and_restart",
+          "checkpoint_id": "D5-HUD"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-09",
@@ -4234,7 +4390,13 @@
       "check_ids": [
         "D3-09"
       ],
-      "dimension": "D3"
+      "dimension": "D3",
+      "observations": [
+        {
+          "trajectory": "lifecycle_reopen",
+          "checkpoint_id": "D3-09"
+        }
+      ]
     },
     {
       "source": "gdd:PERSISTENCE-02",
@@ -4297,7 +4459,13 @@
       "check_ids": [
         "D4-REOPEN"
       ],
-      "dimension": "D4"
+      "dimension": "D4",
+      "observations": [
+        {
+          "trajectory": "lifecycle_reopen",
+          "checkpoint_id": "D4-REOPEN"
+        }
+      ]
     },
     {
       "source": "common-baseline:CB-15",
@@ -4311,7 +4479,13 @@
       "check_ids": [
         "D5-READABLE"
       ],
-      "dimension": "D5"
+      "dimension": "D5",
+      "observations": [
+        {
+          "trajectory": "lifecycle_reopen",
+          "checkpoint_id": "D5-READABLE"
+        }
+      ]
     },
     {
       "source": "visual:composition",
