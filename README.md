@@ -1,14 +1,12 @@
 # Game Creation Benchmark
 
-This directory contains 45 tasks across 44 games in five engine packages:
+This repository contains 45 tasks across 44 games in five engine packages:
 Unity (11), Godot (8), Roblox (10), Unreal (8), and Defold (8).
 Noir Hard is an alternate task for the same game.
 
-**Early release:** This repository is an early version. End-to-end workflows for some engines and samples are only partially implemented, and some samples are still under active development and maintenance.
+*Note:* Public packaging and third-party asset license clearance for the remaining benchmark tasks are ongoing; additional tasks and standalone adapter updates will be added as clearance is completed.
 
-Additional game samples for each engine will be released in stages after we verify their licenses and confirm that they comply with applicable open-source policies.
-
-Each engine uses the same outer structure:
+Each engine uses the same outer structure, alongside `omni_interface.py` at the repository root:
 
 ```text
 <engine>/
@@ -34,7 +32,7 @@ dependencies, and the output schema and template.
 Each engine's `template/` contains empty placeholder files; its root README
 explains how to fill them.
 
-See each engine README for candidate evaluation and review commands.
+See each engine README for candidate evaluation commands.
 The D1-D6 maxima are 10/30/20/20/10/10. A complete total requires evidence for all
 six dimensions.
 
