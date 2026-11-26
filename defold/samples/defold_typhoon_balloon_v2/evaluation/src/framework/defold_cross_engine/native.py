@@ -9,9 +9,21 @@ from pathlib import Path
 
 from framework.macos_evaluation.host import binding, load, run_process, write
 
-PACKAGES = Path('/Applications/Defold.app/Contents/Resources/packages')
-JAVA = PACKAGES / 'jdk-25+36/bin/java'
-BOB = PACKAGES / 'defold-f735c12192bf95684e6ae1ae27c400b8170fc6d8.jar'
+def defold_build_tools():
+    packages = os.environ.get("DEFOLD_PACKAGES")
+
+    def tool(variable, pattern):
+        explicit = os.environ.get(variable)
+        if explicit and Path(explicit).is_file():
+            return Path(explicit).resolve()
+        matches = sorted(Path(packages).glob(pattern)) if packages and not explicit else []
+        if len(matches) == 1 and matches[0].is_file():
+            return matches[0].resolve()
+        raise RuntimeError(f"Set {variable} to the installed tool, or select a unique match via DEFOLD_PACKAGES")
+
+    return tool("DEFOLD_JAVA", "jdk*/bin/java"), tool("DEFOLD_BOB_JAR", "defold-*.jar")
+
+
 EXCLUDED = {'build', '.internal', '.git', '.venv', '__pycache__', '.DS_Store', 'game-state.json'}
 
 
@@ -37,7 +49,8 @@ def stage_build(candidate, output, timeout=600):
         raise ValueError('UNDECLARED_NETWORK_DEPENDENCIES')
     work = output/'work/project'
     shutil.copytree(source, work, ignore=shutil.ignore_patterns(*EXCLUDED))
-    command = [JAVA, '-Dcom.google.protobuf.use_unsafe_pre22_gencode=true', '-cp', BOB,
+    java, bob = defold_build_tools()
+    command = [java, '-Dcom.google.protobuf.use_unsafe_pre22_gencode=true', '-cp', bob,
                'com.dynamo.bob.Bob', '--root', work, '--platform', 'arm64-macos',
                '--variant', 'debug', '--archive', 'build', 'bundle']
     receipt = run_process(command, work, output, 'build', timeout)

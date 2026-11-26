@@ -6,8 +6,8 @@ This file is authoritative for task-specific engine, path, entry, and environmen
 
 | Item | Value |
 |---|---|
-| Engine | Unreal Engine 5.6.1 |
-| Platform | Windows x64 |
+| Engine | Unreal Engine |
+| Platform | desktop |
 | Runtime mode | Independent `editor_game` window |
 | Candidate editor target after adding source | `ArenaSliceEditor Win64 Development` |
 | Project root | `starter-project/` |
@@ -17,7 +17,7 @@ This file is authoritative for task-specific engine, path, entry, and environmen
 | Viewport | 1280 x 720 client area, windowed |
 | Application scale | 1.0 |
 | Marketplace plugins | Not supplied and not required |
-| Shell | PowerShell 7 or later |
+| Shell | shell or later |
 
 The release project is Content-only. An implementation may add a source target. Unreal-generated `Binaries/`, `Intermediate/`, `Saved/`, `DerivedDataCache/`, IDE state, logs, and packages are not release inputs.
 
@@ -27,8 +27,8 @@ The release project is Content-only. An implementation may add a source target. 
 |---|---|
 | `<input>` | This public input copy |
 | `<project>` | `<input>/project` |
-| `<engine-root>` | Launcher-selected Unreal Engine 5.6.1 root |
-| `<benchmark-tools-root>` | Launcher-provided root containing `engine/unreal-5.6.1/` |
+| `<engine-root>` | Launcher-selected Unreal Engine root |
+| `<benchmark-tools-root>` | Launcher-provided root containing `engine/unreal-Unreal/` |
 | `<run-root>` | Fresh launcher-owned evidence directory outside `<input>` |
 
 Never replace these placeholders in a committed file with a host absolute path.
@@ -71,8 +71,8 @@ Generated output must remain outside a released input snapshot.
 ## Public runtime entry
 
 ```powershell
-Import-Module "<benchmark-tools-root>/engine/unreal-5.6.1/executor/UnrealEvaluationExecutor.psm1" -Force
-Import-Module "<benchmark-tools-root>/engine/unreal-5.6.1/observer/UnrealEvaluationObserver.psm1" -Force
+Import-Module "<benchmark-tools-root>/engine/unreal-Unreal/executor/UnrealEvaluationExecutor.psm1" -Force
+Import-Module "<benchmark-tools-root>/engine/unreal-Unreal/observer/UnrealEvaluationObserver.psm1" -Force
 ```
 
 Use `Start-UnrealEvaluationSession` with the project file, a fresh run root, an engine-health state path, the selected engine root, and a 1280 x 720 window. Supply these candidate task-state paths:

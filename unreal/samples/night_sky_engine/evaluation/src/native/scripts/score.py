@@ -86,7 +86,7 @@ def score(raw_path,semantic_path,d6_path):
         'observation_source_review_sha256':sha(root/'observation-source-review.json') if (root/'observation-source-review.json').exists() else None,
         'observation_source_validator_sha256':sha(ROOT/'scripts/reviewed_boundaries.py'),
         'reviewer':review.get('reviewer'),
-        'd6_sha256':sha(d6_path),'status':'diagnostic_completed','diagnostic_only':True,'formal_freeze_performed':False,
+        'd6_sha256':sha(d6_path),'rounds':d6['rounds'],'status':'diagnostic_completed','diagnostic_only':True,'formal_freeze_performed':False,
         'dimensions':scores,'functional_total':rounded(sum(scores[d] for d in list(DIMENSIONS)[:5])),
         'overall':rounded(sum(scores.values())),'d6_round_scores':[rounded(m) for m in means],
         'checkpoints':list(actual.values()),'faults':raw['faults'],

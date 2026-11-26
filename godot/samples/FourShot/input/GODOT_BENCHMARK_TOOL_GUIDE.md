@@ -2,8 +2,7 @@
 
 ```text
 catalog_id: godot-common-tool-guide
-catalog_revision: 2026.08.15-godot-4.7.1-windows-executor
-godot_version: 4.7.1.stable.official.a13da4feb
+catalog_revision: 2026.08.15
 executor: GodotWindowsExecutor.ps1
 scope: game-independent Godot and host interfaces
 ```
@@ -14,11 +13,7 @@ scope: game-independent Godot and host interfaces
 
 ## 1. Environment Baseline
 
-- Engine baseline: Godot 4.7.x. The current shared execution capabilities were validated with Godot 4.7.1 on Windows.
-- The GUI executable on the current evaluation machine is fixed at `E:\GameEngine\Godot\Godot_v4.7.1-stable_win64.exe`.
-- The console executable on the current evaluation machine is fixed at `E:\GameEngine\Godot\Godot_v4.7.1-stable_win64_console.exe`.
-- When invoked from WSL, the corresponding paths are `/mnt/e/GameEngine/Godot/Godot_v4.7.1-stable_win64.exe` and `/mnt/e/GameEngine/Godot/Godot_v4.7.1-stable_win64_console.exe`.
-- Use the Godot executables designated above by the task owner; do not change the major version on your own.
+- Select the installed console executable with `GODOT_EXE` and the GUI executable with `GODOT_GUI`.
 - The shared Windows executor can start and stop projects, send keyboard and mouse input to a real game window, save window screenshots, read a project's public read-only JSON state, and archive logs.
 - The shared executor works through Windows window and input APIs. It cannot generally query arbitrary Godot node trees, control bounds, hierarchy, occlusion relationships, or private game state.
 If this document conflicts with a game's public package, the more specific instructions in that game package take precedence.
@@ -42,10 +37,10 @@ This document covers project and tool operation only. It contains no game-specif
 |---|---|---|---|
 | Godot Project Manager | Import or select the public starter project | Import the project's `project.godot` | Project appears in the list and can be opened in the editor |
 | Godot editor | Create scenes, scripts, resources, and input mappings; run and debug manually | Editor UI, F5/F6, F8, Output, Debugger | Actual game window, parse/runtime errors, and manual interaction results |
-| Godot console executable | Query version, perform headless import, collect import logs | `E:\GameEngine\Godot\Godot_v4.7.1-stable_win64_console.exe` | Version string, import exit code, and text log |
-| Godot GUI executable | Start a candidate project through its normal main entry point | `E:\GameEngine\Godot\Godot_v4.7.1-stable_win64.exe --path <PROJECT>` | An interactive, real top-level game window |
+| Godot console executable | Query version, perform headless import, collect import logs | `$env:GODOT_EXE` | Version string, import exit code, and text log |
+| Godot GUI executable | Start a candidate project through its normal main entry point | `$env:GODOT_GUI --path <PROJECT>` | An interactive, real top-level game window |
 | Shared Windows executor | Automated start/stop, keyboard/mouse input, window screenshots, state polling, and reopening | `GodotWindowsExecutor.ps1` | Process, window handle, input results, PNG, state object, and stop result |
-| PowerShell JSON/log tools | Inspect read-only observation state and scan errors | `Get-Content`, `ConvertFrom-Json`, `Select-String` | Structured state and matching error-log lines |
+| shell JSON/log tools | Inspect read-only observation state and scan errors | `Get-Content`, `ConvertFrom-Json`, `Select-String` | Structured state and matching error-log lines |
 
 These tools address different concerns: use the Godot editor for development and manual debugging, the Godot CLI for imports and log inspection, and the shared executor for automating a real window and collecting evidence. Static file inspection cannot replace actually running the game, and state JSON cannot replace the rendered view.
 
@@ -101,7 +96,7 @@ If a specific game's public package explicitly expands or narrows the modificati
 2. wait for the initial resource import to finish;
 3. inspect Output and Debugger, and fix parse, resource-reference, and main-scene errors first.
 
-If Godot Project Manager reports an incompatible project version, do not automatically upgrade the major version. First confirm that you are using the Godot 4.7.x version designated by the task owner.
+If Godot Project Manager reports an incompatible project version, do not automatically upgrade the major version. Select an editor compatible with the starter project.
 
 ### 4.2 Running in the Editor
 
@@ -130,8 +125,8 @@ Input Map only declares input actions. During self-test, still send events throu
 You can also use the same-version Godot executable supplied by the task owner for command-line checks. The following paths can be used directly on the current evaluation machine:
 
 ```powershell
-$godotConsole = 'E:\GameEngine\Godot\Godot_v4.7.1-stable_win64_console.exe'
-$godotGui = 'E:\GameEngine\Godot\Godot_v4.7.1-stable_win64.exe'
+$godotConsole = $env:GODOT_EXE
+$godotGui = $env:GODOT_GUI
 
 & $godotConsole --version
 & $godotConsole --headless --editor --import --path '<PROJECT_DIR>' --log-file '<IMPORT_LOG>'
@@ -140,7 +135,7 @@ $godotGui = 'E:\GameEngine\Godot\Godot_v4.7.1-stable_win64.exe'
 
 These commands respectively confirm the version, perform a headless import, and launch through the project's normal main entry point. A successful headless import proves only that the engine can import the project; it does not prove that gameplay is complete. Runtime inspection must use the GUI executable to produce a real window.
 
-After import or execution, scan for common blocking errors with PowerShell:
+After import or execution, scan for common blocking errors with shell:
 
 ```powershell
 Select-String -Path '<IMPORT_LOG>','<RUN_LOG>' `
@@ -211,7 +206,7 @@ The current unified **environment-capability test entry point** is `GodotWindows
 
 ```powershell
 $executorScript = '.\GodotWindowsExecutor.ps1'
-$godotGui = 'E:\GameEngine\Godot\Godot_v4.7.1-stable_win64.exe'
+$godotGui = $env:GODOT_GUI
 $probeProject = '.\MinimalTestProject'
 $probeEvidence = '.\evidence\local-probe'
 
@@ -227,7 +222,7 @@ On success, inspect `probe-summary.json`, `gui-run-1.log`, `gui-run-2.log`, and 
 
 ### 7.2 Library Entry Point and Tool Table
 
-Load the function library at the beginning of your PowerShell self-test script:
+Load the function library at the beginning of your shell self-test script:
 
 ```powershell
 . '.\GodotWindowsExecutor.ps1' -Mode Library
@@ -249,7 +244,7 @@ The following interfaces can be used directly:
 | `Send-GodotMouseDrag` | Start/end points, steps, interval, button | Throws on failure | Press, move in steps, and release to complete a drag |
 | `Get-GodotWindowHit` | `WindowHandle`, `ClientX/Y` | Screen point, hit handle, whether target is the top-level window | Confirm before clicking that the point still belongs to the game window |
 | `Save-GodotWindowScreenshot` | `WindowHandle`, PNG `Path` | Saved file object | Focus the window and capture its client area |
-| `Get-GodotProbeState` | `StatePath` | PowerShell object converted from JSON | Read the project's public read-only state snapshot |
+| `Get-GodotProbeState` | `StatePath` | shell object converted from JSON | Read the project's public read-only state snapshot |
 | `Wait-GodotProbeState` | State path, property, expected value, timeout | Complete state object when the condition is met | Wait for actual state change instead of using a fixed sleep as the criterion |
 | `Stop-GodotProject` | `Process`, optional `TimeoutMs` | PID, exit code, exited status | Request normal closure, then terminate after timeout |
 
@@ -260,7 +255,7 @@ The following interfaces can be used directly:
 ```powershell
 . '.\GodotWindowsExecutor.ps1' -Mode Library
 
-$godotGui = 'E:\GameEngine\Godot\Godot_v4.7.1-stable_win64.exe'
+$godotGui = $env:GODOT_GUI
 $projectDir = '<PROJECT_DIR>'
 $evidenceDir = '.\self-test-evidence\run-001'
 $logPath = Join-Path $evidenceDir 'godot.log'

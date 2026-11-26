@@ -6,11 +6,11 @@ surfaces, the public tests, and the protected read-only observation API.
 
 ## 1. Fixed environment
 
-- Unity Editor: `6000.0.80f1 (2dfd32957da2)`
-- Unity Editor path: `D:\game\engine\unity\6000.0.80f1\Editor\Unity.exe`
+- Unity Editor: `Unity (2dfd32957da2)`
+- Unity Editor path: `$env:UNITY_EDITOR`
 - Unity CLI: `1.0.0-beta.3`
 - Unity CLI path:
-  `D:\game\engine\shared-tools\unity\cli\1.0.0-beta.3\unity.exe`
+  `$env:UNITY_CLI`
 - Input System: `1.19.0`
 - Test Framework: `1.6.0`
 - URP 2D: `17.0.4`
@@ -113,8 +113,8 @@ before a CLI test and wait for its process and project lock to exit.
 
 ```powershell
 $Project = (Resolve-Path '.').Path
-$Editor = 'D:\game\engine\unity\6000.0.80f1\Editor\Unity.exe'
-$Cli = 'D:\game\engine\shared-tools\unity\cli\1.0.0-beta.3\unity.exe'
+$Editor = $env:UNITY_EDITOR
+$Cli = $env:UNITY_CLI
 $Stamp = [DateTimeOffset]::UtcNow.ToString('yyyyMMdd-HHmmss-fff')
 $SmokeDir = Join-Path $Project 'Logs\PublicSmoke'
 New-Item -ItemType Directory -Force -Path $SmokeDir | Out-Null

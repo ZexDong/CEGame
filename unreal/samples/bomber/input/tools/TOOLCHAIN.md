@@ -4,10 +4,10 @@
 
 | Field | Value |
 |---|---|
-| Engine | Unreal Engine 5.7.4 |
-| Changelist | 51494982 |
+| Engine | Unreal Engine |
+| Changelist | configured-build |
 | Branch | `++UE5+Release-5.7` |
-| Platform | Windows x64 |
+| Platform | desktop |
 | Runtime mode | Unreal Editor with `-game`, 1280x720 window |
 | Project root | `starter-project/` |
 | Project file | `starter-project/BomberStarter.uproject` |
@@ -91,6 +91,6 @@ Static package check:
 pwsh -NoProfile -File tools/Test-PublicInput.ps1 -InputRoot .
 ```
 
-Public runtime smoke is documented in `self-check/PublicSmoke/CONTRACT.md`; it resolves UE 5.7.4 automatically when `-EngineRoot` is omitted and validates starter health only.
+Public runtime smoke is documented in `self-check/PublicSmoke/CONTRACT.md`; it resolves Unreal Engine automatically when `-EngineRoot` is omitted and validates starter health only.
 
 

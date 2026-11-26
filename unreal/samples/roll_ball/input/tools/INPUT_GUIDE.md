@@ -1,6 +1,6 @@
 # RollBall Fixed Maze Public Input
 
-This directory is the complete model-visible starting package for an Unreal Engine 5.7.4 implementation task. It contains an answer-free starter project, a cataloged raw visual mesh and lit-material kit for the board and ball, an immutable fixed 10x10 layout with sixteen fixed trap tiles, player-facing requirements, public engine-tool documentation, a read-only observation contract, notices, and repeatable package checks.
+This directory is the complete model-visible starting package for an Unreal Engine implementation task. It contains an answer-free starter project, a cataloged raw visual mesh and lit-material kit for the board and ball, an immutable fixed 10x10 layout with sixteen fixed trap tiles, player-facing requirements, public engine-tool documentation, a read-only observation contract, notices, and repeatable package checks.
 
 ## Required reading order
 
@@ -50,7 +50,7 @@ Build products, runtime state, captures, receipts, logs, packages, and evaluator
 
 ## Starting point
 
-Open `starter-project/RollBallStarter.uproject` with Unreal Engine 5.7.4. The starter presents a small inert 3D mesh and material display with real lighting and a patterned rotating sphere. It deliberately contains no playable ball, movement, active traps, completion flow, gameplay restart, or game-state provider. Its read-only bridge reports `provider_ready=false` and `game_state=null`.
+Open `starter-project/RollBallStarter.uproject` with Unreal Engine. The starter presents a small inert 3D mesh and material display with real lighting and a patterned rotating sphere. It deliberately contains no playable ball, movement, active traps, completion flow, gameplay restart, or game-state provider. Its read-only bridge reports `provider_ready=false` and `game_state=null`.
 
 The fixed layout and raw meshes are supplied content, not a gameplay solution. The candidate must assemble the collidable playable maze, use the required supplied meshes, and implement every player result in `GDD.md` Section 6.
 
@@ -71,7 +71,7 @@ pwsh -NoProfile -File self-check/PublicSmoke/Invoke-PublicSmoke.ps1 `
   -RunRoot <run-root>
 ```
 
-The smoke script resolves UE 5.7.4 itself when `-EngineRoot` is omitted. Pass `-EngineRoot <engine-root>` for a non-standard installation.
+The smoke script resolves Unreal Engine itself when `-EngineRoot` is omitted. Pass `-EngineRoot <engine-root>` for a non-standard installation.
 
 Public smoke checks package identity, a source build, a stable rendered starter frame, the answer-free bridge, normal stop, a true new-process reopen, and final cleanup. It does not test or certify any gameplay requirement.
 

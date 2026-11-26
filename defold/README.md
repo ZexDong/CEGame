@@ -7,14 +7,12 @@ Give the construction model an independent copy of `input/` only.
 
 ## Requirements
 
-Dynamic evaluation uses an interactive macOS arm64 desktop, Python 3.11+,
-Defold 1.13.0 installed at `/Applications/Defold.app`, bundled JDK 25+36, and
-Xcode Command Line Tools. The recorded Defold revision is
-`f735c12192bf95684e6ae1ae27c400b8170fc6d8`.
-The six checkpoint-runtime tasks additionally use Tesseract 5.5.2 at
-`/opt/homebrew/bin/tesseract` with `eng` and `chi_sim`.
-Grant the executing terminal Accessibility, Input Monitoring and Screen Recording
-permissions. Run one dynamic evaluation per desktop.
+Dynamic evaluation uses an interactive desktop, Python and the native input tools.
+Set `DEFOLD_BOB_JAR` and `DEFOLD_JAVA` to the Bob JAR and Java executable, or set
+`DEFOLD_PACKAGES` to the installed packages directory. Six tasks also require
+Tesseract on PATH (or `TESSERACT_EXE`).
+Grant the executing terminal desktop input and screen capture permissions.
+Run one dynamic evaluation per desktop.
 
 From any sample directory:
 
@@ -55,7 +53,7 @@ comparison scope, judge model/settings, rubric, anchors and aggregation.
 `evaluation/d6/prompt.txt` is the fixed visual prompt.
 Use collected PNGs indexed in `evidence/visual-captures.json` and identity/hash
 data in `evidence/binding.json`. Register one candidate capture for each named
-state, obtain three independent gpt-4o judgments per state, and retain each raw
+state, obtain three independent judgments from the registered model per state, and retain each raw
 provider response in a result-relative receipt JSON. The protocol lists the
 review and response fields. Judge credentials remain outside the distribution.
 No model service is called by the functional collector.
@@ -70,8 +68,8 @@ python3 -B evaluation/validate_score.py --score "/absolute/new-result/score.json
 The visual evaluator rejects changed candidates, references, captures, model
 settings, missing states, duplicate request IDs and missing raw response receipts.
 Each state's D6 leaf uses the median of three five-item totals; D6 averages the
-registered states. A complete final score is the sum of D1-D6, with fixed maxima
-10/30/20/20/10/10. Missing evidence leaves the final score null.
+registered original states. Design-and-asset reviews are supplemental. The total
+uses D1-D5 plus the journey-adjusted D6 credit in `extensions.scorecard`.
 
 ## Tasks
 

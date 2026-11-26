@@ -5,7 +5,6 @@
   "public_contract_status": "authoritative",
   "track": "reconstruction",
   "engine": "Godot",
-  "engine_version": "4.7.1.stable.official.a13da4feb",
   "project_root": "sp",
   "renderer": "gl_compatibility",
   "viewport": [
@@ -38,8 +37,7 @@
   },
   "save_path": "user://openrpg_save.json",
   "contact_sheet": "Assets/asset-contact-sheet.png",
-  
-"legal_notices": [
+  "legal_notices": [
     "legal/LICENSE",
     "legal/CREDITS.md",
     "legal/LICENSES.md",
@@ -52,8 +50,7 @@
   "protected_paths": [
     "*.md",
     "*.json",
-    
-"legal/**",
+    "legal/**",
     "Assets/**",
     "sp/assets/**",
     "sp/battlers/**",
@@ -84,10 +81,8 @@
   "external_path_access_allowed": false,
   "external_packages_required": false,
   "engine_migration_allowed": false,
-  
-"canonical_input": ".",
+  "canonical_input": ".",
   "language": "English",
-  "engine_track_version": "4.7.1",
   "project_file": "sp/project.godot",
   "dashboard_schema": "sp/benchmark/dashboard-snapshot.schema.json",
   "material_mapping": "MaterialMapping-en.md",
@@ -103,9 +98,4 @@
     "*.tmp",
     "*.bak"
   ]
-
-
-
-
-
 }

@@ -7,8 +7,8 @@ Player-facing acceptance is defined by `GDD.md`. This file defines the Relay Fou
 ```text
 Input revision:       v1.1-roblox-tool-catalog-3600s-20260826
 Scaffold limit:       3600 seconds
-Rojo:                 Tools/rojo.exe (7.7.0)
-Luau compiler:        Tools/luau-compile.exe (0.734 track)
+Rojo:                 Tools/rojo.exe (configured version)
+Luau compiler:        Tools/luau-compile.exe (configured version track)
 Starter project:      project/default.project.json
 Authored source:      project/src/**
 Required place:       RelayFoundryCandidate.rbxlx

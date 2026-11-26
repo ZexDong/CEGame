@@ -131,6 +131,75 @@ def dashboard_well_formed(snapshot, required_slots):
             and isinstance(snapshot.get("targets"), list))
 
 
+def journey_observation(report, trajectory, policy, required_slots):
+    if not policy or trajectory["id"] != policy["trajectory"]:
+        return None
+    end = policy["terminal_step"]
+    steps = trajectory["steps"][:end + 1]
+    events = report.get("events", [])[:end + 1]
+    if (len(steps) != end + 1 or len(events) != len(steps) or trajectory.get("clean_start") != "fresh_process"
+            or steps[-1].get("cond") != "phase == won" or report.get("adapter_sha256")
+            or report.get("execution", {}).get("infrastructure_error") or len(report.get("sessions", [])) != 1):
+        return None
+    session = report["sessions"][0]
+    if (session.get("executor") != "godot_engine_input" or not session.get("session_id")
+            or type(session.get("pid")) is not int or session["pid"] <= 0):
+        return None
+    reference_inputs = 0
+    phases = []
+    for index, (step, event) in enumerate(zip(steps, events)):
+        action = step.get("do")
+        expected = {k: v for k, v in step.items() if k != "check"}
+        if (action not in (None, "start", "wait_until", "snapshot", "capture", "click", "drag")
+                or event.get("trajectory") != trajectory["id"] or event.get("step") != index
+                or event.get("session_id") != session["session_id"] or event.get("pid") != session.get("pid")
+                or event.get("route") != "godot_engine_input" or event.get("action") != expected):
+            return None
+        snapshot = event.get("after", {}).get("snapshot", {})
+        if not dashboard_well_formed(snapshot, required_slots):
+            return None
+        phases.append(snapshot["phase"])
+        reference_inputs += action in ("click", "drag")
+    trace = report.get("input_trace", [])
+    if not isinstance(trace, list) or not reference_inputs or phases[0] != "menu":
+        return None
+    attempts = {}
+    held = set()
+    for item in trace:
+        if item.get("type") not in ("mouse_button", "touch"):
+            continue
+        index = item.get("step")
+        if type(index) is not int or index < 0:
+            return None
+        if index > end:
+            continue
+        if steps[index].get("do") not in ("click", "drag"):
+            return None
+        pressed = item.get("pressed")
+        if type(pressed) is not bool or pressed == (index in held):
+            return None
+        if pressed:
+            held.add(index)
+            attempts[index] = attempts.get(index, 0) + 1
+        else:
+            held.remove(index)
+    if held or any(e.get("status") == "ok" and e["action"].get("do") in ("click", "drag")
+                   and i not in attempts for i, e in enumerate(events)):
+        return None
+    if sum(attempts.values()) > 2 * reference_inputs:
+        return 0
+    if "playing" not in phases or not attempts:
+        return None
+    if any(e.get("status") != "ok" for e in events):
+        # A witnessed loss or a failed authored wait is a candidate result.
+        return 0 if "lost" in phases or any(e.get("error_class") == "condition_not_met" for e in events) else None
+    if phases[-1] != "won":
+        return None
+    slots = events[-1]["after"]["snapshot"]["slots"]
+    return int(all(slots.get(k) == v for k, v in policy["terminal_slots"].items())
+               and slots[policy["positive_slot"]] > 0)
+
+
 def condition_outcomes(events, authored, required_slots):
     for index, event in enumerate(events):
         check = authored.get((event.get("trajectory"), event.get("step")))
@@ -189,7 +258,8 @@ def collect(evaluation, meta, args, output):
     completed_reports = set()
     script_path = evaluation / "checkpoint-script.json"
     script_hash = digest(script_path)
-    trajectories = load(script_path)["trajectories"]
+    script = load(script_path)
+    trajectories = script["trajectories"]
     if args.trajectory:
         trajectories = [t for t in trajectories if t["id"] == args.trajectory]
         if not trajectories:
@@ -242,6 +312,7 @@ def collect(evaluation, meta, args, output):
 
     transcripts = []
     condition_scores = {}
+    outcome_observations = {}
     for rel in reports:
         value = load(output / rel)
         if isinstance(value, dict):
@@ -249,6 +320,12 @@ def collect(evaluation, meta, args, output):
             transcripts.extend(value.get("observations", []))
             transcripts.extend({"state": e.get("after", {})} for e in events)
             if rel in completed_reports and value.get("script_sha256") == script_hash:
+                policy = script.get("journey")
+                if policy and not args.interactive_seconds:
+                    route = next((t for t in trajectories if t["id"] == policy["trajectory"]), None)
+                    flag = journey_observation(value, route, policy, required_slots) if route else None
+                    if flag is not None:
+                        outcome_observations["journey"] = {"value": flag, "evidence": [rel]}
                 for check, passed, index in condition_outcomes(events, authored, required_slots):
                     condition_scores[check["id"]] = (passed, f"{rel}#/events/{index}")
     snapshots = [v.get("state", {}).get("snapshot", {}) for v in transcripts]
@@ -256,9 +333,9 @@ def collect(evaluation, meta, args, output):
     well_formed = any(dashboard_well_formed(s, required_slots) for s in snapshots)
     images = sorted(p.relative_to(output).as_posix() for p in native.glob("*.png"))
     write(evidence / "runtime-summary.json", {
+        "outcome_observations": outcome_observations,
         "reports": reports, "snapshots": len(snapshots), "images": images,
         "dashboard_well_formed": well_formed,
-        "engine_version": (native / version["stdout"]).read_text(encoding="utf-8", errors="replace").strip(),
         "engine_error": _engine_errors(native, receipts),
         "processes": receipts, "headless": args.headless})
     d1_ok = [
@@ -285,24 +362,12 @@ def collect(evaluation, meta, args, output):
         else:
             checks.append(check_row(definition, "inconclusive_evaluator", None,
                                     ["evidence/runtime-summary.json"],
-                                    "Review the requirement using collected evidence"))
+                                    "Checkpoint condition not observed during collection"))
     write(evidence / "initial-checks.json", checks)
-    write(output / "review-template.json", {
-        "protocol": "godot-evidence-review/v1", "sample_id": meta["sample_id"],
-        "run_id": run_id(output), "bundle_hash": digest(evidence / "bindings.json"),
-        "collection_hash": None, "reviewer": "",
-        "checks": [{"id": r["id"], "verdict": None, "reason": "",
-                    "requirements": [{"id": k, "verdict": None, "evidence": [], "reason": ""}
-                                     for k in r["requirement_ids"]]}
-                   for r in checks if r["score"] is None],
-    })
     # Seal only observed evidence, excluding mutable review and score documents.
     seal = {p.relative_to(output).as_posix(): digest(p) for p in evidence.rglob("*") if p.is_file()}
     write(evidence / "collection-manifest.json", seal)
-    template = load(output / "review-template.json")
-    template["collection_hash"] = digest(evidence / "collection-manifest.json")
-    write(output / "review-template.json", template)
-    return summarize(meta, run_id(output), checks, "Collection finished; complete the evidence review")
+    return summarize(meta, run_id(output), checks, "Collection finished with unresolved checkpoints")
 
 
 def finalize(evaluation, meta, args, output):
@@ -317,7 +382,8 @@ def finalize(evaluation, meta, args, output):
         raise ValueError("Submitted source changed during collection")
     runtime = load(evidence / "runtime-summary.json")
     if not args.review:
-        raise ValueError("--review is required for finalize")
+        return summarize(meta, run_id(output), load(evidence / "initial-checks.json"),
+                         "Only resolved execution checkpoints have scores.")
     review = load(args.review)
     if (review.get("protocol") != "godot-evidence-review/v1"
             or review.get("sample_id") != meta["sample_id"]
@@ -379,7 +445,13 @@ def finalize(evaluation, meta, args, output):
             for row in checks if row["dimension"] in {"D2", "D3", "D4"}):
         raise ValueError("Positive gameplay scores require the public dashboard observations")
     write(output / "review.json", review)
-    return summarize(meta, run_id(output), checks, "Some requirements remain inconclusive")
+    # Retain the reviewed assessment separately from the execution scorecard.
+    result = summarize(meta, run_id(output), load(evidence / "initial-checks.json"),
+                       "Some checkpoints lack an executable predicate or a registered visual comparison.")
+    result["extensions"] = {"supplemental_review": {"evidence": "review.json", "checks": [
+        {"id": row["id"], "score": row["score"], "evidence": row["evidence"]}
+        for row in checks if row["id"] in expected]}}
+    return result
 
 
 def main(evaluation=None):
@@ -392,7 +464,7 @@ def main(evaluation=None):
     parser.add_argument("--review", type=Path)
     parser.add_argument("--trajectory")
     parser.add_argument("--interactive-seconds", type=int, default=0,
-                        help="Collect a human-played session through normal input")
+                        help="Collect an interactive session through normal input")
     parser.add_argument("--headless", action="store_true", help="No visual evidence; D6 remains pending")
     parser.add_argument("--timeout", type=int, default=600)
     args = parser.parse_args()
@@ -428,7 +500,12 @@ def main(evaluation=None):
         checks = [check_row(d, "inconclusive_evaluator", None, ["evidence/error.json"], str(exc))
                   for d in definitions]
         result = summarize(meta, run_id(output), checks, str(exc), infrastructure=True)
-    from validate_score import validate
+    from validate_score import apply_scorecard, validate
+    observations = {}
+    summary = output / "evidence/runtime-summary.json"
+    if result["classification"] != "infrastructure_failure" and summary.is_file():
+        observations = load(summary).get("outcome_observations", {})
+    apply_scorecard(result, observations)
     validate(result, output, check_evidence=True)
     write(output / "score.json", result)
     print(json.dumps({"classification": result["classification"],

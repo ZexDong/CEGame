@@ -8,14 +8,12 @@
   "task_type": "existing_project_extension",
   "engine": {
     "name": "Unity",
-    "version": "6000.0.80f1",
-    "revision": "2dfd32957da2",
-    "editor_path": "D:/game/engine/unity/6000.0.80f1/Editor/Unity.exe"
+    "editor_environment_variable": "UNITY_EDITOR"
   },
   "local_tools": {
     "unity_cli": {
       "version": "1.0.0-beta.3",
-      "path": "D:/game/engine/shared-tools/unity/cli/1.0.0-beta.3/unity.exe",
+      "path_environment_variable": "UNITY_CLI",
       "required": true,
       "primary_commands": [
         "test"

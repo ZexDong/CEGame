@@ -112,7 +112,7 @@ $d6Score=[double]$verified.score
 $d6Raw=[double]$verified.score_raw
 $roundScores=@($verified.rounds | ForEach-Object { [double]$_.score })
 $dimensions.D6 = [ordered]@{
-    score=$d6Score; maximum=10.0; protocol='canonical_d6_v4'; round_scores=$roundScores
+    score=$d6Score; maximum=10.0; protocol='canonical_d6_v4'; round_scores=$roundScores; rounds=@($verified.rounds)
     raw_score=$d6Raw; status='completed'; model_id=[string]$verified.model.id
 }
 

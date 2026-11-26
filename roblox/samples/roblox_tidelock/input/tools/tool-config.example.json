@@ -1,7 +1,5 @@
 {
-  "rojo_version": "7.7.0",
   "rojo_executable": "rojo",
-  "optional_luau_release": "0.734",
   "optional_luau_compile_executable": "luau-compile",
   "python_version": "3.14.2",
   "single_player": true,
@@ -12,6 +10,5 @@
   },
   "implementation_time_limit_seconds": 3600,
   "credentials": {},
-  "network_asset_downloads_required": false,
-  "studio_version": "0.742.0.7421053"
+  "network_asset_downloads_required": false
 }

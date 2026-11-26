@@ -42,10 +42,12 @@ def validate_evidence(raw,root):
     return manifest
 
 def validate_review(review,raw,raw_path,catalog,root):
+    required={c['id'] for c in catalog['checkpoints'] if c['runtime_picture_review_required'] and next(x for x in raw['checkpoints'] if x['id']==c['id'])['verdict']=='pass'}
+    if review is None:
+        return {}
     require(review.get('raw_sha256')==sha(raw_path),'PICTURE_REVIEW_WRONG_RUN')
     require(review.get('method')=='fixed_human_runtime_review','PICTURE_REVIEW_METHOD_INVALID')
     require(bool(review.get('reviewer')),'PICTURE_REVIEWER_MISSING')
-    required={c['id'] for c in catalog['checkpoints'] if c['runtime_picture_review_required'] and next(x for x in raw['checkpoints'] if x['id']==c['id'])['verdict']=='pass'}
     rows=review.get('checks',[])
     require(len(rows)==len(required) and {r.get('id') for r in rows}==required,'PICTURE_REVIEW_SET_MISMATCH')
     for row in rows:
@@ -60,9 +62,8 @@ def aggregate_d6(data,raw,raw_path,root):
     require(data.get('status')=='completed' and data.get('raw_sha256')==sha(raw_path),'D6_INVALID_OR_WRONG_RUN')
     require(data.get('manifest_sha256')==sha(ROOT/'d6/reference-manifest.json'),'D6_REFERENCE_MANIFEST_CHANGED')
     require(data.get('prompt_sha256')==sha(ROOT/'d6/FIXED_VLM_PROMPT.txt'),'D6_PROMPT_CHANGED')
-    # This revision intentionally leaves provider-model choice to the caller.
-    # Keep the chosen/requested and returned identities auditable per run, but
-    # do not bind them to the historical manifest default.
+    expected_model = manifest['model_requested']
+    require(data.get('model_requested') == expected_model, 'D6_MODEL_BINDING')
     rounds=data.get('rounds',[]);require(len(rounds)==3 and [r.get('number') for r in rounds]==[1,2,3],'D6_ROUNDS_INVALID')
     means=[];model=None
     for r in rounds:
@@ -83,7 +84,7 @@ def aggregate_d6(data,raw,raw_path,root):
                 for k in ('request','response','parser'):
                     require(k in s and sha(inside(root,s[k]['path']))==s[k]['sha256'],'D6_RAW_RECEIPT_MISSING_OR_CHANGED')
                 response=load(inside(root,s['response']['path']));returned=response.get('model')
-                require(bool(returned) and model in (None,returned),'D6_MODEL_CHANGED');model=returned
+                require(returned == expected_model,'D6_MODEL_CHANGED');model=returned
                 from d6 import parse
                 parsed,reason=parse(response['choices'][0]['message']['content'])
                 require(criteria==parsed,'D6_PARSED_SCORE_MISMATCH')
@@ -104,29 +105,34 @@ def aggregate_d6(data,raw,raw_path,root):
 
 def score(raw,catalog,review,d6):
     results=[];scores={}
-    for c in raw['checkpoints']:
-        result=dict(c)
-        if c['id'] in review and not review[c['id']]['passed']:
-            result.update(verdict='fail',reason='RUNTIME_PICTURE_REVIEW_FAILED:'+review[c['id']]['reason'])
+    picture_checks = {item['id'] for item in catalog['checkpoints'] if item['runtime_picture_review_required']}
+    for checkpoint in raw['checkpoints']:
+        result = dict(checkpoint)
+        if checkpoint['id'] in picture_checks and checkpoint['verdict'] == 'pass':
+            result.update(verdict='review', reason='Runtime evidence does not establish the full visual requirement.')
         results.append(result)
-    for dimension,maximum in catalog['maxima'].items():
-        if dimension=='D6':continue
-        subset=[c for c in results if c['dimension']==dimension]
-        scores[dimension]=rounded(maximum*sum(c['verdict']=='pass' for c in subset)/len(subset))
-    scores['functional_total']=rounded(sum(scores.values()));scores['D6']=rounded(d6[0])
-    scores['Overall']=rounded(scores['functional_total']+scores['D6'])
+    for dimension, maximum in catalog['maxima'].items():
+        if dimension == 'D6':
+            continue
+        subset = [c for c in results if c['dimension'] == dimension]
+        scores[dimension] = (None if any(c['verdict'] == 'review' for c in subset) else
+                             rounded(maximum * sum(c['verdict'] == 'pass' for c in subset) / len(subset)))
+    functional = None if None in scores.values() else rounded(sum(scores.values()))
+    scores.update(functional_total=functional, D6=rounded(d6[0]),
+                  Overall=None if functional is None else rounded(functional + d6[0]))
     return dict(schema_version='2.0.0',status='diagnostic_complete',formal_frozen=False,run_id=raw['run_id'],
-        scores=scores,d6_rounds=d6[1],checkpoints=results,candidate_identity_sha256=raw['candidate_identity_sha256'],
+        scores=scores,d6_rounds=d6[1],checkpoints=results,supplemental_review=review,candidate_identity_sha256=raw['candidate_identity_sha256'],
         catalog_sha256=raw['catalog_sha256'],low_score_causes=[c for c in results if c['verdict']!='pass'])
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--raw',type=Path,required=True);p.add_argument('--review',type=Path,required=True)
+    p=argparse.ArgumentParser();p.add_argument('--raw',type=Path,required=True);p.add_argument('--review',type=Path)
     p.add_argument('--d6',type=Path,required=True);p.add_argument('--output',type=Path,required=True);args=p.parse_args()
     try:
         raw=load(args.raw);catalog=valid_raw(raw);root=args.raw.resolve().parent;validate_evidence(raw,root)
-        review=validate_review(load(args.review),raw,args.raw,catalog,root)
-        d6=aggregate_d6(load(args.d6),raw,args.raw,root)
-        result=score(raw,catalog,review,d6);result.update(raw_sha256=sha(args.raw),review_sha256=sha(args.review),d6_sha256=sha(args.d6),scorer_sha256=sha(Path(__file__)))
+        review=validate_review(load(args.review) if args.review else None,raw,args.raw,catalog,root)
+        visual = load(args.d6)
+        d6=aggregate_d6(visual,raw,args.raw,root)
+        result=score(raw,catalog,review,d6);result.update(rounds=visual['rounds'],raw_sha256=sha(args.raw),review_sha256=sha(args.review) if args.review else None,d6_sha256=sha(args.d6),scorer_sha256=sha(Path(__file__)))
         write(args.output,result);print(result['scores']);return 0
     except (InfrastructureError,OSError,ValueError,KeyError,TypeError) as e:
         write(args.output,dict(status='evaluation_incomplete',fault=dict(domain='infrastructure',code=str(e)),score_publication_allowed=False))

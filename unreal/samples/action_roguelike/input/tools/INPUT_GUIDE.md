@@ -1,6 +1,6 @@
 # Rift Hunting Public Input
 
-This directory is the complete model-visible starting package for an Unreal Engine 5.6.1 implementation task. It contains an answer-free Content-only project, unassembled source assets, the player-facing design requirements, public tool documentation, a read-only observation contract, and repeatable package checks.
+This directory is the complete model-visible starting package for an Unreal Engine implementation task. It contains an answer-free Content-only project, unassembled source assets, the player-facing design requirements, public tool documentation, a read-only observation contract, and repeatable package checks.
 
 ## Required reading order
 
@@ -57,7 +57,7 @@ $engineInfo = pwsh -NoProfile -File tools/Resolve-Unreal56.ps1 | ConvertFrom-Jso
 $engineInfo | Format-List
 ```
 
-The resolver accepts `-EngineRoot` or `UE_5_6_ROOT`, checks launcher and conventional install locations, and only succeeds for UE 5.6.1 changelist 44394996. It reports validated editor, commandlet, and Build.bat paths.
+The resolver accepts `-EngineRoot` or `UE_5_6_ROOT`, checks launcher and conventional install locations, and only succeeds for Unreal Engine configured engine build. It reports validated editor, commandlet, and Build.bat paths.
 
 Run the static package gate after any public-file change:
 

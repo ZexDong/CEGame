@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import ctypes
+import os
 import re
 import subprocess
 from pathlib import Path
@@ -78,13 +79,13 @@ def normalize_text(value: str) -> str:
     return re.sub(r"\s+", "", value).casefold()
 
 
-def ocr_image(path: Path, languages: str = "eng+chi_sim") -> dict[str, object]:
+def ocr_image(path: Path, languages: str = "eng") -> dict[str, object]:
     lines: list[str] = []
     seen: set[str] = set()
     variants = ((6, 0), (11, 0), (11, 1), (11, 2))
     for page_segmentation_mode, thresholding_method in variants:
         command = [
-            "/opt/homebrew/bin/tesseract",
+            os.environ.get("TESSERACT_EXE", "tesseract"),
             str(path),
             "stdout",
             "-l",

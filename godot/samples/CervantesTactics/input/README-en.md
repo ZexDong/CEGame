@@ -16,7 +16,7 @@ input/
 └─ Asserts/
 ```
 
-`sp/project.godot` is a minimal runnable Godot 4.7.1 starter with a fixed `1280×720` window. The target menu, save slots, chapter flow, battle, results, progression, and settings are requirements to implement; they are not pre-completed in this Input.
+`sp/project.godot` is a minimal runnable Godot starter with a fixed `1280×720` window. The target menu, save slots, chapter flow, battle, results, progression, and settings are requirements to implement; they are not pre-completed in this Input.
 
 `Asserts/` provides the logo, Chapter One maps, portraits, battlefield standees, 3D dungeon assets, and foliage source assets. Use them according to `MaterialMapping-en.md` and `legal/LICENSES.md`.
 

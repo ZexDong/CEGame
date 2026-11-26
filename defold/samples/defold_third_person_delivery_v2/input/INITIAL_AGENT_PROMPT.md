@@ -1,7 +1,5 @@
-The hard wall-clock limit is 3600 seconds. At the deadline, generation is terminated, the current project is preserved, and evaluation begins.
-
-Implement the game described by GDD.md and COMMON_BASELINE.md in starter_project/.
-Read DASHBOARD_SPEC.md and naming-tables.json for the public read-only observation contract.
-Optional engine tools and commands are documented in DEFOLD_ENGINE_INTERFACE_GUIDE.md and TOOLCHAIN.md.
-Use the allowed assets and references documented by the GDD and README.md.
-This input directory is the entire generation package.
+Build the complete playable game defined by the supplied design within 3600 seconds.
+Work in a copy of the supplied input. Read the design, public interface contracts, tool guides, asset and delivery requirements before editing.
+Implement the specified controls and expose real game state through the required public interfaces. Use the supplied assets and preserve protected files.
+Deliver the runnable project and any outputs required by the task. Report only checks you actually ran.
+Use only the permitted resources. Do not inspect other tasks, reference implementations, evaluators or prior results.

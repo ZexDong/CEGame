@@ -23,8 +23,8 @@ The Scene contains only the starting camera. Supplied media is under `Assets/Tas
 ## Cold compile and timestamped evidence
 
 ```powershell
-$Cli = 'D:\game\engine\shared-tools\unity\cli\1.0.0-beta.3\unity.exe'
-$Editor = 'D:\game\engine\unity\6000.0.80f1\Editor\Unity.exe'
+$Cli = $env:UNITY_CLI
+$Editor = $env:UNITY_EDITOR
 $Project = '<repository-local-project-copy>'
 $Stamp = [DateTimeOffset]::UtcNow.ToString('yyyyMMdd-HHmmss-fff')
 $Evidence = "$Project\Logs\PublicSmoke\$Stamp"

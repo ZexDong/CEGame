@@ -21,7 +21,7 @@ def score(root):
             elif not r.get('reason') or not r.get('evidence'):raise InfrastructureError('FAILURE_WITHOUT_REASON_EVIDENCE')
         dims[dim]=round_decimal(catalog['dimensions'][dim]*passed/len(checks));details[dim]={'passed':passed,'total':len(checks),'maximum':catalog['dimensions'][dim]}
     d6=aggregate(root);dims['D6']=d6['score'];functional=round_decimal(sum(dims[d] for d in ['D1','D2','D3','D4','D5']))
-    result={'schema_version':'1.0.0','status':'diagnostic_complete','candidate_identity':raw['candidate']['sha256'],'scorer_identity':sha(Path(__file__)),'contract_identity':sha(TASK/'evaluator/catalog/checkpoints.json'),'scores':dims,'functional_total':functional,'overall':round_decimal(functional+dims['D6']),'d6_rounds':d6['rounds'],'checkpoint_counts':details,'failures':{k:v for k,v in raw['checkpoints'].items() if v['verdict']!='pass'},'not_formal_frozen_score':True}
+    result={'schema_version':'1.0.0','status':'diagnostic_complete','candidate_identity':raw['candidate']['sha256'],'scorer_identity':sha(Path(__file__)),'contract_identity':sha(TASK/'evaluator/catalog/checkpoints.json'),'scores':dims,'functional_total':functional,'overall':round_decimal(functional+dims['D6']),'d6_rounds':d6['rounds'],'d6_results':d6['records'],'checkpoint_counts':details,'failures':{k:v for k,v in raw['checkpoints'].items() if v['verdict']!='pass'},'not_formal_frozen_score':True}
     write(root/'result.json',result)
     write(root/'scored-checkpoints.json',raw['checkpoints'])
     row='| '+raw['kind']+' | '+' | '.join(f'{dims[d]:.1f}' for d in ['D1','D2','D3','D4','D5'])+f' | {functional:.1f} | {dims["D6"]:.1f} ('+', '.join(f'{v:.1f}' for v in d6['rounds'])+f') | {result["overall"]:.1f} |'

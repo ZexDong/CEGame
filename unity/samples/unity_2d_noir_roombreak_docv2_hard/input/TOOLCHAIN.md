@@ -2,7 +2,7 @@
 
 ## Pinned runtime
 
-- Unity Editor: `6000.0.80f1`
+- Unity Editor: `Unity`
 - Unity CLI: `1.0.0-beta.3`
 - New Input System: `1.19.0`
 - URP: `17.0.4` with the supplied 2D Renderer assets
@@ -12,7 +12,7 @@
 - Required final Scene: `Assets/NoirChallenge/Scenes/NoirRoombreak.unity`
 - Target resolution: `1280x720`
 
-The project was mechanically migrated from Unity `6000.0.39f1` to the pinned
+The project was mechanically migrated from Unity `Unity` to the pinned
 Editor. Do not add the `com.unity.feature.2d` umbrella or install, upgrade, or
 downgrade packages.
 
@@ -148,8 +148,8 @@ current project. Use fresh log/XML paths for each invocation:
 
 ```powershell
 $Project = (Get-Location).Path
-$Cli = 'D:\game\engine\shared-tools\unity\cli\1.0.0-beta.3\unity.exe'
-$Editor = 'D:\game\engine\unity\6000.0.80f1\Editor\Unity.exe'
+$Cli = $env:UNITY_CLI
+$Editor = $env:UNITY_EDITOR
 $Check = Join-Path $Project ('Logs\SessionChecks\' + [Guid]::NewGuid().ToString('N'))
 New-Item -ItemType Directory -Path $Check -Force | Out-Null
 & $Cli --json --non-interactive --proxy-disable test $Project --mode PlayMode `

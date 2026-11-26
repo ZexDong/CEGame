@@ -5,12 +5,10 @@
   "sample_version": "1.0.0",
   "title": "TODO: sample title",
   "engine": {
-    "name": "TODO",
-    "version": "TODO: exact version"
+    "name": "TODO"
   },
   "environment": {
-    "os": "TODO",
-    "runtime": "TODO: language and exact version",
+    "runtime": "TODO: required runtime and tools",
     "setup_commands": [],
     "credential_environment_variables": []
   },

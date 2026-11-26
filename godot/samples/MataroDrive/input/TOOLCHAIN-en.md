@@ -2,7 +2,7 @@
 
 ## Project boundary
 
-- Engine: Godot `4.7.1.stable.official.a13da4feb`.
+- Engine: Godot `Godot`.
 - Project root: `sp/`.
 - Required main scene: `res://main.tscn`.
 - Viewport: `1280x720`.

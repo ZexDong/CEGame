@@ -4,7 +4,7 @@
 catalog_id: roblox-studio-common-tool-guide
 catalog_revision: 2026.08.31-base-interfaces
 roblox_studio: Stable Windows channel
-rojo_cli: 7.7.0
+rojo_cli: configured version
 luau_cli: bundled host build
 scope: game-independent Roblox Studio, Luau, Rojo, and host interfaces
 ```
@@ -18,9 +18,9 @@ writable paths are declared by each task.
 
 ```text
 Roblox Studio  RobloxStudioBeta.exe from the installed Stable channel
-Rojo CLI      rojo.exe 7.7.0
+Rojo CLI      rojo.exe configured version
 Luau compiler luau-compile.exe from the bundled host tools
-Shell         Windows PowerShell or PowerShell 7
+Shell         Windows shell or shell
 ```
 
 The active Roblox Studio installation can be located under the per-user Roblox `Versions`
@@ -31,7 +31,7 @@ Host-installed engine and tool files are not project authoring targets.
 
 | Interface | Available operations | Result surface |
 |---|---|---|
-| PowerShell | Start processes, inspect files, create directories, copy files, and compose command arguments | stdout, stderr, process exit code |
+| shell | Start processes, inspect files, create directories, copy files, and compose command arguments | stdout, stderr, process exit code |
 | .NET file APIs | Read and write text or bytes, resolve paths, enumerate files, compute hashes, and parse XML/JSON | returned objects or exceptions |
 | `rg` | Search file names and text with glob filters | matching paths and lines |
 | Git | Inspect status, diff, tracked files, and authored changes | textual or machine-readable repository state |

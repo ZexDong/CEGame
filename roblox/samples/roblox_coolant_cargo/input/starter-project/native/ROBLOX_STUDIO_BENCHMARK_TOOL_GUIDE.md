@@ -15,7 +15,7 @@ This English-only catalog describes individual interfaces available to a game-de
 
 | Interface | Individual operations | Result surface |
 |---|---|---|
-| PowerShell | Resolve paths, inspect/copy files, create directories, launch processes, read exit codes | objects, stdout, stderr, exit code |
+| shell | Resolve paths, inspect/copy files, create directories, launch processes, read exit codes | objects, stdout, stderr, exit code |
 | .NET file APIs | Read/write text or bytes, parse JSON/XML, enumerate paths, compute SHA-256 | returned objects or exceptions |
 | `rg` | Search file names and text | matching paths and lines |
 | Git | Inspect status, diff, revision and tracked files | text or machine-readable output |

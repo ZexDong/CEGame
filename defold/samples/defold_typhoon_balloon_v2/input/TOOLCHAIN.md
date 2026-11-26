@@ -1,6 +1,6 @@
 # Defold task tools
 
-Use Defold 1.13.0, its bundled JDK 25+36 and native Bob builder. Build and
+Use Defold, its bundled JDK 25+36 and native Bob builder. Build and
 launch commands are in RUNNING.md; engine inspection tools are documented in
 DEFOLD_ENGINE_INTERFACE_GUIDE.md. The intended client area is 960 x 720.
 

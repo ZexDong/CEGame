@@ -17,8 +17,8 @@ create a nested project.
 ## Fixed project facts
 
 - Input revision: `v2.6-existing-arena-feedback-3600s-20260827`
-- Unity Editor: `6000.0.80f1`
-- Unity CLI: `D:\game\engine\shared-tools\unity\cli\1.0.0-beta.3\unity.exe`
+- Unity Editor: `Unity`
+- Unity CLI: `$env:UNITY_CLI`
 - Required scene: `Assets/DungeonDuelBenchmark/Scenes/DungeonDuel.unity`
 - Authored root: `Assets/DungeonDuelBenchmark/**`
 - Additional writable paths: `ProjectSettings/EditorBuildSettings.asset`, `Logs/**`

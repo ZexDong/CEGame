@@ -1,7 +1,7 @@
 {
   "version": "gemsbond-d6-1.0.1",
   "states_fixed_before_gold_render": true,
-  "scoring_guide": "../../../../gamecreate/GAME_INDEPENDENT_SCORING_GUIDE.md",
+  "scoring_guide": "GAME_INDEPENDENT_SCORING_GUIDE.md",
   "scoring_guide_sha256": "3e3e6cf19cbd5cda5667c44710f483fbba2ac30af7d098921acc811cf08dfdae",
   "prompt": "prompt.txt",
   "prompt_sha256": "5768572dde98f6568c7720ebd2022dd04f53e83711f45044434e1b17731dfb3b",
@@ -52,9 +52,8 @@
     1920,
     1080
   ],
-  "backend": "direct_conversation",
   "aggregation": "equal state mean in each round, then mean of three rounds; one decimal",
   "candidate_missing_black_broken_or_unreachable": "zero with evidence",
   "infrastructure_failure": "run_invalid; no score",
-  "capture_condition_correction": "The preselected reference images are unchanged. Candidate placement previously showed only a preview; corrected after direct image inspection, before completing any placement ratings."
+  "model": "gpt-5.6-sol"
 }

@@ -1,6 +1,6 @@
 # Open RTS public toolchain
 
-Godot 4.7.1.stable.official.a13da4feb; project `sp/`; required main scene `res://main.tscn`; GL Compatibility; 1280x720. Implement in `sp/**`, preserving protected paths in the manifest. Internal organization is free.
+Godot; project `sp/`; required main scene `res://main.tscn`; GL Compatibility; 1280x720. Implement in `sp/**`, preserving protected paths in the manifest. Internal organization is free.
 
 ## InputMap
 

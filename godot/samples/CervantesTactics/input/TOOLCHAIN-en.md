@@ -4,7 +4,7 @@ This document defines the public technical boundary for the canonical Input. Pla
 
 ## Project boundary
 
-- Engine: Godot `4.7.1.stable.official.a13da4feb`.
+- Engine: Godot `Godot`.
 - Project root: `sp/`.
 - Main scene: `res://Main.tscn`.
 - Renderer: GL Compatibility.
@@ -32,6 +32,6 @@ The dashboard may report only public, player-observable semantics. It must not e
 
 ## Verification
 
-Use the designated Godot 4.7.1 console executable for a clean headless import and `res://benchmark/public_smoke.gd` for the public launch smoke. Then start the normal GUI project and exercise the complete public flow with real visible input. Check success, both failure outcomes, rejection feedback, Retry/Main Menu, save/load, settings persistence, and a fully closed different-process reopen.
+Use the designated Godot console executable for a clean headless import and `res://benchmark/public_smoke.gd` for the public launch smoke. Then start the normal GUI project and exercise the complete public flow with real visible input. Check success, both failure outcomes, rejection feedback, Retry/Main Menu, save/load, settings persistence, and a fully closed different-process reopen.
 
 Store logs, screenshots, and runtime snapshots outside the submitted Input while testing. Before handoff, remove `.godot/`, logs, screenshots, temporary scripts, runtime state, and local evidence from the project tree. Report any unexecuted or failed check honestly.

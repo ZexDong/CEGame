@@ -6,7 +6,7 @@
 - URL: N/A
 - Revision: not pinned
 - Native engine: N/A
-- Notes: The supplied original is already a locally adapted Godot Open RPG snapshot with local docs. Its README identifies GDQuest, but an exact upstream repository/commit and native engine version have not been verified. The 4.7.1 workspace adaptation is not evidence of the native version.
+- Notes: The supplied original is already a locally adapted Godot Open RPG snapshot with local docs. Its README identifies GDQuest, but an exact upstream repository/commit and native engine version have not been verified. The Godot workspace adaptation is not evidence of the native version.
 
 ## License
 

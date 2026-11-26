@@ -2,9 +2,9 @@
 
 | Binding | Value |
 | --- | --- |
-| Engine | Unreal Engine 5.7.4, CL 51494982, compatible CL 47537391, ++UE5+Release-5.7 |
-| Platform / runtime | Windows x64; independent editor_game window |
-| Native compiler | Visual Studio 2022; MSVC 14.44.35228; Windows SDK 10.0.26100.0 |
+| Engine | Unreal Engine, CL configured-build, compatible CL configured-build, ++UE5+Release-5.7 |
+| Platform / runtime | desktop; independent editor_game window |
+| Native compiler | Visual Studio 2022; MSVC 14.44.35228; native build SDK 10.0.26100.0 |
 | Build driver | Installed engine Build.bat and bundled .NET 8.0.412 |
 | Project | starter-project/GemsBondStarter.uproject |
 | Editor target | GemsBondStarterEditor |
@@ -21,7 +21,7 @@ Resolve the installation with `pwsh -NoProfile -File tools/Resolve-Unreal57.ps1`
 Use UE_5_7_ROOT or -EngineRoot to select an existing installation. The resolver checks
 the actual Build.version and returns the build/editor paths as JSON; it never installs.
 Use the engine's `Engine/Binaries/ThirdParty/Python3/Win64/python.exe` for the dependency-free
-Python checks. PowerShell 7 is used for launch and desktop input; no pip install is needed.
+Python checks. shell is used for launch and desktop input; no pip install is needed.
 
 Build one target with `Build.bat GemsBondStarterEditor Win64 Development -Project=<absolute-uproject> -WaitMutex -NoHotReloadFromIDE`.
 Open with `UnrealEditor.exe <absolute-uproject>` or run the normal game with

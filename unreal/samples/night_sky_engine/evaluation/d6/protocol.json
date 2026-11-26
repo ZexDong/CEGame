@@ -1,7 +1,7 @@
 {
   "schema_version": "3.0.0",
   "revision": "nightsky-visual-3.2.0",
-  "scoring_guide": "gamecreate/GAME_INDEPENDENT_SCORING_GUIDE.md",
+  "scoring_guide": "GAME_INDEPENDENT_SCORING_GUIDE.md",
   "scoring_guide_sha256": "3e3e6cf19cbd5cda5667c44710f483fbba2ac30af7d098921acc811cf08dfdae",
   "prompt_sha256": "24ab4493f270e838a83a7b0af3c91497090d0702d0669b3ac3fa00d5a8be0992",
   "state_count_min": 3,
@@ -32,5 +32,6 @@
     "hud_visual_quality",
     "style_finish"
   ],
-  "criterion_maximum": 2
+  "criterion_maximum": 2,
+  "model": "gpt-5.6-sol"
 }

@@ -58,6 +58,9 @@ def validate_output(result, ev, out):
         "portable_score_validator", ev / "validate_score.py")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
+    ext = result.get("extensions")
+    observations = ext.pop("outcome_observations", None) if isinstance(ext, dict) else None
+    module.apply_scorecard(result, observations)
     module.validate(result, out, require_final=result["evaluation_valid"],
                     check_evidence=True)
 
@@ -71,6 +74,74 @@ def dimensions(native):
         v = values.get(dimension, native.get(dimension))
         result[dimension] = v.get("score") if isinstance(v, dict) else v
     return result
+
+
+def _extract_outcome_observations(native, default_evidence):
+    observations = {}
+    if not isinstance(native, dict):
+        return observations
+    explicit = native.get("outcome_observations")
+    if isinstance(explicit, dict):
+        for k, v in explicit.items():
+            if k in ("journey", "lifecycle", "critical") and isinstance(v, dict):
+                observations[k] = v
+    raw_checks = native.get("checks", native.get("checkpoints"))
+    rows = []
+    if isinstance(raw_checks, dict):
+        for cid, row in raw_checks.items():
+            if isinstance(row, dict):
+                rows.append({"id": str(row.get("id", cid)), **row})
+    elif isinstance(raw_checks, list):
+        for row in raw_checks:
+            if isinstance(row, dict) and row.get("id", row.get("checkpoint_id")):
+                rows.append({"id": str(row.get("id", row.get("checkpoint_id"))), **row})
+
+    def _verdict_bit(row):
+        val = row.get("status", row.get("verdict", row.get("passed")))
+        if isinstance(val, bool):
+            return 1 if val else 0
+        s = str(val or "").strip().lower()
+        if s in ("pass", "passed", "ok", "true"):
+            return 1
+        if s in ("fail", "failed", "blocked_by_candidate", "false"):
+            return 0
+        return None
+
+    def _row_ev(row):
+        ev = row.get("evidence")
+        if isinstance(ev, list) and ev and all(isinstance(x, str) and x for x in ev):
+            return list(dict.fromkeys(ev))
+        return [default_evidence] if default_evidence else []
+
+    if "journey" not in observations:
+        j_rows = [r for r in rows if any(tok in r["id"].lower() for tok in ("journey", "complete_success", "end_to_end", "full_playthrough"))]
+        if j_rows:
+            bits = [_verdict_bit(r) for r in j_rows]
+            if 0 in bits:
+                ev = sorted({e for r, b in zip(j_rows, bits) if b == 0 for e in _row_ev(r)})
+                if ev:
+                    observations["journey"] = {"value": 0, "evidence": ev}
+            elif all(b == 1 for b in bits):
+                ev = sorted({e for r in j_rows for e in _row_ev(r)})
+                if ev:
+                    observations["journey"] = {"value": 1, "evidence": ev}
+        elif isinstance(native.get("journey"), bool) or native.get("journey") in (0, 1):
+            if default_evidence:
+                observations["journey"] = {"value": int(bool(native["journey"])), "evidence": [default_evidence]}
+
+    if "lifecycle" not in observations:
+        l_rows = [r for r in rows if any(tok in r["id"].lower() for tok in ("restart", "reopen", "reset", "lifecycle"))]
+        if l_rows:
+            bits = [_verdict_bit(r) for r in l_rows]
+            if 0 in bits:
+                ev = sorted({e for r, b in zip(l_rows, bits) if b == 0 for e in _row_ev(r)})
+                if ev:
+                    observations["lifecycle"] = {"value": 0, "evidence": ev}
+            elif all(b == 1 for b in bits):
+                ev = sorted({e for r in l_rows for e in _row_ev(r)})
+                if ev:
+                    observations["lifecycle"] = {"value": 1, "evidence": ev}
+    return observations
 
 
 def normalize(native, sample, evidence, failure=None):
@@ -112,7 +183,7 @@ def normalize(native, sample, evidence, failure=None):
     # A conversion cannot promote historical qualification or incomplete D6.
     qualified = sample.get("coverage_status") == "qualified"
     complete = valid and all(x["score"] is not None for x in dims.values())
-    any_failure = any(x["score"] is not None and x["score"] < x["max_score"] for x in checks)
+    any_failure = any(x["status"] in ("fail", "blocked_by_candidate") for x in checks)
     return dict(
         schema_version="2.1", sample_id=sample["sample_id"],
         sample_version=sample["sample_version"],
@@ -128,9 +199,11 @@ def normalize(native, sample, evidence, failure=None):
         dimensions=dims, checks=checks,
         final_score=round(sum(x["score"] for x in dims.values()), 6) if complete else None,
         max_score=100,
-        extensions=dict(native_evidence=evidence, legacy_conversion=True,
-                        dimension_aggregation="Preserve the backend's exact dimension totals",
-                        qualification_scope="Current run evidence and fixed evaluator/input bindings"))
+        extensions={**dict(native_evidence=evidence, legacy_conversion=True,
+                           dimension_aggregation="Preserve the backend's exact dimension totals",
+                           qualification_scope="Current run evidence and fixed evaluator/input bindings"),
+                    **({"outcome_observations": _extract_outcome_observations(native, evidence)}
+                       if valid and not failure and _extract_outcome_observations(native, evidence) else {})})
 
 
 def run(args):
@@ -258,6 +331,9 @@ def run(args):
             for c in result["checks"]:
                 c["evidence"] = [prefix + p for p in c.get("evidence", [])]
             result["coverage_evidence"] = [prefix + p for p in result.get("coverage_evidence", [])]
+            obs = _extract_outcome_observations(result, native_path.relative_to(out).as_posix())
+            if obs:
+                result.setdefault("extensions", {})["outcome_observations"] = obs
         else:
             result = normalize(native, sample, native_path.relative_to(out).as_posix())
         if tree(project) != before:

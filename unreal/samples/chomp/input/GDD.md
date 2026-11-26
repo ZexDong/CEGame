@@ -31,7 +31,7 @@ Build a complete 3D neon maze-chase game in which a chomping yellow character cl
 
 | Item | Supplied state | Related requirements |
 |---|---|---|
-| Project | New Unreal Engine 5.7.4 C++ Blank project; inert welcome view | QUALITY-01 |
+| Project | New Unreal Engine C++ Blank project; inert welcome view | QUALITY-01 |
 | Gameplay | No maze actors, player, enemies, pickups, movement, menu flow or save system | All task-specific requirements |
 | Presentation resources | Unassembled static meshes, materials and icon artwork; mandatory visible use under ASSET-01..05 | VISUAL-01..06, HUD-01 |
 | Observation | Output-only transport reports unavailable gameplay until connected | OBSERVE-01 |

@@ -1,4 +1,4 @@
-# Unreal Engine 5.7.4 Benchmark Tool Guide
+# Unreal Engine Benchmark Tool Guide
 
 This is the task's public, single-interface guide for the published Unreal benchmark surface. It documents interfaces that a candidate or launcher may call independently; it is not a gameplay recipe, evaluator, score definition, or reference implementation. Task-specific paths remain in `tools/TOOLCHAIN.md`, and gameplay acceptance remains solely in `GDD.md` Section 6.
 
@@ -6,19 +6,19 @@ This is the task's public, single-interface guide for the published Unreal bench
 
 | Field | Value |
 |---|---|
-| Engine | Unreal Engine 5.7.4, changelist 51494982 |
-| Platform | Windows x64 |
+| Engine | Unreal Engine, configured engine build |
+| Platform | desktop |
 | Runtime mode | Independent `editor_game` window |
-| Capability contract | `engine/unreal-5.7.4/CAPABILITIES.md`, contract `1.0.0` |
-| Executor module | `engine/unreal-5.7.4/executor/UnrealEvaluationExecutor.psm1` |
-| Native interop | `engine/unreal-5.7.4/executor/Private/WindowsEvaluationNative.cs` |
-| Observer module | `engine/unreal-5.7.4/observer/UnrealEvaluationObserver.psm1` |
-| Operation envelope | `engine/unreal-5.7.4/executor/schemas/operation-result.schema.json` |
-| Engine-health schema | `engine/unreal-5.7.4/executor/schemas/state-snapshot.schema.json` |
+| Capability contract | `engine/unreal-Unreal/CAPABILITIES.md`, contract `1.0.0` |
+| Executor module | `engine/unreal-Unreal/executor/UnrealEvaluationExecutor.psm1` |
+| Native interop | `engine/unreal-Unreal/executor/Private/WindowsEvaluationNative.cs` |
+| Observer module | `engine/unreal-Unreal/observer/UnrealEvaluationObserver.psm1` |
+| Operation envelope | `engine/unreal-Unreal/executor/schemas/operation-result.schema.json` |
+| Engine-health schema | `engine/unreal-Unreal/executor/schemas/state-snapshot.schema.json` |
 
 Run the public smoke on the current host; keep its results outside the release.
 
-## Complete UE 5.7.4 and installed-plugin interface catalog
+## Complete Unreal Engine and installed-plugin interface catalog
 
 The adjacent `tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json` and `tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz` form the version-bound all-interface catalog. It contains 546,387 independently addressable records extracted from 74,084 UE 5.7.4 source/header files, engine config defaults, reflection macros, console registrations, UBT/UAT commands, and every installed engine plugin descriptor and module.
 
@@ -50,7 +50,7 @@ The executor owns one active input lease. Release every held key or mouse button
 - **Required:** `ProjectPath`, `RunRoot`, `StatePath`, and one of `EngineReference`, `EngineRoot`, or `EditorPath`.
 - **Optional:** `ProcessToken`, `WindowWidth=1280`, `WindowHeight=720`, `TimeoutMs=60000`, `FocusTimeoutMs=1500`, `ObserverDisabledControl`, `AdditionalArguments`.
 - **Result:** Public session handle, process/window tokens, client size, DPI/coordinate space, state identity, launch mode, and containment facts.
-- **Limitations:** Windows and UE 5.7.4 `editor_game` only. Control mode proves window health but not observer state.
+- **Limitations:** Windows and Unreal Engine `editor_game` only. Control mode proves window health but not observer state.
 
 ```powershell
 $start = Start-UnrealEvaluationSession `

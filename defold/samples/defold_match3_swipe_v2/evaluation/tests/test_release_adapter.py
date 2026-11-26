@@ -124,12 +124,14 @@ class ReleaseAdapterTests(unittest.TestCase):
         write(path, review)
         return result, review, path
 
-    def test_visual_review_uses_median_and_sum_of_six_dimensions(self):
+    def test_design_review_is_supplemental(self):
         result, _, path = self.review_fixture()
         apply_review(result, path, EVALUATION.parent, self.output)
-        validate(result, self.output, require_final=True, check_evidence=True)
-        self.assertAlmostEqual(5, result["dimensions"]["D6"]["score"], places=5)
-        self.assertAlmostEqual(95, result["final_score"], places=5)
+        validate(result, self.output, check_evidence=True)
+        self.assertIsNone(result["dimensions"]["D6"]["score"])
+        self.assertIsNone(result["final_score"])
+        medians = result["extensions"]["supplemental_visual_review"]["state_medians"]
+        self.assertEqual(set(medians.values()), {5})
 
     def test_visual_review_rejects_changed_image(self):
         result, review, path = self.review_fixture()

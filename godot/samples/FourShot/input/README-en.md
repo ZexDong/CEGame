@@ -11,7 +11,7 @@ This directory provides the complete public contract, a runnable Godot starter p
 | `TOOLCHAIN-en.md` | Required stack, player input, v2.1 read-only state protocol, prohibited capabilities, verification |
 | `GODOT_BENCHMARK_TOOL_GUIDE.md` | Generic runtime, window, keyboard/mouse, screenshot, and executor guidance |
 | `MaterialMapping-en.md` | Non-normative asset path, purpose, provenance, and integrity index |
-| `sp/` | Minimal answer-empty Godot 4.7.1 starter plus benchmark dashboard skeleton |
+| `sp/` | Minimal answer-empty Godot starter plus benchmark dashboard skeleton |
 | `legal/LICENSES.md`, `legal/ASSET_AUTHORIZATION.md` | Licenses and task-granted authorization |
 
 The development agent should begin with `INITIAL_AGENT_PROMPT-en.md`, then follow its reading order through `GDD-en.md`, `TOOLCHAIN-en.md`, and the other contracts. Evaluation drives the visible game window through normal keyboard/mouse input and cross-checks the image, read-only snapshot, and logs. It does not read candidate state outside the public contract.

@@ -5,7 +5,7 @@
 - Repository: s/cervantes-tactics-godot
 - URL: N/A
 - Revision: not pinned
-- Native engine: 4.7.1
+- Native engine: Godot
 - Notes: Local source path; remote URL and commit not confirmed.
 
 ## License

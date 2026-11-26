@@ -6,9 +6,7 @@
   "game_family": "unity_2d_brick_n_balls_challenge",
   "release_status": "packaged",
   "engine": {
-    "name": "Unity",
-    "version": "6000.0.80f1",
-    "cli_version": "1.0.0-beta.3"
+    "name": "Unity"
   },
   "input_revision": "v1.4-tool-guide-v5-20260825",
   "input_source_directory": "input",
@@ -141,8 +139,7 @@
     "all six dimensions with valid visual evidence"
   ],
   "environment": {
-    "os": "Windows 10/11 x64",
-    "runtime": "Python 3.9+; PowerShell 7; Unity 6000.0.80f1; Unity CLI 1.0.0-beta.3",
+    "runtime": "Python, Unity Editor and Unity CLI",
     "setup_commands": [
       [
         "python",
@@ -154,7 +151,7 @@
       ]
     ],
     "credential_environment_variables": [],
-    "output_path_note": "Use a short result path on Windows when long-path support is disabled. Setup failures are infrastructure failures, not zero candidate scores."
+    "output_path_note": "Use a short result path when path-length limits apply. Setup failures are infrastructure failures, not zero candidate scores."
   },
   "input": {
     "path": "input/",

@@ -1286,12 +1286,10 @@
     {
       "source": "BENCHMARK_MANIFEST.json",
       "published": "BENCHMARK_MANIFEST.json",
-      
-
-"restore_edits": [
+      "restore_edits": [
         {
-          "start": 19,
-          "end": 24,
+          "start": 14,
+          "end": 19,
           "lines": [
             "    \"project_root\": \"project\",\n",
             "    \"project_file\": \"project/ChompStarter.uproject\",\n",
@@ -1301,51 +1299,51 @@
           ]
         },
         {
-          "start": 25,
-          "end": 26,
+          "start": 20,
+          "end": 21,
           "lines": [
             "    \"final_map_source\": \"project/Config/DefaultEngine.ini:GameDefaultMap\",\n"
           ]
         },
         {
-          "start": 28,
-          "end": 30,
+          "start": 23,
+          "end": 25,
           "lines": [
             "    \"toolchain\": \"TOOLCHAIN.md\",\n",
             "    \"tool_guide\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n"
           ]
         },
         {
-          "start": 31,
-          "end": 32,
+          "start": 26,
+          "end": 27,
           "lines": [
             "    \"asset_catalog\": \"ASSET_CATALOG.json\",\n"
           ]
         },
         {
-          "start": 33,
-          "end": 34,
+          "start": 28,
+          "end": 29,
           "lines": [
             "    \"legal_map\": \"legal/ASSET_LICENSE_MAP.json\",\n"
           ]
         },
         {
-          "start": 36,
-          "end": 37,
+          "start": 31,
+          "end": 32,
           "lines": [
             "    \"public_smoke\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n"
           ]
         },
         {
-          "start": 42,
-          "end": 43,
+          "start": 37,
+          "end": 38,
           "lines": [
             "    \"README.md\",\n"
           ]
         },
         {
-          "start": 44,
-          "end": 48,
+          "start": 39,
+          "end": 43,
           "lines": [
             "    \"ASSET_CATALOG.md\",\n",
             "    \"contracts/README.md\",\n",
@@ -1354,59 +1352,30 @@
           ]
         },
         {
-          "start": 51,
-          "end": 52,
+          "start": 46,
+          "end": 47,
           "lines": [
             "      \"project\"\n"
           ]
         },
         {
-          "start": 54,
-          "end": 55,
+          "start": 49,
+          "end": 50,
           "lines": [
             "      \"All input files outside project/\"\n"
           ]
         },
         {
-          "start": 158,
-          "end": 160,
+          "start": 153,
+          "end": 155,
           "lines": [
             "    \"runtime_root\": \"project/Content/Art\",\n",
             "    \"editable_source_root\": \"project/SourceArt\",\n"
           ]
-        },
-        {
-          "start": 183,
-          "end": 192,
-          "lines": [
-            "\n",
-            "\n",
-            "\n",
-            "\n",
-            "\n",
-            "\n",
-            "\n",
-            "\n",
-            "\n"
-          ]
-        },
-        {
-          "start": 193,
-          "end": 196,
-          "lines": [
-            "\n",
-            "\n",
-            "\n"
-          ]
-        },
-        {
-          "start": 199,
-          "end": 200,
-          "lines": [
-            "\n"
-          ]
         }
-      ]
+      ],
+      "sha256": "4df800f390e5237063f3cc02307e2669bf1c0c2176d28cf9cfa50c1d92966f5b",
+      "published_sha256": "21507d946fa9ed0e883ca5b0cfddf8f60d0c746d97cb71f00522e1472b7d015e"
     },
     {
       "source": "contracts/game-state.schema.json",
@@ -1426,536 +1395,11 @@
       "sha256": "f172d52cf25a7f6c726acb8ffca5a31f9c1a81547c3cadf9b1d1f2f30884ecb5",
       "published_sha256": "f172d52cf25a7f6c726acb8ffca5a31f9c1a81547c3cadf9b1d1f2f30884ecb5"
     },
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
+    {
       "source": "GDD.md",
       "published": "GDD.md",
       "sha256": "a91c9e43df08f4d26d17b750e3c47490c2efcf2b063e2917ed7bb69e837fb98f",
-      "published_sha256": "b138175d047f9dd39cd756a65c3aac7966c855b947650a7979f0904c2c813d14",
+      "published_sha256": "69701094a56829c255eaa24ad07dc99d902329ffaa9e234684c6a3d2796b6847",
       "restore_edits": [
         {
           "start": 276,
@@ -1990,24 +1434,8 @@
     {
       "source": "INITIAL_AGENT_PROMPT.md",
       "published": "INITIAL_AGENT_PROMPT.md",
-      "sha256": "9d6a4c30bff52dce22336c522c399c2d7bc16f6f2ca4e55527f0aa2d1fc0b912",
-      "published_sha256": "256ed1860bf004354377d7307a47341a7a246046af0b04cb92d21095a4627c4b",
-      "restore_edits": [
-        {
-          "start": 2,
-          "end": 3,
-          "lines": [
-            "Read `README.md`, `GDD.md`, `ASSET_CATALOG.md`, `contracts/README.md`, `TOOLCHAIN.md`, and the engine tool guide in that order. Implement every numbered requirement in GDD Section 6, including its QUALITY requirements, in the supplied Unreal Engine 5.7.4 project. Other documents provide resources, tooling and observation semantics, not additional gameplay scoring rules.\n"
-          ]
-        },
-        {
-          "start": 4,
-          "end": 5,
-          "lines": [
-            "Your implementation root is `project/`; the final entry remains `project/ChompStarter.uproject`. You may replace the welcome view, create levels and actors, change project source/configuration and add your own resources inside that root. Preserve the public files outside `project/`. Mandatory art is ready to use in `project/Content/Art/`; writable source copies are already in `project/SourceArt/`. Apply ASSET-01..05, including visible use and permitted transformations. Generated project caches belong under the project only; place evidence and your final report in an externally supplied output directory.\n"
-          ]
-        }
-      ]
+      "sha256": "87d826392f87e4de129355f04142e0f8094dc68145fe9dda2a8e423656f2baaf",
+      "published_sha256": "87d826392f87e4de129355f04142e0f8094dc68145fe9dda2a8e423656f2baaf"
     },
     {
       "source": "legal/ASSET_LICENSE_MAP.json",
@@ -2652,9 +2080,7 @@
     {
       "source": "README.md",
       "published": "tools/INPUT_GUIDE.md",
-      
-
-"restore_edits": [
+      "restore_edits": [
         {
           "start": 2,
           "end": 3,
@@ -2723,7 +2149,7 @@
       "source": "TOOLCHAIN.md",
       "published": "tools/TOOLCHAIN.md",
       "sha256": "1d579a657ab782e2c3b319364d365bdcdc30f5351870ff4da5ba25a92cdb76fe",
-      "published_sha256": "54404fa1702649c348e15afc70a905baafb770dbc7a61810aa79fe5b76e004d8",
+      "published_sha256": "b07febbee1abe430ba0ccaebbb295d5cd255d001a32da30fcd3970fa0643ac63",
       "restore_edits": [
         {
           "start": 6,
@@ -2765,8 +2191,6 @@
     {
       "source": "tools/check_input.py",
       "published": "tools/check_input.py"
-
-
     },
     {
       "source": "tools/Resolve-Unreal57.ps1",
@@ -2778,7 +2202,7 @@
       "source": "tools/Search-UnrealInterfaceCatalog.ps1",
       "published": "tools/Search-UnrealInterfaceCatalog.ps1",
       "sha256": "963b6d6b254dbd7e890218bfb8f213d4d5e8bede64ef2e13bc2833af70684446",
-      "published_sha256": "a35eaaa1fc13c0740c649c61b540c43056e0a3c6a4c90a6e7ad0fa7626519afa",
+      "published_sha256": "815ff8789757ea7cf01b3251c754b9146d9ef9b0986b27faa00065d59b2b36d8",
       "restore_edits": [
         {
           "start": 6,
@@ -2800,7 +2224,7 @@
       "source": "tools/Test-PublicInput.ps1",
       "published": "tools/Test-PublicInput.ps1",
       "sha256": "cc18d5212db76daabea3cc6acf31b724affb83ba3c2ce65833838d26548613ff",
-      "published_sha256": "cc18d5212db76daabea3cc6acf31b724affb83ba3c2ce65833838d26548613ff"
+      "published_sha256": "a7bdf1325609aabf52ee84e12fdae224077d50ead4d36c26d7f560cdb4eaee6e"
     },
     {
       "source": "UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
@@ -2827,7 +2251,7 @@
       "source": "UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md",
       "published": "tools/TOOL_GUIDE.md",
       "sha256": "8e50d54ae985cd1859afea80342f8579664b135724db2a817ca14c8c54d69d16",
-      "published_sha256": "0110369bff38b68f20dcc9c4d776aa9093d89d0642176d5beff30928b26c6d91",
+      "published_sha256": "5e067b3cef030da0c52e1aa08b61ae689e0860305d56a1b196fe1440948cb126",
       "restore_edits": [
         {
           "start": 2,

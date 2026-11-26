@@ -70,7 +70,7 @@
         "M3-BOARD-01"
       ],
       "evidence_method": "input_read",
-      "description": "the current chapter board\u3001obstacles and goals are built according to public data Stand"
+      "description": "The chapter board, obstacles and goals match the public data."
     },
     {
       "id": "D2.INPUT",
@@ -134,7 +134,7 @@
         "M3-SCORE-01"
       ],
       "evidence_method": "input_read",
-      "description": "Swapping\u3001Matching\u3001Line rewards\u3001Supplement\u3001The random cursor and scoring are consistent with independent recalculation"
+      "description": "Swaps, matches, line rewards, refills, the random cursor and scores match an independent recalculation."
     },
     {
       "id": "D3.ICE",
@@ -245,7 +245,7 @@
         "M3-PERSIST-01"
       ],
       "evidence_method": "lifecycle",
-      "description": "Cancel the retention of the new campaign\u3001Clear the file after confirmation"
+      "description": "Cancelling a new campaign preserves the save. Confirming clears it."
     },
     {
       "id": "D5.MENU",
@@ -265,7 +265,7 @@
         "M3-UI-01"
       ],
       "evidence_method": "visual",
-      "description": "Chessboard goal\u3001Scores and steps are readable on the real screen"
+      "description": "The board goal, score and moves are readable on screen."
     },
     {
       "id": "D5.PAUSE",

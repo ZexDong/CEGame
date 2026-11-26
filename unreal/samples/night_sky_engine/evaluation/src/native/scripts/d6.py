@@ -37,13 +37,13 @@ def main():
     p.add_argument('--base-url',default=os.environ.get('NIGHTSKY_VLM_BASE_URL'));p.add_argument('--model',default=os.environ.get('NIGHTSKY_VLM_MODEL'))
     p.add_argument('--model-version',default=os.environ.get('NIGHTSKY_VLM_VERSION'))
     p.add_argument('--provider',default=os.environ.get('NIGHTSKY_VLM_PROVIDER'));p.add_argument('--config',type=Path)
-    p.add_argument('--key-env',default='NEWAPI_API_KEY');a=p.parse_args()
+    p.add_argument('--key-env',default='OPENAI_API_KEY');a=p.parse_args()
     config=load(a.config) if a.config else {'base_url':a.base_url,'model':a.model,'model_version':a.model_version,'provider':a.provider,'key_env':a.key_env}
     if a.output.exists():raise InfrastructureError('D6_OUTPUT_EXISTS')
     run(a.raw,config,a.output)
 
 def call_vlm(payload,config):
-    key=os.environ.get(config.get('key_env','NEWAPI_API_KEY'))
+    key=os.environ.get(config.get('key_env','OPENAI_API_KEY'))
     if not key:raise InfrastructureError('VLM_CREDENTIAL_UNAVAILABLE')
     request=urllib.request.Request(config['base_url'].rstrip('/')+'/chat/completions',data=json.dumps(payload,allow_nan=False).encode(),
         headers={'Content-Type':'application/json','Authorization':'Bearer '+key})

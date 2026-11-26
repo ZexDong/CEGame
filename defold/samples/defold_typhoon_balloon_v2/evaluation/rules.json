@@ -71,7 +71,7 @@
         "TB-ZONE-01"
       ],
       "evidence_method": "input_read",
-      "description": "Full map made public\u3001Wind Zone\u3001Hazards and targets are actually established"
+      "description": "The map, wind zones, hazards and targets match the public world data."
     },
     {
       "id": "D2.FLIGHT",
@@ -113,7 +113,7 @@
         "TB-CAMPAIGN-01"
       ],
       "evidence_method": "input_read",
-      "description": "Three Chapter Targets\u3001Start point and required wind station differences are actually entered"
+      "description": "Each of the three chapters starts with its specified goal, start point and required wind stations."
     },
     {
       "id": "D3.FLIGHT",
@@ -124,7 +124,7 @@
         "TB-ZONE-01"
       ],
       "evidence_method": "input_read",
-      "description": "Thrust\u3001Gravity\u3001Damping\u3001Speed upper limit and synthetic wind support real navigation"
+      "description": "Thrust, gravity, damping, the speed limit and combined winds govern flight."
     },
     {
       "id": "D3.SOLID",
@@ -144,7 +144,7 @@
         "TB-PAUSE-01"
       ],
       "evidence_method": "input_read",
-      "description": "Pause frozen flight\u3001Wind\u3001Mechanism and resurrection clock"
+      "description": "Pausing freezes flight, wind, mechanisms and the respawn timer."
     },
     {
       "id": "D3.HAZARD",
@@ -177,7 +177,7 @@
         "TB-ZONE-01"
       ],
       "evidence_method": "input_read",
-      "description": "Wind station usage record\u3001Power supply and Chapter 3 are mutually exclusive and correct"
+      "description": "Wind station use and power are recorded, including the mutually exclusive stations in chapter three."
     },
     {
       "id": "D3.CHAPTERS",
@@ -198,7 +198,7 @@
         "TB-RANK-01"
       ],
       "evidence_method": "input_read",
-      "description": "The final rating is determined by the total time submitted\u3001Re Calculate the number of trial and star numbers"
+      "description": "The final rating matches the calculation from elapsed time, retries and stars."
     },
     {
       "id": "D4.RESPAWN",
@@ -272,7 +272,7 @@
         "TB-PERSIST-01"
       ],
       "evidence_method": "lifecycle",
-      "description": "Complete status\u3001New campaign and Retry Clean up the correct range"
+      "description": "Completing a chapter, starting a new campaign and retrying each reset the specified state."
     },
     {
       "id": "D5.MENU",
@@ -292,7 +292,7 @@
         "TB-UI-01"
       ],
       "evidence_method": "visual",
-      "description": "Time\u3001Stars\u3001Retry\u3001Checkpoint\u3001Wind and Wind Station status are actually readable on the real screen"
+      "description": "Time, stars, retries, checkpoints, wind and station status are readable on screen."
     },
     {
       "id": "D5.PAUSE",
@@ -315,7 +315,7 @@
         "TB-STATION-01"
       ],
       "evidence_method": "visual",
-      "description": "Danger Resurrection\u3001Checkpoint\u3001Stars and Wind Station feedback are visible"
+      "description": "Respawns after hazards, checkpoints, stars and wind station feedback are visible."
     },
     {
       "id": "D5.RESULT",

@@ -1130,19 +1130,18 @@
     {
       "source": "BENCHMARK_MANIFEST.json",
       "published": "BENCHMARK_MANIFEST.json",
-      
-
-"restore_edits": [
+      "restore_edits": [
         {
-          "start": 21,
-          "end": 21,
+          "start": 15,
+          "end": 16,
           "lines": [
-            "    \"capability_validation_summary\": \"engine/unreal-5.7.4/validation/latest/summary.json\",\n"
+            "    \"operation_result_schema\": \"engine/unreal-5.7.4/executor/schemas/operation-result.schema.json\",\n",
+            "    \"capability_validation_summary\": \"engine/unreal-5.7.4/validation/latest/summary.json\"\n"
           ]
         },
         {
-          "start": 24,
-          "end": 29,
+          "start": 18,
+          "end": 23,
           "lines": [
             "    \"project_root\": \"project\",\n",
             "    \"project_file\": \"project/Captain2DScaffold.uproject\",\n",
@@ -1152,31 +1151,31 @@
           ]
         },
         {
-          "start": 31,
-          "end": 32,
+          "start": 25,
+          "end": 26,
           "lines": [
             "    \"final_map_source\": \"project/Config/DefaultEngine.ini: GameDefaultMap\",\n"
           ]
         },
         {
-          "start": 35,
-          "end": 37,
+          "start": 29,
+          "end": 31,
           "lines": [
             "    \"toolchain\": \"TOOLCHAIN.md\",\n",
             "    \"tool_guide\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n"
           ]
         },
         {
-          "start": 38,
-          "end": 40,
+          "start": 32,
+          "end": 34,
           "lines": [
             "    \"asset_catalog_json\": \"ASSET_CATALOG.json\",\n",
             "    \"asset_catalog_human\": \"ASSET_CATALOG.md\",\n"
           ]
         },
         {
-          "start": 41,
-          "end": 46,
+          "start": 35,
+          "end": 40,
           "lines": [
             "    \"license_map\": \"legal/ASSET_LICENSE_MAP.json\",\n",
             "    \"public_smoke\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
@@ -1186,30 +1185,30 @@
           ]
         },
         {
-          "start": 48,
-          "end": 50,
+          "start": 42,
+          "end": 44,
           "lines": [
             "    \"room_layout\": \"assets/map/room-layout.json\",\n",
             "    \"room_art_preview\": \"assets/map/room-art-preview.png\",\n"
           ]
         },
         {
-          "start": 51,
-          "end": 52,
+          "start": 45,
+          "end": 46,
           "lines": [
             "    \"room_layout_guide\": \"assets/map/README.md\",\n"
           ]
         },
         {
-          "start": 66,
-          "end": 67,
+          "start": 60,
+          "end": 61,
           "lines": [
             "    \"README.md\",\n"
           ]
         },
         {
-          "start": 69,
-          "end": 73,
+          "start": 63,
+          "end": 67,
           "lines": [
             "    \"ASSET_CATALOG.md\",\n",
             "    \"TOOLCHAIN.md\",\n",
@@ -1218,90 +1217,90 @@
           ]
         },
         {
-          "start": 76,
-          "end": 77,
+          "start": 70,
+          "end": 71,
           "lines": [
             "      \"project\"\n"
           ]
         },
         {
-          "start": 80,
-          "end": 81,
+          "start": 74,
+          "end": 75,
           "lines": [
             "      \"README.md\",\n"
           ]
         },
         {
-          "start": 84,
-          "end": 86,
+          "start": 78,
+          "end": 80,
           "lines": [
             "\"TOOLCHAIN.md\",\n",
             "      \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n"
           ]
         },
         {
-          "start": 87,
-          "end": 89,
+          "start": 81,
+          "end": 83,
           "lines": [
             "      \"ASSET_CATALOG.json\",\n",
             "      \"ASSET_CATALOG.md\",\n"
           ]
         },
         {
-          "start": 91,
-          "end": 92,
+          "start": 85,
+          "end": 86,
           "lines": [
             "      \"legal\",\n"
           ]
         },
         {
-          "start": 93,
-          "end": 94,
+          "start": 87,
+          "end": 88,
           "lines": [
             "      \"tests\",\n"
           ]
         },
         {
-          "start": 95,
-          "end": 97,
+          "start": 89,
+          "end": 91,
           "lines": [
             "      \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
             "      \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
           ]
         },
         {
-          "start": 164,
-          "end": 166,
+          "start": 158,
+          "end": 160,
           "lines": [
             "    \"entry\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
             "    \"result_schema\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n"
           ]
         },
         {
-          "start": 187,
-          "end": 189,
+          "start": 181,
+          "end": 183,
           "lines": [
             "    \"guide\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
-            "    \"guide_sha256\": \"8f7b97f467070883c94b5a218a663c0943b62f0633b4bf424e9a78c56cc00d28\",\n"
+            "    \"guide_sha256\": \"d36101ea30e06ca6bca87681472e2ba23bd3080af794946add6c1f0eb945bc77\",\n"
           ]
         },
         {
-          "start": 190,
-          "end": 191,
+          "start": 184,
+          "end": 185,
           "lines": [
             "    \"capabilities_contract_sha256\": \"9007a3a623ce2c24e8a14c8f69764db31b146c9b5c5019704ab034c803cc2412\",\n"
           ]
         },
         {
-          "start": 197,
-          "end": 198,
+          "start": 191,
+          "end": 192,
           "lines": [
             "    \"validation_scope\": \"UE 5.7.4 CL 51494982 Windows x64 editor_game; benchmark interface evidence is bound to the published capability validation identity. Source starter build/render/reopen evidence is specific to this revision.\",\n"
           ]
         },
         {
-          "start": 199,
-          "end": 202,
+          "start": 193,
+          "end": 196,
           "lines": [
             "    \"complete_catalog_index\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
             "    \"complete_catalog_index_sha256\": \"44fca8ffb2231ff5f1147673d671823f46068ce369aafae2eff68c13c6d711f0\",\n",
@@ -1309,106 +1308,90 @@
           ]
         },
         {
-          "start": 207,
-          "end": 209,
+          "start": 201,
+          "end": 203,
           "lines": [
             "    \"catalog_json\": \"ASSET_CATALOG.json\",\n",
             "    \"catalog_human\": \"ASSET_CATALOG.md\",\n"
           ]
         },
         {
-          "start": 210,
-          "end": 212,
+          "start": 204,
+          "end": 206,
           "lines": [
             "    \"license_map\": \"legal/ASSET_LICENSE_MAP.json\",\n",
             "    \"offline_license\": \"legal/CC0-1.0.txt\",\n"
           ]
         },
         {
-          "start": 220,
-          "end": 222,
-          "lines": [
-            "\n",
-            "\n"
-          ]
-        },
-        {
-          "start": 230,
-          "end": 232,
-          "lines": [
-            "      \"byte_length\": 3715,\n",
-            "      \"sha256\": \"7dcc9fa4e61749bba1687a04df053346a283954d8c7658a42798b18cab27b4de\"\n"
-          ]
-        },
-        {
-          "start": 234,
-          "end": 237,
+          "start": 228,
+          "end": 231,
           "lines": [
             "      \"path\": \"README.md\",\n",
             "      \"byte_length\": 6797,\n",
-            "      \"sha256\": \"4f349ef67a04668c08b9747583b06c92ad30587c675a7af3f9b0b46215e7ead8\"\n"
+            "      \"sha256\": \"2d13803ec11db38997726eeae93df33950eb5a56cfcb91ced90a0dac9b5b23f7\"\n"
           ]
         },
         {
-          "start": 239,
-          "end": 242,
+          "start": 233,
+          "end": 236,
           "lines": [
             "      \"path\": \"TOOLCHAIN.md\",\n",
             "      \"byte_length\": 8229,\n",
-            "      \"sha256\": \"873eee0849bdf5e6364ecab40cd8febf20c37bec75f6609c24e7c15b3e14ad33\"\n"
+            "      \"sha256\": \"b433c7945389cede730885afe93ca8aad36bbf778e6b9454ae3fe2fb71924ba9\"\n"
           ]
         },
         {
-          "start": 244,
-          "end": 247,
+          "start": 238,
+          "end": 241,
           "lines": [
             "      \"path\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
             "      \"byte_length\": 32887,\n",
-            "      \"sha256\": \"8f7b97f467070883c94b5a218a663c0943b62f0633b4bf424e9a78c56cc00d28\"\n"
+            "      \"sha256\": \"d36101ea30e06ca6bca87681472e2ba23bd3080af794946add6c1f0eb945bc77\"\n"
           ]
         },
         {
-          "start": 249,
-          "end": 250,
+          "start": 243,
+          "end": 244,
           "lines": [
             "      \"path\": \"contracts/README.md\",\n"
           ]
         },
         {
-          "start": 254,
-          "end": 257,
+          "start": 248,
+          "end": 251,
           "lines": [
             "      \"path\": \"tests/PublicSmoke/README.md\",\n",
             "      \"byte_length\": 3169,\n",
-            "      \"sha256\": \"29baaa4f6ea57935b42c8dd98ad117271a43165ef06624d45d9119877b6e80d8\"\n"
+            "      \"sha256\": \"4dd0b0aee5d4b607441a232a974b19143f53eeb55704b45c056c581039e75b92\"\n"
           ]
         },
         {
-          "start": 259,
-          "end": 260,
+          "start": 253,
+          "end": 254,
           "lines": [
             "      \"path\": \"project/Captain2DScaffold.uproject\",\n"
           ]
         },
         {
-          "start": 265,
-          "end": 267,
+          "start": 259,
+          "end": 261,
           "lines": [
             "      \"byte_length\": 23411,\n",
-            "      \"sha256\": \"b519586f2f1e7b2649cfb9635a9728834f3c24437d1095a87caf3cf22ee87103\"\n"
+            "      \"sha256\": \"962a97eb10eba5b75925c37ae612262a657b143f419afc9b36469c3720ff21fb\"\n"
           ]
         },
         {
-          "start": 270,
-          "end": 272,
+          "start": 264,
+          "end": 266,
           "lines": [
             "      \"byte_length\": 8465,\n",
             "      \"sha256\": \"76f469803318eab9a4f1b1ee1f741337ca7f2d15e10d5f424592a7d95e4d3d45\"\n"
           ]
         },
         {
-          "start": 274,
-          "end": 277,
+          "start": 268,
+          "end": 271,
           "lines": [
             "      \"path\": \"ASSET_CATALOG.json\",\n",
             "      \"byte_length\": 37941,\n",
@@ -1416,8 +1399,8 @@
           ]
         },
         {
-          "start": 279,
-          "end": 282,
+          "start": 273,
+          "end": 276,
           "lines": [
             "      \"path\": \"ASSET_CATALOG.md\",\n",
             "      \"byte_length\": 5353,\n",
@@ -1425,8 +1408,8 @@
           ]
         },
         {
-          "start": 289,
-          "end": 292,
+          "start": 283,
+          "end": 286,
           "lines": [
             "      \"path\": \"legal/ASSET_LICENSE_MAP.json\",\n",
             "      \"byte_length\": 3773,\n",
@@ -1434,33 +1417,33 @@
           ]
         },
         {
-          "start": 294,
-          "end": 295,
+          "start": 288,
+          "end": 289,
           "lines": [
             "      \"path\": \"legal/CC0-1.0.txt\",\n"
           ]
         },
         {
-          "start": 304,
-          "end": 307,
+          "start": 298,
+          "end": 301,
           "lines": [
             "      \"path\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
             "      \"byte_length\": 26463,\n",
-            "      \"sha256\": \"0765fa7725ab61cd685f9b90149920ea5882e3b2d33f0b0f21784493447d2922\"\n"
+            "      \"sha256\": \"34a1d63277acdfb7e6ea286a1268d14937db42d26bf3a8c4937b896b8a97c59f\"\n"
           ]
         },
         {
-          "start": 309,
-          "end": 312,
+          "start": 303,
+          "end": 306,
           "lines": [
             "      \"path\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n",
             "      \"byte_length\": 4451,\n",
-            "      \"sha256\": \"3f5d4c4221200fe6e78b87f45a1a4ee8669e2f47ca476153a6968f3f7ef89b6a\"\n"
+            "      \"sha256\": \"1da252487be92d8c7c8152a106439ca1584cb14fad37b39eb46c73e8a5b394f9\"\n"
           ]
         },
         {
-          "start": 314,
-          "end": 317,
+          "start": 308,
+          "end": 311,
           "lines": [
             "      \"path\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
             "      \"byte_length\": 3026,\n",
@@ -1468,31 +1451,31 @@
           ]
         },
         {
-          "start": 319,
-          "end": 320,
+          "start": 313,
+          "end": 314,
           "lines": [
             "      \"path\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
           ]
         },
         {
-          "start": 325,
-          "end": 327,
+          "start": 319,
+          "end": 321,
           "lines": [
             "      \"byte_length\": 2032,\n",
-            "      \"sha256\": \"963b6d6b254dbd7e890218bfb8f213d4d5e8bede64ef2e13bc2833af70684446\"\n"
+            "      \"sha256\": \"25a468aa1ddce0b8b0c1080a6de7f83c803978c981ca0879b9fe0b22c04558cc\"\n"
           ]
         },
         {
-          "start": 330,
-          "end": 332,
+          "start": 324,
+          "end": 326,
           "lines": [
             "      \"byte_length\": 30837,\n",
-            "      \"sha256\": \"9af9bc7ba2a6d94cbf9be50962b69f45a1cf37aeca7b978e7adeb6d585e2e879\"\n"
+            "      \"sha256\": \"7715bc675d4864f8a84219bbfbb77bbf343c4633af55751ed2f8df0258890d81\"\n"
           ]
         },
         {
-          "start": 344,
-          "end": 347,
+          "start": 338,
+          "end": 341,
           "lines": [
             "      \"path\": \"assets/map/README.md\",\n",
             "      \"byte_length\": 2294,\n",
@@ -1500,8 +1483,8 @@
           ]
         },
         {
-          "start": 349,
-          "end": 352,
+          "start": 343,
+          "end": 346,
           "lines": [
             "      \"path\": \"assets/map/room-layout.json\",\n",
             "      \"byte_length\": 124249,\n",
@@ -1509,13 +1492,15 @@
           ]
         },
         {
-          "start": 354,
-          "end": 355,
+          "start": 348,
+          "end": 349,
           "lines": [
             "      \"path\": \"assets/map/room-art-preview.png\",\n"
           ]
         }
-      ]
+      ],
+      "sha256": "0fdec9a8698dc61137ed5c3c2fe8411a0a88678ad74320cbec332b4360e1d9ec",
+      "published_sha256": "880469df9940d2fe43013ec6e489102ab4e348bd86eb1eb6b811e4191aa78452"
     },
     {
       "source": "contracts/game-state.schema.json",
@@ -1529,571 +1514,11 @@
       "sha256": "9a4bc1f7a2b517a701230174a6b17f3b51e62961ea1fabf69b7a88eee91a77ef",
       "published_sha256": "9a4bc1f7a2b517a701230174a6b17f3b51e62961ea1fabf69b7a88eee91a77ef"
     },
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
+    {
       "source": "GDD.md",
       "published": "GDD.md",
       "sha256": "b519586f2f1e7b2649cfb9635a9728834f3c24437d1095a87caf3cf22ee87103",
-      "published_sha256": "9bc8c292ceb6c81b1c2b6fb4d6bf8ee8cfb1dda0fb4d35b1992ad1a276e9821a",
+      "published_sha256": "62c6f59c186d90052a7ec92a299b6293cadd388ae8ae883a35cd23e6e656ee01",
       "restore_edits": [
         {
           "start": 139,
@@ -2119,56 +1544,8 @@
     {
       "source": "INITIAL_AGENT_PROMPT.md",
       "published": "INITIAL_AGENT_PROMPT.md",
-      "sha256": "7dcc9fa4e61749bba1687a04df053346a283954d8c7658a42798b18cab27b4de",
-      "published_sha256": "9116dc25951425d7fcc69d70cbdb10c4dfafd1080d9ffe9afbad43127758d5d2",
-      "restore_edits": [
-        {
-          "start": 2,
-          "end": 3,
-          "lines": [
-            "Implement the player-facing results in `GDD.md` using the answer-free Unreal project under `project/`. This public input defines the task and its engineering boundaries; it does not prescribe a model, generation framework, or implementation architecture.\n"
-          ]
-        },
-        {
-          "start": 9,
-          "end": 10,
-          "lines": [
-            "2. `README.md`\n"
-          ]
-        },
-        {
-          "start": 12,
-          "end": 16,
-          "lines": [
-            "5. `ASSET_CATALOG.md`\n",
-            "6. `TOOLCHAIN.md`\n",
-            "7. `UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md`\n",
-            "8. `contracts/README.md`\n"
-          ]
-        },
-        {
-          "start": 21,
-          "end": 22,
-          "lines": [
-            "- Start from `project/Captain2DScaffold.uproject`.\n"
-          ]
-        },
-        {
-          "start": 23,
-          "end": 25,
-          "lines": [
-            "- `project/` is the only writable root in this public input.\n",
-            "- All other public files are protected. You may read them and copy required source assets into `project/`, but do not modify or delete them.\n"
-          ]
-        },
-        {
-          "start": 48,
-          "end": 49,
-          "lines": [
-            "Leave the best runnable candidate in `project/` and report:\n"
-          ]
-        }
-      ]
+      "sha256": "87d826392f87e4de129355f04142e0f8094dc68145fe9dda2a8e423656f2baaf",
+      "published_sha256": "87d826392f87e4de129355f04142e0f8094dc68145fe9dda2a8e423656f2baaf"
     },
     {
       "source": "legal/ASSET_LICENSE_MAP.json",
@@ -2297,7 +1674,7 @@
       "source": "project/README.md",
       "published": "starter-project/README.md",
       "sha256": "1a790702a68329a4760c6bbc7768cfcf682e1467963de18d827c5830838c2ad4",
-      "published_sha256": "1a790702a68329a4760c6bbc7768cfcf682e1467963de18d827c5830838c2ad4"
+      "published_sha256": "6c35b8db38e4891af073d4a036fa6bc64e77a1b52cf37da2c1097af62f73f954"
     },
     {
       "source": "project/Source/Captain2DScaffold/Captain2DHealthState.cpp",
@@ -2362,9 +1739,7 @@
     {
       "source": "README.md",
       "published": "tools/INPUT_GUIDE.md",
-      
-
-"restore_edits": [
+      "restore_edits": [
         {
           "start": 9,
           "end": 10,
@@ -2467,9 +1842,7 @@
     {
       "source": "tests/PublicSmoke/Invoke-PublicSmoke.ps1",
       "published": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
-      
-
-"restore_edits": [
+      "restore_edits": [
         {
           "start": 34,
           "end": 35,
@@ -2519,7 +1892,7 @@
       "source": "tests/PublicSmoke/README.md",
       "published": "self-check/PublicSmoke/CONTRACT.md",
       "sha256": "29baaa4f6ea57935b42c8dd98ad117271a43165ef06624d45d9119877b6e80d8",
-      "published_sha256": "470e726f2ab6de9e062283bc59a1a68ef923affae45c89f60f9089729bbdb3a9",
+      "published_sha256": "362387a2fc9e0e964c717833f755d3eb3e370db7856b8be88d6e055efb26db20",
       "restore_edits": [
         {
           "start": 11,
@@ -2533,9 +1906,7 @@
     {
       "source": "tests/PublicSmoke/schemas/public-smoke-result.schema.json",
       "published": "self-check/PublicSmoke/schemas/public-smoke-result.schema.json",
-      
-
-"restore_edits": [
+      "restore_edits": [
         {
           "start": 2,
           "end": 3,
@@ -2577,7 +1948,7 @@
       "source": "TOOLCHAIN.md",
       "published": "tools/TOOLCHAIN.md",
       "sha256": "873eee0849bdf5e6364ecab40cd8febf20c37bec75f6609c24e7c15b3e14ad33",
-      "published_sha256": "55481ee728b29043053a5f8d1a6560ff4da1a685398b0b60f6f46bc046f16015",
+      "published_sha256": "11efbc5a725efc8c24a9ac90de2fb14ebbc323cfb2bb95d4eed5c2ad533088f8",
       "restore_edits": [
         {
           "start": 2,
@@ -2634,13 +2005,7 @@
         }
       ]
     },
-    
-
-
-
-
-
-{
+    {
       "source": "tools/Resolve-Unreal57.ps1",
       "published": "tools/Resolve-Unreal57.ps1",
       "sha256": "12581ab0254ec09162a8783b412a71951418e8eb9a38a6e9f137d4e9ead873c5",
@@ -2650,7 +2015,7 @@
       "source": "tools/Search-UnrealInterfaceCatalog.ps1",
       "published": "tools/Search-UnrealInterfaceCatalog.ps1",
       "sha256": "963b6d6b254dbd7e890218bfb8f213d4d5e8bede64ef2e13bc2833af70684446",
-      "published_sha256": "a35eaaa1fc13c0740c649c61b540c43056e0a3c6a4c90a6e7ad0fa7626519afa",
+      "published_sha256": "815ff8789757ea7cf01b3251c754b9146d9ef9b0986b27faa00065d59b2b36d8",
       "restore_edits": [
         {
           "start": 6,
@@ -2665,9 +2030,7 @@
     {
       "source": "tools/Test-PublicInput.ps1",
       "published": "tools/Test-PublicInput.ps1",
-      
-
-"restore_edits": [
+      "restore_edits": [
         {
           "start": 112,
           "end": 116,
@@ -2834,13 +2197,7 @@
         }
       ]
     },
-    
-
-
-
-
-
-{
+    {
       "source": "UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
       "published": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
       "sha256": "44fca8ffb2231ff5f1147673d671823f46068ce369aafae2eff68c13c6d711f0",
@@ -2865,7 +2222,7 @@
       "source": "UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md",
       "published": "tools/TOOL_GUIDE.md",
       "sha256": "8f7b97f467070883c94b5a218a663c0943b62f0633b4bf424e9a78c56cc00d28",
-      "published_sha256": "9eebd26ced937d6d737fa35cc9c8aa23016fccafa842f32e0136332f2d705d54",
+      "published_sha256": "ffd13065d626bd7454a10d27e75b71b7913659f30f66528526430b731215773e",
       "restore_edits": [
         {
           "start": 2,

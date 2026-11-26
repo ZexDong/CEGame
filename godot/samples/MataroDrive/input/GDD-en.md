@@ -39,7 +39,7 @@ Build a complete 2D car-platforming shell with fifteen story levels, level selec
 
 | Item | Starting state | Requirement |
 |---|---|---|
-| Project | Runnable Godot 4.7.1 starter with a visible placeholder | `ENTRY-01`, `QUALITY-01` |
+| Project | Runnable Godot starter with a visible placeholder | `ENTRY-01`, `QUALITY-01` |
 | Profile | Empty or previously saved profile loaded from the public save file | `PROGRESS-05` |
 | Story progress | No completed levels on a clean profile | `PROGRESS-02` |
 | Cash | `0` on a clean profile | `PROGRESS-01` |

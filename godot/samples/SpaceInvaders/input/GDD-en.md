@@ -36,7 +36,7 @@ Build a complete single-level fixed shooter: move a cannon along the bottom, fir
 
 | Item | Starting state | Requirement |
 |---|---|---|
-| Project entry | A runnable Godot 4.7.1 starter with a visible placeholder screen | `ENTRY-01`, `QUALITY-01` |
+| Project entry | A runnable Godot starter with a visible placeholder screen | `ENTRY-01`, `QUALITY-01` |
 | Gameplay | The target fixed-shooter flow is not implemented | All core requirements |
 | Player | A bottom cannon with three lives | `ENTRY-02`, `LIFE-01` |
 | Enemies | Forty active invaders arranged as five rows of eight | `FORMATION-01` |

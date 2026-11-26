@@ -1,6 +1,6 @@
 # Brick Challenge Tool Contract
 
-- Unity Editor: `6000.0.80f1`
+- Unity Editor: `Unity`
 - Unity CLI: `1.0.0-beta.3`
 - Input: New Input System package `1.19.0`
 - Entry Scene: `Assets/Scenes/BrickChallenge.unity`

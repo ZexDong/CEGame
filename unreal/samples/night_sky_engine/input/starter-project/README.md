@@ -1,6 +1,6 @@
 # Night Sky Duel Unreal Starter Project
 
-This is an Unreal Engine 5.7.4 Blank project with the required Manny skeletal mesh, Skeleton, and animation sequences preimported under `Content/Provided/Manny/`. It deliberately contains no Night Sky Duel gameplay.
+This is an Unreal Engine Blank project with the required Manny skeletal mesh, Skeleton, and animation sequences preimported under `Content/Provided/Manny/`. It deliberately contains no Night Sky Duel gameplay.
 
 The default entry draws a stable English starter screen and publishes two physically separate read-only snapshots when their paths are supplied:
 

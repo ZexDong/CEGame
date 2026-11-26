@@ -7,14 +7,9 @@
   "category": "Puzzle / physics",
   "engine": {
     "name": "Unreal Engine",
-    "version": "5.7.4",
-    "changelist": 51494982,
     "origin": "Unreal-native; no source-engine port"
   },
   "environment": {
-    "os": "Windows x64, build 10.0.26200.0",
-    "python": "3.12.13",
-    "powershell": "7.6.9",
     "runtime": "UnrealEditor -game",
     "setup_commands": [
       [
@@ -27,12 +22,13 @@
       ]
     ],
     "external_dependencies": [
-      "Licensed installation of the exact Unreal Engine build, Visual Studio C++ toolchain and Windows SDK required by that build.",
-      "Interactive Windows desktop for real input and capture.",
+      "Licensed installation of Unreal Engine and the required C++ build toolchain.",
+      "Interactive desktop for real input and capture.",
       "External visual review/API access as specified by the frozen D6 protocol; charges depend on provider."
     ],
     "credential_environment_variables": [
-      "NEWAPI_API_KEY"
+      "D6_API_KEY",
+      "OPENAI_API_KEY"
     ],
     "private_endpoint_included": false
   },
@@ -47,6 +43,13 @@
   ],
   "input": {
     "path": "input",
+    "export_command": [
+      "python",
+      "-B",
+      "input/self-check/check_package.py",
+      "--export-input",
+      "{new_directory}"
+    ],
     "prompt": "input/INITIAL_AGENT_PROMPT.md",
     "design": "input/GDD.md",
     "tools": "input/tools/TOOL_GUIDE.md",

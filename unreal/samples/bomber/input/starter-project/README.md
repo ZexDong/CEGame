@@ -1,6 +1,6 @@
 # Bomber Local Duel Starter Project
 
-Open `BomberStarter.uproject` with Unreal Engine 5.7.4.
+Open `BomberStarter.uproject` with Unreal Engine.
 
 This source-only starter intentionally contains no duel gameplay. It contains only:
 

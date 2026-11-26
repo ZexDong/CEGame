@@ -46,8 +46,8 @@ change gameplay, defeat enemies, force results, reset state, or load Scenes.
 ## Pinned tools
 
 ```text
-Unity Editor  D:\game\engine\unity\6000.0.80f1\Editor\Unity.exe
-Unity CLI     D:\game\engine\shared-tools\unity\cli\1.0.0-beta.3\unity.exe
+Unity Editor  $env:UNITY_EDITOR
+Unity CLI     $env:UNITY_CLI
 Input System  1.19.0
 URP           17.0.4
 uGUI          2.0.0
@@ -88,8 +88,8 @@ handling. Resolve the current project and pinned tools with:
 
 ```powershell
 $Project = (Get-Location).Path
-$Cli = 'D:\game\engine\shared-tools\unity\cli\1.0.0-beta.3\unity.exe'
-$Editor = 'D:\game\engine\unity\6000.0.80f1\Editor\Unity.exe'
+$Cli = $env:UNITY_CLI
+$Editor = $env:UNITY_EDITOR
 ```
 
 Every Unity command must use a new file under this project's `Logs/**` tree.

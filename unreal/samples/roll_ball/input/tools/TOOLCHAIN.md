@@ -6,8 +6,8 @@ This file is authoritative for task-specific engine, path, entry, and environmen
 
 | Item | Value |
 |---|---|
-| Engine | Unreal Engine 5.7.4, changelist 51494982 |
-| Platform | Windows x64 |
+| Engine | Unreal Engine, configured engine build |
+| Platform | desktop |
 | Runtime mode | Independent `editor_game` window |
 | Editor target | `RollBallStarterEditor Win64 Development` |
 | Project root | `starter-project/` |
@@ -22,7 +22,7 @@ This file is authoritative for task-specific engine, path, entry, and environmen
 | Viewport | 1280 x 720 client area, windowed |
 | Application scale | 1.0 |
 | Marketplace plugins | Not supplied and not required |
-| Shell | PowerShell 7 or later |
+| Shell | shell or later |
 
 ## Engine discovery (required before Build/Open/Run)
 
@@ -33,7 +33,7 @@ $engineInfo = pwsh -NoProfile -File tools/Resolve-Unreal57.ps1
 $engine = ($engineInfo | ConvertFrom-Json).engine_root
 ```
 
-To use a launcher-provided or manually selected path, pass `-EngineRoot <path>` or set `UE_5_7_ROOT`. The resolver checks `Engine/Build/Build.version`, `UnrealEditor.exe`, `UnrealEditor-Cmd.exe`, and `Build.bat`, and rejects every version other than UE 5.7.4 CL 51494982. If it fails, record the environment block; do not open the project with another engine. The `.uproject` `EngineAssociation` value identifies the 5.7 line but does not prove the 5.7.4 patch.
+To use a launcher-provided or manually selected path, pass `-EngineRoot <path>` or set `UE_5_7_ROOT`. The resolver checks `Engine/Build/Build.version`, `UnrealEditor.exe`, `UnrealEditor-Cmd.exe`, and `Build.bat`, and rejects every version other than Unreal Engine CL configured-build. If it fails, record the environment block; do not open the project with another engine. The `.uproject` `EngineAssociation` value identifies the 5.7 line but does not prove the Unreal patch.
 
 The release contains the starter project plus a small cataloged raw visual mesh kit. It does not contain an assembled map, gameplay Blueprint, gameplay binary, or generated build output. Unreal-generated `Binaries/`, `Intermediate/`, `Saved/`, `DerivedDataCache/`, IDE state, logs, captures, and packages are not release inputs.
 
@@ -43,8 +43,8 @@ The release contains the starter project plus a small cataloged raw visual mesh 
 |---|---|
 | `<input>` | This public input copy |
 | `<project>` | `<input>/project` |
-| `<engine-root>` | Launcher-selected Unreal Engine 5.7.4 root |
-| `<benchmark-tools-root>` | Launcher-provided root containing `engine/unreal-5.7.4/` |
+| `<engine-root>` | Launcher-selected Unreal Engine root |
+| `<benchmark-tools-root>` | Launcher-provided root containing `engine/unreal-Unreal/` |
 | `<run-root>` | Fresh launcher-owned evidence directory outside `<input>` |
 
 Never replace these placeholders in a committed file with a host absolute path.
@@ -61,8 +61,8 @@ Never replace these placeholders in a committed file with a host absolute path.
 ## Public runtime entry
 
 ```powershell
-Import-Module "<benchmark-tools-root>/engine/unreal-5.7.4/executor/UnrealEvaluationExecutor.psm1" -Force
-Import-Module "<benchmark-tools-root>/engine/unreal-5.7.4/observer/UnrealEvaluationObserver.psm1" -Force
+Import-Module "<benchmark-tools-root>/engine/unreal-Unreal/executor/UnrealEvaluationExecutor.psm1" -Force
+Import-Module "<benchmark-tools-root>/engine/unreal-Unreal/observer/UnrealEvaluationObserver.psm1" -Force
 ```
 
 Use `Start-UnrealEvaluationSession` with the project file, a fresh run root, an engine-health state path, the selected engine root, and a 1280 x 720 window. The starter itself is checked with `-ObserverDisabledControl`. A completed candidate must additionally receive:

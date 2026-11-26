@@ -1,1 +1,1 @@
-# Python standard library; PowerShell 7 and pinned Unity/CLI are external tools.
+# Python standard library; Unity Editor and Unity CLI are external tools.

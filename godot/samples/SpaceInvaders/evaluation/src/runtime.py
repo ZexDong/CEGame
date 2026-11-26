@@ -145,7 +145,26 @@ def condition_outcomes(events, authored, required_slots):
         if (not observed or type(passed) is not bool
                 or not dashboard_well_formed(event.get("after", {}).get("snapshot", {}), required_slots)):
             continue
-        if check["scoring"] == "automatic" or not passed:
+        if check["scoring"] == "toggle":
+            pair = events[index:index + 2]
+            for offset, item in enumerate(pair):
+                before = item.get("before", {}).get("snapshot", {})
+                after = item.get("after", {}).get("snapshot", {})
+                if (item.get("status") != "ok" or item.get("route") != "godot_engine_input"
+                        or not event.get("session_id") or item.get("session_id") != event["session_id"]
+                        or not event.get("pid") or item.get("pid") != event["pid"]
+                        or item.get("trajectory") != event["trajectory"] or item.get("step") != event["step"] + offset
+                        or item.get("action", {}).get("do") != "press" or item["action"].get("key") != "ESCAPE"
+                        or not all(dashboard_well_formed(v, required_slots) for v in (before, after))
+                        or before["phase"] != check["phases"][offset]):
+                    break
+                if after["phase"] != check["phases"][offset + 1]:
+                    yield check, False, index + offset
+                    break
+            else:
+                if len(pair) == 2:
+                    yield check, True, index + 1
+        elif check["scoring"] == "automatic" or not passed:
             yield check, passed, index
 
 
@@ -189,7 +208,8 @@ def collect(evaluation, meta, args, output):
     completed_reports = set()
     script_path = evaluation / "checkpoint-script.json"
     script_hash = digest(script_path)
-    trajectories = load(script_path)["trajectories"]
+    script = load(script_path)
+    trajectories = script["trajectories"]
     if args.trajectory:
         trajectories = [t for t in trajectories if t["id"] == args.trajectory]
         if not trajectories:
@@ -231,7 +251,7 @@ def collect(evaluation, meta, args, output):
     for trajectory in trajectories:
         for index, step in enumerate(trajectory["steps"]):
             check = step.get("check", {})
-            if check.get("scoring") not in {"automatic", "prerequisite"}:
+            if check.get("scoring") not in {"automatic", "prerequisite", "toggle"}:
                 continue
             rule = rule_by_id[check["id"]]
             if (rule["dimension"] not in {"D2", "D3", "D4", "D5"}
@@ -258,7 +278,6 @@ def collect(evaluation, meta, args, output):
     write(evidence / "runtime-summary.json", {
         "reports": reports, "snapshots": len(snapshots), "images": images,
         "dashboard_well_formed": well_formed,
-        "engine_version": (native / version["stdout"]).read_text(encoding="utf-8", errors="replace").strip(),
         "engine_error": _engine_errors(native, receipts),
         "processes": receipts, "headless": args.headless})
     d1_ok = [
@@ -285,24 +304,12 @@ def collect(evaluation, meta, args, output):
         else:
             checks.append(check_row(definition, "inconclusive_evaluator", None,
                                     ["evidence/runtime-summary.json"],
-                                    "Review the requirement using collected evidence"))
+                                    "Checkpoint condition not observed during collection"))
     write(evidence / "initial-checks.json", checks)
-    write(output / "review-template.json", {
-        "protocol": "godot-evidence-review/v1", "sample_id": meta["sample_id"],
-        "run_id": run_id(output), "bundle_hash": digest(evidence / "bindings.json"),
-        "collection_hash": None, "reviewer": "",
-        "checks": [{"id": r["id"], "verdict": None, "reason": "",
-                    "requirements": [{"id": k, "verdict": None, "evidence": [], "reason": ""}
-                                     for k in r["requirement_ids"]]}
-                   for r in checks if r["score"] is None],
-    })
     # Seal only observed evidence, excluding mutable review and score documents.
     seal = {p.relative_to(output).as_posix(): digest(p) for p in evidence.rglob("*") if p.is_file()}
     write(evidence / "collection-manifest.json", seal)
-    template = load(output / "review-template.json")
-    template["collection_hash"] = digest(evidence / "collection-manifest.json")
-    write(output / "review-template.json", template)
-    return summarize(meta, run_id(output), checks, "Collection finished; complete the evidence review")
+    return summarize(meta, run_id(output), checks, "Collection finished with unresolved checkpoints")
 
 
 def finalize(evaluation, meta, args, output):
@@ -317,7 +324,8 @@ def finalize(evaluation, meta, args, output):
         raise ValueError("Submitted source changed during collection")
     runtime = load(evidence / "runtime-summary.json")
     if not args.review:
-        raise ValueError("--review is required for finalize")
+        return summarize(meta, run_id(output), load(evidence / "initial-checks.json"),
+                         "Only resolved execution checkpoints have scores.")
     review = load(args.review)
     if (review.get("protocol") != "godot-evidence-review/v1"
             or review.get("sample_id") != meta["sample_id"]
@@ -379,7 +387,13 @@ def finalize(evaluation, meta, args, output):
             for row in checks if row["dimension"] in {"D2", "D3", "D4"}):
         raise ValueError("Positive gameplay scores require the public dashboard observations")
     write(output / "review.json", review)
-    return summarize(meta, run_id(output), checks, "Some requirements remain inconclusive")
+    # Retain the reviewed assessment separately from the execution scorecard.
+    result = summarize(meta, run_id(output), load(evidence / "initial-checks.json"),
+                       "Some checkpoints lack an executable predicate or a registered visual comparison.")
+    result["extensions"] = {"supplemental_review": {"evidence": "review.json", "checks": [
+        {"id": row["id"], "score": row["score"], "evidence": row["evidence"]}
+        for row in checks if row["id"] in expected]}}
+    return result
 
 
 def main(evaluation=None):
@@ -392,7 +406,7 @@ def main(evaluation=None):
     parser.add_argument("--review", type=Path)
     parser.add_argument("--trajectory")
     parser.add_argument("--interactive-seconds", type=int, default=0,
-                        help="Collect a human-played session through normal input")
+                        help="Collect an interactive session through normal input")
     parser.add_argument("--headless", action="store_true", help="No visual evidence; D6 remains pending")
     parser.add_argument("--timeout", type=int, default=600)
     args = parser.parse_args()
@@ -428,7 +442,12 @@ def main(evaluation=None):
         checks = [check_row(d, "inconclusive_evaluator", None, ["evidence/error.json"], str(exc))
                   for d in definitions]
         result = summarize(meta, run_id(output), checks, str(exc), infrastructure=True)
-    from validate_score import validate
+    from validate_score import apply_scorecard, validate
+    observations = {}
+    summary = output / "evidence/runtime-summary.json"
+    if result["classification"] != "infrastructure_failure" and summary.is_file():
+        observations = load(summary).get("outcome_observations", {})
+    apply_scorecard(result, observations)
     validate(result, output, check_evidence=True)
     write(output / "score.json", result)
     print(json.dumps({"classification": result["classification"],

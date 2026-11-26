@@ -7,11 +7,11 @@ All engines share README, LICENSE, FORMAT, catalog, template, and samples.
 The template contains empty placeholder files with instructions in its root README.
 
 sample.json.input indexes the tools, assets, starter project, public interfaces, and self-checks for each task.
-Supply an independent input copy during generation; access evaluation during assessment.
+Supply an independent input copy during generation. For packages with `input.export_command` in `sample.json`, run that command to include the shared interface catalog.
 
 ## Requirements
 
-Windows interactive desktop, PowerShell 7, Python 3.12.13, and matching Visual Studio C++ tools and Windows SDK. See sample.json for each task engine version.
+Use an interactive desktop with Python and the Unreal Engine toolchain required by the task.
 
 Run from any sample directory:
 
@@ -25,7 +25,7 @@ output-template is unexecuted with null scores.
 
 ## Candidate evaluation
 
-Run from the sample directory. Write results to a new directory outside the sample and candidate. Short output paths are recommended on Windows.
+Run from the sample directory. Write results to a new directory outside the sample and candidate.
 
 ```text
 python -B evaluation/evaluate.py --project "<returned-input-or-project-or-uproject>" --output "<new-output>" --engine "<engine-root>"
@@ -34,7 +34,7 @@ python -B evaluation/validate_score.py --score "<result>/score.json" --check-evi
 
 ## Native steps and visual protocol
 
---phase stage reconstructs dependencies and an isolated project without launching the game; exit code 3 (incomplete) and null scores are expected. After collect, complete actual visual/semantic reviews using evaluation/d6 and src/native/scripts, then run --phase finalize in the same result directory with --review or --d6 as needed. Some collectors require independent precondition mappings through --adapter; unknown source layouts are evaluator faults. src/native/tests contains native gameplay tests for the reconstructed workspace. evaluation/tests contains distribution regressions requiring no editor.
+--phase stage reconstructs dependencies and an isolated project without launching the game; exit code 3 (incomplete) and null scores are expected. After collect, run --phase finalize in the same result directory with --d6 to integrate bound visual evidence. src/native/tests contains native gameplay tests for the reconstructed workspace. evaluation/tests contains distribution regressions requiring no editor.
 
 ## Results and assets
 

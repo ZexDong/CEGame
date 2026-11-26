@@ -1,6 +1,6 @@
 # Captain2D Unreal Starter Project
 
-This is a source-only Unreal Engine 5.7.4 Blank project. It deliberately contains no Captain2D gameplay and no imported game asset.
+This is a source-only Unreal Engine Blank project. It deliberately contains no Captain2D gameplay and no imported game asset.
 
 The default entry draws a stable English starter screen and publishes two physically separate read-only snapshots when their paths are supplied:
 

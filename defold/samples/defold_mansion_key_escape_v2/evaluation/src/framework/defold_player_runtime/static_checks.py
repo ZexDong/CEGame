@@ -24,11 +24,21 @@ from framework.defold_player_runtime.player import DashboardReader
 from framework.defold_player_runtime.runtime_errors import candidate_runtime_error_line
 
 
-DEFOLD_JAR = Path(
-    "/Applications/Defold.app/Contents/Resources/packages/"
-    "defold-f735c12192bf95684e6ae1ae27c400b8170fc6d8.jar"
-)
-DEFOLD_JAVA = Path("/Applications/Defold.app/Contents/Resources/packages/jdk-25+36/bin/java")
+def defold_build_tools():
+    packages = os.environ.get("DEFOLD_PACKAGES")
+
+    def tool(variable, pattern):
+        explicit = os.environ.get(variable)
+        if explicit and Path(explicit).is_file():
+            return Path(explicit).resolve()
+        matches = sorted(Path(packages).glob(pattern)) if packages and not explicit else []
+        if len(matches) == 1 and matches[0].is_file():
+            return matches[0].resolve()
+        raise RuntimeError(f"Set {variable} to the installed tool, or select a unique match via DEFOLD_PACKAGES")
+
+    return tool("DEFOLD_JAVA", "jdk*/bin/java"), tool("DEFOLD_BOB_JAR", "defold-*.jar")
+
+
 HOST_ERROR_MARKERS = (
     "Vulkan is not supported on this device",
     "Could not install a graphics adapter",
@@ -139,10 +149,11 @@ def run(project: Path, naming_path: Path, output: Path, smoke_timeout_s: float) 
     checks.append(check("D1_PROJECT_ENTRY", project_file.is_file(), str(project_file)))
 
     build_log = output / "build.log"
+    java, jar = defold_build_tools()
     command = [
-        str(DEFOLD_JAVA),
+        str(java),
         "-cp",
-        str(DEFOLD_JAR),
+        str(jar),
         "com.dynamo.bob.Bob",
         "--root",
         ".",

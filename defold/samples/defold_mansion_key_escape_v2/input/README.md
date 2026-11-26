@@ -10,7 +10,7 @@ Read:
 3. `DASHBOARD_SPEC.md` — the shared read-only state format;
 4. `naming-tables.json` — the exact Mansion slot, entity, and control names;
 5. `dashboard-snapshot.schema.json` and `naming-tables.schema.json` — the two public JSON schemas;
-6. `DEFOLD_ENGINE_INTERFACE_GUIDE.md` — verified Defold 1.13.0 engineering interfaces;
+6. `DEFOLD_ENGINE_INTERFACE_GUIDE.md` — verified Defold engineering interfaces;
 7. `TOOLCHAIN.md` — this task's project entry, normal keyboard input, coordinate space, and
    Dashboard transport;
 8. `assets/ASSET_MANIFEST.md`, `reference/README.md`, and `legal/UPSTREAM_MIT_LICENSE.txt` —

@@ -1,6 +1,6 @@
 # BoneMaze unfinished starter
 
-Open BoneMaze.uproject with UE 5.7.4. The native starter displays a health screen and
+Open BoneMaze.uproject with Unreal Engine. The native starter displays a health screen and
 publishes an honest not_ready observation. Space checks input delivery. It contains
 no maze, character controller, monster, pickup rules, doors, game menu or end states.
 

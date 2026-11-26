@@ -18,8 +18,8 @@ pwsh -NoProfile -File self-check/PublicSmoke/Invoke-PublicSmoke.ps1 `
 
 The launcher must provide:
 
-- Unreal Engine 5.7.4 at `<engine-root>`;
-- the repository public Unreal capability contract, validation summary, executor, executor native interop source, observer, operation-result schema, and state-snapshot schema under `<benchmark-tools-root>/engine/unreal-5.7.4/`, with SHA-256 identities matching `BENCHMARK_MANIFEST.json`;
+- Unreal Engine at `<engine-root>`;
+- the repository public Unreal capability contract, validation summary, executor, executor native interop source, observer, operation-result schema, and state-snapshot schema under `<benchmark-tools-root>/engine/unreal-Unreal/`, with SHA-256 identities matching `BENCHMARK_MANIFEST.json`;
 - a Windows interactive desktop suitable for a 1280 x 720 game client; and
 - a fresh run root that can contain logs, state, receipts, and captures.
 

@@ -35,7 +35,7 @@ Create a Grassland tower defense game that retains the core experience of the or
 
 | Item | Starting State | Corresponding Requirement |
 |---|---|---|
-| Project | Launchable Godot 4.7.1 showcase project | `QUALITY-01` |
+| Project | Launchable Godot showcase project | `QUALITY-01` |
 | Gameplay | No playable target tower-defense flow yet | All gameplay requirements in this task |
 | Public content | GDD, tool instructions, task assets, procedural-effect mapping, and licenses | `ASSET-01`–`ASSET-05` |
 | Entry | Only a placeholder screen that does not constitute a proper menu | `ENTRY-01` |

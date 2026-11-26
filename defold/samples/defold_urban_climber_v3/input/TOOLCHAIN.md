@@ -2,17 +2,17 @@
 
 ## Entry and build
 
-Open [starter_project/game.project](starter_project/game.project) in Defold 1.13.0.
+Open [starter_project/game.project](starter_project/game.project) in Defold.
 The bootstrap is `/main/main.collection` and the game view is 960 × 540.
 The starter has no external library dependency and intentionally opens an empty window.
 
 The verified Bob/JDK paths, build commands, executable discovery, and exact-process shutdown
 are in [DEFOLD_ENGINE_INTERFACE_GUIDE.md](DEFOLD_ENGINE_INTERFACE_GUIDE.md). For example, from
-`starter_project/` on the supplied macOS environment:
+`starter_project/` on the supplied native desktop environment:
 
 ```bash
-DEFOLD_JAR="/Applications/Defold.app/Contents/Resources/packages/defold-f735c12192bf95684e6ae1ae27c400b8170fc6d8.jar"
-DEFOLD_JAVA="/Applications/Defold.app/Contents/Resources/packages/jdk-25+36/bin/java"
+DEFOLD_JAR="${DEFOLD_BOB_JAR:?Set DEFOLD_BOB_JAR to the installed Bob JAR}"
+: "${DEFOLD_JAVA:?Set DEFOLD_JAVA to the installed Java executable}"
 "$DEFOLD_JAVA" -cp "$DEFOLD_JAR" com.dynamo.bob.Bob \
   --root . --platform arm64-macos --variant debug --archive \
   resolve distclean build bundle

@@ -1,6 +1,6 @@
 # Chomp: Neon Maze Chase
 
-Supply an independent copy of `input/` during generation; use `evaluation/` during assessment.
+Prepare the independent generation input with `python -B input/self-check/check_package.py --export-input <new-directory>` to include the shared interface catalog.
 
 ## File locations
 

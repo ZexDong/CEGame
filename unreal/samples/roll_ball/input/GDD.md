@@ -40,7 +40,7 @@ The public task is one bounded fixed-board experience. It does not define or dep
 
 | Item | Starting state | Acceptance requirement |
 |---|---|---|
-| Project entry | `starter-project/RollBallStarter.uproject` opens with Unreal Engine 5.7.4. | `QUALITY-01` |
+| Project entry | `starter-project/RollBallStarter.uproject` opens with Unreal Engine. | `QUALITY-01` |
 | Fixed maze data | The 10x10 layout, wall connectivity, start cell, exit cell, and trap cells are present as public immutable data and an inert preview. | `LAYOUT-01`, `LAYOUT-02` |
 | Supplied visual kit | The supplied board floor, board trap-hole, board wall, and ball static meshes are present as raw public content but are not assembled into gameplay. | `LAYOUT-01`, `MOVEMENT-02` |
 | Player object | No playable ball pawn exists. | `MOVEMENT-01`, `MOVEMENT-02` |

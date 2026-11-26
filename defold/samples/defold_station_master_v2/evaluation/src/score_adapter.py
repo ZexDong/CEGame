@@ -94,6 +94,30 @@ def convert(evaluation, output, meta, reason="", infrastructure=False):
                        "score": points, "status": state, "reason": why,
                        "blocked_by": [], "evidence": evidence})
 
+    outcome_observations = {}
+    if not infrastructure:
+        if isinstance(native.get("outcome_observations"), dict):
+            outcome_observations.update(native["outcome_observations"])
+        if "journey" not in outcome_observations:
+            j_checks = [c for c in checks if c["id"] in ('D4_SUCCESS_FLOW',)]
+            if j_checks:
+                if any(c["status"] == "fail" for c in j_checks):
+                    ev = sorted({ref for c in j_checks if c["status"] == "fail" for ref in c["evidence"]})
+                    if ev:
+                        outcome_observations["journey"] = {"value": 0, "evidence": ev}
+                elif all(c["status"] == "pass" for c in j_checks):
+                    ev = sorted({ref for c in j_checks for ref in c["evidence"]})
+                    if ev:
+                        outcome_observations["journey"] = {"value": 1, "evidence": ev}
+        if "lifecycle" not in outcome_observations:
+            failed = [c for c in checks if c["dimension"] == "D4"
+                      and any(tok in c["id"].upper() for tok in ("RETRY", "REOPEN", "RESET", "RESTART"))
+                      and c["status"] == "fail"]
+            if failed:
+                outcome_observations["lifecycle"] = {
+                    "value": 0, "evidence": sorted({ref for c in failed for ref in c["evidence"]}),
+                }
+
     # Native completion caps are explicit fixed task rules. Preserve their total
     # by allocating any reduction over the positively credited checkpoints.
     raw = sum(c["score"] for c in checks if c["score"] is not None)
@@ -129,6 +153,6 @@ def convert(evaluation, output, meta, reason="", infrastructure=False):
         "reason": reason or native.get("reason") or "Functional collection finished; D6 review is required.",
         "dimensions": dimensions, "checks": checks, "coverage_evidence": [],
         "final_score": None, "max_score": 100,
-        "extensions": {"native_status": status, "native_nonvisual_score": capped,
+        "extensions": {"outcome_observations": outcome_observations, "native_status": status, "native_nonvisual_score": capped,
                        "raw_functional_score": round(raw, 6), "triggered_score_caps": caps},
     }

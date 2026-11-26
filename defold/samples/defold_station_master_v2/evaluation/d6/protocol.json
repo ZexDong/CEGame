@@ -14,7 +14,7 @@
     "input/reference_images/original_module_and_panel.png",
     "input/reference_images/original_opening.png"
   ],
-  "judge_model": "gpt-4o",
+  "judge_model": "gpt-5.6-sol",
   "judge_settings": {
     "temperature": 0,
     "top_p": 1
@@ -38,7 +38,7 @@
   "review_input": {
     "candidate_sha256": "From evidence/binding.json",
     "reference_hashes": "The references object from evidence/binding.json",
-    "model": "gpt-4o",
+    "model": "gpt-5.6-sol",
     "settings": {
       "temperature": 0,
       "top_p": 1
@@ -65,6 +65,7 @@
     "state",
     "candidate_sha256",
     "image_sha256",
+    "reference_sha256",
     "reference_hashes",
     "scores",
     "rationale",

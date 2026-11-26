@@ -6,12 +6,10 @@
   "benchmark_id": "godot.space_invaders_first_level.v1",
   "title": "Space Invaders - First Level",
   "engine": {
-    "name": "Godot",
-    "version": "4.7.1.stable.official.a13da4feb"
+    "name": "Godot"
   },
   "environment": {
-    "os": "Windows (Godot editor + headless)",
-    "runtime": "GDScript on Godot 4.7.1.stable.official.a13da4feb",
+    "runtime": "GDScript",
     "setup_commands": [],
     "credential_environment_variables": []
   },

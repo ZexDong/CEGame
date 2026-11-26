@@ -1,7 +1,7 @@
 # Public reference pages
 
 This directory contains 11 page states captured from frozen Gold running at a `960×540` logical
-canvas. They are macOS Retina window captures sized `1920×1144`, and the top may include the title
+canvas. They are native desktop Retina window captures sized `1920×1144`, and the top may include the title
 bar. GDD game coordinates still use the `960×540` client area with a bottom-left origin.
 
 | File | State |

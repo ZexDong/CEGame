@@ -1,4 +1,4 @@
-# Unreal Engine 5.7.4 Benchmark Tool Guide
+# Unreal Engine Benchmark Tool Guide
 
 This is the task's public, single-interface guide for the published Unreal benchmark surface. It documents the interfaces a scaffold may call independently; it is not a gameplay recipe, evaluator, score definition, or reference implementation. The task-specific project parameters remain in `tools/TOOLCHAIN.md`, and gameplay acceptance remains solely in `GDD.md` Section 6.
 
@@ -6,15 +6,15 @@ This is the task's public, single-interface guide for the published Unreal bench
 
 | Field | Value |
 |---|---|
-| Engine | Unreal Engine 5.7.4 |
-| Platform | Windows x64 |
+| Engine | Unreal Engine |
+| Platform | desktop |
 | Runtime mode | Independent `editor_game` window |
-| Capability contract | `engine/unreal-5.7.4/CAPABILITIES.md`, contract `1.0.0` |
-| Executor module | `engine/unreal-5.7.4/executor/UnrealEvaluationExecutor.psm1` |
-| Executor native interop | `engine/unreal-5.7.4/executor/Private/WindowsEvaluationNative.cs`, interop `1.1.0` |
-| Observer module | `engine/unreal-5.7.4/observer/UnrealEvaluationObserver.psm1` |
-| Operation envelope | `engine/unreal-5.7.4/executor/schemas/operation-result.schema.json` |
-| State schema | `engine/unreal-5.7.4/executor/schemas/state-snapshot.schema.json` |
+| Capability contract | `engine/unreal-Unreal/CAPABILITIES.md`, contract `1.0.0` |
+| Executor module | `engine/unreal-Unreal/executor/UnrealEvaluationExecutor.psm1` |
+| Executor native interop | `engine/unreal-Unreal/executor/Private/WindowsEvaluationNative.cs`, interop `1.1.0` |
+| Observer module | `engine/unreal-Unreal/observer/UnrealEvaluationObserver.psm1` |
+| Operation envelope | `engine/unreal-Unreal/executor/schemas/operation-result.schema.json` |
+| State schema | `engine/unreal-Unreal/executor/schemas/state-snapshot.schema.json` |
 | Compiler binding | v143 toolset `14.44.35228`; MSVC `19.44.35223` |
 
 A launcher must resolve the `<benchmark-tools-root>` placeholder to a copy of the repository containing the published engine modules. Do not commit a host-specific replacement.
@@ -33,7 +33,7 @@ The executor owns one active input lease. Callers must release every held key or
 
 **Parameters:** Required `ProjectPath:string`, `RunRoot:string`; provide `StatePath:string` (inside `RunRoot`), and one engine selector: `EngineReference:object`, `EngineRoot:string`, or `EditorPath:string`. Optional `LauncherManifestPath:string`, `ProcessToken:string`, `WindowWidth:int=1280` (320–16384), `WindowHeight:int=720` (240–16384), `TimeoutMs:int=60000` (1000–300000), `FocusTimeoutMs:int=1500` (0–10000), `ObserverDisabledControl:switch`, and `AdditionalArguments:string[]`.
 
-**Preconditions:** Windows, a valid `.uproject`, a new run root, a resolvable UE 5.7.4 editor, and neutral controlled keyboard/pointer state. The state parent must already exist and be inside the run root. For this task, pass `-EvalGameStatePath=<run-root>/state/duel-state.json` and `-ForceRes` as additional arguments; the task path must differ from `StatePath`, and `-ForceRes` applies the requested client size.
+**Preconditions:** Windows, a valid `.uproject`, a new run root, a resolvable Unreal Engine editor, and neutral controlled keyboard/pointer state. The state parent must already exist and be inside the run root. For this task, pass `-EvalGameStatePath=<run-root>/state/duel-state.json` and `-ForceRes` as additional arguments; the task path must differ from `StatePath`, and `-ForceRes` applies the requested client size.
 
 **Result:** The common envelope with `result.session`, `session_id`, `process_id`, `process_token`, `window_handle_token`, `client_size`, `coordinate_space`, `window_dpi`, `state_path`, `initial_snapshot_id`, `initial_round_id`, `state_first_frame_confirmed`, `stable_visible_frame_confirmed`, `launch_mode`, and process containment information.
 
@@ -461,7 +461,7 @@ $reopen = Reopen-UnrealEvaluationSession -Session $session
 
 **Parameters:** Positional target `NightSkyDuelScaffoldEditor`, platform `Win64`, configuration `Development`, project `<input>/starter-project/NightSkyDuelScaffold.uproject`; switches `-WaitMutex` and `-NoHotReloadFromIDE`.
 
-**Preconditions:** UE 5.7.4 with its supported Windows C++ toolchain, a writable project root, and a project path short enough for generated Windows action paths.
+**Preconditions:** Unreal Engine with its supported Windows C++ toolchain, a writable project root, and a project path short enough for generated Windows action paths.
 
 **Result:** Process exit code and standard output. Exit code `0` means the requested build completed; any other code requires inspection of the build output.
 
@@ -489,7 +489,7 @@ $reopen = Reopen-UnrealEvaluationSession -Session $session
 
 **Parameters:** Project path followed by `-run=DataValidation -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput`.
 
-**Preconditions:** A built or loadable UE 5.7.4 project and a writable generated-output area.
+**Preconditions:** A built or loadable Unreal Engine project and a writable generated-output area.
 
 **Result:** Process exit code and commandlet log. Exit code `0` with no validation error marker is the healthy command result.
 
@@ -516,7 +516,7 @@ $reopen = Reopen-UnrealEvaluationSession -Session $session
 
 **Parameters:** Project path, `-run=Cook`, `-TargetPlatform=Windows`, one public map selection such as `-Map=/Engine/Maps/Entry`, and `-unattended -nop4 -nosplash -stdout -FullStdOutLogOutput`.
 
-**Preconditions:** A loadable UE 5.7.4 project, a valid selected map or configured candidate default map, and writable Cook output outside protected public files.
+**Preconditions:** A loadable Unreal Engine project, a valid selected map or configured candidate default map, and writable Cook output outside protected public files.
 
 **Result:** Process exit code and Cook log. Exit code `0` with no Cook failure or fatal marker is the healthy command result.
 
@@ -544,7 +544,7 @@ $reopen = Reopen-UnrealEvaluationSession -Session $session
 
 **Parameters:** Project path; `-NoP4`; `-Platform=Win64`; `-ClientConfig=Development`; `-Build`; `-Cook`; `-Stage`; `-Pak`; `-Package`; `-Archive`; a fresh private `-ArchiveDirectory`; and `-UTF8Output`.
 
-**Preconditions:** The UE 5.7.4 project and supported Windows toolchain are available. The project root and private archive destination are writable, and the destination is outside protected public input.
+**Preconditions:** The Unreal Engine project and supported Windows toolchain are available. The project root and private archive destination are writable, and the destination is outside protected public input.
 
 **Result:** AutomationTool exit code, build/cook/stage/package log, and a Win64 archive. Exit code `0` with `BUILD SUCCESSFUL` is the healthy command result.
 
@@ -573,7 +573,7 @@ $reopen = Reopen-UnrealEvaluationSession -Session $session
 
 **Parameters:** Required `InputRoot`, `EngineRoot`, `BenchmarkToolsRoot`, and a new or empty `RunRoot` outside the input.
 
-**Preconditions:** A frozen release input or candidate copy, UE 5.7.4, the exact public executor/observer modules, an interactive Windows desktop, and a short fresh run path.
+**Preconditions:** A frozen release input or candidate copy, Unreal Engine, the exact public executor/observer modules, an Interactive desktop, and a short fresh run path.
 
 **Result:** Exit code `0`, `1`, or `2` plus `<run-root>/public-smoke-result.json` following the published result schema.
 

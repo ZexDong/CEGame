@@ -66,13 +66,12 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--raw',type=Path,required=True);p.add_argument('--output',type=Path,required=True)
     p.add_argument('--resume',type=Path,help='Reuse unchanged compared pairs from a prior result; scorer revalidates every receipt.')
     p.add_argument('--base-url',default=os.environ.get('CAPTAIN_VLM_BASE_URL'));p.add_argument('--model',default=os.environ.get('CAPTAIN_VLM_MODEL'))
-    p.add_argument('--key-env',default='NEWAPI_API_KEY');a=p.parse_args()
+    p.add_argument('--key-env',default='OPENAI_API_KEY');a=p.parse_args()
     raw=load(a.raw);valid_raw(raw);root=a.raw.resolve().parent;d6=ROOT/'d6'
     manifest_path=d6/'reference-manifest.json';m=load(manifest_path)
     # Model selection is caller-configured for this evaluation revision.  The
-    # fixed contract binds the prompt, references, states and parser, but does
-    # not require a particular provider model identity.
     if a.model is None:a.model=m['model_requested']
+    if a.model != m['model_requested']:raise InfrastructureError('D6_MODEL_BINDING')
     prompt_path=d6/'FIXED_VLM_PROMPT.txt'
     if sha(prompt_path)!=m['prompt_sha256']:raise InfrastructureError('D6_FIXED_PROMPT_CHANGED')
     prompt=prompt_path.read_text(encoding='utf-8')
@@ -134,7 +133,7 @@ def main():
                             raise InfrastructureError('VLM_TRANSPORT_FAILED') from None
                     write(root/(prefix+'-response.json'),data)
                     returned=data.get('model')
-                    if not returned or binding['model_returned'] not in (None,returned):raise InfrastructureError('VLM_MODEL_CHANGED')
+                    if returned != a.model:raise InfrastructureError('VLM_MODEL_CHANGED')
                     binding['model_returned']=returned
                     criteria,reason=parse(data['choices'][0]['message']['content'])
                     write(root/(prefix+'-parser.json'),{'criteria':criteria,'reason':reason})

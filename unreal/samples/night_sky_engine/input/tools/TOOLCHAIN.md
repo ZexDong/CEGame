@@ -6,9 +6,9 @@
 
 | Field | Value |
 |---|---|
-| Engine | Unreal Engine 5.7.4, changelist 51494982, branch `++UE5+Release-5.7` |
-| Engine binding precision | The task toolchain is bound to the validated Unreal Engine 5.7.4 build. |
-| Platform | Windows x64 |
+| Engine | Unreal Engine, configured engine build, branch `++UE5+Release-5.7` |
+| Engine binding precision | The task toolchain is bound to the validated Unreal Engine build. |
+| Platform | desktop |
 | Runtime mode | Independent `editor_game` window |
 | Project | `starter-project/NightSkyDuelScaffold.uproject` |
 | Editor target | `NightSkyDuelScaffoldEditor Win64 Development` |
@@ -19,7 +19,7 @@
 | Built-in plugin | `Paper2D` |
 | Marketplace plugins | Not supplied and not required |
 | Validated compiler family | Visual Studio 2022 v143; the baseline build used toolset 14.44.35228 and Visual C++ 19.44.35223 |
-| Shell | PowerShell 7 or later |
+| Shell | shell or later |
 
 The project is source-only. Unreal-generated `Binaries/`, `DerivedDataCache/`, `Intermediate/`, `Saved/`, IDE state, logs, captures, and packages are not release inputs.
 
@@ -29,8 +29,8 @@ The project is source-only. Unreal-generated `Binaries/`, `DerivedDataCache/`, `
 |---|---|
 | `<input>` | This public input copy |
 | `<project>` | `<input>/project` |
-| `<engine-root>` | Launcher-selected Unreal Engine 5.7.4 root |
-| `<benchmark-tools-root>` | Launcher-provided repository root containing `engine/unreal-5.7.4/` |
+| `<engine-root>` | Launcher-selected Unreal Engine root |
+| `<benchmark-tools-root>` | Launcher-provided repository root containing `engine/unreal-Unreal/` |
 | `<run-root>` | Fresh launcher-owned run and evidence directory outside `<input>` |
 
 Never commit a host-specific replacement for these placeholders.
@@ -73,8 +73,8 @@ Package output belongs outside the public input and candidate source snapshot.
 ## Public independent runtime
 
 ```powershell
-Import-Module "<benchmark-tools-root>/engine/unreal-5.7.4/executor/UnrealEvaluationExecutor.psm1" -Force
-Import-Module "<benchmark-tools-root>/engine/unreal-5.7.4/observer/UnrealEvaluationObserver.psm1" -Force
+Import-Module "<benchmark-tools-root>/engine/unreal-Unreal/executor/UnrealEvaluationExecutor.psm1" -Force
+Import-Module "<benchmark-tools-root>/engine/unreal-Unreal/observer/UnrealEvaluationObserver.psm1" -Force
 ```
 
 Start with a fresh run root, a separate engine-health state file, and these additional arguments:

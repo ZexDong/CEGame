@@ -12,11 +12,13 @@ function Get-ActionRoguelikeBindingProperty {
 
 function Test-ActionRoguelikeBindingContainment {
     param([Parameter(Mandatory)][string]$Root, [Parameter(Mandatory)][string]$Path)
-    $rootFull = [IO.Path]::TrimEndingDirectorySeparator([IO.Path]::GetFullPath($Root))
+    $rootFull = [IO.Path]::GetFullPath($Root)
+    $pathRoot = [IO.Path]::GetPathRoot($rootFull)
+    if ($pathRoot -and $rootFull.Length -gt $pathRoot.Length) { $rootFull = $rootFull.TrimEnd('\', '/') }
     $pathFull = [IO.Path]::GetFullPath($Path)
     $comparison = if ([IO.Path]::DirectorySeparatorChar -eq '\') { [StringComparison]::OrdinalIgnoreCase } else { [StringComparison]::Ordinal }
-    $prefix = $rootFull + [IO.Path]::DirectorySeparatorChar
-    if ([IO.Path]::EndsInDirectorySeparator($rootFull)) { $prefix = $rootFull }
+    $endsSep = $rootFull.EndsWith('\') -or $rootFull.EndsWith('/')
+    $prefix = if ($endsSep) { $rootFull } else { $rootFull + [IO.Path]::DirectorySeparatorChar }
     return $pathFull.Equals($rootFull, $comparison) -or $pathFull.StartsWith($prefix, $comparison)
 }
 
@@ -99,7 +101,7 @@ function Resolve-ActionRoguelikeCandidateBinding {
             $manifestPath = Join-Path $current 'BENCHMARK_MANIFEST.json'
             if (Test-Path -LiteralPath $manifestPath -PathType Leaf) {
                 $manifestPath = Assert-ActionRoguelikeBindingPath -Path $manifestPath -Root $current
-                $manifest = Get-Content -LiteralPath $manifestPath -Raw -Encoding UTF8 -ErrorAction Stop | ConvertFrom-Json -Depth 100 -ErrorAction Stop
+                $manifest = Get-Content -LiteralPath $manifestPath -Raw -Encoding UTF8 -ErrorAction Stop | ConvertFrom-Json -ErrorAction Stop
                 $paths = Get-ActionRoguelikeBindingProperty $manifest 'paths'
                 $declaredFile = [string](Get-ActionRoguelikeBindingProperty $paths 'project_file')
                 $declaredRoot = [string](Get-ActionRoguelikeBindingProperty $paths 'project_root')
@@ -225,12 +227,14 @@ function Resolve-ActionRoguelikeEngineBinding {
     $stage = 'manifest'
     try {
         $engine = Get-ActionRoguelikeBindingProperty $Manifest 'engine'
-        $version = [string](Get-ActionRoguelikeBindingProperty $engine 'version')
-        $changelist = Get-ActionRoguelikeBindingProperty $engine 'changelist'
-        if ($version -notmatch '^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$' -or $null -eq $changelist -or [string]$changelist -notmatch '^[0-9]+$') {
-            throw 'The trusted manifest must declare an exact major.minor.patch engine version and integer changelist.'
+        $manifestVersion = [string](Get-ActionRoguelikeBindingProperty $engine 'version')
+        $manifestChangelist = Get-ActionRoguelikeBindingProperty $engine 'changelist'
+        if ($manifestVersion -and $manifestVersion -notmatch '^(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$') {
+            throw 'The trusted manifest must declare an exact major.minor.patch engine version when specified.'
         }
-        $result.version = $version; $result.changelist = [long]$changelist
+        if ($null -ne $manifestChangelist -and [string]$manifestChangelist -notmatch '^[0-9]+$') {
+            throw 'The trusted manifest must declare an integer changelist when specified.'
+        }
         $stage = 'engine'
         $root = Assert-ActionRoguelikeBindingPath -Path $EngineRoot
         $result.engine_root = $root
@@ -238,14 +242,17 @@ function Resolve-ActionRoguelikeEngineBinding {
         if (-not (Test-Path -LiteralPath $result.build_version_path -PathType Leaf)) {
             $result.reason_code = 'HOST_ENGINE_INCOMPLETE'; throw 'The supplied engine has no Engine/Build/Build.version.'
         }
-        $actual = Get-Content -LiteralPath $result.build_version_path -Raw -Encoding UTF8 -ErrorAction Stop | ConvertFrom-Json -Depth 20 -ErrorAction Stop
+        $actual = Get-Content -LiteralPath $result.build_version_path -Raw -Encoding UTF8 -ErrorAction Stop | ConvertFrom-Json -ErrorAction Stop
         $parts = foreach ($field in @('MajorVersion', 'MinorVersion', 'PatchVersion', 'Changelist')) {
             $value = Get-ActionRoguelikeBindingProperty $actual $field
             if ($null -eq $value -or [string]$value -notmatch '^[0-9]+$') { throw "Build.version is missing an integer $field." }
             [long]$value
         }
         $actualVersion = '{0}.{1}.{2}' -f $parts[0], $parts[1], $parts[2]
-        if ($actualVersion -cne $version -or $parts[3] -ne [long]$changelist) {
+        $version = if ($manifestVersion) { $manifestVersion } else { $actualVersion }
+        $changelist = if ($null -ne $manifestChangelist) { [long]$manifestChangelist } else { $parts[3] }
+        $result.version = $version; $result.changelist = $changelist
+        if (($manifestVersion -and $actualVersion -cne $manifestVersion) -or ($null -ne $manifestChangelist -and $parts[3] -ne [long]$manifestChangelist)) {
             $result.reason_code = 'HOST_ENGINE_IDENTITY_MISMATCH'
             throw "Engine identity is $actualVersion CL $($parts[3]); the manifest requires $version CL $changelist."
         }
@@ -260,12 +267,12 @@ function Resolve-ActionRoguelikeEngineBinding {
         }
         $stage = 'executor'
         $repo = Assert-ActionRoguelikeBindingPath -Path $RepositoryRoot
-        $expectedRelative = "engine/unreal-$version/executor/UnrealEvaluationExecutor.psm1"
-        $expected = Assert-ActionRoguelikeBindingPath -Path (Join-Path $repo $expectedRelative) -Root $repo
         $tooling = Get-ActionRoguelikeBindingProperty $Manifest 'tooling'
         $identities = Get-ActionRoguelikeBindingProperty $tooling 'identities'
         $identity = Get-ActionRoguelikeBindingProperty $identities 'executor_module'
         $declared = [string](Get-ActionRoguelikeBindingProperty $identity 'path')
+        $expectedRelative = if (-not $manifestVersion -and $declared) { $declared } else { "engine/unreal-$version/executor/UnrealEvaluationExecutor.psm1" }
+        $expected = Assert-ActionRoguelikeBindingPath -Path (Join-Path $repo $expectedRelative) -Root $repo
         if ($declared) {
             # Identity paths are repository-relative, never manifest-relative.
             if ([IO.Path]::IsPathRooted($declared) -or $declared.Contains(':')) { throw 'The declared executor identity path must be repository-relative.' }

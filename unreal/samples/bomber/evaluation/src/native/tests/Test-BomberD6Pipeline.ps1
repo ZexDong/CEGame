@@ -7,7 +7,7 @@ $fixture=New-BomberTestFixture (Split-Path -Parent $PSScriptRoot)
 function Assert([bool]$Value,[string]$Message){if(-not $Value){throw $Message}}
 function Json($Value,$Path){$Value|ConvertTo-Json -Depth 100|Set-Content -LiteralPath $Path -Encoding utf8}
 $oldKey=$env:D6_API_KEY
-$oldNewApiKey=$env:NEWAPI_API_KEY;$oldOpenAiKey=$env:OPENAI_API_KEY
+$oldOpenAiKey=$env:OPENAI_API_KEY
 $env:D6_API_KEY='synthetic-test-key'
 $global:BomberD6TestCalls=0;$global:BomberD6TestMode='valid'
 # Mock only the HTTP boundary; exercise the real request builder, parser,
@@ -100,7 +100,7 @@ try {
     Assert ((Test-Path "$run/evaluation-result.json") -and -not (Test-Path "$run/evaluation-not-completed.json") -and -not (Test-Path "$run/vlm/fault.json")) 'Successful resume retained a stale active failure.'
     Assert (@(Get-ChildItem "$run/vlm/attempts" -Filter fault.json -Recurse).Count -eq 1) 'Resume discarded failure history.'
     # Configuration failures should leave the same directory usable after repair.
-    $run=New-Run 'config';$env:D6_API_KEY='';$env:NEWAPI_API_KEY='';$env:OPENAI_API_KEY='';$rejected=$false
+    $run=New-Run 'config';$env:D6_API_KEY='';$env:OPENAI_API_KEY='';$rejected=$false
     try{& $vlm -RunDirectory $run -EvaluatorRoot $fixture.root -Model test -BaseUrl 'http://unit.invalid/v1'|Out-Null}catch{$rejected=$_.Exception.Message -match 'VLM_CONFIGURATION_REQUIRED'}
     Assert ($rejected -and -not (Test-Path "$run/vlm")) 'Configuration failure stranded an output directory.'
     $env:D6_API_KEY='synthetic-test-key';$global:BomberD6TestCalls=0
@@ -131,7 +131,7 @@ try {
     Write-Output 'D6_PIPELINE_OK calls=9 health_zero_cases=4 raw_evidence=true model_drift_rejected=true malformed_response_retained=true completion_scorer=true resume=true bounded_pair_requests=true mixed_states=true'
 } finally {
     $env:D6_API_KEY=$oldKey
-    $env:NEWAPI_API_KEY=$oldNewApiKey;$env:OPENAI_API_KEY=$oldOpenAiKey
+    $env:OPENAI_API_KEY=$oldOpenAiKey
     Remove-Item Function:/Invoke-WebRequest
     Remove-Variable BomberD6TestCalls,BomberD6TestMode -Scope Global
     Remove-BomberTestFixture $fixture.temp

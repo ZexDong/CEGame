@@ -2,6 +2,7 @@
 import argparse
 import json
 import os
+import shutil
 import platform
 import subprocess
 import sys
@@ -52,20 +53,15 @@ def validate_package(evaluation, env):
 
 def host_check(runtime, env, output):
     if platform.system() != "Darwin" or platform.machine() != "arm64":
-        raise RuntimeError("This evaluator requires macOS arm64")
-    packages = Path("/Applications/Defold.app/Contents/Resources/packages")
-    required = [packages / "defold-f735c12192bf95684e6ae1ae27c400b8170fc6d8.jar",
-                packages / "jdk-25+36/bin/java", Path("/usr/bin/swiftc"),
-                Path("/usr/sbin/screencapture"), Path("/opt/homebrew/bin/tesseract")]
-    missing = [str(p) for p in required if not p.is_file()]
-    if missing:
-        raise RuntimeError("Missing host dependencies: " + ", ".join(missing))
-    version = call(["/opt/homebrew/bin/tesseract", "--version"], env, output, "ocr-version")
-    if version.returncode or "tesseract 5.5.2" not in version.stdout.splitlines()[:1]:
-        raise RuntimeError("Expected Tesseract 5.5.2; see logs/ocr-version.json")
-    languages = call(["/opt/homebrew/bin/tesseract", "--list-langs"], env, output, "ocr-languages")
-    if languages.returncode or not {"eng", "chi_sim"} <= set(languages.stdout.splitlines()):
-        raise RuntimeError("OCR requires eng and chi_sim; see logs/ocr-languages.json")
+        raise RuntimeError("This evaluator requires the configured native host platform")
+    from framework.defold_player_runtime.static_checks import defold_build_tools
+    defold_build_tools()
+    tesseract = env.get("TESSERACT_EXE") or shutil.which("tesseract")
+    if not tesseract or not shutil.which("swiftc") or not shutil.which("screencapture"):
+        raise RuntimeError("Install Tesseract and the native capture/input backend tools")
+    languages = call([tesseract, "--list-langs"], env, output, "ocr-languages")
+    if languages.returncode or not {"eng"} <= set(languages.stdout.splitlines()):
+        raise RuntimeError("Required OCR language data is unavailable; see logs/ocr-languages.json")
     result = call(["/bin/sh", runtime / "macos_input.sh", "--check"], env, output, "input-preflight")
     if result.returncode:
         raise RuntimeError("Normal input/Accessibility permission unavailable: " + result.stdout + result.stderr)

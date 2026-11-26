@@ -31,7 +31,7 @@ Decorative trap models do not imply an additional trap-damage system.
 
 | Item | Supplied state | Completed-game requirement |
 | --- | --- | --- |
-| Project entry | An independent empty UE 5.7.4 native starter, opening an unfinished health screen | ENTRY-01 |
+| Project entry | An independent empty Unreal Engine native starter, opening an unfinished health screen | ENTRY-01 |
 | Art/audio | Individual imported presentation packages in the UE Content directory | ASSET-01 through ASSET-07 |
 | Gameplay | No assembled maze, player controller, monster turns, doors or pickups | Section 6 |
 | UI | Health text and a Space input probe only | UI-01 through UI-03, VISUAL-06 |

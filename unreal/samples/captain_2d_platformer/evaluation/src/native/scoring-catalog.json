@@ -2,7 +2,7 @@
   "schema_version": "2.0.0",
   "diagnostic_only": true,
   "input_revision": "2.0.0",
-  "gdd_sha256": "b519586f2f1e7b2649cfb9635a9728834f3c24437d1095a87caf3cf22ee87103",
+  "gdd_sha256": "962a97eb10eba5b75925c37ae612262a657b143f419afc9b36469c3720ff21fb",
   "scoring_guide_sha256": "3e3e6cf19cbd5cda5667c44710f483fbba2ac30af7d098921acc811cf08dfdae",
   "maxima": {
     "D1": 10,

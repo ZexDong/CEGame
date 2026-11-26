@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "catalog": "../ASSET_CATALOG.json",
+  "notice": "../../THIRD_PARTY_NOTICES.md",
+  "mapping_rule": "Each cataloged item carries a license_id (directly or in licensing) and relative_path in assets/ASSET_CATALOG.json.",
+  "licenses": [
+    {
+      "license_id": "MIT-RollBall",
+      "scope": "The fixed-layout fixture.",
+      "controlling_terms": ["MIT License"],
+      "standalone_redistribution_allowed": true,
+      "notice_file": "MIT-RollBall.txt"
+    },
+    {
+      "license_id": "epic-content-terms",
+      "scope": "The supplied raw Unreal Starter Content meshes and their retained package metadata.",
+      "controlling_terms": [
+        "Unreal Engine EULA",
+        "Epic Content License Agreement",
+        "Any applicable Epic asset terms"
+      ],
+      "standalone_redistribution_allowed": false,
+      "notice_file": "../../THIRD_PARTY_NOTICES.md"
+    }
+  ]
+}

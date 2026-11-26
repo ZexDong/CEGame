@@ -1,6 +1,6 @@
 # Night Sky Duel Lab Public Input
 
-This directory is the complete model-visible starting package for an Unreal Engine 5.7.4 implementation task. It contains an answer-free project with a preimported Manny art set, the player-facing design requirements, public engine tooling documentation, a read-only observation contract, and repeatable package and runtime health checks.
+This directory is the complete model-visible starting package for an Unreal Engine implementation task. It contains an answer-free project with a preimported Manny art set, the player-facing design requirements, public engine tooling documentation, a read-only observation contract, and repeatable package and runtime health checks.
 
 ## Required reading order
 
@@ -62,7 +62,7 @@ $engineInfo = pwsh -NoProfile -File tools/Resolve-Unreal57.ps1 | ConvertFrom-Jso
 $engineInfo | Format-List
 ```
 
-The resolver accepts `-EngineRoot` or `UE_5_7_ROOT`, checks launcher and conventional install locations, and only succeeds for UE 5.7.4 changelist 51494982. It reports validated editor, commandlet, and Build.bat paths.
+The resolver accepts `-EngineRoot` or `UE_5_7_ROOT`, checks launcher and conventional install locations, and only succeeds for Unreal Engine configured engine build. It reports validated editor, commandlet, and Build.bat paths.
 
 Static package gate:
 

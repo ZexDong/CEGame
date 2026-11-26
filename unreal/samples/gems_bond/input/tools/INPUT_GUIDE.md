@@ -1,7 +1,7 @@
 # Gem's Bond - implementation input
 
 Implement the complete survival tower-defense game described by GDD.md using
-the supplied UE 5.7.4 empty starter and presentation assets.
+the supplied Unreal Engine empty starter and presentation assets.
 
 Read in order:
 

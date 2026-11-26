@@ -6,9 +6,7 @@
   "common_tool_guide_id": "unity-common-tool-guide-2026.08.26-base-interfaces",
   "engine": {
     "name": "Unity",
-    "version": "6000.0.80f1",
-    "revision": "2dfd32957da2",
-    "editor_executable": "D:/game/engine/unity/6000.0.80f1/Editor/Unity.exe"
+    "editor_environment_variable": "UNITY_EDITOR"
   },
   "unity_cli": "1.0.0-beta.3",
   "target_resolution": [
@@ -45,9 +43,8 @@
   },
   "network_required": false,
   "input_version": "v2.6-docv2-session-gate-20260912",
-  "unity_editor": "6000.0.80f1",
-  "unity_editor_executable": "D:\\game\\engine\\unity\\6000.0.80f1\\Editor\\Unity.exe",
-  "unity_cli_executable": "D:\\game\\engine\\shared-tools\\unity\\cli\\1.0.0-beta.3\\unity.exe",
+  "unity_editor": "",
+  "unity_cli_environment_variable": "UNITY_CLI",
   "starter_scene": "Assets/UndercookedStarter/Scenes/KitchenStarter.unity",
   "required_final_scene": "Assets/UndercookedChallenge/Scenes/UndercookedKitchen.unity",
   "starter_gameplay_present": false,

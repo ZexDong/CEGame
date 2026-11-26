@@ -4,11 +4,6 @@
   "language": "en",
   "engine": {
     "name": "Unreal Engine",
-    "version": "5.7.4",
-    "changelist": 51494982,
-    "compatible_changelist": 47537391,
-    "branch": "++UE5+Release-5.7",
-    "platform": "Windows x64",
     "runtime_mode": "editor_game",
     "explicit_plugins": [
       "PythonScriptPlugin",
@@ -179,7 +174,7 @@
     "capture_timeout_seconds": 30,
     "stop_grace_seconds": 15
   },
-  "interface_catalog": "unreal-engine-5.7.4-cl51494982-windows-x64-editor-game-all-interface-catalog"
+  "interface_catalog": "unreal-engine-editor-game-interface-catalog"
 
 
 

@@ -4,7 +4,6 @@
   "public_contract_status": "authoritative",
   "benchmark_id": "godot.roguelike_td_twelve_wave.v1",
   "engine": "Godot",
-  "engine_version": "4.7.1.stable.official.a13da4feb",
   "project_root": "sp",
   "entry_scene": "res://main.tscn",
   "required_final_scene": "res://main.tscn",
@@ -23,8 +22,7 @@
   "material_root": "sp/assets",
   "material_catalog": "Assets/material-index.json",
   "material_coverage": "Assets/asset-coverage.json",
-  
-"contact_sheet": "Assets/asset-contact-sheet.png",
+  "contact_sheet": "Assets/asset-contact-sheet.png",
   "legal_root": "legal",
   "dashboard": "sp/benchmark/dashboard.gd",
   "dashboard_self_check": "sp/benchmark/dashboard_self_check.gd",
@@ -39,15 +37,13 @@
   },
   "network_allowed": false,
   "external_path_access_allowed": false,
-  
-"writable_paths": [
+  "writable_paths": [
     "sp/**"
   ],
   "protected_paths": [
     "*.md",
     "*.json",
-    
-"legal/**",
+    "legal/**",
     "Assets/**",
     "sp/assets/**",
     "sp/benchmark/naming-tables.json",
@@ -55,10 +51,5 @@
     "sp/benchmark/dashboard_self_check.gd",
     "sp/data/map.json"
   ],
-  
-
-
-
-
-"level_data": "sp/data/map.json"
+  "level_data": "sp/data/map.json"
 }

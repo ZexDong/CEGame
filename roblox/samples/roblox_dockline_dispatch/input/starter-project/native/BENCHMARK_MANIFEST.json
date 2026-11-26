@@ -22,7 +22,10 @@
   },
   "time_limit_seconds": 3600,
   "timeout_policy": "terminate development and evaluate current files; no second development window",
-  "starter": {"gameplay_present": false, "semantic_schema_only": true},
+  "starter": {
+    "gameplay_present": false,
+    "semantic_schema_only": true
+  },
   "writable_paths": [
     "project/**",
     "DocklineDispatchCandidate.rbxlx",

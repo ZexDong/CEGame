@@ -84,7 +84,7 @@ def score(run):
     scores['D6']=visual['score'];scores['functional_total']=round(sum(scores[d] for d in ['D1','D2','D3','D4','D5']),1);scores['Overall']=round(scores['functional_total']+scores['D6'],1)
     result={'schema_version':'gemsbond-score-1.0','status':'diagnostic_complete','candidate_identity':collection.get('candidate_identity','missing-artifact'),
             'canonical_scorer_sha256':sha(Path(__file__)),'catalog_sha256':sha(Path(__file__).with_name('catalog.py')),'scores':scores,
-            'd6_rounds':[round(r['mean'],1)for r in visual['rounds']],'checks':results,'formal_freeze':False,'solved_claim':False}
+            'rounds':visual['rounds'],'d6_rounds':[round(r['mean'],1)for r in visual['rounds']],'checks':results,'formal_freeze':False,'solved_claim':False}
     write(run/'score.json',result);return result
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--run',type=Path,required=True);a=p.parse_args()

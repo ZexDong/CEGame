@@ -1,11 +1,5 @@
-The hard wall-clock limit is 3600 seconds.
-
-Implement Match 3 Swipe: Three-Chapter Cascade Challenge as a complete three-chapter campaign in starter_project/.
-Read GDD.md, LEVEL_SPEC.md, campaign.json, CAMPAIGN_RULES.md and COMMON_BASELINE.md.
-Implement the read-only observation interface in DASHBOARD_SPEC.md,
-DASHBOARD_REQUIREMENTS.md and naming-tables.json. Normal keyboard and mouse input
-must operate gameplay, chapter completion, retry, save and continue.
-The observation interface must not accept state writes or force outcomes.
-Use RUNNING.md, TOOLCHAIN.md and DEFOLD_ENGINE_INTERFACE_GUIDE.md for engine tools.
-Preserve the task requirements and fixed public data. This input directory is
-the complete construction package.
+Build the complete playable game defined by the supplied design within 3600 seconds.
+Work in a copy of the supplied input. Read the design, public interface contracts, tool guides, asset and delivery requirements before editing.
+Implement the specified controls and expose real game state through the required public interfaces. Use the supplied assets and preserve protected files.
+Deliver the runnable project and any outputs required by the task. Report only checks you actually ran.
+Use only the permitted resources. Do not inspect other tasks, reference implementations, evaluators or prior results.

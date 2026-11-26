@@ -92,7 +92,7 @@ foreach($state in $manifest.states){
 }
 $apiKey=$null
 if(@($pairs|Where-Object candidate_status -eq 'healthy').Count){
-    $apiKey=Get-EnvValue @('D6_API_KEY','NEWAPI_API_KEY','OPENAI_API_KEY')
+    $apiKey=Get-EnvValue @('D6_API_KEY','OPENAI_API_KEY')
     if(-not $apiKey){throw 'VLM_CONFIGURATION_REQUIRED'}
     if(-not $BaseUrl){$BaseUrl=Get-EnvValue @('BOMBER_VLM_BASE_URL','OPENAI_BASE_URL')}
     if(-not $BaseUrl){throw 'VLM_BASE_URL_REQUIRED'}

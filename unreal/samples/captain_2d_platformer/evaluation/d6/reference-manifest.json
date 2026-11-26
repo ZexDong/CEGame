@@ -1,6 +1,6 @@
 {
   "schema_version": "2.0.0",
-  "model_requested": "gpt-6-astra",
+  "model_requested": "gpt-5.6-sol",
   "states": [
     {
       "id": "initial",

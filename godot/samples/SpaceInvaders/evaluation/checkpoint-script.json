@@ -206,7 +206,8 @@
             "source": "gdd:PAUSE-01",
             "dim": "D3",
             "condition": "phase == paused",
-            "scoring": "prerequisite"
+            "scoring": "toggle",
+            "phases": ["playing", "paused", "playing"]
           },
           "skip_if": "phase != playing"
         },

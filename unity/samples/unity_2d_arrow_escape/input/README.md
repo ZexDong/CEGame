@@ -17,8 +17,8 @@ directly. Do not create another nested project copy.
 ## Fixed project facts
 
 - Input revision: `v2.6-tool-interface-catalog-3600s-20260826`
-- Unity Editor: `6000.0.80f1`
-- Unity CLI: `D:\game\engine\shared-tools\unity\cli\1.0.0-beta.3\unity.exe`
+- Unity Editor: `Unity`
+- Unity CLI: `$env:UNITY_CLI`
 - Required scene: `Assets/ArrowEscapeBenchmark/Scenes/ArrowEscape.unity`
 - Authored root: `Assets/ArrowEscapeBenchmark/**`
 - Additional writable file: `ProjectSettings/EditorBuildSettings.asset`

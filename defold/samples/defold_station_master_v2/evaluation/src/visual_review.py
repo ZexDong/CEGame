@@ -92,6 +92,7 @@ def apply_review(result, review_path, sample, output):
             if (payload.get("request_id") != request or payload.get("model") != review["model"]
                     or payload.get("state") != state
                     or payload.get("candidate_sha256") != binding["candidate_sha256"]
+                    or payload.get("reference_sha256") != binding["references"][protocol["states"][state]]
                     or payload.get("image_sha256") != states[state]["sha256"]
                     or payload.get("reference_hashes") != binding["references"]
                     or not payload.get("rationale") or not payload.get("raw_provider_response")):
@@ -107,12 +108,16 @@ def apply_review(result, review_path, sample, output):
     destination = output / "evidence/d6-review.json"
     destination.write_text(json.dumps(review, indent=2) + "\n", encoding="utf-8")
     # Each registered state is a leaf. Its credit is the median of three totals.
-    used = 0
-    for i, key in enumerate(states):
-        maximum = round(10 - used, 6) if i == len(states) - 1 else round(10 / len(states), 6)
-        used += maximum
-        ratio = statistics.median(observed[key]) / 10
-        points = round(maximum * ratio, 6)
+    state_ids = list(protocol["states"])
+    maxima = [round(10_000_000 / len(state_ids))] * len(state_ids)
+    maxima[-1] += 10_000_000 - sum(maxima)
+    exact = [cap * statistics.median(observed[key]) / 10 for key, cap in zip(state_ids, maxima)]
+    units = [math.floor(value) for value in exact]
+    remainders = sorted(range(len(units)), key=lambda i: exact[i] - units[i], reverse=True)
+    for i in remainders[:round(sum(exact)) - sum(units)]:
+        units[i] += 1
+    for i, key in enumerate(state_ids):
+        maximum, points = maxima[i] / 1_000_000, units[i] / 1_000_000
         state = "pass" if points == maximum else "fail" if points == 0 else "partial"
         result["checks"].append({
             "id": "D6-" + key, "requirement_ids": ["D6-PRESENTATION"],

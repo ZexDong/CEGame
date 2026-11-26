@@ -1,5 +1,6 @@
 [CmdletBinding()]
 param(
+    [switch]$ResolveCatalog,
     [string]$Name,
     [string]$Kind,
     [string]$Owner,
@@ -11,8 +12,15 @@ param(
 $ErrorActionPreference = 'Stop'
 Set-StrictMode -Version Latest
 
+if (-not $PSBoundParameters.ContainsKey('CatalogPath') -and -not (Test-Path -LiteralPath $CatalogPath -PathType Leaf)) {
+    $CatalogPath = Join-Path $PSScriptRoot ('../../../bomber/input/tools/catalog/' + (Split-Path -Leaf $CatalogPath))
+}
 $catalogFull = (Resolve-Path -LiteralPath $CatalogPath).Path
 $index = Get-Content -LiteralPath (Resolve-Path -LiteralPath $IndexPath).Path -Raw -Encoding UTF8 | ConvertFrom-Json -Depth 16
+if ((Get-FileHash -LiteralPath $catalogFull -Algorithm SHA256).Hash -ine $index.catalog_sha256) {
+    throw 'Interface catalog SHA-256 differs from its index.'
+}
+if ($ResolveCatalog) { return $catalogFull }
 $dictionary = $index.value_dictionary
 $file = [IO.File]::Open($catalogFull, [IO.FileMode]::Open, [IO.FileAccess]::Read, [IO.FileShare]::Read)
 $gzip = [IO.Compression.GZipStream]::new($file, [IO.Compression.CompressionMode]::Decompress, $false)

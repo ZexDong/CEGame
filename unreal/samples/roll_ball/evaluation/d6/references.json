@@ -6,7 +6,7 @@
   "runtime_engine": "5.7.4 CL 51494982",
   "guide_sha256": "3e3e6cf19cbd5cda5667c44710f483fbba2ac30af7d098921acc811cf08dfdae",
   "prompt_sha256": "b2066d4e922dd617804c69f890c8a193f9c6403e1e2db1c693987afe2da481e2",
-  "model": "gpt-6-astra",
+  "model": "gpt-5.6-sol",
   "rounds": 3,
   "states": [
     {

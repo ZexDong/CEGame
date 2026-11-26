@@ -3,16 +3,10 @@
   "task_id": "Bomber",
   "task_name": "Bomber Local Duel",
   "task_revision": "2.0.1",
-  "release_revision": "bomber-public-input-2026-08-30-ue5.7.4-gdd-2.0.1",
   "language": "en",
   "generated_utc": "2026-09-14T06:44:46.1228531Z",
   "engine": {
     "name": "Unreal Engine",
-    "version": "5.7.4",
-    "changelist": 51494982,
-    "compatible_changelist": 47537391,
-    "branch": "++UE5+Release-5.7",
-    "platform": "Windows x64",
     "runtime_mode": "editor_game",
     "tool_contract_version": "1.0.0",
     "executor_module": "engine/unreal-5.7.4/executor/UnrealEvaluationExecutor.psm1",
@@ -211,7 +205,7 @@
   },
   "tooling": {
     "guide": "tools/TOOL_GUIDE.md",
-    "guide_sha256": "c780825aab0e60a7dce3924b258e7a9570de1031abacb5466569da7674662c20",
+    "guide_sha256": "1dde884d63ac45c1f3c89134eb1a5e411a38b368c1821595370045852f07690c",
     "capabilities_contract": "engine/unreal-5.7.4/CAPABILITIES.md",
     "capabilities_contract_sha256": "452b66dda0c5ba90bf46957c2108695edfdf9b7d406aa482ae98ca5a549f7b8a",
     "executor_sha256": "614d34ac683267dd86be056a1c8c06ce1b23d0688675360bd606537b20622265",
@@ -253,18 +247,18 @@
 "artifacts": [
     {
       "path": "INITIAL_AGENT_PROMPT.md",
-      "byte_length": 1725,
-      "sha256": "d5c2079a6318a486a3d0d7d6762f78f5c7bb11aa2c122d5993dbd219c36b9dce"
+      "byte_length": 605,
+      "sha256": "87d826392f87e4de129355f04142e0f8094dc68145fe9dda2a8e423656f2baaf"
     },
     {
       "path": "tools/INPUT_GUIDE.md",
       "byte_length": 4253,
-      "sha256": "f9a57415ea0edcb2b3469033db3bc96ca423518a89c20c5c4eda86b2b63819ac"
+      "sha256": "573ceca8dc1c473f609f9c541fdcb47dfc961ef27a459c74dfb004babcf97d2b"
     },
     {
       "path": "GDD.md",
       "byte_length": 28594,
-      "sha256": "ae976e8121fe8df7b51899df895987b1ca3b10f13126c4e1dcc695c353827f3b"
+      "sha256": "3ce731e1264b47910ca83868f1fe5e1fae5b17b9c77a61064ae07a0ac42faa13"
     },
     {
       "path": "ARENA_LAYOUT.md",
@@ -274,12 +268,12 @@
     {
       "path": "tools/TOOLCHAIN.md",
       "byte_length": 4339,
-      "sha256": "4c8328d3e54683bf87b1adc4fb08484786bf6cc541a5360139c8a09cc1b474d6"
+      "sha256": "ceb9883d48fcf3a4abfaec67fd957b644e5fdc1b4cc563f6fefa9c4bfc48ea61"
     },
     {
       "path": "tools/TOOL_GUIDE.md",
       "byte_length": 10435,
-      "sha256": "c780825aab0e60a7dce3924b258e7a9570de1031abacb5466569da7674662c20"
+      "sha256": "1dde884d63ac45c1f3c89134eb1a5e411a38b368c1821595370045852f07690c"
     },
     {
       "path": "ASSET_MANIFEST.json",
@@ -339,7 +333,7 @@
     {
       "path": "starter-project/README.md",
       "byte_length": 595,
-      "sha256": "2b9f54bce4bf696561c2cd86a59e1f70442c0b12866d17908e1c33c88de7bf0d"
+      "sha256": "15780f09f79157826846272e76c3744df60aebb7aa163d3465d136101fbd6270"
     },
     {
       "path": "starter-project/Config/BomberArenaLayout.json",
@@ -354,17 +348,17 @@
     {
       "path": "self-check/PublicSmoke/CONTRACT.md",
       "byte_length": 3182,
-      "sha256": "99836c1617fb2aa64906a9bdb8f5b331069f26d9dc19fb144cb6ee51c233135c"
+      "sha256": "00cb76113503bbe80894fa2979abd1a437b6e0e9cedd0b224b0e70e52f385bbe"
     },
     {
       "path": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
       "byte_length": 26212,
-      "sha256": "ecb41fbccb20f1ba22befa34fc33da318776615daf4face4e982ab328f44a552"
+      "sha256": "9cfe5447ca041e552a63c7a3fef6bd45087cc944256bbf61bd10a7bde6b38b61"
     },
     {
       "path": "self-check/PublicSmoke/schemas/public-smoke-result.schema.json",
       "byte_length": 4494,
-      "sha256": "49c91c8c04aa3356fed0db0c1846b96a1f8972c98ef205eb025947dbea02045c"
+      "sha256": "57515f15c488171742f543a00667d9780eac4171e258be11b53daecc4b848409"
     },
     {
       "path": "tools/Search-UnrealInterfaceCatalog.ps1",
@@ -374,7 +368,7 @@
     {
       "path": "tools/Test-PublicInput.ps1",
       "byte_length": 15965,
-      "sha256": "69498c5b4d7e04291778d8683829a4c53a06afa6c7671d4d087bad02a44680eb"
+      "sha256": "7579b5fa41a86e5f9de7a2a5b75e49a73510096e35747fba953017f57cd75509"
     },
     
 

@@ -6,9 +6,6 @@
   "language": "en",
   "engine": {
     "name": "Unreal Engine",
-    "version": "5.6.1",
-    "changelist": 44394996,
-    "platform": "Windows x64",
     "runtime_mode": "editor_game",
     "tool_contract_version": "1.0.0",
     "explicit_project_plugins": [],
@@ -158,7 +155,7 @@
     "complete_catalog_archive_sha256": "c900747e7a964d3a04f12ecad752ed47fbd7070666a895fc66e9245c357ce058",
     "complete_catalog_entry_count": 523937,
     "public_executor_supported_interface_count": 16,
-    "public_executor_validation_scope": "Windows x64, Unreal Engine 5.6.1, editor_game, three independent dynamic validations per interface.",
+    "public_executor_validation_scope": "Unreal Engine, editor_game, three independent dynamic validations per interface.",
     "identities": {
       "capability_contract": {
         "path": "engine/unreal-5.6.1/CAPABILITIES.md",
@@ -186,7 +183,7 @@
       }
     },
     "complete_engine_and_plugin_interface_catalog_status": "complete_source_and_descriptor_catalog_generated",
-    "complete_engine_and_plugin_interface_catalog_note": "The version-bound generated catalog covers UE 5.6.1 public C++, Blueprint/reflection, console, config, UBT/UAT, and every installed engine-plugin descriptor/module interface. Per-entry status distinguishes source-backed documentation from the separately validated 16-interface benchmark executor."
+    "complete_engine_and_plugin_interface_catalog_note": "The generated catalog covers Unreal Engine public C++, Blueprint/reflection, console, config, UBT/UAT, and every installed engine-plugin descriptor/module interface. Per-entry status distinguishes source-backed documentation from the separately validated 16-interface benchmark executor."
   },
   "state_contract": {
     "snapshot_schema": "contracts/actionroguelike-probe-snapshot.schema.json",

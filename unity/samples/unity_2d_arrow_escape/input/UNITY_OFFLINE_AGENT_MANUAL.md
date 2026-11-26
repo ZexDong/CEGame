@@ -7,8 +7,8 @@ Unity 6 and CLI behavior is documented in `UNITY_BENCHMARK_TOOL_GUIDE.md`.
 
 ```powershell
 $Project = (Get-Location).Path
-$Cli = 'D:\game\engine\shared-tools\unity\cli\1.0.0-beta.3\unity.exe'
-$Editor = 'D:\game\engine\unity\6000.0.80f1\Editor\Unity.exe'
+$Cli = $env:UNITY_CLI
+$Editor = $env:UNITY_EDITOR
 $Scene = 'Assets/ArrowEscapeBenchmark/Scenes/ArrowEscape.unity'
 ```
 

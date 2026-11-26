@@ -5,7 +5,7 @@
   "status": "partially_executable",
   "generation": "v4_canonical_atomic_predicates_and_design_catalog",
   "source_task_revision": "2.2.0-diagnostic",
-  "gdd_sha256": "289d535b4b9903c49a84a8030a47494e0b048759d01ab57faff4a9c228d050f0",
+  "gdd_sha256": "5eaa807ab6c6203fc01df27dcdfcb6ad2d6a7b0277aa2633a3b289a571970aca",
   "target_engine": {
     "version": "5.6.1",
     "changelist": 44394996,

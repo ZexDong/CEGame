@@ -4,7 +4,7 @@ param(
     [uri]$BaseUrl,
     [string]$ModelId,
     [string]$ModelVersion,
-    [string]$ApiKeyEnvironment='NEWAPI_API_KEY',
+    [string]$ApiKeyEnvironment='OPENAI_API_KEY',
     [string]$CaptureHealthRunRoot,
     [Parameter(Mandatory)][string]$OutputDirectory
 )

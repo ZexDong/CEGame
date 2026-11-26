@@ -76,7 +76,6 @@ def execute(collection_path,base_url,model,output):
             if not match:
                 rows.append(dict(state=name,source='candidate_zero',reason='CANDIDATE_STATE_MISSING_OR_BLACK',criteria=[0]*5)); continue
             api_key = (os.environ.get('D6_API_KEY') or
-                       os.environ.get('NEWAPI_API_KEY') or
                        os.environ.get('OPENAI_API_KEY'))
             if not base_url or not api_key: raise InvalidEvidence('VLM_CONFIGURATION_REQUIRED')
             request_data=payload(model,state['label'],ref,match[2])
@@ -87,7 +86,7 @@ def execute(collection_path,base_url,model,output):
             except urllib.error.HTTPError as exc: raise InvalidEvidence('VLM_HTTP_'+str(exc.code)) from None
             except Exception as exc: raise InvalidEvidence('VLM_TRANSPORT_'+type(exc).__name__) from None
             response_path.write_bytes(body); response=read(response_path)
-            if not response.get('model') or (returned_model and response['model']!=returned_model): raise InvalidEvidence('VLM_MODEL_DRIFT')
+            if response.get('model') != binding['model']: raise InvalidEvidence('VLM_MODEL_DRIFT')
             returned_model=response['model']; criteria=parse_response(response['choices'][0]['message']['content'])
             rows.append(dict(state=name,source='vlm',criteria=criteria,request=dict(path=request_path.relative_to(run_root).as_posix(),sha256=sha(request_path)),response=dict(path=response_path.relative_to(run_root).as_posix(),sha256=sha(response_path))))
             print(f'D6 round {n}, {name}: parsed',flush=True)
@@ -95,7 +94,7 @@ def execute(collection_path,base_url,model,output):
     write(output,dict(version='4.0.0',status='completed',collection_sha256=sha(collection_path),references_sha256=sha(ROOT/'d6/references.json'),prompt_sha256=sha(ROOT/'d6/FIXED_PROMPT.txt'),model=model,returned_model=returned_model,rounds=rounds))
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--collection',required=True);p.add_argument('--base-url',default=os.getenv('ROLLBALL_VLM_BASE_URL'));p.add_argument('--model',default=os.getenv('ROLLBALL_VLM_MODEL','gpt-6-astra'));p.add_argument('--output',required=True);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--collection',required=True);p.add_argument('--base-url',default=os.getenv('ROLLBALL_VLM_BASE_URL'));p.add_argument('--model',default=os.getenv('ROLLBALL_VLM_MODEL','gpt-5.6-sol'));p.add_argument('--output',required=True);a=p.parse_args()
     try: execute(a.collection,a.base_url,a.model,a.output); return 0
     except Exception as exc:
         if not Path(a.output).exists(): write(a.output,dict(version='4.0.0',status='evaluation_incomplete',fault=type(exc).__name__+':'+str(exc)))

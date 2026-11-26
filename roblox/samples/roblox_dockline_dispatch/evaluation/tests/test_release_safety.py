@@ -64,7 +64,12 @@ class ReleaseSafetyTests(unittest.TestCase):
             result = runtime.export(EVALUATION, Path(directory), raw, cfg, None, 8, runtime_completed=True)
             self.assertEqual(result["schema_version"], "2.1")
             self.assertEqual(result["coverage_status"], "not_reviewed")
-            self.assertEqual(result["final_score"], 98)
+            self.assertIsNone(result["final_score"])
+            self.assertEqual(result["extensions"]["scorecard"]["D6_raw"], 8)
+            self.assertIsNone(result["extensions"]["scorecard"]["J"])
+            with tempfile.TemporaryDirectory() as low_dir:
+                low = runtime.export(EVALUATION, Path(low_dir), raw, cfg, None, 4, runtime_completed=True)
+                self.assertEqual(low["final_score"], 94)
 
     def test_visual_numbers_without_binding_are_rejected(self):
         with tempfile.TemporaryDirectory() as directory:

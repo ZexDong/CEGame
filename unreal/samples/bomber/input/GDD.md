@@ -29,7 +29,7 @@ AI opponents, online sessions, Steam integration, menus, character selection, di
 
 | Item | Starting State | Related Requirement IDs |
 |---|---|---|
-| Engine | Unreal Engine 5.7.4 on Windows x64. | Toolchain fact, not scored by itself |
+| Engine | Unreal Engine on desktop. | Toolchain fact, not scored by itself |
 | Project entry | `starter-project/BomberStarter.uproject` opens a non-gameplay English health screen. | `QUALITY-01` |
 | Gameplay | No duel gameplay is implemented in the starter. | `CONTENT-01` through `TERMINAL-01` |
 | Arena data | `starter-project/Config/BomberArenaLayout.json` supplies the fixed 11x9 layout, two starts, fifteen crates, and three power-up contents. | `CONTENT-01`, `POWERUP-01` |
@@ -198,7 +198,7 @@ Any Blueprint, C++, component, actor, data, state-machine, UI, or material-assem
 
 ## 13. Submission Self-Check
 
-- [ ] The project uses Unreal Engine 5.7.4 and the documented default entry.
+- [ ] The project uses Unreal Engine and the documented default entry.
 - [ ] The starter's health screen has been replaced by a playable two-player duel.
 - [ ] Countdown, both control schemes, personal bomb resources, three power-ups, chain reaction, win/draw, timer, restart, and reopen all work through normal input.
 - [ ] Both player resource panels remain synchronized and readable at 1280x720.

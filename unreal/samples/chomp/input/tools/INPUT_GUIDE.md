@@ -1,6 +1,6 @@
 # Chomp public implementation input
 
-Build the complete neon 3D maze chase described in `GDD.md` from `starter-project/ChompStarter.uproject`. This input targets Unreal Engine **5.7.4, CL 51494982**, Windows x64, independent editor-game mode.
+Build the complete neon 3D maze chase described in `GDD.md` from `starter-project/ChompStarter.uproject`. This input targets Unreal Engine **Unreal, CL configured-build**, desktop, independent editor-game mode.
 
 Read in this order: `INITIAL_AGENT_PROMPT.md`, this file, `GDD.md`, `assets/ASSET_CATALOG.md`, `contracts/GAME_SESSION_SPEC.md`, `tools/TOOLCHAIN.md`, then the interface guide as needed. GDD Section 6 is the sole gameplay acceptance authority, including the six quality requirements. The observation contract translates those requirements into read-only data; it adds no hidden gameplay rules.
 

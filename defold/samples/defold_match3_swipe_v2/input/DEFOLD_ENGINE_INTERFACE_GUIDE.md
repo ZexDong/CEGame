@@ -2,9 +2,6 @@
 
 ```text
 common_tool_guide_id: defold-common-tool-guide-v4-20260828
-defold_editor_and_bob: 1.13.0
-defold_revision: f735c12192bf95684e6ae1ae27c400b8170fc6d8
-platform: arm64-macos
 build_route: bundled-jdk-plus-bob
 ```
 
@@ -20,8 +17,8 @@ or answer state.
 The installed Defold application supplies both Bob and a matching JDK:
 
 ```bash
-DEFOLD_JAR="/Applications/Defold.app/Contents/Resources/packages/defold-f735c12192bf95684e6ae1ae27c400b8170fc6d8.jar"
-DEFOLD_JAVA="/Applications/Defold.app/Contents/Resources/packages/jdk-25+36/bin/java"
+DEFOLD_JAR="${DEFOLD_BOB_JAR:?Set DEFOLD_BOB_JAR to the installed Bob JAR}"
+: "${DEFOLD_JAVA:?Set DEFOLD_JAVA to the installed Java executable}"
 ```
 
 Check the version:
@@ -30,8 +27,7 @@ Check the version:
 "$DEFOLD_JAVA" -cp "$DEFOLD_JAR" com.dynamo.bob.Bob --version
 ```
 
-The expected version is Defold/Bob 1.13.0. Do not install into or modify
-`/Applications/Defold.app`.
+Keep the selected tool installation read-only.
 
 ## 2. Project files and resource paths
 
@@ -95,7 +91,7 @@ An incremental build is:
 - `resolve` downloads declared dependencies.
 - `distclean` clears Bob output.
 - `build` compiles project resources.
-- `bundle` creates a macOS App Bundle.
+- `bundle` creates a native desktop App Bundle.
 - `--variant debug` retains useful runtime diagnostics.
 - `--archive` produces the archive required by the bundle.
 
@@ -108,13 +104,13 @@ The bundle normally appears below `build/default/`. Find its executable instead 
 project-derived name:
 
 ```bash
-find build/default -type f -path '*/Contents/MacOS/*' -perm -u+x -print
+find build/default -type f -path '*/Contents/native desktop/*' -perm -u+x -print
 ```
 
 Launch from the project root and retain that exact process id:
 
 ```bash
-GAME_BIN="$(find build/default -type f -path '*/Contents/MacOS/*' -perm -u+x -print -quit)"
+GAME_BIN="$(find build/default -type f -path '*/Contents/native desktop/*' -perm -u+x -print -quit)"
 "$GAME_BIN" > runtime.log 2>&1 &
 GAME_PID=$!
 ```
@@ -192,7 +188,7 @@ msg.post("#sprite", "play_animation", { id = hash("idle") })
 `.` addresses the current Game Object, `#component` a component on it, and
 `/object#component` an absolute component URL.
 
-The verified 1.13.0 runtime does not provide `sys.get_config()`. Do not publish or depend on that
+The verified configured version runtime does not provide `sys.get_config()`. Do not publish or depend on that
 function for reading `game.project` or command-line values.
 
 ## 6. Normal input
@@ -274,13 +270,13 @@ local label = gui.new_text_node(vmath.vector3(480, 270, 0), "Paused")
 ```
 
 - A text node needs a font declared by the `.gui` scene.
-- Defold 1.13.0 has no `gui.set_font_size()`; font resources and `gui.set_scale()` determine size.
+- Defold has no `gui.set_font_size()`; font resources and `gui.set_scale()` determine size.
 - `gui.set_enabled()` controls update and rendering.
 - Node order, parenting, and declared layers affect draw order.
 - Design size comes from display settings, while anchors and adjust mode affect resized windows.
 - GUI hit tests must use the node's actual transformed region, not an assumed design-resolution rect.
 
-### GUI capacity and pointer coordinates (verified on Defold 1.13.0 / arm64 macOS)
+### GUI capacity and pointer coordinates (verified on Defold / native host native desktop)
 
 GUI node capacity and font-render batch capacity are separate limits. A scene can run out of nodes,
 or retain its nodes while later text stops rendering because the font batch limit was reached.
@@ -314,7 +310,7 @@ local client_width, client_height = window.get_size()
 Use the normal mouse event for these pointer calls. `action.x/y` and `action.screen_x/screen_y`
 are not interchangeable on a high-DPI window: the latter are raw screen coordinates consumed by
 `gui.screen_to_local`. On the verified host, `window.get_size()` can return twice the design
-resolution. Never treat those values as macOS desktop points without a coordinate conversion.
+resolution. Never treat those values as native desktop desktop points without a coordinate conversion.
 
 ## 8. Sprites, atlases, and tile maps
 

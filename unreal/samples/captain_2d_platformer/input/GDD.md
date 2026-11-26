@@ -26,7 +26,7 @@ No menus, save games, online play, extra abilities, additional enemy types, loot
 
 ## 3. Starting State
 
-The supplied UE 5.7.4 source project renders an English health screen. It has no gameplay pawn, imported art, collision layout, controls, enemy, spring, key, exit or gameplay implementation. The implementer must import and process the clean material independently. The read-only bridge starts with `provider_ready=false` and `game_state=null`; it is infrastructure, not a gameplay solution.
+The supplied Unreal Engine source project renders an English health screen. It has no gameplay pawn, imported art, collision layout, controls, enemy, spring, key, exit or gameplay implementation. The implementer must import and process the clean material independently. The read-only bridge starts with `provider_ready=false` and `game_state=null`; it is infrastructure, not a gameplay solution.
 
 The requested game starts on the lower-left floor, with health 100, keys 0/1, deaths 0, a closed upper-left exit and one live pig on the lower-right corridor (`CONTENT-02`, `ENEMY-01`, `HAZARD-01`, `INTERFACE-01`).
 

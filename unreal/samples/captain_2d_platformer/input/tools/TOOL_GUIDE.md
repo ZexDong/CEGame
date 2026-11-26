@@ -1,29 +1,29 @@
-# Unreal Engine 5.7.4 Benchmark Tool Guide
+# Unreal Engine Benchmark Tool Guide
 
-This public guide documents individual validated benchmark interfaces for Unreal Engine 5.7.4 and points to the complete engine-and-plugin interface catalog. It is not a gameplay recipe, evaluator, score definition, task pipeline, or reference implementation. Task-specific paths remain in `tools/TOOLCHAIN.md`, and gameplay acceptance remains solely in `GDD.md` Section 6.
+This public guide documents individual validated benchmark interfaces for Unreal Engine and points to the complete engine-and-plugin interface catalog. It is not a gameplay recipe, evaluator, score definition, task pipeline, or reference implementation. Task-specific paths remain in `tools/TOOLCHAIN.md`, and gameplay acceptance remains solely in `GDD.md` Section 6.
 
 ## Published Capability Identity
 
 | Field | Value |
 |---|---|
-| Engine | Unreal Engine 5.7.4, changelist 51494982 |
-| Platform | Windows x64 |
+| Engine | Unreal Engine, configured engine build |
+| Platform | desktop |
 | Runtime mode | Independent `editor_game` window |
 | Compiler | v143 toolset `14.44.35207`; MSVC `19.44.35228` |
-| Capability contract | `engine/unreal-5.7.4/CAPABILITIES.md`, contract `1.0.0` |
-| Executor module | `engine/unreal-5.7.4/executor/UnrealEvaluationExecutor.psm1` |
-| Native interop | `engine/unreal-5.7.4/executor/Private/WindowsEvaluationNative.cs`, version `1.1.0` |
-| Observer module | `engine/unreal-5.7.4/observer/UnrealEvaluationObserver.psm1` |
-| Operation envelope | `engine/unreal-5.7.4/executor/schemas/operation-result.schema.json` |
-| Engine-health schema | `engine/unreal-5.7.4/executor/schemas/state-snapshot.schema.json` |
+| Capability contract | `engine/unreal-Unreal/CAPABILITIES.md`, contract `1.0.0` |
+| Executor module | `engine/unreal-Unreal/executor/UnrealEvaluationExecutor.psm1` |
+| Native interop | `engine/unreal-Unreal/executor/Private/WindowsEvaluationNative.cs`, version `1.1.0` |
+| Observer module | `engine/unreal-Unreal/observer/UnrealEvaluationObserver.psm1` |
+| Operation envelope | `engine/unreal-Unreal/executor/schemas/operation-result.schema.json` |
+| Engine-health schema | `engine/unreal-Unreal/executor/schemas/state-snapshot.schema.json` |
 
 The validation summary is an engine-level fact. It does not certify any Captain's Key Run gameplay behavior. A caller resolves `<benchmark-tools-root>` to a public repository copy containing the published engine modules; host-specific paths must not be committed to this input.
 
-## Complete UE 5.7.4 and Installed-Plugin Interface Catalog
+## Complete Unreal Engine and Installed-Plugin Interface Catalog
 
 The adjacent `tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json` and `tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz` form the version-bound all-interface catalog for Unreal Engine 5.7.4 changelist 51494982 on Windows x64 in `editor_game` mode.
 
-The catalog contains 546,387 independently addressable records extracted from 74,084 UE 5.7.4 source/header files, engine configuration defaults, reflection macros, console registrations, UnrealBuildTool and AutomationTool commands, and every installed engine plugin descriptor and module. It includes public C++ callables, reflected classes, interfaces, structures, enums, Blueprint-callable functions and properties, delegates/events, console commands and variables, configuration settings, build-tool modes, and plugin descriptors/modules.
+The catalog contains 546,387 independently addressable records extracted from 74,084 Unreal Engine source/header files, engine configuration defaults, reflection macros, console registrations, UnrealBuildTool and AutomationTool commands, and every installed engine plugin descriptor and module. It includes public C++ callables, reflected classes, interfaces, structures, enums, Blueprint-callable functions and properties, delegates/events, console commands and variables, configuration settings, build-tool modes, and plugin descriptors/modules.
 
 Every record contains a name, purpose, owner/version, engine-relative source, exact entry, parameters, preconditions, return/result, faults, side effects, a minimal single-interface example, validation status, validation description, and limitations. Engine source bodies, third-party source bodies, host paths, evaluator rules, and task solutions are not copied.
 
@@ -51,7 +51,7 @@ The executor owns one active input lease. Callers must release every held key or
 
 **Parameters:** Required `ProjectPath:string`, `RunRoot:string`; provide `StatePath:string` (inside `RunRoot`), and one engine selector: `EngineReference:object`, `EngineRoot:string`, or `EditorPath:string`. Optional `LauncherManifestPath:string`, `ProcessToken:string`, `WindowWidth:int=1280` (320–16384), `WindowHeight:int=720` (240–16384), `TimeoutMs:int=60000` (1000–300000), `FocusTimeoutMs:int=1500` (0–10000), `ObserverDisabledControl:switch`, and `AdditionalArguments:string[]`.
 
-**Preconditions:** Windows, a valid `.uproject`, a new run root, a resolvable UE 5.7.4 editor, and neutral controlled keyboard/pointer state. The state parent must already exist and be inside the run root. For this task, pass `-EvalGameStatePath=<run-root>/state/game-state.json` and `-ForceRes` as additional arguments; the task path must differ from `StatePath`, and `-ForceRes` applies the requested client size.
+**Preconditions:** Windows, a valid `.uproject`, a new run root, a resolvable Unreal Engine editor, and neutral controlled keyboard/pointer state. The state parent must already exist and be inside the run root. For this task, pass `-EvalGameStatePath=<run-root>/state/game-state.json` and `-ForceRes` as additional arguments; the task path must differ from `StatePath`, and `-ForceRes` applies the requested client size.
 
 **Result:** The common envelope with `result.session`, `session_id`, `process_id`, `process_token`, `window_handle_token`, `client_size`, `coordinate_space`, `window_dpi`, `state_path`, `initial_snapshot_id`, `initial_round_id`, `state_first_frame_confirmed`, `stable_visible_frame_confirmed`, `launch_mode`, and process containment information.
 
@@ -479,7 +479,7 @@ $reopen = Reopen-UnrealEvaluationSession -Session $session
 
 **Parameters:** Positional target `Captain2DScaffoldEditor`, platform `Win64`, configuration `Development`, project `<input>/starter-project/Captain2DScaffold.uproject`; compiler selector `-CompilerVersion=14.44.35207`; switches `-WaitMutex` and `-NoHotReloadFromIDE`.
 
-**Preconditions:** UE 5.7.4 with its supported Windows C++ toolchain, a writable project root, and a project path short enough for generated Windows action paths.
+**Preconditions:** Unreal Engine with its supported Windows C++ toolchain, a writable project root, and a project path short enough for generated Windows action paths.
 
 **Result:** Process exit code and standard output. Exit code `0` means the requested build completed; any other code requires inspection of the build output.
 
@@ -507,7 +507,7 @@ $reopen = Reopen-UnrealEvaluationSession -Session $session
 
 **Parameters:** Project path followed by `-run=DataValidation -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput`.
 
-**Preconditions:** A built or loadable UE 5.7.4 project and a writable generated-output area.
+**Preconditions:** A built or loadable Unreal Engine project and a writable generated-output area.
 
 **Result:** Process exit code and commandlet log. Exit code `0` with no validation error marker is the healthy command result.
 
@@ -534,7 +534,7 @@ $reopen = Reopen-UnrealEvaluationSession -Session $session
 
 **Parameters:** Project path, `-run=Cook`, `-TargetPlatform=Windows`, one public map selection such as `-Map=/Engine/Maps/Entry`, and `-unattended -nop4 -nosplash -stdout -FullStdOutLogOutput`.
 
-**Preconditions:** A loadable UE 5.7.4 project, a valid selected map or configured candidate default map, and writable Cook output outside protected public files.
+**Preconditions:** A loadable Unreal Engine project, a valid selected map or configured candidate default map, and writable Cook output outside protected public files.
 
 **Result:** Process exit code and Cook log. Exit code `0` with no Cook failure or fatal marker is the healthy command result.
 
@@ -562,7 +562,7 @@ $reopen = Reopen-UnrealEvaluationSession -Session $session
 
 **Parameters:** Project path; `-NoP4`; `-Platform=Win64`; `-ClientConfig=Development`; `-SkipBuildEditor`; `-Build`; `-Cook`; `-Stage`; `-Pak`; `-Package`; `-Archive`; a fresh private `-ArchiveDirectory`; `-UTF8Output`; and `-UbtArgs=-CompilerVersion=14.44.35207`.
 
-**Preconditions:** The UE 5.7.4 Editor target has already completed through Interface 17 with the same compiler selector. The project root and private archive destination are writable, and the destination is outside protected public input.
+**Preconditions:** The Unreal Engine Editor target has already completed through Interface 17 with the same compiler selector. The project root and private archive destination are writable, and the destination is outside protected public input.
 
 **Result:** AutomationTool exit code, build/cook/stage/package log, and a Win64 archive. Exit code `0` with `BUILD SUCCESSFUL` is the healthy command result.
 
@@ -592,7 +592,7 @@ $reopen = Reopen-UnrealEvaluationSession -Session $session
 
 **Parameters:** Required `InputRoot`, `EngineRoot`, `BenchmarkToolsRoot`, and a new or empty `RunRoot` outside the input.
 
-**Preconditions:** An unmodified release input copy, UE 5.7.4, the exact public executor/observer modules, an interactive Windows desktop, and a short fresh run path. Edited candidate projects use the individual build/run interfaces; their changed sources do not match the starter release identity gate.
+**Preconditions:** An unmodified release input copy, Unreal Engine, the exact public executor/observer modules, an Interactive desktop, and a short fresh run path. Edited candidate projects use the individual build/run interfaces; their changed sources do not match the starter release identity gate.
 
 **Result:** Exit code `0`, `1`, or `2` plus `<run-root>/public-smoke-result.json` following the published result schema.
 

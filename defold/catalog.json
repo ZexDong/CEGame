@@ -7,56 +7,48 @@
       "sample_id": "defold_bomb_frog_v3",
       "title": "Bomb Frog: Twin Chambers",
       "path": "samples/defold_bomb_frog_v3",
-      "engine_version": "1.13.0",
       "release_status": "packaged"
     },
     {
       "sample_id": "defold_mansion_key_escape_v2",
       "title": "Mist Mansion: Key Escape",
       "path": "samples/defold_mansion_key_escape_v2",
-      "engine_version": "1.13.0",
       "release_status": "packaged"
     },
     {
       "sample_id": "defold_match3_swipe_v2",
       "title": "Match 3 Swipe: Three-Chapter Cascade Challenge",
       "path": "samples/defold_match3_swipe_v2",
-      "engine_version": "1.13.0",
       "release_status": "packaged"
     },
     {
       "sample_id": "defold_station_master_v2",
       "title": "Station Master: Emergency Expansion Shift",
       "path": "samples/defold_station_master_v2",
-      "engine_version": "1.13.0",
       "release_status": "packaged"
     },
     {
       "sample_id": "defold_third_person_delivery_v2",
       "title": "Third-Person Island Delivery",
       "path": "samples/defold_third_person_delivery_v2",
-      "engine_version": "1.13.0",
       "release_status": "packaged"
     },
     {
       "sample_id": "defold_timelooper_v2",
       "title": "Time Echo: Gem Exit",
       "path": "samples/defold_timelooper_v2",
-      "engine_version": "1.13.0",
       "release_status": "packaged"
     },
     {
       "sample_id": "defold_typhoon_balloon_v2",
       "title": "Typhoon Balloon: Wind Station Campaign",
       "path": "samples/defold_typhoon_balloon_v2",
-      "engine_version": "1.13.0",
       "release_status": "packaged"
     },
     {
       "sample_id": "defold_urban_climber_v3",
       "title": "Urban Climber: Two-Roof Relay",
       "path": "samples/defold_urban_climber_v3",
-      "engine_version": "1.13.0",
       "release_status": "packaged"
     }
   ],

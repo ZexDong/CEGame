@@ -1,6 +1,6 @@
 # Captain's Key Run Public Input
 
-This directory is the complete model-visible starting package for an Unreal Engine 5.7.4 implementation task. It contains an answer-free source project, original raw sprite sheets and static room art data, player-facing design requirements, public engine and benchmark-interface documentation, a read-only observation contract, and repeatable public health checks.
+This directory is the complete model-visible starting package for an Unreal Engine implementation task. It contains an answer-free source project, original raw sprite sheets and static room art data, player-facing design requirements, public engine and benchmark-interface documentation, a read-only observation contract, and repeatable public health checks.
 
 ## Required Reading Order
 
@@ -59,7 +59,7 @@ Only the built-in `Paper2D` plugin is enabled. PaperZD, TypewriterPlugin, and Ma
 
 ## Interface Catalog
 
-The complete static UE 5.7.4 catalog is compressed. Query it without extracting the archive:
+The complete static Unreal Engine catalog is compressed. Query it without extracting the archive:
 
 ```powershell
 pwsh -NoProfile -File tools/Search-UnrealInterfaceCatalog.ps1 -Name 'OpenLevel' -Limit 20

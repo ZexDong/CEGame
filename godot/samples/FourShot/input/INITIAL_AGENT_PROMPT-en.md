@@ -1,11 +1,5 @@
-You have a hard limit of 3600 seconds for this implementation turn.
-
-# FourShot implementation task
-
-Use only the current `input/` package. Do not inspect sibling `gold/`, `original/`, `evaluation/`, historical runs, or author-only metadata.
-
-1. Read the model-visible files in this Input. Treat the numbered requirements in `GDD-en.md` as the complete game-specific acceptance contract and `COMMON_BASELINE.md` as the shared delivery baseline.
-2. Implement all required level journeys in the project root declared by `BENCHMARK_MANIFEST.json`. Do not rewrite the public task documents to weaken or replace requirements.
-3. Inspect `MaterialMapping-en.md`, the supplied asset directories, and `legal/` before choosing or binding assets. Use only distributable local content supplied by this Input.
-4. Map your implementation to the public dashboard naming table and keep every observation channel strictly read-only. All gameplay must remain reachable through visible UI and ordinary keyboard/mouse input.
-5. The documented tools and public self-checks are optional aids. Use any that help, do not claim checks you did not run, and remove generated caches, logs, screenshots, temporary scripts, and runtime state before delivery.
+Build the complete playable game defined by the supplied design within 3600 seconds.
+Work in a copy of the supplied input. Read the design, public interface contracts, tool guides, asset and delivery requirements before editing.
+Implement the specified controls and expose real game state through the required public interfaces. Use the supplied assets and preserve protected files.
+Deliver the runnable project and any outputs required by the task. Report only checks you actually ran.
+Use only the permitted resources. Do not inspect other tasks, reference implementations, evaluators or prior results.

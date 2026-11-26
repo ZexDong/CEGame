@@ -5,15 +5,10 @@
   "sample_version": "1.0.0",
   "title": "Pocket Greenhouse",
   "engine": {
-    "name": "Roblox Studio",
-    "version": "0.742.0.7421053"
+    "name": "Roblox Studio"
   },
   "environment": {
-    "os": "Windows desktop",
-    "runtime": "CPython 3.14.2",
-    "rojo": "7.7.0",
-    "luau": "0.734",
-    "Pillow": "11.3.0",
+    "runtime": "Python",
     "credential_environment_variables": []
   },
   "sources": [
@@ -54,7 +49,7 @@
     "max_score": 100,
     "D6_protocol": "evaluation/d6/protocol.json",
     "native_family": "dashboard",
-    "D6_reviewer_model": "gpt5.6sol",
+    "D6_reviewer_model": "gpt-5.6-sol",
     "D6_parameter_mode": "platform_defaults",
     "visual_binding": "evaluation/d6/EVIDENCE_FORMAT.md",
     "entry": "evaluation/evaluate.py",

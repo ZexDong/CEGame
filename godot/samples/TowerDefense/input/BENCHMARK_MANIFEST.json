@@ -5,7 +5,6 @@
   "benchmark_id": "godot_2d_ape_tower_defense_fixed_v2",
   "track": "reconstruction",
   "engine": "Godot",
-  "engine_version": "4.7.1.stable.official.a13da4feb",
   "project_root": "sp",
   "viewport": [
     1152,
@@ -21,8 +20,7 @@
   "public_path_reference": "Asserts/path_reference.json",
   "asset_manifest": "Asserts/MANIFEST.json",
   "material_root": "Asserts",
-  
-"legal_root": "legal",
+  "legal_root": "legal",
   "dashboard": "sp/benchmark/dashboard.gd",
   "dashboard_self_check": "sp/benchmark/dashboard_self_check.gd",
   "naming_tables": "sp/benchmark/naming-tables.json",

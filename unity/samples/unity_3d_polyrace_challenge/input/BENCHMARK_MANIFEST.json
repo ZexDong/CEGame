@@ -2,7 +2,7 @@
   "schema_version": 1,
   "benchmark_id": "unity_3d_polyrace_challenge.v1",
   "input_version": "unity_3d_polyrace_challenge-v1-20261029",
-  "unity_editor": "6000.0.80f1",
+  "unity_editor": "",
   "unity_cli": "1.0.0-beta.3",
   "starter_scene": "Assets/Starter/Scenes/Starter.unity",
   "required_final_scene": "Assets/Game/Scenes/Game.unity",

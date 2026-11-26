@@ -2,7 +2,7 @@
 
 ## Project and normal player input
 
-- Open `starter_project/game.project` in Defold 1.13.0 or use the Bob command documented in
+- Open `starter_project/game.project` in Defold or use the Bob command documented in
   `DEFOLD_ENGINE_INTERFACE_GUIDE.md`.
 - Bootstrap collection: `/main/main.collection`.
 - Target game view: 1280 × 720.

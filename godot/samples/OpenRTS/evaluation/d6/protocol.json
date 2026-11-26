@@ -4,7 +4,7 @@
     "input/GDD-en.md",
     "input/Asserts/"
   ],
-  "method": "Human review of rendered candidate captures against public design and supplied assets",
+  "method": "Visual evaluation of rendered candidate captures against public design and supplied assets",
   "checks": [
     "D6-01",
     "D6-02",
@@ -15,5 +15,7 @@
   "per_check_maximum": 2,
   "evidence": "sealed candidate PNG captures from gameplay and result states",
   "missing_evidence": "inconclusive",
-  "comparison_scope": "design and asset fidelity; no unavailable original-game screenshot is assumed"
+  "comparison_scope": "design and asset fidelity",
+  "judge_model": "gpt-5.6-sol",
+  "rounds": 3
 }

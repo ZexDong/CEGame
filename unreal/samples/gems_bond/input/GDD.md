@@ -34,7 +34,7 @@ endless escalation (BUILD-01, ECONOMY-02, UPGRADE-01, WAVE-03, WAVE-05, DEFEAT-0
 
 | Item | Supplied state | Related requirements |
 | --- | --- | --- |
-| Engine | Unreal Engine 5.7.4, CL 51494982, Windows x64; exact launch/build details are in tools/TOOLCHAIN.md | QUALITY-01 |
+| Engine | Unreal Engine, CL configured-build, desktop; exact launch/build details are in tools/TOOLCHAIN.md | QUALITY-01 |
 | Project | A native project containing a basic diagnostic screen | All task-specific requirements remain to be implemented |
 | Presentation assets | Individual meshes, animations, textures, materials, font and audio; no assembled game map | VISUAL-01 to VISUAL-04, AUDIO-01 |
 | Initial game state | Not implemented by the starter; the target opening is START-01 | START-01 |

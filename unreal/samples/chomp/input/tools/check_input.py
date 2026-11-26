@@ -26,7 +26,7 @@ check(manifest['engine']['version']=='5.7.4' and manifest['engine']['changelist'
 project=safe(manifest['paths']['project_file'])
 check(project.is_file(),'Project descriptor is missing.')
 check(read(manifest['paths']['project_file'])['EngineAssociation']=='5.7','Project engine association mismatch.')
-gdd=(root/'GDD.md').read_text()
+gdd=(root/'GDD.md').read_text(encoding='utf-8-sig')
 section=gdd.split('## 6. ',1)[1].split('## 7. ',1)[0]
 defined=re.findall(r'^\| ([A-Z]+-\d{2}) \|',section,re.M)
 check(len(defined)==len(set(defined)),'Duplicate requirement definition.')
@@ -78,7 +78,10 @@ for role in read('ASSET_COVERAGE.json')['roles']:
     check(all(identifier in defined for identifier in role['requirements']),'Coverage references unknown requirement: '+role['role'])
 check({a['id'] for a in catalog['assets'] if a['required']}<=covered,'Mandatory resource lacks role coverage.')
 index=read('tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json')
-check(sha(safe(index['catalog_file']))==index['catalog_sha256'],'Interface catalog hash mismatch.')
+archive = safe(index['catalog_file'])
+if not archive.exists() and root == Path(__file__).resolve().parents[1] and root.parent.parent.name == 'samples':
+    archive = root.parent.parent / 'bomber/input/tools/catalog' / archive.name
+check(archive.is_file() and sha(archive) == index['catalog_sha256'], 'Interface catalog hash mismatch.')
 
 
 

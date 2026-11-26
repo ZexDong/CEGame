@@ -1,4 +1,4 @@
-# Unreal Engine 5.6.1 Benchmark Tool Guide
+# Unreal Engine Benchmark Tool Guide
 
 This is the task's public, single-interface guide for the published Unreal benchmark surface. It documents the interfaces a scaffold may call independently; it is not a gameplay recipe, evaluator, score definition, or reference implementation. The task-specific project parameters remain in `tools/TOOLCHAIN.md`, and gameplay acceptance remains solely in `GDD.md` Section 6.
 
@@ -6,19 +6,19 @@ This is the task's public, single-interface guide for the published Unreal bench
 
 | Field | Value |
 |---|---|
-| Engine | Unreal Engine 5.6.1 |
-| Platform | Windows x64 |
+| Engine | Unreal Engine |
+| Platform | desktop |
 | Runtime mode | Independent `editor_game` window |
-| Capability contract | `engine/unreal-5.6.1/CAPABILITIES.md`, contract `1.0.0` |
-| Executor module | `engine/unreal-5.6.1/executor/UnrealEvaluationExecutor.psm1` |
-| Executor native interop | `engine/unreal-5.6.1/executor/Private/WindowsEvaluationNative.cs`, interop `1.1.0` |
-| Observer module | `engine/unreal-5.6.1/observer/UnrealEvaluationObserver.psm1` |
-| Operation envelope | `engine/unreal-5.6.1/executor/schemas/operation-result.schema.json` |
-| State schema | `engine/unreal-5.6.1/executor/schemas/state-snapshot.schema.json` |
+| Capability contract | `engine/unreal-Unreal/CAPABILITIES.md`, contract `1.0.0` |
+| Executor module | `engine/unreal-Unreal/executor/UnrealEvaluationExecutor.psm1` |
+| Executor native interop | `engine/unreal-Unreal/executor/Private/WindowsEvaluationNative.cs`, interop `1.1.0` |
+| Observer module | `engine/unreal-Unreal/observer/UnrealEvaluationObserver.psm1` |
+| Operation envelope | `engine/unreal-Unreal/executor/schemas/operation-result.schema.json` |
+| State schema | `engine/unreal-Unreal/executor/schemas/state-snapshot.schema.json` |
 
 A launcher must resolve the `<benchmark-tools-root>` placeholder to a copy of the repository containing the published engine modules. Do not commit a host-specific replacement.
 
-## Complete UE 5.6.1 and installed-plugin interface catalog
+## Complete Unreal Engine and installed-plugin interface catalog
 
 The adjacent `tools/catalog/UNREAL_ENGINE_5_6_1_INTERFACE_CATALOG.index.json` and `tools/catalog/UNREAL_ENGINE_5_6_1_INTERFACE_CATALOG.jsonl.gz` are the version-bound all-interface catalog. The deterministic catalog contains 523,937 independently addressable records extracted from 71,118 UE 5.6.1 source/header files, every installed engine plugin descriptor and module, engine config defaults, reflection macros, console registrations, and UBT/UAT commands. It covers public C++ callables, Blueprint/reflection classes, interfaces, structures, enums, functions and properties, delegates/events, command-line build tools, config settings, console commands/variables, and plugin descriptors/modules. Third-party source bodies are intentionally excluded; no engine source body, evaluator rule, task solution, or host path is copied.
 
@@ -30,7 +30,7 @@ pwsh -NoProfile -File tools/Search-UnrealInterfaceCatalog.ps1 -Kind 'console_var
 pwsh -NoProfile -File tools/Search-UnrealInterfaceCatalog.ps1 -Owner 'Niagara' -Limit 50
 ```
 
-The generated catalog uses `documented_not_validated` for source-backed entries without an isolated observable-effect receipt and `unsupported_in_target_environment` for non-Windows target surfaces. Those statuses preserve interfaces without claiming availability. The 16 benchmark executor interfaces documented below remain the only `validated` entries: each has 3/3 matching UE 5.6.1 Windows `editor_game` successes. The catalog is an interface reference, not a tool-combination tutorial or gameplay implementation recipe.
+The generated catalog uses `documented_not_validated` for source-backed entries without an isolated observable-effect receipt and `unsupported_in_target_environment` for non-Windows target surfaces. Those statuses preserve interfaces without claiming availability. The 16 benchmark executor interfaces documented below remain the only `validated` entries: each has 3/3 matching Unreal Engine Windows `editor_game` successes. The catalog is an interface reference, not a tool-combination tutorial or gameplay implementation recipe.
 
 ## Common operation envelope
 
@@ -46,7 +46,7 @@ The executor owns one active input lease. Callers must release every held key or
 
 **Parameters:** Required `ProjectPath:string`, `RunRoot:string`; provide `StatePath:string` (inside `RunRoot`), and one engine selector: `EngineReference:object`, `EngineRoot:string`, or `EditorPath:string`. Optional `LauncherManifestPath:string`, `ProcessToken:string`, `WindowWidth:int=1280` (320–16384), `WindowHeight:int=720` (240–16384), `TimeoutMs:int=60000` (1000–300000), `FocusTimeoutMs:int=1500` (0–10000), `ObserverDisabledControl:switch`, and `AdditionalArguments:string[]`.
 
-**Preconditions:** Windows, a valid `.uproject`, a new run root, a resolvable UE 5.6.1 editor, and neutral controlled keyboard/pointer state. The state parent must already exist and be inside the run root. For this task, pass `-ActionRoguelikeSnapshotPath=<absolute-snapshot-path>`, `-ActionRoguelikeEventsPath=<absolute-events-path>`, and `-ForceRes` as additional arguments. The launcher chooses the two distinct task paths for each run and creates their parents. Their basenames and directories are not fixed; preserve the exact argument values, including spaces. Task paths must differ from `StatePath`, and `-ForceRes` applies the requested client size.
+**Preconditions:** Windows, a valid `.uproject`, a new run root, a resolvable Unreal Engine editor, and neutral controlled keyboard/pointer state. The state parent must already exist and be inside the run root. For this task, pass `-ActionRoguelikeSnapshotPath=<absolute-snapshot-path>`, `-ActionRoguelikeEventsPath=<absolute-events-path>`, and `-ForceRes` as additional arguments. The launcher chooses the two distinct task paths for each run and creates their parents. Their basenames and directories are not fixed; preserve the exact argument values, including spaces. Task paths must differ from `StatePath`, and `-ForceRes` applies the requested client size.
 
 **Result:** The common envelope with `result.session`, `session_id`, `process_id`, `process_token`, `window_handle_token`, `client_size`, `coordinate_space`, `window_dpi`, `state_path`, `initial_snapshot_id`, `initial_round_id`, `state_first_frame_confirmed`, `stable_visible_frame_confirmed`, `launch_mode`, and process containment information.
 
@@ -474,7 +474,7 @@ $reopen = Reopen-UnrealEvaluationSession -Session $session
 
 **Parameters:** Positional target `ArenaSliceEditor`, platform `Win64`, configuration `Development`, project `<input>/starter-project/ArenaSlice.uproject`; switches `-WaitMutex` and `-NoHotReloadFromIDE`. This build entry applies after the candidate adds a source target; a Content-only candidate uses editor load, Data Validation, and Cook.
 
-**Preconditions:** UE 5.6.1 with its supported Windows C++ toolchain, a writable project root, and a project path short enough for generated Windows action paths.
+**Preconditions:** Unreal Engine with its supported Windows C++ toolchain, a writable project root, and a project path short enough for generated Windows action paths.
 
 **Result:** Process exit code and standard output. Exit code `0` means the requested build completed; any other code requires inspection of the build output.
 
@@ -502,7 +502,7 @@ $reopen = Reopen-UnrealEvaluationSession -Session $session
 
 **Parameters:** Project path followed by `-run=DataValidation -unattended -nop4 -nosplash -stdout -FullStdOutLogOutput`.
 
-**Preconditions:** A built or loadable UE 5.6.1 project and a writable generated-output area.
+**Preconditions:** A built or loadable Unreal Engine project and a writable generated-output area.
 
 **Result:** Process exit code and commandlet log. Exit code `0` with no validation error marker is the healthy command result.
 
@@ -529,7 +529,7 @@ $reopen = Reopen-UnrealEvaluationSession -Session $session
 
 **Parameters:** Project path, `-run=Cook`, `-TargetPlatform=Windows`, the public map selection `-Map=/Game/Arena/Maps/StarterArena`, and `-unattended -nop4 -nosplash -stdout -FullStdOutLogOutput`.
 
-**Preconditions:** A loadable UE 5.6.1 project, a valid selected map or configured candidate default map, and writable Cook output outside protected public files.
+**Preconditions:** A loadable Unreal Engine project, a valid selected map or configured candidate default map, and writable Cook output outside protected public files.
 
 **Result:** Process exit code and Cook log. Exit code `0` with no Cook failure or fatal marker is the healthy command result.
 
@@ -557,7 +557,7 @@ $reopen = Reopen-UnrealEvaluationSession -Session $session
 
 **Parameters:** Required `InputRoot:string`, identifying the public input root.
 
-**Preconditions:** PowerShell 7 or later and a public input tree whose manifests have been rebuilt after the last file change. Unreal Engine and an interactive desktop are not required for this static interface.
+**Preconditions:** shell or later and a public input tree whose manifests have been rebuilt after the last file change. Unreal Engine and an interactive desktop are not required for this static interface.
 
 **Result:** Exit code `0` and a JSON object on stdout with `status`, `requirement_count`, `asset_count`, `release_file_count`, and `engine_version` when every assertion passes.
 

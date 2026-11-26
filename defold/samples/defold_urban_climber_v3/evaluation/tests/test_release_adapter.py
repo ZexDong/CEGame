@@ -115,6 +115,7 @@ class ReleaseAdapterTests(unittest.TestCase):
                 write(raw, {"request_id": request, "model": review["model"], "state": state,
                             "candidate_sha256": binding["candidate_sha256"],
                             "image_sha256": image["sha256"], "reference_hashes": binding["references"],
+                            "reference_sha256": binding["references"][protocol["states"][state]],
                             "scores": {key: points for key in CRITERIA}, "rationale": "synthetic unit fixture",
                             "raw_provider_response": {"synthetic_test_fixture": True}})
                 round_[state] = {"request_id": request, "raw_response": raw.relative_to(self.output).as_posix(),

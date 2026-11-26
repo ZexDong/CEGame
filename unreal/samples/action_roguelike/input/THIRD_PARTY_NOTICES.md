@@ -4,7 +4,7 @@ This file describes the provenance boundary of content retained in the public co
 
 ## Unreal Engine and Epic content
 
-The project structure was created as an Unreal Engine 5.6.1 Content-only Blank project and is intended for use with Unreal Engine. The common start retains Epic ecosystem content including Manny, engine basic shapes, Example Content, Paragon Minions, and Paragon-derived models, animations, materials, or textures with their necessary dependencies.
+The project structure was created as an Unreal Engine Content-only Blank project and is intended for use with Unreal Engine. The common start retains Epic ecosystem content including Manny, engine basic shapes, Example Content, Paragon Minions, and Paragon-derived models, animations, materials, or textures with their necessary dependencies.
 
 These materials remain subject to the applicable Unreal Engine EULA, Epic Content License Agreement, Fab or Marketplace terms, and asset-specific terms:
 

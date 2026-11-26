@@ -6,6 +6,12 @@
   "honesty_spot_checks": {
     "mode": "review_against_captured_render_and_input_trace"
   },
+  "journey": {
+    "trajectory": "waves_attacks_and_success",
+    "terminal_step": 34,
+    "terminal_slots": {"wave": 10, "wave_total": 10, "remaining_enemies": 0},
+    "positive_slot": "base_hp"
+  },
   "trajectories": [
     {
       "id": "entry_and_initial",

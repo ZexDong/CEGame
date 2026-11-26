@@ -11,7 +11,7 @@ Supply an independent input copy during generation; access evaluation during ass
 
 ## Requirements
 
-Windows; Unity 6000.0.80f1; Unity CLI 1.0.0-beta.3; Python 3.10+; PowerShell 7.
+Install the Unity editor required by the starter project, Unity CLI, and Python.
 
 Run from any sample directory:
 
@@ -25,7 +25,7 @@ output-template is unexecuted with null scores.
 
 ## Candidate evaluation
 
-Run from the sample directory. Write results to a new directory outside the sample and candidate. Short output paths are recommended on Windows.
+Run from the sample directory. Write results to a new directory outside the sample and candidate.
 
 ```text
 python -B evaluation/evaluate.py --project "<candidate>" --output "<new-output>" --editor "<Unity.exe>" --unity-cli "<pinned-cli.exe>"
@@ -34,7 +34,7 @@ python -B evaluation/validate_score.py --score "<result>/score.json" --check-evi
 
 ## Native steps and visual protocol
 
-Each evaluator includes its fixed D6 prompt, references, and settings. Python backends support --review-d6 where visual calls are needed. Supply credentials through environment variables. See evaluation/src/backend for variables, prompts, and native visual steps.
+Each evaluator includes its fixed D6 prompt, references, and settings. Python backends support --review-d6 for automated D6 visual evaluation. Supply credentials through environment variables. See evaluation/src/backend for variables, prompts, and native visual steps.
 
 ## Results and assets
 

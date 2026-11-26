@@ -1,4 +1,4 @@
-# Unreal Engine 5.7.4 Benchmark Tool Guide
+# Unreal Engine Benchmark Tool Guide
 
 This guide documents individual engine and desktop-tool interfaces. Project paths and build commands are in `tools/TOOLCHAIN.md`; game requirements are in `GDD.md` Section 6.
 
@@ -6,8 +6,8 @@ This guide documents individual engine and desktop-tool interfaces. Project path
 
 | Field | Value |
 |---|---|
-| Engine | Unreal Engine 5.7.4, changelist 51494982 |
-| Platform | Windows x64 |
+| Engine | Unreal Engine, configured engine build |
+| Platform | desktop |
 | Runtime mode | Independent `editor_game` window |
 | Executor module | `tools/engine/executor/UnrealEvaluationExecutor.psm1` |
 | Native interop | `tools/engine/executor/Private/WindowsEvaluationNative.cs` |
@@ -15,7 +15,7 @@ This guide documents individual engine and desktop-tool interfaces. Project path
 | Operation envelope | `tools/engine/executor/schemas/operation-result.schema.json` |
 | Engine-health schema | `tools/engine/executor/schemas/state-snapshot.schema.json` |
 
-## Complete UE 5.7.4 and installed-plugin interface catalog
+## Complete Unreal Engine and installed-plugin interface catalog
 
 The adjacent `tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json` and `tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz` form the version-bound all-interface catalog. It contains 546,387 independently addressable interfaces covering UE 5.7.4 public headers, engine configuration, reflection, console commands, UBT/UAT commands, and installed engine plugins.
 
@@ -48,7 +48,7 @@ The executor owns one active input lease. Release every held key or mouse button
 - **Optional:** `ProcessToken`, `WindowWidth=1280`, `WindowHeight=720`, `TimeoutMs=60000`, `FocusTimeoutMs=1500`, `ObserverDisabledControl`, `AdditionalArguments`.
 - **Result:** Public session handle, process/window tokens, client size, DPI/coordinate space, state identity, launch mode, and containment facts.
 - **Status:** `validated`.
-- **Limitations:** Windows and UE 5.7.4 `editor_game` only. Control mode proves window health but not observer state.
+- **Limitations:** Windows and Unreal Engine `editor_game` only. Control mode proves window health but not observer state.
 
 ```powershell
 $start = Start-UnrealEvaluationSession `

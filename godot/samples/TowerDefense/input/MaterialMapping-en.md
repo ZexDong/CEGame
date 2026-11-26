@@ -2,7 +2,7 @@
 
 ## 1. Canonical Material Root
 
-All canonical source assets are under `Asserts/` in this input package. Copy only the files needed by the implementation into the runnable `sp/` project and let the required Godot 4.7.1 toolchain import them. Do not copy `.godot/`, `.import`, or other generated cache data.
+All canonical source assets are under `Asserts/` in this input package. Copy only the files needed by the implementation into the runnable `sp/` project and let the required Godot toolchain import them. Do not copy `.godot/`, `.import`, or other generated cache data.
 
 `Asserts/MANIFEST.json` describes source dimensions and hashes.  `Asserts/path_reference.json` describes only the player-visible route/build-space semantics.
 
@@ -22,7 +22,7 @@ All canonical source assets are under `Asserts/` in this input package. Copy onl
 | `Asserts/enemies/dino3.png` | `game_assets/enemies/dino3.png` | Yellow Dino; 24-frame horizontal atlas; never attacks towers | `ENEMY-01`, `ENEMY_ATTACK-04`, `ASSET-04` |
 | `Asserts/enemies/dino4.png` | `game_assets/enemies/dino4.png` | The single Green Dino boss, last enemy of Wave 10; 24-frame horizontal atlas; displayed at exactly 1.6× the normal Dino linear scale and continuing its route movement while firing | `BOSS-01`, `ENEMY_ATTACK-02`, `ASSET-04` |
 
-Suggested runtime paths are not mandatory. Any project-local paths are acceptable if all assets remain offline, load under Godot 4.7.1, and preserve the identities above.
+Suggested runtime paths are not mandatory. Any project-local paths are acceptable if all assets remain offline, load under Godot, and preserve the identities above.
 
 ## 3. New Mechanism Visual Mapping
 

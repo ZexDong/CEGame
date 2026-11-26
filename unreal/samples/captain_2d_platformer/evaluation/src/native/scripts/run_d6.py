@@ -108,7 +108,7 @@ def main():
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--base-url')
     parser.add_argument('--model')
-    parser.add_argument('--key-env', default='NEWAPI_API_KEY')
+    parser.add_argument('--key-env', default='OPENAI_API_KEY')
     args = parser.parse_args()
     raw_path = args.raw.resolve()
     valid_raw(load(raw_path))

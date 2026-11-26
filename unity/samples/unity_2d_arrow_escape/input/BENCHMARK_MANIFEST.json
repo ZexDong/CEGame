@@ -30,14 +30,12 @@
   },
   "engine": {
     "name": "Unity",
-    "version": "6000.0.80f1",
-    "revision": "2dfd32957da2",
-    "editor_executable": "D:/game/engine/unity/6000.0.80f1/Editor/Unity.exe"
+    "editor_environment_variable": "UNITY_EDITOR"
   },
   "toolchain": {
     "unity_cli": {
       "version": "1.0.0-beta.3",
-      "path": "D:/game/engine/shared-tools/unity/cli/1.0.0-beta.3/unity.exe",
+      "path_environment_variable": "UNITY_CLI",
       "sha256": "ff9ef81ade1063041d25e2c549cc7ed14e96d446f4204400bf101b389f7b8502"
     },
     "input_system": "1.19.0",

@@ -11,7 +11,7 @@ Supply an independent input copy during generation; access evaluation during ass
 
 ## Requirements
 
-Windows interactive desktop; Roblox Studio 0.742.0.7421053; Rojo 7.7.0; Luau 0.734. The task toolchain specifies Python 3.14.2 and Pillow 11.3.0.
+Use an interactive desktop with Roblox Studio, Rojo, Luau and the Python dependencies for the task.
 
 Run from any sample directory:
 
@@ -25,7 +25,7 @@ output-template is unexecuted with null scores.
 
 ## Candidate evaluation
 
-Run from the sample directory. Write results to a new directory outside the sample and candidate. Short output paths are recommended on Windows.
+Run from the sample directory. Write results to a new directory outside the sample and candidate.
 
 ```text
 python -B evaluation/evaluate.py --project "<candidate>" --output "<new-output>" --rojo "<rojo.exe>" --luau-compile "<luau-compile.exe>" --luau "<luau.exe>"

@@ -80,7 +80,8 @@ def collect_command(game,native,run,repo,submitted,candidate,entry,args):
   cmd=ps+[str(scripts/'Invoke-ActionRoguelikeCanonicalEvaluation.ps1'),'-CandidateProject',str(entry),'-EngineRoot',engine,'-OutputDirectory',str(run)]
   if args.adapter:cmd+=['-FixtureBindingsPath',str(args.adapter)]
  elif game=='Bomber':
-  cmd=ps+[str(scripts/'Invoke-BomberCanonicalEvaluation.ps1'),'-CandidateProject',str(entry),'-EngineRoot',engine,'-OutputDirectory',str(run),'-DiagnosticsOnly']
+  cmd=ps+[str(scripts/'Invoke-BomberCanonicalEvaluation.ps1'),'-CandidateProject',str(entry),'-EngineRoot',engine,'-OutputDirectory',str(run)]
+  cmd += ['-D6RunPath',str(args.d6)] if args.d6 else ['-DiagnosticsOnly']
  elif game=='BioFood':
   cmd=py+[str(scripts/'evaluate.py'),'collect','--project',str(candidate),'--out',str(run),'--engine',engine]
   if args.adapter:cmd+=['--adapter',str(args.adapter)]
@@ -117,14 +118,14 @@ def finalizer_command(game,native,run,args):
   if game=='ActionRoguelike' and review:cmd+=['-EvidenceReviewPath',str(review)]
   return cmd
  if game=='Captain2DPlatformer':
-  if not review or not d6:raise ValueError('Native rendered review and D6 evidence are required')
-  return py+[str(scripts/'score.py'),'--raw',str(run/'raw-evaluation.json'),'--review',str(review),'--d6',str(d6),'--output',str(summary)]
+  if not d6:raise ValueError('Native D6 evidence is required')
+  return py+[str(scripts/'score.py'),'--raw',str(run/'raw-evaluation.json'),'--d6',str(d6),'--output',str(summary)]+(['--review',str(review)] if review else [])
  if game=='NightSkyEngine':
   if not d6:raise ValueError('Native D6 evidence is required')
   return py+[str(scripts/'score.py'),'--raw',str(run/'raw-evaluation.json'),'--d6',str(d6),'--output',str(summary)]+(['--semantic',str(review)] if review else [])
  if game=='RollBall':
-  if not d6 or not review:raise ValueError('Native rendered review and D6 evidence are required')
-  return py+[str(scripts/'score.py'),'--collection',str(run/'collection/collection.json'),'--static',str(run/'static/static.json'),'--review',str(review),'--d6',str(d6),'--output',str(summary)]
+  if not d6:raise ValueError('Native D6 evidence is required')
+  return py+[str(scripts/'score.py'),'--collection',str(run/'collection/collection.json'),'--static',str(run/'static/static.json'),'--d6',str(d6),'--output',str(summary)]+(['--review',str(review)] if review else [])
  raise ValueError('Unsupported finalizer')
 
 def invoke(command,output,phase):
@@ -141,7 +142,7 @@ def main():
  p=argparse.ArgumentParser(description=__doc__)
  p.add_argument('--project',type=Path,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--engine',type=Path)
  p.add_argument('--pwsh',default='pwsh');p.add_argument('--adapter',type=Path)
- p.add_argument('--phase',choices=['collect','stage','finalize'],default='collect',help='stage only validates and reconstructs dependencies; finalize explicitly resumes an existing run after its external reviews.')
+ p.add_argument('--phase',choices=['collect','stage','finalize'],default='collect',help='stage only validates and reconstructs dependencies; finalize explicitly resumes an existing run with bound D6 visual evidence.')
  p.add_argument('--review',type=Path);p.add_argument('--d6',type=Path);p.add_argument('--vlm-config',type=Path)
  args=p.parse_args();meta=load(HERE.parent/'sample.json')
  if not args.project.is_absolute() or not args.output.is_absolute():p.error('--project and --output must be absolute')
@@ -152,7 +153,7 @@ def main():
   output.mkdir(parents=True)
  elif not (output/'evidence/staging.json').is_file():p.error('finalize requires an existing staged evaluation output')
  write(output/'evidence/entry.json',{'phase':args.phase,'sample_id':meta['sample_id'],'evaluator_version':meta['evaluation']['version']})
- infrastructure=False;reason='Native collection completed; visual review or evidence completion remains required.'
+ infrastructure=False;reason='Native collection completed; D6 visual evidence completion remains required.'
  try:
   if args.phase=='finalize':
    native=output/'_workspace/unreal'/meta['evaluation']['native_game']/'evaluator'
@@ -164,11 +165,14 @@ def main():
    if args.phase=='stage':reason='Dependency staging only; gameplay and D6 have not been executed.'
    else:
     if args.engine is None or not args.engine.is_absolute():raise ValueError('--engine must be the absolute installed Unreal Engine root')
-    engine=load(args.engine/'Engine/Build/Build.version');expected=meta['engine']
-    if '.'.join(str(engine[k]) for k in ['MajorVersion','MinorVersion','PatchVersion'])!=expected['version'] or engine['Changelist']!=expected['changelist']:raise ValueError('Installed Unreal Engine identity differs from sample.json')
+    engine=load(args.engine/'Engine/Build/Build.version')
+    public_manifest=load(HERE.parent/'input/BENCHMARK_MANIFEST.json')
+    expected=public_manifest.get('engine') or public_manifest.get('target_engine_identity') or {}
+    if expected.get('version') and '.'.join(str(engine[k]) for k in ['MajorVersion','MinorVersion','PatchVersion'])!=expected['version']:raise ValueError('Installed engine differs from the task toolchain')
+    if expected.get('changelist') is not None and engine.get('Changelist')!=expected['changelist']:raise ValueError('Installed engine differs from the task toolchain')
     args.pwsh=shutil.which(args.pwsh) or args.pwsh
     code=invoke(collect_command(meta['evaluation']['native_game'],native,output/'native',repo,submitted,candidate,entry,args),output,'collect')
-    write(output/'evidence/next-stage.json',{'native_exit_code':code,'native_scripts':native.relative_to(output).as_posix()+'/scripts','review_protocols':'See the fixed D6 contracts and native CLI --help. Supply identity-bound external reviews; never infer missing scores.','finalize_command':[sys.executable,str(HERE/'evaluate.py'),'--project',str(project),'--output',str(output),'--phase','finalize']})
+    write(output/'evidence/next-stage.json',{'native_exit_code':code,'native_scripts':native.relative_to(output).as_posix()+'/scripts','review_protocols':'See the fixed D6 contracts and native CLI --help. Supply identity-bound D6 visual evidence; never infer missing scores.','finalize_command':[sys.executable,str(HERE/'evaluate.py'),'--project',str(project),'--output',str(output),'--phase','finalize']})
     # Native collector exit codes are not canonical scoring exit codes. Inspect actual faults.
     if code and not any((output/'native'/n).is_file() for n in ['raw-evaluation.json','collected-checks.json','checks.json','verdicts.json','collection.json','collection/collection.json']):
      if meta['evaluation']['native_game']=='RollBall' and not entry.is_file():
@@ -181,6 +185,8 @@ def main():
   infrastructure=True;reason=type(error).__name__+': '+str(error)
   write(output/'evidence/entry-fault.json',{'type':type(error).__name__,'reason':str(error),'traceback':traceback.format_exc()})
  result=convert_result(HERE,output,meta,reason,infrastructure=infrastructure)
+ from validate_score import apply_scorecard
+ apply_scorecard(result, result.get('extensions', {}).pop('outcome_observations', None))
  write(output/'score.json',result)
  validation=subprocess.run([sys.executable,'-B',str(HERE/'validate_score.py'),'--score',str(output/'score.json'),'--check-evidence'],capture_output=True,text=True,encoding='utf-8')
  if validation.returncode:

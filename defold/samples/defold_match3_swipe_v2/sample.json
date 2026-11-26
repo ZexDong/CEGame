@@ -5,13 +5,10 @@
   "sample_version": "2.0.0",
   "title": "Match 3 Swipe: Three-Chapter Cascade Challenge",
   "engine": {
-    "name": "Defold",
-    "version": "1.13.0",
-    "revision": "f735c12192bf95684e6ae1ae27c400b8170fc6d8"
+    "name": "Defold"
   },
   "environment": {
-    "os": "macOS arm64",
-    "runtime": "Python 3.11+; Defold 1.13.0 with bundled JDK 25+36; Xcode Command Line Tools",
+    "runtime": "Python, Defold build tools and a native input/capture backend",
     "setup_instructions": "../../README.md",
     "credential_environment_variables": []
   },

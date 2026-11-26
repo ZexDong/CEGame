@@ -6,8 +6,8 @@ This file is authoritative for task-specific engine, project, path, and environm
 
 | Item | Value |
 |---|---|
-| Engine | Unreal Engine 5.7.4, changelist 51494982 |
-| Platform | Windows x64 |
+| Engine | Unreal Engine, configured engine build |
+| Platform | desktop |
 | Runtime mode | Independent `editor_game` window |
 | Source target | `Captain2DScaffoldEditor Win64 Development` |
 | Project root | `starter-project/` |
@@ -19,7 +19,7 @@ This file is authoritative for task-specific engine, project, path, and environm
 | Built-in plugin | `Paper2D` |
 | Marketplace plugins | Not supplied and not required |
 | Compiler toolset | v143 `14.44.35207`; MSVC `19.44.35228` |
-| Shell | PowerShell 7 or later |
+| Shell | shell or later |
 
 ## Engine Discovery
 
@@ -33,15 +33,15 @@ The project is source-only. Unreal-generated `Binaries/`, `Intermediate/`, `Save
 |---|---|
 | `<input>` | This public input copy |
 | `<project>` | `<input>/project` |
-| `<engine-root>` | Caller-selected Unreal Engine 5.7.4 root |
-| `<benchmark-tools-root>` | Caller-provided repository root containing `engine/unreal-5.7.4/` |
+| `<engine-root>` | Caller-selected Unreal Engine root |
+| `<benchmark-tools-root>` | Caller-provided repository root containing `engine/unreal-Unreal/` |
 | `<run-root>` | Fresh evidence directory outside `<input>` |
 
 Never replace these placeholders in a committed public file with a host absolute path.
 
 ## Complete Interface Catalog
 
-The static catalog is bound to Unreal Engine 5.7.4 changelist 51494982, Windows x64, and `editor_game` mode:
+The static catalog is bound to Unreal Engine configured engine build, desktop, and `editor_game` mode:
 
 - `tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json`
 - `tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz`
@@ -90,8 +90,8 @@ Build the Editor target explicitly before this packaging command. Package output
 The public benchmark runtime is the validated executor, not an in-editor PIE session. Resolve and import its modules from the caller-provided public-tool root:
 
 ```powershell
-Import-Module "<benchmark-tools-root>/engine/unreal-5.7.4/executor/UnrealEvaluationExecutor.psm1" -Force
-Import-Module "<benchmark-tools-root>/engine/unreal-5.7.4/observer/UnrealEvaluationObserver.psm1" -Force
+Import-Module "<benchmark-tools-root>/engine/unreal-Unreal/executor/UnrealEvaluationExecutor.psm1" -Force
+Import-Module "<benchmark-tools-root>/engine/unreal-Unreal/observer/UnrealEvaluationObserver.psm1" -Force
 ```
 
 Before import, PublicSmoke verifies the SHA-256 identities declared in `BENCHMARK_MANIFEST.json` for the capability contract, validation summary, executor, native interop source, observer, operation-result schema, and engine-state schema.

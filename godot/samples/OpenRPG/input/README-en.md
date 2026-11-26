@@ -2,7 +2,7 @@
 
 Public input revision: `dashboard-contract-20261022-r2`.
 
-Start with [INITIAL_AGENT_PROMPT-en.md](INITIAL_AGENT_PROMPT-en.md). Open `sp/project.godot` with Godot 4.7.1; its required entry is `res://src/main.tscn`.
+Start with [INITIAL_AGENT_PROMPT-en.md](INITIAL_AGENT_PROMPT-en.md). Open `sp/project.godot` with Godot; its required entry is `res://src/main.tscn`.
 
 ## Public documents
 

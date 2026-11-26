@@ -12,7 +12,7 @@ Read:
 4. `naming-tables.json` — the exact public slots, entity kinds/states, target kinds, coordinates,
    and controls for this task;
 5. `dashboard-snapshot.schema.json` and `naming-tables.schema.json` — the two public schemas;
-6. `DEFOLD_ENGINE_INTERFACE_GUIDE.md` — verified Defold 1.13.0 engineering interfaces;
+6. `DEFOLD_ENGINE_INTERFACE_GUIDE.md` — verified Defold engineering interfaces;
 7. `TOOLCHAIN.md` — the project entry, normal player input, and Dashboard transport;
 8. `reference_images/README.md` and `legal/UPSTREAM_MIT_LICENSE.txt` — reference provenance and
    permitted use.

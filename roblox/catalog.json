@@ -7,7 +7,6 @@
       "sample_id": "roblox_coolant_cargo",
       "title": "Coolant Cargo",
       "path": "samples/roblox_coolant_cargo",
-      "engine_version": "0.742.0.7421053",
       "release_status": "packaged",
       "scope": "public_distribution_only"
     },
@@ -15,7 +14,6 @@
       "sample_id": "roblox_deep_relay",
       "title": "Deep Relay",
       "path": "samples/roblox_deep_relay",
-      "engine_version": "0.742.0.7421053",
       "release_status": "packaged",
       "scope": "public_distribution_only"
     },
@@ -23,7 +21,6 @@
       "sample_id": "roblox_dockline_dispatch",
       "title": "Dockline Dispatch",
       "path": "samples/roblox_dockline_dispatch",
-      "engine_version": "0.742.0.7421053",
       "release_status": "packaged",
       "scope": "public_distribution_only"
     },
@@ -31,7 +28,6 @@
       "sample_id": "roblox_moonlit_greenhouse",
       "title": "Moonlit Greenhouse",
       "path": "samples/roblox_moonlit_greenhouse",
-      "engine_version": "0.742.0.7421053",
       "release_status": "packaged",
       "scope": "public_distribution_only"
     },
@@ -39,7 +35,6 @@
       "sample_id": "roblox_pocket_greenhouse",
       "title": "Pocket Greenhouse",
       "path": "samples/roblox_pocket_greenhouse",
-      "engine_version": "0.742.0.7421053",
       "release_status": "packaged",
       "scope": "public_distribution_only"
     },
@@ -47,7 +42,6 @@
       "sample_id": "roblox_reactor_relay_protocol",
       "title": "Reactor Relay Protocol",
       "path": "samples/roblox_reactor_relay_protocol",
-      "engine_version": "0.742.0.7421053",
       "release_status": "packaged",
       "scope": "public_distribution_only"
     },
@@ -55,7 +49,6 @@
       "sample_id": "roblox_relay_foundry",
       "title": "Relay Foundry",
       "path": "samples/roblox_relay_foundry",
-      "engine_version": "0.742.0.7421053",
       "release_status": "packaged",
       "scope": "public_distribution_only"
     },
@@ -63,7 +56,6 @@
       "sample_id": "roblox_skyline_switchyard",
       "title": "Skyline Switchyard",
       "path": "samples/roblox_skyline_switchyard",
-      "engine_version": "0.742.0.7421053",
       "release_status": "packaged",
       "scope": "public_distribution_only"
     },
@@ -71,7 +63,6 @@
       "sample_id": "roblox_tidal_lock",
       "title": "Tidal Lock",
       "path": "samples/roblox_tidal_lock",
-      "engine_version": "0.742.0.7421053",
       "release_status": "packaged",
       "scope": "public_distribution_only"
     },
@@ -79,7 +70,6 @@
       "sample_id": "roblox_tidelock",
       "title": "Tide Lock / Deep Dive Station",
       "path": "samples/roblox_tidelock",
-      "engine_version": "0.742.0.7421053",
       "release_status": "packaged",
       "scope": "public_distribution_only"
     }

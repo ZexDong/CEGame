@@ -6,22 +6,16 @@
   "title": "Tide Lock / Deep Dive Station",
   "engine": {
     "name": "Roblox Studio",
-    "version": "0.742.0.7421053",
     "source_channel": "Stable"
   },
   "environment": {
-    "os": "Windows 11 desktop",
-    "runtime": "CPython 3.14.2; standard library only",
+    "runtime": "Python",
     "tools": [
       {
-        "name": "Rojo",
-        "version": "7.7.0",
-        "url": "https://github.com/rojo-rbx/rojo/releases/tag/v7.7.0"
+        "name": "Rojo"
       },
       {
         "name": "Luau compiler",
-        "version": "0.734",
-        "url": "https://github.com/luau-lang/luau/releases/tag/0.734",
         "optional": true
       }
     ],
@@ -96,7 +90,7 @@
     "d6_protocol": "evaluation/d6/protocol.json",
     "d6_capture_runner": "evaluation/src/d6_original/run_two_item_supplement.py",
     "native_profile": "src/d6_original/",
-    "D6_reviewer_model": "gpt5.6sol",
+    "D6_reviewer_model": "gpt-5.6-sol",
     "D6_calling_settings": "Platform defaults; no manual parameter overrides.",
     "D6_parameter_mode": "platform_defaults",
     "visual_binding": "evaluation/d6/EVIDENCE_FORMAT.md",

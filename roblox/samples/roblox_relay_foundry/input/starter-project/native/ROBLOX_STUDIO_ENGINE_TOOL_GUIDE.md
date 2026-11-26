@@ -3,8 +3,8 @@
 ```text
 catalog_id: roblox-studio-common-tool-guide
 catalog_revision: 2026.08.26-base-interfaces
-rojo: 7.7.0
-luau_compile: 0.734 track
+rojo: configured version
+luau_compile: configured version track
 scope: game-independent Roblox Studio, Luau, Rojo, and Windows host interfaces
 ```
 
@@ -27,7 +27,7 @@ Studio logs         %LOCALAPPDATA%/Roblox/logs/
 
 | Interface | Individual operations | Result surface |
 |---|---|---|
-| PowerShell | Resolve paths, enumerate files, create directories, copy files, start a process, wait for a PID, and read exit codes | objects, stdout, stderr, process state |
+| shell | Resolve paths, enumerate files, create directories, copy files, start a process, wait for a PID, and read exit codes | objects, stdout, stderr, process state |
 | .NET file APIs | Read/write text or bytes, parse JSON/XML, compute hashes, and inspect timestamps | returned objects or exceptions |
 | `rg` | Search file names and text with glob filters | matching paths and lines |
 | Git | Inspect status, diff, tracked files, and authored changes | textual or machine-readable repository state |

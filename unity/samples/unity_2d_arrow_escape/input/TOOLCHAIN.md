@@ -7,7 +7,7 @@ Unity and CLI facts are in `UNITY_BENCHMARK_TOOL_GUIDE.md`.
 ## Fixed environment and paths
 
 ```text
-Unity Editor: 6000.0.80f1
+Unity Editor: Unity
 Unity CLI: 1.0.0-beta.3
 Input System: 1.19.0
 Test Framework: 1.6.0
@@ -32,8 +32,8 @@ and read both the CLI exit code and new NUnit XML.
 
 ```powershell
 $Project = (Get-Location).Path
-$Cli = 'D:\game\engine\shared-tools\unity\cli\1.0.0-beta.3\unity.exe'
-$Editor = 'D:\game\engine\unity\6000.0.80f1\Editor\Unity.exe'
+$Cli = $env:UNITY_CLI
+$Editor = $env:UNITY_EDITOR
 $Stamp = [DateTimeOffset]::UtcNow.ToString('yyyyMMdd-HHmmss-fff')
 $CheckDir = "$Project\Logs\ToolChecks\$Stamp-arrow"
 $HostTemp = "$CheckDir\host-temp"

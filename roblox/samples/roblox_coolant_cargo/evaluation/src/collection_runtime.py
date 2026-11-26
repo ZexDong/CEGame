@@ -158,6 +158,73 @@ def find_report(work):
     for p in sorted(work.rglob('static_results.json'))+sorted(work.rglob('static_audit.json')):
         if not untrusted.intersection(p.relative_to(work).parts):return p,{'static_report':read(p),'runtime_executed':False}
     return None,{}
+def _extract_outcome_observations(raw, evidence_ref):
+    obs = {}
+    if not isinstance(raw, dict):
+        return obs
+    explicit = raw.get('outcome_observations')
+    if isinstance(explicit, dict):
+        for k, v in explicit.items():
+            if k in ('journey', 'lifecycle', 'critical') and isinstance(v, dict):
+                obs[k] = v
+    checks = []
+    for row in raw.get('breakdown', []) if isinstance(raw.get('breakdown'), list) else []:
+        if isinstance(row, dict):
+            cs = row.get('checkpoints', [])
+            if isinstance(cs, dict):
+                checks.extend({'id': str(k), **v} for k, v in cs.items() if isinstance(v, dict))
+            elif isinstance(cs, list):
+                checks.extend(v for v in cs if isinstance(v, dict))
+    dims = raw.get('dimensions')
+    if isinstance(dims, dict):
+        for r in dims.values():
+            if isinstance(r, dict):
+                cs = r.get('checkpoints', [])
+                if isinstance(cs, dict):
+                    checks.extend({'id': str(k), **v} for k, v in cs.items() if isinstance(v, dict))
+                elif isinstance(cs, list):
+                    checks.extend(v for v in cs if isinstance(v, dict))
+    for key in ('checkpoints', 'checks'):
+        cs = raw.get(key)
+        if isinstance(cs, dict):
+            checks.extend({'id': str(k), **v} for k, v in cs.items() if isinstance(v, dict))
+        elif isinstance(cs, list):
+            checks.extend(v for v in cs if isinstance(v, dict))
+
+    def _bit(item):
+        v = item.get('status', item.get('verdict', item.get('passed')))
+        if isinstance(v, bool):
+            return 1 if v else 0
+        s = str(v or '').strip().lower()
+        if s in ('pass', 'passed', 'ok', 'true'):
+            return 1
+        if s in ('fail', 'failed', 'blocked_by_candidate', 'false'):
+            return 0
+        return None
+
+    if 'journey' not in obs:
+        j_rows = [c for c in checks if any(t in str(c.get('id', c.get('checkpoint_id', ''))).lower()
+                  for t in ('complete_success', 'airlock_to_completion', 'end_to_end', 'journey', 'full_playthrough', 'complete_run'))]
+        if j_rows:
+            bits = [_bit(c) for c in j_rows]
+            if 0 in bits:
+                obs['journey'] = {'value': 0, 'evidence': [evidence_ref]}
+            elif all(b == 1 for b in bits):
+                obs['journey'] = {'value': 1, 'evidence': [evidence_ref]}
+        elif isinstance(raw.get('journey'), bool) or raw.get('journey') in (0, 1):
+            obs['journey'] = {'value': int(bool(raw['journey'])), 'evidence': [evidence_ref]}
+
+    if 'lifecycle' not in obs:
+        l_rows = [c for c in checks if any(t in str(c.get('id', c.get('checkpoint_id', ''))).lower()
+                  for t in ('reopen', 'restart', 'reset', 'retry'))]
+        if l_rows:
+            bits = [_bit(c) for c in l_rows]
+            if 0 in bits:
+                obs['lifecycle'] = {'value': 0, 'evidence': [evidence_ref]}
+            elif all(b == 1 for b in bits):
+                obs['lifecycle'] = {'value': 1, 'evidence': [evidence_ref]}
+    return obs
+
 def export(e,out,raw,cfg,error,visual,runtime_completed=False):
     evidence=out/'evidence';evidence.mkdir(exist_ok=True)
     dump(evidence/'native-report.json',raw);shutil.copy2(e/'coverage.json',evidence/'coverage.json')
@@ -207,6 +274,10 @@ def export(e,out,raw,cfg,error,visual,runtime_completed=False):
       'extensions':{'native_report':'evidence/native-report.json','native_scoring_rewritten':False,
                     'existing_experiment_rerun_for_packaging':False,
                     'fresh_runtime_completed':runtime_completed}}
+    sys.path.insert(0, str(e))
+    from validate_score import apply_scorecard
+    observations = _extract_outcome_observations(raw, 'evidence/native-report.json') if not error and not native_invalid else {}
+    apply_scorecard(result, observations)
     dump(out/'score.json',result)
     return result
 def main():

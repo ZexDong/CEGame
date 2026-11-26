@@ -2,11 +2,6 @@
   "game_name": "BoneMaze",
   "language": "en",
   "target_engine_identity": {
-    "version": "5.7.4",
-    "changelist": 51494982,
-    "compatible_changelist": 47537391,
-    "branch": "++UE5+Release-5.7",
-    "platform": "Windows x64",
     "runtime": "editor_game"
   },
   "project_root": "starter-project",

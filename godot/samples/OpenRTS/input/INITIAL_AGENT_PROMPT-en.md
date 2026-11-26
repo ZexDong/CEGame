@@ -1,5 +1,5 @@
-You have a single implementation turn with a one-hour limit (3600 seconds).
-
-Read the entire supplied public package and implement the strategy game in GDD-en.md. Inspect MaterialMapping-en.md, Assets/material-index.json, Assets/asset-coverage.json and the source-model contact sheet before choosing artwork. Use the manifest and TOOLCHAIN-en.md for entry, controls, writable boundaries and dashboard transport. Preserve public contracts, supplied art and legal notices.
-
-Work in sp/ with Godot 4.7.1. Integrate truthful read-only reporting using the published naming table. All tools, including public smoke and dashboard self-check, are optional feedback. Describe the implementation, checks actually performed and known limitations in the final handoff.
+Build the complete playable game defined by the supplied design within 3600 seconds.
+Work in a copy of the supplied input. Read the design, public interface contracts, tool guides, asset and delivery requirements before editing.
+Implement the specified controls and expose real game state through the required public interfaces. Use the supplied assets and preserve protected files.
+Deliver the runnable project and any outputs required by the task. Report only checks you actually ran.
+Use only the permitted resources. Do not inspect other tasks, reference implementations, evaluators or prior results.

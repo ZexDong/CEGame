@@ -1,6 +1,6 @@
 # Public smoke
 
-Run with PowerShell 7:
+Run with shell:
 
 ```powershell
 pwsh -NoProfile -File self-check/PublicSmoke/Invoke-PublicSmoke.ps1 -InputRoot <input> -RunRoot <empty-output> -EngineRoot <installed-ue-5.7.4>
@@ -24,7 +24,7 @@ an old process's document, a partial document, and JSON Lines are not readiness.
 The script writes result.json, receipts, build/asset logs, snapshots and client PNGs to
 RunRoot. Exit 0 means all health checks passed; exit 1 means a check failed. The result
 schema is result.schema.json. A failed run preserves the failure and cleanup receipts.
-Desktop capture and input require an unlocked, unobstructed interactive Windows desktop.
+Desktop capture and input require an unlocked, unobstructed Interactive desktop.
 The public executor serializes input ownership; an existing lease produces a reported
 environment failure. Do not treat process launch alone as a rendered-frame assertion.
 

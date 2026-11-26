@@ -182,6 +182,7 @@ $dimensions.D6 = [ordered]@{
     maximum = [double]$dimensionMax.D6
     protocol = [string]$d6Run.protocol
     round_scores = @($roundScores)
+    rounds = @($rounds)
     status = 'completed'
     model_id = [string]$d6Run.model_id
     evidence = Get-SafeRelative -Base (Split-Path -Parent ([IO.Path]::GetFullPath($OutputPath))) -Path $d6RunFull

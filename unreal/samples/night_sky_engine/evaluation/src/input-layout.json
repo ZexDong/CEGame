@@ -524,20 +524,18 @@
     {
       "source": "BENCHMARK_MANIFEST.json",
       "published": "BENCHMARK_MANIFEST.json",
-      
-
-"restore_edits": [
+      "restore_edits": [
         {
-          "start": 23,
-          "end": 24,
+          "start": 15,
+          "end": 16,
           "lines": [
             "    \"operation_result_schema\": \"engine/unreal-5.7.4/executor/schemas/operation-result.schema.json\",\n",
             "    \"capability_validation_summary\": \"engine/unreal-5.7.4/validation/latest/summary.json\"\n"
           ]
         },
         {
-          "start": 26,
-          "end": 31,
+          "start": 18,
+          "end": 23,
           "lines": [
             "    \"project_root\": \"project\",\n",
             "    \"project_file\": \"project/NightSkyDuelScaffold.uproject\",\n",
@@ -547,15 +545,15 @@
           ]
         },
         {
-          "start": 33,
-          "end": 34,
+          "start": 25,
+          "end": 26,
           "lines": [
             "    \"final_map_source\": \"project/Config/DefaultEngine.ini: GameDefaultMap\",\n"
           ]
         },
         {
-          "start": 37,
-          "end": 41,
+          "start": 29,
+          "end": 33,
           "lines": [
             "    \"toolchain\": \"TOOLCHAIN.md\",\n",
             "    \"tool_guide\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
@@ -564,16 +562,16 @@
           ]
         },
         {
-          "start": 42,
-          "end": 44,
+          "start": 34,
+          "end": 36,
           "lines": [
             "    \"asset_catalog_json\": \"ASSET_CATALOG.json\",\n",
             "    \"asset_catalog_human\": \"ASSET_CATALOG.md\",\n"
           ]
         },
         {
-          "start": 45,
-          "end": 48,
+          "start": 37,
+          "end": 40,
           "lines": [
             "    \"legal_notice\": \"legal/README.md\",\n",
             "    \"public_smoke\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
@@ -581,15 +579,15 @@
           ]
         },
         {
-          "start": 59,
-          "end": 60,
+          "start": 51,
+          "end": 52,
           "lines": [
             "    \"README.md\",\n"
           ]
         },
         {
-          "start": 62,
-          "end": 66,
+          "start": 54,
+          "end": 58,
           "lines": [
             "    \"ASSET_CATALOG.md\",\n",
             "    \"TOOLCHAIN.md\",\n",
@@ -598,22 +596,22 @@
           ]
         },
         {
-          "start": 69,
-          "end": 70,
+          "start": 61,
+          "end": 62,
           "lines": [
             "      \"project\"\n"
           ]
         },
         {
-          "start": 73,
-          "end": 74,
+          "start": 65,
+          "end": 66,
           "lines": [
             "      \"README.md\",\n"
           ]
         },
         {
-          "start": 77,
-          "end": 81,
+          "start": 69,
+          "end": 73,
           "lines": [
             "\"TOOLCHAIN.md\",\n",
             "      \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
@@ -622,53 +620,53 @@
           ]
         },
         {
-          "start": 82,
-          "end": 84,
+          "start": 74,
+          "end": 76,
           "lines": [
             "      \"ASSET_CATALOG.json\",\n",
             "      \"ASSET_CATALOG.md\",\n"
           ]
         },
         {
-          "start": 85,
-          "end": 86,
+          "start": 77,
+          "end": 78,
           "lines": [
             "      \"legal\",\n"
           ]
         },
         {
-          "start": 87,
-          "end": 88,
+          "start": 79,
+          "end": 80,
           "lines": [
             "      \"tests\",\n"
           ]
         },
         {
-          "start": 157,
-          "end": 159,
+          "start": 149,
+          "end": 151,
           "lines": [
             "    \"entry\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
             "    \"result_schema\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n"
           ]
         },
         {
-          "start": 180,
-          "end": 182,
+          "start": 172,
+          "end": 174,
           "lines": [
             "    \"guide\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
-            "    \"guide_sha256\": \"de71db706d8036f12552f4ffcf3a57cb107b7fd5d4bbcd1d7890490470298b06\",\n"
+            "    \"guide_sha256\": \"a161065ae407fdb4ae6fc1f36488854e34afae1e4369254f969aa28cba3dbb7a\",\n"
           ]
         },
         {
-          "start": 183,
-          "end": 184,
+          "start": 175,
+          "end": 176,
           "lines": [
             "    \"capabilities_contract_sha256\": \"9007a3a623ce2c24e8a14c8f69764db31b146c9b5c5019704ab034c803cc2412\",\n"
           ]
         },
         {
-          "start": 190,
-          "end": 193,
+          "start": 182,
+          "end": 185,
           "lines": [
             "    \"validation_scope\": \"Windows x64, Unreal Engine 5.7.4, editor_game, three independent dynamic validations per interface.\",\n",
             "    \"interface_catalog_index\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
@@ -676,103 +674,87 @@
           ]
         },
         {
-          "start": 195,
-          "end": 196,
+          "start": 187,
+          "end": 188,
           "lines": [
             "    \"interface_catalog_index_sha256\": \"9121e0d1f9b7f98529b026191284bea96102e06732faf61289bf8c3b06d9c5ab\"\n"
           ]
         },
         {
-          "start": 199,
-          "end": 201,
+          "start": 191,
+          "end": 193,
           "lines": [
             "    \"catalog_json\": \"ASSET_CATALOG.json\",\n",
             "    \"catalog_human\": \"ASSET_CATALOG.md\",\n"
           ]
         },
         {
-          "start": 202,
-          "end": 203,
+          "start": 194,
+          "end": 195,
           "lines": [
             "    \"legal_notice\": \"legal/README.md\",\n"
           ]
         },
         {
-          "start": 206,
-          "end": 207,
+          "start": 198,
+          "end": 199,
           "lines": [
             "    \"delivery_root\": \"project/Content/Provided/Manny\",\n"
           ]
         },
         {
-          "start": 211,
-          "end": 213,
+          "start": 203,
+          "end": 205,
           "lines": [
             "    \"reference_root\": \"assets/Manny\",\n",
             "    \"preimported_package_root\": \"project/Content/Provided/Manny\",\n"
           ]
         },
         {
-          "start": 268,
-          "end": 269,
+          "start": 260,
+          "end": 261,
           "lines": [
             "        \"tool\": \"tests/AssetPayload/Test-AssetPayload.ps1\"\n"
           ]
         },
         {
-          "start": 275,
-          "end": 277,
-          "lines": [
-            "\n",
-            "\n"
-          ]
-        },
-        {
-          "start": 285,
-          "end": 287,
-          "lines": [
-            "      \"byte_length\": 2883,\n",
-            "      \"sha256\": \"2ad779dbfeded64f4724f3d0be3350375074b44adda3e170f0bbf9681e64fcc9\"\n"
-          ]
-        },
-        {
-          "start": 289,
-          "end": 292,
+          "start": 281,
+          "end": 284,
           "lines": [
             "      \"path\": \"README.md\",\n",
             "      \"byte_length\": 5245,\n",
-            "      \"sha256\": \"346550cb91ea86140981844e33afeb742c480a4f4d4a94a7735cba49cd2009d8\"\n"
+            "      \"sha256\": \"600ba9fbd33dd1db09b30749f29c8abe0414a93b5ef93b77f4d9d7130f0c895c\"\n"
           ]
         },
         {
-          "start": 295,
-          "end": 297,
+          "start": 287,
+          "end": 289,
           "lines": [
             "      \"byte_length\": 26481,\n",
-            "      \"sha256\": \"48c1ae0d9d42b0f0fb0e8d74a6d30bfb096da732d0e29c4ff0187fa1456a5b8d\"\n"
+            "      \"sha256\": \"0d1915dff111e3b819e32173296f2188b603368afea5db6d1f651f503c5f7bc3\"\n"
           ]
         },
         {
-          "start": 299,
-          "end": 302,
+          "start": 291,
+          "end": 294,
           "lines": [
             "      \"path\": \"TOOLCHAIN.md\",\n",
             "      \"byte_length\": 6460,\n",
-            "      \"sha256\": \"3dd90ee042121e0f204c5d76eef60efaed21e2921f6a927ea85d619ad57bec8e\"\n"
+            "      \"sha256\": \"2d62484d0253dd3245b1ed3ae4714332ffd89b537de494e8a0a5655c983dc3db\"\n"
           ]
         },
         {
-          "start": 304,
-          "end": 307,
+          "start": 296,
+          "end": 299,
           "lines": [
             "      \"path\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
             "      \"byte_length\": 31477,\n",
-            "      \"sha256\": \"de71db706d8036f12552f4ffcf3a57cb107b7fd5d4bbcd1d7890490470298b06\"\n"
+            "      \"sha256\": \"a161065ae407fdb4ae6fc1f36488854e34afae1e4369254f969aa28cba3dbb7a\"\n"
           ]
         },
         {
-          "start": 309,
-          "end": 312,
+          "start": 301,
+          "end": 304,
           "lines": [
             "      \"path\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
             "      \"byte_length\": 3026,\n",
@@ -780,23 +762,23 @@
           ]
         },
         {
-          "start": 314,
-          "end": 315,
+          "start": 306,
+          "end": 307,
           "lines": [
             "      \"path\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
           ]
         },
         {
-          "start": 320,
-          "end": 322,
+          "start": 312,
+          "end": 314,
           "lines": [
             "      \"byte_length\": 5810,\n",
             "      \"sha256\": \"ce44f9af3dfd078d15a609f4ff87d28781471e981ec1eedce32ee0ff9ad09952\"\n"
           ]
         },
         {
-          "start": 324,
-          "end": 327,
+          "start": 316,
+          "end": 319,
           "lines": [
             "      \"path\": \"ASSET_CATALOG.json\",\n",
             "      \"byte_length\": 12750,\n",
@@ -804,8 +786,8 @@
           ]
         },
         {
-          "start": 329,
-          "end": 332,
+          "start": 321,
+          "end": 324,
           "lines": [
             "      \"path\": \"ASSET_CATALOG.md\",\n",
             "      \"byte_length\": 3502,\n",
@@ -813,16 +795,16 @@
           ]
         },
         {
-          "start": 335,
-          "end": 337,
+          "start": 327,
+          "end": 329,
           "lines": [
             "      \"byte_length\": 3524,\n",
             "      \"sha256\": \"6161dc71a5fbda6ae47758ed22571a8f80fe6ddd5896bf567d9a5b090be4c46e\"\n"
           ]
         },
         {
-          "start": 339,
-          "end": 342,
+          "start": 331,
+          "end": 334,
           "lines": [
             "      \"path\": \"legal/README.md\",\n",
             "      \"byte_length\": 1318,\n",
@@ -830,62 +812,64 @@
           ]
         },
         {
-          "start": 344,
-          "end": 345,
+          "start": 336,
+          "end": 337,
           "lines": [
             "      \"path\": \"contracts/README.md\",\n"
           ]
         },
         {
-          "start": 354,
-          "end": 357,
+          "start": 346,
+          "end": 349,
           "lines": [
             "      \"path\": \"tests/PublicSmoke/README.md\",\n",
             "      \"byte_length\": 3383,\n",
-            "      \"sha256\": \"695c82d9ec7269c19f0023e6c3523917be5be2156353562a971a5b192dfa60d2\"\n"
+            "      \"sha256\": \"85c31e809eaa4983f0a5cd47dabfeaac237d64e3a0be33d002541f1715ae7291\"\n"
           ]
         },
         {
-          "start": 359,
-          "end": 362,
+          "start": 351,
+          "end": 354,
           "lines": [
             "      \"path\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
             "      \"byte_length\": 27947,\n",
-            "      \"sha256\": \"80e7810a77f7c96b6593fbcbbf7a6d754d25dfde6c47565298a01d5f0bd24c15\"\n"
+            "      \"sha256\": \"c6afa43a92a5c498fd6adde839c8a645b419b0c6e82b7c5ce1dd94fee6aa5115\"\n"
           ]
         },
         {
-          "start": 364,
-          "end": 367,
+          "start": 356,
+          "end": 359,
           "lines": [
             "      \"path\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n",
             "      \"byte_length\": 4460,\n",
-            "      \"sha256\": \"226cdb4393c8020648d7d4b0be0a6e33e41a8943f8646858ce634f711f078a31\"\n"
+            "      \"sha256\": \"baad6e487199434ebd72f4af031b49fd245c423c4ec10a21184e735ef6d6de4d\"\n"
           ]
         },
         {
-          "start": 369,
-          "end": 370,
+          "start": 361,
+          "end": 362,
           "lines": [
             "      \"path\": \"project/NightSkyDuelScaffold.uproject\",\n"
           ]
         },
         {
-          "start": 374,
-          "end": 375,
+          "start": 366,
+          "end": 367,
           "lines": [
             "      \"path\": \"legal/MIT-NightSkyEngine.txt\",\n"
           ]
         },
         {
-          "start": 380,
-          "end": 382,
+          "start": 372,
+          "end": 374,
           "lines": [
             "      \"byte_length\": 5349,\n",
             "      \"sha256\": \"d03fddd28340da8674b6c09400ed1908cea46a7adb4979ae051e684acc8dfd58\"\n"
           ]
         }
-      ]
+      ],
+      "sha256": "0f015bb3541a291c4adc8f4bddb29a303a67840e569a82d8f6270a1bf4db8eec",
+      "published_sha256": "5f268229d0bcf7b7a846e98875eac6a00a0555f98ed2c8ab1375083954fb5f5d"
     },
     {
       "source": "contracts/duel-state.schema.json",
@@ -899,443 +883,11 @@
       "sha256": "854542009bf7012ec4d78e313f1b93c09f62da74ada44a8a50e058a6cdd09310",
       "published_sha256": "854542009bf7012ec4d78e313f1b93c09f62da74ada44a8a50e058a6cdd09310"
     },
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
+    {
       "source": "GDD.md",
       "published": "GDD.md",
       "sha256": "48c1ae0d9d42b0f0fb0e8d74a6d30bfb096da732d0e29c4ff0187fa1456a5b8d",
-      "published_sha256": "3442d323126d9bbf908c05c90b06a855d267e0c96468736d8aba14d6de719f68",
+      "published_sha256": "0d67797adf4b3bb20e9f3890c9e4be690e4c823c46457ac3d397f0ad8e30d63c",
       "restore_edits": [
         {
           "start": 173,
@@ -1364,48 +916,8 @@
     {
       "source": "INITIAL_AGENT_PROMPT.md",
       "published": "INITIAL_AGENT_PROMPT.md",
-      "sha256": "2ad779dbfeded64f4724f3d0be3350375074b44adda3e170f0bbf9681e64fcc9",
-      "published_sha256": "03f4eb8babbe06a9dfc2b1b90dfc10930e4e90f323246cd8d898c51100f60e04",
-      "restore_edits": [
-        {
-          "start": 11,
-          "end": 12,
-          "lines": [
-            "2. `README.md`\n"
-          ]
-        },
-        {
-          "start": 14,
-          "end": 18,
-          "lines": [
-            "5. `ASSET_CATALOG.md`\n",
-            "6. `TOOLCHAIN.md`\n",
-            "7. `UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md`\n",
-            "8. `contracts/README.md`\n"
-          ]
-        },
-        {
-          "start": 23,
-          "end": 24,
-          "lines": [
-            "- The only writable release root is `project/`.\n"
-          ]
-        },
-        {
-          "start": 33,
-          "end": 34,
-          "lines": [
-            "Both visible fighters must use the supplied `SKM_Manny` 3D model and the eight supplied animation clips in the roles specified by `ASSET-01` and `ASSET-02`. The preimported skeletal mesh, Skeleton, and animation sequences are available under `/Game/Provided/Manny/` and `/Game/Provided/Manny/Animations/`; exact object paths, names, meanings, and dependencies are in `ASSET_CATALOG.md` and `ASSET_CATALOG.json`. Merely including the files or replacing the fighters with primitives, sprites, or unrelated models is not sufficient.\n"
-          ]
-        },
-        {
-          "start": 41,
-          "end": 42,
-          "lines": [
-            "1. Leave the complete candidate under `project/`.\n"
-          ]
-        }
-      ]
+      "sha256": "87d826392f87e4de129355f04142e0f8094dc68145fe9dda2a8e423656f2baaf",
+      "published_sha256": "87d826392f87e4de129355f04142e0f8094dc68145fe9dda2a8e423656f2baaf"
     },
     {
       "source": "legal/MIT-NightSkyEngine.txt",
@@ -1528,7 +1040,7 @@
       "source": "project/README.md",
       "published": "starter-project/README.md",
       "sha256": "b948707ccb4bb84800bb6d628fdaa376e2fec44e51dba6ab3ed6d72f7c34fb23",
-      "published_sha256": "b948707ccb4bb84800bb6d628fdaa376e2fec44e51dba6ab3ed6d72f7c34fb23"
+      "published_sha256": "ab03d039e8a8d6e89a874b3e90616b5b49392e42941cb43e31dd795ddd924910"
     },
     {
       "source": "project/Source/NightSkyDuelScaffold/NightSkyDuelHealthState.cpp",
@@ -1593,9 +1105,7 @@
     {
       "source": "README.md",
       "published": "tools/INPUT_GUIDE.md",
-      
-
-"restore_edits": [
+      "restore_edits": [
         {
           "start": 7,
           "end": 8,
@@ -1693,9 +1203,7 @@
     {
       "source": "tests/PublicSmoke/Invoke-PublicSmoke.ps1",
       "published": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
-      
-
-"restore_edits": [
+      "restore_edits": [
         {
           "start": 35,
           "end": 36,
@@ -1738,7 +1246,7 @@
       "source": "tests/PublicSmoke/README.md",
       "published": "self-check/PublicSmoke/CONTRACT.md",
       "sha256": "695c82d9ec7269c19f0023e6c3523917be5be2156353562a971a5b192dfa60d2",
-      "published_sha256": "a7cbde2e937341036dedd5a9b0006db420df7c5552536b600eb89ed18dc7374c",
+      "published_sha256": "ba7867944c23f5269f20f81ad1d596811bd0075ecde95c6d9ea2768c030a6d03",
       "restore_edits": [
         {
           "start": 11,
@@ -1752,9 +1260,7 @@
     {
       "source": "tests/PublicSmoke/schemas/public-smoke-result.schema.json",
       "published": "self-check/PublicSmoke/schemas/public-smoke-result.schema.json",
-      
-
-"restore_edits": [
+      "restore_edits": [
         {
           "start": 2,
           "end": 3,
@@ -1796,7 +1302,7 @@
       "source": "TOOLCHAIN.md",
       "published": "tools/TOOLCHAIN.md",
       "sha256": "3dd90ee042121e0f204c5d76eef60efaed21e2921f6a927ea85d619ad57bec8e",
-      "published_sha256": "2fa1ffb2dd76342fa7309decc4d3d783d94db55dde50d6d691bba042b84fe612",
+      "published_sha256": "2b019f6d225440d3fb71029362dd8238e3f4b3bc5d8839a49b9239f7dcdecf36",
       "restore_edits": [
         {
           "start": 12,
@@ -1828,13 +1334,7 @@
         }
       ]
     },
-    
-
-
-
-
-
-{
+    {
       "source": "tools/Resolve-Unreal57.ps1",
       "published": "tools/Resolve-Unreal57.ps1",
       "sha256": "12581ab0254ec09162a8783b412a71951418e8eb9a38a6e9f137d4e9ead873c5",
@@ -1859,9 +1359,7 @@
     {
       "source": "tools/Test-PublicInput.ps1",
       "published": "tools/Test-PublicInput.ps1",
-      
-
-"restore_edits": [
+      "restore_edits": [
         {
           "start": 116,
           "end": 118,
@@ -2019,13 +1517,7 @@
         }
       ]
     },
-    
-
-
-
-
-
-{
+    {
       "source": "UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
       "published": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
       "sha256": "9121e0d1f9b7f98529b026191284bea96102e06732faf61289bf8c3b06d9c5ab",
@@ -2050,7 +1542,7 @@
       "source": "UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md",
       "published": "tools/TOOL_GUIDE.md",
       "sha256": "de71db706d8036f12552f4ffcf3a57cb107b7fd5d4bbcd1d7890490470298b06",
-      "published_sha256": "68d077edc8ec2504db51ee5064293ecb9baa9e405acd3ce60df98d1b02981d42",
+      "published_sha256": "263c952454b1f02ecbb5551a917e16e6d1e3e03aeea04ba0266325baf075072a",
       "restore_edits": [
         {
           "start": 2,

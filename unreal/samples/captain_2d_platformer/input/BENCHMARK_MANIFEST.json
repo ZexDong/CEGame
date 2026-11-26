@@ -3,23 +3,17 @@
   "task_id": "Captain2DPlatformer",
   "task_name": "Captain's Key Run",
   "task_revision": "2.0.0",
-  "release_revision": "captain2d-single-room-2026-09-08-ue5.7.4-input-2.0.0",
   "language": "en",
   "generated_utc": "2026-09-14T06:44:46.8710025Z",
   "engine": {
     "name": "Unreal Engine",
-    "version": "5.7.4",
-    "compiler_toolset_version": "14.44.35207",
-    "compiler_version": "19.44.35228",
-    "platform": "Windows x64",
     "runtime_mode": "editor_game",
     "tool_contract_version": "1.0.0",
     "executor_module": "engine/unreal-5.7.4/executor/UnrealEvaluationExecutor.psm1",
     "executor_native_interop": "engine/unreal-5.7.4/executor/Private/WindowsEvaluationNative.cs",
     "executor_native_interop_version": "1.1.0",
     "observer_module": "engine/unreal-5.7.4/observer/UnrealEvaluationObserver.psm1",
-    "operation_result_schema": "engine/unreal-5.7.4/executor/schemas/operation-result.schema.json",
-    "changelist": 51494982
+    "operation_result_schema": "engine/unreal-5.7.4/executor/schemas/operation-result.schema.json"
   },
   "paths": {
     "project_root": "starter-project",
@@ -186,7 +180,7 @@
   },
   "tooling": {
     "guide": "tools/TOOL_GUIDE.md",
-    "guide_sha256": "9eebd26ced937d6d737fa35cc9c8aa23016fccafa842f32e0136332f2d705d54",
+    "guide_sha256": "ffd13065d626bd7454a10d27e75b71b7913659f30f66528526430b731215773e",
     "capabilities_contract": "engine/unreal-5.7.4/CAPABILITIES.md",
     "capabilities_contract_sha256": "452b66dda0c5ba90bf46957c2108695edfdf9b7d406aa482ae98ca5a549f7b8a",
     "executor_sha256": "614d34ac683267dd86be056a1c8c06ce1b23d0688675360bd606537b20622265",
@@ -228,23 +222,23 @@
 "artifacts": [
     {
       "path": "INITIAL_AGENT_PROMPT.md",
-      "byte_length": 3772,
-      "sha256": "9116dc25951425d7fcc69d70cbdb10c4dfafd1080d9ffe9afbad43127758d5d2"
+      "byte_length": 605,
+      "sha256": "87d826392f87e4de129355f04142e0f8094dc68145fe9dda2a8e423656f2baaf"
     },
     {
       "path": "tools/INPUT_GUIDE.md",
       "byte_length": 6910,
-      "sha256": "568b35129d202c99a122807e9dccb9ccfa1e9299d073d2f94d53baa5c39560ea"
+      "sha256": "f7278508173c0e8e8490a5f862913a3acb2dccd920c8c2bd06ea98164d9dc06a"
     },
     {
       "path": "tools/TOOLCHAIN.md",
       "byte_length": 8322,
-      "sha256": "55481ee728b29043053a5f8d1a6560ff4da1a685398b0b60f6f46bc046f16015"
+      "sha256": "11efbc5a725efc8c24a9ac90de2fb14ebbc323cfb2bb95d4eed5c2ad533088f8"
     },
     {
       "path": "tools/TOOL_GUIDE.md",
       "byte_length": 33301,
-      "sha256": "9eebd26ced937d6d737fa35cc9c8aa23016fccafa842f32e0136332f2d705d54"
+      "sha256": "ffd13065d626bd7454a10d27e75b71b7913659f30f66528526430b731215773e"
     },
     {
       "path": "contracts/GAME_SESSION_SPEC.md",
@@ -254,7 +248,7 @@
     {
       "path": "self-check/PublicSmoke/CONTRACT.md",
       "byte_length": 3174,
-      "sha256": "470e726f2ab6de9e062283bc59a1a68ef923affae45c89f60f9089729bbdb3a9"
+      "sha256": "362387a2fc9e0e964c717833f755d3eb3e370db7856b8be88d6e055efb26db20"
     },
     {
       "path": "starter-project/Captain2DScaffold.uproject",
@@ -264,7 +258,7 @@
     {
       "path": "GDD.md",
       "byte_length": 23501,
-      "sha256": "9bc8c292ceb6c81b1c2b6fb4d6bf8ee8cfb1dda0fb4d35b1992ad1a276e9821a"
+      "sha256": "62c6f59c186d90052a7ec92a299b6293cadd388ae8ae883a35cd23e6e656ee01"
     },
     {
       "path": "ASSET_MANIFEST.json",
@@ -304,12 +298,12 @@
     {
       "path": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
       "byte_length": 26334,
-      "sha256": "21e24442efef28e91bc4e1e27de0dbcf084948ab0926277f2ce61d632580b491"
+      "sha256": "4da8764c4b8e97f92fe53392cdc2f1fc038e5f2272dc9a5f0b30834c417f172a"
     },
     {
       "path": "self-check/PublicSmoke/schemas/public-smoke-result.schema.json",
       "byte_length": 4488,
-      "sha256": "6eb9f47be292311378cbe97e882f0cffcc73d78258653747947759098b0dc7b7"
+      "sha256": "307339d17c563797d6d7718805d65d5d19ff0e44d6148d48aa234aa8848fe69f"
     },
     {
       "path": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
@@ -324,12 +318,12 @@
     {
       "path": "tools/Search-UnrealInterfaceCatalog.ps1",
       "byte_length": 2060,
-      "sha256": "a35eaaa1fc13c0740c649c61b540c43056e0a3c6a4c90a6e7ad0fa7626519afa"
+      "sha256": "815ff8789757ea7cf01b3251c754b9146d9ef9b0986b27faa00065d59b2b36d8"
     },
     {
       "path": "tools/Test-PublicInput.ps1",
       "byte_length": 30809,
-      "sha256": "64bfae9c2d2467c1cec773f4989338b162eaabbb0cc59c5540f645c4de086a3b"
+      "sha256": "266a1fa9dfcf389cd207f5619076b55fc21aaf4bab6b596ae5d08dce08904f53"
     },
     
 

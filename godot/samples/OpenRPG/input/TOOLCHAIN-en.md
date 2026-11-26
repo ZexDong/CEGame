@@ -4,7 +4,7 @@ Contract revision: `dashboard-contract-20261022-r2`
 
 ## Project and engine
 
-- Open `sp/project.godot`. Godot: `4.7.1.stable.official.a13da4feb`, GL Compatibility.
+- Open `sp/project.godot`. Godot: `Godot`, GL Compatibility.
 - The required final entry is `res://src/main.tscn`; `application/run/main_scene` already points there. Keep this path as the final entry; its internal structure may change.
 - Logical viewport: 1920 x 1080, initial client window: 960 x 540, canvas-items stretch. Rectangles in snapshots use logical viewport pixels, not physical desktop coordinates.
 - The starting forest includes static building facades. Usable house doors, interiors, chests, NPCs, quests, and combat are still implementation work.

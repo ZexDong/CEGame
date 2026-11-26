@@ -4,7 +4,7 @@ This document defines the public technical boundary for the canonical Input. Pla
 
 ## Project boundary
 
-- Engine: Godot `4.7.1.stable.official.a13da4feb`.
+- Engine: Godot `Godot`.
 - Project root: `sp/`.
 - Main scene: `res://Starter/Main.tscn`.
 - Renderer: GL Compatibility.
@@ -38,6 +38,6 @@ Copying or importing an asset is insufficient by itself: the menu, map, tower, a
 
 ## Verification
 
-Use the designated Godot 4.7.1 console executable for a clean headless import and `res://benchmark/public_smoke.gd` for the public launch smoke. Then start the normal GUI project and exercise the complete tower-defense journey with real visible input: build/reject drags, combat, repair/upgrade/sell, Game Over, Restart, the winning campaign, Main Menu, close, and a fully closed different-process reopen.
+Use the designated Godot console executable for a clean headless import and `res://benchmark/public_smoke.gd` for the public launch smoke. Then start the normal GUI project and exercise the complete tower-defense journey with real visible input: build/reject drags, combat, repair/upgrade/sell, Game Over, Restart, the winning campaign, Main Menu, close, and a fully closed different-process reopen.
 
 Store logs, screenshots, and runtime snapshots outside the submitted Input while testing. Before handoff, remove `.godot/`, logs, screenshots, temporary scripts, runtime state, and local evidence from the project tree. Report any unexecuted or failed check honestly.

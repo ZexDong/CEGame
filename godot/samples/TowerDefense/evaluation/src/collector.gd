@@ -161,6 +161,8 @@ func _send(event: InputEvent, local := false) -> void:
 		receipt.merge({"type":"key","keycode":event.physical_keycode,"pressed":event.pressed})
 	elif event is InputEventMouseButton:
 		receipt.merge({"type":"mouse_button","button":event.button_index,"pressed":event.pressed,"position":[event.position.x,event.position.y]})
+	elif event is InputEventScreenTouch:
+		receipt.merge({"type":"touch","pressed":event.pressed})
 	elif event is InputEventMouseMotion:
 		receipt.merge({"type":"mouse_motion","position":[event.position.x,event.position.y]})
 	input_trace.append(receipt)
@@ -246,13 +248,13 @@ func _drag_once(start_target: Dictionary, end_target: Dictionary) -> bool:
 	else:
 		# Touch drag is window-local and cannot steer the operator's OS mouse.
 		var touch_down := InputEventScreenTouch.new(); touch_down.index = 0; touch_down.position = start; touch_down.pressed = true
-		root.push_input(touch_down, true); await process_frame
+		_send(touch_down, true); await process_frame
 		for i in range(1, 9):
 			var p := start.lerp(finish, float(i) / 8.0)
 			var touch_drag := InputEventScreenDrag.new(); touch_drag.index = 0; touch_drag.position = p; touch_drag.relative = (finish - start) / 8.0
 			root.push_input(touch_drag, true); await process_frame
 		var touch_up := InputEventScreenTouch.new(); touch_up.index = 0; touch_up.position = finish; touch_up.pressed = false
-		root.push_input(touch_up, true)
+		_send(touch_up, true)
 	await _settle(12)
 	return true
 

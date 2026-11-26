@@ -3,18 +3,10 @@
   "task_id": "NightSkyEngine",
   "task_name": "Night Sky Duel Lab",
   "task_revision": "2.0.0",
-  "release_revision": "nightskyengine-public-input-2026-09-07-ue5.7.4-gdd-2.0.0",
   "language": "en",
   "generated_utc": "2026-09-21T04:12:54.9865123Z",
   "engine": {
     "name": "Unreal Engine",
-    "version": "5.7.4",
-    "changelist": 51494982,
-    "branch": "++UE5+Release-5.7",
-    "source_version_precision": "5.7",
-    "compiler_toolset_version": "14.44.35228",
-    "compiler_version": "19.44.35223",
-    "platform": "Windows x64",
     "runtime_mode": "editor_game",
     "tool_contract_version": "1.0.0",
     "executor_module": "engine/unreal-5.7.4/executor/UnrealEvaluationExecutor.psm1",
@@ -179,7 +171,7 @@
   },
   "tooling": {
     "guide": "tools/TOOL_GUIDE.md",
-    "guide_sha256": "68d077edc8ec2504db51ee5064293ecb9baa9e405acd3ce60df98d1b02981d42",
+    "guide_sha256": "263c952454b1f02ecbb5551a917e16e6d1e3e03aeea04ba0266325baf075072a",
     "capabilities_contract": "engine/unreal-5.7.4/CAPABILITIES.md",
     "capabilities_contract_sha256": "452b66dda0c5ba90bf46957c2108695edfdf9b7d406aa482ae98ca5a549f7b8a",
     "executor_sha256": "614d34ac683267dd86be056a1c8c06ce1b23d0688675360bd606537b20622265",
@@ -283,28 +275,28 @@
 "artifacts": [
     {
       "path": "INITIAL_AGENT_PROMPT.md",
-      "byte_length": 2930,
-      "sha256": "03f4eb8babbe06a9dfc2b1b90dfc10930e4e90f323246cd8d898c51100f60e04"
+      "byte_length": 605,
+      "sha256": "87d826392f87e4de129355f04142e0f8094dc68145fe9dda2a8e423656f2baaf"
     },
     {
       "path": "tools/INPUT_GUIDE.md",
       "byte_length": 5324,
-      "sha256": "0b3d199bd8db3ae9bb7bffab08d6c90db3e78ae4bba18c58bb1a5510eef1e44a"
+      "sha256": "d7ffe5567bed0cb0f482b7eb1cdfdaed6f588056c12299494312263b30c65363"
     },
     {
       "path": "GDD.md",
       "byte_length": 26548,
-      "sha256": "3442d323126d9bbf908c05c90b06a855d267e0c96468736d8aba14d6de719f68"
+      "sha256": "0d67797adf4b3bb20e9f3890c9e4be690e4c823c46457ac3d397f0ad8e30d63c"
     },
     {
       "path": "tools/TOOLCHAIN.md",
       "byte_length": 6523,
-      "sha256": "2fa1ffb2dd76342fa7309decc4d3d783d94db55dde50d6d691bba042b84fe612"
+      "sha256": "2b019f6d225440d3fb71029362dd8238e3f4b3bc5d8839a49b9239f7dcdecf36"
     },
     {
       "path": "tools/TOOL_GUIDE.md",
       "byte_length": 31891,
-      "sha256": "68d077edc8ec2504db51ee5064293ecb9baa9e405acd3ce60df98d1b02981d42"
+      "sha256": "263c952454b1f02ecbb5551a917e16e6d1e3e03aeea04ba0266325baf075072a"
     },
     {
       "path": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
@@ -354,17 +346,17 @@
     {
       "path": "self-check/PublicSmoke/CONTRACT.md",
       "byte_length": 3388,
-      "sha256": "a7cbde2e937341036dedd5a9b0006db420df7c5552536b600eb89ed18dc7374c"
+      "sha256": "ba7867944c23f5269f20f81ad1d596811bd0075ecde95c6d9ea2768c030a6d03"
     },
     {
       "path": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
       "byte_length": 27819,
-      "sha256": "09d860a30d6677f49a54fd320f4773ec3336779ae232a80dd892ee0c89e29766"
+      "sha256": "fa2e978e8d2267ec4ce44e0ec0656a3a0fb2d108d9d9d4e8ee0a17a1be9db54e"
     },
     {
       "path": "self-check/PublicSmoke/schemas/public-smoke-result.schema.json",
       "byte_length": 4497,
-      "sha256": "a336581e5729de6074f18aba90721c7467398b725a644f787263035fa7790a95"
+      "sha256": "e10ca472d44fa56a3990d2272f6a3559aca285872b44a67cfe580415f31afb0f"
     },
     {
       "path": "starter-project/NightSkyDuelScaffold.uproject",

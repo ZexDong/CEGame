@@ -1,5 +1,5 @@
 {
-  "reviewer_model": "gpt5.6sol",
+  "reviewer_model": "gpt-5.6-sol",
   "parameter_mode": "platform_defaults",
   "manual_parameter_overrides": {},
   "prompt": "prompt.txt",

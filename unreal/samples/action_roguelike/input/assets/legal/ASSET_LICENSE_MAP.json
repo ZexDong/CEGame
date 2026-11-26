@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "catalog": "../ASSET_CATALOG.json",
+  "notice": "../../THIRD_PARTY_NOTICES.md",
+  "mapping_rule": "Each catalog asset carries exactly one license_id listed below.",
+  "licenses": [
+    {
+      "license_id": "unreal_engine_eula_and_task_authored_layout",
+      "asset_count": 5,
+      "scope": "Task-authored arena layout and geometry created inside Unreal Engine from Unreal-compatible source material.",
+      "controlling_terms": [
+        "Unreal Engine EULA",
+        "Any applicable Epic content terms"
+      ],
+      "standalone_redistribution_allowed": false
+    },
+    {
+      "license_id": "epic_content_terms_and_upstream_authorization_review_required",
+      "asset_count": 264,
+      "scope": "Epic ecosystem content and selected presentation assets retained from the audited ActionRoguelike lineage.",
+      "controlling_terms": [
+        "Epic Content License Agreement",
+        "Applicable Fab or Marketplace terms",
+        "Upstream authorization review"
+      ],
+      "standalone_redistribution_allowed": false
+    }
+  ],
+  "excluded_material": [
+    "Upstream C++ gameplay source",
+    "Upstream gameplay Blueprints",
+    "Upstream AI, UI, input, save, and assembled game logic",
+    "Reference implementation and evaluator material"
+  ]
+}

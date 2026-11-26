@@ -1,14 +1,5 @@
-Implement Pocket Greenhouse from scratch in Roblox Studio using only this
-public input. Fully implement the GDD, Common Baseline, and read-only dashboard.
-All gameplay uses normal left clicks. No cheats, auto-completion, debug buttons,
-or evaluator state-writing interfaces.
-
-Deliver:
-1. A .rbxlx file that Roblox Studio can open.
-2. Reproducible source project, preferably Rojo.
-3. ReplicatedStorage/BenchmarkDashboard exporting GetSnapshot() only.
-4. README with build/open/play instructions.
-5. Third-party licenses and attribution for included assets.
-
-Before delivery, check from a fresh session: start, invalid actions, correct
-planting/harvest, delivery victory, deadline defeat, Restart, and Reopen.
+Build the complete playable game defined by the supplied design within 3600 seconds.
+Work in a copy of the supplied input. Read the design, public interface contracts, tool guides, asset and delivery requirements before editing.
+Implement the specified controls and expose real game state through the required public interfaces. Use the supplied assets and preserve protected files.
+Deliver the runnable project and any outputs required by the task. Report only checks you actually ran.
+Use only the permitted resources. Do not inspect other tasks, reference implementations, evaluators or prior results.

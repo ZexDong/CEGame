@@ -3,14 +3,10 @@
   "task_id": "RollBall",
   "task_name": "RollBall Fixed Maze",
   "task_revision": "1.3.0",
-  "release_revision": "rollball-public-input-2026-09-12-ue5.7.4-engine-discovery",
   "language": "en",
   "generated_utc": "2026-09-10T06:22:41Z",
   "engine": {
     "name": "Unreal Engine",
-    "version": "5.7.4",
-    "changelist": 51494982,
-    "platform": "Windows x64",
     "runtime_mode": "editor_game",
     "tool_contract_version": "1.0.0",
     "executor_module": "engine/unreal-5.7.4/executor/UnrealEvaluationExecutor.psm1",
@@ -227,18 +223,18 @@
 "artifacts": [
     {
       "path": "INITIAL_AGENT_PROMPT.md",
-      "byte_length": 5551,
-      "sha256": "a9ea7e5c8f63878cad4b37a8da99c0a78fc51264ec6c9ffe30018b78118a91fa"
+      "byte_length": 605,
+      "sha256": "87d826392f87e4de129355f04142e0f8094dc68145fe9dda2a8e423656f2baaf"
     },
     {
       "path": "tools/INPUT_GUIDE.md",
       "byte_length": 5474,
-      "sha256": "f920ac48640d50e37a352cb69793a8a60c5e4ab78789a90429fe4872d1ab3135"
+      "sha256": "c442f18deefde11ece4923bf6ea8972101058eae8b257c4137ea19d650d54329"
     },
     {
       "path": "GDD.md",
       "byte_length": 23305,
-      "sha256": "12df8d731f92a22fa950861a92ead94fd626aab9214d604d2e853b4b90b792a3"
+      "sha256": "34951da71a9f2b0f98bf561333b6bf8503230c4e6b9a0b10866ea16d8cd41b8c"
     },
     {
       "path": "FIXED_LAYOUT.md",
@@ -248,12 +244,12 @@
     {
       "path": "tools/TOOLCHAIN.md",
       "byte_length": 6910,
-      "sha256": "04ba808fa4dfe576a81db51f1f5b16dd2822e5c3839ed9c29e6e1fa8200ec15a"
+      "sha256": "ac7dab1341f2c1d6cfb005aa005b3129c4afbea62454ead700fa6b80c521f8cc"
     },
     {
       "path": "tools/TOOL_GUIDE.md",
       "byte_length": 10450,
-      "sha256": "c564e126a4133a87ef7b401d70320b06909b9f0a7c464133eb7e713fe75005f3"
+      "sha256": "fda658a93098a2ec456cd9a64eb9b142f58ddc5ca56a0e85e3981694de3e6af4"
     },
     {
       "path": "ASSET_MANIFEST.json",
@@ -303,7 +299,7 @@
     {
       "path": "tools/Test-PublicInput.ps1",
       "byte_length": 13154,
-      "sha256": "d268ca8d8e0fed154c1eec81b951caebced98259f4cd24e53fc0c4cc79696ddf"
+      "sha256": "02ffbe72963a0c084f3e04de2135192f4b1ca895ccb39751337108464c8656b0"
     },
     {
       "path": "assets/legal/ASSET_LICENSE_MAP.json",

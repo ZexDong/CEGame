@@ -8,6 +8,41 @@ MAXIMA = {"D1": 10, "D2": 30, "D3": 20, "D4": 20, "D5": 10, "D6": 10}
 ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.:-]*$")
 
 
+def _all_observed(values):
+    if 0 in values:
+        return 0
+    return 1 if values and all(v == 1 for v in values) else None
+
+
+def _scorecard(data, observations):
+    flags = [observations.get(name, {}).get("value") for name in ("journey", "lifecycle", "critical")]
+    dims = data["dimensions"]
+    functional = [dims[d]["score"] for d in ("D1", "D2", "D3", "D4", "D5")]
+    raw = dims["D6"]["score"]
+    adjusted = raw
+    if raw is not None and raw > 5 and flags[0] != 1:
+        adjusted = 5 if flags[0] == 0 else None
+    return {"J": flags[0], "Lambda": flags[1], "solved": _all_observed(flags),
+            "F": round(sum(functional), 6) if None not in functional else None,
+            "D6_raw": raw, "D6_counted": adjusted, "observations": observations}
+
+
+def apply_scorecard(data, observations=None):
+    if observations is None:
+        observations = data.get("extensions", {}).get("scorecard", {}).get("observations", {})
+    if data["classification"] in ("not_run", "infrastructure_failure"):
+        observations = {}
+    card = _scorecard(data, observations)
+    data.setdefault("extensions", {})["scorecard"] = card
+    if data["evaluation_valid"]:
+        if card["D6_counted"] is None:
+            data.update(evaluation_valid=False, classification="incomplete", final_score=None,
+                        reason="The journey result is needed to determine the presentation credit.")
+        else:
+            data["final_score"] = round(card["F"] + card["D6_counted"], 6)
+    return data
+
+
 def validate(data, output_root=None, require_final=False, check_evidence=False):
     def need(ok, message):
         if not ok:
@@ -144,9 +179,28 @@ def validate(data, output_root=None, require_final=False, check_evidence=False):
             need(value["score"] is None and not final, "Incomplete/invalid dimension must have null score")
         if final:
             need(state == "complete", "Final result must complete every dimension")
+    card = data.get("extensions", {}).get("scorecard")
+    if card is not None:
+        need(isinstance(card, dict), "Expected scorecard object")
+        observations = card.get("observations")
+        need(isinstance(observations, dict) and set(observations) <= {"journey", "lifecycle", "critical"},
+             "Invalid outcome observations")
+        if data["classification"] in ("not_run", "infrastructure_failure"):
+            need(not observations, "Outcome flags require a valid collection")
+        for record in observations.values():
+            keys(record, ["value", "evidence"])
+            need(type(record["value"]) is int and record["value"] in (0, 1), "Invalid outcome flag")
+            evidence(record["evidence"], required=True)
+        expected_card = _scorecard(data, observations)
+        need(card == expected_card, "Outcome flags or presentation credit differ from the evidence")
+        for name in ("J", "Lambda", "solved"):
+            need(card[name] is None or type(card[name]) is int, "Invalid scorecard flag type")
     if final:
-        expected = round(sum(v["score"] for v in data["dimensions"].values()), 6)
-        need(close(data["final_score"], expected), "Overall is not D1-D6 sum")
+        if card is None:
+            card = _scorecard(data, {})
+        need(card["D6_counted"] is not None, "Unresolved journey cap")
+        expected = round(card["F"] + card["D6_counted"], 6)
+        need(close(data["final_score"], expected), "Overall score mismatch")
     if data["classification"] == "candidate_failure":
         need(data["reason"].strip() and any(c["status"] in ["fail", "blocked_by_candidate"] for c in by_id.values()),
              "candidate_failure needs an evidenced candidate defect")

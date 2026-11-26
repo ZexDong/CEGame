@@ -1,6 +1,6 @@
 # Bomber Local Duel Public Input
 
-This is the complete public starting package for an Unreal Engine 5.7.4 implementation task. It contains an answer-free C++ starter, a fixed 11x9 duel layout, privacy-scanned original 3D assets, English player-facing requirements, a complete UE 5.7.4 interface catalog, a read-only observation contract, offline license text, and repeatable package checks.
+This is the complete public starting package for an Unreal Engine implementation task. It contains an answer-free C++ starter, a fixed 11x9 duel layout, privacy-scanned original 3D assets, English player-facing requirements, a complete Unreal Engine interface catalog, a read-only observation contract, offline license text, and repeatable package checks.
 
 The clean asset kit deliberately includes original visual content but excludes original gameplay code and assembled gameplay assets. No original game mode, pawn Blueprint, AI, input mapping, StateTree, data registry, gameplay map, menu, save, evaluator, or solution is present.
 
@@ -75,7 +75,7 @@ pwsh -NoProfile -File self-check/PublicSmoke/Invoke-PublicSmoke.ps1 `
   -RunRoot <run-root>
 ```
 
-Public smoke resolves and validates UE 5.7.4 automatically when `-EngineRoot` is omitted; set `UE_5_7_ROOT` or pass `-EngineRoot` for a non-standard installation. It checks only package/build/render/transport/reopen/cleanup health. It does not test or certify gameplay requirements.
+Public smoke resolves and validates Unreal Engine automatically when `-EngineRoot` is omitted; set `UE_5_7_ROOT` or pass `-EngineRoot` for a non-standard installation. It checks only package/build/render/transport/reopen/cleanup health. It does not test or certify gameplay requirements.
 
 ## Public/Private Boundary
 

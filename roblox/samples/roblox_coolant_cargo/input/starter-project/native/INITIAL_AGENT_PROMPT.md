@@ -1,9 +1,5 @@
-# Initial scaffold prompt
-
-Build the Roblox Studio game specified by this public input. Your writable submission directory is supplied by the runner; do not modify the canonical input directory.
-
-Your total scaffold time limit is **3600 seconds**. At the deadline the runner will stop this scaffold, freeze the files already present in the submission directory and begin independent evaluation. Plan your work accordingly.
-
-Use `GDD.md` and `PUBLIC_SCHEMA.json` as the public game requirements. `Starter/` is a blank project, `TaskAssets/` declares the supplied visual palette, and the tool documents describe optional individual interfaces. You may decide which tools to use and how often. Do not look for Gold, private evaluator files, historical results or hidden answer code.
-
-Deliver a portable Rojo project with source, a built `.rbxlx`, and a concise development/run record. Do not claim a test passed unless you actually ran it. A compile/build/open/Play result must be recorded separately.
+Build the complete playable game defined by the supplied design within 3600 seconds.
+Work in a copy of the supplied input. Read the design, public interface contracts, tool guides, asset and delivery requirements before editing.
+Implement the specified controls and expose real game state through the required public interfaces. Use the supplied assets and preserve protected files.
+Deliver the runnable project and any outputs required by the task. Report only checks you actually ran.
+Use only the permitted resources. Do not inspect other tasks, reference implementations, evaluators or prior results.

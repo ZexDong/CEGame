@@ -4,7 +4,6 @@
   "public_contract_status": "published_input_contract",
   "benchmark_id": "godot.cervantes_tactics_chapter1_zh.v1",
   "engine": "Godot",
-  "engine_version": "4.7.1.stable.official.a13da4feb",
   "project_root": "sp",
   "entry_scene": "res://Main.tscn",
   "viewport": [
@@ -18,8 +17,7 @@
   "dashboard_spec": "DASHBOARD_SPEC.md",
   "common_baseline": "COMMON_BASELINE.md",
   "material_root": "Asserts",
-  
-"legal_root": "legal",
+  "legal_root": "legal",
   "dashboard": "sp/benchmark/dashboard.gd",
   "dashboard_self_check": "sp/benchmark/dashboard_self_check.gd",
   "naming_tables": "sp/benchmark/naming-tables.json",

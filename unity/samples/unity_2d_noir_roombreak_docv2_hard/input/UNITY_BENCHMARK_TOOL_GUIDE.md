@@ -3,7 +3,7 @@
 ```text
 catalog_id: unity-common-tool-guide
 catalog_revision: 2026.08.26-base-interfaces
-unity_editor: 6000.0.80f1
+unity_editor: Unity
 unity_cli: 1.0.0-beta.3
 input_system_track: 1.19.x
 scope: game-independent Unity and host interfaces
@@ -17,20 +17,20 @@ each task.
 ## 1. Fixed host bindings
 
 ```text
-Unity Editor  D:\game\engine\unity\6000.0.80f1\Editor\Unity.exe
-Unity CLI     D:\game\engine\shared-tools\unity\cli\1.0.0-beta.3\unity.exe
+Unity Editor  $env:UNITY_EDITOR
+Unity CLI     $env:UNITY_CLI
 Input System  1.19.x
 ```
 
 The project `ProjectSettings/ProjectVersion.txt` and `Packages/manifest.json` remain the
-source of truth for project versions. Files under `D:\game\engine` are host-owned and are not
+source of truth for project versions. Installed tool files are host-owned and are not
 project authoring targets.
 
 ## 2. Host project interfaces
 
 | Interface | Available operations | Result surface |
 |---|---|---|
-| PowerShell | Start processes, inspect files, create directories, copy files, and compose command arguments | stdout, stderr, process exit code |
+| shell | Start processes, inspect files, create directories, copy files, and compose command arguments | stdout, stderr, process exit code |
 | .NET file APIs | Read and write text or bytes, resolve paths, enumerate files, compute hashes, and parse XML/JSON | returned objects or exceptions |
 | `rg` | Search file names and text with glob filters | matching paths and lines |
 | Git | Inspect status, diff, tracked files, and authored changes | textual or machine-readable repository state |

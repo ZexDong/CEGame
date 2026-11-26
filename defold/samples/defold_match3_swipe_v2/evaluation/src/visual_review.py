@@ -106,24 +106,7 @@ def apply_review(result, review_path, sample, output):
             raw_files.append(response["raw_response"])
     destination = output / "evidence/d6-review.json"
     destination.write_text(json.dumps(review, indent=2) + "\n", encoding="utf-8")
-    # Each registered state is a leaf. Its credit is the median of three totals.
-    used = 0
-    for i, key in enumerate(states):
-        maximum = round(10 - used, 6) if i == len(states) - 1 else round(10 / len(states), 6)
-        used += maximum
-        ratio = statistics.median(observed[key]) / 10
-        points = round(maximum * ratio, 6)
-        state = "pass" if points == maximum else "fail" if points == 0 else "partial"
-        result["checks"].append({
-            "id": "D6-" + key, "requirement_ids": ["D6-PRESENTATION"],
-            "dimension": "D6", "max_score": maximum, "score": points,
-            "status": state, "reason": "Median of three independent five-item judge totals for this state.",
-            "blocked_by": [], "evidence": ["evidence/d6-review.json"] + images + sorted(set(raw_files)),
-        })
-    evidence = ["evidence/d6-review.json"] + images + sorted(set(raw_files))
-    result["dimensions"]["D6"] = {"max_score": 10, "score": round(sum(c["score"] for c in result["checks"]
-                                                       if c["dimension"] == "D6"), 6),
-                                  "status": "complete", "evidence": evidence}
-    if all(d["status"] == "complete" for d in result["dimensions"].values()):
-        result.update(evaluation_valid=True, classification="scored", reason="All six dimensions have resolved evidence.",
-                      final_score=round(sum(d["score"] for d in result["dimensions"].values()), 6))
+    result["extensions"]["supplemental_visual_review"] = {
+        "scope": protocol["comparison_scope"], "evidence": "evidence/d6-review.json",
+        "state_medians": {state: statistics.median(scores) for state, scores in observed.items()},
+    }

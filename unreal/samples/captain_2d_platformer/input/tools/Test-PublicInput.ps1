@@ -183,8 +183,14 @@ try {
 
 
 
+    $catalogArchivePath = if (Test-Path -LiteralPath (Join-Path $root $benchmark.paths.tool_catalog_archive)) {
+        Join-Path $root $benchmark.paths.tool_catalog_archive
+    } elseif ($root -eq (Split-Path -Parent $PSScriptRoot)) {
+        & (Join-Path $PSScriptRoot 'Search-UnrealInterfaceCatalog.ps1') -ResolveCatalog
+    } else { throw 'Missing interface catalog in the supplied input.' }
     foreach ($artifact in @($benchmark.artifacts)) {
         $artifactPath = Resolve-ReleasedPath -Root $root -RelativePath ([string]$artifact.path)
+        if ($artifact.path -ceq $benchmark.paths.tool_catalog_archive) { $artifactPath = $catalogArchivePath }
         Assert-PublicInput (Test-Path -LiteralPath $artifactPath -PathType Leaf) "Declared artifact is missing: $($artifact.path)"
         $artifactItem = Get-Item -LiteralPath $artifactPath
         $artifactHash = (Get-FileHash -LiteralPath $artifactPath -Algorithm SHA256).Hash.ToLowerInvariant()
@@ -224,7 +230,6 @@ try {
     Assert-PublicInput ($benchmark.tooling.guide_sha256 -ceq $toolGuideHash) 'Tool guide identity is stale.'
 
     $catalogIndexPath = Join-Path $root 'tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json'
-    $catalogArchivePath = Join-Path $root 'tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz'
     $catalogIndex = Read-JsonFile -Path $catalogIndexPath
     $catalogIndexHash = (Get-FileHash -LiteralPath $catalogIndexPath -Algorithm SHA256).Hash.ToLowerInvariant()
     $catalogArchiveHash = (Get-FileHash -LiteralPath $catalogArchivePath -Algorithm SHA256).Hash.ToLowerInvariant()

@@ -7,8 +7,76 @@ from pathlib import Path
 import json
 import math
 import uuid
+import sys
 
 MAXIMA={'D1':10,'D2':30,'D3':20,'D4':20,'D5':10,'D6':10}
+
+def _extract_outcome_observations(raw, evidence_ref):
+    obs = {}
+    if not isinstance(raw, dict):
+        return obs
+    explicit = raw.get('outcome_observations')
+    if isinstance(explicit, dict):
+        for k, v in explicit.items():
+            if k in ('journey', 'lifecycle', 'critical') and isinstance(v, dict):
+                obs[k] = v
+    checks = []
+    for row in raw.get('breakdown', []) if isinstance(raw.get('breakdown'), list) else []:
+        if isinstance(row, dict):
+            cs = row.get('checkpoints', [])
+            if isinstance(cs, dict):
+                checks.extend({'id': str(k), **v} for k, v in cs.items() if isinstance(v, dict))
+            elif isinstance(cs, list):
+                checks.extend(v for v in cs if isinstance(v, dict))
+    dims = raw.get('dimensions')
+    if isinstance(dims, dict):
+        for r in dims.values():
+            if isinstance(r, dict):
+                cs = r.get('checkpoints', [])
+                if isinstance(cs, dict):
+                    checks.extend({'id': str(k), **v} for k, v in cs.items() if isinstance(v, dict))
+                elif isinstance(cs, list):
+                    checks.extend(v for v in cs if isinstance(v, dict))
+    for key in ('checkpoints', 'checks'):
+        cs = raw.get(key)
+        if isinstance(cs, dict):
+            checks.extend({'id': str(k), **v} for k, v in cs.items() if isinstance(v, dict))
+        elif isinstance(cs, list):
+            checks.extend(v for v in cs if isinstance(v, dict))
+
+    def _bit(item):
+        v = item.get('status', item.get('verdict', item.get('passed')))
+        if isinstance(v, bool):
+            return 1 if v else 0
+        s = str(v or '').strip().lower()
+        if s in ('pass', 'passed', 'ok', 'true'):
+            return 1
+        if s in ('fail', 'failed', 'blocked_by_candidate', 'false'):
+            return 0
+        return None
+
+    if 'journey' not in obs:
+        j_rows = [c for c in checks if any(t in str(c.get('id', c.get('checkpoint_id', ''))).lower()
+                  for t in ('complete_success', 'airlock_to_completion', 'end_to_end', 'journey', 'full_playthrough', 'complete_run'))]
+        if j_rows:
+            bits = [_bit(c) for c in j_rows]
+            if 0 in bits:
+                obs['journey'] = {'value': 0, 'evidence': [evidence_ref]}
+            elif all(b == 1 for b in bits):
+                obs['journey'] = {'value': 1, 'evidence': [evidence_ref]}
+        elif isinstance(raw.get('journey'), bool) or raw.get('journey') in (0, 1):
+            obs['journey'] = {'value': int(bool(raw['journey'])), 'evidence': [evidence_ref]}
+
+    if 'lifecycle' not in obs:
+        l_rows = [c for c in checks if any(t in str(c.get('id', c.get('checkpoint_id', ''))).lower()
+                  for t in ('reopen', 'restart', 'reset', 'retry'))]
+        if l_rows:
+            bits = [_bit(c) for c in l_rows]
+            if 0 in bits:
+                obs['lifecycle'] = {'value': 0, 'evidence': [evidence_ref]}
+            elif all(b == 1 for b in bits):
+                obs['lifecycle'] = {'value': 1, 'evidence': [evidence_ref]}
+    return obs
 
 def export_result(native, output, coverage, *, infrastructure_error=None, not_run=False):
     evidence=output/'evidence'
@@ -70,5 +138,9 @@ def export_result(native, output, coverage, *, infrastructure_error=None, not_ru
             'native_report':'evidence/native-score.json','native_checkpoint_verdicts_rewritten':False,
             'dimension_values_recomputed':False,
             'legacy_provenance_not_a_release_gate':'Existing original evaluator and workflow accepted as completed by the owner; this adapter adds no qualification gate.'}}
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+    from validate_score import apply_scorecard
+    observations = _extract_outcome_observations(native, 'evidence/native-score.json') if not infrastructure_error and not not_run else {}
+    apply_scorecard(result, observations)
     (output/'score.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     return result

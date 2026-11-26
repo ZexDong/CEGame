@@ -36,7 +36,7 @@ Build a compact roguelike tower-defense run: start with `100` gold and `20` base
 
 | Item | Starting state | Requirement |
 |---|---|---|
-| Project | Runnable Godot 4.7.1 starter with a visible placeholder | `ENTRY-01`, `QUALITY-01` |
+| Project | Runnable Godot starter with a visible placeholder | `ENTRY-01`, `QUALITY-01` |
 | Gameplay | No playable run yet | All requirements |
 | Gold | `100` | `ENTRY-02`, `PLACE-04` |
 | Base health | `20` | `ENTRY-02`, `BASE-01` |

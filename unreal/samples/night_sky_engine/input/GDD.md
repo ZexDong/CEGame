@@ -32,7 +32,7 @@ Create a direct-entry side-view fighting duel in which the player repositions, j
 
 | Item | Starting State | Requirement IDs When Evaluated |
 |---|---|---|
-| Engine identity | The task is bound to the validated local Unreal Engine 5.7.4 build. | None; this is an environment fact. |
+| Engine identity | The task is bound to the validated local Unreal Engine build. | None; this is an environment fact. |
 | Project and entry | The common start is a source-only Blank project that opens an English health screen. | `QUALITY-01`, `CONTENT-01` |
 | Gameplay | The common start contains no fighter pawn, rival, arena, gameplay input, attack, defense, health, KO, or gameplay restart implementation. | All task-specific requirements |
 | Observation bridge | The common start publishes a read-only task envelope with `bridge_ready=true`, `provider_ready=false`, and `game_state=null`. | None; this is public evaluator interoperability, not gameplay acceptance. |

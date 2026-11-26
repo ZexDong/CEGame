@@ -27,7 +27,6 @@ $required = @(
     'BENCHMARK_MANIFEST.json', 'tools/TOOLCHAIN.md',
     'tools/TOOL_GUIDE.md',
     'tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json',
-    'tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz',
     'ASSET_MANIFEST.json', 'assets/ASSET_CATALOG.json', 'assets/ASSET_CATALOG.md', 'ASSET_COVERAGE.json',
     'THIRD_PARTY_NOTICES.md', 'assets/legal/MIT-RollBall.txt', 'assets/legal/ASSET_LICENSE_MAP.json',
     'contracts/GAME_SESSION_SPEC.md', 'contracts/game-state.schema.json',
@@ -131,6 +130,9 @@ foreach ($binaryPath in $actualBinaryPaths) {
 
 $catalogIndex = Read-Json 'tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json'
 $catalogArchive = Join-Path $root 'tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz'
+if (-not (Test-Path -LiteralPath $catalogArchive) -and $root -eq (Split-Path -Parent $PSScriptRoot)) {
+    $catalogArchive = & (Join-Path $PSScriptRoot 'Search-UnrealInterfaceCatalog.ps1') -ResolveCatalog
+}
 Assert-PublicInput ([string]$catalogIndex.engine.version -ceq '5.7.4' -and [int64]$catalogIndex.engine.changelist -eq 51494982) 'The interface catalog engine identity is invalid.'
 Assert-PublicInput ([int]$catalogIndex.entry_count -eq 546387) 'The interface catalog entry count is invalid.'
 Assert-PublicInput ([int64]$catalogIndex.catalog_byte_length -eq (Get-Item -LiteralPath $catalogArchive).Length) 'The interface catalog byte length is invalid.'

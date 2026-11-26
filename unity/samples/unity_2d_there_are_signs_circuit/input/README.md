@@ -31,7 +31,7 @@ Refer to the numbered requirements in `GDD.md` for the complete boundaries.
 
 ## 3. Project map
 
-- Unity Editor: `6000.0.80f1`
+- Unity Editor: `Unity`
 - Challenge scene: `Assets/Scenes/Benchmark/SignCircuit.unity`
 - Existing menu: `Assets/Scenes/Menu.unity`
 - Preserved level: `Assets/Scenes/Levels/Level1+2.unity`

@@ -29,7 +29,7 @@ The player controls a third-person character presented with the character models
 
 | Item | State Summary | Corresponding Requirement Number |
 |---|---|---|
-| Engine identity | The public package targets Unreal Engine 5.6.1, changelist 44394996, on Windows x64 in an independent `editor_game` window. | None; this is a toolchain fact. |
+| Engine identity | The public package targets Unreal Engine, configured engine build, on desktop in an independent `editor_game` window. | None; this is a toolchain fact. |
 | Project entry | `starter-project/ArenaSlice.uproject` opens the static `/Game/Arena/Maps/StarterArena` common-start map. | None; this is a starting-package fact. |
 | Starter gameplay | The common start contains no player pawn, gameplay Blueprint, source module, AI, UI, input assets, save system, wave logic, victory flow, or failure flow. | Section 6 requirements as applicable. |
 | Observation contract | Public read-only snapshot and event schemas are supplied, but the common start publishes no candidate gameplay truth. | None; this is public interoperability plumbing. |

@@ -87,15 +87,6 @@ def _merge(data,catalog,static):
             facts=row.get('facts',{}))
     return result
 
-def _apply_review(results,review):
-    needed={cid for cid,r in results.items() if r['verdict']=='review'}
-    if needed and not review: raise InvalidEvidence('FUNCTIONAL_REVIEW_REQUIRED')
-    if set(review)!=needed: raise InvalidEvidence('FUNCTIONAL_REVIEW_CHECKPOINT_SET')
-    for cid,row in review.items():
-        results[cid]['verdict']=row['verdict']; results[cid]['attribution']='candidate' if row['verdict']=='fail' else 'observed'
-        results[cid]['reason']=row['reason']; results[cid]['evidence']=row['evidence']
-    return results
-
 def _candidate_capture(collection, run_root, name):
     aliases={'navigation':('direction-W','released'),'reopen':('reopen','fresh-process'),'initial':('entry','initial')}
     for case in collection['cases']:
@@ -115,17 +106,21 @@ def _d6_score(d6_path, collection, run_root):
         raise InvalidEvidence('D6_PROTOCOL_BINDING')
     usable={name:_candidate_capture(collection,run_root,name) for name in states}
     usable={k:v for k,v in usable.items() if v}
-    if not usable: return 0.0,[0.0,0.0,0.0]
+    if not usable: return 0.0, [0.0, 0.0, 0.0], []
     if not d6_path: raise InvalidEvidence('D6_REVIEW_REQUIRED')
     d6=read(d6_path)
     if d6.get('status')!='completed' or d6.get('collection_sha256')!=sha(run_root/'collection.json'):
         raise InvalidEvidence('D6_BINDING')
     if d6.get('references_sha256')!=sha(ROOT/'d6/references.json') or d6.get('prompt_sha256')!=sha(ROOT/'d6/FIXED_PROMPT.txt'):
         raise InvalidEvidence('D6_PROTOCOL_BINDING')
+    model = read(ROOT/'d6/model-binding.json')['model']
+    if d6.get('model') != model or d6.get('returned_model') != model:
+        raise InvalidEvidence('VLM_MODEL_BINDING')
     rounds=d6.get('rounds')
     if not isinstance(rounds,list) or len(rounds)!=3: raise InvalidEvidence('D6_ROUNDS_INVALID')
     means=[]
     for i,rd in enumerate(rounds,1):
+        if rd.get('round') != i: raise InvalidEvidence('D6_ROUND_ORDER')
         rows=rd.get('states',[])
         if [x.get('state') for x in rows]!=states: raise InvalidEvidence('D6_STATE_ORDER')
         vals=[]
@@ -137,25 +132,43 @@ def _d6_score(d6_path, collection, run_root):
             else:
                 if row.get('source')!='vlm': raise InvalidEvidence('D6_COMPARABLE_ZERO_BYPASS')
                 for key in ('request','response'):
-                    item=row.get(key) or {}; verified(run_root,item.get('path',''),item.get('sha256',''))
+                    item = row.get(key) or {}
+                    receipt = verified(run_root, item.get('path', ''), item.get('sha256', ''))
+                    record = read(receipt)
+                    if record.get('model') != model:
+                        raise InvalidEvidence('VLM_MODEL_BINDING')
+                    if key == 'request':
+                        from d6 import payload
+                        state = next(s for s in refs['states'] if s['id'] == row['state'])
+                        reference = verified(ROOT / 'd6', state['reference'], state['sha256'])
+                        if record != payload(model, state['label'], reference, usable[row['state']][2]):
+                            raise InvalidEvidence('VLM_REQUEST_IMAGE_BINDING')
+                    if key == 'response':
+                        from d6 import parse_response
+                        if parse_response(record['choices'][0]['message']['content']) != criteria:
+                            raise InvalidEvidence('VLM_RESPONSE_SCORE_MISMATCH')
             vals.append(sum(criteria))
         means.append(sum(vals)/len(states))
-    return rounded(sum(means)/3),[rounded(v) for v in means]
+    return rounded(sum(means)/3), [rounded(v) for v in means], rounds
 
 def score(collection_path, static_path=None, review_path=None, d6_path=None):
     collection_path=Path(collection_path).resolve(); run_root=collection_path.parent
     data,catalog=check_collection(collection_path)
     static=_static_rows(static_path,run_root,catalog); results=_merge(data,catalog,static)
-    results=_apply_review(results,_review_rows(review_path,run_root))
-    if any(r['verdict']=='review' for r in results.values()): raise InvalidEvidence('UNRESOLVED_REVIEW')
-    scores={}
-    for dim,cap in catalog['dimensions'].items():
-        if dim=='D6': continue
-        subset=[r for r in results.values() if r['dimension']==dim]
-        scores[dim]=rounded(cap*sum(r['verdict']=='pass' for r in subset)/len(subset))
-    d6,rounds=_d6_score(d6_path,data,run_root); scores['D6']=d6
-    scores['functional_total']=rounded(sum(scores[d] for d in ('D1','D2','D3','D4','D5')))
-    scores['overall']=rounded(scores['functional_total']+d6)
+    pending = {cid for cid, row in results.items() if row['verdict'] == 'review'}
+    supplemental = _review_rows(review_path, run_root)
+    if review_path and set(supplemental) != pending:
+        raise InvalidEvidence('FUNCTIONAL_REVIEW_CHECKPOINT_SET')
+    scores = {}
+    for dim, cap in catalog['dimensions'].items():
+        if dim == 'D6':
+            continue
+        subset = [r for r in results.values() if r['dimension'] == dim]
+        scores[dim] = (None if any(r['verdict'] == 'review' for r in subset) else
+                       rounded(cap * sum(r['verdict'] == 'pass' for r in subset) / len(subset)))
+    functional = None if None in scores.values() else rounded(sum(scores.values()))
+    d6, round_means, rounds = _d6_score(d6_path, data, run_root)
+    scores.update(D6=d6, functional_total=functional, overall=None if functional is None else rounded(functional + d6))
     candidate_failures=[]
     for row in results.values():
         if row.get('machine_verdict') in ('fail','unreachable'):
@@ -166,8 +179,8 @@ def score(collection_path, static_path=None, review_path=None, d6_path=None):
                 collection_sha256=sha(collection_path),static_sha256=sha(static_path) if static_path else None,
                 review_sha256=sha(review_path) if review_path else None,d6_sha256=sha(d6_path) if d6_path else None,
                 catalog_sha256=sha(ROOT/'catalog/checkpoints.json'),gdd_sha256=catalog['gdd_sha256'],
-                scores=scores,d6_rounds=rounds,checkpoints=list(results.values()),candidate_failures=candidate_failures,
-                unresolved=[],score_publication_allowed=True)
+                scores=scores,d6_rounds=round_means,rounds=rounds,supplemental_review=supplemental,checkpoints=list(results.values()),candidate_failures=candidate_failures,
+                unresolved=sorted(pending),score_publication_allowed=not pending)
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--collection',required=True);p.add_argument('--static');p.add_argument('--review');p.add_argument('--d6');p.add_argument('--output',required=True);a=p.parse_args()

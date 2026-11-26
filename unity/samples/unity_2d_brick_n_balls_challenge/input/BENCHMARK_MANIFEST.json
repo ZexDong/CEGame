@@ -4,7 +4,7 @@
   "input_version": "v1.4-tool-guide-v5-20260825",
   "gdd_revision": "v1.1-player-goals-only-20260825",
   "common_tool_guide_id": "unity-common-tool-guide-v5-20260825",
-  "unity_editor": "6000.0.80f1",
+  "unity_editor": "",
   "unity_cli": "1.0.0-beta.3",
   "entry_scene": "Assets/Scenes/BrickChallenge.unity",
   "target_resolution": [

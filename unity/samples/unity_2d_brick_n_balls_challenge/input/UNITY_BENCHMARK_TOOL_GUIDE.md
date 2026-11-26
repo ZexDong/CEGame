@@ -2,7 +2,7 @@
 
 ```text
 common_tool_guide_id: unity-common-tool-guide-v5-20260825
-unity_editor: 6000.0.80f1
+unity_editor: Unity
 unity_cli: 1.0.0-beta.3
 input_system_track: 1.19.x
 runner_route: unity-cli-plus-project-local-logs-v1
@@ -15,8 +15,8 @@ observation APIs are documented by that project.
 ## 1. Pinned tools and command boundaries
 
 ```text
-Unity Editor  D:\game\engine\unity\6000.0.80f1\Editor\Unity.exe
-Unity CLI     D:\game\engine\shared-tools\unity\cli\1.0.0-beta.3\unity.exe
+Unity Editor  $env:UNITY_EDITOR
+Unity CLI     $env:UNITY_CLI
 Input System  1.19.x
 ```
 
@@ -42,8 +42,8 @@ Resolve the project path with:
 
 ```powershell
 $Project = (Get-Location).Path
-$Cli = 'D:\game\engine\shared-tools\unity\cli\1.0.0-beta.3\unity.exe'
-$Editor = 'D:\game\engine\unity\6000.0.80f1\Editor\Unity.exe'
+$Cli = $env:UNITY_CLI
+$Editor = $env:UNITY_EDITOR
 ```
 
 Unity may delete or recreate `Temp/` while importing or opening a project. Do not store
@@ -166,8 +166,8 @@ Use a bounded import/compile pass with a new local log:
 
 ```powershell
 $Project = (Get-Location).Path
-$Cli = 'D:\game\engine\shared-tools\unity\cli\1.0.0-beta.3\unity.exe'
-$Editor = 'D:\game\engine\unity\6000.0.80f1\Editor\Unity.exe'
+$Cli = $env:UNITY_CLI
+$Editor = $env:UNITY_EDITOR
 $Stamp = [DateTimeOffset]::UtcNow.ToString('yyyyMMdd-HHmmss-fff')
 $CheckDir = "$Project\Logs\ToolChecks\$Stamp-compile"
 $HostTemp = "$CheckDir\host-temp"

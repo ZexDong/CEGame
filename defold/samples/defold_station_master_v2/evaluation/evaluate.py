@@ -16,7 +16,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE / "src"))
 sys.path.insert(0, str(HERE))
 from score_adapter import convert
-from validate_score import validate
+from validate_score import apply_scorecard, validate
 from visual_review import apply_review, capture_inventory, reference_binding
 
 EXCLUDED = {".git", ".internal", ".cache", "__pycache__", "build", ".pytest_cache"}
@@ -70,7 +70,18 @@ def main():
     parser.add_argument("--output", type=Path)
     parser.add_argument("--phase", choices=("collect", "finalize"), default="collect")
     parser.add_argument("--d6-review", type=Path, help="Three-round visual review JSON; see evaluation/d6/protocol.json")
+    parser.add_argument("--validate-only", action="store_true", help="Validate the offline package without launching the game")
     args = parser.parse_args()
+    if args.validate_only:
+        if args.project is not None or args.output is not None or args.d6_review is not None or args.phase != "collect":
+            parser.error("--validate-only cannot be combined with a run or review")
+        try:
+            report = native_preflight(read(HERE.parent / "sample.json"))
+        except (OSError, ValueError, RuntimeError, KeyError, ImportError) as error:
+            print(json.dumps({"package_valid": False, "reason": str(error)}))
+            return 2
+        print(json.dumps(report))
+        return 0
     meta = read(HERE.parent / "sample.json")
     if args.project is None or args.output is None or not args.project.is_absolute() or not args.output.is_absolute():
         parser.error("--project and --output must be absolute paths")
@@ -100,7 +111,7 @@ def main():
         try:
             native_preflight(meta)
             if platform.system() != "Darwin" or platform.machine() != "arm64":
-                raise RuntimeError("Dynamic Defold evaluation requires the macOS arm64 toolchain specified in the engine README.")
+                raise RuntimeError("Dynamic Defold evaluation requires the native host toolchain specified in the engine README.")
             module = importlib.import_module(meta["evaluation"]["native_entry"])
             code = module.main(HERE, ["--project", str(project), "--output", str(output / "native")])
             infrastructure = code == 2
@@ -127,10 +138,12 @@ def main():
             if infrastructure:
                 raise ValueError("Visual review cannot finalize an infrastructure failure.")
             apply_review(result, args.d6_review.resolve(), HERE.parent, output)
+        apply_scorecard(result, result.get("extensions", {}).pop("outcome_observations", {}))
         validate(result, output, check_evidence=True)
     except (OSError, ValueError, KeyError, TypeError) as error:
         result = convert(HERE, output, meta, "Result or visual review rejected: " + str(error), True)
         write(output / "evidence/result-error.json", {"reason": str(error)})
+        apply_scorecard(result, result.get("extensions", {}).pop("outcome_observations", {}))
         validate(result, output, check_evidence=True)
     write(output / "score.json", result)
     print(json.dumps({"classification": result["classification"], "final_score": result["final_score"],

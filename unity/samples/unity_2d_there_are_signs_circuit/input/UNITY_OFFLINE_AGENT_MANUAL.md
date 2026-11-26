@@ -10,14 +10,14 @@ From the current project root:
 
 ```powershell
 $Project = (Resolve-Path '.').Path
-$Editor = 'D:\game\engine\unity\6000.0.80f1\Editor\Unity.exe'
-$Cli = 'D:\game\engine\shared-tools\unity\cli\1.0.0-beta.3\unity.exe'
+$Editor = $env:UNITY_EDITOR
+$Cli = $env:UNITY_CLI
 ```
 
 Expected versions:
 
 ```text
-Unity Editor 6000.0.80f1 (2dfd32957da2)
+Unity Editor Unity (2dfd32957da2)
 Unity CLI 1.0.0-beta.3
 Input System 1.19.0
 Test Framework 1.6.0

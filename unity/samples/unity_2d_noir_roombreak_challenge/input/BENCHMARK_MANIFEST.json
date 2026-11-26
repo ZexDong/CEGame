@@ -4,8 +4,8 @@
   "input_version": "v1.11-tool-guide-v5-20260825",
   "gdd_revision": "v1.7-player-goals-only-20260825",
   "common_tool_guide_id": "unity-common-tool-guide-v5-20260825",
-  "unity_editor": "6000.0.80f1",
-  "upstream_unity_editor": "6000.0.39f1",
+  "unity_editor": "",
+  "upstream_unity_editor": "",
   "migration_class": "same-series mechanical host gate",
   "unity_cli": "1.0.0-beta.3",
   "starter_scene": "Assets/NoirStarter/Scenes/NoirStarter.unity",
@@ -49,4 +49,3 @@
   "asset_catalog": "ASSET_CATALOG.json",
   "asset_contact_sheet": "ASSET_CONTACT_SHEET.png"
 }
-

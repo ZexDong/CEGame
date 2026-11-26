@@ -717,20 +717,18 @@
     {
       "source": "BENCHMARK_MANIFEST.json",
       "published": "BENCHMARK_MANIFEST.json",
-      
-
-"restore_edits": [
+      "restore_edits": [
         {
-          "start": 21,
-          "end": 22,
+          "start": 15,
+          "end": 16,
           "lines": [
             "    \"operation_result_schema\": \"engine/unreal-5.7.4/executor/schemas/operation-result.schema.json\",\n",
             "    \"capability_validation_summary\": \"engine/unreal-5.7.4/validation/latest/summary.json\"\n"
           ]
         },
         {
-          "start": 24,
-          "end": 29,
+          "start": 18,
+          "end": 23,
           "lines": [
             "    \"project_root\": \"project\",\n",
             "    \"project_file\": \"project/BomberStarter.uproject\",\n",
@@ -740,16 +738,16 @@
           ]
         },
         {
-          "start": 31,
-          "end": 33,
+          "start": 25,
+          "end": 27,
           "lines": [
             "    \"final_map_source\": \"project/Config/DefaultEngine.ini: GameDefaultMap\",\n",
             "    \"fixed_layout\": \"project/Config/BomberArenaLayout.json\",\n"
           ]
         },
         {
-          "start": 37,
-          "end": 41,
+          "start": 31,
+          "end": 35,
           "lines": [
             "    \"toolchain\": \"TOOLCHAIN.md\",\n",
             "    \"tool_guide\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
@@ -758,38 +756,38 @@
           ]
         },
         {
-          "start": 43,
-          "end": 45,
+          "start": 37,
+          "end": 39,
           "lines": [
             "    \"asset_catalog_json\": \"ASSET_CATALOG.json\",\n",
             "    \"asset_catalog_human\": \"ASSET_CATALOG.md\",\n"
           ]
         },
         {
-          "start": 46,
-          "end": 47,
+          "start": 40,
+          "end": 41,
           "lines": [
             "    \"license_map\": \"legal/ASSET_LICENSE_MAP.json\",\n"
           ]
         },
         {
-          "start": 48,
-          "end": 50,
+          "start": 42,
+          "end": 44,
           "lines": [
             "    \"public_smoke\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
             "    \"public_smoke_schema\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n"
           ]
         },
         {
-          "start": 62,
-          "end": 63,
+          "start": 56,
+          "end": 57,
           "lines": [
             "    \"README.md\",\n"
           ]
         },
         {
-          "start": 66,
-          "end": 70,
+          "start": 60,
+          "end": 64,
           "lines": [
             "    \"ASSET_CATALOG.md\",\n",
             "    \"TOOLCHAIN.md\",\n",
@@ -798,22 +796,22 @@
           ]
         },
         {
-          "start": 73,
-          "end": 74,
+          "start": 67,
+          "end": 68,
           "lines": [
             "      \"project\"\n"
           ]
         },
         {
-          "start": 77,
-          "end": 78,
+          "start": 71,
+          "end": 72,
           "lines": [
             "      \"README.md\",\n"
           ]
         },
         {
-          "start": 82,
-          "end": 86,
+          "start": 76,
+          "end": 80,
           "lines": [
             "\"TOOLCHAIN.md\",\n",
             "      \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
@@ -822,60 +820,60 @@
           ]
         },
         {
-          "start": 87,
-          "end": 89,
+          "start": 81,
+          "end": 83,
           "lines": [
             "      \"ASSET_CATALOG.json\",\n",
             "      \"ASSET_CATALOG.md\",\n"
           ]
         },
         {
-          "start": 91,
-          "end": 92,
+          "start": 85,
+          "end": 86,
           "lines": [
             "      \"legal\",\n"
           ]
         },
         {
-          "start": 93,
-          "end": 94,
+          "start": 87,
+          "end": 88,
           "lines": [
             "      \"tests\",\n"
           ]
         },
         {
-          "start": 189,
-          "end": 191,
+          "start": 183,
+          "end": 185,
           "lines": [
             "    \"entry\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
             "    \"result_schema\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n"
           ]
         },
         {
-          "start": 212,
-          "end": 214,
+          "start": 206,
+          "end": 208,
           "lines": [
             "    \"guide\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
-            "    \"guide_sha256\": \"b50349fc1a369bfac34c79da242461d447a06472b5ab20075a65978681923382\",\n"
+            "    \"guide_sha256\": \"0c675d450727d12663324dfe8cbb85344252536d5344b0662da49e7a657149fa\",\n"
           ]
         },
         {
-          "start": 215,
-          "end": 216,
+          "start": 209,
+          "end": 210,
           "lines": [
             "    \"capabilities_contract_sha256\": \"9007a3a623ce2c24e8a14c8f69764db31b146c9b5c5019704ab034c803cc2412\",\n"
           ]
         },
         {
-          "start": 222,
-          "end": 223,
+          "start": 216,
+          "end": 217,
           "lines": [
             "    \"validation_scope\": \"Windows x64, Unreal Engine 5.7.4 CL 51494982, editor_game; three independent dynamic validations per validated benchmark interface.\",\n"
           ]
         },
         {
-          "start": 224,
-          "end": 227,
+          "start": 218,
+          "end": 221,
           "lines": [
             "    \"complete_catalog_index\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
             "    \"complete_catalog_index_sha256\": \"44fca8ffb2231ff5f1147673d671823f46068ce369aafae2eff68c13c6d711f0\",\n",
@@ -883,91 +881,75 @@
           ]
         },
         {
-          "start": 232,
-          "end": 234,
+          "start": 226,
+          "end": 228,
           "lines": [
             "    \"catalog_json\": \"ASSET_CATALOG.json\",\n",
             "    \"catalog_human\": \"ASSET_CATALOG.md\",\n"
           ]
         },
         {
-          "start": 235,
-          "end": 237,
+          "start": 229,
+          "end": 231,
           "lines": [
             "    \"license_map\": \"legal/ASSET_LICENSE_MAP.json\",\n",
             "    \"offline_license\": \"legal/MIT-Bomber-assets.txt\",\n"
           ]
         },
         {
-          "start": 245,
-          "end": 247,
+          "start": 253,
+          "end": 256,
           "lines": [
-            "\n",
-            "\n"
-          ]
-        },
-        {
-          "start": 255,
-          "end": 257,
-          "lines": [
-            "      \"byte_length\": 1692,\n",
-            "      \"sha256\": \"63aadcdd5eff0ef35a0c334c4ce5fe7f79e0206d26606dff6b7b9c58e0c9c8c3\"\n"
+            "      \"path\": \"README.md\",\n",
+            "      \"byte_length\": 4182,\n",
+            "      \"sha256\": \"ff59d7ecdef06a586e38e89a42e75d197dae28524b1f999aa43aafc3e7c1b8e7\"\n"
           ]
         },
         {
           "start": 259,
-          "end": 262,
-          "lines": [
-            "      \"path\": \"README.md\",\n",
-            "      \"byte_length\": 4182,\n",
-            "      \"sha256\": \"3583a636d26cb2656ee54be18195fd2c30197475de9ad068a1369ced4f170f17\"\n"
-          ]
-        },
-        {
-          "start": 265,
-          "end": 267,
+          "end": 261,
           "lines": [
             "      \"byte_length\": 28563,\n",
-            "      \"sha256\": \"bdeba96ea306dcfec214b2b4c2ddcd1fa7469f71f36ff0a04e4ef33d343669d4\"\n"
+            "      \"sha256\": \"fe86626fbbaa0f8ebfaeecd389e422fc4407a1bec2ad9a152206d2e16e2820f5\"\n"
           ]
         },
         {
-          "start": 270,
-          "end": 272,
+          "start": 264,
+          "end": 266,
           "lines": [
             "      \"byte_length\": 933,\n",
             "      \"sha256\": \"7ae8131bda7caaeb38ca1447b901cebba6596fc9971c12e9bbd07398e62640f5\"\n"
           ]
         },
         {
-          "start": 274,
-          "end": 277,
+          "start": 268,
+          "end": 271,
           "lines": [
             "      \"path\": \"TOOLCHAIN.md\",\n",
             "      \"byte_length\": 4271,\n",
-            "      \"sha256\": \"a588bd3cd2461de8634f97d90f44c76799b5268c0cba33fbfc037fd3941c0106\"\n"
+            "      \"sha256\": \"7caf14c21bf0830379c4a39355087e7ad4325eb073fb4ac3fe3cb7ea38abcf6d\"\n"
+          ]
+        },
+        {
+          "start": 273,
+          "end": 276,
+          "lines": [
+            "      \"path\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
+            "      \"byte_length\": 10079,\n",
+            "      \"sha256\": \"0c675d450727d12663324dfe8cbb85344252536d5344b0662da49e7a657149fa\"\n"
           ]
         },
         {
           "start": 279,
-          "end": 282,
-          "lines": [
-            "      \"path\": \"UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md\",\n",
-            "      \"byte_length\": 10079,\n",
-            "      \"sha256\": \"b50349fc1a369bfac34c79da242461d447a06472b5ab20075a65978681923382\"\n"
-          ]
-        },
-        {
-          "start": 285,
-          "end": 287,
+          "end": 281,
           "lines": [
             "      \"byte_length\": 12400,\n",
             "      \"sha256\": \"1f47ebc4bf43fa645d906909363eca7846fb0022906da5040de4ace761540c22\"\n"
           ]
         },
         {
-          "start": 289,
-          "end": 292,
+          "start": 283,
+          "end": 286,
           "lines": [
             "      \"path\": \"ASSET_CATALOG.json\",\n",
             "      \"byte_length\": 41251,\n",
@@ -975,8 +957,8 @@
           ]
         },
         {
-          "start": 294,
-          "end": 297,
+          "start": 288,
+          "end": 291,
           "lines": [
             "      \"path\": \"ASSET_CATALOG.md\",\n",
             "      \"byte_length\": 2448,\n",
@@ -984,23 +966,23 @@
           ]
         },
         {
-          "start": 305,
-          "end": 307,
+          "start": 299,
+          "end": 301,
           "lines": [
             "      \"byte_length\": 676,\n",
             "      \"sha256\": \"cdff6a91a7eafe8e0c56f9c7db4606776198380b7dec6c5c84bf34a197c522cc\"\n"
           ]
         },
         {
-          "start": 309,
-          "end": 310,
+          "start": 303,
+          "end": 304,
           "lines": [
             "      \"path\": \"legal/README.md\",\n"
           ]
         },
         {
-          "start": 314,
-          "end": 317,
+          "start": 308,
+          "end": 311,
           "lines": [
             "      \"path\": \"legal/ASSET_LICENSE_MAP.json\",\n",
             "      \"byte_length\": 7831,\n",
@@ -1008,93 +990,93 @@
           ]
         },
         {
-          "start": 319,
-          "end": 320,
+          "start": 313,
+          "end": 314,
           "lines": [
             "      \"path\": \"legal/MIT-Bomber-assets.txt\",\n"
           ]
         },
         {
-          "start": 324,
-          "end": 325,
+          "start": 318,
+          "end": 319,
           "lines": [
             "      \"path\": \"contracts/README.md\",\n"
           ]
         },
         {
-          "start": 334,
-          "end": 335,
+          "start": 328,
+          "end": 329,
           "lines": [
             "      \"path\": \"project/BomberStarter.uproject\",\n"
           ]
         },
         {
-          "start": 339,
-          "end": 340,
+          "start": 333,
+          "end": 334,
           "lines": [
             "      \"path\": \"project/README.md\",\n"
           ]
         },
         {
-          "start": 344,
-          "end": 345,
+          "start": 338,
+          "end": 339,
           "lines": [
             "      \"path\": \"project/Config/BomberArenaLayout.json\",\n"
           ]
         },
         {
-          "start": 349,
-          "end": 350,
+          "start": 343,
+          "end": 344,
           "lines": [
             "      \"path\": \"project/Plugins/BlockoutMap/BlockoutMap.uplugin\",\n"
           ]
         },
         {
-          "start": 354,
-          "end": 357,
+          "start": 348,
+          "end": 351,
           "lines": [
             "      \"path\": \"tests/PublicSmoke/README.md\",\n",
             "      \"byte_length\": 3177,\n",
-            "      \"sha256\": \"ddc5ac484526fa622785e20c7edcc15fd3721a332b462c4e93eb4422cdaed3ce\"\n"
+            "      \"sha256\": \"6e12d60307ee2dfa0a0c67001ecbe16aa217ada1525e3c58aa2b73b59ac52008\"\n"
           ]
         },
         {
-          "start": 359,
-          "end": 362,
+          "start": 353,
+          "end": 356,
           "lines": [
             "      \"path\": \"tests/PublicSmoke/Invoke-PublicSmoke.ps1\",\n",
             "      \"byte_length\": 26343,\n",
-            "      \"sha256\": \"bc5f9fc7d4e9e9450b95164cdeb4090bd3aac7629e133289583d53df320ca156\"\n"
+            "      \"sha256\": \"425a1859cb73a26d6c75ac9584a233993a2ed332fe5a8b51fcfd8c1716b097ef\"\n"
+          ]
+        },
+        {
+          "start": 358,
+          "end": 361,
+          "lines": [
+            "      \"path\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n",
+            "      \"byte_length\": 4457,\n",
+            "      \"sha256\": \"159abe27d2ab241b6068c72911b4ab6f5c60f845c26a133c92b929cbabe11141\"\n"
           ]
         },
         {
           "start": 364,
-          "end": 367,
-          "lines": [
-            "      \"path\": \"tests/PublicSmoke/schemas/public-smoke-result.schema.json\",\n",
-            "      \"byte_length\": 4457,\n",
-            "      \"sha256\": \"4f0d5622527a67f4531986730fcc61a2cf77654a09eb5f1fa80d8f521f6b3c98\"\n"
-          ]
-        },
-        {
-          "start": 370,
-          "end": 372,
+          "end": 366,
           "lines": [
             "      \"byte_length\": 2034,\n",
             "      \"sha256\": \"0b7143a5fd33e3390aa4f0a7fd5b50e928e754c1443cf7c740025572cef809c8\"\n"
           ]
         },
         {
-          "start": 375,
-          "end": 377,
+          "start": 369,
+          "end": 371,
           "lines": [
             "      \"byte_length\": 15813,\n",
-            "      \"sha256\": \"aeb87f1b45b7ebd68a9502e002489e6839fd54946edaa973c3cbe5268170fb51\"\n"
+            "      \"sha256\": \"a4bd3d612a097f1a6f80f2aad3d35d4bd759c958e94ac31f3ffe362ba6e651bc\"\n"
           ]
         },
         {
-          "start": 389,
-          "end": 392,
+          "start": 383,
+          "end": 386,
           "lines": [
             "      \"path\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json\",\n",
             "      \"byte_length\": 3026,\n",
@@ -1102,13 +1084,15 @@
           ]
         },
         {
-          "start": 394,
-          "end": 395,
+          "start": 388,
+          "end": 389,
           "lines": [
             "      \"path\": \"UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.jsonl.gz\",\n"
           ]
         }
-      ]
+      ],
+      "sha256": "9f122a5358dbb925e786c2e7508fce5269d5febbb3bb5285e601b9b21aeab0d7",
+      "published_sha256": "c83642d05713a944a3af3df35fce8340c7f447dca0cf71c01e0c613f58e610ea"
     },
     {
       "source": "contracts/game-state.schema.json",
@@ -1122,540 +1106,11 @@
       "sha256": "1f66d8e9199e18804424914e347f4b887bf4d45d7296ad6f5b5128848fc90f31",
       "published_sha256": "1f66d8e9199e18804424914e347f4b887bf4d45d7296ad6f5b5128848fc90f31"
     },
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
+    {
       "source": "GDD.md",
       "published": "GDD.md",
       "sha256": "bdeba96ea306dcfec214b2b4c2ddcd1fa7469f71f36ff0a04e4ef33d343669d4",
-      "published_sha256": "ae976e8121fe8df7b51899df895987b1ca3b10f13126c4e1dcc695c353827f3b",
+      "published_sha256": "3ce731e1264b47910ca83868f1fe5e1fae5b17b9c77a61064ae07a0ac42faa13",
       "restore_edits": [
         {
           "start": 32,
@@ -1690,31 +1145,8 @@
     {
       "source": "INITIAL_AGENT_PROMPT.md",
       "published": "INITIAL_AGENT_PROMPT.md",
-      "sha256": "63aadcdd5eff0ef35a0c334c4ce5fe7f79e0206d26606dff6b7b9c58e0c9c8c3",
-      "published_sha256": "d5c2079a6318a486a3d0d7d6762f78f5c7bb11aa2c122d5993dbd219c36b9dce",
-      "restore_edits": [
-        {
-          "start": 6,
-          "end": 7,
-          "lines": [
-            "Read, in order: `README.md`, `GDD.md`, `ARENA_LAYOUT.md`, `ASSET_MANIFEST.json`, `ASSET_CATALOG.md`, `TOOLCHAIN.md`, `UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md`, and `contracts/README.md`.\n"
-          ]
-        },
-        {
-          "start": 12,
-          "end": 13,
-          "lines": [
-            "- The only writable root is `project/`.\n"
-          ]
-        },
-        {
-          "start": 28,
-          "end": 29,
-          "lines": [
-            "Leave the completed candidate at `project/BomberStarter.uproject` and report only checks actually run, their real results, incomplete/unverified requirement IDs, and known player-facing limitations.\n"
-          ]
-        }
-      ]
+      "sha256": "87d826392f87e4de129355f04142e0f8094dc68145fe9dda2a8e423656f2baaf",
+      "published_sha256": "87d826392f87e4de129355f04142e0f8094dc68145fe9dda2a8e423656f2baaf"
     },
     {
       "source": "legal/ASSET_LICENSE_MAP.json",
@@ -2185,7 +1617,7 @@
       "source": "project/README.md",
       "published": "starter-project/README.md",
       "sha256": "2b9f54bce4bf696561c2cd86a59e1f70442c0b12866d17908e1c33c88de7bf0d",
-      "published_sha256": "2b9f54bce4bf696561c2cd86a59e1f70442c0b12866d17908e1c33c88de7bf0d"
+      "published_sha256": "15780f09f79157826846272e76c3744df60aebb7aa163d3465d136101fbd6270"
     },
     {
       "source": "project/Source/BomberStarter/BomberStarter.Build.cs",
@@ -2250,9 +1682,7 @@
     {
       "source": "README.md",
       "published": "tools/INPUT_GUIDE.md",
-      
-
-"restore_edits": [
+      "restore_edits": [
         {
           "start": 9,
           "end": 10,
@@ -2319,9 +1749,7 @@
     {
       "source": "tests/PublicSmoke/Invoke-PublicSmoke.ps1",
       "published": "self-check/PublicSmoke/Invoke-PublicSmoke.ps1",
-      
-
-"restore_edits": [
+      "restore_edits": [
         {
           "start": 34,
           "end": 35,
@@ -2373,7 +1801,7 @@
       "source": "tests/PublicSmoke/README.md",
       "published": "self-check/PublicSmoke/CONTRACT.md",
       "sha256": "ddc5ac484526fa622785e20c7edcc15fd3721a332b462c4e93eb4422cdaed3ce",
-      "published_sha256": "99836c1617fb2aa64906a9bdb8f5b331069f26d9dc19fb144cb6ee51c233135c",
+      "published_sha256": "00cb76113503bbe80894fa2979abd1a437b6e0e9cedd0b224b0e70e52f385bbe",
       "restore_edits": [
         {
           "start": 11,
@@ -2387,9 +1815,7 @@
     {
       "source": "tests/PublicSmoke/schemas/public-smoke-result.schema.json",
       "published": "self-check/PublicSmoke/schemas/public-smoke-result.schema.json",
-      
-
-"restore_edits": [
+      "restore_edits": [
         {
           "start": 2,
           "end": 3,
@@ -2446,7 +1872,7 @@
       "source": "TOOLCHAIN.md",
       "published": "tools/TOOLCHAIN.md",
       "sha256": "a588bd3cd2461de8634f97d90f44c76799b5268c0cba33fbfc037fd3941c0106",
-      "published_sha256": "4c8328d3e54683bf87b1adc4fb08484786bf6cc541a5360139c8a09cc1b474d6",
+      "published_sha256": "ceb9883d48fcf3a4abfaec67fd957b644e5fdc1b4cc563f6fefa9c4bfc48ea61",
       "restore_edits": [
         {
           "start": 11,
@@ -2516,13 +1942,7 @@
         }
       ]
     },
-    
-
-
-
-
-
-{
+    {
       "source": "tools/Resolve-Unreal57.ps1",
       "published": "tools/Resolve-Unreal57.ps1",
       "sha256": "12581ab0254ec09162a8783b412a71951418e8eb9a38a6e9f137d4e9ead873c5",
@@ -2547,9 +1967,7 @@
     {
       "source": "tools/Test-PublicInput.ps1",
       "published": "tools/Test-PublicInput.ps1",
-      
-
-"restore_edits": [
+      "restore_edits": [
         {
           "start": 50,
           "end": 55,
@@ -2627,13 +2045,7 @@
         }
       ]
     },
-    
-
-
-
-
-
-{
+    {
       "source": "UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
       "published": "tools/catalog/UNREAL_ENGINE_5_7_4_INTERFACE_CATALOG.index.json",
       "sha256": "44fca8ffb2231ff5f1147673d671823f46068ce369aafae2eff68c13c6d711f0",
@@ -2658,7 +2070,7 @@
       "source": "UNREAL_ENGINE_BENCHMARK_TOOL_GUIDE.md",
       "published": "tools/TOOL_GUIDE.md",
       "sha256": "b50349fc1a369bfac34c79da242461d447a06472b5ab20075a65978681923382",
-      "published_sha256": "c780825aab0e60a7dce3924b258e7a9570de1031abacb5466569da7674662c20",
+      "published_sha256": "1dde884d63ac45c1f3c89134eb1a5e411a38b368c1821595370045852f07690c",
       "restore_edits": [
         {
           "start": 2,
